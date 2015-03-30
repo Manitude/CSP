@@ -1,0 +1,40 @@
+<% if @error %><div id="assist_error" class="error"><%= @error.to_s %></div><% end %>
+<% if @students.any?%>
+  <table summary="dashboard_data" class="table_list" style="width:100%">
+    <thead>
+      <tr>
+        <th><%= _("LEARNER37AAC62E") %></th>
+        <th><%= _("DISPLAY_NAMEFA38824D") %></th>
+        <th><%= _("EMAIL10C6BEC4") %></th>
+        <th><%= _("SUPPORT_LANGUAGEB9544BF3") %></th>
+        <th><%= _("SYSTEM_INFORMATION3F1133F2") %></th>
+        <th><%= _("Audio_Devices2703B613") %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @students.each do |student| %>
+        <% state= @status[student.student_guid]|| '' %>
+        <tr data-student-id= "<%= student.student_guid%>" data-session-id = "<%= @session_id %>" data-session-details ="<%= params[:session_details] %> ">
+          <td><% if @eschool_session.attributes["aeb"].nil? %>
+            <a href="<%= learner_path(:id => -1, :guid => student.student_guid) %>"><%=  "#{student.first_name} #{student.last_name}" %></a>
+            <% else %>
+              <%= student.first_name %>
+            <% end %>
+          </td>
+          <td><%= get_preferred_name(student) %></td>
+          <td><%= student.student_email %></td>
+          <td><%= get_support_language_display_name(student)%></td>
+          <td><%= (student.user_agent == "NA")? _("Not_available50F9BA6A") : student.user_agent %></td>
+          <td class="audio_input_device_<%= student.audio_input_device_status %>" onclick="toggle_display(this.getElementsByTagName('span')[0]);toggle_display(this.getElementsByTagName('span')[1]);" style="cursor:pointer; vertical-align: middle;">
+            <span><%= student.audio_input_device? && student.audio_input_device.match(/iOS|iPad/) ? '(iOS)' : '' %></span>
+            <span style="display:block; color: red; font-weight: bold"> <%= 'ASSISTED' if state == 'SUPPORT_COMPLETED'%></span>
+          </td>
+        </tr>
+      <% end %>
+
+    </tbody>
+  </table>
+<% else %>
+  <p><%= _("There_are_no_Learners_with_technical_problems_in_tC91BE849") %></p>
+<% end %>
+

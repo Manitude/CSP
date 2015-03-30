@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/157082/plugins/lcdb_client/lib/lcdb_services
+END
+service_classes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/157082/plugins/lcdb_client/lib/lcdb_services/service_classes.rb
+END
+mapping_registry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157082/plugins/lcdb_client/lib/lcdb_services/mapping_registry.rb
+END
+driver.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/149635/plugins/lcdb_client/lib/lcdb_services/driver.rb
+END

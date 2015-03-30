@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/WebDev/!svn/ver/45925/plugins/sms/trunk/test
+END
+sms_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/45925/plugins/sms/trunk/test/sms_test.rb
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/45924/plugins/sms/trunk/test/test_helper.rb
+END

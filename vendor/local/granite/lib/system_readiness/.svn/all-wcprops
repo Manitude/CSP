@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/granite/lib/system_readiness
+END
+granite_amqp_and_ruby.rb
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/granite/lib/system_readiness/granite_amqp_and_ruby.rb
+END
+amqp_and_rabbit_versions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/granite/lib/system_readiness/amqp_and_rabbit_versions.rb
+END
+granite_agent_ymls.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/granite/lib/system_readiness/granite_agent_ymls.rb
+END

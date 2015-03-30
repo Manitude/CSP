@@ -1,0 +1,13 @@
+<div id="navigation">
+  <ul>
+    <% main_navigation_items.each do |nav| %>
+      <li>
+        <% if nav == currently_selected_main_nav_item %>
+          <%= link_to(nav[:link_text], nav[:url_options], :class => 'current') %>
+        <% else %>
+          <%= link_to(nav[:link_text], nav[:url_options]) %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

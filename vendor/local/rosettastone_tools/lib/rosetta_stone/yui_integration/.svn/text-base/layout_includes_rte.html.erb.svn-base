@@ -1,0 +1,7 @@
+  <%# This file has includes specific to the YUI RTE (Rich Text Editor) functionality %>
+  <!-- Needed for Menus, Buttons and Overlays used in the Toolbar -->
+  <%= javascript_include_tag "http://yui.yahooapis.com/#{RosettaStone::YuiIntegration.version_string}/build/container/container_core-min.js" %>
+  <%= javascript_include_tag "http://yui.yahooapis.com/#{RosettaStone::YuiIntegration.version_string}/build/menu/menu-min.js" %>
+  <%= javascript_include_tag "http://yui.yahooapis.com/#{RosettaStone::YuiIntegration.version_string}/build/button/button-min.js" %>
+  <!-- Source file for Rich Text Editor-->
+  <%= javascript_include_tag "http://yui.yahooapis.com/#{RosettaStone::YuiIntegration.version_string}/build/editor/editor-min.js" %>

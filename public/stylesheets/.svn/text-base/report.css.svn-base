@@ -1,0 +1,62 @@
+/* 
+    Document   : reflex
+    Created on : 17 Apr, 2012, 6:46:11 PM
+    Author     : suman
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+#reflex_data{
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.coach_activity_right_container {
+    margin-top: 10px;
+}
+
+.table_background{
+    background: none repeat scroll 0 0 #F0F0F0;
+    color: #666666;
+    font-weight: bold;
+}
+
+.scroll{
+    display: block;
+    max-height: 400px;
+    overflow: auto;
+}
+
+.table_list td, .table_list th {
+    padding: 8px 0 !important;
+    overflow: hidden;
+}
+
+ #csv_button_id {
+    cursor: pointer;
+}
+
+.report_generated_for_div{
+    width:100%;
+    position: absolute;
+    top:40px;
+}
+
+.report_generated_for_span  {
+    float:right;
+    margin-right: 44px;
+}
+
+.all_american_report_cell {
+    min-width: 74px;
+    max-width: 74px;
+    overflow: hidden;
+}
+#start_date, #end_date {
+    width: 165px;
+}

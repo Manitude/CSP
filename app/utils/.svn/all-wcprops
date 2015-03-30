@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/159014/coach_portal/branches/sprint32/app/utils
+END
+coach_activity_parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/utils/coach_activity_parser.rb
+END
+dashboard_utils.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/utils/dashboard_utils.rb
+END
+coach_availability_utils.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/159014/coach_portal/branches/sprint32/app/utils/coach_availability_utils.rb
+END
+task_splitter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/utils/task_splitter.rb
+END
+coach_activity_fetcher.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/utils/coach_activity_fetcher.rb
+END
+substitution_utils.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/utils/substitution_utils.rb
+END
+reflex_session_details.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/utils/reflex_session_details.rb
+END
+time_utils.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/utils/time_utils.rb
+END
+coach_aggregator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/utils/coach_aggregator.rb
+END
+lotus_real_time_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/utils/lotus_real_time_data.rb
+END
+app_utils.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/utils/app_utils.rb
+END
+historical_count_finder.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/utils/historical_count_finder.rb
+END
+reflex_activity_utils.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/utils/reflex_activity_utils.rb
+END
+coach_activity_report_utils.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/utils/coach_activity_report_utils.rb
+END

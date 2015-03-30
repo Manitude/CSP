@@ -1,0 +1,68 @@
+<p class="header">Community Profile</p>
+<br />
+<div class="public" id ="public">
+  <div class="float_left"  style="width:47%">
+    <span class="subheading">Public</span>
+    <div class="wide_label_row">
+      <span class="label">Email</span>
+      <span class="formw"><%= get_text(@learner.email) %></span>
+    </div>
+    <div class="wide_label_row">
+      <span class="label">First Name</span>
+      <span class="formw"><%= get_text(@learner.first_name) %></span>
+    </div>
+    <div class="wide_label_row">
+      <span class="label">Last Name</span>
+      <span class="formw"><%= get_text(@learner.last_name) %></span>
+    </div>
+    <div class="wide_label_row">
+      <span class="label">Preferred Name</span>
+      <span class="formw"><%= get_text(@learner.preferred_name) %></span>
+    </div>
+    <% if @learner.community_user? -%>
+      <div class="wide_label_row">
+        <span class="label">Country</span>
+        <span class="formw"><%= get_text(@learner.country) %></span>
+      </div>
+      <div class="wide_label_row">
+        <% if @learner.user_source.country == 'US' || @learner.user_source.country == 'CA'-%>
+          <span class="label">State/Province</span>
+          <span class="formw"><%= get_text(@learner.state_province) %></span>
+        <% end -%>
+      </div>
+      <div class="wide_label_row">
+        <span class="label"><%= content_tag(:city, "City") %></span>
+        <span class="formw"><%= get_text(@learner.city) %></span>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<% if @learner.community_user? %>
+  <div class="private" id="private">
+    <div class="float_left"  style="width:37%" >
+      <span class="subheading">Private</span>
+      <div class="wide_label_row">
+        <span class="label">Birthdate</span>
+        <span class="formw"><%= "#{get_text @learner.birth_date} (#{get_text @learner.age})"  %></span>
+      </div>
+      <div class="wide_label_row">
+        <span class="label">Gender</span>
+        <span class="formw"><%= get_text(@learner.gender) %></span>
+      </div>
+      <div class="wide_label_row">
+        <span class="label"><%= content_tag(:time_zone, "Time Zone") %></span>
+        <span class="formw"><%= get_text(@learner.time_zone) %></span>
+      </div>
+      <div class="wide_label_row">
+        <span class="label" title="View Audit Logs"><%= link_to("Last Updated", community_audit_logs_path(:id => @learner.id)) %></span>
+        <span class="formw"><%= get_text(@learner.user_source.updated_at.strftime("%a %d %b %Y")) %></span>
+      </div>
+    </div>
+  </div>
+  <div class="avatar" style="float:left;">
+    <div class="float_left"  style="width:18%">
+      <span class="formw"><%= image_tag(@learner.user_source.avatar) %></span>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosettastone_tools
+END
+rails_extensions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosettastone_tools/rails_extensions.rb
+END
+plugin.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosettastone_tools/plugin.rb
+END
+engine.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosettastone_tools/engine.rb
+END

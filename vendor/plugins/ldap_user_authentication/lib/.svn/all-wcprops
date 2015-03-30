@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/80468/plugins/ldap_user_authentication/lib
+END
+hash_ext.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/55905/plugins/ldap_user_authentication/lib/hash_ext.rb
+END
+mailing_list.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/60394/plugins/ldap_user_authentication/lib/mailing_list.rb
+END
+active_directory_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/65869/plugins/ldap_user_authentication/lib/active_directory_user.rb
+END
+user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/80468/plugins/ldap_user_authentication/lib/user.rb
+END
+active_directory_authenticated_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/65869/plugins/ldap_user_authentication/lib/active_directory_authenticated_user.rb
+END

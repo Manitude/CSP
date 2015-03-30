@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/WebDev/!svn/ver/158391/plugins/lcdb_client
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/WebDev/!svn/ver/85735/plugins/lcdb_client/init.rb
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/WebDev/!svn/ver/85735/plugins/lcdb_client/install.rb
+END
+uninstall.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/85735/plugins/lcdb_client/uninstall.rb
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/WebDev/!svn/ver/85735/plugins/lcdb_client/README
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/WebDev/!svn/ver/85735/plugins/lcdb_client/Rakefile
+END

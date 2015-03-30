@@ -1,0 +1,20 @@
+<% if @modification %>
+  <%= render :partial => 'timeoff_form' %>
+  <input type="hidden" id="previous_start_date" value="" />
+  <input type="hidden" id="previous_end_date" value="" />
+  <input type="hidden" id="status" value="<%= @modification.status %>" />
+  <input type="hidden" id="timeoff_id" value="<%= @modification.id %>" />
+  <script type="text/javascript">
+    jQuery('#previous_start_date').val(jQuery('#modification_start_date').val());
+    jQuery('#previous_end_date').val(jQuery('#modification_end_date').val());
+    if(new Date(jQuery('#previous_start_date').val()) <= new Date()){
+      var start_elem = jQuery('#modification_start_date');
+      start_elem.attr('disabled', true);
+      var cal_elem = start_elem.next();
+      cal_elem.unbind('click');
+      cal_elem.attr('title', "Past Date. Hence Uneditable.");
+    }
+  </script>
+<% else %>
+  Something went wrong, please reload the page and try again.
+<% end %>

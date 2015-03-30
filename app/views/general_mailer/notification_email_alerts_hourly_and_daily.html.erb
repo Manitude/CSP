@@ -1,0 +1,8 @@
+<div>  
+  <b>RosettaStone has the following notifications:</b>
+  <br/>
+  <br/>
+  <% @data.each do |notification| %>
+    <div style="margin-left: 20px;"><%= notification.html_safe %></div>
+  <%end%>
+</div>

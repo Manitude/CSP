@@ -1,0 +1,40 @@
+<%= stylesheet_link_tag "html_table" %>
+<%= javascript_include_tag "html_table" %>
+<div>
+  <div><h2>EXTENSION FOR <%= @license_guid %></h2></div>
+  <div id ="view_session_details_popup_table_div">
+    <% if @ext_details.blank?%>
+     <div id="no_extensions">There are no extensions.</div>
+    <%else%>
+    <table id = "view_session_details_popup_table">
+      <thead>
+        <tr>
+          <th class="old_th220">ACTIVATION ID</th>
+          <th class="old_th160">CREATED</th>
+          <th class="old_th160">EXTENDED</th>
+          <th class="old_th100">DURATION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @ext_details.each do |ext_detail| %>
+          <tr>
+            <td style="old_th220"><%= masked_activation_id ext_detail["activation_id"] %></td>
+            <td style="old_th160"><%= get_est_time_format ext_detail["created_at"] %></td>
+            <td style="old_th160"><%= get_est_time_format ext_detail["extended_at"] %></td>
+            <td style="old_th100"><%= get_text ext_detail["duration"] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <% end %>
+  </div>
+  <div>
+    <% if (tier1_support_lead_logged_in? || tier1_support_harrisonburg_user_logged_in?) && @enable_extensions %>
+      <span class="margin25">
+        <%= content_tag('button', "ADD/REMOVE TIME", {:group_guid => @group_guid, :license_guid => @license_guid, :license_identifier => @license_identifier,:language => @product_identifier,:version => @product_version, :pr_guid => @pr_guid, :original_end_date => @original_end_date,  :id => 'update_extension', :class => "button_shape", :style => "-moz-border-radius: 10px;float:right;margin:20px 20px 15px 0; padding: 7px;"}) %>
+      </span>
+    <% elsif (tier1_support_lead_logged_in? || tier1_support_harrisonburg_user_logged_in?) %>
+        <div class="licenses_cannot_add_extension" >Cannot add extensions to old-model TOSUB learner</div>
+    <% end %>
+  </div>
+</div>

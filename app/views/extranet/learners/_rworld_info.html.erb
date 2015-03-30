@@ -1,0 +1,23 @@
+<div class="rworld_info" id ="rworld_info">
+<p class="header">World</p><br />
+  <div class="float_left" style="width: 67%; clear: both">
+    <% if baffler_details.blank? || baffler_details["social_apps"]["social_app"].blank? -%>
+      <p class="notice">There is no data available for user.</p>
+    <% else -%>
+      <div class="wide_label_row">
+        <span class="label">Connections</span><span class="formw"><%= get_text connections_count %></span>
+      </div>
+      <% if(!social_app_languages.blank?) -%>
+        <div class="wide_label_row">
+          <span class="label">Select Language</span>
+          <span class="formw">
+            <%= select_tag :rworld_info_language, options_for_select(social_app_languages) %>
+          </span>
+        </div>
+      <% end -%>
+      <div id="rworld_info_container">
+        <%= render :partial => "rworld_lang_info", :locals => { :baffler_details => baffler_details } %>
+      </div>
+    <% end -%>
+  </div>
+</div>

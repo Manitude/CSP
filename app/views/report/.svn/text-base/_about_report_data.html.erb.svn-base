@@ -1,0 +1,256 @@
+<div id="report_data_details">
+  
+<% if params[:from_page] == "totale_report" %>
+  <div class="detail">
+    <span class="help_heading">Session/Shifts:</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Scheduled:</span>
+    <span class="help_content">Number of sessions that were pushed to eSchool, both Past and Future.
+    </span>
+  </div>
+   <div class="detail" style="padding-bottom: 68px;">
+    <span class="data_point">Taught (Hrs):</span>
+    <span class="help_content">Total hours that Coach taught for the given language, and for all sessions types (1 session = .5 hours).<br/> Sessions cancelled after their start time are also included, as cancellation is usually due to circumstances <br/>beyond the Coach’s control (e.g., no learners attend, technical issue, etc.).<br/>
+    </span>
+  </div>
+  <div class="detail" style="padding-bottom: 68px;">
+    <span class="data_point">Solo (Hrs):</span>
+    <span class="help_content">Total hours that Coach taught Solo sessions. Sessions cancelled after their start time <br/> are also included, as cancellation is usually due to circumstances beyond the Coach’s control<br/>(e.g., no learners attend, technical issue, etc.).
+    </span>
+  </div>
+  <div class="detail">
+    <span class="data_point">No Show:</span>
+    <span class="help_content">Number of sessions that the Coach was scheduled to teach but did not attend.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Canceled:</span>
+    <span class="help_content">Number of sessions that were cancelled prior to their start time. 
+    </span>
+  </div>
+  <div class="detail">
+    <span class="data_point">In/Complete Feedback:</span>
+    <span class="help_content">Number of session that the coach completed, or did not complete, the feedback forms. 
+    </span>
+  </div>
+ 
+  <div class="detail">
+    <span class="help_heading">Substitutions:</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Requested:</span>
+    <span class="help_content">Number of sessions for which the coach requested a substitute.
+    </span>
+  </div>
+   <div class="detail">
+    <span class="data_point">Grabbed:</span>
+    <span class="help_content">Number of substitution requests that the Coach grabbed.
+    </span>
+  </div>
+  <div class="detail">
+    <span class="data_point">% of taught:</span>
+    <span class="help_content">Percentage of sessions that were taught by Coach that were grabbed substitution requests.
+    </span>
+  </div>
+  
+  <div class="detail">
+    <span class="help_heading">Time Offs:</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Requested/Approved:</span>
+    <span class="help_content">Number of Time Off requests submitted by the Coach, and the number of requests that were approved.
+    </span>
+  </div>
+   <div class="detail">
+    <span class="data_point">Denied:</span>
+    <span class="help_content">Number of Time Off requests that were denied.
+    </span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Total Duration:</span>
+    <span class="help_content">Total amount of time the Coach was granted Time Off.</span>
+  </div>
+  <div class="detail">
+    <span class="help_heading">In player (min) prior to session:</span>
+    <span class="help_content" style="margin-left: 45px; padding-top : 15px"> Average number of minutes that Coach logged in prior to session start time.
+    </span>
+  </div>
+
+<% elsif params[:from_page] == "show" %>
+<div class="detail">
+    <span class="help_heading">Session/Shifts:</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Hours Scheduled:</span>
+    <span class="help_content">Number of hours Coach was scheduled to teach Advanced English (1 session = .5 hours).
+    </span>
+  </div>
+   <div class="detail">
+    <span class="data_point">Hours in Player:</span>
+    <span class="help_content"> Number of hours Coach was logged into the ReFLEX player, including time they were teaching, polling or paused. 
+    </span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Mins Paused:</span>
+    <span class="help_content">Number of minutes Coach was paused while logged into the ReFLEX player.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">% Paused :</span>
+    <span class="help_content">Percentage of time that Coach was paused while logged into the ReFLEX player.
+    </span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Avg Session (Mins) :</span>
+    <span class="help_content">Average session duration (time that Coach connect with Learner until session is finished) displayed in minutes.
+    </span>
+  </div>
+  <div class="detail">
+    <span class="data_point">% Incomplete :</span>
+    <span class="help_content">Percentage of sessions the Coach taught that were marked Incomplete. 
+    </span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Completed sessions:</span>
+    <span class="help_content">Number of sessions the Coach taught that were marked Complete.
+    </span>
+  </div>
+
+
+  <div class="detail">
+    <span class="help_heading">Substitutions:</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Requested:</span>
+    <span class="help_content">Number of sessions for which the coach requested a substitute.
+    </span>
+  </div>
+   <div class="detail">
+    <span class="data_point">Grabbed:</span>
+    <span class="help_content">Number of substitution requests that the Coach grabbed.
+    </span>
+  </div>
+  
+  <div class="detail">
+    <span class="help_heading">Time Offs:</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Requested/Approved:</span>
+    <span class="help_content">Number of Time Off requests submitted by the Coach, and the number of requests that were approved.
+    </span>
+  </div>
+   <div class="detail">
+    <span class="data_point">Denied:</span>
+    <span class="help_content">Number of Time Off requests that were denied.
+    </span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Total Duration:</span>
+    <span class="help_content">Total amount of time the Coach was granted Time Off.</span>
+  </div>
+
+  <% elsif params[:from_page] == "show_eng" %>
+
+  <div class="detail">
+    <span class="help_heading">Session/Shifts:</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Scheduled TOTALe:</span>
+    <span class="help_content">Number of American English sessions that were pushed to eSchool.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Scheduled ReFLEX:</span>
+    <span class="help_content">Number of Advanced English sessions that were committed.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Scheduled Total:</span>
+    <span class="help_content">Combined number of American English sessions that were pushed to eSchool and Advanced English sessions that were committed.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Taught ReFLEX(Hrs):</span>
+    <span class="help_content">Number of hours Coach was logged into the ReFLEX player, including time they were teaching, polling or paused. 
+    </span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Mins Paused:</span>
+    <span class="help_content">Number of minutes Coach was paused while logged into the ReFLEX player.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">% Paused:</span>
+    <span class="help_content">Percentage of time that Coach was paused while logged into the ReFLEX player.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Avg Session (Mins):</span>
+    <span class="help_content">Average ReFLEX session duration (time that Coach connect with Learner until session is finished) displayed in minutes.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">% Incomplete:</span>
+    <span class="help_content">Percentage of ReFLEX sessions the Coach taught that were marked Incomplete.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">No Show TOTALe:</span>
+    <span class="help_content">Number of American English sessions that the Coach was scheduled to teach but did not attend.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Canceled TOTALe:</span>
+    <span class="help_content">Number of TOTALe sessions that were cancelled prior to their start time.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Feedback:</span>
+    <span class="help_content">Number of TOTALe session that the coach completed, or did not complete, the feedback forms.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Completed sessions (Reflex):</span>
+    <span class="help_content">Number of ReFLEX sessions the Coach taught that were marked Complete.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Total Taught(Hrs):</span>
+    <span class="help_content">Combined hours taught in both TOTALe (1 session = .5 hours) and ReFLEX (total time logged into player). </span>
+  </div>
+  <div class="detail">
+    <span class="help_heading" style= "padding-bottom :10px; padding-top : 10px">Substitutions:</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Requested TOTALe:</span>
+    <span class="help_content">Number of TOTALe sessions for which Coach requested a substitute.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Requested ReFLEX:</span>
+    <span class="help_content">Number of ReFLEX sessions for which Coach requested a substitute.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Requested Total:</span>
+    <span class="help_content">Total number of combined TOTALe and ReFLEX sessions for which Coach requested a substitute.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Grabbed TOTALe:</span>
+    <span class="help_content">Number of TOTALe substitution requests that Coach grabbed.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Grabbed ReFLEX:</span>
+    <span class="help_content">Number of ReFLEX substitution requests that Coach grabbed.</span>
+  </div>
+  <div class="detail">
+    <span class="data_point">Grabbed Total:</span>
+    <span class="help_content">Total number of combined TOTALe and ReFLEX sessions that Coach grabbed.</span>
+  </div>
+  <div class="detail">
+    <span class="help_heading" style= "padding-bottom :20px; padding-top : 10px" >In Player (min) prior to session (TOTALe):</span>
+    <span class="help_content" style="margin-left: 45px; padding-top : 28px">Average time that Coach arrived prior to the start time of the sessions.</span>
+  </div>
+  <div class="detail">
+    <span class="help_heading">Time Off:</span>
+      </div>
+    <div class="detail">
+    <span class="data_point">Requested/Approved:</span>
+    <span class="help_content">Number of Time Off requests submitted by the Coach, and the number of requests that were approved.</span>
+  </div> 
+   <div class="detail">
+    <span class="data_point">Denied :</span>
+    <span class="help_content">Number of Time Off requests that were denied.</span>
+  </div> 
+  <div class="detail">
+    <span class="data_point">Total Duration:</span>
+    <span class="help_content">Total amount of time the Coach was granted Time Off.</span>
+  </div> 
+  <% end %>
+</div>

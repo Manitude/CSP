@@ -1,0 +1,17 @@
+url: bbb.dev.rosettastone.com
+proxy_host: http://dalproxy.lan.flt:3128
+salt: e4d91adbc729a0aa4b9d84029fef20f2
+attendeePW: attendeePW
+moderatorPW: moderatorPW
+name: Live Session
+record: true
+#CLIENT_ID: Client.CSP
+CLIENT_PASSWORD: xn688R8622vCP2n7gJ45Yz1b7
+username: csp@rosettastone.com
+password: xn688R8622vCP2n7gJ45Yz1b7
+host_url: scholar-dev.dev.rosettastone.com
+auth_host_url: tully-dev.dev.rosettastone.com
+CLIENT_ID: client.csp
+sub_type: AriaCoach
+coach_password: Rosetta1
+biblio_url: biblio-dev.dev.rosettastone.com

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/test/cgi
+END
+rackup_stub.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/test/cgi/rackup_stub.rb
+END
+test.ru
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/test/cgi/test.ru
+END
+test.fcgi
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/test/cgi/test.fcgi
+END
+sample_rackup.ru
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/test/cgi/sample_rackup.ru
+END
+test
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/test/cgi/test
+END
+lighttpd.conf
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/test/cgi/lighttpd.conf
+END

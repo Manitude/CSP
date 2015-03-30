@@ -1,0 +1,6 @@
+ <%= select_tag :reasons, options_for_select([["--REASON--" ,"Select"],['Sickness', 'Sickness'], ['System Issue', 'System Issue'],['Personal Emergency', 'Personal Emergency'],['Internet outage','Internet outage'],['Electricity outage','Electricity outage'],['No-show','No-show'],['Schedule glitch','Schedule glitch'],['Personnel change','Personnel change'],['Other','Other']]),{:onchange => "toggleReasonforSub(this.value);"} %>
+<br><br>
+</div>
+    <%= text_area_tag :other_reasons,"", :rows => 3, :cols => 55, :style => "-moz-border-radius: 12px;display:none;padding: 5px 0 0 5px;resize:none;", :title => "Other reasons" %>
+ </div>
+

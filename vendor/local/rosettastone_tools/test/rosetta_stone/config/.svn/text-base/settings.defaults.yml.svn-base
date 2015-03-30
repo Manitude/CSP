@@ -1,0 +1,4 @@
+overridden: false
+deep_merge_test:
+  not_overridden: 1
+  overridden: 1

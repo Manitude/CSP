@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/75213/gems/uuidtools/2.1.2/spec/uuidtools
+END
+utility_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/75213/gems/uuidtools/2.1.2/spec/uuidtools/utility_spec.rb
+END
+mac_address_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/75213/gems/uuidtools/2.1.2/spec/uuidtools/mac_address_spec.rb
+END
+uuid_parsing_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/75213/gems/uuidtools/2.1.2/spec/uuidtools/uuid_parsing_spec.rb
+END
+uuid_creation_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/75213/gems/uuidtools/2.1.2/spec/uuidtools/uuid_creation_spec.rb
+END

@@ -1,0 +1,36 @@
+# == Schema Information
+#
+# Table name: levels
+#
+#  id         :integer(4)      not null, primary key
+#  number     :integer(4)      not null
+#  created_at :datetime        
+#  updated_at :datetime        
+#
+
+--- 
+levels_001: 
+  number: "1"
+  created_at: 
+  updated_at: 
+  id: "1"
+levels_002: 
+  number: "2"
+  created_at: 
+  updated_at: 
+  id: "2"
+levels_003: 
+  number: "3"
+  created_at: 
+  updated_at: 
+  id: "3"
+levels_004: 
+  number: "4"
+  created_at: 
+  updated_at: 
+  id: "4"
+levels_005: 
+  number: "5"
+  created_at: 
+  updated_at: 
+  id: "5"

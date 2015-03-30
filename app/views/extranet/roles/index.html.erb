@@ -1,0 +1,26 @@
+<h1>Roles and Permissions</h1>
+<%= form_tag :action => 'update' do %>
+<table id="coach_profile_permission" class='se_tab'>
+  <tr><th colspan="2"></th><th colspan="4">Read</th><th colspan="3">Write</th></tr>
+  <% task_section = "" %>
+  <% @tasks.each do |task| %>
+  <% if task_section.empty? or task.section != task_section%>
+  <% task_section = task.section %>
+  <tr><th colspan="2"><%=task.section%></th><th>Admin</th><th>CM</th><th>C</th><th>All</th><th>Admin</th><th>CM</th><th>C</th></tr>
+  <% end %>
+     <tr>
+       <td style="width:20px"><%=  task.id  -%></td>
+       <td style="width:150px"><%=  task.name  -%></td>
+       <% @roles.each do |role| %>
+        <td style="width:25px;text-align:center"><%= get_perm(role.id,task.id,"read") %> </td>
+       <% end %>
+       <% @roles.each do |role| %>
+        <% if role.name != "All" %><td style="width:25px;text-align:center"><%= get_perm(role.id,task.id,"write") %></td><% end %>
+       <% end %>
+    </tr>
+  <% end %>
+ </table>
+<br />
+<%= submit_tag "Submit" if admin_logged_in?%>
+<%end%>
+

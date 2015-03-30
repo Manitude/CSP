@@ -1,0 +1,127 @@
+#contacts-div {
+	border: 2px solid #FFD519;
+	border-radius: 4px 4px 4px 4px;
+	float: right;
+	width: 230px;
+	padding: 5px 15px;
+	background-color: white;
+}
+
+.ui-widget-content {
+	border: none;
+}
+
+.ui-widget-header {
+	background: none !important;
+	border: none !important;
+}
+
+.ui-helper-clearfix:after {
+	content: none;
+}
+
+.ui-tabs {
+	position: inherit !important;
+	margin-top: 10px;
+}
+
+.ui-tabs .ui-tabs-panel {
+	margin-top: 32px;
+	padding: 2px;
+	border-top: 1px solid #AAAAAA;
+}
+
+#coach-roster-tabs input, #coach-roster-tabs select {
+	margin-top: 10px;
+	margin-right: 5px;
+}
+
+#coach-roster-tabs select { 	
+	width: 200px;
+	padding: 4px;
+}
+
+#coach-filter, #mgr-filter {
+	height: 20px;
+}
+
+#mgr_list_container {
+	width: 954px;
+	margin-top: 10px;
+	border-bottom: 1px solid gray;
+}
+
+#coach_list_container {
+	width: 967px;
+	margin-top: 10px;
+	border: none;
+}
+
+#mgr_list_table tr, #mgr_list_table td, #coach_list_table tr, #coach_list_table td{
+    font-size: 12px;
+    padding: 5px;
+    vertical-align: middle;
+    border: 1px solid gray;
+    text-align: center;
+    border-top: none;
+    max-width: 100%;
+    overflow: hidden;
+    border-right: 1px solid gray !important;
+}
+
+#mgr_list_header, #mgr_list_header th, #coach_list_header, #coach_list_header th{
+    font-size: 12px;
+    padding: 5px;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid gray;
+}
+
+.body {
+	border: none;
+	overflow-x: hidden;
+}
+
+table {
+	border-collapse: collapse;
+	table-layout:fixed;
+}
+
+.headtable {
+	border: none !important;
+}
+
+#mgmt-tab a, #mgmt-tab a:link, #mgmt-tab a:visited, #mgmt-tab a:active, #mgmt-tab a:hover,
+#coach-tab a, #coach-tab a:link, #coach-tab a:visited, #coach-tab a:active, #coach-tab a:hover {
+    color: #1090CF !important;
+    text-decoration: none;
+}
+
+#coach_list_container body {
+	border-bottom: 1px solid gray;
+}
+
+.img-link{ cursor: pointer;}
+.csv-button{ float: right; margin-top: 10px; }
+
+#mgmt-team-header{ height: 30px; border-bottom: 2px solid gray;}
+#add-member{ float: right; cursor: pointer; margin-right: 10px; padding: 3px 25px;}
+#error_div{ padding: 10px; content: "" !important;}
+div.error:before {content: "" !important;}
+#mgmt-team-member-form label{float: left; margin-top: 0 !important; width: 130px;}
+.ui-tooltip {z-index: 17000 !important;}
+
+#sortable li{width: 96%; height: 105px; margin-top: 10px; padding: 10px; margin-left: 5px; overflow: hidden;}
+.ui-state-default{background:  none repeat scroll 0 0 white;}
+.hidden{background:  none repeat scroll 0 0 #eee;}
+.inlined{ float: left; margin-right: 10px;}
+.profile-pic{ width: 110px; text-align: center; margin-right: 20px; }
+.grp1 {width: 180px;}
+.grp2 {width: 240px;}
+.grp3 {width: 170px; overflow: auto; height: 100px;}
+.grp4 {width: 160px; text-align: center;}
+.grp4 .button{padding: 3px; cursor: pointer;}
+#facebox{max-width: 900px;}
+#facebox .header {text-align: left; overflow: auto;}
+.close_image{float: right;}
+#facebox_header{float: none;}

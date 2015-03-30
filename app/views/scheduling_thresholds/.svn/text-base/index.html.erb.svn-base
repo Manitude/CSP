@@ -1,0 +1,22 @@
+<span class = "bold-font"><%= "Today's Date" -%>:</span><span class = "left-space"><%= get_today_date %> </span>
+<div class="header preference-border"></div>
+<div class="threshold_notice" id="threshold_notice"></div>
+<div class="threshold_error" id="threshold_error"></div>
+
+<%= simple_form_for :scheduling_thresholds, :url => scheduling_thresholds_path, :html => {:id => 'threshold_form', :method => 'PUT'} do |f| %>
+  <div class="language_threshold">
+    <%= content_tag(:select, :id => 'language_dropdown_threshold') do -%>
+      <%= content_tag(:option, 'Select Language', {:name => 0}) %>
+      <% @languages.each do |language| -%>
+        <%= content_tag(:option, language.display_name, {:name => language.id, :value =>language.id} ) %>
+      <%end%>
+    <%end%>
+  </div>
+  <%= f.input :max_assignment, :label => "Maximum assignment/week" , :label_html => { :style => "display:inline;", :class => "threshold_form"}, :required => false,  :input_html => { :id => "max_assignment"}, :wrapper_tag => :div, :wrapper_html => {:class => "threshold_element_wrapper_div"} %>
+  <%= f.input :max_grab, :label => "Maximum grabbed/week" , :label_html => { :style => "display:inline;", :class => "threshold_form"}, :required => false , :input_html => { :id => "max_grab"} , :wrapper_tag => :div, :wrapper_html => {:class => "threshold_element_wrapper_div"} %>
+  <%= f.input :hours_prior_to_sesssion_override, :label => "Hours prior to imminent session override" , :label_html => { :style => "display:inline;", :class => "threshold_form"}, :required => false , :input_html => { :id => "hours_prior_to"} , :wrapper_tag => :div, :wrapper_html => {:class => "threshold_element_wrapper_div"} %>
+  <div class="threshold_element_wrapper_div">
+    <%= content_tag :input, '', {:name => 'save_button',  :id => "submit_threshold", :class=> 'threshold_button', :type => 'submit', :value => "Save"  } %>
+    <%= content_tag :input, '', {:name => 'reset_button', :id => "reset_thresholds", :class=> 'threshold_button', :type => 'reset',  :value => "Reset" } %>
+  </div>
+<% end %>

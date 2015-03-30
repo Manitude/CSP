@@ -1,0 +1,61 @@
+<!-- This is a relaxng specification for Adobe's crossdomain.xml files -->
+<!-- adapted from sources at http://www.adobe.com/devnet/articles/crossdomain_policy_file_spec.html -->
+<!-- mostly http://www.adobe.com/xml/schemas/PolicyFile.xsd -->
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="cross-domain-policy">
+      <interleave>
+        <ref name="site-control"/>
+        <ref name="allow-access-from"/>
+        <ref name="allow-http-request-headers-from"/>
+        <!-- FIXME: this spec ignores the <allow-access-from-identity/> element, which we don't use -->
+      </interleave>
+    </element>
+  </start>
+
+  <define name="site-control">
+    <optional>
+      <element name="site-control">
+        <attribute name="permitted-cross-domain-policies">
+          <choice>
+            <value>all</value>
+            <value>by-content-type</value>
+            <value>by-ftp-filename</value>
+            <value>master-only</value>
+            <value>none</value>
+          </choice>
+        </attribute>
+      </element>
+    </optional>
+  </define>
+
+  <define name="allow-access-from">
+    <zeroOrMore>
+      <element name="allow-access-from">
+        <interleave>
+          <attribute name="domain"><text /></attribute>
+          <optional>
+            <attribute name="secure"><data type="boolean" /></attribute>
+          </optional>
+          <optional>
+            <attribute name="to-ports"><text/></attribute>
+          </optional>        
+        </interleave>
+      </element>
+    </zeroOrMore>
+  </define>
+
+  <define name="allow-http-request-headers-from">
+    <zeroOrMore>
+      <element name="allow-http-request-headers-from">
+        <interleave>
+          <attribute name="domain"><text /></attribute>
+          <attribute name="headers"><text /></attribute>
+          <optional>
+            <attribute name="secure"><data type="boolean" /></attribute>
+          </optional>
+        </interleave>
+      </element>
+    </zeroOrMore>
+  </define>
+</grammar>

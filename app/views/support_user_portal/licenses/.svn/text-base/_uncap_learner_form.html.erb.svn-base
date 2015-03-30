@@ -1,0 +1,34 @@
+<div>
+<% form_tag( {:controller =>'licenses', :action =>'uncap_learner'} , :id => 'uncap_learner') do %>
+	<%= hidden_field_tag :group_product_right, data[:group_product_right] %>
+	<%= hidden_field_tag :license_guid, data[:license_guid] %>
+    <div>
+      <div style=" padding: 10px 0">
+        <span>Case Number: </span>
+        <span><%= text_field_tag :case_number, nil, :size => 32, :maxlength => 30, :style => "-moz-border-radius: 6px;margin-left:10px;" %></span>
+      </div>
+    </div>
+
+  	<div style=" padding: 10px 0">
+        <span>Reason: </span>
+        <span>
+          <%= select_tag :reason, 
+          options_for_select([
+            ["Please select one below" ,"Select"],
+            ["Management Only","Management Only"],
+            ["Accidental My Account Purchase","Accidental My Account Purchase"],
+            ["Agent session addition made limited","Agent session addition made limited"],
+            ["Subs. Lapse due to Systemic Issues","Subs. Lapse due to Systemic Issues"],
+            ["Japan Limited by Activation","Japan Limited by Activation"],
+          ], "Select"), {:style=>"width:235px; margin-left:45px;"} %>
+        </span>
+        <span><%= image_tag 'ajax-spinner.gif', :id => 'ajaxSpinner_id', :style =>"display:none" %></span>
+    </div>
+
+    <div style="float: right; margin-top:10px">
+     
+      <input id="uncap_learner_button" type="button" onclick="validateUncapFormFields();" value="Submit" />
+      <a class="close-facebox" onclick="jQuery(document).trigger('close.facebox')" style="margin-left : 5px">Exit</a>
+    </div>
+<% end %>
+</div>

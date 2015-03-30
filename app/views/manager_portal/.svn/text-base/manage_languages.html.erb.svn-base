@@ -1,0 +1,23 @@
+<p>Select languages to be managed by you:</p>
+<%= form_tag manage_languages_path, :id => 'assign-langs' do -%>
+  <div class="lang_list">
+    <% @langs.each do |lang| -%>
+      <p><%= check_box_tag "lang_ids[]", lang.id, false, :class => 'valign-middle' -%><b><%= lang.display_name -%></b></p>
+    <% end -%>
+  </div>
+  <br style="clear:both" />
+  <input type="submit" class="btn" value="Assign" />
+<% end -%>
+<br/>
+<% if @assigned_langs.any? -%>
+  <p class="clear:left;" >Languages managed by you:</p>
+  <table class="language_table">
+    <% @assigned_langs.each do |lang| %>
+      <tr>
+        <td style="width: 190px"><b><%= lang.display_name -%></b></td>
+        <td><%= link_to 'Remove', "remove-language?id=#{lang.id}" %></td>
+      </tr>
+    <% end %>
+  </table>
+
+<% end -%>

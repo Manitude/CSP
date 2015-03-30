@@ -1,0 +1,74 @@
+<style type="text/css">
+ .weeks_exceeded_threshold{
+    padding-left:10px !important;
+    font-size:12px;
+    margin-top: 4px;
+  }
+  .ui-tooltip {
+    max-width: 540px;
+    min-width: 380px;
+  }
+</style>
+<% if ps_show_count_is_not_zero?("no_of_home_substitutions") %>
+  <% if (@substitutions[:data]+@notifications_grabbed).any? %>
+    <span class="right" style="float:right;" >
+        <% unless @substitutions[:weeks_exceeded_in_threshold].blank? %>
+          <div id ="sub_exceeded_message"> You have reached or exceeded the maximum number of sessions for the following week(s). Please contact your Coach Manager if you would like to teach additional sessions.
+            <% @substitutions[:weeks_exceeded_in_threshold].each do |weeks_start_time| %>
+              <div class ="weeks_exceeded_threshold">
+                <%= format_time(weeks_start_time) %> - <%= format_time(weeks_start_time + 6.days) %>
+              </div>
+            <% end %>
+          </div>
+      <%end%>
+      <%= link_to "SEE ALL", substitutions_path, :class => 'right', :style=>"height: 15px;" %>
+      <br/>
+    </span>
+    <table id="home_page_subs" class="table_list_subs" style="margin: 25px auto;margin-top: 2px;width:100%;border:0px solid black;">
+      <% @substitutions[:data].each do |sub| %>
+        <% s_id = sub[:sub_id].to_s %>
+        <tr style="text-align: left; font-size: 11px; margin: 0; padding: 0;">
+          <td class="left-border sub_center" style="border:0px">
+            <% if coach_logged_in?%>
+              <%= sub[:coach]%>
+            <% elsif manager_logged_in?%>
+              <%= sub[:extra_session] ?  sub[:coach] : (link_to  sub[:coach], view_coach_profiles_path(:coach_id =>sub[:coach_id]))%>
+            <% end %>
+            <%= substitutions_content(sub) %>
+          </td>
+          <% if coach_logged_in? %>
+            <td class="left-right-border sub_center" style="border:0px">
+              <input type="button" id="<%=  sub[:sub_id] %>" class="btn grab_session" value="Grab" <% if sub[:grab_disable] %> disabled <% end %>/>
+            </td>
+          <% elsif manager_logged_in? %>
+            <td class="left-border" style="border:0px">
+              <%= link_to_function 'Cancel',"constructQtipWithTip(this, 'CANCEL SESSION', '/reason_for_cancellation?sub_id=#{sub[:sub_id]}&called_from=substitution', {  width: 1000 })", :id => "cancel_subbed_session_#{sub[:sub_id]}" if sub[:learners_signed_up].to_i != 0 %> 
+          <%= link_to_function 'Cancel', "cancelSubbedSessionConfirmation(#{sub[:sub_id]})", :id => "cancel_subbed_session_#{sub[:sub_id]}" if sub[:learners_signed_up].to_i == 0 %>
+            </td>
+            <td style="width: 180px;border:0px" class="right-border">
+              <div style="vertical-align: middle;" id="reassign_block<%=s_id%>">
+                <%=  link_to_function 'Re-assign',"fixedFaceBoxWithHeaderAndID('/fetch_available_coaches?sub_id=#{s_id}','ASSIGN SUBSTITUTE','reassign_block#{s_id}')"%>
+              </div>
+            </td>
+          <% end %>
+        </tr>
+      <% end %>
+      <tr>
+        <% unless @notifications_grabbed.blank? %>
+        <table class="notification" width="100%" style="border-left:none;border-top:none;">
+          <% @notifications_grabbed.each do |notification| %>
+            <tr id="<%= notification.id %>">
+              <td class="notification_msg"><%= notification.message %></td>
+            </tr>
+          <% end %>
+        </table>
+      <% end %>
+    </tr>
+    </table>
+    <br></br>
+  <% else %>
+    <p class ="notice">No substitutions are needed at this time.</p>
+  <% end %>
+<% else %>
+  <p class ="notice">There are no substitutions to display. Check your preference settings.</p>
+<% end %>

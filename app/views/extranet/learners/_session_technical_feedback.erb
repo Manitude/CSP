@@ -1,0 +1,29 @@
+<br />
+<%= link_to_learner_profile("Back to learner's profile page", @learner) %>
+<div class="student_studio_history" id="student_studio_history">
+  <p class="header">Learner Session Feedback</p>
+  <div id="eschool" style="padding:10px">
+    <table class='se_tab'>
+      <% if student.attended_session && !(student.attended_session.class.to_s == "String") && student.attended_session.attributes.include?('ratings') && !student.attended_session.ratings.blank? -%>
+        <thead>
+          <tr>
+            <th style="width:150px; padding-right:10px">Label</th>
+            <th style="width:240px">Rating Value</th>
+            <th style="width:175px">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%  student.attended_session.ratings.rating.each do |rating|%>
+            <tr>
+              <td><%= rating.label %></td>
+              <td><%= format_tech_feedack_value(rating.str_value,rating.int_value) %></td>
+              <td><%= rating.notes_value.blank? ? "--" : rating.notes_value %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      <% else -%>
+        <p class="notice">No session technical feedback found for this user.</p>
+      <% end -%>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+# development:
+#   host: "example.ldap.lan.flt"
+#   # Use port 636 if encryption is enabled
+#   port: "389"
+#   treebase: "dc=rosettastone,dc=local"
+#   identifier_attribute: "samaccountname"
+#   # Only use if encryption is enabled
+#   encryption: 'simple_tls'
+#   # Auth details in case of anonymous binding being disallowed
+#   auth:
+#     username: 'linuxldap@rosettastone.local'
+#     password: 'IH2v3N0P2ssw0rd'
+
+test:
+  host: "127.0.0.1"
+  port: "1389"
+  treebase: "dc=trstone,dc=com"
+  identifier_attribute: "uid"

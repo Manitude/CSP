@@ -1,0 +1,13 @@
+<%= form_for @new_appointment_type  do |f| %>
+<br>
+<table style="border: none !important; width: 100%;"%>
+  <tr>
+    <td>
+      <div class="field"><%= f.text_field :title, :maxlength => 19, :size => '35' %></div>
+      <br />Max: 19 characters
+    </td>
+   
+    <td><div class="actions"><%= f.submit " Save ", :class => "button" %></div></td>
+  </tr>
+</table>
+<% end %>

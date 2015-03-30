@@ -1,0 +1,138 @@
+<style type="text/css">
+  .common_table_css {width: 100%; border: 0;}
+  .common_table_css td tr {padding-top: 10px; text-align: left;}
+  .ext_date span {padding-left: 5px;}
+  .ext_gray_button {background-color: #F3F3F4; border: 1px solid #444444;float:left;}
+  #ext_date_feilds {display: none;}
+  #popup_ok{
+    background-color: #F3F3F4 !important;
+    margin-bottom: 20px !important;
+  }
+</style>
+
+<div>
+  <%= form_tag( {:controller =>'licenses', :action =>'add_or_remove_extension'}, :id => 'add_or_remove_extension') do %>
+    <%= hidden_field_tag :pr_guid, @pr_guid %>
+    <%= hidden_field_tag :license_guid, @license_guid %>
+    <%= hidden_field_tag :license_identifier, @license_identifier %>
+    <%= hidden_field_tag :language, @product_identifier %>
+    <%= hidden_field_tag :product_version, @product_version %>
+    <%= hidden_field_tag :original_end_date, @original_end_date %>
+    <%= hidden_field_tag :group_guid, @group_guid %>
+    <%= hidden_field_tag :expired_license, @expired_license %>
+    <%= hidden_field_tag :add_time, false %>
+    <%= hidden_field_tag :add_duration, "" %>
+    <%= hidden_field_tag :remove_duration, "" %>
+    <%= hidden_field_tag :creation_account, "" %>
+    <%= hidden_field_tag :actual_end_date, get_correct_end_time_to_add_extension(@original_end_date.to_time) %>
+
+               
+    <div>
+      <div style=" padding: 10px 0">
+        <span>CASE NUMBER: </span>
+        <span><%= text_field_tag :ticket_number, nil, :size => 32, :maxlength => 30, :style => "-moz-border-radius: 6px;" %></span>
+      </div>
+    </div>
+
+    <table class="common_table_css" style="border: 0;">
+      <tr>
+
+        <td style="width:330px; vertical-align: bottom;">
+          <div style=" padding: 10px 0;">
+            <span id ="add_time_radio_box_span" style=" vertical-align: bottom;">
+              <%= radio_button_tag 'add_remove_radio', "ADD_TIME", true, {:id => "add_time_radio_box_input", :onclick => "updateReason(this.id);"} %>
+            </span>
+            <span id ="add_time" >ADD TIME</span>
+            <span style=" padding: 10px 0 10px 10px;">
+              <%= select_tag :add_time_unit, options_for_select([["Select",""],["Days" ,"d"],["Months" , "m"]]), {:onchange => "updateList(this.value);", :class => "add_components" } %>
+            </span>
+            <span style=" padding: 10px 0 10px 10px;">
+              <%= select_tag :add_time_number, nil ,{:onchange => "updateDate(this.value);"} %>
+            </span>
+          </div>
+        </td>
+
+        <td style="width:350px;">
+            <div id="add_projected_through" style="font-size: 12px; padding: 20px 10px 10px 20px;" ></div>
+        </td>
+
+      </tr>
+      <% if @product_version.strip != "1" %>
+      <tr >
+        <div style="padding: 7px 0px 5px 6px "> 
+        <td style="width:350px; vertical-align: bottom;">
+          <span style="padding-left: 25px " id="group_label">Group</span>
+          <span>
+            <%= text_field_tag :group_consumable_count, nil, :size => 2, :maxlength => 3, :style => "-moz-border-radius: 6px;", :class => "add_components", :disabled => @group_guid=="" %>
+          </span>  
+        </td>
+        <td>  
+           <span style="padding-left: 10px ">Solo for duration of online access</span>  
+          <span>
+            <%= text_field_tag :solo_consumable_count, 0, :size => 2, :maxlength => 3, :style => "-moz-border-radius: 6px;", :class => "add_components" %>
+          </span> 
+        </td>  
+        </div>
+        </td>
+      </tr>  
+      <% end %>
+
+      <tr>
+        <td style="width:180px;">
+          <div style=" padding: 10px 0;">
+            <span id ="remove_rights_radio_box_span" style=" vertical-align: bottom;">
+              <%= radio_button_tag 'add_remove_radio', "REMOVE", false, {:id => "remove_rights_radio_box_input", :onclick => "updateReason(this.id);"} %>
+            </span>
+            <span id ="remove_rights">REMOVE ONLINE RIGHTS</span>
+          </div>
+        </td>
+      </tr>
+
+      <tr >
+        <td style="width:300px; vertical-align: bottom;">
+          <div style="padding: 7px 0px 5px 6px "> 
+          <span style="padding-left: 25px ">Cycles: </span>
+          <span>
+            <%= select_tag :number_of_cycles, options_for_select(["All"]),{:class => "remove_components", :onchange => "updateDate(this.value);"} %>
+        </div>
+        </td>
+        <td style="width:350px; vertical-align: bottom;">
+            <div id="remove_projected_through" style="font-size: 12px; padding: 20px 10px 10px 20px;" ></div>
+        </td>
+      </tr>  
+    </table>
+
+    <div style=" padding: 0px 0 0 25px; ">
+      <div style=" padding: 10px 0">
+        <span>Reason: </span>
+        <span><%= select_tag :reason, options_for_select([["Please select one below" ,"Select"]].sort, "Select"), {:onchange => "toggleReason(this.value);"} %></span>
+        <span><%= image_tag 'ajax-spinner.gif', :id => 'ajaxSpinner_id', :style =>"display:none" %></span>
+      </div>
+      <%= text_area_tag :other_reason, "Please enter reason for extension / removal", :rows => 3, :cols => 55, :style => "-moz-border-radius: 12px;display:none;color:#888;padding: 5px 0 0 5px;resize:none;", :onfocus=>"reasonFocus(this)", :onblur=>"reasonBlur(this)", :title => "Other reasons" %>
+    </div>
+    <div style="float: right; margin-top:10px">
+      <input id="add_or_remove_extension_button" type="button" onclick="addConsumables();" value="OK" />
+    </div>
+  <% end %>
+</div>
+<div id="confirm_alert" style="display:none;z-index:1000;background-color:white;">
+  <input type="button" value="Learners impacted"> 
+  </div>
+
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    // to populate the remove list.
+    var ext_number = <%= @usable_extensions %>
+    var list = $("#number_of_cycles");
+    for(var i=1;i<=ext_number;i++){
+      list.append($("<option />").val(i).text(i));
+    }
+    if (jQuery("#group_guid").val()=="") {
+      jQuery('#group_consumable_count').removeAttr('class');
+    }
+    updateReason("add_time_radio_box_input");
+  });
+
+  
+  
+</script>

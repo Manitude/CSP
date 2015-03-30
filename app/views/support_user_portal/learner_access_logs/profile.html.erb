@@ -1,0 +1,41 @@
+<div class="form_container">
+  <%= link_to 'Try a new search', learners_path %>
+  <div id="profile">
+    <p class="header">Community Profile</p>
+    <div id="general">
+      <ul class="col1 view">
+        <li style="color:#FF9A00;">Public</li>
+        <li><label>Email</label> <span><%= @learner.email %></span></li>
+        <li><label>First Name</label> <span><%= @learner.first_name %></span></li>
+        <li><label>Last Name</label> <span><%= @learner.last_name %></span></li>
+        <li><label>Prefered Name</label> <span></span><%= @learner.preferred_name %></li>
+        <li><label>Country</label> <span><%= @learner.city %></span></li>
+        <li><label>State/Province</label> <span></span></li>
+        <li><label>City</label> <span></span></li>
+      </ul>
+      <ul class="col2 view">
+        <li style="color:#FF9A00;">Private</li>
+        <li><label>Birthdate</label> <span></span></li>
+        <li><label>Gender</label> <span></span></li>
+        <li><label>Time Zone</label> <span></span></li>
+        <li><label><%= link_to("Last Updated") %></label> <span></span></li>
+        <li style="color:#FF9A00;">Languages</li>
+        <li><label>TOTALe</label> <span></span></li>
+        <li><label>RWorld</label> <span></span></li>
+        <li><label>Simbio</label> <span></span></li>
+      </ul>
+      <ul class="col3">
+        <li></li>
+      </ul>
+    </div>
+
+    <p class="header" style="border-bottom:none"></p>
+
+    <!--
+        <p class="header">Studio</p>
+        <p class="header">Course - French</p>
+        <p class="header">World</p>
+        <p class="header">Time spent on Languages</p>
+    -->
+  </div>
+</div>

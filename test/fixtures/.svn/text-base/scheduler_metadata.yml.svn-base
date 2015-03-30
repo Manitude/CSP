@@ -1,0 +1,11 @@
+## scheduler metadata
+---
+SM_01:
+  lang_identifier: 'ARA'
+  locked: true
+  created_at: <%= Time.now.in_time_zone("UTC").beginning_of_hour-4.hours %>
+
+SM_02:
+  lang_identifier: 'CHI'
+  locked: true
+  created_at: <%= Time.now.in_time_zone("UTC").beginning_of_hour-2.days %>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/lagomorphic/lib/rabbit
+END
+async_connection.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/lagomorphic/lib/rabbit/async_connection.rb
+END
+test_unit_ext.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/lagomorphic/lib/rabbit/test_unit_ext.rb
+END
+connection.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/lagomorphic/lib/rabbit/connection.rb
+END
+helpers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/lagomorphic/lib/rabbit/helpers.rb
+END
+producer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/lagomorphic/lib/rabbit/producer.rb
+END
+config.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/lagomorphic/lib/rabbit/config.rb
+END

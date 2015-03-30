@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/jrails-0.6.0
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/jrails-0.6.0/LICENSE
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/jrails-0.6.0/README.rdoc
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/jrails-0.6.0/init.rb
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/jrails-0.6.0/CHANGELOG
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/jrails-0.6.0/install.rb
+END

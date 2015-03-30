@@ -1,0 +1,32 @@
+  
+  <table class = "search_table ">
+      
+       <tr>
+            <td ><b>Learner Data</b> <%= text_field_tag :fname, params[:fname] || "First Name",
+              {:class => "search_box", :style=>"color:#888", :onfocus=>"inputFocus(this)", :onblur=>"inputBlur(this)", :title => "First Name", :size =>30 } %> </td>
+
+            <td> <br><%= text_field_tag :lname, params[:lname] || "Last Name",
+              {:class => "search_box", :style=>"color:#888", :onfocus=>"inputFocus(this)", :onblur=>"inputBlur(this)", :title => "Last Name", :size =>30 } %> </td>
+
+            <td> <br><%= text_field_tag :email, params[:email] || "License Identifier (email)",
+              {:class => "search_box", :style=>"color:#888", :onfocus=>"inputFocus(this)", :onblur=>"inputBlur(this)", :title => "License Identifier (email)",:size =>25 } %> </td>
+
+            <td><br><%= text_field_tag :username, params[:username] || "User Name (Institutional Only)",
+              {:class => "search_box", :style=>"color:#888", :onfocus=>"inputFocus(this)", :onblur=>"inputBlur(this)", :title => "User Name (Institutional Only)",:size =>25 } %> </td>
+
+                <td><br><%= text_field_tag :phone_number, params[:phone_number] || "Mobile Phone Number",
+              {:class => "search_box", :style=>"color:#888", :onfocus=>"inputFocus(this)", :onblur=>"inputBlur(this)", :title => "Enter Mobile Phone Number"} %></td>
+       </tr>
+
+       <tr>
+        
+
+            <td nowrap>Languages : <%= select_tag "language", options_for_languages_with_identifiers(params[:language]),  {:class =>'wider_select_class'} -%></td>
+            
+            <td nowrap>Villages : <%= select_tag "village", options_for_villages_learners(params[:village]),  {:class =>'wider_select_class'} -%></td>
+       </tr>
+
+  </table>
+
+
+       

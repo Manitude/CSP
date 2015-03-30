@@ -1,0 +1,10 @@
+<div class="studio_info" id="studio_info">
+  <p class="header">Studio History</p>
+  <%if @learner.as_student %>
+    <%= render :partial => 'basic_studio_info', :locals =>{:student=> @learner.as_student}%>
+    <%= render :partial => 'session_feedback', :locals =>{:student=> @learner.as_student}%>
+    <%= render :partial => 'session_attendance', :locals =>{:student=> @learner.as_student}%>
+  <%else%>
+  <br/><p class ="notice">There is no data available for user.</p>
+  <%end%>
+</div>

@@ -1,0 +1,4 @@
+<% if @next_session %>
+  In <span id="next-session-starttime-interval"><%= @next_session.time_from_now %></span> Minutes
+  <%= image_tag('icon_load.png', :alt => "Time To Next Session", :id => "next_session_load_image") %>
+<% end %>

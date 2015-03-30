@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/fault
+END
+fault.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/fault/fault.wsdl
+END
+test_multifault.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/fault/test_multifault.rb
+END
+test_fault.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/fault/test_fault.rb
+END
+multifault.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/fault/multifault.wsdl
+END

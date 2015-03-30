@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/utils
+END
+dashboard_utils_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/utils/dashboard_utils_test.rb
+END
+coach_activity_fetcher_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/utils/coach_activity_fetcher_test.rb
+END
+reflex_session_details_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/utils/reflex_session_details_test.rb
+END
+time_utils_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/utils/time_utils_test.rb
+END
+coach_aggregator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/utils/coach_aggregator_test.rb
+END
+app_utils_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/utils/app_utils_test.rb
+END
+historical_count_finder_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/utils/historical_count_finder_test.rb
+END
+lotus_real_time_data_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/utils/lotus_real_time_data_test.rb
+END
+coach_activity_report_utils_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/utils/coach_activity_report_utils_test.rb
+END
+coach_activity_parser_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/utils/coach_activity_parser_test.rb
+END

@@ -1,0 +1,103 @@
+<% if @registered_learners.empty? && @unregistered_learners.empty? %>
+  <span style="text-aligh:center;width:100%">This Learner cannot be added to sessions through the Customer Success Portal at this time. Please assist the Learner to join the session through TOTALe.</span>
+<% else %>
+  <div id="boxbox_content" class="boxbox_container" style="width:600px;">
+    <% if !@registered_learners.empty? %>
+      <h2>Learners Attending -- <span id=session_details><%=raw @session_details%></span></h2><br/>
+      <table summary="attendances" class="tier1_table_list">
+        <tr>
+          <th>Learner</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+        <% @registered_learners.each do |attendance| %>
+          <tr>
+            <td><%= attendance.name %></td>
+            <td><%= attendance.email %></td>
+            <td>
+              <%= link_to 'Remove', "remove_student?attendance_id=#{attendance.attendance_id}", :class => "remove_student_link" %>
+              <span id="wait" style="margin-left: 3px; display: none"><%= image_tag 'spinner.gif', :alt => "Creating Sessions..." %></span>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+      <br/>
+    <% elsif !@unregistered_learners.empty? %>
+      <h2>ADD LEARNER -- <%=raw @session_details%></h2>
+      <% if @level_unit_options_for_select %>
+      <div style="float:left; padding:7px 10px 10px 0;">This session does not yet have a level and unit assigned.</div>
+      <%end%>
+    <% end  %>
+    <% if !@unregistered_learners.empty? %>
+      <%= form_tag('add_student', :id=>'add_student') do %>
+        <% if @level_unit_options_for_select %>
+        <%#= select_tag :single_number_unit, options_for_select(@level_unit_options_for_select.sort), :style => "margin-top:5px; background:white;" %>
+          Unit: <%= select_tag :unit, options_for_select((1..20).entries.sort), :style => "margin-top:5px; background:white;" %>
+              Lesson: <%= select_tag :lesson, options_for_select([2, 4]), :style => "margin-top:5px; background:white;" %>
+         <%else%>
+              <%= hidden_field_tag :unit, params[:single_number_unit] %>
+              <%= hidden_field_tag :lesson,params[:lesson] %>
+         <% end %>
+        <table summary="attendances" class="tier1_table_list">
+          <tr>
+            <th>End User</th>
+            <th>License ID</th>
+            <th style="border-bottom:none;">&nbsp;</th>
+          </tr>
+          <%= hidden_field_tag :session_id, @session_id %>
+          <%= hidden_field_tag :student_id, @unregistered_learners[0].student_id %>
+          <%= hidden_field_tag :one_on_one, false %>
+          <tr>
+            <td style="border-left: 1px solid #CCCCCC; border-bottom: 1px solid #CCCCCC;"><%= @unregistered_learners[0].name %></td>
+            <td style="border-right: 1px solid #CCCCCC; border-bottom: 1px solid #CCCCCC;"><%= @unregistered_learners[0].email %></td>
+            <td>
+              <% if !params[:show_solo_sessions] && !params[:show_group_sessions] %>
+                <input class= "add_student_btn" type="button" id = "group_button" value="Add Learner" />
+              <% elsif params[:show_solo_sessions] && !params[:show_group_sessions] %>
+                <input solo = "true" class= "add_student_btn" type="button" id = "solo_button" value="Add Learner" />
+              <% elsif !params[:show_solo_sessions] && params[:show_group_sessions] %>
+                <input class= "add_student_btn" type="button" id = "group_button" value="Add Learner" />
+              <% elsif params[:show_solo_sessions] && params[:show_group_sessions] %>
+                <% if params[:number_of_seats] == '1' %>
+                  <input solo = "true" class= "add_student_btn" type="button" id = "solo_button" value="Add Learner" />
+                <% elsif params[:number_of_seats] == '4' && @registered_learners.empty? %>
+                  <input solo = "true" class= "add_student_btn" type="button" id = "solo_button" value="Solo" />
+                  <input solo = "false" class= "add_student_btn" type="button" id = "group_button" value="Group" />
+                <% else %>
+                  <input class= "add_student_btn" type="button" id = "group_button" value="Add Learner" />
+                <% end %>
+              <% end %>
+              <span id="wait" style="margin-left: 3px; margin-top: 2px; display: none"><%= image_tag 'spinner.gif', :alt => "Processing.." %></span>
+            </td>
+          </tr>
+        </table>
+      <% end %>
+    <% end %>
+
+    <script type="text/javascript">
+      jQuery(document).ready(function(){
+        jQuery('.add_student_btn').bind('click',function(e){
+          e.preventDefault();
+          return addStudentToSession(this);
+        });
+
+        jQuery('a.remove_student_link').bind('click',function(e){
+          e.preventDefault();
+          var msg="This leaner will be removed from the "+jQuery('#session_details').text()+" "+jQuery('#language_name').text().split(":")[1]+"  session. Do you want to proceed?";
+          jQuery.alerts.okButton = 'Yes';
+           jQuery.alerts.cancelButton = 'No';
+          jConfirm(msg,'', function(result) {
+            
+            if(result){
+              return removeAStudentFromSession(e);
+            }
+            else
+              jQuery(document).trigger('close.facebox');
+          });
+          
+        });
+      });
+    </script>
+  </div>
+<% end %>
+

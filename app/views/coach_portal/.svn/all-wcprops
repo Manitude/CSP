@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_portal
+END
+edit_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_portal/edit_profile.html.erb
+END
+application_status.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_portal/application_status.html.erb
+END
+_countdown_session_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_portal/_countdown_session_details.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_portal/index.html.erb
+END
+_left_navigation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_portal/_left_navigation.html.erb
+END
+login.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_portal/login.html.erb
+END
+notifications.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_portal/notifications.html.erb
+END
+view_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_portal/view_profile.html.erb
+END
+_view_my_upcoming_classes.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_portal/_view_my_upcoming_classes.html.erb
+END
+get_learner_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_portal/get_learner_details.html.erb
+END

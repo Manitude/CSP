@@ -1,0 +1,4 @@
+SimpleHttp
+==========
+
+Provides a wrapper around Net::HTTP. See initialize in Client, Request, and the provided tests.

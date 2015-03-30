@@ -1,0 +1,11 @@
+<div class="page-header">
+  <h2>New Ranged Chunk Agent</h2>
+</div>
+
+<%= form_for :ranged_chunk_agent, :url => {:action => :create}, :html => {:class => 'simple_form'} do |f| %>
+  <%= render :partial=>'granite/ranged_chunk_agents/form', :object => f %>
+  <br/>
+  <%= submit_tag 'Save' %>
+<% end %>
+<br/>
+<%= link_to 'Back', :action => :index %>

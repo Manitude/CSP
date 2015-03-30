@@ -1,0 +1,7 @@
+development:
+  property: batman
+test:
+  property: default
+  property_not_overridden: default
+not_overridden:
+  not_overridden_property: spongebob

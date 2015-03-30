@@ -1,0 +1,3 @@
+<%= (calendar(:year => @date.year, :previous_month_text => prevm(days_logged_in), :month => @date.month, :next_month_text => nextm(days_logged_in), :abbrev => (0..0)) do |d|
+     [d.mday, {:class => (days_logged_in.include?(d.to_s) ? "goodDay" : "day")}]
+end).html_safe %>

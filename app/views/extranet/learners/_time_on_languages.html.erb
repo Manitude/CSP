@@ -1,0 +1,14 @@
+<div class="time_on_languages" id="time_on_languages">
+  <p class="header">Time Spent in Course</p><br />
+  <div class="float_left" style="width: 67%; clear: both">
+    <% unless baffler_time_spent_on_languages.empty? %>
+      <% sort_by_language_name(baffler_time_spent_on_languages["language"]).each do |language| -%>
+        <div class="wide_label_row">
+          <span class="label" ><%= language["language_name"] %></span><span class="formw"><%= Time.at(language["time_spent"].to_i).utc.strftime("%H:%M:%S")  %></span>
+        </div>
+      <% end -%>
+    <% else %>
+      <p class="italics">There was no time spent on any language.</p>
+    <% end %>
+  </div>
+</div>

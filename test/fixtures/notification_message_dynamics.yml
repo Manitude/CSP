@@ -1,0 +1,330 @@
+---
+notification_message_dynamics_038:
+  rel_obj_attr: start_date
+  name: Start Date
+  msg_index: "65"
+  rel_obj_type:
+  notification_id: "18"
+  id: "40"
+notification_message_dynamics_027:
+  rel_obj_attr: name
+  name: Coach Name
+  msg_index: "44"
+  rel_obj_type: coach
+  notification_id: "14"
+  id: "28"
+notification_message_dynamics_016:
+  rel_obj_attr: name
+  name: Coach Name
+  msg_index: "32"
+  rel_obj_type: grabber_coach
+  notification_id: "9"
+  id: "17"
+notification_message_dynamics_005:
+  rel_obj_attr: label
+  name: Template Name
+  msg_index: "46"
+  rel_obj_type:
+  notification_id: "3"
+  id: "5"
+notification_message_dynamics_039:
+  rel_obj_attr: end_date
+  name: End Date
+  msg_index: "68"
+  rel_obj_type:
+  notification_id: "18"
+  id: "41"
+notification_message_dynamics_028:
+  rel_obj_attr: label
+  name: Template Name
+  msg_index: "14"
+  rel_obj_type:
+  notification_id: "15"
+  id: "29"
+notification_message_dynamics_017:
+  rel_obj_attr: identifier
+  name: Language identifier
+  msg_index: "5"
+  rel_obj_type: language
+  notification_id: "10"
+  id: "18"
+notification_message_dynamics_006:
+  rel_obj_attr: effective_start_date
+  name: date
+  msg_index: "56"
+  rel_obj_type:
+  notification_id: "3"
+  id: "6"
+notification_message_dynamics_040:
+  rel_obj_attr: label
+  name: Template Name
+  msg_index: "40"
+  rel_obj_type:
+  notification_id: "19"
+  id: "42"
+notification_message_dynamics_029:
+  rel_obj_attr: effective_start_date
+  name: Date
+  msg_index: "24"
+  rel_obj_type:
+  notification_id: "15"
+  id: "30"
+notification_message_dynamics_018:
+  rel_obj_attr: substitution_date
+  name: datetime
+  msg_index: "23"
+  rel_obj_type:
+  notification_id: "10"
+  id: "19"
+notification_message_dynamics_007:
+  rel_obj_attr: name
+  name: Coach Name
+  msg_index: "0"
+  rel_obj_type: coach
+  notification_id: "4"
+  id: "7"
+notification_message_dynamics_041:
+  rel_obj_attr: name
+  name: Coach Name
+  msg_index: "0"
+  rel_obj_type: coach
+  notification_id: "20"
+  id: "43"
+notification_message_dynamics_030:
+  rel_obj_attr: name
+  name: Coach Name
+  msg_index: "0"
+  rel_obj_type: coach
+  notification_id: "16"
+  id: "31"
+notification_message_dynamics_019:
+  rel_obj_attr: identifier
+  name: Language identifier
+  msg_index: "0"
+  rel_obj_type: language
+  notification_id: "11"
+  id: "20"
+notification_message_dynamics_008:
+  rel_obj_attr: label
+  name: Template Name
+  msg_index: "52"
+  rel_obj_type:
+  notification_id: "4"
+  id: "8"
+notification_message_dynamics_042:
+  rel_obj_attr: start_date
+  name: Start Date
+  msg_index: "64"
+  rel_obj_type:
+  notification_id: "20"
+  id: "44"
+notification_message_dynamics_031:
+  rel_obj_attr: label
+  name: Template Name
+  msg_index: "33"
+  rel_obj_type:
+  notification_id: "16"
+  id: "32"
+notification_message_dynamics_020:
+  rel_obj_attr: substitution_date
+  name: datetime
+  msg_index: "11"
+  rel_obj_type:
+  notification_id: "11"
+  id: "21"
+notification_message_dynamics_009:
+  rel_obj_attr: name
+  name: Coach Name
+  msg_index: "0"
+  rel_obj_type: coach
+  notification_id: "5"
+  id: "9"
+notification_message_dynamics_043:
+  rel_obj_attr: end_date
+  name: End Date
+  msg_index: "67"
+  rel_obj_type:
+  notification_id: "20"
+  id: "45"
+notification_message_dynamics_032:
+  rel_obj_attr: name
+  name: Coach Name
+  msg_index: "0"
+  rel_obj_type: coach
+  notification_id: "17"
+  id: "33"
+notification_message_dynamics_021:
+  rel_obj_attr: start_date
+  name: datetime
+  msg_index: "21"
+  rel_obj_type:
+  notification_id: "12"
+  id: "22"
+notification_message_dynamics_010:
+  rel_obj_attr: start_date
+  name: Start Date
+  msg_index: "48"
+  rel_obj_type:
+  notification_id: "5"
+  id: "10"
+notification_message_dynamics_033:
+  rel_obj_attr: start_date
+  name: Session Start Time
+  msg_index: "48"
+  rel_obj_type:
+  notification_id: "17"
+  id: "34"
+notification_message_dynamics_022:
+  rel_obj_attr: label
+  name: Template Name
+  msg_index: "13"
+  rel_obj_type:
+  notification_id: "13"
+  id: "23"
+notification_message_dynamics_011:
+  rel_obj_attr: name
+  name: Coach Name
+  msg_index: "0"
+  rel_obj_type: coach
+  notification_id: "6"
+  id: "11"
+notification_message_dynamics_034:
+  rel_obj_attr: end_date
+  name: End Date
+  msg_index: "31"
+  rel_obj_type:
+  notification_id: "6"
+  id: "35"
+notification_message_dynamics_023:
+  rel_obj_attr: effective_start_date
+  name: Date
+  msg_index: "23"
+  rel_obj_type:
+  notification_id: "13"
+  id: "24"
+notification_message_dynamics_012:
+  rel_obj_attr: start_date
+  name: Start Date
+  msg_index: "28"
+  rel_obj_type:
+  notification_id: "6"
+  id: "12"
+notification_message_dynamics_001:
+  rel_obj_attr: label
+  name: Template Name
+  msg_index: "15"
+  rel_obj_type:
+  notification_id: "1"
+  id: "1"
+notification_message_dynamics_035:
+  rel_obj_attr: end_date
+  name: End Date
+  msg_index: "51"
+  rel_obj_type:
+  notification_id: "5"
+  id: "36"
+notification_message_dynamics_024:
+  rel_obj_attr: name
+  name: Coach Name
+  msg_index: "44"
+  rel_obj_type: coach
+  notification_id: "13"
+  id: "25"
+notification_message_dynamics_013:
+  rel_obj_attr: start_date
+  name: Start Date
+  msg_index: "29"
+  rel_obj_type:
+  notification_id: "7"
+  id: "13"
+notification_message_dynamics_002:
+  rel_obj_attr: name
+  name: Coach Name
+  msg_index: "19"
+  rel_obj_type: coach
+  notification_id: "1"
+  id: "2"
+notification_message_dynamics_036:
+  rel_obj_attr: end_date
+  name: End Date
+  msg_index: "32"
+  rel_obj_type:
+  notification_id: "7"
+  id: "37"
+notification_message_dynamics_025:
+  rel_obj_attr: label
+  name: Template Name
+  msg_index: "13"
+  rel_obj_type:
+  notification_id: "14"
+  id: "26"
+notification_message_dynamics_014:
+  rel_obj_attr: identifier
+  name: Language identifier
+  msg_index: "0"
+  rel_obj_type: language
+  notification_id: "9"
+  id: "15"
+notification_message_dynamics_003:
+  rel_obj_attr: label
+  name: Template Name
+  msg_index: "14"
+  rel_obj_type:
+  notification_id: "2"
+  id: "3"
+notification_message_dynamics_037:
+  rel_obj_attr: name
+  name: Coach Name
+  msg_index: "0"
+  rel_obj_type: coach
+  notification_id: "18"
+  id: "39"
+notification_message_dynamics_026:
+  rel_obj_attr: effective_start_date
+  name: Date
+  msg_index: "23"
+  rel_obj_type:
+  notification_id: "14"
+  id: "27"
+notification_message_dynamics_015:
+  rel_obj_attr: substitution_date
+  name: datetime
+  msg_index: "12"
+  rel_obj_type:
+  notification_id: "9"
+  id: "16"
+notification_message_dynamics_004:
+  rel_obj_attr: effective_start_date
+  name: date
+  msg_index: "24"
+  rel_obj_type:
+  notification_id: "2"
+  id: "4"
+notification_message_dynamics_051:
+  rel_obj_attr: start_date
+  name: Session Start Time
+  msg_index: "81"
+  rel_obj_type:
+  notification_id: "21"
+  id: "51"
+notification_message_dynamics_052:
+  rel_obj_attr: label
+  name:
+  msg_index: "38"
+  rel_obj_type:
+  notification_id: "22"
+  id: "52"
+notification_message_dynamics_054:
+  rel_obj_attr: start_date
+  name: Start Date
+  msg_index: "33"
+  rel_obj_type:
+  notification_id: "25"
+  id: "54"
+notification_message_dynamics_055:
+  rel_obj_attr: end_date
+  name: End Date
+  msg_index: "46"
+  rel_obj_type:
+  notification_id: "25"
+  id: "55"

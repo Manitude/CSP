@@ -1,0 +1,10 @@
+<%= form_tag create_coach_path, :id => "profile-form", :multipart => true do -%>
+  <%= render :partial => "coach_form" -%>
+  <p style="margin-top: 20px;"><%= submit_tag "Save", :onclick => "return validateCoachProfile()" %></p>
+<% end -%>
+
+<%= javascript_tag do  %>
+  initQualifications();
+  removeAdvancedEnglishMaxUnits();
+  handleRemoveProfilePictureEvents();
+<% end %>

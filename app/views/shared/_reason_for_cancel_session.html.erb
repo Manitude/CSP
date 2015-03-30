@@ -1,0 +1,13 @@
+Please select the reason that best explains why this session is being cancelled.<br><br>
+<%= hidden_field_tag "sub_id", params[:sub_id] if  params[:sub_id]%>
+<%= hidden_field_tag "coach_session_id", params[:coach_session_id] if params[:coach_session_id] %>
+<%= hidden_field_tag "recurring_session", !(CoachSession.find(params[:coach_session_id]).recurring_schedule_id.blank?) if params[:coach_session_id] %>
+<%= hidden_field_tag "eschool_session_id", params[:eschool_session_id] if params[:eschool_session_id] %>
+<%= render :partial => 'shared/show_reasons' %>
+<br><br>
+<% if @dashboard_page %>
+	<input id="cancel_session_button_<%= @called_from %>" type="button" class="button medium_button" value="Cancel"/>
+	<input id="back_to_session_button" type="button" class="button medium_button" value="Back"/>
+<% else %>
+	<input id="cancel_session_button_<%= @called_from %>" type="button" class="button long_button" value="Cancel Session"/>
+<% end %>

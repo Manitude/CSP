@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/spec
+END
+spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/spec/spec_helper.rb
+END
+spec.opts
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/spec/spec.opts
+END

@@ -1,0 +1,8 @@
+RosettastoneTools
+=================
+
+Useful rake tasks, etc, that most of our apps are using in one form or another.
+
+For OLLCs, try:
+
+./rake refresh_from_production ignore_tables=assignment_progress,user_events

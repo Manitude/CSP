@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues
+END
+08_unsubscribing_a_consumer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/08_unsubscribing_a_consumer.rb
+END
+11_deleting_a_queue.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/11_deleting_a_queue.rb
+END
+01a_declaring_a_server_named_queue_using_queue_constructor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/01a_declaring_a_server_named_queue_using_queue_constructor.rb
+END
+09_unbinding_from_exchange.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/09_unbinding_from_exchange.rb
+END
+01b_declaring_a_queue_using_queue_constructor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/01b_declaring_a_queue_using_queue_constructor.rb
+END
+04_bind_a_queue_using_exchange_instance.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/04_bind_a_queue_using_exchange_instance.rb
+END
+06_subscribe_to_receive_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/06_subscribe_to_receive_messages.rb
+END
+02a_declaring_a_durable_shared_queue.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/02a_declaring_a_durable_shared_queue.rb
+END
+02b_declaring_a_durable_shared_queue.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/02b_declaring_a_durable_shared_queue.rb
+END
+10_purge_a_queue.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/10_purge_a_queue.rb
+END
+03a_declaring_a_temporary_exclusive_queue.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/03a_declaring_a_temporary_exclusive_queue.rb
+END
+13_objects_that_consume_messages_take_two.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/13_objects_that_consume_messages_take_two.rb
+END
+03b_declaring_a_temporary_exclusive_queue.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/03b_declaring_a_temporary_exclusive_queue.rb
+END
+07_fetch_a_message_from_the_queue.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/07_fetch_a_message_from_the_queue.rb
+END
+12_objects_that_consume_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/12_objects_that_consume_messages.rb
+END
+05_bind_a_queue_using_exchange_name.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/guides/queues/05_bind_a_queue_using_exchange_name.rb
+END

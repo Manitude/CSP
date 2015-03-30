@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/WebDev/!svn/ver/144123/plugins/audit_log/trunk/lib
+END
+custom_audit_logger.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/143169/plugins/audit_log/trunk/lib/custom_audit_logger.rb
+END
+audit_logging_filter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/74349/plugins/audit_log/trunk/lib/audit_logging_filter.rb
+END
+audit_log_record.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/144123/plugins/audit_log/trunk/lib/audit_log_record.rb
+END
+audit_logger.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/74349/plugins/audit_log/trunk/lib/audit_logger.rb
+END
+audit_log.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/144123/plugins/audit_log/trunk/lib/audit_log.rb
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/license_server
+END
+license_server_connection.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/license_server/license_server_connection.rb
+END
+product_right.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/license_server/product_right.rb
+END
+product.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/license_server/product.rb
+END
+license.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/license_server/license.rb
+END

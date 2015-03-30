@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/159015/coach_portal/branches/sprint32/app/helpers
+END
+schedules_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/helpers/schedules_helper.rb
+END
+staffing_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/helpers/staffing_helper.rb
+END
+csv_generator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/helpers/csv_generator.rb
+END
+application_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/159015/coach_portal/branches/sprint32/app/helpers/application_helper.rb
+END
+dashboard_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/158894/coach_portal/branches/sprint32/app/helpers/dashboard_helper.rb
+END
+master_scheduler_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/helpers/master_scheduler_helper.rb
+END
+manager_portal_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/helpers/manager_portal_helper.rb
+END
+report_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/helpers/report_helper.rb
+END

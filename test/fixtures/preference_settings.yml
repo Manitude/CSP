@@ -1,0 +1,206 @@
+# == Schema Information
+#
+# Table name: preference_settings
+#
+#  id                                         :integer(4)      not null, primary key
+#  substitution_alerts_email                  :integer(4)      
+#  substitution_alerts_email_type             :string(255)     
+#  substitution_alerts_email_sending_schedule :string(255)     
+#  substitution_alerts_sms                    :integer(4)      
+#  substitution_alerts_sms_sending_schedule   :string(255)     
+#  no_of_substitution_alerts_to_display       :integer(4)      
+#  substitution_alerts_display_time           :integer(4)      
+#  notifications_email                        :integer(4)      
+#  notifications_email_type                   :string(255)     
+#  notifications_email_sending_schedule       :string(255)     
+#  notifications_sms                          :integer(4)      
+#  notifications_sms_sending_schedule         :string(255)     
+#  calendar_notices_email                     :integer(4)      
+#  calendar_notices_email_type                :string(255)     
+#  calendar_notices_email_sending_schedule    :string(255)     
+#  calendar_notices_sms                       :integer(4)      
+#  calendar_notices_sms_sending_schedule      :string(255)     
+#  session_alerts_display_time                :integer(4)      
+#  start_page                                 :string(255)     
+#  account_id                                 :integer(4)      
+#  default_language_for_master_scheduler      :string(255)     
+#  no_of_home_announcements                   :integer(4)      
+#  no_of_home_events                          :integer(4)      
+#  no_of_home_notifications                   :integer(4)      
+#  no_of_learner_dashboard_records            :integer(4)      
+#  no_of_notifications_to_display             :integer(4)      
+#  notifications_display_time                 :integer(4)      
+#  no_of_calendar_notices_to_display          :integer(4)      
+#  calendar_notices_display_time              :integer(4)      
+#  created_at                                 :datetime        
+#  updated_at                                 :datetime        
+#  no_of_home_substitutions                   :integer(4)      
+#
+
+# Preference settings fixtures.
+
+coach_preference_settings:
+   id: 1
+   substitution_alerts_email: 1
+   substitution_alerts_email_type: dasdas
+   substitution_alerts_email_sending_schedule: dasd
+   substitution_alerts_sms: 1
+   no_of_substitution_alerts_to_display: 1
+   substitution_alerts_display_time: 12
+   notifications_email: 1
+   notifications_email_type: asdsd
+   notifications_email_sending_schedule: qeqe
+   calendar_notices_email: 1
+   calendar_notices_email_type: sfsd
+   calendar_notices_email_sending_schedule: sdfs
+   session_alerts_display_time: 12
+   start_page: dasdasd
+   account_id: 11
+   default_language_for_master_scheduler: dadasd
+   no_of_home_announcements: 12
+   no_of_home_events: 2
+   no_of_home_notifications: 2
+   no_of_home_substitutions: 5
+   no_of_learner_dashboard_records: 5
+   no_of_notifications_to_display: 5
+   notifications_display_time: 5
+   no_of_calendar_notices_to_display: 5
+   calendar_notices_display_time: 23
+   coach_not_present_alert: 0
+
+coach_manager_preference_settings:
+   id: 2
+   substitution_alerts_email: 1
+   substitution_alerts_email_type: dasdas
+   substitution_alerts_email_sending_schedule: dasd
+   no_of_substitution_alerts_to_display: 1
+   substitution_alerts_display_time: 12
+   notifications_email: 1
+   notifications_email_type: asdsd
+   notifications_email_sending_schedule: qeqe
+   calendar_notices_email: 1
+   calendar_notices_email_type: sfsd
+   calendar_notices_email_sending_schedule: sdfs
+   session_alerts_display_time: 12
+   start_page: dasdasd
+   account_id: 12
+   default_language_for_master_scheduler: dadasd
+   no_of_home_announcements: 12
+   no_of_home_events: 2
+   no_of_home_notifications: 2
+   no_of_home_substitutions: 5
+   no_of_learner_dashboard_records: 5
+   no_of_notifications_to_display: 5
+   notifications_display_time: 5
+   no_of_calendar_notices_to_display: 5
+   calendar_notices_display_time: 23
+   coach_not_present_alert: 1
+
+support_user_preference_settings:
+   id: 3
+   substitution_alerts_email: 1
+   substitution_alerts_email_type: dasdas
+   substitution_alerts_email_sending_schedule: dasd
+   no_of_substitution_alerts_to_display: 1
+   substitution_alerts_display_time: 12
+   notifications_email: 1
+   notifications_email_type: asdsd
+   notifications_email_sending_schedule: qeqe
+   calendar_notices_email: 1
+   calendar_notices_email_type: sfsd
+   calendar_notices_email_sending_schedule: sdfs
+   session_alerts_display_time: 13
+   start_page: dasdasd
+   account_id: 11
+   default_language_for_master_scheduler: dadasd
+   no_of_home_announcements: 12
+   no_of_home_events: 2
+   no_of_home_notifications: 2
+   no_of_home_substitutions: 5
+   no_of_learner_dashboard_records: 5
+   no_of_notifications_to_display: 5
+   notifications_display_time: 5
+   no_of_calendar_notices_to_display: 5
+   calendar_notices_display_time: 23
+   coach_not_present_alert: 0
+
+support_lead_preference_settings:
+   id: 4
+   substitution_alerts_email: 1
+   substitution_alerts_email_type: dasdas
+   substitution_alerts_email_sending_schedule: dasd
+   no_of_substitution_alerts_to_display: 1
+   substitution_alerts_display_time: 12
+   notifications_email: 1
+   notifications_email_type: asdsd
+   notifications_email_sending_schedule: qeqe
+   calendar_notices_email: 1
+   calendar_notices_email_type: sfsd
+   calendar_notices_email_sending_schedule: sdfs
+   session_alerts_display_time: 12
+   start_page: dasdasd
+   account_id: 14
+   default_language_for_master_scheduler: dadasd
+   no_of_home_announcements: 12
+   no_of_home_events: 2
+   no_of_home_notifications: 2
+   no_of_home_substitutions: 5
+   no_of_learner_dashboard_records: 5
+   no_of_notifications_to_display: 5
+   notifications_display_time: 5
+   no_of_calendar_notices_to_display: 5
+   calendar_notices_display_time: 23
+
+coach1_preference_settings:
+   id: 5
+   substitution_alerts_email: 1
+   substitution_alerts_email_type: dasdas
+   substitution_alerts_email_sending_schedule: dasd
+   no_of_substitution_alerts_to_display: 5
+   substitution_alerts_display_time: 604800
+   notifications_email: 1
+   notifications_email_type: asdsd
+   notifications_email_sending_schedule: qeqe
+   calendar_notices_email: 1
+   calendar_notices_email_type: sfsd
+   calendar_notices_email_sending_schedule: sdfs
+   session_alerts_display_time: 12
+   start_page: dasdasd
+   account_id: 234
+   default_language_for_master_scheduler: dadasd
+   no_of_home_announcements: 12
+   no_of_home_events: 2
+   no_of_home_notifications: 2
+   no_of_home_substitutions: 5
+   no_of_learner_dashboard_records: 5
+   no_of_notifications_to_display: 5
+   notifications_display_time: 5
+   no_of_calendar_notices_to_display: 5
+   calendar_notices_display_time: 23
+
+coach_manager1_preference_settings:
+   id: 6
+   substitution_alerts_email: 1
+   substitution_alerts_email_type: dasdas
+   substitution_alerts_email_sending_schedule: dasd
+   no_of_substitution_alerts_to_display: 5
+   substitution_alerts_display_time: 604800
+   notifications_email: 1
+   notifications_email_type: asdsd
+   notifications_email_sending_schedule: qeqe
+   calendar_notices_email: 1
+   calendar_notices_email_type: sfsd
+   calendar_notices_email_sending_schedule: sdfs
+   session_alerts_display_time: 12
+   start_page: dasdasd
+   account_id: 123
+   default_language_for_master_scheduler: dadasd
+   no_of_home_announcements: 12
+   no_of_home_events: 2
+   no_of_home_notifications: 2
+   no_of_home_substitutions: 5
+   no_of_learner_dashboard_records: 5
+   no_of_notifications_to_display: 5
+   notifications_display_time: 5
+   no_of_calendar_notices_to_display: 5
+   calendar_notices_display_time: 23

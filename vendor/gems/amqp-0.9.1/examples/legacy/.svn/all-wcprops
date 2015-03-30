@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/legacy
+END
+multiclock.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/legacy/multiclock.rb
+END
+primes-simple.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/legacy/primes-simple.rb
+END
+stocks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/legacy/stocks.rb
+END
+clock.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/legacy/clock.rb
+END
+hashtable.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/legacy/hashtable.rb
+END
+ack.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/legacy/ack.rb
+END
+callbacks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/legacy/callbacks.rb
+END
+logger.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/legacy/logger.rb
+END
+primes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/legacy/primes.rb
+END
+pingpong.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/legacy/pingpong.rb
+END

@@ -1,0 +1,54 @@
+<style type="text/css">
+.ui-tooltip{
+  width: 410px !important;
+}
+</style>
+<div id="create_new_session_ms">
+  <div id="create_head_section">
+    <%if @create_session[:session_in_maintenance_time] %>
+      <span class="session_time_error_message">
+        This shift is inside the adobe maintenance window.
+      </span>
+    <%elsif @create_session[:session_not_in_support_time]%>
+      <span class="session_time_error_message">
+        This shift is outside of the tech support window.
+      </span>
+    <%end%>
+  </div>
+
+  <div id="right_side" style="float: left;width: 100%">
+    <% if @create_session[:all_coaches].flatten.any? %>
+        <div id="select_drop_dwon" style="width: 48%;float:left;<%= "margin-bottom:12px;" if (@create_session[:language].is_aria?) %>">
+          Coach: <br/>
+          <%= render :partial => (@create_session[:language].is_tmm? ? 'shared/coach_list_with_qual' : 'shared/coach_list'), :locals => {:coaches => @create_session[:all_coaches], :start_time => @create_session[:session_start_time],:language_id => @create_session[:language].id}%>
+        </div>
+        <div id="excluded_coaches_list_div" style="width: 48%;float:left;display:none;">
+          Included Coaches: <br/>
+          <%= render(:partial => 'coach_lists', :locals => {:coaches => (@create_session[:all_coaches].flatten), :excluded_coaches => []} )%>
+        </div>
+        <%if @create_session[:language].is_aria? %> 
+          <%= render :partial => 'create_aria_session_ms', :locals => {:selected_seats =>1, :recurring_selected  => true, :teacher_confirmed => true,:is_emergency=>@create_session[:is_emergency]}  %>
+        <%elsif @create_session[:language].is_tmm?%>
+          <%= render :partial => 'create_tmm_session_ms',:locals => {:language=>@create_session[:language]}%>
+        <%else%>
+        <%= render :partial => 'right_section_in_facebox', :locals => {:selected_level => '--',:selected_unit => '--',:selected_lesson => '--',:selected_seats =>4, :recurring_selected  => true, :teacher_confirmed => true, :selected_village => @create_session[:ext_village_id]}  %>
+    <% end %>
+        <div id="create_button_container" <%if @create_session[:language].is_aria?%>style="float: right;margin-right:12%"<%end%>>
+        <div id="spinner_container" style="display:none; padding-left:28px;">
+            <%= image_tag 'spinner.gif',:id => "spinner", :alt => "Creating Session..." %>
+        </div>
+        <input type = "button" id = "create_session" class = "button_shape" value = "Create" onclick="createCoachSessionFromMS(false, <%=  @create_session[:language].id %>,'<%= @create_session[:session_start_time].to_i %>')"/>
+        </div>
+  </div>
+  <div id="note" style="float:left;"><br />
+    <b>Note:</b> Sessions created with unavailable coaches will not be recurring.
+  </div>
+  <% else %>
+    There are no coaches available at this timeslot.
+  <% end %>
+</div>
+<script type="text/javascript">
+  jQuery('#coach_list').live('change', function(){
+    maxlevel(jQuery(this).find('option:selected').attr('max_unit'));
+  });
+</script>

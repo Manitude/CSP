@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/package
+END
+tar_input.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/package/tar_input.rb
+END
+tar_output.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/package/tar_output.rb
+END
+tar_reader.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/package/tar_reader.rb
+END
+tar_header.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/package/tar_header.rb
+END
+f_sync_dir.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/package/f_sync_dir.rb
+END
+tar_writer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/package/tar_writer.rb
+END

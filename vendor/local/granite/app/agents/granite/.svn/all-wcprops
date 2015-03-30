@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/granite/app/agents/granite
+END
+controller_agent.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/granite/app/agents/granite/controller_agent.rb
+END
+raider_agent.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/granite/app/agents/granite/raider_agent.rb
+END
+monitor_agent.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/granite/app/agents/granite/monitor_agent.rb
+END

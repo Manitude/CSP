@@ -1,0 +1,215 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners
+END
+profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/profile.html.erb
+END
+user_interactions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/user_interactions.html.erb
+END
+_search_form_element.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_search_form_element.html.erb
+END
+community_learner_audit_log_history.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/community_learner_audit_log_history.html.erb
+END
+_days_logged_in.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_days_logged_in.html.erb
+END
+_recent_course_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_recent_course_info.html.erb
+END
+user_invite_history.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/user_invite_history.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/show.html.erb
+END
+_studio_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_studio_info.html.erb
+END
+_learners_feedback_rating.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_learners_feedback_rating.html.erb
+END
+_rworld_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_rworld_info.html.erb
+END
+_session_feedback.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_session_feedback.html.erb
+END
+_learner_search_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_learner_search_info.html.erb
+END
+detailed_chat_history.erb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/detailed_chat_history.erb
+END
+user_game_history.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/user_game_history.html.erb
+END
+_learner_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_learner_details.html.erb
+END
+course_info_detail.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/course_info_detail.html.erb
+END
+chat_history.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/chat_history.html.erb
+END
+learner_studio_history.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/learner_studio_history.html.erb
+END
+_moderation_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_moderation_details.html.erb
+END
+_languages.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_languages.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/index.html.erb
+END
+_general_profile_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_general_profile_info.html.erb
+END
+_logged_in_history.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_logged_in_history.html.erb
+END
+_session_attendance.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_session_attendance.html.erb
+END
+_learners.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_learners.html.erb
+END
+_session_attendance_details.erb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_session_attendance_details.erb
+END
+_reflex_conversation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_reflex_conversation.html.erb
+END
+_time_on_languages.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_time_on_languages.html.erb
+END
+selected_learner_chat_history.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/selected_learner_chat_history.html.erb
+END
+_basic_studio_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_basic_studio_info.html.erb
+END
+_public_private_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_public_private_info.html.erb
+END
+_rworld_lang_info.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_rworld_lang_info.html.erb
+END
+_studio_coaches.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_studio_coaches.html.erb
+END
+_session_technical_feedback.erb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/learners/_session_technical_feedback.erb
+END

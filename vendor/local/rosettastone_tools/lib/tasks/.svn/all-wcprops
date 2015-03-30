@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks
+END
+ci.rake
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/ci.rake
+END
+coverage.rake
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/coverage.rake
+END
+deploy.rake
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/deploy.rake
+END
+views.rake
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/views.rake
+END
+hoptoad.rake
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/hoptoad.rake
+END
+cm.rake
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/cm.rake
+END
+setup.rake
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/setup.rake
+END
+allow_functional_to_be_singular_as_i_sometimes_mistype_it.rake
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/allow_functional_to_be_singular_as_i_sometimes_mistype_it.rake
+END
+images.rake
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/images.rake
+END
+mysql.rake
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/mysql.rake
+END
+svn.rake
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/svn.rake
+END
+sessions.rake
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/sessions.rake
+END
+copyright.rake
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/copyright.rake
+END
+test.rake
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/test.rake
+END
+show.rake
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/show.rake
+END
+allow_integrations_to_be_plural_as_god_intended.rake
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/allow_integrations_to_be_plural_as_god_intended.rake
+END
+system_readiness.rake
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/system_readiness.rake
+END
+notify_on_exception.rake
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/notify_on_exception.rake
+END
+check_syntax.rake
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/check_syntax.rake
+END
+site_settings.rake
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/site_settings.rake
+END
+db.rake
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/db.rake
+END
+refresh_from_production.rake
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/tasks/refresh_from_production.rake
+END

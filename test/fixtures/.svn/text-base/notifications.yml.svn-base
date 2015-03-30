@@ -1,0 +1,121 @@
+# == Schema Information
+#
+# Table name: notifications
+#
+#  id               :integer(4)      not null, primary key
+#  trigger_event_id :integer(4)
+#  message          :text(65535)
+#  target_type      :string(255)
+#
+
+---
+notifications_017:
+  id: "18"
+  message: has reduced his/her requested time off. The new time off is from to .
+  trigger_event_id: "18"
+  target_type: UnavailableDespiteTemplate
+notifications_006:
+  id: "6"
+  message: has requested time off from to .
+  trigger_event_id: "6"
+  target_type: UnavailableDespiteTemplate
+notifications_018:
+  id: "19"
+  message: Your manager has created a new template  for you.
+  trigger_event_id: "19"
+  target_type: CoachAvailabilityTemplate
+notifications_007:
+  id: "7"
+  message: Your requested time off from to has been approved .
+  trigger_event_id: "7"
+  target_type: UnavailableDespiteTemplate
+notifications_008:
+  id: "9"
+  message: " session on has been grabbed by ."
+  trigger_event_id: "9"
+  target_type: Substitution
+notifications_010:
+  id: "11"
+  message: session on has been reassigned to you.
+  trigger_event_id: "11"
+  target_type: Substitution
+notifications_009:
+  id: "10"
+  message: Your Studio Session on has been canceled.
+  trigger_event_id: "10"
+  target_type: Substitution
+notifications_011:
+  id: "12"
+  message: Your availability on has been changed by your manager.
+  trigger_event_id: "12"
+  target_type: UnavailableDespiteTemplate
+notifications_012:
+  id: "13"
+  message: "The template beginning has been accepted by "
+  trigger_event_id: "13"
+  target_type: CoachAvailabilityTemplate
+notifications_001:
+  id: "1"
+  message: A new template for has been submitted for review.
+  trigger_event_id: "1"
+  target_type: CoachAvailabilityTemplate
+notifications_013:
+  id: "14"
+  message: "The template beginning has been rejected by "
+  trigger_event_id: "14"
+  target_type: CoachAvailabilityTemplate
+notifications_002:
+  id: "2"
+  message: Your template beginning has been approved.
+  trigger_event_id: "2"
+  target_type: CoachAvailabilityTemplate
+notifications_014:
+  id: "15"
+  message: Your template beginning has been approved with changes
+  trigger_event_id: "15"
+  target_type: CoachAvailabilityTemplate
+notifications_003:
+  id: "3"
+  message: "Changes have been requested for your template beginning "
+  trigger_event_id: "3"
+  target_type: CoachAvailabilityTemplate
+notifications_015:
+  id: "16"
+  message: has requested change to template .
+  trigger_event_id: "16"
+  target_type: CoachAvailabilityTemplate
+notifications_004:
+  id: "4"
+  message: has violated Studio policy by changing the template less than 2 weeks in advance.
+  trigger_event_id: "4"
+  target_type: CoachAvailabilityTemplate
+notifications_016:
+  id: "17"
+  message: has requested a substitute for session starting .
+  trigger_event_id: "17"
+  target_type: UnavailableDespiteTemplate
+notifications_005:
+  id: "5"
+  message: has violated policy by requesting time off from to .
+  trigger_event_id: "5"
+  target_type: UnavailableDespiteTemplate
+notifications_020:
+  id: "20"
+  message: has edited his/her requested time off. The new time off is from to .
+  trigger_event_id: "20"
+  target_type: UnavailableDespiteTemplate
+notifications_021:
+  id: "21"
+  message: Your manager has requested a substitute on your behalf for your session starting .
+  trigger_event_id: "21"
+  target_type: UnavailableDespiteTemplate
+notifications_022:
+  id: "22"
+  message: Your manager has deleted the template   .
+  trigger_event_id: "22"
+  target_type: CoachAvailabilityTemplate
+notifications_025:
+  id: "25"
+  message: Your requested time off from <b>  </b> to <b>  </b> has been denied.
+  trigger_event_id: "25"
+  target_type: UnavailableDespiteTemplate

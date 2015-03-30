@@ -1,0 +1,22 @@
+<%= render :partial => 'shared/date_navigator', :locals => {:week_start => format_time(@data[:week_extremes][0]), :week_end => format_time(@data[:week_extremes][1])} %>
+<div id="scheduler_language_category">
+  <%= select_tag 'language_category', options_for_language_type(@data[:default_language]), :class => "dropdown" %>
+</div>
+<div id="scheduler_language">
+  <%= select_tag 'language', options_for_filter_languages(@data[:language], @data[:default_language]), :class => "dropdown longer_dropdown" %>
+</div>
+<div id="scheduler_village">
+  <%= select_tag 'village', options_for_villages_for_scheduler(@data[:village], false), :class => "dropdown" %>
+</div>
+<%= button_to_function("GO", :id => "go_button" ) %>
+
+<br/><br/>
+<% if @data[:language].present? %>
+  <div id="scheduler_coach">
+    <%= select_tag 'coach_avail', options_for_coaches_for_scheduler(@data[:language]), :class => "dropdown" %>
+  </div>
+<% end %>
+<div id="classroom_type_div">
+	Classroom Type: 
+  <%= select_tag 'classroom_type', options_for_select([ ["All" , "all"], ["Solo" , "solo"], ["Group" , "group"] ], @data[:classroom_type]), :class => "dropdown" %>
+</div>

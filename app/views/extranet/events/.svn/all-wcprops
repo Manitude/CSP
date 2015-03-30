@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/159202/coach_portal/branches/sprint32/app/views/extranet/events
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/events/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/159202/coach_portal/branches/sprint32/app/views/extranet/events/_form.html.erb
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/events/edit.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/events/index.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/events/new.html.erb
+END

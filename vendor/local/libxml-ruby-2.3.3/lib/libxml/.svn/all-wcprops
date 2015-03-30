@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml
+END
+sax_callbacks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/sax_callbacks.rb
+END
+namespace.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/namespace.rb
+END
+parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/parser.rb
+END
+properties.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/properties.rb
+END
+tree.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/tree.rb
+END
+attr_decl.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/attr_decl.rb
+END
+reader.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/reader.rb
+END
+sax_parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/sax_parser.rb
+END
+hpricot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/hpricot.rb
+END
+attr.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/attr.rb
+END
+xpath_object.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/xpath_object.rb
+END
+document.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/document.rb
+END
+namespaces.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/namespaces.rb
+END
+ns.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/ns.rb
+END
+html_parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/html_parser.rb
+END
+node.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/node.rb
+END
+attributes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/attributes.rb
+END
+error.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/lib/libxml/error.rb
+END

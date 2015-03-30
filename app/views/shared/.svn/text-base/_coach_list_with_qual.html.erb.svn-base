@@ -1,0 +1,14 @@
+<% if coaches[0].size == 0 && coaches[1].size == 0 %>
+  <div>No Coaches are available at this timeslot.</div>
+<% else %>
+  <%= content_tag :select, :style=>"width:92%;margin-right:43px;", :id => 'coach_list'  do %>
+    <% if coaches[0].size > 0 && coaches[1].size > 0 %><option value="">--AVAILABLE--</option><% end %>
+    <% coaches[0].each do |coach| -%>
+      <%= content_tag :option, coach.full_name + ((dialect = coach.qualification_for_language(language_id).dialect) ? " - #{dialect.name}" : ""), {:value => coach.id, :max_unit => coach.max_unit, :threshold => coach.threshold, :status => 'available'} %>
+    <% end -%>
+    <% if coaches[1].size > 0 %><option value="">--UNAVAILABLE--</option><% end %>
+    <% coaches[1].each do |coach| -%>
+      <%= content_tag :option, coach.full_name + ((dialect = coach.qualification_for_language(language_id).dialect) ? " - #{dialect.name}" : ""), {:value => coach.id, :max_unit => coach.max_unit, :threshold => coach.threshold, :status => 'unavailable'} %>
+    <% end -%>
+  <% end -%>
+<%end%>

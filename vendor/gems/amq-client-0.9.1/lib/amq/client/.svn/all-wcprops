@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client
+END
+callbacks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client/callbacks.rb
+END
+settings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client/settings.rb
+END
+adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client/adapter.rb
+END
+exceptions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client/exceptions.rb
+END
+exchange.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client/exchange.rb
+END
+queue.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client/queue.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client/version.rb
+END
+openable.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client/openable.rb
+END
+server_named_entity.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client/server_named_entity.rb
+END
+logging.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client/logging.rb
+END
+channel.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client/channel.rb
+END
+handlers_registry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client/handlers_registry.rb
+END
+entity.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client/entity.rb
+END
+consumer_tag_generator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/lib/amq/client/consumer_tag_generator.rb
+END

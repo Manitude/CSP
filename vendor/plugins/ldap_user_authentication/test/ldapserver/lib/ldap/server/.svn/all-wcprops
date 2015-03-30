@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/79058/plugins/ldap_user_authentication/test/ldapserver/lib/ldap/server
+END
+filter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/11164/plugins/ldap_user_authentication/test/ldapserver/lib/ldap/server/filter.rb
+END
+server.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/55905/plugins/ldap_user_authentication/test/ldapserver/lib/ldap/server/server.rb
+END
+syntax.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/55905/plugins/ldap_user_authentication/test/ldapserver/lib/ldap/server/syntax.rb
+END
+match.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/11164/plugins/ldap_user_authentication/test/ldapserver/lib/ldap/server/match.rb
+END
+tcpserver.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/55905/plugins/ldap_user_authentication/test/ldapserver/lib/ldap/server/tcpserver.rb
+END
+util.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/11164/plugins/ldap_user_authentication/test/ldapserver/lib/ldap/server/util.rb
+END
+result.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/11164/plugins/ldap_user_authentication/test/ldapserver/lib/ldap/server/result.rb
+END
+connection.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/79058/plugins/ldap_user_authentication/test/ldapserver/lib/ldap/server/connection.rb
+END
+preforkserver.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/11164/plugins/ldap_user_authentication/test/ldapserver/lib/ldap/server/preforkserver.rb
+END
+operation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/55905/plugins/ldap_user_authentication/test/ldapserver/lib/ldap/server/operation.rb
+END
+schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/11164/plugins/ldap_user_authentication/test/ldapserver/lib/ldap/server/schema.rb
+END

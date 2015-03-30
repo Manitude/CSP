@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: support_windows
+#
+#  id          :integer(4)      not null, primary key
+#  window_type :string(255)     
+#  start_time  :time            
+#  end_time    :time            
+#  start_wday  :integer(1)      
+#  end_wday    :integer(1)      
+#
+
+
+tech_support:
+  window_type: TechSupport
+  start_time: 06:00:00
+  end_time: 22:00:00
+
+adobe_maintenance:
+  window_type: AdobeMaintenance
+  start_time: 23:00:00
+  end_time: 02:00:0
+  start_wday: 6
+  end_wday: 0
+
+

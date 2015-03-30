@@ -1,0 +1,35 @@
+# Keepalive
+
+ * [Back to index](index.html?format=raw)
+
+Keepalive is a plugin that is used by Rosetta Stone to 'warm up' dispatches in production.  The typical scenario is something like this:
+ * Hit, for example, `http://x.rosettastoneenterprise.com/keepalive?warm_up_to=25` on an app box that is not in production yet
+ * Let the load on the box settle for a bit
+ * Put the box into service
+
+## How to add Keepalive to your Rails application
+ 1. Add the keepalive plugin to your application
+ 1. Add the following line at the top of your `config/routes.rb` file
+
+<pre>
+ActionController::Routing::Routes.draw do |map|
+  map.keepalive '/keepalive', :controller => 'keepalive', :action => 'index'
+</pre>
+
+## How do I use it?
+### Spawning dispatches
+ * Hit the keepalive url for an app to spin up dispatches (e.g. `http://x.rosettastoneenterprise.com/keepalive?warm_up_to=25`)
+ * The warm_up_to denotes how many dispatches you want warmed up *in total*
+ * Wait for a bit
+ * Profit!
+
+### Check how many dispatches are running
+ * After some time to settle, you can check that enough dispatches started by hitting `/keepalive?num_dispatches=true`.  It will return the number of dispatches on that machine.
+
+## Caveats
+ * The way the plugin works is by trying to tie up the requisite number of dispatches so that more dispatches are spun up.  It does this by doing a sleep(N) where N is 10 seconds.  So, if it's taking longer than 10 seconds for all the dispatches to start up, then it won't be starting up as many as you expect.
+ * The plugin has a max number of dispatches that it will attempt to start up.  That number is currently 40
+ * Due to the possibility of you accidentally running this against an in-service box, the plugin currently ignores warm_up_to requests if there are already 10 dispatches running
+
+## IP Protection
+ * The plugin disallows people from outside Rosetta Stone hitting the keepalive endpoint and potentially hosing our systems.  There is a `config/keepalive_hosts.defaults.yml` file in the plugin that defines these IP lists.  If you need to change that, you can drop a `config/keepalive_hosts.yml` file into the app to override.

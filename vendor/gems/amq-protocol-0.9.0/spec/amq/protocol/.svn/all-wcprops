@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/spec/amq/protocol
+END
+method_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/spec/amq/protocol/method_spec.rb
+END
+basic_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/spec/amq/protocol/basic_spec.rb
+END
+value_decoder_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/spec/amq/protocol/value_decoder_spec.rb
+END
+exchange_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/spec/amq/protocol/exchange_spec.rb
+END
+queue_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/spec/amq/protocol/queue_spec.rb
+END
+table_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/spec/amq/protocol/table_spec.rb
+END
+channel_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/spec/amq/protocol/channel_spec.rb
+END
+blank_body_encoding_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/spec/amq/protocol/blank_body_encoding_spec.rb
+END
+frame_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/spec/amq/protocol/frame_spec.rb
+END
+tx_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/spec/amq/protocol/tx_spec.rb
+END
+value_encoder_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/spec/amq/protocol/value_encoder_spec.rb
+END
+confirm_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/spec/amq/protocol/confirm_spec.rb
+END
+connection_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/spec/amq/protocol/connection_spec.rb
+END

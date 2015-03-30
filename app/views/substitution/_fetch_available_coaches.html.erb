@@ -1,0 +1,21 @@
+<div id="assign_substitute">
+  <% if @error.blank? %>
+    <%= hidden_field_tag 'coach_session_id', @coach_session.id %>
+    <%= hidden_field_tag 'session_type', @coach_session.appointment? ? 'appointment' : 'session' %>
+    <%= render :partial => 'shared/coach_list', :locals => {:coaches => @alternate_coaches, :start_time => @coach_session.session_start_time}%>
+    <%if @fetch_reason %>
+    <br><br>
+    Please select the reason that best explains why a substitute is being assigned for this <%= params[:is_appointment].present? ? 'appointment' : 'session' %>. <br><br>
+    <%= render :partial => 'shared/show_reasons' %>
+    <%end%>
+    <br><br>
+    <% if @alternate_coaches.flatten.size > 0 %>
+      <input id="assign_substitute_button" type="button" class="button medium_button" disabled="disabled" value="Assign"/>
+      <input id="cancel_substitute_button_assign" type="button" class="button medium_button" value="Cancel"/>
+    <%end%>
+  <% else %>
+    <%= @error %>
+      <br/>
+    <input id="cancel_substitute_button_assign" type="button" class="button medium_button" value="Close" style="float: right;"/>
+  <% end %>
+</div>

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec
+END
+spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/spec_helper.rb
+END
+actions_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/actions_spec.rb
+END
+task_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/task_spec.rb
+END
+register_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/register_spec.rb
+END
+rake_compat_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/rake_compat_spec.rb
+END
+shell_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/shell_spec.rb
+END
+invocation_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/invocation_spec.rb
+END
+runner_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/runner_spec.rb
+END
+base_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/base_spec.rb
+END
+group_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/group_spec.rb
+END
+thor_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/thor_spec.rb
+END
+util_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/util_spec.rb
+END

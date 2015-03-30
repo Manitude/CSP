@@ -1,0 +1,26 @@
+<div style="width: 400px;padding: 10px" id="application_configuration">
+  <% if app_configs.size > 0 %>
+    <form action="application_configuration" method="post" >
+      <table style="width: 100%;">
+        <thead>
+          <tr>
+            <th style="padding:2px;width: 48%;font-weight: bold">Setting Type</th>
+            <th style="padding:2px;width: 48%;font-weight: bold">Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% app_configs.each do |app_config|%>
+            <tr>
+              <td style="padding:2px;"><%= app_config.display_name %></td>
+              <td style="padding:2px;">
+                <% options = (app_config.data_type == 'boolean')? ["Enable", "Disable"] : ["100", "200", "300", "400", "500"] %>
+                  <%= select_tag app_config.setting_type, options_for_select(options, app_config.value), {:style => 'width:100px;'} %>
+              </td>
+            </tr>
+          <%end%>
+        </tbody>
+      </table>
+      <input type="submit" value="Update" style="float: right;"/>
+    </form>
+  <%end%>
+</div>

@@ -1,0 +1,263 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/84047/gems/rubygems-update/1.3.7/lib/rubygems
+END
+specification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/specification.rb
+END
+exceptions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/exceptions.rb
+END
+require_paths_builder.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/require_paths_builder.rb
+END
+text.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/text.rb
+END
+platform.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/platform.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/version.rb
+END
+source_index.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/84047/gems/rubygems-update/1.3.7/lib/rubygems/source_index.rb
+END
+package.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/package.rb
+END
+remote_fetcher.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/remote_fetcher.rb
+END
+installer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/installer.rb
+END
+source_info_cache.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/source_info_cache.rb
+END
+uninstaller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/uninstaller.rb
+END
+ext.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/ext.rb
+END
+gem_path_searcher.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/gem_path_searcher.rb
+END
+requirement.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/requirement.rb
+END
+server.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/server.rb
+END
+security.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/security.rb
+END
+defaults.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/71197/gems/rubygems-update/1.3.7/lib/rubygems/defaults.rb
+END
+command_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/command_manager.rb
+END
+dependency_list.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/dependency_list.rb
+END
+test_utilities.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/test_utilities.rb
+END
+gem_openssl.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/gem_openssl.rb
+END
+user_interaction.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/user_interaction.rb
+END
+command.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/command.rb
+END
+dependency.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/dependency.rb
+END
+source_info_cache_entry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/source_info_cache_entry.rb
+END
+local_remote_options.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/local_remote_options.rb
+END
+install_update_options.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/install_update_options.rb
+END
+validator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/validator.rb
+END
+old_format.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/old_format.rb
+END
+builder.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/builder.rb
+END
+format.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/format.rb
+END
+gemcutter_utilities.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/gemcutter_utilities.rb
+END
+spec_fetcher.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/spec_fetcher.rb
+END
+dependency_installer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/dependency_installer.rb
+END
+indexer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/indexer.rb
+END
+doc_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/doc_manager.rb
+END
+gem_runner.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/gem_runner.rb
+END
+config_file.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/config_file.rb
+END
+custom_require.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/custom_require.rb
+END
+errors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/errors.rb
+END
+version_option.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/lib/rubygems/version_option.rb
+END
+package_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/52939/gems/rubygems-update/1.3.7/lib/rubygems/package_task.rb
+END

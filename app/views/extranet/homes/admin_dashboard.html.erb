@@ -1,0 +1,63 @@
+<div style ="margin: 15px;">
+  <% if @errors && @errors.any? %>   
+    <div class ="flash_error_msg">
+      <%@errors.each do |err|%>
+        <div class="padded_bottom"> <%= err %> </div>
+      <%end%>
+    </div>   
+  <%end%>
+  <% if manager_logged_in? || admin_logged_in? %>
+
+    <%= render :partial => 'master_scheduler_push_lock', :locals => {:master_scheduler_sessions_data => @master_scheduler_sessions_data} %>
+
+    <%= render :partial => 'auditing' %>
+
+    <%= render :partial => 'delayed_jobs_list', :locals => {:delayed_job_data => @delayed_job_data} %>
+
+    <%= render :partial => 'sync_affected_sessions' %>
+
+    <%= render :partial => 'simulate_background_process' %>
+
+    <%= render :partial => 'global_settings', :locals => {:global_settings => @global_settings} %>
+
+  <% end %>
+
+  <div id="test_sms" style="display: none" class="admin_dashboard_item">
+    <br/><br/>
+    <h3>Trigger SMS</h3>
+    <div>
+      <%= form_tag :url => { :action => 'trigger_sms_with_thread' }, :update => "thread_msg", :remote => true do -%>
+        <div class="admin_dashboard_sub_item">
+          Hit button to trigger SMS in thread. &nbsp;&nbsp;
+          <input type="submit" value="Trigger" />
+          <div id ="thread_msg" style ="float:right; margin-right: 620px">
+          </div>
+        </div>
+      <% end -%>
+    </div>
+    <br/><br/>
+    <div>
+      <%= form_tag :url => { :action => 'trigger_sms_wo_thread' }, :update => "msg", :remote => true do -%>
+        <div class="admin_dashboard_sub_item">
+          Hit button to trigger SMS without thread.&nbsp;&nbsp;
+          <input type="submit" value="Trigger" />
+          <div id ="msg" style ="float:right; margin-right: 620px">
+          </div>
+        </div>
+      <% end -%>
+    </div>
+  </div>
+
+</div>
+
+<%= javascript_tag do %>
+  function confirmAndProceed(a,b,c) {
+    response = confirm("This will release the lock and you will lose the progress details. Do you want to proceed?");
+    if(response) {
+      showProgressBar(a,b,true);
+      document.getElementById(c).style.display='none';
+      return true;
+    }
+      return false;
+  }
+<%end%>

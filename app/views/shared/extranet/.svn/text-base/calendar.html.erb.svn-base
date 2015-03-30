@@ -1,0 +1,9 @@
+<pre>
+<div id="calendar">
+<%= render :partial=>"calendar" %>
+</div>
+</pre>
+<div id="event">
+</div>
+
+

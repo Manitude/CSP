@@ -1,0 +1,14 @@
+# This config file is for the ssl_functionality plugin.
+# This is an instance-specific configuration file that should be renamed to ssl.yml to take effect; 
+# however, config/ssl.yml is optional and the lack of the config file is equivalent to "enable_ssl: false"
+#
+# Note that these settings are overridden for Selenium tests in selenium_config.rb
+#
+# If enable_ssl is true for a given instance, then the before filter (RosettaStone::ForceSsl) will trigger 
+# a redirect to an HTTPS URL if it is accessed over HTTP.
+enable_ssl: false
+
+# http_port and https_port are optional.  They default to 80 and 443, respectively.  They are mostly useful 
+# for local development where nonstandard ports are often used.
+#http_port: 3000
+#https_port: 8443

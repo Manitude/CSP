@@ -1,0 +1,24 @@
+<div id="schedules_coach_avail">
+  <%if @session_details.blank? %>
+    <span style="color:red;">The selected coach has no availability this week.</span>
+  <% else %>
+    <table style="width: 100%;">
+      <thead><tr>
+          <td><b>Time(<%= current_user.tzone_sort %>)</b></td>
+          <td><b>Available to   </b></td>
+        </tr>
+      </thead>
+      <tbody>
+        <% for i in 0..(@session_details.size-1) %>
+          <tr style="color: DimGray">
+            <td><%= @session_details[i] %></td>
+            <td>Teach</td>
+          </tr>
+          <%if i!=@session_details.size-1 %>
+            <tr><td colspan="2"><hr/></td></tr>
+          <%end%>
+        <%end%>
+      </tbody>
+    </table>
+  <% end %>
+</div>

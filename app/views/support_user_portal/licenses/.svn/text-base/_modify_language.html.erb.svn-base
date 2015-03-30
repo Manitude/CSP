@@ -1,0 +1,71 @@
+<style type="text/css">
+  .ext_gray_button {background-color: #F3F3F4; border: 1px solid #444444;float:left;}
+  #facebox_header {text-align: center; width: 380px;}
+  #facebox .header {height: 45px;}
+</style>
+
+<div id="modify_language_container">
+
+  <%= form_tag :controller =>'licenses', :action =>'modify_language', :id => "modify_language_form" do%>
+    <%= hidden_field_tag :license_guid, params[:license_guid] %>
+    <%= hidden_field_tag :version, params[:version] %>
+    <%= hidden_field_tag :previous_language, params[:current_language] %>
+
+    <div class="bottom_space">
+      <span class="bold-font">Current Language: </span> <%= params[:current_language_display_name] %>
+    </div>
+    <div class="bottom_space">
+      <span class="bold-font">Select New Language <span class="required_star">*</span>:</span>
+      <div><%= select_tag :changed_language, options_for_select(TotaleLanguage.options_with_identifiers_for_pll(params[:learners_languages])), {:onchange => "validateReason();"} %></div>
+    </div>
+    <div class="bottom_space">
+      <span class="bold-font">Reason For Change <span class="required_star">*</span>:</span>
+      <div><%= text_area_tag :reason, "Please enter reason for language change" ,:rows => 3, :cols => 55, :style => "-moz-border-radius: 12px;color:#888;padding: 5px 0 0 5px;resize:none;", :onfocus=>"focusReason(this)", :onblur=>"blurReason(this);", :onkeyup => "stopTyping(this)" , :title => "Other reasons" %></div>
+    </div>
+    <div style="float: right; margin-top:10px">
+      <%= submit_tag "Submit", :id => 'modify_language_submit', :class => "button ext_gray_button", :style => "display:none", :onclick => "return validateReason();" %>
+    </div>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+
+  function focusReason(i){
+    if(i.value === "Please enter reason for language change"){
+      i.value="";
+      i.style.color="#000";
+    }
+  }
+
+  function blurReason(i){
+    if(i.value === ""){
+      i.value="Please enter reason for language change";
+      i.style.color="#888";
+    }
+    validateReason();
+  }
+
+
+  function validateReason(){
+    var response       = true;    
+    /* Validation for reason start.*/  
+    var other_reason      = jQuery("#reason").val();
+    var changed_language  = jQuery("#changed_language").val();
+    if(other_reason === "Please enter reason for language change" || jQuery.trim(other_reason) === ""){
+      jQuery("#modify_language_submit").hide();
+      response = false;
+    }else if(changed_language == "" && !(other_reason === "Please enter reason for language change" || jQuery.trim(other_reason) === "")){
+      jQuery("#modify_language_submit").hide();
+      response = false;
+    }else{
+      if(jQuery.trim(other_reason).length > 300){
+        jQuery("#modify_language_submit").hide();
+        jAlert('There is a 300 character limit.');
+        return false;
+      }
+      jQuery("#modify_language_submit").show();
+    }
+    /* Validation for reason end.*/
+    return response;
+  }
+</script>

@@ -1,0 +1,203 @@
+#header_date_div{
+    float: left;
+    margin-bottom: 5px;
+}
+#commit_to_schedules{
+    margin-top: 25px;
+}
+#today_date, #last_pushed_week{
+    font-weight: bold;
+}
+#lotus_data_space{
+    height: 100px;
+    display: none;
+}
+#week-calendar{
+    float: left;
+    margin-top: 10px;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    width: 100%
+}
+#scheduler_form_data{
+    float: left;
+    margin-top: 20px;
+    width: 100%;
+}
+#substitution_alert_div{
+    margin-top: 20px;
+    float: left;
+}
+#calendar_data, #scheduler_language, #scheduler_village,  #scheduler_language_category{
+    float: left;
+    margin-right: 7px;
+}
+
+
+#go_button{
+    border:2px solid;
+    -moz-border-radius:6px;
+    background-color: #A0C544;
+    border: 1px solid #444444;
+    color: #444444;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    float: left;
+    text-align: center;
+}
+
+#create_session_buttons_div{
+    float: right;
+    height: 40px;
+    padding-top: 10px;
+}
+#scheduler_coach{
+    float: right;
+    padding-right: 38px;
+}
+
+#schedules_coach_avail{
+    max-height: 450px;
+    overflow: auto;
+}
+
+#previous_week, #next_week{
+    width: 16px;
+    height: 16px;
+    margin-left:  -3px;
+    margin-right: -4px;
+}
+.wc-title {
+    color: black;
+    height: 100%;
+}
+.ui-corner-all {
+    border-radius: 0px;
+}
+.ui-corner-top{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.wc-cal-event{
+    border: 1px solid #CECECE;
+    background-color: white;
+    opacity: 1;
+    font-size: 8pt !important;
+}
+.wc-cal-event .wc-time{
+    border: 1px solid #CECECE;
+}
+.event-title{
+    height: 62%;
+}
+
+
+/*
+    color code for schedulers - start
+*/
+.historic_sessions{
+    color: black;
+    background-color: white !important;
+    border: 1px solid #FF9800 !important;
+    outline: 1px solid #FF9800 !important;
+    box-sizing : border-box;
+    -moz-box-sizing : border-box;
+    -webkit-box-sizing : border-box;
+}
+
+.pushed_to_eschool{
+    background-color: #BFD3DD !important;
+    border: 1px solid #CBCCC4;
+    color: black;
+    font-size: 9pt;
+}
+
+.local_session {
+    color: black;
+    background-color: #D5C8E8 !important;
+    border: 1px solid #D2CEA1;
+}
+.extra_sessions{
+    background-color: #669966 !important;
+    border: 1px solid #CBCCC4;
+    color: black;
+    font-size: 9pt;
+}
+
+.non_eschool_sessions{
+    color: black;
+    border: 1px solid #CECECE;
+}
+
+.recurring_sessions{
+    background-color: #E3E2D5 !important;
+    border: 1px solid #D2CEA1;
+}
+
+.wc-new-cal-event{
+  background-color: transparent ! important;
+  border: 0 none;
+}
+.wc-new-cal-event .wc-title , .wc-new-cal-event .wc-title wc-time{
+    border: 0 none ! important;
+}
+
+/*
+    color code for schedulers - end
+*/
+.sub_needed_text_in_slot {
+    color: #BF0030;
+    vertical-align: bottom;
+    float:right;
+    font-size: 7pt;
+    font-weight: bold;
+    padding-right: 2px;
+    padding-top: 5px;
+}
+
+.emergency_session {
+    color: red;
+}
+#marker {
+    float: right; 
+    font-size: 12pt;
+    padding-top: 6%;
+}
+#marker_info {
+    float: left;
+    font-size: 12pt;
+    margin-right: 1%;
+    padding-top: 0.6%
+}
+#emergency_session_text {
+    margin-top:1%;
+}
+a[disabled]
+{
+    color: #454545;
+    text-decoration: none;
+    pointer-events: none;
+    cursor: default;
+}
+.removed_session{
+    background-color: tomato;
+}
+.remove_with_recurring{
+    background-color: lightblue !important;
+}
+.ui-tooltip{
+    max-width: 600px;
+    min-width: 380px;
+}
+.edited_session{
+    background-color: lightblue !important;
+}
+.switch_to_dst{
+    background-color: #B6B6AB;
+    height: 100%;
+    font-weight: bold;
+    padding-top: 5%;
+}

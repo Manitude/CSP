@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/eschool
+END
+coach_activity_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/eschool/coach_activity_test.rb
+END
+lotus_session_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/eschool/lotus_session_test.rb
+END
+coach_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/eschool/coach_test.rb
+END
+eschool_session_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/eschool/eschool_session_test.rb
+END
+student_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/unit/eschool/student_test.rb
+END

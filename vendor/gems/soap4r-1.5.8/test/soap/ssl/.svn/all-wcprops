@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/ssl
+END
+client.key
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/ssl/client.key
+END
+subca.cert
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/ssl/subca.cert
+END
+client.cert
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/ssl/client.cert
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/ssl/README
+END
+server.key
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/ssl/server.key
+END
+sslsvr.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/ssl/sslsvr.rb
+END
+ca.cert
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/ssl/ca.cert
+END
+server.cert
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/ssl/server.cert
+END
+test_ssl.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/ssl/test_ssl.rb
+END

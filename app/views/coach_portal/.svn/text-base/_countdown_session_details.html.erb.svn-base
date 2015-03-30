@@ -1,0 +1,33 @@
+<% if @next_session %>
+  <div id="countdown-popup-content" class="btm-section">
+    <span id="title"><%= @time %></span><br/><br/>
+    <div class="session-details-half" style="text-align: left !important;">
+      <%= @next_session.appointment? ? "Appointment:" : "Language:" %> <%= @language %><br/>
+      <%if @next_session.totale? %>
+        Level: <%= @level %>, Unit: <%= @unit %><br/>
+        Avg attendance/session: <%= @avg_attendance %>
+      <%elsif @next_session.tmm_michelin? && @supersaas_description%>
+        <br /> Description: <%= @supersaas_description%><br/>
+      <% end %>
+      <%if @next_session.details %>
+        <br/><b><%= @next_session.appointment? ? "Appointment Details:" : "Session Details:" %></b><br/> 
+        <textarea readonly id="session_details_display_textarea"><%=@next_session.details.to_s %></textarea>
+      <% end %>
+    </div>
+    <% unless @next_session.tmm? %>
+      <div id='launch_session' class='popup-buttons lotus_button' style="margin-top:2px;font-weight:normal;line-height: 15px;">
+        <% if @launch_url %>
+          <%if @next_session.aria? %>
+            <%= link_to_launch "Launch Session", "launchAriaSession(this,#{@next_session.id},'#{@aria_learner_guid}')", @next_session.id %>
+          <% else %>
+            <%= link_to_launch "Launch Session", @launch_url, @next_session.id %>
+          <% end %>  
+        <% else %>
+          Launch Session
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <span style="color:red"> <%if ['AUS', 'AUK','TMM-MCH-L'].include?@language %> Session might have been modified in SuperSaas side. <% else %>Session might have been canceled/sub-requested/started, Please refresh your page.<% end %></span>
+<% end %>

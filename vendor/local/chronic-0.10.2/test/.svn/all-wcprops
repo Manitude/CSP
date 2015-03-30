@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test
+END
+test_repeater_weekend.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_repeater_weekend.rb
+END
+test_repeater_month_name.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_repeater_month_name.rb
+END
+test_repeater_month.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_repeater_month.rb
+END
+test_handler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_handler.rb
+END
+test_repeater_day_portion.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_repeater_day_portion.rb
+END
+test_repeater_season.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_repeater_season.rb
+END
+test_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_token.rb
+END
+test_repeater_weekday.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_repeater_weekday.rb
+END
+test_numerizer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_numerizer.rb
+END
+helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/helper.rb
+END
+test_repeater_week.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_repeater_week.rb
+END
+test_repeater_time.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_repeater_time.rb
+END
+test_chronic.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_chronic.rb
+END
+test_repeater_year.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_repeater_year.rb
+END
+test_repeater_minute.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_repeater_minute.rb
+END
+test_mini_date.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_mini_date.rb
+END
+test_repeater_fortnight.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_repeater_fortnight.rb
+END
+test_daylight_savings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_daylight_savings.rb
+END
+test_span.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_span.rb
+END
+test_parsing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_parsing.rb
+END
+test_repeater_hour.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_repeater_hour.rb
+END
+test_repeater_day_name.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/chronic-0.10.2/test/test_repeater_day_name.rb
+END

@@ -1,0 +1,32 @@
+WhatInstanceAmI
+===============
+
+How to use:
+
+Put a config file called 'known_instances.yml' under RAILS_ROOT/config if you wish to override the known_instances.yml included with the plugin. The config is defined like so:
+
+staging:
+  - benjamin
+  - marx
+  - bloch
+  - walker
+  - texas
+  - ranger
+
+fallthrough: development
+
+
+The key is the name of an instance, and the YAML array elements are hostnames of machines in that instance cluster.
+The only effect 'fallthrough' has is to provide a guess of what the instance is in the output of the instance_name method.
+
+Usage of the class is as follows:
+
+RosettaStone::InstanceDetection.staging?                  # => true
+RosettaStone::InstanceDetection.production?               # => false
+RosettaStone::InstanceDetection.unknown?                  # => false
+RosettaStone::InstanceDetection.instance_name             # => 'staging'
+RosettaStone::InstanceDetection.hostname                  # => 'bloch'
+RosettaStone::InstanceDetection.instance_is?('staging')   # => true
+
+RosettaStone::InstanceDetection.instance_is?('bababooey') # => ArgumentError, "No instance called 'bababooey' has been defined."
+RosettaStone::InstanceDetection.bababooey?                # => RuntimeError, "No instance called 'bababooey' has been defined."

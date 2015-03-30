@@ -1,0 +1,10 @@
+<%= hidden_field_tag "appointment_id", @new_appointment_type.id %>
+<table style="border: none !important; width: 100%; padding-top: 5px;">
+  <tr>
+    <td>
+    	<%= text_field_tag "edit_appointment_type_title", @new_appointment_type.title , :maxlength => 19, :size => '35' %>
+    	<br /><br />Max: 19 characters
+    </td>
+    <td><div class="button" id = "save_appointment_type"> Save </div></td>
+  </tr>
+</table>

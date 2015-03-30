@@ -1,0 +1,19 @@
+<div>  
+The Coaches listed below are in violation of the Studio team's Substitution policy from <%= @data["date"].join(" to ") %>.
+<% @data["details"].each do | sub |%> 
+<br/><br/>
+<div style="margin-left: 20px;">
+Coach: <%= sub["coach"] %><br/>
+Permitted Substitution date: <%=  sub["permitted_sub_date"].join(' , ') %> <br/>
+Sessions in violation: <br/>
+<div style="margin-left: 40px;">
+<% sub["subs_in_violation"].each do | var |%>
+<%= var["language"] %> , <%= var["session_start_time"] %> , Requester : <%= var["requester"] %> , <%= var["role"] %><br/>
+<% end %>
+</div>
+</div>
+<% end %>
+<br/><br/>
+Regards,<br/>
+Customer Success Portal.
+</div>  

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/patterns/event
+END
+producer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/patterns/event/producer.rb
+END
+consumer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/patterns/event/consumer.rb
+END

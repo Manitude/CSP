@@ -1,0 +1,7 @@
+  <%# This file should be rendered into your layout <head> on any page that will contain an YUI editor using render(:inline => RosettaStone::YuiIntegration.layout_includes(:core)) -%>
+  <%# This file contains core includes that should be used across all YUI elements %>
+  <!-- Skin CSS file -->
+  <%= stylesheet_link_tag "http://yui.yahooapis.com/#{RosettaStone::YuiIntegration.version_string}/build/assets/skins/sam/skin.css" %>
+  <!-- Utility Dependencies -->
+  <%= javascript_include_tag "http://yui.yahooapis.com/#{RosettaStone::YuiIntegration.version_string}/build/yahoo-dom-event/yahoo-dom-event.js" %> 
+  <%= javascript_include_tag "http://yui.yahooapis.com/#{RosettaStone::YuiIntegration.version_string}/build/element/element-beta-min.js" %>

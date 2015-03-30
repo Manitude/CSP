@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/initializers
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/initializers/mime_types.rb
+END
+secret_token.rb.tt
+K 25
+svn:wc:ra_dav:version-url
+V 167
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/initializers/secret_token.rb.tt
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/initializers/inflections.rb
+END
+session_store.rb.tt
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/initializers/session_store.rb.tt
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 171
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/initializers/backtrace_silencers.rb
+END

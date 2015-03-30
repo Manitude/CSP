@@ -1,0 +1,866 @@
+/* new master scheduler styles */
+div#ms-header {float:left;width:99.2%;padding-top: 10px}
+div.inside_date_box{padding: 5px;border:1px solid #CCCCCC}
+div#ms-lang-dropdown {float:left;}
+div#ms-village-dropdown {float:left;}
+div#ms-village-dropdown select{float:left;margin-right:6px;width:180px;}
+div#ms-lang-dropdown select {float:left;margin-right:6px;width:150px;}
+
+#get_schedule_button {margin-left:6px; visibility:hidden;}
+#coach_avail_list{float: right;}
+#coach_avail_list_lotus{float: right;}
+#master_scheduler_data{float: left;}
+.big-info-w-alert {float:right;width:360px;font-size:11px;position:absolute;right:0;top:45px;/*margin-right: -125px;margin-top:-240px;*/}
+.big-info-wo-alert {float:right;width:360px;font-size:11px;position:absolute;right:0;top:45px;/*margin-right: -125px;margin-top:-148px;*/}
+.big-info-title {float:left;font-weight:bold;padding-right: 5px}
+
+#ms-legend {float:left;font-weight:bold;width:680px; margin-top: 25px;}
+.legend-box{height:12px;width:12px;float:left;margin-right:6px;}
+.legend-text{float:left;margin-right:18px;clear: right}
+#orange-box{border:2px solid #FF9800;}
+#dark-tan-box{background-color:#D5C8E8;clear:both;border:2px solid #DBC8D8;}
+#light-tan-box{background-color:#BFD3DD;border:2px solid #CECECE;}
+#recurring_sessions_legend{ background-color: #E3E2D5; border: 2px solid #E3E2D5;}
+#extra_sessions_legend{ background-color: #669966; border: 2px solid #669966;}
+table, th, td{ text-align:left; border: none; }
+
+/*reusing most of the styles from my schedule and change on a need basis.*/
+.master-schedule {
+    clear:both;
+    width:100%;
+    float:left;
+    margin:10px 10px 10px;
+}
+.one-hour-cell-for-MS {
+    border:1px solid #CECECE;
+    float:left;
+    text-align:center;
+    width:12%;
+    padding:5px 0;
+    height: 36px;
+    cursor:pointer;
+    font-family: "Myriad Pro";
+    font-size: 9pt;
+    color: black;
+    line-height: 1em;
+}
+
+.pushed_to_eschool {
+    background-color: #BFD3DD;
+    font-size : 9pt;
+    color: black;
+    border: 1px solid #CBCCC4;
+}
+.extra_session {
+    background-color: #669966;
+    font-size : 9pt;
+    color: black;
+    border: 1px solid #CBCCC4;
+}
+.not_pushed_to_eschool {
+    color: black;
+    background-color: #D5C8E8;
+    border: 1px solid #D2CEA1;
+}
+
+.initial_recurring{
+    background-color: #E3E2D5;
+    border: 1px solid #D2CEA1;
+}
+
+.actuals_less_than_historical {
+    border: 1px solid #FF9800;
+    outline: 1px solid #FF9800;
+}
+
+#coach_list_container_table #coach_unavailable td{
+    color:red;
+    text-align:center;
+    font-size:12px;
+    font-weight:bold;
+}
+.display_none{display: none;}
+
+.selected_cell{
+    background-color:#A7DAEB;
+    border:1px solid #3F7AB4;
+}
+/* new master scheduler styles */
+
+/* MS shift details styles */
+.shift_detail_header{width: 100%;float: left;}
+.locals_header{width: 100%;float: left;font-weight:bold;margin-top:12px}
+.locals_header hr{float:right; width: 100%;margin-top:7px;}
+.header_element{width:12%;float: left;font-weight:bold;text-align:center;}
+.header_element.first{width:22%}
+.header_element.large{width:14%}
+.header_element.xlarge{width:24%}
+.header_element.slarge{width:13%}
+.actuals_row{width: 100%;float: left;}
+.locals_row{width: 100%;float: left;}
+.actuals_row_element{width:12%;float: left;text-align:center;}
+.actuals_row_element_lotus{width:25.5%;float: left;text-align:center;text-decoration: underline;color:#1090CF}
+.actuals_row_element.first{width:22%}
+.actuals_row_element.large{width:14%}
+.actuals_row_element.xlarge{width:24%}
+.actuals_row_element.slarge{width:13%}
+.actuals_row_element.action{width:45%;text-align:left;}
+.locals_row_element{width:12%;float: left;text-align:center;}
+.locals_row_element.first{width:22%}
+.locals_row_element.large{width:14%}
+.locals_row_element.xlarge{width:24%}
+.locals_row_element.slarge{width:13%}
+.actuals_row_element > a{text-decoration: underline}
+#shift_details{width: 530px;float: left;}
+#ms-popup-content .create_sessions{float: right;padding-top: 10px;height:40px;}
+.button.disabled{color:gray;cursor:auto;}
+.session_time_error_message{color:red;font-weight: bolder;float:left}
+.session_date{color:#1090CF;font-weight: bolder;float:left}
+#locals_row_container{overflow:auto;width:530px;height:60px;}
+#actuals_row_container{overflow:auto;width:530px;height:55px;border:1px solid}
+#coach_avail_input_lotus{width:145px; float:right;}
+
+/*For Aria MS shift details*/
+.aria_name{width:22%;float: left;text-align:center;}
+.aria_level{width:10%;float: left;text-align:center;}
+.aria_large{width: 16%;float: left;text-align:center;}
+.aria_medium{width: 13%;float: left;text-align:center;}
+
+/*Michelin specifics*/
+.shift_details_michelin{width: 580px !important;}
+.actuals_row_container_michelin{width:580px !important;}
+.locals_row_container_michelin{width:580px !important;}
+
+.tmm_michelin_name{width:20%;float: left;text-align:center;}
+.tmm_michelin_level{width:8%;float: left;text-align:center;}
+.tmm_michelin_learner{width:12%;float: left;text-align:center;}
+.tmm_michelin_dialect{width:8%;float: left;text-align:center;}
+.tmm_michelin_small{width:12%;float: left;text-align:center;}
+.tmm_michelin_large{width: 14%;float: left;text-align:center;}
+.tmm_michelin_medium{width: 12%;float: left;text-align:center;}
+
+/*MS TMM phone row styles*/
+.tmm_phone_name{width:24%;float: left;text-align:center;}
+.tmm_phone_learner{width:10%;float: left;text-align:center;}
+.tmm_phone_dialect{width:12%;float: left;text-align:center;}
+.tmm_phone_small{width:12%;float: left;text-align:center;}
+.tmm_phone_medium{width:14%;float: left;text-align:center;}
+.tmm_phone_large{width:16%;float: left;text-align:center;}
+
+.header_element.name{width:22%;}
+.header_element.level{width:10%;}
+.header_element.aria_large{width: 16%;}
+.header_element.aria_medium{width: 13%;}
+
+.header_element.tmm_name{width:20%;}
+.header_element.tmm_level{width:8%;}
+.header_element.tmm_learner{width:12%;}
+.header_element.tmm_dialect{width:8%;}
+.header_element.tmm_small{width:12%;}
+.header_element.tmm_large{width: 14%;}
+.header_element.tmm_medium{width: 12%;}
+
+
+/*MS TMM phone header styles*/
+.header_element.tmm_phone_name{width:24%;}
+.header_element.tmm_phone_learner{width:10%;}
+.header_element.tmm_phone_dialect{width:12%;}
+.header_element.tmm_phone_small{width:12%;}
+.header_element.tmm_phone_medium{width: 14%;}
+.header_element.tmm_phone_large{width: 16%;}
+
+
+/* MS shift details styles */
+
+/* Coach scroller styles of the 2nd popup BEGINS */
+#goup, #godown, #coach_list_container, #coach_list,  #coach_list_container1,#coach_list1,#coach_list_container2,#coach_list2 {
+    width: 150px;
+}
+
+#goup, #godown, #coach_list_container, #coach_list_container1,#coach_list_container2 {
+    border: 1px solid black;
+}
+
+.each_coach_in_list, .each_coach_in_list1, .each_coach_in_list2 ,.each_coach_in_list3 {
+    border-bottom: 1px solid black;
+}
+
+#excluded_coach_list_container{
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid black;
+    height: 80px;
+    width: 160px;
+    position: relative;
+    font-weight: normal;
+}
+.excluded_coach_list_li{
+    border-bottom: 1px solid black;
+    border:0px;
+    overflow-x:hidden;
+}
+.excluded_coaches_label{
+    font-size : 10px;
+    overflow-x:hidden;
+}
+.excluded_coaches_checkbox{
+    vertical-align: text-top;
+    float: left;
+}
+
+coach_list_container_lotus{
+    border: 1px solid black;
+    height: 100px;
+    position:relative;
+    width:150px;
+}
+#coach_list,#coach_list1,#coach_list2 {
+    position:relative;
+    width:100%;
+}
+#goup, #godown {
+    cursor:pointer;
+    width:100%;
+}
+
+#draft_link{
+    float:left;
+    margin-left: 1px;
+    width:115px;
+    font-weight:bold;
+    text-align:center;
+}
+
+.level_unit_label {
+    width:48%;
+    float:left;
+    font_size:15px;
+}
+/* Coach scroller styles of the 2nd popup ENDS */
+
+/* General styles of the 2nd popup BEGINS */
+
+
+#available_coaches_container, #level_unit_container, #level_unit_container1, #number_of_seats_container, #available_coaches_container1,#available_coaches_container2, #extra_session_name{
+    float: left;
+    text-align: left;
+    font-weight: bold;
+}
+
+#number_of_seats_container1{
+    font-weight: bold;
+}
+
+#number_of_seats_container_for_coach{
+    float: left;
+    text-align: left;
+    font-weight: bold;
+    padding-left: 29px;
+    width:  42%;
+    margin-top: 2px;
+    margin-bottom: 21px;
+}
+
+#bottom_section_for_coach{
+    float: left;
+    width: 100%;
+}
+#level_unit_container_for_coach_view{
+    width: 45%;
+    float: left;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.village_in_coach_view{
+    width: 172px;
+}
+
+.unit_for_coach_view{
+    margin-left: 11px;
+    text-align: center;
+    width: 42%
+}
+
+.level_for_coach_view{
+    margin-right: 3px;
+    text-align: center;
+    width: 42%
+}
+
+#recurring_container_for_coach {
+    color: black;
+    /*margin: 22px 46px 0 0; */
+    margin : 10px 0 0 40px;
+    float: left;
+    width: 42%
+}
+
+#create_new_session_div{
+    float : right;
+    margin: 20px 10px 0 0;
+}
+
+#title_for_coach_session{
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.button_shape{
+    border:2px solid;
+    -moz-border-radius:12px;
+    background-color: #A0C544;
+    border: 1px solid #444444;
+    color: #444444;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 8px;
+    text-align: center;
+}
+.go_button_shape{
+    border:2px solid;
+    -moz-border-radius:6px;
+    background-color: #A0C544;
+    border: 1px solid #444444;
+    color: #444444;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    float: left;
+    text-align: center;
+}
+.languages_for_coach {
+    float: left;
+    margin: 17px 0 22px 10px;
+    width: 172px;
+}
+.seats_for_coach {
+    text-align: center;
+    width: 34%;
+}
+#level_unit_container, #number_of_seats_container{
+    clear: both;
+}
+
+#available_coaches_container,#available_coaches_container1,#available_coaches_container2 {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 50%;
+}
+
+.right_container {
+    width:52%;
+    float:left !important;
+}
+
+.lotus_right {
+
+    bottom: 0px;
+/*    position: absolute;   moved for CSP-1070*/
+    right: 25px;
+    width: 170px;
+}
+
+.lotus_extra_right {
+    bottom: 0px;
+    right: 25px;
+    width: 170px;
+}
+
+.left_container {
+    float: left;
+    /*    width: 170px;*/
+}
+
+.calendar_left_container {
+    float: left;
+    width: 470px;
+}
+
+div.calendar_left_container {
+    float: left;
+    padding: 0px 10px 10px 4px;
+}
+
+#recurring_container {
+    color: black;
+    width: 52%;
+    /*    padding-bottom: 11%;*/
+    /*margin-top: 5%;*/
+    float: right;
+    margin-top: 19px;
+}
+
+#recurring_container_for_edit{
+    color: black;
+    width: 58%;
+    /*    padding-bottom: 11%;*/
+    /*margin-top: 5%;*/
+    float: right;
+}
+
+#recurring_container_aria {
+    color: black;
+    width: 50%;
+    /*    padding-bottom: 11%;*/
+    margin-top: 5%;
+    float: left;
+}
+#session_name_container{
+    color: black;
+    width: 45%;
+    margin-bottom: -2%;
+    margin-top: 5%;
+}
+#head_section,#edit_session_ms,#head_section1,#head_sectionedit{
+    width: 100%;
+}
+
+#create_new_session_ms{
+    float: left;
+    width: 380px;
+    padding: 3px 10px;
+}
+#edit_actual_session_ms{
+    float: left;
+    width: 100% !important;
+
+}
+#create_head_section,#edit_head_sectioned{
+    float: left;
+    width: 100%;
+    padding-bottom:5px;
+}
+.title_lotus
+{
+
+    text-align: left;
+    padding-right: 6px;
+    margin-left: 10px;
+}
+
+#head_section.view_session_head{
+    padding-bottom:5px;
+}
+
+#level_unit_container{
+    margin-bottom: 25px;
+    margin-top: 9px
+}
+
+.level_unit_border {
+
+    margin-top: 17%;
+    float:right;
+    width:100%;
+  /*  height: 100px;    */  /* commented for Sprint29 changes */
+}
+.level_unit_border1{
+    margin-top:3% !important; /* was previously 4% before Sprint29 changes */
+    width:52% !important;
+}
+
+.level_unit_border_for_edit{
+    margin-top:2% !important; /* was previously 4% before Sprint29 changes */
+    width:58% !important;
+}
+
+.seats_border {
+    float: left;
+}
+#edit_session_seat{
+    float: left;
+}
+
+#create_popup_time,#create_popup_time1,#avg_attendance {
+    text-align: left;
+    color: #A1251A;
+    font-weight: bold;
+    font-size: larger;
+    width: 370px;
+    margin-left: 10px;
+}
+#create_popup_time_in_coach_view {
+    float:left;
+    text-align: left;
+    color: #1090CF;
+    font-weight: bold;
+    font-size: 13px;
+    width: 370px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+#available_coaches {
+    text-align: left;
+    font-weight: bold;
+}
+
+/* General styles of the 2nd popup ENDS */
+
+/*autocomplete styles */
+.acInput {
+    width: 200px;
+}
+.acResults {
+    padding: 0px;
+    border: 1px solid WindowFrame;
+    background-color: white;
+    overflow: hidden;
+}
+
+.acResults ul {
+    width: 100%;
+    list-style-position: outside;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.acResults li {
+    margin: 0px;
+    padding: 2px 5px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    font: menu;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.acLoading {
+    background : url('/images/indicator.gif') right center no-repeat;
+}
+
+.acSelect {
+    background-color: #E6E6E6;
+    color: black;
+}
+
+/* auto complete styles ends */
+/* Coach availability popup styles */
+#ms-coach-avail-popup {
+    display:none;
+    padding: 0px;
+    border: 1px solid black;
+    background-color: white;
+    overflow: hidden;
+    position:absolute;
+    top:18px;
+    width: 320px;
+    -moz-border-radius: 15px 15px 15px 15px;
+}
+#ms-edit-popup-container,#ms-editlocal-popup-container{
+    float: left;
+    width: 414px;
+    display:none;
+    position:absolute;
+}
+/* Coach availability popup style ends */
+
+#close-coach-avail-popup{
+    position:relative;
+    left:304px;
+    top:4px;
+    color:red;
+    cursor:pointer;
+}
+#coach_list_container_table{
+    border:0;
+    width:320px;
+    padding:4px;
+}
+
+#coach_list_container_table th, #coach_list_container_table td{
+    text-align:left;
+}
+
+.coach_list_container_table_thead{
+    background: none repeat scroll 0 0 #F0F0F0;
+    color: #666666;
+    font-weight: normal;
+    white-space: nowrap;
+}
+.session_details{
+    font-size: 7.5pt;
+    font-weight: bolder;
+    font-family : "Myriad Pro";
+}
+.local_session_details{
+    color: black;
+    font-size: 7.5pt;
+    font-family : "Myriad Pro";
+}
+.local_changes, .local_new_sessions, .local_removed_sessions{
+    color:black;
+    font-size: 7.5pt;
+    font-family : "Myriad Pro";
+}
+/*View Session details popup styles - START*/
+.top_container{
+    float: left;
+    clear: both;
+    width: 390px;
+}
+.btm_container{
+    float: left;
+    clear: both;
+    padding-top: 3px;
+}
+.top_left_element{float: left;font-size: 12px;font-weight: bold}
+.top_right_element{float: left; padding-left: 30px;}
+/*View Session details popup styles - ENDS*/
+
+/*Edit Session details popup styles - STARTS*/
+.check_box_value{
+    float: right;
+    padding-right: 35px;
+    padding-top: 5px;
+}
+.select{
+    float: left;
+    padding-left: 5px;
+}
+.popup_label{
+    float: left;
+    padding: 5px 0 0 5px;
+}
+.lock_container{
+    float: left;
+    padding: 0 0 0 10px;
+}
+.second_row{
+    float: left;
+    padding: 10px 0 0;
+    width: 100%;
+}
+.second_right_element{
+    float: left;
+    padding: 0 0 0 25px;
+}
+.button_section{
+    float: right;
+    padding-right: 14px;
+}
+/*Edit Session details popup styles - ENDS*/
+
+/* Village styles */
+.title{
+    float: left;
+}
+.village{
+    color: #F88C5C;
+    clear: both;
+    float: left;
+}
+.village_border{
+    padding-bottom: 10px;
+}
+
+#content-header h2.ms {
+    float:left;
+    font-size:16px;
+}
+
+#sub-title{
+    color: #1090CF;
+}
+
+.warning-message{
+    float:right;
+    font-weight:bold;
+    margin: 10px 10px;
+    /* width:40%;*/
+}
+
+.warning-message {
+    float:right;
+}
+
+.message{
+    float:right;
+    padding-left: 5px;
+}
+
+.warning-message .message a{
+    text-decoration: none;
+}
+
+.warning-message img{
+    margin: 0 0 0 35px;
+    /*float:left;*/
+}
+
+#create_error_message{
+    padding: 20px;
+}
+.village_id_in_ms{
+    width: 200px;
+}
+.level_unit_in_ms{
+    width:46%;
+}
+#external_village_id_div,#coach_select_div,#coach_select_dropdown,#number_of_seats_container1{
+    width: 162px;
+    margin-top: 8px;
+}
+#button_container_1{
+    float: right;
+    margin-top: 18px;
+    margin-right: 59px;
+}
+#create_button_container{
+    float: right;
+/*    width:40%;    commented for CSP 1070*/
+    margin-top: 6%;
+    margin-right: 3%;
+}
+.right_border_at_right_side{
+    border-right-width: 4px;
+}
+.sub_needed_text_in_slot {
+    color: #BF0030;
+    vertical-align: bottom;
+    float:right;
+    font-size: 7pt;
+    font-weight: bold;
+    padding-right: 2px;
+    padding-top: 5px;
+}
+.today_button_in_ms {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    float: left;
+    margin-top: 0px;
+    background: url("/images/field_bg.png") repeat-x scroll 0 -23px transparent;
+    border: 1px solid #CECECE;
+    color: #444444;
+}
+
+.today_button_in_ms:active {
+    background: url("/images/field_bg.png") repeat-x scroll 0 -50px transparent;
+}
+
+div.date_box_in_ms {
+    float:left;
+    padding: 0px 2px 0;
+}
+div.date_box_in_ms input {
+    border: none;
+    text-align: center;
+    width: 110px;
+    padding-bottom: 2px;
+    vertical-align: top;
+}
+div#ms-selection-form > div{
+    margin-left:8px;
+    margin-right: 4px;
+}
+
+div#div_to_hide_controls{
+    width:98%;
+    height:30px;
+    z-index: 300;
+    padding-top: 25px;
+    position: relative;
+}
+.edit_button{
+
+}
+.titleclass{
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    width:73%;
+}
+.avgclass{
+    color: #1090CF;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: left;
+    width: 80%;
+}
+.wildcard{
+    margin:0 !important;
+    padding: 0 !important;
+    font-weight: normal !important;
+}
+.note{
+    font-size: 11px;
+}
+.containeredit{
+    width:50%;
+    float:left !important;
+}
+.editsessionselect{
+    width:160px !important;
+}
+.aria_editsessionselect{
+    width:100px !important;
+}
+.aebtopicselect{
+/*    width:230px !important;   */
+    width:150px !important;
+}
+.tmm_session_detail_edit_div{
+    width: 93%; 
+    max-width: 93%; 
+    float: left; 
+    height: 65px; 
+    max-height: 65px;
+}
+.levelunitclass1{
+    width:100%;
+    margin-left: 14%;
+    margin-top: 5%
+}
+.levelunitclass2{
+    width:100%;
+    margin-left: 14%;
+    margin-top: 1%;
+}
+.levelunitclass3{
+    width:100%;
+    margin-left: 14%;
+    margin-top: 16%;
+}
+.teacher_confirmed{
+    display:none;
+}
+#extra_session_container{
+    color: black;
+    float: right;
+    margin-top: -5% !important;
+    width: 52%;
+}
+.session_name_txt{
+    width: 115px;
+}
+
+.ui-tooltip{
+    min-width: 380px;
+    max-width: 600px;
+}
+.topics_aeb{
+    width: 50%; 
+    padding-left: 6px;
+}
+.topics_div_aeb{
+    width: 100%; 
+    float: right;
+}
+
+#aeb #session_type_select{  display:block;float:left;width:109px;}
+#aeb #session_name_container{  display:none;float:left;margin-top: 5px;}
+#aeb #number_of_seats_div{  float:left;width:100px;padding-left:0px;margin-top:12px;}
+#aeb #cefr_select{  display:none;float:left;margin-top:5px}
+#aeb #topic_select{  float:right;width:37%; margin-right:57px;margin-top:5px;display:none}
+#aeb #recurring_container{  width: 23%; float: left; margin-top: 8px;}
+#aeb #recurring_container.standard_session{  width: 23%; float: left; margin-right: 57px;}

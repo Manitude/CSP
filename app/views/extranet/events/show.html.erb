@@ -1,0 +1,33 @@
+<p>
+  <b>Event Name:</b>
+  <%=h @event.event_name %>
+</p>
+<p>
+  <b>Event Description:</b>
+  <%=h @event.event_description %>
+</p>
+<p>
+  <b>Event Start Date:</b>
+  <%=h format_time(@event.event_start_date, "%b %d, %Y %Z") %>
+</p>
+
+<p>
+  <b>Event End Date:</b>
+  <%=h format_time(@event.event_end_date, "%b %d, %Y %Z") %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%=h @event.language_id == -1 ? "All" : @event.language.display_name %>
+</p>
+
+<p>
+  <b>Region:</b>
+   <%=h @event.region_id == -1 ? "All" : @event.region.name %>
+</p>
+
+<% if manager_logged_in? -%>
+  <%= link_to 'Edit', edit_event_path(@event) %> |
+<% end %>
+<%= link_to 'Back', events_path %>
+

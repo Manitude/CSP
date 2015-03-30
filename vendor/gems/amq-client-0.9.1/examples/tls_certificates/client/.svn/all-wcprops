@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/client
+END
+cert.pem
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/client/cert.pem
+END
+keycert.p12
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/client/keycert.p12
+END
+req.pem
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/client/req.pem
+END
+key.pem
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/client/key.pem
+END

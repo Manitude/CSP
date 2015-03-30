@@ -1,0 +1,35 @@
+Index: lib/annotate_models.rb
+===================================================================
+--- lib/annotate_models.rb	(revision 27469)
++++ lib/annotate_models.rb	(working copy)
+@@ -69,11 +69,11 @@
+   # on the columns and their types) and put it at the front
+   # of the model and fixture source files.
+ 
+-  def self.annotate(klass, header)
++  def self.annotate(klass, header, model_file_name = nil)
+     info = get_schema_info(klass, header)
+-    
+-    model_file_name = File.join(MODEL_DIR, klass.name.underscore + ".rb")
+-    annotate_one_file(model_file_name, info)
++    model_file_name ||= klass.name.underscore + ".rb"
++    model_file_path = File.join(MODEL_DIR, model_file_name)
++    annotate_one_file(model_file_path, info)
+ 
+     fixture_file_name = File.join(FIXTURE_DIR, klass.table_name + ".yml")
+     annotate_one_file(fixture_file_name, info)
+@@ -109,12 +109,13 @@
+     end
+     
+     self.get_model_names.each do |m|
++      require m # hack to get models in subdirectories of app/models recognized
+       class_name = m.sub(/\.rb$/,'').camelize
+       begin
+         klass = class_name.split('::').inject(Object){ |klass,part| klass.const_get(part) }
+         if klass < ActiveRecord::Base && !klass.abstract_class?
+           puts "Annotating #{class_name}"
+-          self.annotate(klass, header)
++          self.annotate(klass, header, m)
+         else
+           puts "Skipping #{class_name}"
+         end

@@ -1,0 +1,12 @@
+<% if error %>
+  <div title="<%= error %>">
+    <%= image_tag 'failure.png'%>
+  </div>
+<% else %>
+  <div title="<%= message %>">
+    <%= image_tag 'success.png'%>
+  </div>
+<% end %>
+<% if status %>
+<div id = "approval_status" style = "display:none"><%=status%></div>
+<% end %>

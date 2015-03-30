@@ -1,0 +1,64 @@
+<div>
+  <% form_tag( {:controller =>'licenses', :action =>'add_consumable'} , :id => 'add_multiple_consumables') do %>
+    <%= hidden_field_tag :pooler_type, data[:pooler_type] %>
+    <%= hidden_field_tag :solo_product_right, data[:solo_product_right] %>
+    <%= hidden_field_tag :group_product_right, data[:group_product_right] %>
+    <%= hidden_field_tag :license_guid, data[:license_guid] %>
+    <%= hidden_field_tag :end_date, data[:end_date] %>
+    <%= hidden_field_tag :language, data[:language] %>
+    <%= hidden_field_tag :group_expire_date, data[:group_expire_date] %>
+    <%= hidden_field_tag :solo_expire_date, data[:solo_expire_date] %>
+    <%= hidden_field_tag :craccount_type %>   
+    
+    <div>
+      <div style="padding: 10px 0">
+        <span>Case Number: </span>
+        <span><%= text_field_tag :case_number, nil, :size => 32, :maxlength => 30, :style => "-moz-border-radius: 6px; margin-left:3px;" %></span>
+      </div>
+      <div style="padding: 10px 0">
+        <span>Session Type: </span>
+        <span><%= select_tag :session_type, options_for_select(options_for_session_type(data), "-1"), {:style=>"width:235px; margin-left:5px;"} %></span>
+      </div>
+      <div id="expire-date"></div>
+    </div>
+    <div style="padding: 10px 0">
+        <span>Action: </span>
+        <span><%= select_tag :action_performed, 
+          options_for_select([["Select" ,"Select"],["Add","Add"]], "Select"),{:style=>"width:235px; margin-left:45px;"} %></span>
+    </div>
+    <div style="padding: 10px 0">
+        <span>Number Of Sessions: </span>
+        <span><%= text_field_tag :number_of_sessions, nil, :size => 3, :disabled => "true", :style => "-moz-border-radius: 6px;" %></span>
+    </div>
+    
+      <div style=" padding: 10px 0">
+        <span>Reason: </span>
+        <span>
+          <%= select_tag :reason, 
+          options_for_select([
+            ["Please select one below" ,"Select"],
+            ["3 months OLR claimed but not used","3 months OLR claimed but not used"],
+            ["My Account not working","My Account not working"],
+            ["Moved OLR to another identifier","Moved OLR to another identifier"],
+            ["OLR expired before claimed-Retailer shelf life","OLR expired before claimed-Retailer shelf life"],
+            ["3 months OLR not claimed w/in 6 mos.","3 months OLR not claimed w/in 6 mos."],
+            ["Studio Usability Issue- 1 session add only","Studio Usability Issue- 1 session add only"],
+            ["Grandfathering","Grandfathering"],
+            ["Test Session-PS only","Test Session-PS only"],
+            ["Sales set wrong expectations","Sales set wrong expectations"],
+            ["Service set wrong expectations","Service set wrong expectations"],
+            ["Customer Satisfaction- MGMT use only","Customer Satisfaction- MGMT use only"],
+          ], "Select"), {:style=>"width:235px; margin-left:35px;"} %>
+        </span>
+        <span><%= image_tag 'ajax-spinner.gif', :id => 'ajaxSpinner_id', :style =>"display:none" %></span>
+      </div>
+      <div style=" padding: 10px 0">
+      <%= text_area_tag :other_reason, "", :rows => 3, :cols => 55, :style => "-moz-border-radius: 12px;display:none;color:#888;padding: 5px 0 0 5px;resize:none;", :title => "Other reasons", :placeholder => "Enter Text" %>
+      </div>
+    <div style="float: right; margin-top:10px">
+     
+      <input id="add_consumable_button" type="button" onclick="validateConsumableFormFields();" value="Submit" />
+      <a class="close-facebox" onclick="jQuery(document).trigger('close.facebox')" style="margin-left : 5px">Exit</a>
+    </div>
+  <% end %>
+</div>

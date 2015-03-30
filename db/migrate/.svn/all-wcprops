@@ -1,0 +1,1349 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/158313/coach_portal/branches/sprint32/db/migrate
+END
+20110104124954_remove_time_off_denied_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110104124954_remove_time_off_denied_notification.rb
+END
+20101027113459_create_temp_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20101027113459_create_temp_data.rb
+END
+20120315122348_add_triggers_for_substitute_requested_for_coach.rb
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120315122348_add_triggers_for_substitute_requested_for_coach.rb
+END
+20110324070237_store_substitution_ids.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110324070237_store_substitution_ids.rb
+END
+20110406144331_update_coach_availabilty_templates_add_column_deleted.rb
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110406144331_update_coach_availabilty_templates_add_column_deleted.rb
+END
+20120330000000_add_coach_not_present_alert_to_preference_settings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120330000000_add_coach_not_present_alert_to_preference_settings.rb
+END
+20140909182330_add_timeoff_request_email_to_preference_setting.rb
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140909182330_add_timeoff_request_email_to_preference_setting.rb
+END
+20140926043327_trigger_text_change.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140926043327_trigger_text_change.rb
+END
+20130115000000_drop_manual_cancellation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130115000000_drop_manual_cancellation.rb
+END
+20120216000000_add_column_primary_mobile_country_code_to_accounts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120216000000_add_column_primary_mobile_country_code_to_accounts.rb
+END
+20121116072757_create_table_request_logger.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20121116072757_create_table_request_logger.rb
+END
+20120331500000_adding_fields_to_scheduler_meta_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120331500000_adding_fields_to_scheduler_meta_data.rb
+END
+20120331400000_add_row_to_glabal_settings_for_dashboard_refresh_time.rb
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120331400000_add_row_to_glabal_settings_for_dashboard_refresh_time.rb
+END
+20100817102436_remove_date_from_substitutions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100817102436_remove_date_from_substitutions.rb
+END
+20101013111415_do_some_indexing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20101013111415_do_some_indexing.rb
+END
+20110322112758_add_language_start_time_to_coach_availability_templates.rb
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110322112758_add_language_start_time_to_coach_availability_templates.rb
+END
+20100805051040_add_code_to_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100805051040_add_code_to_task.rb
+END
+20100723103703_create_coach_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100723103703_create_coach_session.rb
+END
+20101202144747_add_eschool_session_id_to_modifications.rb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20101202144747_add_eschool_session_id_to_modifications.rb
+END
+20120612080216_decrease_session_data_size.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120612080216_decrease_session_data_size.rb
+END
+20120331300000_modify_locos_datas_schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120331300000_modify_locos_datas_schema.rb
+END
+20100903073412_rename_extension_guid_column_on_rights_extension_log.rb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100903073412_rename_extension_guid_column_on_rights_extension_log.rb
+END
+20140530113048_add_topic_id_to_session_tables.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140530113048_add_topic_id_to_session_tables.rb
+END
+20141205062517_migrate_michelin_to_rsa_supersaas.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/158313/coach_portal/branches/sprint32/db/migrate/20141205062517_migrate_michelin_to_rsa_supersaas.rb
+END
+20120903092608_update_type_for_coach_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120903092608_update_type_for_coach_session.rb
+END
+20130924132950_add_new_coach_id_and_remove_recurring_id_from_session_metadata.rb
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130924132950_add_new_coach_id_and_remove_recurring_id_from_session_metadata.rb
+END
+20120322000000_create_cron_and_rake_task_tracer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120322000000_create_cron_and_rake_task_tracer.rb
+END
+20120504062604_set_default_time_zone.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120504062604_set_default_time_zone.rb
+END
+20100816091034_add_next_session_alert_in_to_accounts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100816091034_add_next_session_alert_in_to_accounts.rb
+END
+20120430140000_update_learner_columns.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120430140000_update_learner_columns.rb
+END
+20130320092750_make_mgmt_table_unicode_friendly.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130320092750_make_mgmt_table_unicode_friendly.rb
+END
+20110412063241_update_notification_recipients_all_managers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110412063241_update_notification_recipients_all_managers.rb
+END
+20110308165017_change_triggers_for_time_off_approval.rb
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110308165017_change_triggers_for_time_off_approval.rb
+END
+20100708193736_create_trigger_events_and_notifications_for_modifications.rb
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100708193736_create_trigger_events_and_notifications_for_modifications.rb
+END
+20120829122309_drop_language_start_time_from_availability_template.rb
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120829122309_drop_language_start_time_from_availability_template.rb
+END
+20140926075651_add_michelin_language_and_scheduling_threshold.rb
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140926075651_add_michelin_language_and_scheduling_threshold.rb
+END
+20110819094839_add_single_number_unit_number_of_seats_and_attendance_count_to_coach_sessions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110819094839_add_single_number_unit_number_of_seats_and_attendance_count_to_coach_sessions.rb
+END
+20130304075825_create_management_team_members.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130304075825_create_management_team_members.rb
+END
+20120215155919_add_original_end_date_to_udt.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120215155919_add_original_end_date_to_udt.rb
+END
+20120510065851_add_masterscheduler_bulk_data_id.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120510065851_add_masterscheduler_bulk_data_id.rb
+END
+20110111063151_change_states_of_approval_in_templates.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110111063151_change_states_of_approval_in_templates.rb
+END
+20130530134111_add_index_to_reflex_activity.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130530134111_add_index_to_reflex_activity.rb
+END
+20100730144312_remove_attendee_count_from_coach_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100730144312_remove_attendee_count_from_coach_session.rb
+END
+20120418065200_update_learner_details.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120418065200_update_learner_details.rb
+END
+20100623101138_create_links.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100623101138_create_links.rb
+END
+20120419073504_create_learner_product_rights.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120419073504_create_learner_product_rights.rb
+END
+20100813051040_add_region_as_relation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100813051040_add_region_as_relation.rb
+END
+20100521123607_extranet_schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100521123607_extranet_schema.rb
+END
+20110810130430_create_preference_settings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110810130430_create_preference_settings.rb
+END
+20120719110500_drop_locos_datas.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120719110500_drop_locos_datas.rb
+END
+20120314122338_add_daily_cap_to_preference_settings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120314122338_add_daily_cap_to_preference_settings.rb
+END
+20110629064356_function_to_convert_timezone.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110629064356_function_to_convert_timezone.rb
+END
+20110322092758_add_language_identifier_to_coach_sessions_and_availabilities.rb
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110322092758_add_language_identifier_to_coach_sessions_and_availabilities.rb
+END
+20110510063207_create_real_time_lotus_datas.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110510063207_create_real_time_lotus_datas.rb
+END
+20110504072812_coach_availability_modifications_add_column_coachsessionid.rb
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110504072812_coach_availability_modifications_add_column_coachsessionid.rb
+END
+20121124175142_add_column_daylight_diff_to_coach_availabilities.rb
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20121124175142_add_column_daylight_diff_to_coach_availabilities.rb
+END
+20120525094200_drop_user_source_type.rb.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120525094200_drop_user_source_type.rb.rb
+END
+20101222154117_add_triggers_for_cutting_short_time_off.rb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20101222154117_add_triggers_for_cutting_short_time_off.rb
+END
+20100624233716_create_language_configurations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100624233716_create_language_configurations.rb
+END
+20120518070500_remove_learners_with_no_guid.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120518070500_remove_learners_with_no_guid.rb
+END
+20110212115804_add_indexes_for_cam.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110212115804_add_indexes_for_cam.rb
+END
+20100806121901_create_user_update_execution_details.rb
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100806121901_create_user_update_execution_details.rb
+END
+20141027052620_add_reassigned_col_to_coach_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20141027052620_add_reassigned_col_to_coach_session.rb
+END
+20110110233847_add_support_profile_fields.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110110233847_add_support_profile_fields.rb
+END
+20100702111031_add_learner_data_to_task_list.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100702111031_add_learner_data_to_task_list.rb
+END
+20130712095656_add_reason_to_substitutions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130712095656_add_reason_to_substitutions.rb
+END
+20110809094117_add_is_supervisor_to_accounts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110809094117_add_is_supervisor_to_accounts.rb
+END
+20110111070836_port_led_tables.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110111070836_port_led_tables.rb
+END
+20120521154529_create_product_language_logs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120521154529_create_product_language_logs.rb
+END
+20120611064048_create_application_configurations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120611064048_create_application_configurations.rb
+END
+20140926094143_create_village_preferences.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140926094143_create_village_preferences.rb
+END
+20120511065739_change_data_type_for_events_end_date.rb
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120511065739_change_data_type_for_events_end_date.rb
+END
+20120331600000_change_column_name_and_add_default_to_coach_sessions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120331600000_change_column_name_and_add_default_to_coach_sessions.rb
+END
+20120215155921_adding_index_to_audit_log_record.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120215155921_adding_index_to_audit_log_record.rb
+END
+20110228165017_add_triggers_for_template_creation_by_coach_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110228165017_add_triggers_for_template_creation_by_coach_manager.rb
+END
+20101108113459_add_cancelled_to_coach_sessions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20101108113459_add_cancelled_to_coach_sessions.rb
+END
+20130723062924_fix_column_name.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130723062924_fix_column_name.rb
+END
+20110222213004_make_schedules_recurring.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110222213004_make_schedules_recurring.rb
+END
+20120907105600_update_scheduler_metadata.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120907105600_update_scheduler_metadata.rb
+END
+20100901093156_add_extendable_info_to_rights_extension_log.rb
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100901093156_add_extendable_info_to_rights_extension_log.rb
+END
+20110222213006_create_master_scheduler_draft.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110222213006_create_master_scheduler_draft.rb
+END
+20120417065923_excluded_coaches_sessions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120417065923_excluded_coaches_sessions.rb
+END
+20120521095417_add_session_type_to_substitutions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120521095417_add_session_type_to_substitutions.rb
+END
+20121012055841_add_consumable_logs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20121012055841_add_consumable_logs.rb
+END
+20130218113542_add_user_name_to_learners.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130218113542_add_user_name_to_learners.rb
+END
+20141105074706_add_default_values_to_appointment_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20141105074706_add_default_values_to_appointment_types.rb
+END
+20120612080439_update_is_supervisor_in_account.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120612080439_update_is_supervisor_in_account.rb
+END
+20130725101748_make_audit_log_table_unicode_friendly.rb
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130725101748_make_audit_log_table_unicode_friendly.rb
+END
+20100623184722_coach_and_manager_changes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100623184722_coach_and_manager_changes.rb
+END
+20130708120410_create_coach_contacts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130708120410_create_coach_contacts.rb
+END
+20140326092146_create_uncap_learner_logs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140326092146_create_uncap_learner_logs.rb
+END
+20120331000000_add_reflex_sms_alert_preference_settings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120331000000_add_reflex_sms_alert_preference_settings.rb
+END
+20120314122358_add_last_pushed_week.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120314122358_add_last_pushed_week.rb
+END
+20101124050607_add_index_to_learners_for_source_type.rb
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20101124050607_add_index_to_learners_for_source_type.rb
+END
+20140630112151_add_revision_id_to_topics.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140630112151_add_revision_id_to_topics.rb
+END
+20110805120647_add_mobile_phone_to_account_table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110805120647_add_mobile_phone_to_account_table.rb
+END
+20120429151255_add_index_to_village_id_in_learners_and_learner_id_in_product_rights.rb
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120429151255_add_index_to_village_id_in_learners_and_learner_id_in_product_rights.rb
+END
+20110715085426_ms_error_message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110715085426_ms_error_message.rb
+END
+20130820104917_insert_scheduling_thresholds_for_aria_languages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130820104917_insert_scheduling_thresholds_for_aria_languages.rb
+END
+20130208120552_add_info_to_add_consumable_logs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130208120552_add_info_to_add_consumable_logs.rb
+END
+20100724103703_create_trigger_events_and_notifications_for_substitutions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100724103703_create_trigger_events_and_notifications_for_substitutions.rb
+END
+20141104093655_add_column_to_coach_recurring_schedule.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20141104093655_add_column_to_coach_recurring_schedule.rb
+END
+20120531154901_increase_session_data_size.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120531154901_increase_session_data_size.rb
+END
+20101209154117_add_triggers_for_sub_requested_and_time_off_changes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20101209154117_add_triggers_for_sub_requested_and_time_off_changes.rb
+END
+20140929092823_add_ancestry_to_unavailable_despite_templates.rb
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140929092823_add_ancestry_to_unavailable_despite_templates.rb
+END
+20140806165652_add_session_details_to_session_metadata.rb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140806165652_add_session_details_to_session_metadata.rb
+END
+20120705102100_remove_coach_user_name_from_coach_sessions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120705102100_remove_coach_user_name_from_coach_sessions.rb
+END
+20111006152237_add_indexes_for_master_scheduler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20111006152237_add_indexes_for_master_scheduler.rb
+END
+20120801122707_add_solo_qualified_to_account.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120801122707_add_solo_qualified_to_account.rb
+END
+20120608125306_add_not_nullability_to_accounts_type.rb
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120608125306_add_not_nullability_to_accounts_type.rb
+END
+20120329000000_create_global_settings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120329000000_create_global_settings.rb
+END
+20100629185931_revert_coach_and_manager_changes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100629185931_revert_coach_and_manager_changes.rb
+END
+20110322102707_update_accounts_add_column_for_substitutions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110322102707_update_accounts_add_column_for_substitutions.rb
+END
+20140602081318_create_topics.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140602081318_create_topics.rb
+END
+20120325000000_add_availabled_by_manager_to_coach_availability.rb
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120325000000_add_availabled_by_manager_to_coach_availability.rb
+END
+20130717065644_create_box_links.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130717065644_create_box_links.rb
+END
+20140805182853_create_session_details.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140805182853_create_session_details.rb
+END
+20110506130358_create_user_languages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110506130358_create_user_languages.rb
+END
+20110419100101_update_notification_recipient_change_to_all_managers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110419100101_update_notification_recipient_change_to_all_managers.rb
+END
+20110321092758_update_trigger_events_and_notifications_for_modifications.rb
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110321092758_update_trigger_events_and_notifications_for_modifications.rb
+END
+20130814071708_add_type_to_languages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130814071708_add_type_to_languages.rb
+END
+20100713102734_create_resources.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100713102734_create_resources.rb
+END
+20100628111439_create_regions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100628111439_create_regions.rb
+END
+20120510072258_create_reflex_activities.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120510072258_create_reflex_activities.rb
+END
+20121217072925_audit_log_who_changed_it.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20121217072925_audit_log_who_changed_it.rb
+END
+20141030092043_create_appointment_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20141030092043_create_appointment_types.rb
+END
+20120317000000_update_notification_message_dynamics.rb
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120317000000_update_notification_message_dynamics.rb
+END
+20100803160000_trigger_update_coach_schedule.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100803160000_trigger_update_coach_schedule.rb
+END
+20101112092952_add_logout_time_to_accounts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20101112092952_add_logout_time_to_accounts.rb
+END
+20140303091856_create_notification_for_back_early.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140303091856_create_notification_for_back_early.rb
+END
+20120914061600_remove_timezone_from_account.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120914061600_remove_timezone_from_account.rb
+END
+20120314122348_create_delayed_jobs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120314122348_create_delayed_jobs.rb
+END
+20140324112743_add_columns_to_management_team_members.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140324112743_add_columns_to_management_team_members.rb
+END
+20121206094039_add_queue_to_delayed_jobs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20121206094039_add_queue_to_delayed_jobs.rb
+END
+20110316191034_add_external_village_id.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110316191034_add_external_village_id.rb
+END
+20120318000000_alter_column_last_pushed_week.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120318000000_alter_column_last_pushed_week.rb
+END
+20140806142052_create_dialects.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140806142052_create_dialects.rb
+END
+20110202103146_set_next_session_alert_to_default.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110202103146_set_next_session_alert_to_default.rb
+END
+20120828162434_create_session_metadata.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120828162434_create_session_metadata.rb
+END
+20120426131047_update_notification_recepients_table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120426131047_update_notification_recepients_table.rb
+END
+20120416055208_add_type_and_name_to_coach_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120416055208_add_type_and_name_to_coach_session.rb
+END
+20100618231532_qualification_changes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100618231532_qualification_changes.rb
+END
+20110818062621_change_ms_draft_data_schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110818062621_change_ms_draft_data_schema.rb
+END
+20130521111600_change_date_to_datetime.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130521111600_change_date_to_datetime.rb
+END
+20110726085938_add_cancelled_to_substitutions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110726085938_add_cancelled_to_substitutions.rb
+END
+20110314073452_add_index_to_learners_search_fields.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110314073452_add_index_to_learners_search_fields.rb
+END
+20100728133957_add_attendee_count_to_coach_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100728133957_add_attendee_count_to_coach_session.rb
+END
+20120731163636_add_session_end_time_to_coach_sessions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120731163636_add_session_end_time_to_coach_sessions.rb
+END
+20100908171012_modify_coach_availability_values.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100908171012_modify_coach_availability_values.rb
+END
+20110414101856_update_notification_recipients_for_grab_notification_to_all_managers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110414101856_update_notification_recipients_for_grab_notification_to_all_managers.rb
+END
+20101014113459_create_scheduler_metadata.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20101014113459_create_scheduler_metadata.rb
+END
+20100818124120_create_rights_extension_logs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100818124120_create_rights_extension_logs.rb
+END
+20110316091034_add_lotus_qualified_to_accounts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110316091034_add_lotus_qualified_to_accounts.rb
+END
+20100719193736_create_substitutions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100719193736_create_substitutions.rb
+END
+20110202114704_add_recurring_start_date_to_coach_availability.rb
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110202114704_add_recurring_start_date_to_coach_availability.rb
+END
+20100629201658_rename_coaches_to_accounts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100629201658_rename_coaches_to_accounts.rb
+END
+20110811102926_add_mobile_country_code_and_aim_id_to_account_table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110811102926_add_mobile_country_code_and_aim_id_to_account_table.rb
+END
+20120626123238_remove_parature_chat_url_from_accounts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120626123238_remove_parature_chat_url_from_accounts.rb
+END
+20100802194312_create_support_windows.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100802194312_create_support_windows.rb
+END
+20101109113459_add_time_slot_preference_to_accounts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20101109113459_add_time_slot_preference_to_accounts.rb
+END
+20140505113252_add_cancellation_reason_to_coach_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140505113252_add_cancellation_reason_to_coach_session.rb
+END
+20120914073600_drop_ms_bulk_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120914073600_drop_ms_bulk_data.rb
+END
+20120321000000_add_message_to_background_tasks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120321000000_add_message_to_background_tasks.rb
+END
+20140324115106_add_row_to_global_settings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140324115106_add_row_to_global_settings.rb
+END
+20120320000000_create_background_tasks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120320000000_create_background_tasks.rb
+END
+20110729155643_remove_real_time_louts_data_table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110729155643_remove_real_time_louts_data_table.rb
+END
+20100820102436_more_template_notifications.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100820102436_more_template_notifications.rb
+END
+20120215155920_add_triggers_for_editing_timeoff.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120215155920_add_triggers_for_editing_timeoff.rb
+END
+20120324000000_remove_unwanted_sms_preferences.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120324000000_remove_unwanted_sms_preferences.rb
+END
+20130211114919_remove_original_end_date_to_udt.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130211114919_remove_original_end_date_to_udt.rb
+END
+20140507073517_add_cancellation_reason_to_session_metadata.rb
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140507073517_add_cancellation_reason_to_session_metadata.rb
+END
+001_audit_log_create_audit_log_records_table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/001_audit_log_create_audit_log_records_table.rb
+END
+20121008064419_add_no_of_seats_to_coach_recurring_schedules.rb
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20121008064419_add_no_of_seats_to_coach_recurring_schedules.rb
+END
+20120331700000_create_ms_bulk_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120331700000_create_ms_bulk_data.rb
+END
+20110222213007_add_substitute_requested_to_coach_availability_modifications.rb
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110222213007_add_substitute_requested_to_coach_availability_modifications.rb
+END
+20120331200000_add_column_coach_id_and_sessions_status_to_coach_sessions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120331200000_add_column_coach_id_and_sessions_status_to_coach_sessions.rb
+END
+20110128142731_add_indexes_to_coach_sessions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110128142731_add_indexes_to_coach_sessions.rb
+END
+20110421100101_add_column_islotus_and_add_language_kle.rb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110421100101_add_column_islotus_and_add_language_kle.rb
+END
+20130724041219_add_substitution_policy_email_to_preference_settings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130724041219_add_substitution_policy_email_to_preference_settings.rb
+END
+20140922091011_create_decline_timeoff.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140922091011_create_decline_timeoff.rb
+END
+20100826103517_add_learner_id_to_rights_extension_log.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100826103517_add_learner_id_to_rights_extension_log.rb
+END
+20100705201658_add_raw_notifications.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100705201658_add_raw_notifications.rb
+END
+20100625125848_role_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100625125848_role_task.rb
+END
+20110222213005_remove_time_slot_preference_to_accounts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110222213005_remove_time_slot_preference_to_accounts.rb
+END
+20100801144312_add_more_triggers_for_substitutions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100801144312_add_more_triggers_for_substitutions.rb
+END
+20120314122337_create_cm_preferences.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120314122337_create_cm_preferences.rb
+END
+20101217114628_convert_schedules_to_availables.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20101217114628_convert_schedules_to_availables.rb
+END
+20141125111246_add_column_to_language.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157880/coach_portal/branches/sprint32/db/migrate/20141125111246_add_column_to_language.rb
+END
+20130208110302_language_id_in_coach_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130208110302_language_id_in_coach_session.rb
+END
+20121109092024_add_row_to_global_setting_to_customize_time_limit_for_session_creation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20121109092024_add_row_to_global_setting_to_customize_time_limit_for_session_creation.rb
+END
+20140909060524_create_trigger_events_and_notifications_for_template_deletion.rb
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140909060524_create_trigger_events_and_notifications_for_template_deletion.rb
+END
+20140801141229_add_scheduling_threshold_for_tmm_langs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140801141229_add_scheduling_threshold_for_tmm_langs.rb
+END
+20120903095708_type_for_coach_session_mandatory.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120903095708_type_for_coach_session_mandatory.rb
+END
+20140929061050_create_alerts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140929061050_create_alerts.rb
+END
+20130213105653_add_photos_to_accounts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130213105653_add_photos_to_accounts.rb
+END
+20120215155922_create_user_actions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120215155922_create_user_actions.rb
+END
+20120319000000_add_column_was_reassigned_to_substitutions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120319000000_add_column_was_reassigned_to_substitutions.rb
+END
+20120331800000_add_index_to_coach_id_in_coach_sessions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120331800000_add_index_to_coach_id_in_coach_sessions.rb
+END
+20140801132934_add_duration_and_tmm_languages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140801132934_add_duration_and_tmm_languages.rb
+END
+20120516105944_create_staffing_file_infos.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120516105944_create_staffing_file_infos.rb
+END
+20101026185605_add_triggers_for_template_modification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20101026185605_add_triggers_for_template_modification.rb
+END
+20120321000001_create_locos_datas.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120321000001_create_locos_datas.rb
+END
+20110530063207_refactored_schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110530063207_refactored_schema.rb
+END
+20120516110019_create_staffing_datas.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120516110019_create_staffing_datas.rb
+END
+20110506125258_create_user_villages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110506125258_create_user_villages.rb
+END
+20100706172005_create_coach_availability_modifications.rb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100706172005_create_coach_availability_modifications.rb
+END
+20120521093815_drop_profile_table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120521093815_drop_profile_table.rb
+END
+20120217000000_add_column_coach_showed_up_and_seconds_prior_to_session_to_coach_sessions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120217000000_add_column_coach_showed_up_and_seconds_prior_to_session_to_coach_sessions.rb
+END
+20131127063706_add_minutes_before_session_and_minutes_after_session_to_global_settings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20131127063706_add_minutes_before_session_and_minutes_after_session_to_global_settings.rb
+END
+20100913111415_create_role_for_support_users.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100913111415_create_role_for_support_users.rb
+END
+20100622135853_create_learners.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100622135853_create_learners.rb
+END
+20120326000000_add_action_and_updated_extendable_ends_at_to_rights_extension_log.rb
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120326000000_add_action_and_updated_extendable_ends_at_to_rights_extension_log.rb
+END
+20120328000000_add_ticket_number_to_rights_extension_log.rb
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120328000000_add_ticket_number_to_rights_extension_log.rb
+END
+20131108101631_add_delayed_job_failure_mail_recipients_to_global_settings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20131108101631_add_delayed_job_failure_mail_recipients_to_global_settings.rb
+END
+20120613125103_create_language_scheduling_thresholds.rb
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120613125103_create_language_scheduling_thresholds.rb
+END
+20120905192927_add_column_action_and_recurring_id_to_session_metadata.rb
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120905192927_add_column_action_and_recurring_id_to_session_metadata.rb
+END
+20120316000000_add_more_indexes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120316000000_add_more_indexes.rb
+END
+20110810143722_create_sms_delivery_attempts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110810143722_create_sms_delivery_attempts.rb
+END
+20130816045309_add_guid_to_accounts.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20130816045309_add_guid_to_accounts.rb
+END
+20110224150804_remove_non_oe_languages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110224150804_remove_non_oe_languages.rb
+END
+20100330072947_initial_schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20100330072947_initial_schema.rb
+END
+20120323000000_add_column_recurring_schedule_id_to_coach_sessions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20120323000000_add_column_recurring_schedule_id_to_coach_sessions.rb
+END
+20140704064806_create_help_requests.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20140704064806_create_help_requests.rb
+END
+20110817101614_add_no_of_home_substitutions_to_preference_settings.rb
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/db/migrate/20110817101614_add_no_of_home_substitutions_to_preference_settings.rb
+END

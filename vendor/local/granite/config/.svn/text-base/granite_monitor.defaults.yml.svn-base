@@ -1,0 +1,7 @@
+vhosts:
+  - baffler
+  - bandit
+#  - community
+  - eschool
+#  - license_server
+  - tracking

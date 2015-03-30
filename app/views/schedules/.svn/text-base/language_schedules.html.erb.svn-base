@@ -1,0 +1,58 @@
+<div id="header_date_div">
+  <span id="today_date">Today's Date:</span>
+  <span><%= today_date %></span>
+  <br/>
+  <%if @data[:language].present? and !@data[:is_locked] %>
+    <span id ="last_pushed_week">First day of the Last Pushed Week:</span>
+    <span><%= format_time(@data[:last_pushed_week]) %></span>
+    <%if @data[:language] == "KLE" %>
+      <div id="lotus_data_space"></div> 
+      <div id="lotus_real_time_data" class="big-info-wo-alert", style = "visibility:hidden">Loading data...</div> <!--Hiding reflex real time data -->
+    <% end %>
+    <div id='big-info' class="big-info-wo-alert" style="width:456px;">
+      <div class='big-info-title'>Classes held historically (<%= (@data[:start_of_current_week] - N.weeks).strftime("%B %d") %> - <%= (@data[:start_of_current_week] - 1.day).strftime("%B %d") %>)</div>
+      <div  id ="historical_session_count_value"><%= @data[:sessions_in_historical_week] %></div>
+      <div class='big-info-title'>Scheduled Sessions (<%= (@data[:week_extremes][0]).strftime("%B %d") %> - <%= (@data[:week_extremes][1]).strftime("%B %d") %>)</div>
+      <div id ="scheduled_session_count_value" value_for_test="<%= @data[:sessions_in_present_week] %>"><%= @data[:sessions_in_present_week] %></div>
+      <div class='big-info-title'>Draft Sessions</div>
+      <div id="schedule_this_week_add" style="display : inline;" class="display_none" ><%= @data[:new_sessions] %> new</div> : <div id="schedule_this_week_remove" style="display : inline;" class="display_none"><%= @data[:removed_sessions] %> removed</div>
+    </div>
+  <% end %>
+</div>
+<div id="substitution_alert_div"></div>
+<%= hidden_field_tag 'substitution_refresh_time', SUBSTITUTION_DATA_REFRESH_TIME %>
+<%= hidden_field_tag 'substitution_alert_div_size', 0 %>
+<%= hidden_field_tag 'loaded_language', '' %>
+<%= hidden_field_tag 'is_aria', Language[@data[:language]].is_one_hour? %>
+<div id="scheduler_form_data">
+  <%= render :partial =>'scheduler_form' %>
+</div>
+<% if @data[:is_locked] %>
+  <div class="notice" style="clear:both; float: left; margin-top: 10px;">
+    <%= @data[:push_status_message] %>&nbsp;&nbsp;&nbsp;&nbsp; <br/>
+    <% if @data[:push_data_message] %>
+      &raquo;&nbsp;<%= @data[:push_data_message] %>&nbsp;&nbsp;&nbsp;&nbsp;
+    <% end %>
+  </div>
+<% else %>
+  <div id="week-calendar"></div>
+  <% if @data[:language] == 'KLE' %>
+    <%= render :partial => 'lotus_language_footer', :locals => {:data => @data} %>
+  <% else %>
+    <%= render :partial => 'totale_language_footer', :locals => {:data => @data, :app_name => ['AUS','AUK'].include?(@data[:language]) ? "Supersaas" : "eSchool"} %>
+  <% end %>
+  <div class="eschool_session_creation" id="eschool_session_creation">
+  <div class="sessions_creation_form" id="session_creation_form">
+    <form method="post" action="/push_sessions_to_eschool">
+      <input type="hidden" value="<%= @data[:language] %>" name="language_identifier" id="language_identifier"/>
+      <input type="hidden" value="<%= @data[:week_extremes][0].strftime("%F")%> " name="start_time" id="start_time"/>
+      <input type="submit" value="<%= (@data[:language] == 'KLE' || Language[@data[:language]].is_tmm_live? )? "COMMIT TO SCHEDULES" : (Language[@data[:language]].is_supersaas?)? "PUSH TO SUPERSAAS" : "PUSH TO ESCHOOL"%>" name="commit" id="commit_to_schedules" <% unless @data[:can_push_this_week] %> disabled = "disabled" <% end %>/>
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+    groupedSessions = <%= @data[:sessions_hash] %>;
+</script>
+<% end %>
+<%= javascript_include_tag 'scheduler', 'substitution', 'lotus', 'date_navigator' %>
+<%= stylesheet_link_tag 'scheduler', 'lotus', 'date_navigator' %>

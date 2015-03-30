@@ -1,0 +1,3 @@
+<h1>Create New Widget</h1>
+
+<%= render 'form' %>

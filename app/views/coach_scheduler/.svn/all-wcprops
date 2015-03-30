@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/159016/coach_portal/branches/sprint32/app/views/coach_scheduler
+END
+edit_session_for_coach.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/158492/coach_portal/branches/sprint32/app/views/coach_scheduler/edit_session_for_coach.html.erb
+END
+_assign_sub_request_confirmation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_scheduler/_assign_sub_request_confirmation.html.erb
+END
+_coach_scheduler_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_scheduler/_coach_scheduler_form.html.erb
+END
+_coach_session_info_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/159016/coach_portal/branches/sprint32/app/views/coach_scheduler/_coach_session_info_details.html.erb
+END
+my_schedule.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/159013/coach_portal/branches/sprint32/app/views/coach_scheduler/my_schedule.html.erb
+END
+_aria_session_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_scheduler/_aria_session_details.html.erb
+END
+confirmation_for_edit_coach_session.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_scheduler/confirmation_for_edit_coach_session.html.erb
+END
+_tmm_session_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/158404/coach_portal/branches/sprint32/app/views/coach_scheduler/_tmm_session_details.html.erb
+END
+coach_session_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_scheduler/coach_session_details.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/159015/coach_portal/branches/sprint32/app/views/coach_scheduler/index.html.erb
+END
+_create_session_form_in_coach_scheduler.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/coach_scheduler/_create_session_form_in_coach_scheduler.html.erb
+END

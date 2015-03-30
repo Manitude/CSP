@@ -1,0 +1,31 @@
+<div id ="village_list"><br>
+ <% if @villages && @villages.size > 0 %>  
+ <div id= "village_search_box" >
+ Search Village : <%= text_field_tag :search_id, "",{:class => "search_box"} %></div>
+ <br>
+  <table class="table_list scrollTable" id = "village_list_table">
+    
+    <thead class="fixedHeader ">
+    <tr>
+    <!-- <th style="width:84px">Village ID</th> -->
+    <th class="old_th204">Village</th>
+    <th class="old_th78">Display</th>
+    </tr>
+    </thead>
+
+    <tbody class="scrollContent" id ="scroll" >
+      <% @villages.each do |village| %>
+        <tr id = "<%= village.id %>">
+          <!-- <td style = "width:126px; max-width:200px;"> <%= village.id %> </td> -->
+          <td style = "width:208px; max-width:200px;"> <%= village.name %> </td>
+          <td class="tb57">
+            <input class = "village_list" type="checkbox" value=<%= village.id %> id=<%= 'village_'+village.id.to_s %> <%= 'checked=checked' unless @disabled_village_ids.include? village.id %>/>
+            </td> 
+        </tr>
+      <%end%>
+    </tbody>
+  </table><br>
+  <br>
+  <% else %>
+    No Villages available for the selected filter(s)
+  <%end%>  

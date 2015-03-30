@@ -1,0 +1,99 @@
+<div class="today_date_in_title" id="today_date">Today's Date: <span class="left-space"><%= get_today_date %></span></div>
+<br/>
+<div class="width90">
+  <table class="width100">
+    <tr>
+      <td class="notification_msg_header_for_manager" >
+        <table>
+          <tr>
+            <td class="align-bottom">
+              Show:
+                <%= check_box_tag "excludeTemplateChanges", params[:excludeTemplateChanges], params[:excludeTemplateChanges].blank?, {:class => "notification_form"} -%>Template Changes
+              &#160;&#160;&#160;&#160;
+                <%= check_box_tag "excludeTimeOffRequests", params[:excludeTimeOffRequests], params[:excludeTimeOffRequests].blank?, {:class => "notification_form"} -%>Time-Off Requests
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td id="notification_coach" class="notification_time_header_for_manager">
+              Coach<br/>
+              <%=select_tag :coachToShow, options_for_coaches(params[:coachToShow], :id, :full_name), {:style => "width:110px;font-size:8pt;padding:0px;", :class => "notification_form"}-%>
+      </td>
+            
+      <td id="notification_lang" class="notification_time_header_for_manager">
+              Language<br/>
+              <%=select_tag :langToShow, options_for_languages(false,params[:langToShow]), {:style => "width:110px;font-size:8pt;padding:0px;", :class => "notification_form"}-%>
+      </td>
+      <td id="notification_lang" class="notification_time_header_for_manager">
+              Region<br/>
+              <%=select_tag :regionToShow, options_for_region(params[:regionToShow],false), {:style => "width:110px;font-size:8pt;padding:0px;", :class => "notification_form"}-%>
+      </td>
+      <td id="notification_lang" class="notification_time_header_for_manager">
+        Posted: <br/><%=select_tag "postedFrom", options_for_notification_range(params[:postedFrom]), {:style => "padding:0px;"}-%>
+      </td>
+    </tr>
+    <tr><td></td><td></td>
+      <td  colspan="3" class="notification_time_header_for_manager" id='time_frame'> <br>
+      <span class="notification_timeframe" id="timeframe">
+        <%= calendar_date_select_tag 'start_date', params[:fromdate].blank? ? (Time.now.beginning_of_day - 1.day).strftime("%B %d, %Y") : params[:fromdate], :readonly=> "readonly", :class => 'jquery_datepicker' %> &nbsp;through&nbsp;
+        <%= calendar_date_select_tag 'end_date', params[:todate].blank? ? Time.now.end_of_day.strftime("%B %d, %Y") : params[:todate], :readonly=> "readonly",:class => 'jquery_datepicker' %>
+      </span>
+      <input type='submit' id='custom_date' value="Submit" class='notification_custom_date'>
+      </td>
+     
+    </tr>
+    <tr><td colspan="5"><hr/></td></tr>
+  </table>
+  <% unless @notifications.blank? %>
+    <div class="notification_container">
+      <table id="notifications_table" class="width100" border="1">
+        <% @notifications.each do |notification| %>
+          <tr id="<%= notification.target_object.id %>">
+            <td class="notification_msg_for_manager"><%= notification.message%></td>
+            <td class="notification_time_for_manager"><%= notification.creation_time%></td>
+            <td class="notification_actions_for_manager"><%= notification.cta_links%></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  <% else %>
+    <p class="notice">There are no notifications matching your selection criteria.</p>
+  <% end %>
+</div>
+<script type="text/javascript">
+
+    $(document).ready(function () {
+      if (jQuery('#postedFrom').val() != "Custom") {
+        jQuery('#time_frame').hide();
+      }  
+      jQuery('#postedFrom').live('change', function(e){
+        e.preventDefault();
+        if (jQuery('#postedFrom').val() == "Custom"){
+            jQuery('#time_frame').show();
+          }
+        else{
+            jQuery('#time_frame').hide();
+            filterNotifications();
+          }
+        // filterNotifications();
+
+      });
+      jQuery('#custom_date').live('click', function(){
+       
+        var start_date = new Date(jQuery('#start_date').val());
+        var end_date = new Date(jQuery('#end_date').val());
+        var date = new Date()
+        if (start_date > date || end_date > date ){
+          alert('From or To date cannot be greater than today');
+          return false;
+        }
+        if(start_date > end_date){
+          alert('From date cannot be greater than to date.');
+          return false;
+        }
+        filterNotifications();
+
+      });
+    }); 
+        
+</script>

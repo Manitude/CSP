@@ -1,0 +1,18 @@
+<%= form_for(@link) do |f| %>
+  <%= f.error_messages %>
+  <p class="subnote">Fields labeled with <i>*</i> are required.</p>
+  <div class="formfield">
+    <div class="field">
+      <span class="required">*</span>
+      <%= f.label :name, 'Name' %>
+      <%= f.text_field :name %>
+    </div>
+    <div class="field">
+      <span class="required">*</span>
+      <%= f.label :url, 'URL' %>
+      <%= f.text_field :url %>
+    </div>
+   <p> <%= f.submit 'Save' %> </p>
+</div>
+
+<% end %>

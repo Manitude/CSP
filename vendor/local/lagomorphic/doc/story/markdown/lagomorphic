@@ -1,0 +1,10 @@
+
+# Lagomorphic
+
+Lagomorphic is a Rosetta Stone gem/plugin to provide shared functionality for integrating with RabbitMQ.  What's here:
+ * Rabbit::Config: manages configuration of RabbitMQ connectivity (`config/rabbit.yml`)
+ * Rabbit::Helpers: utilities for interacting, configuring, and introspecting into the RabbitMQ server
+ * rake tasks: utilities for setting up RabbitMQ vhosts, users, permissions, etc.
+
+See also:
+ * [RabbitMQ setup](rabbitmq_setup.html?format=raw)

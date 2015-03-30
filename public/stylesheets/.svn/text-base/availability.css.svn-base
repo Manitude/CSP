@@ -1,0 +1,75 @@
+.my-schedule {
+    margin-left: 0;
+}
+
+#week-calendar{
+    border-left: 1px solid #999999;
+    border-right: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+}
+
+.wc-cal-event {
+    background-color: #E3E2D5 !important;
+    color: black;
+    opacity: 0.9
+}
+
+.wc-cal-event .wc-time {
+    background-color: #333;
+    border: 1px solid black;
+}
+
+.wc-cal-event .wc-title {
+    font-family: "Myriad Pro";
+    font-size: 8pt;
+    top: 43%;
+}
+
+.wc-time {
+    display: none;
+}
+
+.wc-grid-timeslot-header, .wc-header .wc-time-column-header {
+    width: 70px !important;
+}
+
+#template_start_date {
+    padding: 6px 2px;
+    margin-right: 2px;
+    width: 150px;
+}
+
+#headerline {
+    float: left;
+    width: 100%;
+}
+
+#template_date {
+    float: left;
+    margin-left: 10px;
+}
+
+.coach_availablity_dropdown {
+    width:170px;
+    float:left;
+}
+
+#spinner {
+    display: none;
+    float: left;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+.remove_clear {
+    clear: none !important
+}
+#schedule_link{
+    padding-left: 10px;
+    text-decoration: underline;
+    float: left;
+}
+
+.fix-header { 
+    width: 958px !important
+}

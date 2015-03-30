@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling
+END
+connection_level_exception_with_objects.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/connection_level_exception_with_objects.rb
+END
+queue_name_violation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/queue_name_violation.rb
+END
+automatically_recovering_hello_world_consumer_that_uses_a_server_named_queue.rb
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/automatically_recovering_hello_world_consumer_that_uses_a_server_named_queue.rb
+END
+hello_world_producer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/hello_world_producer.rb
+END
+channel_level_exception.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/channel_level_exception.rb
+END
+queue_exclusivity_violation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/queue_exclusivity_violation.rb
+END
+insufficient_permissions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/insufficient_permissions.rb
+END
+handling_vhost_misconfiguration_with_a_rescue_block.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/handling_vhost_misconfiguration_with_a_rescue_block.rb
+END
+tcp_connection_failure_with_a_callback.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/tcp_connection_failure_with_a_callback.rb
+END
+manual_connection_and_channel_recovery.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/manual_connection_and_channel_recovery.rb
+END
+basic_connection_failover.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/basic_connection_failover.rb
+END
+automatic_recovery_of_channel_and_queues.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/automatic_recovery_of_channel_and_queues.rb
+END
+global_channel_level_exception_handler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/global_channel_level_exception_handler.rb
+END
+tcp_connection_failure_handling_with_a_rescue_block.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/tcp_connection_failure_handling_with_a_rescue_block.rb
+END
+reopening_a_channel_after_channel_level_exception.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/reopening_a_channel_after_channel_level_exception.rb
+END
+connection_loss_handler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/connection_loss_handler.rb
+END
+automatically_recovering_hello_world_consumer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/automatically_recovering_hello_world_consumer.rb
+END
+handling_authentication_failure_with_a_callback.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/handling_authentication_failure_with_a_callback.rb
+END
+connection_level_exception.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/connection_level_exception.rb
+END
+channel_level_exception_with_multiple_channels_involved.rb
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/channel_level_exception_with_multiple_channels_involved.rb
+END
+handling_authentication_failure_with_a_rescue_block.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/error_handling/handling_authentication_failure_with_a_rescue_block.rb
+END

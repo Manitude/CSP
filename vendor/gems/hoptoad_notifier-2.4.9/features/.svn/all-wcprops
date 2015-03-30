@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/features
+END
+rails.feature
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/features/rails.feature
+END
+user_informer.feature
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/features/user_informer.feature
+END
+rack.feature
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/features/rack.feature
+END
+rails_with_js_notifier.feature
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/features/rails_with_js_notifier.feature
+END
+sinatra.feature
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/features/sinatra.feature
+END
+metal.feature
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/features/metal.feature
+END

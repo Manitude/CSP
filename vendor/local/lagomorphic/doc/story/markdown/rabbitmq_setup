@@ -1,0 +1,45 @@
+# RabbitMQ Installation and Configuration
+
+## For Macintosh
+
+ * `sudo port install rabbitmq-server`
+ * edit `/etc/hosts` and add your hostname to the end of the `127.0.0.1` line, for instance: `127.0.0.1       localhost rlineweaverlmac2` (we are not entirely sure this is necessary)
+ * start the server with: `sudo rabbitmq-server`
+
+## For Ubuntu/Debian
+
+ * Add the following line to `/etc/apt/sources.list`:<br/>
+   `deb http://www.rabbitmq.com/debian/ testing main`
+ * Add the public key (optional):<br/>
+   `curl http://www.rabbitmq.com/rabbitmq-signing-key-public.asc | apt-key add -`
+ * `sudo apt-get update`<br/>
+   `sudo apt-get install rabbitmq-server`
+ * It starts automatically, and you have `/etc/init.d/rabbitmq-server` as well.
+
+## Set up `/etc/sudoers` for `rabbitmqctl`
+
+For convenience, as well as for running the `lagomorphic` plugin tests, it is helpful to configure your `/etc/sudoers` to allow your local user to execute `rabbitmqctl` (actually `/bin/sh`) as the `rabbitmq` user without having to type your password.
+
+**WARNING: you can lose root access to your system if you mess up the sudoers file.  Always keep another root session open when editing /etc/sudoers.  Also use visudo!**
+
+On my Mac, I was able to accomplish that by adding the following line to `/etc/sudoers`:<br/>
+  `%admin ALL=(rabbitmq) NOPASSWD: SETENV: /bin/sh`
+
+On rshbgdev05, I used the following line:<br/>
+  `deploy ALL=(rabbitmq) NOPASSWD: SETENV: /bin/sh`
+
+ * The first field could be your username, or a group name preceded by a `%` character.
+ * The second field (`ALL`) indicates the host
+ * The target user name ("run as") is in parenthesis - don't change that one.
+ * `NOPASSWD:` means that we don't need to prompt for the password
+ * `SETENV:` means that you're allowed to copy your own environment variables (PATH, etc.) into the new shell
+ * `/bin/sh` is the command that you're allowed to run as `rabbitmq`.  Could also be `ALL`
+
+Note: on Mac OS version 10.5.x, not all of the above options are supported by the version of sudo that ships with the OS (1.6.8).  Try `sudo port install sudo` in this case.
+
+## Run app-specific setup
+
+ * `cp config/rabbit.defaults.yml config/rabbit.yml` and edit as appropriate (optional, the defaults are probably fine for local development)
+ * `./rake rabbit:setup`
+ * `RAILS_ENV=test ./rake rabbit:setup`
+ * `./rake test:plugin:lagomorphic` to see if everything is working

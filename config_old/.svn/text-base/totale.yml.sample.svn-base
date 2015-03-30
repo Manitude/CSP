@@ -1,0 +1,4 @@
+host: http://totale.rosettastone.com
+proxy_host: http://opxdev.lan.flt:8080
+username: identity
+password: 6ident1ty

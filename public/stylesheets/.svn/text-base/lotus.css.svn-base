@@ -1,0 +1,129 @@
+#reflex_learners_details {
+    height: 200px;
+    width: 400px;
+    overflow: auto;
+    padding-left: 15px;
+}
+
+.lotus_info_button {
+    float: right;
+    margin-top: -5px;
+}
+
+.lotus_info_button a:hover {
+    text-decoration: none;
+    border: 0px;
+}
+
+#lotus_data_details {
+    width: 800px;
+}
+
+.detail_item {
+    clear: both;
+    padding-bottom: 20px;
+}
+
+.attribute {
+    float: left;
+    width: 150px;
+    text-align: left;
+    font-weight: bold;
+}
+
+.description {
+    text-align: left;
+    float: left;
+}
+#real_lotus_real_time_data_divs{
+    padding-top: 10px;
+    background-color: white;
+}
+
+#lotus_real_time_data{
+    border:2.5px solid #FFC867;
+    top: 0;
+    font-size: 11px;
+    border-right: 0;
+    border-top: 0;
+    width:490px;
+    background:white;
+}
+
+.lotus_header {
+    width: 445px;
+    height: 22px;
+    padding-left: 12px;
+}
+
+.lotus_details {
+    width: 454px;
+}
+
+.left_half {
+    width: 200px;
+    float: left;
+}
+
+.left_half_element {
+    padding-left: 10px;
+    width: 176px;
+}
+
+.right_half {
+    padding-left: 16px; 
+    width: 200px;
+    float: left;
+}
+
+.right_half_element {
+    padding-left: 10px;
+    width: 220px;
+}
+
+.small {
+    font-size: 9px;
+}
+
+#caption_row {
+    padding-left: 10px;
+    display: none;
+    float: left;
+}
+
+.small_ele_value {
+    color: red;
+    padding-left: 16px;
+}
+
+.small_ele_attr {
+    padding-left: 25px;
+}
+
+.left_ele_attr, .right_ele_attr {
+    float: right;
+    color: red;
+}
+
+.learners_header_container {
+    font-weight: bold;
+    width: 100%;
+    padding-bottom: 25px;
+}
+
+.learners_names_list {
+    width: 100%;
+    float: left;
+}
+
+.learner_header, .learner_name {
+    float: left;
+    text-align: left;
+    width: 33%;
+}
+
+.learner_long_header, .learner_long_attribute {
+    float: left;
+    text-align: left;
+    width: 50%;
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Lion Translation Exporter</title>
+    <%= render_styles %>
+    <%= render(:partial => "plugin_javascripts") %>
+  </head>
+  <body>
+    <% if flash[:error] %>
+      <p id="error"><%= flash[:error] %></p>
+    <% end %>
+
+
+    <%= yield %>
+
+  </body>
+</html>

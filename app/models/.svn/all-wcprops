@@ -1,0 +1,575 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/159204/coach_portal/branches/sprint32/app/models
+END
+village_preference.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/village_preference.rb
+END
+user_village.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/user_village.rb
+END
+user_update_execution_detail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/user_update_execution_detail.rb
+END
+learner_support_status.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/learner_support_status.rb
+END
+reflex_language.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/reflex_language.rb
+END
+qualification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/158243/coach_portal/branches/sprint32/app/models/qualification.rb
+END
+staffing_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/staffing_data.rb
+END
+announcement.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/158314/coach_portal/branches/sprint32/app/models/announcement.rb
+END
+system_notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/system_notification.rb
+END
+ms_error_message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/ms_error_message.rb
+END
+cm_preference.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/cm_preference.rb
+END
+local_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/local_session.rb
+END
+link.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/link.rb
+END
+notification_message_dynamic.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/notification_message_dynamic.rb
+END
+support_harrisonburg_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/support_harrisonburg_user.rb
+END
+help_request.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/help_request.rb
+END
+role.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/role.rb
+END
+led_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/led_user.rb
+END
+task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/task.rb
+END
+task_tracer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/task_tracer.rb
+END
+report_mailer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/report_mailer.rb
+END
+user_action.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/user_action.rb
+END
+coach.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/159181/coach_portal/branches/sprint32/app/models/coach.rb
+END
+scheduler_metadata.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/scheduler_metadata.rb
+END
+topic.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/157994/coach_portal/branches/sprint32/app/models/topic.rb
+END
+tmm_live_language.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/tmm_live_language.rb
+END
+real_time_lotus_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/real_time_lotus_data.rb
+END
+region.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/region.rb
+END
+resource.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/resource.rb
+END
+support_concierge_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/support_concierge_user.rb
+END
+tmm_phone_language.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/158424/coach_portal/branches/sprint32/app/models/tmm_phone_language.rb
+END
+application_configuration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/application_configuration.rb
+END
+totale_language.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/totale_language.rb
+END
+account.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/158242/coach_portal/branches/sprint32/app/models/account.rb
+END
+rights_extension_log.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/rights_extension_log.rb
+END
+appointment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/appointment.rb
+END
+master_scheduler_bulk_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/master_scheduler_bulk_data.rb
+END
+community_moderator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/community_moderator.rb
+END
+ad_group.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/ad_group.rb
+END
+reflex_activity.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/reflex_activity.rb
+END
+delayed_job.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/delayed_job.rb
+END
+coach_availability_template.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/coach_availability_template.rb
+END
+support_window.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/support_window.rb
+END
+cocomo_config.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/cocomo_config.rb
+END
+box_link.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/box_link.rb
+END
+alert.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/alert.rb
+END
+level.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/level.rb
+END
+coach_availability.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/coach_availability.rb
+END
+tmm_michelin_language.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/158424/coach_portal/branches/sprint32/app/models/tmm_michelin_language.rb
+END
+coach_recurring_schedule.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/coach_recurring_schedule.rb
+END
+confirmed_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/158719/coach_portal/branches/sprint32/app/models/confirmed_session.rb
+END
+management_team_member.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/management_team_member.rb
+END
+support_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/support_user.rb
+END
+substitution.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/159014/coach_portal/branches/sprint32/app/models/substitution.rb
+END
+user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/user.rb
+END
+event.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/158314/coach_portal/branches/sprint32/app/models/event.rb
+END
+session_metadata.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/session_metadata.rb
+END
+product_language_log.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/product_language_log.rb
+END
+excluded_coaches_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/excluded_coaches_session.rb
+END
+notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/notification.rb
+END
+extra_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/159204/coach_portal/branches/sprint32/app/models/extra_session.rb
+END
+ms_draft_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/ms_draft_data.rb
+END
+session_details.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/session_details.rb
+END
+global_setting.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/global_setting.rb
+END
+temp_data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/temp_data.rb
+END
+appointment_type.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/appointment_type.rb
+END
+support_lead.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/support_lead.rb
+END
+background_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/background_task.rb
+END
+sms_delivery_attempt.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/sms_delivery_attempt.rb
+END
+trigger_event.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/trigger_event.rb
+END
+language_scheduling_threshold.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/language_scheduling_threshold.rb
+END
+coach_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/coach_manager.rb
+END
+language_configuration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/language_configuration.rb
+END
+preference_setting.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/preference_setting.rb
+END
+unit.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/unit.rb
+END
+support_language.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/support_language.rb
+END
+uncap_learner_log.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/uncap_learner_log.rb
+END
+coach_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/159148/coach_portal/branches/sprint32/app/models/coach_session.rb
+END
+user_language.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/user_language.rb
+END
+language.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/159093/coach_portal/branches/sprint32/app/models/language.rb
+END
+learner_product_right.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/learner_product_right.rb
+END
+learner.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/learner.rb
+END
+notification_recipient.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/notification_recipient.rb
+END
+coach_contact.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/coach_contact.rb
+END
+admin.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/admin.rb
+END
+coach_view_helper_methods.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/coach_view_helper_methods.rb
+END
+unavailable_despite_template.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/unavailable_despite_template.rb
+END
+hoptoad.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/hoptoad.rb
+END
+add_consumable_log.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/add_consumable_log.rb
+END
+dialect.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/dialect.rb
+END
+roles_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/roles_task.rb
+END
+general_mailer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/158324/coach_portal/branches/sprint32/app/models/general_mailer.rb
+END
+staffing_file_info.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/staffing_file_info.rb
+END
+shown_substitutions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/shown_substitutions.rb
+END
+aria_language.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/aria_language.rb
+END

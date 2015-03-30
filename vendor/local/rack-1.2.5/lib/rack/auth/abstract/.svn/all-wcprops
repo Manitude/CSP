@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/lib/rack/auth/abstract
+END
+request.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/lib/rack/auth/abstract/request.rb
+END
+handler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/lib/rack/auth/abstract/handler.rb
+END

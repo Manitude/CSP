@@ -1,0 +1,314 @@
+# Granite
+
+Granite is a Rosetta Stone plugin/gem to facilitate the backgrounding, parallelizing and scaling of heavy tasks. Some of the vhosts that consume from other vhosts are listed in the following diagram:
+
+![app relationships](https://opx.lan.flt/raw-attachment/wiki/Granite/queue_consumption_relationships.png)
+
+## What's in this plugin
+ * Granite::Producer: base class for making a publisher of granite jobs.
+ * Granite::BaseAgent: base class for making an agent to consume and process granite jobs
+ * rake tasks: utilities for starting and stopping the agents and mappers.
+
+## Prerequisites
+ * `hoptoad_notifier` gem: currently granite agents report errors via hoptoad, and thus the hoptoad notifier is a dependency.  If this is a roadblock in your app, talk to the services team.
+ * `uuidtools` gem
+ * Rails 2.3+: this might work with earlier versions, but it has not been tested at this time.
+ * rabbitmq
+ * *nix OS: the ./rake tasks shell out to the command line for performing some process management.
+ * `proctools` package (pkill and pgrep commands)
+ * `rosettastone_tools` plugin, surely for various things.
+ * various other plugins, listed below.
+
+## How to add Granite to your Rails application
+ 1. Add the following gems, if not already present, to your application.  Look at another application for an example of appropriate versions to use.  **Do not forget** to set up corresponding `config.gem` lines in `config/environment.rb`.  Take care to ensure they are loaded in proper order.
+   * json
+   * eventmachine
+   * amqp-0.9.1
+   * amq-client-0.9.1
+   * amq-protocol-0.9.0
+   * bunny
+   * hoptoad_notifier
+   * uuidtools
+ 1. Add the following gems (Rails 3) or plugins (Rails 2) to your application:
+   * lagomorphic
+   * granite
+ 1. `svn up; svn mkdir app/agents; svn mkdir app/models/producers`
+ 1. Set up configuration files
+   1. Add `rabbit.yml` and `granite_agents.yml` to `svn:ignore` on `config/`
+   1. Copy `rabbit.defaults.yml` and `granite_agents.defaults.yml` from another app into `config/` and set them up as appropriate.
+   1. Set these up as shared files in the appropriate capistrano deployment recipes (may no longer be necessary).
+   1. Add app/models/producers to the rails auto load path in environment.rb (or application.rb)
+   1. Consider setting up your application's cap scripts to automatically start and stop granite agents during deployment.
+ 1. `./rake rabbit:setup; ./rake rabbit:setup configuration=test`
+ 1. Docs
+   1. `./rake sg:build`
+   1. Add instructions for running `./rake rabbit:setup` for various environments into `doc/README_FOR_APP`
+ 1. Consider adding `./rake test:system_readiness` to your default test suite
+ 1. Make sure you have an `App` class that has a method `name` that returns the application's name (e.g. 'license_server')
+
+## How do I use it
+ * add to a file like this in `app/agents`:
+<div class="tech-note">
+<pre>
+class DoSomethingAgent < Granite::BaseAgent
+
+  def process(header, payload)
+    logger.debug('slapped!') if payload[:action] == 'slap'
+  end
+
+end
+</pre>
+</div>
+ * add a file like this in `app/models/producers`:
+<div class="tech-note">
+<pre>
+class DoSomethingProducer < Granite::Producer
+end
+</pre>
+</div>
+ * Use your producer somewhere by saying something like:
+<div class="tech-note">
+<pre>
+  message = {:action => 'slap'}
+  DoSomethingProducer.publish(message)
+</pre>
+</div>
+ * Add an entry to your `granite_agents.defaults.yml` file
+<div class="tech-note">
+<pre>
+agents:
+  DoSomethingAgent: 1
+</pre>
+</div>
+ * If your agent is accessing a new vhost, you should update your app's RABBIT\_CONFIGURATIONS\_TO\_VERIFY\_FOR\_SYSTEM\_READINESS to include that new vhost (so system_readiness will check for the vhost)
+
+## How do I override the defaults in my agent?
+
+<div class="tech-note">
+<h3>Tech Note</h3>
+[code tag="overriding_things_in_a_granite_agent"]
+</div>
+
+
+## Error Handling
+ * Unhandled exceptions in the process method will be sent to Hoptoad
+ * Unhandled exceptions in the process method will be sent to Raider (unless the agent says it doesn't want to use raider)
+ * Could look something like this:
+
+<div class="tech-note">
+<pre>
+def process
+  doit
+rescue ExpectedError => e
+  throw_it_away
+end
+</pre>
+</div>
+
+## Raider
+ * Raider creates another exchange in your RMQ vhost that is used to hold failed jobs to retry at a later point in time
+ * Unhandled exceptions in the process method of an agent cause the job to be placed into the Raider queue
+ * You must have a raider agent configured in your granite_agents.yml file in order for Raider to work. Note that you probably only need one of these agents running across your entire run tier for the app.
+<div class="tech-note">
+<pre>
+agents:
+  Granite::RaiderAgent: 1
+</pre>
+</div>
+ * The number of retries and time between retries can be configured in your granite_agents.defaults.yml file. For example:
+<div class="tech-note">
+<pre>
+raider:
+  max_message_retries: 24
+  delay_between_retries: 3600 # seconds
+</pre>
+</div>
+ * If you don't want an agent to throw exceptions into Raider, then you can override the use_raider for the agent:
+<div class="tech-note">
+<pre>
+#Turn off raider for this agent
+def use_raider(exchange)
+  false
+end
+</pre>
+</div>
+
+### Deadletter exchange
+ * If you are using Raider and the max retries is reached, Raider will raise MaximumMessageRetryCountReachedError exception and publish the message to the deadletter exchange.
+ * There is a rake task to create a queue bound to this exchange to collect these messages.
+ <div class="tech-note">
+ <pre>
+ ./rake granite:create\_deadletter\_exchange
+ </pre>
+ </div>
+ * The messages that are placed into this queue will be around forever. It is your responsibility to clean them up periodically. 
+
+## Configuration
+ * Each run box will have its own granite_agents.yml configuration file that describes the number of each agent that should be started on that box
+  * As of 9/2011, a new key is allowed in granite\_agents.yml: allowed\_hosts. The value is a list of hostnames (not fully-qualified) that the agents can run on. The allowed\_hosts can include a regex for the hostname. Granite will check this list when it starts and will immediately shut down if the current host does not appear in the list.
+<div class="tech-note">
+<pre>
+allowed_hosts:
+  - ashrun000
+  - ashrun003
+  - !ruby/regexp /^ashrun\d{3}/
+</pre>
+</div>
+  * This allows all run-tier boxes to have the exact same configuration and for sysadmins to simply start granite on all of them. Granite takes care of determining where it should run.
+  * The allowed_hosts check can be bypassed by setting the skip\_whitelist\_check environment variable to true.
+<div class="tech-note">
+<pre>
+RAILS_ENV=production rake granite:start skip_whitelist_check=true
+</pre>
+</div>
+  * The allowed\_hosts key is not required. If it doesn't exist or is set to ~, then Granite runs as it always has.
+  * log\_level key is available. The value can be (in decreasing level of verbosity):
+   * debug
+   * info
+   * warn
+   * error
+   * fatal
+  * log_level is not required and if it is missing, the log level will be set to warn
+  * As of 01/2012, Granite can be set to vary the number of a particular agent to accommodate changing numbers of messages
+   * To enable this capability for a given agent, instead of simply setting its value to a single number, give it a default and max value. E.g., 
+<div class="tech-note">
+<pre>
+raider_agent: 
+  default: 1
+  max: 10
+</pre>
+</div>
+   * With these settings, Granite will 
+    * start 1 RaiderAgent, the default, and never run less than that number.
+    * vary the number of RaiderAgents it runs from 1 to 10 depending on how many messages are in the queue.
+   * If you keep the agent count declarations in granite_agents.yml as they are, i.e., just a single number, Granite will not vary the number of that agent type it runs.
+ * high_availability is a key available as of 01/2012.
+  * Set this to true if you want to have queues mirrored on all cluster nodes.
+  * WARNING: Because this changes how queues are declared, any pre-existing queues will cause agents to have errors so a migration strategy must be put in place before turning this on.
+ * granite_agents.defaults.yml typically has the default setup that is desired in the OPXdev environment.
+ * Note that if you add an agent to granite\_agents.defaults.yml, you should be adding that agent to all existing granite\_agents.yml files that are already in service.
+
+## Mapping
+
+If you have special needs, you may wish to override `exchange_names` and/or `initialize` in your agent class, or even forgo Granite::BaseAgent altogether and `include Granite::Agent`. Note that the section above labeled "How do I override the defaults in my agent" should address most use-cases.
+ * The binding in the following statement means that the agent will be listening to the `/some/exchange` exchange on the connection as defined by the `if_not_default`.
+<pre>
+  agentize :exchanges => '/some/exchange', :connection => 'if_not_default', :method => 'process_something'
+</pre>
+
+### Mapping Warnings and Caution
+If you repurpose a Granite agent to listen to different messages, you _MUST_ clean up the old bindings (if using a Direct or Topic exchange) or queues (all exchanges). If you don't, with Direct or Topic exchanges, you will get all old and new messages. With Fanout exchanges, the old queue will grow out-of-control.
+
+To remove the old bindings, you can do:
+ 1. Delete the queue using Rabbit::Helpers#delete_queue IF you DO NOT care about missing messages or messages in the queue.
+ 2. Use Rabbit::Helpers#unbind_queue to remove specific binding keys if you DO care about missing messages or messages in the queue.
+
+If you have access to it (you won't on staging and production, both of which use a standalone RabbitMQ server), you can run
+rabbitmqctl list_bindings -p <your_vhost> to see the current bindings between the /eve/event exchange and your queue.
+
+To avoid this problem you can either:
+ 1. Never repurpose old agents verbatim, rename them instead.
+ 2. Explicitly change the name of the queue that that agent uses
+A note of caution however, if you do this and this was the only agent to use that queue, you or the sys admins will have to
+delete the queue, otherwise it will continue to collect messages and will grow too large for rabbit to handle.
+
+## Making sure you have the connections
+ * the connections in the bindings should be specified in the rabbit.default.yml or the rabbit.yml, if they aren't default. something like:
+<div class="tech-note">
+<pre>
+if_not_default:
+  user: someguy
+  password: somepassword
+  vhost: /some_vhost
+</pre>
+</div>
+
+ * run the following
+   * `./rake rabbit:setup configuration=rabbit_development`
+   * `./rake rabbit:setup configuration=bandit_development`
+
+## Starting the Agents
+ * `./rake granite:start`
+  * this will create logs in `log/agent_name.log`
+  * run this to see if the agents are listening:
+  * `sudo -E -u rabbitmq -H /bin/sh -c 'rabbitmqctl -q list_bindings -p YOUR_CONNECTION_VHOST'`
+   * you should see the agent mappers running, bound to the exchange specified in the agentize method
+
+## Stopping the Agents
+ * `./rake granite:stop`
+  * If that command does not work, use `./rake granite:stop!`
+  * If that command does not work, use `./rake granite:kill!`
+  * NOTE: granite rake tasks that end with a bang (!) use the shell command (kill in these 2 cases) to do the work.
+
+
+## Checking status
+
+If you want to find out information on what the agents are doing, the following rake tasks can help:
+ 1. `./rake granite:list`
+  * lists information about the processes that the ControllerAgent started and knows about. This uses communication with the ControllerAgent (via rabbit) so it is a little slower, but verifies that the Controller is running and knows about the processes.
+ 1. `./rake granite:list!`
+  * Same as above except that it doesn't communicate with the controller, but rather uses pgrep to find agents running for the current application
+ 1. `./rake granite:status`
+  * This command prints data on what every agent on the current vhost (i.e., may include non-locally running agents and agents not started by your local ControllerAgent) is doing.
+  * The columns are: Agent identity | IP address of the agent's host | PID of the agent's process on their host | Number of jobs procesed | Ruby hash of queue status for all queues that the agent is bound to
+  * The data returned looks like this:
+  <pre>
+ControllerAgent-10.40.33.18-53161-99ad6a	10.40.33.18	53161		27	{:"ControllerAgent-10.40.33.18-53161-99ad6a-commands"=>{:message_count=>-1, :consumer_count=>-1}, :"ControllerAgent-10.40.33.18-53161-99ad6a"=>{:message_count=>-1, :consumer_count=>-1}, :"ControllerAgent-shared-commands"=>{:message_count=>0, :consumer_count=>1}}
+CourseCompletionAgent-10.40.33.18-53165-390de8	10.40.33.18	53165		0	{:CourseCompletionAgent=>{:message_count=>0, :consumer_count=>1}}
+CourseCompletionEschoolAgent-10.40.33.18-53171-8025be	10.40.33.18	53171		0	{:CourseCompletionEschoolAgent=>{:message_count=>0, :consumer_count=>1}}
+EschoolAttendanceAgent-10.40.33.18-53164-ea07ee	10.40.33.18	53164		0	{:EschoolAttendanceAgent=>{:message_count=>0, :consumer_count=>1}}
+MonitorAgent-10.40.33.18-53172-e16d9b	10.40.33.18	53172		26	{:"MonitorAgent-10.40.33.18-53172-e16d9b"=>{:message_count=>-1, :consumer_count=>-1}}
+ProgressAgent-10.40.33.18-53166-4730ad	10.40.33.18	53166		0	{:ProgressAgent=>{:message_count=>0, :consumer_count=>1}}
+RaiderAgent-10.40.33.18-53173-dfde86	10.40.33.18	53173		0	{:RaiderAgent=>{:message_count=>0, :consumer_count=>1}}
+RosettaWorldEncouragementAgent-10.40.33.18-53167-050fd1	10.40.33.18	53167		0	{:RosettaWorldEncouragementAgent=>{:message_count=>0, :consumer_count=>1}}
+StudioReadinessAgent-10.40.33.18-53168-6e6073	10.40.33.18	53168		0	{:StudioReadinessAgent=>{:message_count=>0, :consumer_count=>1}}
+StudioReminderAgent-10.40.33.18-53170-9ea37e	10.40.33.18	53170		0	{:StudioReminderAgent=>{:message_count=>0, :consumer_count=>1}}
+StudioSessionCancellationAgent-10.40.33.18-53163-ada84c	10.40.33.18	53163		0	{:StudioSessionCancellationAgent=>{:message_count=>0, :consumer_count=>1}}
+StudioSessionConfirmationAgent-10.40.33.18-53174-9d52cb	10.40.33.18	53174		0	{:StudioSessionConfirmationAgent=>{:message_count=>0, :consumer_count=>1}}
+StudioSessionFollowupAgent-10.40.33.18-53169-b3ee63	10.40.33.18	53169		0	{:StudioSessionFollowupAgent=>{:message_count=>0, :consumer_count=>1}}
+  </pre>
+
+## Monitoring
+ 1. Console output is written to `log/<agent_name>.log` in the rails app. Instead of using puts or p, use `agent_log/agent_log_warn/agent_log_error` as it puts some extra info with the message.
+ 2. There are a couple of options for queue monitoring. The following assume you want to monitor your agents on a 
+  * If you just want to periodically check on the status of queues, you can issue the command './rake granite:status' on the server (in your granitized app) and it will return a table with the number of messages each queue for each agent
+  * Our better method is Geode, which we can hook up to your vhost on all three tiers for better, visual, monitoring. If you want to see it, this is our production one: http://ashgeode1.rosettastone.local:8081/'
+  * in most of our apps, we also make a simple monitoring controller that polls the queues and shows a count of the number of messages. This is beneficial more for hooking up Cacti to it.
+
+If you want to check queue status locally, in addition to the above (you can checkout and run Geode locally if you want), you can:
+ * Run rabbitmqctl list_queues -p <your_vhost> name messages consumers
+ * Set up the RabbitMQ admin portal and view/control Rabbit from a web interface. Instructions for that are here: http://www.rabbitmq.com/management.html
+
+
+## Rake Commands
+ * `start`
+  * Starts the Granite ControllerAgent that then starts the agents listed in config/granite_agents.yml
+ * `stop`
+  * Stops all the agents (nicely) via a message sent through RabbitMQ to the ControllerAgent. The ControllerAgent then shuts down all its children in an orderly fashion. 
+ * `stop!`
+  * Stops all the agents (nicely, i.e., SIGTERM or 15) using the commandline utils.
+ * `kill`
+  * Stops all the agents brutally i.e., SIGKILL or 9 using the commandline utils.
+ * `kill!`
+  * Stops all the agents brutally i.e., SIGKILL or 9 using the commandline utils.
+ * `list`
+  * Lists all of the agents that the local ControllerAgent started itself, and thus is the parent process of.
+ * `status`
+  * Lists all of the agents that the local ControllerAgent knows about, local or remote, as well as some statistics about them.
+ * `purge_dead_agents`
+  * Removes all agents listed as DEAD in the results from status (above)
+
+## Troubleshooting
+If your agents aren't starting or are stopping unexpectedly follow these steps:
+ 1. Check `log/controller_agent.log`
+ 1. Check `log/your_agent_name.log`
+ 1. Check `log/(development|production).log`
+ 1. Check the rabbit log
+  * If you're running the MacPorts version, it's in `/opt/local/var/log/rabbitmq`
+  * Otherwise it should be in `/var/log/rabbitmq`
+
+
+See also:
+ * [Useful Rabbit integration commands](useful_rabbit_integration_commands.html?format=raw)
+ * [Lagomorphic](lagomorphic.html?format=raw)
+ * [RabbitMQ setup](rabbitmq_setup.html?format=raw)

@@ -1,0 +1,39 @@
+Application Status </br></br>
+Database Interface </br>
+   <% if Eschool::Session.find_by_id(123) %>
+     Eschool Session DB : 1</br>
+   <%else%>
+     Eschool Session DB : 0</br>
+   <%end%>
+   <% if Community::User.find_by_id(1) %>
+     Community DB : 1</br>
+  <%else%>
+    Community DB : 0</br>
+   <%end%>
+   <%if RsManager::User.find(:first)%>
+     RsManager DB : 1</br>
+   <%else%>
+     RsManager DB : 0</br>
+   <%end%>
+   <%if LicenseServer::License.find(:first) %>
+     License Server : 1</br>
+   <%else%>
+     License Server : 0</br>
+   <%end%>
+   </br>API Interface</br>
+    <%from_time, to_time = [Time.now, Time.now + 2.days]%>
+    <% if  Eschool::Session.find(:one, :from => "/api/cs/check_if_teacher_exists", :params => {:user_name => "test12", :email => "test12@rosettastone.com"} )%>
+    Eschool Session API : 1</br>
+  <%else%>
+    Eschool Session API : 0</br>
+   <%end%>
+  <%if RosettaStone::Baffling::ApiClient.new.ping["status"]%>
+    Baffler API : 1</br>
+  <%else%>
+    Baffler API : 0</br>
+  <%end%>
+  <%if RosettaStone::ActiveLicensing::Base.instance.license.authenticate(:license => 'skumar@rosettasone.com', :password => 'Password')%>
+    License API : 1</br>
+  <%else%>
+    License API : 0</br>
+  <%end%>

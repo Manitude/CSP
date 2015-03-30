@@ -1,0 +1,411 @@
+# == Schema Information
+#
+# Table name: accounts
+#
+#  id                         :integer(4)      not null, primary key
+#  time_zone                  :string(255)     
+#  user_name                  :string(255)     
+#  full_name                  :string(255)     
+#  preferred_name             :string(255)     
+#  rs_email                   :string(255)     
+#  personal_email             :string(255)     
+#  skype_id                   :string(255)     
+#  primary_phone              :string(255)     
+#  secondary_phone            :string(255)     
+#  birth_date                 :date            
+#  hire_date                  :date            
+#  bio                        :text(65535)     
+#  manager_notes              :text(65535)     
+#  active                     :boolean(1)      default(TRUE), not null
+#  manager_id                 :integer(4)      
+#  created_at                 :datetime        
+#  updated_at                 :datetime        
+#  type                       :string(255)     
+#  region_id                  :integer(4)      
+#  next_session_alert_in      :integer(3)      
+#  last_logout                :datetime        
+#  country                    :string(255)     
+#  native_language            :string(255)     
+#  other_languages            :string(255)     
+#  address                    :string(255)     
+#  lotus_qualified            :boolean(1)      default(TRUE)
+#  next_substitution_alert_in :integer(10)     default(24)
+#  mobile_phone               :string(255)     
+#  is_supervisor              :boolean(1)      
+#  mobile_country_code        :string(255)     
+#  aim_id                     :string(255)     
+#
+
+#
+
+just_a_manager:
+  id : 123
+  user_name: manager1
+  full_name: manager1
+  preferred_name: NULL
+  rs_email: manager1@rs.com
+  type: CoachManager
+  bio: I am a coach manager
+  primary_phone: <%= ((1).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+  active: true
+
+coach_with_preferences:
+  id : 234
+  user_name: coach234
+  full_name: coach234
+  preferred_name: NULL
+  rs_email: coach234@rs.com
+  type: Coach
+  bio: I am a coach
+  primary_phone: <%= ((1).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+  active: true
+
+Scheduled_Coach :
+  user_name: KLEscheduled
+  full_name: KLEscheduled
+  preferred_name: NULL
+  rs_email: KLEscheduled@rs.com
+  type: Coach
+  manager: skumar
+  bio: I am a coach
+  primary_phone: <%= ((1).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+
+DutchCoach :
+  user_name: DutchCoach
+  full_name: DutchCoach
+  preferred_name: NULL
+  rs_email: Dutch_Coach@rs.com
+  type: Coach
+  manager: skumar
+  bio: I am a coach
+  primary_phone: <%= ((1).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+
+dutchfellow :
+  user_name: dutchfellow
+  full_name: dutchfellow
+  preferred_name: NULL
+  rs_email: dutchfellow1@rs.com
+  personal_email: dutch_fellow@personal.com
+  type: Coach
+  manager: skumar
+  bio: I am a coach
+  primary_phone: <%= ((1).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+
+coach1 :
+  user_name: coach1
+  full_name: coach1
+  preferred_name: NULL
+  rs_email: coach1@rs.com
+  type: Coach
+  manager: skumar
+  bio: I am a coach
+  primary_phone: <%= ((1).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+
+draft_coach :
+  user_name: drafty
+  full_name: crafty drafty
+  preferred_name: NULL
+  rs_email: drafty@rs.com
+  type: Coach
+  manager: vramanan
+  bio: I am a coach
+  primary_phone: <%= ((1).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+
+coachara1 :
+  user_name: coachara1
+  full_name: arabic coachara1
+  preferred_name: NULL
+  rs_email: coachara1@rs.com
+  type: Coach
+  manager: vramanan
+  bio: I am a coach
+  primary_phone: <%= ((1).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+  active: 1
+
+coachara2 :
+  user_name: coachara2
+  full_name: arabic coachara2
+  preferred_name: NULL
+  rs_email: coachara2@rs.com
+  type: Coach
+  manager: vramanan
+  bio: I am a coach
+  primary_phone: <%= ((1).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+  active: 1
+
+
+coachkle1 :
+  user_name: coachkle1
+  full_name: adv coachkle1
+  preferred_name: NULL
+  rs_email: coachkle1@rs.com
+  type: Coach
+  manager: vramanan
+  bio: I am a coach
+  primary_phone: <%= ((1).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+  active: 1
+
+coachkle2 :
+  user_name: coachkle2
+  full_name: adv coachkle2
+  preferred_name: NULL
+  rs_email: coachkle2@rs.com
+  type: Coach
+  manager: vramanan
+  bio: I am a coach
+  primary_phone: <%= ((1).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+  active: 1
+
+coacheng1 :
+  user_name: coacheng1
+  full_name: american eng coacheng1
+  preferred_name: NULL
+  rs_email: coacheng1@rs.com
+  type: Coach
+  manager: vramanan
+  bio: I am a coach
+  primary_phone: <%= ((1).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+  active: 1
+  
+Available_Coach :
+  user_name: KLEavailable
+  full_name: KLEavailable
+  preferred_name: NULL
+  rs_email: KLEavailabe@rs.com
+  type: Coach
+  manager: skumar
+  bio: I am a coach
+  primary_phone: <%= ((2).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+
+
+Unavailable_Coach :
+  user_name: KLEunavailable
+  full_name: KLEunavailabe
+  preferred_name: NULL
+  rs_email: KLEunavailabe@rs.com
+  type: Coach
+  manager: skumar
+  bio: I am a coach
+  primary_phone: <%= ((3).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+
+
+ESPscheduledcoach :
+  user_name: ESPscheduled
+  full_name: ESPscheduled
+  preferred_name: NULL
+  rs_email: ESP_scheduled@rs.com
+  type: Coach
+  manager: skumar
+  bio: I am a coach
+  primary_phone: <%= ((3).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: false
+
+ARA_scheduled_coach :
+  user_name: rramesh
+  full_name: rramesh
+  preferred_name: NULL
+  rs_email: rramesh@rs.com
+  type: Coach
+  manager: skumar
+  bio: I am a coach
+  primary_phone: <%= ((3).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: false
+
+sms_delivery_coach:
+  user_name: sharmila
+  full_name: sharmila
+  preferred_name: NULL
+  rs_email: sharmila@rs.com
+  type: Coach
+  manager: skumar
+  bio: I am a coach
+  primary_phone: <%= ((3).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: false
+  mobile_phone: 5555550001
+  mobile_country_code: 1
+
+coach_with_preference_settings:
+  id: 11
+  user_name: coachwithpreferencesettings
+  full_name: pref
+  preferred_name: NULL
+  rs_email: NULL
+  personal_email: NULL
+  skype_id: NULL
+  primary_phone: NULL
+  primary_country_code: NULL
+  secondary_phone: NULL
+  birth_date: NULL
+  hire_date: NULL
+  bio: NULL
+  manager_notes: NULL
+  active: 1
+  manager_id: NULL
+  type: "Coach"
+  region_id: NULL
+  next_session_alert_in: NULL
+  last_logout: NULL
+  country: NULL
+  native_language: NULL
+  other_languages: NULL
+  address: NULL
+  lotus_qualified: 1
+  next_substitution_alert_in: 24
+  mobile_phone: NULL
+  is_supervisor: NULL
+  mobile_country_code: NULL
+  aim_id: NULL
+   
+coach_manager_with_preference_settings:
+  id: 12
+  user_name: coachmanagerwithpreferencesettings
+  full_name: NULL
+  preferred_name: NULL
+  rs_email: NULL
+  personal_email: NULL
+  skype_id: NULL
+  primary_phone: NULL
+  primary_country_code: NULL
+  secondary_phone: NULL
+  birth_date: NULL
+  hire_date: NULL
+  bio: NULL
+  manager_notes: NULL
+  active: 1
+  manager_id: NULL
+  type: "CoachManager"
+  region_id: NULL
+  next_session_alert_in: NULL
+  last_logout: NULL
+  country: NULL
+  native_language: NULL
+  other_languages: NULL
+  address: NULL
+  lotus_qualified: 1
+  next_substitution_alert_in: 24
+  mobile_phone: NULL
+  is_supervisor: NULL
+  mobile_country_code: NULL
+  aim_id: NULL
+
+support_user_with_preference_settings:
+  id: 13
+  user_name: supportuserwithpreferencesettings
+  full_name: NULL
+  preferred_name: NULL
+  rs_email: NULL
+  personal_email: NULL
+  skype_id: NULL
+  primary_phone: NULL
+  primary_country_code: NULL
+  secondary_phone: NULL
+  birth_date: NULL
+  hire_date: NULL
+  bio: NULL
+  manager_notes: NULL
+  active: 1
+  manager_id: NULL
+  type: "SupportLead"
+  region_id: NULL
+  next_session_alert_in: NULL
+  last_logout: NULL
+  country: NULL
+  native_language: NULL
+  other_languages: NULL
+  address: NULL
+  lotus_qualified: 1
+  next_substitution_alert_in: 24
+  mobile_phone: NULL
+  is_supervisor: NULL
+  mobile_country_code: NULL
+  aim_id: NULL
+
+support_lead_for_preference_settings:
+  id: 14
+  user_name: supportleadforpreferencesettings
+  full_name: NULL
+  preferred_name: NULL
+  rs_email: NULL
+  personal_email: NULL
+  skype_id: NULL
+  primary_phone: NULL
+  primary_country_code: NULL
+  secondary_phone: NULL
+  birth_date: NULL
+  hire_date: NULL
+  bio: NULL
+  manager_notes: NULL
+  active: 1
+  manager_id: NULL
+  type: "SupportUser"
+  region_id: NULL
+  next_session_alert_in: NULL
+  last_logout: NULL
+  country: NULL
+  native_language: NULL
+  other_languages: NULL
+  address: NULL
+  lotus_qualified: 1
+  next_substitution_alert_in: 24
+  mobile_phone: NULL
+  is_supervisor: NULL
+  mobile_country_code: NULL
+  aim_id: NULL
+
+<% TestData.coachmanagers.each_with_index do |user_name, index| %>
+<%= user_name %>:
+  user_name: <%= user_name %>
+  rs_email: <%= user_name %>@rosettastone.com
+  full_name: <%= user_name.capitalize %>
+  active: true
+  type: CoachManager
+  bio: I am a coach manager
+  primary_phone: <%= ((index + 5).to_s)*10 %>
+  primary_country_code: 1
+<% end %>
+
+<% TestData.coaches.each_with_index do |user_name, index| %>
+<%= user_name %>:
+  user_name: <%= user_name %>
+  rs_email: <%= user_name %>@rosettastone.com
+  full_name: <%= user_name.capitalize %>
+  active: true
+  manager: skumar
+  type: Coach
+  bio: I am a coach
+  primary_phone: <%= ((index + 1).to_s)*10 %>
+  primary_country_code: 1
+  lotus_qualified: true
+<% end %>
+

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/exception_notification-2.6.1/test/dummy
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/exception_notification-2.6.1/test/dummy/.gitignore
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/exception_notification-2.6.1/test/dummy/Gemfile
+END
+config.ru
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/exception_notification-2.6.1/test/dummy/config.ru
+END
+Gemfile.lock
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/exception_notification-2.6.1/test/dummy/Gemfile.lock
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/exception_notification-2.6.1/test/dummy/Rakefile
+END

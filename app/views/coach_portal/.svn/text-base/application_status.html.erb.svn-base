@@ -1,0 +1,12 @@
+<table id ="application_statuses" class = "application_statuses">
+  <tr id =" application_status_heading">
+    <th class="important_student_note">APPLICATION</th>
+    <th class="important_student_note">STATUS</th>
+  </tr>
+<% applications_status.each do |status|  %>
+  <tr>
+    <td><%= status[0].to_s.gsub("_"," ").upcase() %></td>
+    <td class=<%= status[1] ? "application_status_success" : "application_status_failure" %>></td>
+  </tr>
+  <% end %>
+</table>

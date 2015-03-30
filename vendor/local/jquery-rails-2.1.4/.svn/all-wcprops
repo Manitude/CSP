@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/jquery-rails-2.1.4
+END
+CHANGELOG.md
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/jquery-rails-2.1.4/CHANGELOG.md
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/jquery-rails-2.1.4/Gemfile
+END
+jquery-rails.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/jquery-rails-2.1.4/jquery-rails.gemspec
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/jquery-rails-2.1.4/README.md
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/jquery-rails-2.1.4/LICENSE
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/jquery-rails-2.1.4/Rakefile
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/jquery-rails-2.1.4/.gitignore
+END

@@ -1,0 +1,293 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test
+END
+tc_node_text.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_node_text.rb
+END
+tc_error.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_error.rb
+END
+tc_node_edit.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_node_edit.rb
+END
+tc_deprecated_require.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_deprecated_require.rb
+END
+tc_parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_parser.rb
+END
+tc_properties.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_properties.rb
+END
+tc_node_write.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_node_write.rb
+END
+tc_xml.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_xml.rb
+END
+tc_relaxng.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_relaxng.rb
+END
+tc_schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_schema.rb
+END
+tc_attr_decl.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_attr_decl.rb
+END
+ets_test.xml
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/ets_test.xml
+END
+tc_reader.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_reader.rb
+END
+tc_node_comment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_node_comment.rb
+END
+tc_xpointer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_xpointer.rb
+END
+tc_xinclude.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_xinclude.rb
+END
+tc_node_pi.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_node_pi.rb
+END
+tc_node_copy.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_node_copy.rb
+END
+tc_namespaces.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_namespaces.rb
+END
+tc_html_parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_html_parser.rb
+END
+tc_node_cdata.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_node_cdata.rb
+END
+ets_node_gc.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/ets_node_gc.rb
+END
+tc_node.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_node.rb
+END
+tc_encoding.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_encoding.rb
+END
+tc_attributes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_attributes.rb
+END
+tc_xpath_context.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_xpath_context.rb
+END
+tc_document_write.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_document_write.rb
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/test_helper.rb
+END
+ets_doc_file.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/ets_doc_file.rb
+END
+tc_gc.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_gc.rb
+END
+tc_node_xlink.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_node_xlink.rb
+END
+tc_namespace.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_namespace.rb
+END
+ets_tsr.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/ets_tsr.rb
+END
+etc_doc_to_s.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/etc_doc_to_s.rb
+END
+tc_canonicalize.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_canonicalize.rb
+END
+tc_parser_context.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_parser_context.rb
+END
+tc_encoding_sax.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_encoding_sax.rb
+END
+test_suite.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/test_suite.rb
+END
+tc_xpath_expression.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_xpath_expression.rb
+END
+tc_traversal.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_traversal.rb
+END
+tc_sax_parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_sax_parser.rb
+END
+tc_attr.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_attr.rb
+END
+tc_dtd.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_dtd.rb
+END
+tc_document.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_document.rb
+END
+ets_doc_to_s.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/ets_doc_to_s.rb
+END
+ets_gpx.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/ets_gpx.rb
+END
+tc_html_parser_context.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_html_parser_context.rb
+END
+tc_xpath.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/test/tc_xpath.rb
+END

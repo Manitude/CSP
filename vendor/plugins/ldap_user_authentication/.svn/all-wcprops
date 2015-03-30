@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/80468/plugins/ldap_user_authentication
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/74615/plugins/ldap_user_authentication/README
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/11164/plugins/ldap_user_authentication/Rakefile
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/64985/plugins/ldap_user_authentication/init.rb
+END

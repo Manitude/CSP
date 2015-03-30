@@ -1,0 +1,101 @@
+<div id="head_section" data_session_start_time="<%= @slot_info[:session_start_time] %>">
+  <%if @slot_info[:session_in_maintenance_time] %>
+    <span class="session_time_error_message">
+      This shift is inside the adobe maintenance window.
+    </span>
+  <%elsif @slot_info[:session_not_in_support_time]%>
+    <span class="session_time_error_message">
+      This shift is outside of the tech support window.
+    </span>
+  <%end%>
+</div>
+<div class ="btm-section">
+  <div id="shift_details">
+    <div class="shift_detail_header">
+      <div class ="header_element first">Coach Name</div>
+      <div class ="header_element large">Lev/Unit/Village</div>
+      <div class ="header_element slarge">Classroom Type</div>
+      <div class ="header_element slarge">#Learners</div>
+      <div class ="header_element">Status</div>
+      <div class ="header_element large">Recurrence Ends</div>
+      <div class ="header_element">Action</div>
+    </div>
+    <div class="shift_detail_header"><hr/></div>
+    <%if @slot_info[:eschool_down]%>
+      <div>Eschool server is down. Please try after some time.</div>
+    <%elsif @slot_info[:shift_details].blank? %>
+      <div>No Sessions present in eSchool.</div>
+    <% else %>
+      <div id="actuals_row_container">
+        <% @slot_info[:shift_details].each do |session| %>
+          <div class = "actuals_row <%if session[:type] == "LocalSession" && session[:status].index('Cancelled')%> removed_session  <%elsif session[:type] == "LocalSession" && session[:status].index('Edited')%> edited_session <%end%>" id= '<%= session[:eschool_session_id] %>'>
+            <div class ="actuals_row_element first" id= 'actuals_row_coach_name<%= session[:eschool_session_id] %>' data_isExtraSession ="<%=session[:is_extra_session]%>">
+              <% if session[:coach_id] %>
+                <%= link_to session[:coach_full_name], view_coach_profile_path(:coach_id => session[:coach_id]) , :target => "_blank"%>
+              <% else %>
+                ---
+              <%end%>
+              <% if !session[:teacher_confirmed] && ( !session[:status].index("Sub") || session[:is_extra_session] ) %>
+                <div style='color:red'>Unconfirmed</div>
+              <% end %>
+            </div>
+            <div class ="actuals_row_element large"><%= link_to_function session[:level_unit_str],"viewSessionDetails(this,'#{session[:eschool_session_id]}')",:id => "actuals_row_level_unit#{session[:eschool_session_id]}" %><%if session[:village]%><span id ='actuals_row_village_name<%= session[:eschool_session_id] %>'>-<br/><%=  session[:village] %></span><% end %></div>
+            <div class ="actuals_row_element slarge"><%= session[:classroom_type] %></div>
+            <div id="learner_count_<%= session[:coach_session_id] %>" class ="actuals_row_element slarge"><%= session[:learner_count]%></div>
+            <div class ="actuals_row_element" id= 'actuals_row_status<%= session[:eschool_session_id] %>'> <%= session[:status]%></div>
+            <div class ="actuals_row_element large"> <%= session[:recurring_ends_at]%> </div>
+            <div class ="actuals_row_element" id= 'actuals_row_link<%= session[:eschool_session_id] %>'alt ="<%=  @session_start_time %>">
+              <% if @slot_info[:session_start_time] > (Time.now.utc + @slot_info[:minutes_to_allow_session_creation].minutes) %>
+                <% if !session[:status].index('Cancelled') || session[:type] == "LocalSession"%>
+                  <% if session[:is_extra_session] %>
+                    <a href="#"onclick='cancelExtraSession("<%= session[:eschool_session_id] %>");return false;'>Cancel</a> | <a href="#"onclick='editSession("ExtraSession",<%=session[:coach_session_id]%>,<%=session[:eschool_session_id]%>,this);return false;'>Edit</a>
+                  <% else %>
+                      <%if session[:type] == "LocalSession" && session[:status].index('Cancelled')%>
+                      <a href="#"onclick='cancelTotaleSession(<%= session[:is_recurring]%>,"<%= session[:coach_session_id] %>",this,<%=session[:eschool_session_id]%>);return false;'>UnCancel</a>
+                    <%else%>
+                      <% if session[:learner_count].to_i == 0 %>
+                      <a href="#"onclick='cancelTotaleSession(<%= session[:is_recurring]%>,"<%= session[:coach_session_id] %>",this,<%=session[:eschool_session_id]%>);return false;'>Cancel</a>
+                      <% else %>
+                      <a href="#" onclick="constructQtipWithTip(this, 'CANCEL SESSION', '/reason_for_cancellation?coach_session_id=<%= session[:coach_session_id] %>&called_from=schedules', { solo:false, remove:false });return false;">Cancel</a>
+                      <% end %> | <a href="#"onclick='editSession("ConfirmedSession",<%=session[:coach_session_id]%>,<%=session[:eschool_session_id]%>,this);return false;'>Edit</a>
+                    <%end%>
+                  <% end %>
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+        <%  end %>
+      </div>
+    <% end %>
+    <div class="locals_header">Not yet pushed to eSchool<hr/></div>
+    <% unless @slot_info[:local_sessions].empty? %>
+      <div id="locals_row_container">
+        <% @slot_info[:local_sessions].each do |session| %>
+          <div class='locals_row'>
+            <div class='locals_row_element first' id='<%= session[:coach_id] %>'><a target='_blank' href='http://coachportal.rosettastone.com/view-coach-profile/<%=session[:coach_id]%>'><%= session[:coach_full_name] %></a></div>
+            <div class='locals_row_element large'><%= session[:level_unit_str]%><%if session[:village]%>-<br/><%=  session[:village] %><% end %></div>
+            <div class='locals_row_element slarge'><%= session[:classroom_type] %></div>
+            <div class='locals_row_element slarge'>0</div>
+            <div class='locals_row_element'><%= session[:status] %></div>            
+            <div class="locals_row_element large"> <%= session[:recurring_ends_at] %> </div>
+            <% if @slot_info[:session_start_time] > (Time.now.utc + @slot_info[:minutes_to_allow_session_creation].minutes) %>
+              <div class='locals_row_element'><a href="#"onclick='deleteLocalSession("<%= session[:type] %>",<%=session[:session_id]%>,"<%= session[:status] %>",this);return false;'>Delete</a> | <a href="#"onclick='editSession("<%= session[:type] %>",<%=session[:session_id]%>,<%=session[:session_id]%>,this);return false;'>Edit</a></div>
+            <%end%>
+          </div>
+        <%end%>
+      </div>
+    <%end%>
+  </div>
+</div>
+<div id="create_session_buttons_div">
+  <% if @slot_info[:session_start_time] > (Time.now.utc + @slot_info[:minutes_to_allow_session_creation].minutes) %>
+    <div>
+      <input type = "hidden" id="slot_start_time" value="<%= @slot_info[:session_start_time].to_i*1000 %>" />
+      <input type = "button" id = "create_group_session_btn" class = "button" value = "Create New Session"/>
+    </div>
+  <% else %>
+    <div class ="button disabled">
+      Create New Session
+    </div>
+  <% end %>
+</div>

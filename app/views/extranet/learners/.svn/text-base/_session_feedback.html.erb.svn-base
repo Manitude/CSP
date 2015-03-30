@@ -1,0 +1,9 @@
+<div id="attended_session_rating_details" style="display:none">
+<%= render :partial => 'session_technical_feedback', :locals =>{:student=> student}%>
+</div>
+<div id="skipped_session_rating_details" style="display:none">
+<%= render :partial => 'session_technical_feedback', :locals =>{:student=> student}%>
+</div>
+<div id="next_session_rating_details" style="display:none">
+<%= render :partial => 'session_technical_feedback', :locals =>{:student=> student}%>
+</div>

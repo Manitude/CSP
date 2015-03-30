@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/fixtures
+END
+script.thor
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/fixtures/script.thor
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/fixtures/application.rb
+END
+invoke.thor
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/fixtures/invoke.thor
+END
+group.thor
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/fixtures/group.thor
+END
+path with spaces
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/fixtures/path%20with%20spaces
+END
+task.thor
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/fixtures/task.thor
+END

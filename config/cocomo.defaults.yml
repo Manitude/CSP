@@ -1,0 +1,12 @@
+url: http://connectnow.acrobat.com/cocomoeschooldev
+username: cocomo-eschool-dev@rosettastone.com
+password: PoL1kad0ts
+template: reflex
+preallocated_rooms_desired: 100
+shared_secret: 977265526ca74c0783b3b3e687a1953d
+# when using external authentication, prefetch_room_sessions determines whether we should try to
+# snag the cocomo "room session" at the time of cocomo room preallocation and save it in the CachedCocomoRoom
+# as a serialized_room_session.  The good thing about enabling this is that you don't need to make any
+# CocomoApi requests at launch time; the bad thing is that these prefetched (cached) sessions can go bad for 
+# reasons we don't really control/understand.
+prefetch_room_sessions: false

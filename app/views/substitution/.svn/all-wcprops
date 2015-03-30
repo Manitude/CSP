@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/substitution
+END
+_fetch_available_coaches.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/substitution/_fetch_available_coaches.html.erb
+END
+_reason_for_sub_request.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/substitution/_reason_for_sub_request.html.erb
+END
+substitutions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/substitution/substitutions.html.erb
+END
+_show_reason_in_sub_report.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/substitution/_show_reason_in_sub_report.html.erb
+END
+_substitutions_alert.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/substitution/_substitutions_alert.html.erb
+END

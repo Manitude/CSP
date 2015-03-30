@@ -1,0 +1,31 @@
+<p>
+  <b>Subject:</b>
+  <%=h @announcement.subject %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @announcement.body %>
+</p>
+
+<p>
+  <b>Expires on:</b>
+  <%=h format_time(@announcement.expires_on, "%b %d, %Y %Z") %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%=h  @announcement.language_id == -1 ? "All" : @announcement.language.display_name %>
+</p>
+
+<p>
+  <b>Region:</b>
+  <%=h @announcement.region_id == -1 ? "All" : @announcement.region.name %>
+</p>
+
+
+<% if manager_logged_in? -%>
+ <%= link_to 'Edit', edit_announcement_path(@announcement) %> |
+<% end %>
+<%= link_to 'Back', announcements_path %>
+

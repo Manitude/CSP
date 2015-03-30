@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/WebDev/!svn/ver/77805/gems/bunny/0.7.4/spec/spec_08
+END
+bunny_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/spec/spec_08/bunny_spec.rb
+END
+connection_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/77805/gems/bunny/0.7.4/spec/spec_08/connection_spec.rb
+END
+exchange_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/spec/spec_08/exchange_spec.rb
+END
+queue_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/77804/gems/bunny/0.7.4/spec/spec_08/queue_spec.rb
+END

@@ -1,0 +1,7 @@
+<div>  
+  <b>RosettaStone has the following events:</b>
+<% @data.each do |event|%>
+<div style="margin-left: 20px;"><%= event.event_name %> from <%= TimeUtils.format_time(event.event_start_date, "%b %d, %Y") %> to <%= TimeUtils.format_time(event.event_end_date, "%b %d, %Y") %> description: <%= event.event_description %></div>
+<%end%>
+</div>
+

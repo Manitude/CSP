@@ -1,0 +1,15 @@
+<br/> <br/>
+<% if ps_show_count_is_not_zero?("no_of_home_events") -%>
+  <% if @events.size > 0 -%>
+    <% @events.each do |event| %>
+      <p class="ent_list"><%= format_time(event.event_start_date) %><br />
+          <%= event.event_name %></p>
+      <% end %>
+    <br/> <br/>
+    <%= link_to "...Events history", events_path, :class => 'right'%>
+  <% else %>
+    <h6>No events for this month.</h6>
+  <% end %>
+<% else %>
+  <h6>There are no Events to show. Please check your preference settings.</h6>
+<% end %>

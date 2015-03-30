@@ -1,0 +1,10 @@
+<div>
+  <% is_appointment=@email_obj.first.appointment? %>
+  <%language = is_appointment ? @email_obj.first.language.display_name_without_type : @email_obj.first.language.display_name %>
+  RosettaStone <%= "#{language}" %> has <%= is_appointment ? "appointment(s)" : "session(s)" %>  starting within <%= @hours %> hours that still are in need of a coach substitute: <br/> <br/>
+  
+  <%@email_obj.each do |sess|%>
+    <%= raw "#{sess.display_name_in_upcoming_classes}" %><a href = 'http://coachportal.rosettastone.com/substitutions'> Substitute Needed</a>: <%= TimeUtils.time_in_user_zone(sess.session_start_time).strftime("%I:%M%P, %B %d, %Y ")%>
+    <br/> <br/>
+  <%end%>
+</div>

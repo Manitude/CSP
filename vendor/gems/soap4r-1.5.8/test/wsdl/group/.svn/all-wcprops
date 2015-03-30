@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/group
+END
+group.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/group/group.wsdl
+END
+test_rpc.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/group/test_rpc.rb
+END
+expectedClassdef.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/group/expectedClassdef.rb
+END
+expectedMappingRegistry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/group/expectedMappingRegistry.rb
+END
+expectedDriver.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/group/expectedDriver.rb
+END

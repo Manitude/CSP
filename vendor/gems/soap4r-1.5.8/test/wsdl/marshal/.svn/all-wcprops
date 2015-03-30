@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/marshal
+END
+person.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/marshal/person.wsdl
+END
+person_org.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/marshal/person_org.rb
+END
+test_wsdlmarshal.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/marshal/test_wsdlmarshal.rb
+END

@@ -1,0 +1,28 @@
+<style type="text/css">
+.qtip {
+	width: 500px;
+}
+</style>
+<span style="font-size:12px">
+<% if @error %>
+<div> <%= @error  %> </div>
+<% else %>
+	<% if @language_display_name.blank? %>
+		<div> <%= @learner_type %> Learner with no Active languages. </div>
+	<% else %>
+		<div> Active <%= @learner_type %> Learner with access to: </div>
+		<% @language_display_name.each do |key, lang | %>
+			</br><div> <%= lang %> <%= @family %><div>
+		<% end  %>
+	<% end %>
+<% end %>
+</span>
+<script type="text/javascript">
+ jQuery(document).ready(function(){
+ 	jQuery('.ui-icon-close').hide();
+    jQuery('.qtip').click(function(){
+       jQuery('.qtip').remove();
+    });
+});
+</script>
+  

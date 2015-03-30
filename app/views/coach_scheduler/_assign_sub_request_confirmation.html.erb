@@ -1,0 +1,19 @@
+<div id="assign-sub-form">
+  <%= hidden_field_tag 'coach_session_id', @coach_session ? @coach_session.id : '' -%>
+  <%= hidden_field_tag 'current_coach_id', @coach.id -%>
+  <%= hidden_field_tag 'lang_identifier', @lang_identifier -%>
+  <%= hidden_field_tag 'external_village_id', @external_village_id -%>
+  <% if @avail_coach_names.blank? %>
+    <div>No Coaches are available for substitution at this timeslot.</div>
+    <input type="submit" class="button medium_button" value="Assign" disabled ="disabled" />
+  <% else %>
+    <%= content_tag :select,:onchange=>"validate_assign_coach_dropdown()",:style=>"width:175px", :id => 'coach_session_assign_drop_down', :name => 'coach_session_assign_drop_down'  do -%>
+      <% @avail_coach_names.each do |name, value, threshold| -%>
+        <%= content_tag :option, name, {:value => value, :threshold => threshold} %>
+      <% end -%>
+    <% end -%>
+    <input id="session_assign_coach_submit" type="submit" class="button medium_button" onclick="return confirm_function_coach_schedule('coach_session_assign_drop_down', 'session_assign_coach_submit', 'ajax_loader')" value="Assign" <%if @avail_coach_names.first=='--UNAVAILABLE:--' || @avail_coach_names.first=='--AVAILABLE:--'%>disabled ="true"<% end %> />
+    <input class="button medium_button" value="Cancel" onclick='cancelSubAssign("<%= active_session %>")' type="button"/>
+    <%= image_tag 'ajax-spinner.gif',:id => 'ajax_loader', :style => "display :none" %>
+  <% end %>
+</div>

@@ -1,0 +1,113 @@
+<% @prights.each do |pr| %>
+
+  <% cr_display = false %>
+  <% unless pr["product_version"] == "2" %>
+    <% if ['ESP','FRA', 'DEU', 'ITA', 'ESC'].include?(pr["product_identifier"]) %>
+      <% max = 20 %> <%# content ranges 1-20 for FIGS%>
+    <% else %>
+      <% max = 12 %> <%# content ranges 1-12 for the rest%>
+    <% end %>
+    <% cr_array = Array.new(max+1) %>
+    <% pr["content_ranges"].each do |cr| %>
+      <% cr_display = true if !cr["guid"].nil? %> <%# whether to display boxbox for clicking on content ranges - if any content ranges are persent %>
+      <% for i in cr["min_unit"].to_i..cr["max_unit"].to_i do %>
+          <% cr_array[i] = true %> <%# setting the content ranges %>
+        <% end %>
+      <% end %>
+    <% end %>
+
+    <tr id="product_right_<%= pr["guid"] %>" class="<%= (pr["usable"] == true) ? "usable" : "not_usable" %>">
+
+      <%if pr["product_family"] == 'eschool' && pr["usable"] == true %>
+        <td class="left-text"><%= link_to("#{pr["product_identifier"]}/#{pr["product_version"]}/#{pr["product_family"]}&nbsp;#{image_tag('schedule.png')}", eschool_sessions_path(:license_identifier => @details["identifier"] ,:lang_identifier => pr["product_identifier"] ,:content_range_array => cr_array,:product_right_ends_at => pr["ends_at"]), :title => "Schedule #{pr["product_identifier"]} eSchool Sessions") %></td>
+      <%else%>
+        <td class="left-text"><%="#{pr["product_identifier"]}/#{pr["product_version"]}/#{pr["product_family"]}"%></td>
+      <%end%>
+      <td class="content_range_indicator_cell">
+        <% unless pr["product_version"] == "2" %>
+          <table class="content_range_indicator" summary="content ranges" id="content_range_indicator_for_<%= pr["guid"] %>">
+            <tr>
+              <% for i in 1..max do %>
+                  <td class="<%= cr_array[i] ? 'access' : 'no_access' %>"></td>
+                <% end %>
+              </tr>
+            </table>
+        <%# boxbox for clicking on content ranges %>
+            <% if cr_display %>
+              <div class="content_ranges_boxbox" id="content_ranges_boxbox_for_<%= pr["guid"] %>" style="display:none;">
+                <table summary="content ranges" class="content_ranges_table">
+                  <caption>Content Ranges</caption>
+                  <thead>
+                    <tr>
+                      <th>Guid</th>
+                      <th>Activation ID</th>
+                      <th class="min_max_unit">Min Unit - Max Unit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% pr["content_ranges"].each do |cr| %>
+                      <tr id="content_range_<%= cr["guid"] %>">
+                        <td><%= cr["guid"] %></td>
+                        <td><%= cr["activation_id"] %></td>
+                        <td class="min_max_unit"><%= cr["min_unit"] %> - <%= cr["max_unit"] %></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+                <div class="boxbox_actions">
+                  <%= button_to_function('Close', "BoxBox.dismiss()") %>
+                </div>
+              </div>
+              <%= javascript_tag do %>
+                $('content_range_indicator_for_<%= pr["guid"] %>').observe('click', function() { BoxBox.show('content_ranges_boxbox_for_<%= pr["guid"] %>', null, 'boxbox_with_table'); });
+                $('content_range_indicator_for_<%= pr["guid"] %>').setStyle({'cursor': 'pointer'});
+              <% end %>
+            <% end %>
+        <%# tooltip for mousing over content ranges %>
+            <div class="content_ranges_tooltip" id="content_ranges_tooltip_for_<%= pr["guid"] %>" style="display:none;">
+              <% if cr_display %>
+                <table summary="content ranges" class="content_ranges_table">
+                  <caption>Content Ranges</caption>
+                  <thead>
+                    <tr>
+                      <th>Guid</th>
+                      <th>Activation ID</th>
+                      <th class="min_max_unit">Min Unit - Max Unit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% pr["content_ranges"].each do |cr| %>
+                      <tr id="content_range_<%= cr["guid"] %>">
+                        <td><%= cr["guid"] %></td>
+                        <td><%= cr["activation_id"] %></td>
+                        <td class="min_max_unit"><%= cr["min_unit"] %> - <%= cr["max_unit"] %></td>
+                      </tr>
+                    <% end %>
+                  </tbody>
+                </table>
+              <% else %>
+          <%# can be licensed by unit, but no content ranges %>
+                <div class="tooltip">No content ranges (all units accessible)</div>
+              <% end %>
+            </div>
+            <%= javascript_tag do %>
+              new Tooltip("content_range_indicator_for_<%= pr["guid"] %>", "content_ranges_tooltip_for_<%= pr["guid"] %>",
+              {
+          <%# no, i don't know why a tooltip needs a "successor".  it just does. %>
+              DOM_location: {parentId: "tool_tip_container", successorId: "tool_tip_successor"},
+              hook: {target: 'topLeft', tip: 'bottomLeft'},
+              delay: {start: 0.1, end: 0.1},
+              offset: {x: -65, y: -8}
+              });
+            <% end %>
+          <% end %>
+        </td>
+
+        <td><%= pr["unextended_ends_at"].gsub(' ', '&nbsp;') %></td>
+        <td><%= pr["ends_at"].gsub(' ', '&nbsp;') %>  </td>
+        <td><%= pr["activation_id"] %></td>
+        <td><%= pr["guid"] %></td>
+        <td style="text-align:center;"><%if (tier1_support_lead_logged_in? && ['application','lotus'].include?(pr["product_family"]) ) %><%= link_to_function 'Add', "fixedFacebox('#{show_extension_form_path(:originalStartDate => pr["created_at"],:license_identifier => @details["identifier"], :license_guid => pr["license"]["guid"],:extendable_guid => pr["guid"],:product_identifier =>pr["product_identifier"],:product_version => pr["product_version"] )}')" %><%end%></td>
+      </tr>
+    <% end %>
+

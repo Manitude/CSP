@@ -1,0 +1,466 @@
+PATH
+  remote: vendor/gems/amq-client-0.9.1
+  specs:
+    amq-client (0.9.1)
+      amq-protocol (>= 0.9.0)
+      eventmachine
+
+PATH
+  remote: vendor/gems/amq-protocol-0.9.0
+  specs:
+    amq-protocol (0.9.0)
+
+PATH
+  remote: vendor/gems/amqp-0.9.1
+  specs:
+    amqp (0.9.1)
+      amq-client (~> 0.9.1)
+      amq-protocol (>= 0.9.0)
+      eventmachine
+
+PATH
+  remote: vendor/gems/bunny-0.7.4
+  specs:
+    bunny (0.7.4)
+
+PATH
+  remote: vendor/gems/clickatell-0.6.0
+  specs:
+    clickatell (0.6.0)
+
+PATH
+  remote: vendor/gems/daemons-1.1.3
+  specs:
+    daemons (1.1.3)
+
+PATH
+  remote: vendor/gems/dupe-0.5.3
+  specs:
+    dupe (0.5.3)
+
+PATH
+  remote: vendor/gems/eventmachine-0.12.11
+  specs:
+    eventmachine (0.12.11)
+
+PATH
+  remote: vendor/gems/factory_girl-2.5.1
+  specs:
+    factory_girl (2.5.1)
+
+PATH
+  remote: vendor/gems/fastercsv-1.5.5
+  specs:
+    fastercsv (1.5.5)
+
+PATH
+  remote: vendor/gems/hoptoad_notifier-2.4.9
+  specs:
+    hoptoad_notifier (2.4.9)
+
+PATH
+  remote: vendor/gems/icalendar-1.1.4
+  specs:
+    icalendar (1.1.1)
+
+PATH
+  remote: vendor/gems/json-1.6.5
+  specs:
+    json (1.6.5)
+
+PATH
+  remote: vendor/gems/mysql2-0.2.7
+  specs:
+    mysql2 (0.2.7)
+
+PATH
+  remote: vendor/gems/object-factory-0.2.4
+  specs:
+    object-factory (0.2.4)
+      rujitsu
+
+PATH
+  remote: vendor/gems/rujitsu-0.3.3
+  specs:
+    rujitsu (0.3.3)
+
+PATH
+  remote: vendor/gems/soap4r-1.5.8
+  specs:
+    soap4r (1.5.8)
+
+PATH
+  remote: vendor/gems/uniform_notifier-1.0.2
+  specs:
+    uniform_notifier (1.0.2)
+
+PATH
+  remote: vendor/gems/uuidtools-2.1.2
+  specs:
+    uuidtools (2.1.2)
+
+PATH
+  remote: vendor/gems/xml-simple-1.0.12
+  specs:
+    xml-simple (1.0.12)
+
+PATH
+  remote: vendor/local/abstract-1.0.0
+  specs:
+    abstract (1.0.0)
+
+PATH
+  remote: vendor/local/actionmailer-3.0.20
+  specs:
+    actionmailer (3.0.20)
+
+PATH
+  remote: vendor/local/actionpack-3.0.20
+  specs:
+    actionpack (3.0.20)
+
+PATH
+  remote: vendor/local/activemodel-3.0.20
+  specs:
+    activemodel (3.0.20)
+
+PATH
+  remote: vendor/local/activerecord-3.0.20
+  specs:
+    activerecord (3.0.20)
+
+PATH
+  remote: vendor/local/activeresource-3.0.20
+  specs:
+    activeresource (3.0.20)
+
+PATH
+  remote: vendor/local/activesupport-3.0.20
+  specs:
+    activesupport (3.0.20)
+
+PATH
+  remote: vendor/local/addressable-2.3.5
+  specs:
+    addressable (2.3.5)
+
+PATH
+  remote: vendor/local/ancestry-1-3
+  specs:
+    ancestry (1.3.0)
+      activerecord (>= 2.3.14)
+
+PATH
+  remote: vendor/local/arel-2.0.10
+  specs:
+    arel (2.0.10)
+
+PATH
+  remote: vendor/local/builder-2.1.2
+  specs:
+    builder (2.1.2)
+
+PATH
+  remote: vendor/local/bundler-1.2.0
+  specs:
+
+PATH
+  remote: vendor/local/chronic-0.10.2/
+  specs:
+    chronic (0.10.2)
+
+PATH
+  remote: vendor/local/climate_control-0.0.3/
+  specs:
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+
+PATH
+  remote: vendor/local/cocaine-0.5.1/
+  specs:
+    cocaine (0.5.1)
+      climate_control (>= 0.0.3, < 1.0)
+
+PATH
+  remote: vendor/local/dalli-2.5.0
+  specs:
+    dalli (2.5.0)
+
+PATH
+  remote: vendor/local/delayed_job-4.0.0
+  specs:
+    delayed_job (4.0.0)
+      activesupport (>= 3.0, < 4.1)
+
+PATH
+  remote: vendor/local/delayed_job_active_record-4.0.0
+  specs:
+    delayed_job_active_record (4.0.0)
+      activerecord (>= 3.0, < 4.1)
+      delayed_job (>= 3.0, < 4.1)
+
+PATH
+  remote: vendor/local/dynamic_form-1.1.4
+  specs:
+    dynamic_form (1.1.4)
+
+PATH
+  remote: vendor/local/erubis-2.6.6
+  specs:
+    erubis (2.6.6)
+
+PATH
+  remote: vendor/local/exception_notification-2.6.1
+  specs:
+    exception_notification (2.6.1)
+      actionmailer (>= 3.0.4)
+
+PATH
+  remote: vendor/local/granite
+  specs:
+    granite (1.0.0)
+      activesupport
+      lagomorphic
+      rosettastone_tools
+      uuidtools
+
+PATH
+  remote: vendor/local/home_run-1.0.7
+  specs:
+    home_run (1.0.7)
+
+PATH
+  remote: vendor/local/i18n-0.5.0
+  specs:
+    i18n (0.5.0)
+
+PATH
+  remote: vendor/local/jquery-rails-2.1.4
+  specs:
+    jquery-rails (2.1.4)
+      railties (>= 3.0, < 5.0)
+      thor (>= 0.14, < 2.0)
+
+PATH
+  remote: vendor/local/jrails-0.6.0
+  specs:
+    jrails (0.6.0)
+
+PATH
+  remote: vendor/local/lagomorphic
+  specs:
+    lagomorphic (1.0.0)
+      activesupport
+      json
+      rosettastone_tools
+
+PATH
+  remote: vendor/local/libxml-ruby-2.3.3
+  specs:
+    libxml-ruby (2.3.3)
+
+PATH
+  remote: vendor/local/mail-2.2.19
+  specs:
+    mail (2.2.19)
+
+PATH
+  remote: vendor/local/metaclass-0.0.1
+  specs:
+    metaclass (0.0.1)
+
+PATH
+  remote: vendor/local/mime-types-1.19
+  specs:
+    mime-types (1.19.20120620224748)
+
+PATH
+  remote: vendor/local/mocha-0.13.2
+  specs:
+    mocha (0.13.2)
+      metaclass (~> 0.0.1)
+
+PATH
+  remote: vendor/local/paperclip
+  specs:
+    paperclip (2.4.5)
+      activerecord (>= 2.3.0)
+      activesupport (>= 2.3.2)
+      cocaine (>= 0.0.2)
+      mime-types
+
+PATH
+  remote: vendor/local/polyglot-0.3.3
+  specs:
+    polyglot (0.3.3)
+
+PATH
+  remote: vendor/local/rack-1.2.5
+  specs:
+    rack (1.2.5)
+
+PATH
+  remote: vendor/local/rack-mount-0.6.14
+  specs:
+    rack-mount (0.6.14)
+
+PATH
+  remote: vendor/local/rack-test-0.6.2
+  specs:
+    rack-test (0.6.2)
+      rack (>= 1.0)
+
+PATH
+  remote: vendor/local/rails-3.0.20
+  specs:
+    rails (3.0.20)
+
+PATH
+  remote: vendor/local/railties-3.0.20
+  specs:
+    railties (3.0.20)
+
+PATH
+  remote: vendor/local/rake-0.9.5
+  specs:
+    rake (0.9.5)
+
+PATH
+  remote: vendor/local/rcov-1.0.0
+  specs:
+    rcov (1.0.0)
+
+PATH
+  remote: vendor/local/rdoc-3.12
+  specs:
+    rdoc (3.12)
+
+PATH
+  remote: vendor/local/rosettastone_tools
+  specs:
+    rosettastone_tools (1.0.0)
+      activesupport
+      i18n
+      mocha
+
+PATH
+  remote: vendor/local/simple_form-2.0.4
+  specs:
+    simple_form (2.0.4)
+
+PATH
+  remote: vendor/local/thor-0.14.6
+  specs:
+    thor (0.14.6)
+
+PATH
+  remote: vendor/local/treetop-1.4.12
+  specs:
+    treetop (1.4.12)
+      polyglot
+      polyglot (>= 0.3.1)
+
+PATH
+  remote: vendor/local/tzinfo-0.3.35
+  specs:
+    tzinfo (0.3.35)
+
+PATH
+  remote: vendor/local/whenever-0.8.4/
+  specs:
+    whenever (0.8.4)
+      activesupport (>= 2.3.4, < 4.0)
+      chronic (>= 0.6.3)
+
+PATH
+  remote: vendor/local/will_paginate-3.0.3
+  specs:
+    will_paginate (3.0.3)
+
+GEM
+  remote: http://www.rubygems.org/
+  specs:
+    columnize (0.8.9)
+    linecache (0.46)
+      rbx-require-relative (> 0.0.4)
+    rbx-require-relative (0.0.9)
+    ruby-debug (0.10.4)
+      columnize (>= 0.1)
+      ruby-debug-base (~> 0.10.4.0)
+    ruby-debug-base (0.10.4)
+      linecache (>= 0.3)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  abstract (= 1.0.0)!
+  actionmailer (= 3.0.20)!
+  actionpack (= 3.0.20)!
+  activemodel (= 3.0.20)!
+  activerecord (= 3.0.20)!
+  activeresource (= 3.0.20)!
+  activesupport (= 3.0.20)!
+  addressable (= 2.3.5)!
+  amq-client (= 0.9.1)!
+  amq-protocol (= 0.9.0)!
+  amqp (= 0.9.1)!
+  ancestry!
+  arel (= 2.0.10)!
+  builder (= 2.1.2)!
+  bundler (= 1.2.0)!
+  bunny (= 0.7.4)!
+  chronic (= 0.10.2)!
+  clickatell (= 0.6.0)!
+  climate_control (= 0.0.3)!
+  cocaine (= 0.5.1)!
+  daemons (= 1.1.3)!
+  dalli (= 2.5.0)!
+  delayed_job (= 4.0.0)!
+  delayed_job_active_record (= 4.0.0)!
+  dupe (= 0.5.3)!
+  dynamic_form (= 1.1.4)!
+  erubis (= 2.6.6)!
+  eventmachine (= 0.12.11)!
+  exception_notification (~> 2.6.1)!
+  factory_girl (= 2.5.1)!
+  fastercsv (= 1.5.5)!
+  granite (= 1.0.0)!
+  home_run (= 1.0.7)!
+  hoptoad_notifier (= 2.4.9)!
+  i18n (= 0.5.0)!
+  icalendar (= 1.1.1)!
+  jquery-rails (= 2.1.4)!
+  jrails (= 0.6.0)!
+  json (= 1.6.5)!
+  lagomorphic (= 1.0.0)!
+  libxml-ruby (~> 2.3.3)!
+  mail (= 2.2.19)!
+  metaclass (= 0.0.1)!
+  mime-types (~> 1.19)!
+  mocha (~> 0.13.2)!
+  mysql2 (= 0.2.7)!
+  object-factory (= 0.2.4)!
+  paperclip!
+  polyglot (= 0.3.3)!
+  rack (= 1.2.5)!
+  rack-mount (= 0.6.14)!
+  rack-test (= 0.6.2)!
+  rails (= 3.0.20)!
+  railties (= 3.0.20)!
+  rake (= 0.9.5)!
+  rcov (= 1.0.0)!
+  rdoc (= 3.12)!
+  rosettastone_tools (= 1.0.0)!
+  ruby-debug (= 0.10.4)
+  rujitsu (= 0.3.3)!
+  simple_form (= 2.0.4)!
+  soap4r (= 1.5.8)!
+  thor (= 0.14.6)!
+  treetop (= 1.4.12)!
+  tzinfo (= 0.3.35)!
+  uniform_notifier (= 1.0.2)!
+  uuidtools (= 2.1.2)!
+  whenever (= 0.8.4)!
+  will_paginate (= 3.0.3)!
+  xml-simple (= 1.0.12)!

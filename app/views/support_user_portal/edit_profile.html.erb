@@ -1,0 +1,62 @@
+<%= form_for :support_user, @support_user, :html => { :id => 'profile-form', :name => 'profileform', :multipart => true } do |f| -%>
+  <div id="profile">
+    <%= f.error_messages -%>
+    <p class="header" style="border-bottom: 2px solid gray;"></p>
+    <div id="general" class="pad-top-20 edit_profile" style="float:left;">
+      <ul class="col1">
+        <li><%= f.label :full_name, "#{_('Full_Name82853947')}"+check_mandatory -%> <%= f.text_field :full_name -%></li>
+        <li><%= f.label :user_name, "#{_('AD_NameBD52F356')}" -%> <%=  get_text @support_user.user_name -%></li>
+        <li><%= f.label :preferred_name, _('Preferred_Name77198152') -%> <%= f.text_field :preferred_name -%></li>
+        <li><%= f.label :address, _('AddressC2F3561D') -%> <%= f.text_area :address, :size => "45x3" -%></li>
+        <li><%= f.label :country, "#{_('Country9CCEF0FA')}"+check_mandatory -%> <%= f.select :country, options_for_select(RosettaStone::Country.options_for_select_country_code, @support_user.country) -%></li>
+        <li>
+          <%= f.label :other_languages, _('Other_Languages7358B8E4') -%><input id="olang-button" name="olang-button" type="button" value="<%= _("Show923C763F") %>" style="cursor:pointer;" onclick="otherLangs();"/>
+          <br style="clear:both"/>
+          <label>&nbsp;</label>
+          <div id="olang-div" style="display:none; border:1px solid gray;float:left; padding:5px;">
+            <%(SupportLanguage.find :all, :conditions => ['language_code != "none"']).each do |sl| %>
+              <%= check_box "olang","#{sl.language_code}" %>
+              <%= label(:language, sl.name) %>
+              <br style="clear:both"/>
+            <% end %>
+          </div>
+        </li>
+        <li><%= f.label :bio, _("About_MeF0B34752") -%> <%= f.text_area :bio, :size => "45x3" -%></li>
+        <li><%= f.label :birth_date, "#{_('Birthdate1015DE80')}"+check_mandatory -%> <%= f.date_select :birth_date, reasonable_year_options -%></li>
+        <li><%= hidden_field_tag("one_time_locale", @support_user.native_language)%></li>
+        <% if manager_logged_in? %>
+          <li><%= f.label :is_supervisor, _("Is_Supervisor1B0FADF3") -%> <%= f.check_box :is_supervisor %></li>
+          <li><%= f.label :photo, "Profile Picture" %> <%= f.file_field :photo %> &nbsp;<%= image_tag('i_icon.gif', :height => '20', :width => '20', :id => 'upload-info') %></li>
+          <% if !@support_user.errors.any? && @support_user.photo.exists? then %>
+            <li>
+              <label>&nbsp;</label> <span><a href="#" id="remove-pic">Remove?</a> &nbsp;<a href="#" style="display:none" id="remove-pic-undo">Undo</a></span>
+            </li>
+            <li><label>&nbsp;</label> <%= image_tag(@support_user.photo.url, :id => 'profile-picture', :width => '100') %></li>
+          <% end %>
+          <li><%= hidden_field_tag("remove_profile_picture", false) %></li>
+        <% end %>
+        <li><div id="profile-save"><%= f.submit _('SaveF55495E0') -%></div></li>
+      </ul>
+    </div>
+  </div>
+<% end -%>
+
+<script type="text/javascript">
+  function otherLangs(){
+    if (jQuery("#olang-div").css('display') == "block"){
+      jQuery("#olang-div").hide();
+      document.profileform["olang-button"].value = "<%= _("Show923C763F") %>";
+    } else {
+      jQuery("#olang-div").show();
+      document.profileform["olang-button"].value = "<%= _("Hide4AB6415") %>";
+    }
+  }
+  jQuery(document).ready(function() {
+    <% if @support_user.other_languages? %>
+      <% @support_user.other_languages.split(',').each do |lang_code| %>
+            document.profileform["olang[<%= lang_code %>]"][1].checked = true
+      <% end %>
+    <% end %>
+    handleRemoveProfilePictureEvents();
+  });
+</script>

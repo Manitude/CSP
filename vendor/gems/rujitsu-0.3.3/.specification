@@ -1,0 +1,107 @@
+--- !ruby/object:Gem::Specification 
+name: rujitsu
+version: !ruby/object:Gem::Version 
+  hash: 21
+  prerelease: false
+  segments: 
+  - 0
+  - 3
+  - 3
+  version: 0.3.3
+platform: ruby
+authors: 
+- Brightbox Systems Ltd
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-06-03 00:00:00 +05:30
+default_executable: 
+dependencies: []
+
+description: Various helper methods to smooth over Ruby development
+email: hello@brightbox.co.uk
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- CHANGELOG
+- README.rdoc
+- lib/rujitsu.rb
+- lib/rujitsu/all.rb
+- lib/rujitsu/fixnum.rb
+- lib/rujitsu/grammar.rb
+- lib/rujitsu/inspect.rb
+- lib/rujitsu/numeric.rb
+- lib/rujitsu/object.rb
+- lib/rujitsu/range.rb
+- lib/rujitsu/string.rb
+- lib/ujitsu.rb
+- tasks/rspec.rake
+files: 
+- CHANGELOG
+- README.rdoc
+- Rakefile
+- lib/rujitsu.rb
+- lib/rujitsu/all.rb
+- lib/rujitsu/fixnum.rb
+- lib/rujitsu/grammar.rb
+- lib/rujitsu/inspect.rb
+- lib/rujitsu/numeric.rb
+- lib/rujitsu/object.rb
+- lib/rujitsu/range.rb
+- lib/rujitsu/string.rb
+- lib/ujitsu.rb
+- rujitsu.gemspec
+- spec/fixnum_spec.rb
+- spec/numeric_spec.rb
+- spec/object_spec.rb
+- spec/range_spec.rb
+- spec/spec.opts
+- spec/spec_helper.rb
+- spec/string_spec.rb
+- tasks/rspec.rake
+- Manifest
+has_rdoc: true
+homepage: http://github.com/brightbox/rujitsu
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+- --line-numbers
+- --inline-source
+- --title
+- Rujitsu
+- --main
+- README.rdoc
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 11
+      segments: 
+      - 1
+      - 2
+      version: "1.2"
+requirements: []
+
+rubyforge_project: rujitsu
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 3
+summary: Various helper methods to smooth over Ruby development
+test_files: []
+

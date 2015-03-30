@@ -1,0 +1,24 @@
+
+<%= hidden_field_tag "number_of_seats",1 %>
+
+<div id ="session_type_select">
+  <span class="wildcard" style="display:block;">Session Type</span>
+  <%= select_tag 'extra_session_chk',
+  options_for_select((language.is_tmm_live?) ? ["Standard Session"]: ["Standard Session","Extra Session"],"Standard Session") %>
+</div>
+
+<div id ="session_name_container" style="display: none;float: left; ">
+  <span class="wildcard">Session Name</span>
+  <%= text_field_tag 'session_name_txt' %>
+</div>
+
+<div id="tmm_session_detail_div" style="width: 100%; float: left;">
+  <br><p style="float: left;">Session Details:</p>
+  <textarea id="tmm_session_detail" cols = 57 rows=4></textarea>
+  <p style="padding-top: 2px">Characters remaining: <span id="char_count">500</span></p>
+</div>
+
+<div id="recurring_container" style="float: left;">
+  <span class="wildcard">Recurring</span>
+  <%= check_box_tag 'recurring', 'recurring', true %>
+</div>

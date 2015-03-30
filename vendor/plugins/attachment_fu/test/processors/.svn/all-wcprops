@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/processors
+END
+mini_magick_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/processors/mini_magick_test.rb
+END
+core_image_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/processors/core_image_test.rb
+END
+image_science_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/processors/image_science_test.rb
+END
+gd2_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/processors/gd2_test.rb
+END
+rmagick_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/processors/rmagick_test.rb
+END

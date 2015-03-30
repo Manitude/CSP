@@ -1,0 +1,6 @@
+<div style="padding: 20px; width: 550px;">
+  <h2>MANAGE ONLINE RIGHTS FOR <%= @license_identifier || "N/A" %></h2>
+  <div style="margin-top: 5px;">
+    <%= render :partial => '/support_user_portal/licenses/extension_form' %>
+  </div>
+</div>

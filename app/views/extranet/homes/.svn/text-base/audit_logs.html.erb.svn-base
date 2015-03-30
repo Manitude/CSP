@@ -1,0 +1,99 @@
+<div style ="margin: 15px;">
+  <% if manager_logged_in? || admin_logged_in? %>
+    <%= form_tag(home_audit_logs_path, :method => "post", :id => "audit_log_form_id") do -%>
+      <div style="background-color: #F0F0F0; padding: 5px;">
+        <table id="filter-table">
+          <tr><% params_hash = {:record_id => @record_id, :table_name => @table_name, :record_action => @record_action, :duration => @duration, :start_date => @start_date, :end_date => @end_date, :from => true }%>
+            <td colspan="2" style="text-align: center;">Table Name:<span style = "padding-left:2px; padding-right:10px;"><%= select_tag(:table_name, options_for_select(@table_names, :selected => params[:table_name]), {:style => "width:160px;"} ) %></span></td>
+            <td colspan="2" style="text-align: center;">Record Action:<span style = "padding-left:2px; padding-right:10px;"><%= select_tag(:record_action, options_for_select(@record_actions, :selected => params[:record_action]), {:style => "width:100px;"} ) %> </span></td>
+            <td colspan="2" style="text-align: center;">Date Ranges:<span style = "padding-left:2px; padding-right:10px;"><%=  select_tag :duration, options_for_duration_for_audit_logs(@duration), {:style=>'width: 110px;', :onclick => 'displayCalendar()' } -%> </span></td>
+            <td colspan="2" style="text-align: center;">Record Id:<span style = "padding-left:2px; padding-right:10px;"><%=  text_field_tag :record_id, @record_id, {:style=>'width: 110px;', :onclick => 'displayCalendar()' } -%> </span></td>
+            <td><span style = "margin-left: 5px; "><input id="submit" type="submit" value="FILTER" name="filter" onclick="return validateRecordId();"/></span></td>
+          </tr>
+        </table>
+      </div>
+      <div id="calendar_div" style="margin: 10px; display:none;">
+        <span style="float: right; text-align: center; background-color: #F0F0F0; padding: 10px;">
+          From:
+          <%= calendar_date_select_tag 'start_date', @start_date %>
+          &nbsp;To:&nbsp;
+          <%= calendar_date_select_tag 'end_date', @end_date %>
+        </span>
+      </div>
+    <% end %>
+    <div class=" justclear "> &nbsp;</div>
+    <% if @audit_log_records.blank? %>
+      <% if @show_message %><p class = "no_audit_logs"> There are no audit logs present.</p><% end %>
+    <% else %>
+      <table id = "audit_log_table">
+        <thead style ="background-color: #FFF;">
+          <tr>
+            <th style ="width: 100px; max-width: 99px;">Table Name</th>
+            <th style ="width: 70px; max-width: 69px;">Record Id</th>
+            <th style ="width: 120px; max-width: 119px;">Column Name</th>
+            <th style ="width: 59px; max-width: 60px;">Record Action</th>
+            <th style ="width: 105px; max-width: 104px;">Previous Value</th>
+            <th style ="width: 105px; max-width: 104px;">New Value</th>
+            <th style ="width: 85px; max-width: 84px;">Date And Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @audit_log_records.each do |log|%>
+            <tr>
+              <td style ="width: 100px; max-width: 99px;" ><%= get_titleized_name log.loggable_type %></td>
+              <td style ="width: 70px; max-width: 69px;" ><%= get_text log.loggable_id %></td>
+              <td style ="width: 120px; max-width: 119px;" ><%= get_text log.attribute_name %></td>
+              <td style ="width: 59px; max-width: 60px;" ><%= get_text log.action %></td>
+              <td style ="width: 105px; max-width: 104px;" ><%= get_formatted_log_value log.previous_value %></td>
+              <td style ="width: 105px; max-width: 104px;" ><%= get_formatted_log_value log.new_value %></td>
+              <td style ="width: 85px; max-width: 84px;" ><%= get_timestamp log.timestamp %></td>
+            </tr>
+          </tbody>
+        <% end %>
+      </table>
+      <% params_hash = {:record_id => @record_id, :table_name => @table_name, :record_action => @record_action, :duration => @duration, :start_date => @start_date, :end_date => @end_date, :from => true }%>
+      <div id ="audit_log_pagination" > <%= will_paginate @audit_log_records, :method => :post, :previous_label => image_tag('/images/pagination/previous_page.png'), :next_label => image_tag('/images/pagination/next_page.png'), :params => params_hash -%> </div>
+    <% end %>
+  <% end %>
+
+</div>
+
+
+<script type="text/javascript">
+  if(document.getElementById('duration').value == 'Custom'){
+
+    jQuery('#calendar_div').slideDown("slow");
+  }
+  
+  function displayCalendar()
+  {
+    if(document.getElementById('duration').value == 'Custom'){
+ 
+      jQuery('#calendar_div').slideDown("slow");
+    }
+    else{
+      jQuery('#calendar_div').slideUp("slow");
+    }
+  }
+
+
+  function validateRecordId() {
+    var numericExpression = /^[0-9]+$/;
+    if (jQuery("#record_id").val().trim() != ''){
+      if(jQuery("#record_id").val().trim().match(numericExpression)){
+        return true;
+      }
+      else
+      {
+        alert("Please enter a valid integer in Record id field.");
+        return false;
+      }
+    }
+  }
+    
+
+
+  
+    
+
+</script>

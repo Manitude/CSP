@@ -1,0 +1,227 @@
+<%= stylesheet_link_tag "html_table" %>
+<%= javascript_include_tag "html_table" %>
+<%= hidden_field_tag 'no_of_products', @cr_array.length %>
+<script type="text/javascript">
+  all_consumables = {}
+  extensions = {}
+  upcoming_sessions = {}
+  additional_sessions = {}
+</script>
+<div id="license_info_table_div">
+  <% if !@cr_array.blank? %>
+    <div class="license_info_table_div">
+      <table class="old_th960">
+        <thead>
+          <tr>
+            <th class="old_th65">PRODUCT</th>
+            <th class="old_th65">&nbsp;</th>
+            <th class="old_th70">&nbsp;</th>
+            <th class="old_th90">&nbsp;</th>
+            <th class="th95">ACTIONS</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+    <%  shown_language        = [] %>
+    <%  shown_activation_date = [] %>
+
+    <%count = 0%>
+    <%= hidden_field_tag :creation_account, @creation_account["type"]%>
+    
+    <% @cr_array.each do |cr| %>
+      <% cr[:cr_array_for_display].each do |content_range|%>
+        <div class="margin_bottom15">
+          <table class="old_th960">
+            <tbody>
+              <tr>
+                <td class="old_th65"><b><%= content_range[:language_display_name] %></b><span> (<%= get_formatted_type @creation_account["type"]%>)</span></td>
+                <% if shown_activation_date.include?(cr[:created_at]) && shown_language.include?(cr[:language])%>
+                  <td class="old_th72">&nbsp;</td>
+                  <td class="old_th70">&nbsp;</td>
+                <%else%>
+                  <% shown_activation_date << cr[:created_at] %>
+                  <td style="width:72px; text-align: right; padding-right: 5px;font-size: 11px;"><span style=" font-weight: bold;">Activated on:</span></td>
+                  <td class="old_th70"><%= get_est_time_format(cr[:created_at]) %></td>
+                <% end %>
+                <td class="old_th40">&nbsp;</td>
+                <td class="old_th250" style="text-align: right;">
+                  <% if shown_language.include?(cr[:language])%>
+                    <span>&nbsp;</span>
+                  <%else%>
+                    <% shown_language << cr[:language] %>
+                    <span>
+                      <% if cr[:group_guid].present? && tier1_support_lead_logged_in? %>
+                        <%= link_to_function "Uncap Learner", "uncapLearnerFunction('#{show_uncap_learner_form_path(:group_product_right => cr[:group_guid],:license_guid => @details["guid"])}')" %>
+                        <span class= "group_guid">|</span>
+                      <% end %>
+                      <% if cr[:family] == 'lotus' || !cr[:flag] %>
+                        <span class="disabled_space">Add to sessions</span>
+                      <% else %>
+                        <%= (link_to("Add to sessions", eschool_sessions_path( :title => "Sessions", :solo_available_from => cr[:solo_available_from], :group_available_from => cr[:group_available_from], :is_old_learner => cr[:group_guid].blank?,:guid => @details["guid"],:license_identifier => @details["identifier"] , :lang_identifier => cr[:language], :content_range_array => @cr_hash[cr[:language]], :product_right_ends_at => cr[:valid_through]))).html_safe %>
+                      <% end %>
+                      <span class= "group_guid">|</span>
+                      <% if @learner.viper_user? %>
+                        <span class="disabled_space">Extensions (0)</span>
+                      <% else %>
+                        <span id="<%= "extension_#{count}"%>">
+                          <%= (link_to_function_or_text_with_style(((tier1_support_lead_logged_in?)||(tier1_support_harrisonburg_user_logged_in?)||(tier1_support_user_logged_in?)), "opacity : 0.4", "Extensions (#{cr[:ext_count]})", "viewExtensionDetails('extension_#{count}','#{cr[:product_right_guid]}','#{@details["identifier"]}','#{@details["guid"]}','#{cr[:language]}','#{cr[:group_guid]}','#{cr[:version]}', '#{cr[:projected_through].to_s(:db)}', '#{cr[:enable_add_or_remove_extension]}')", {:id => "extensions_#{count}"})).html_safe %>  
+                        </span>
+                      <% end  %>
+                      <span class= "group_guid">|</span>
+                      <span style="padding:0 2px;">
+                        <!-- >Audit log is enabled for all support users. It is called License Information (in LV) but it for the purpose of viewing hte audit log<-->
+                        <span id ="<%= "audit_log_#{count}" %>">
+                          <%=  (link_to_or_text_with_style(tier1_user_logged_in?, 'opacity : 0.4', "License Information (in LV)", "http://licenseserver.rosettastone.com/manage/licenses?license[identifier]=#{@details["guid"]}", {:target => "_blank"})).html_safe %>
+                        </span>
+                      </span>
+                      <%if((!cr[:flag] && cr[:family] != 'lotus') && cr[:consumables_flag])%>
+                        <span class="disable_text">(This language is currently not active in TOTALe for this Learner)</span>
+                      <%end%>
+                    </span>
+                    <%count += 1%>
+                  <% end %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <div style="padding:0 0 10px 0;">
+            <span class="bold-font">Activation ID:</span> <span style=" font-size: 10px;"> <%= cr[:enable_activation_id] ? masked_activation_id(content_range[:activation_id]) : content_range[:activation_id] %></span>
+            <%if tier1_support_lead_logged_in? &&  is_tosub_and_active_and_customer?(@creation_account["type"], cr[:language], @details["active"], @learner.try(:user_source_type) )%>
+              <div>
+                <%= button_to_function("Modify Language", "modifyLanguage('#{modify_language_path(:license_guid => @details["guid"], :current_language => cr[:language], :version => cr[:version], :current_language_display_name => content_range[:language_display_name], :learners_languages => @learners_languages)}', 'MODIFY LANGUAGE (#{@details["guid"]})', #{cr[:having_futute_session]})", :class => "button", :style => "cursor:pointer;padding:2px;font-size:9px;", :id => "modify_language") %>
+              </div>
+            <%end%>
+          </div>
+
+        </div>
+      <% end %>
+      <div class="license_info_div">
+        <table  class="old_th960">
+          <thead>
+            <tr>
+              <th class="old_th260">&nbsp;</th>
+              <th class="old_th75">Valid Through</th>
+              <th class="old_th75">Projected Through</th>
+              <th class="old_th95">&nbsp;</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%if cr[:family] == 'lotus' %>
+              <tr>
+                <td class="old_th260">
+                  <span><%= image_tag set_image_source(cr[:usable]), :size => "12x12", :alt => "Usable", :style => "padding: 0 2px 0 15px;" %></span>
+                  <span><%= cr[:language] %> GUID: <%= cr[:lotus_guid] || "N/A" %></span>
+                </td>
+                <td class="old_th75" title="<%= set_title(cr[:valid_through]) %>"><%= get_est_time_format(cr[:valid_through]) %></td>
+                <td class="old_th75" title="<%= set_title(cr[:projected_through]) %>"><%= get_est_time_format(cr[:projected_through]) %></td>
+                <td class="old_th95">&nbsp;</td>
+              </tr>
+            <%else%>
+              <tr>
+                <td class="old_th260">
+                  <span><%= image_tag set_image_source(cr[:course_usable]), :size => "12x12", :alt => "Usable", :style => "padding: 0 2px 0 15px;" %></span>
+                  <span>Course GUID: <%= cr[:course_guid] || "N/A" %></span>
+                </td>
+                <td class="old_th75" title="<%= set_title(cr[:valid_through]) %>"><%= get_est_time_format(cr[:valid_through]) %></td>
+                <td class="old_th75" title="<%= set_title(cr[:projected_through]) %>"><%= get_est_time_format(cr[:projected_through]) %></td>
+                <td class="old_th95">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="old_th260">
+                  <span><%= image_tag set_image_source(cr[:studio_usable]), :size => "12x12", :alt => "Usable", :style => "padding: 0 2px 0 15px;" %></span>
+                  <span>Studio GUID: <%= cr[:studio_guid] || "N/A" %></span>
+                </td>
+                <td class="old_th75" title="<%= set_title(cr[:sg_valid_through]) %>"><%= get_est_time_format(cr[:sg_valid_through]) %></td>
+                <td class="old_th75" title="<%= set_title(cr[:sg_projected_through]) %>"><%= get_est_time_format(cr[:sg_projected_through]) %></td>
+                <td class="old_th95">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="old_th260">
+                  <span><%= image_tag set_image_source(cr[:rworld_usable]), :size => "12x12", :alt => "Usable", :style => "padding: 0 2px 0 15px;" %></span>
+                  <span>World GUID: <%= cr[:rworld_guid] || "N/A" %></span>
+                </td>
+                <td class="old_th75" title="<%= set_title(cr[:rg_valid_through]) %>"><%= get_est_time_format(cr[:rg_valid_through]) %></td>
+                <td class="old_th75" title="<%= set_title(cr[:rg_projected_through]) %>"><%= get_est_time_format(cr[:rg_projected_through]) %></td>
+                <td class="old_th95">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="old_th260">
+                  <span><%= image_tag set_image_source(cr[:solo_usable]), :size => "12x12", :alt => "Usable", :style => "padding: 0 2px 0 15px;" %></span>
+                  <span>Solo GUID: <%= cr[:solo_guid] || "N/A" %></span>
+                </td>
+                <td class="old_th75" title="<%= set_title(cr[:solo_valid_through]) %>"><%= get_est_time_format(cr[:solo_valid_through]) %></td>
+                <td class="old_th75" title="<%= set_title(cr[:solo_projected_through]) %>"><%= get_est_time_format(cr[:solo_projected_through]) %></td>
+                <td class="old_th95">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="old_th260">
+                  <span><%= image_tag set_image_source(cr[:group_usable]), :size => "12x12", :alt => "Usable", :style => "padding: 0 2px 0 15px;" %></span>
+                  <span>Group GUID: <%= cr[:group_guid] || "N/A" %></span>
+                </td>
+                <td class="old_th75" title="<%= set_title(cr[:group_valid_through]) %>"><%= get_est_time_format(cr[:group_valid_through]) %></td>
+                <td class="old_th75" title="<%= set_title(cr[:group_projected_through]) %>"><%= get_est_time_format(cr[:group_projected_through]) %></td>
+                <td class="old_th95">&nbsp;</td>
+              </tr>
+              <tr>
+                <td class="old_th260">
+                  <span><%= image_tag set_image_source(cr[:language_switch_usable]), :size => "12x12", :alt => "Usable", :style => "padding: 0 2px 0 15px;" %></span>
+                  <span>Language Switch GUID: <%= cr[:language_switch_guid] || "N/A" %></span>
+                </td>
+                <td class="old_th75" title="<%= set_title(cr[:language_switch_valid_through]) %>"><%= get_est_time_format(cr[:language_switch_valid_through]) %></td>
+                <td class="old_th75" title="<%= set_title(cr[:language_switch_projected_through]) %>"><%= get_est_time_format(cr[:language_switch_projected_through]) %></td>
+                <td class="old_th95">&nbsp;</td>
+              </tr>
+            <%end%>
+          </tbody>
+        </table>
+        
+        <%if (is_tosub_and_active_and_customer?(@creation_account["type"], cr[:language], @details["active"], @learner.try(:user_source_type)) && !cr[:previous_languages].blank? )%>
+          <div style="padding:0 0 10px 0;">
+            <div class="bold-font">Previous Languages:</div>
+            <table>
+              <tbody>
+                <% cr[:previous_languages].each do |pr_lang|%>
+                  <tr>
+                    <td class="old_th495"><%= Language[pr_lang.previous_language].display_name %></td>
+                    <td style="width:410px; max-width: 415px;" >
+                      <span class="bold-font">Modified on:</span>
+                      <span title="<%= set_title(pr_lang.updated_at) %>"><%= get_est_time_format(pr_lang.updated_at) %></span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="old_th495">&nbsp;</td>
+                    <td style="width:410px; max-width: 415px;word-wrap:break-word">
+                      <span class="bold-font">Reason:</span>
+                      <span ><%= pr_lang.reason%></span>
+                    </td>
+                  </tr>
+                <%end%>
+              </tbody>
+            </table>
+          </div>
+        <%end%>
+      </br>
+        <%= if cr[:consumables] 
+          render :partial => 'support_user_portal/licenses/learner_sessions_details', :locals => {:license_guid => @details["guid"], :consumables => cr[:consumables], :all_consumables => cr[:consumables_for_all_extensions], :is_old_learner => cr[:group_guid].blank?, :upcoming_sessions => cr[:upcoming_sessions], :additional_sessions => cr[:additional_sessions], :language => cr[:language], :email => @learner.email, :end_date => cr[:sg_projected_through]} 
+        else
+         link_to_function "Manage Consumables", 
+          "fixedFaceBoxWithHeader('#{show_consumable_form_path(:solo_expire_date => nil, :group_expire_date => nil, :pooler_type => 'ProductRight', :solo_product_right => nil, :end_date => cr[:sg_projected_through],:language => cr[:language], :license_guid => @details["guid"], :group_product_right => nil)}', 
+           'Manage Studio Consumables')" 
+           end%>
+      </div>
+    <% end %>
+  <% else %>
+    <div class="end_user_license">This End-User License has no usable product rights.</div>
+  <% end %>
+</div>
+
+<div id="ext-popup-container">
+  <div class="ext-popup-top"><div class="close-popup">X</div></div>
+  <div id="ext-popup-content">Processing...</div>
+
+  <div class="ext-popup-btm"></div>
+  <div id="ext-learner-popup"></div>
+  <div id="ext-coach-session-popup"></div>
+</div>

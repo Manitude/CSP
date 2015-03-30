@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel
+END
+attributes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/attributes.rb
+END
+table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/table.rb
+END
+tree_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/tree_manager.rb
+END
+delete_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/delete_manager.rb
+END
+crud.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/crud.rb
+END
+insert_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/insert_manager.rb
+END
+expression.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/expression.rb
+END
+deprecated.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/deprecated.rb
+END
+nodes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/nodes.rb
+END
+select_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/select_manager.rb
+END
+sql_literal.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/sql_literal.rb
+END
+update_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/update_manager.rb
+END
+relation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/relation.rb
+END
+expressions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/expressions.rb
+END
+visitors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/visitors.rb
+END
+predications.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/predications.rb
+END

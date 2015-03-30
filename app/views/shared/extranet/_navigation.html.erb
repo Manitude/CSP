@@ -1,0 +1,16 @@
+<div id="navigation">
+  <div id="left-nav">
+     <ul>
+        <% extranet_navigation_items.each do |nav| %>
+          <li>
+            <% if nav == currently_selected_extranet_nav_item %>
+              <%= link_to(nav[:link_text], nav[:url_options], :class => 'current') %>
+            <% else %>
+              <%= link_to(nav[:link_text], nav[:url_options]) %>
+            <% end %>
+          </li>
+        <% end %>
+      <li class="logout"><%= link_to "Sign Out", logout_path %></li>
+   </ul>
+    </div>
+</div>

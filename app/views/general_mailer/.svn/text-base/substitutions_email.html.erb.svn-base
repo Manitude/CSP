@@ -1,0 +1,5 @@
+<div>
+  <b><%= @title.html_safe %></b>
+  <div style =" margin:20px;"><%= @message.html_safe %></div>
+  <div><%= @email_body.html_safe %></div>  
+</div>

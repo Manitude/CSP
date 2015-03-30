@@ -1,0 +1,14 @@
+<div class="form_container">
+  <br/>
+  <%= link_to_learner_profile("Back to learner's profile page", @learner) %>
+  <div id="profile">
+    <%= render :partial => "recent_course_info", :locals => { :course_tracking_info => @baffler_course_tracking_info, :learner => @learner, :baffler_path_scores => @baffler_path_scores, :lang => @lang, :level => @level } if @learner.can_show_course_info? %>
+     <p class="header" style="border-bottom:none"></p>
+  </div>
+</div>
+<%# selecting the level using javascript based on the level in the url params. -%>
+<% content_for :inline_javascript do -%>
+  setTimeout(function(){
+    $("level").value = "<%= params[:level] %>";
+  }, 2000);
+<% end -%>

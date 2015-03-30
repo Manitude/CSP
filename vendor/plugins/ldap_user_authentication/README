@@ -1,0 +1,36 @@
+LdapUserAuthentication
+======================
+
+Usage
+-----
+
+Include the plugin by running `init.rb`. Rails does this by default when the library is put in the plugins folder.
+
+Put configuration details into `config/ldap.yml` relative either to the library or the Rails root.
+
+Set the production and non-production Active Directory groups to check the user's credentails against. One way to do this is to subclass `RosettaStone::ActiveDirectoryAuthenticatedUser` like this:
+
+    class ActiveDirectoryAuthenticatedUser < RosettaStone::ActiveDirectoryAuthenticatedUser
+      class << self
+        private
+        def non_production_ad_group
+        ''
+        end
+
+        def production_ad_group
+        ''
+        end
+      end
+    end
+
+Run `ActiveDirectoryAuthenticatedUser.authenticate('username', 'password')` (you will need to namespace it under the RosettaStone module if calling it from outside the module) to check the user against the group specified in the configuration. If the group is left as an empty string, the user's password is validated, but the group membership check is not performed.
+
+The method returns an OpenStruct containing the user's `user_name` and `email` upon successful validation and `nil` open failure (either because the user's password was wrong or the user is not in the group checked against).
+
+Rails 3 notes
+-------------
+
+The plugin makes use of `RAILS_ROOT` and `RAILS_ENV`, which were deprecated in Rails 3. You can do a hotfix for this by inserting the following backwards compatibility lines before loading the library. The library uses these constants and whether they are defined in initializing class variables, so redefining `RAILS_ROOT` and `RAILS_ENV` after the library is loaded may be ineffective.
+
+    RAILS_ROOT = Rails.root
+    RAILS_ENV = Rails.env

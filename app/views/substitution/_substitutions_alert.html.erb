@@ -1,0 +1,27 @@
+<%unless @substitution_data.blank? %>
+<!-- Rejecting those substitutions which cannot be grabbed by the coach - change CSP-905 -->
+  <div id="substitution_alert">
+    <table id="sub_alert_table">
+      <tr>
+        <td class= "substitution_needed">SUBSTITUTION NEEDED!</td>
+        <td>
+          <table id="sub_data">
+            <% @substitution_data.each do |sub| %>
+              <tr>
+                <td class="width24"><%= sub[:language] %></td>
+                <td class="width24"><%= (Time.parse(sub[:date_time]).strftime("%a,&nbsp;%b&nbsp;%d,&nbsp;%Y")).html_safe %></td>
+                <td class="width25"><%= Time.parse(sub[:date_time]).strftime("%I:%M%p") %></td>
+                <td class="width20"><%= sub[:level] +", "+sub[:unit] %></td>
+                <td class="width20">
+                  <input type="button" id="<%=  sub[:sub_id] %>" class="btn grab_session" value="Grab" />
+                </td>
+              </tr>
+            <%end%>
+          </table>
+        </td>
+        <td><div id="see_all_substitutions"><font class = "substitution_font" ><a href="#"> see all sub requests</a></font></div></td>
+        <td><div id="close_button" class="substitution_close_button" >X</div></td>
+      </tr>
+    </table>
+  </div>
+<%end%>

@@ -1,0 +1,20 @@
+host: http://www.supersaas.com
+#proxy_host: http://dalproxy.lan.flt:3128
+supersaas1:
+  username: RosettaStone_dev
+  password: ds9JufB5Ct8h82E
+supersaas2:
+  username: RosettaStoneAdvantage_dev
+  password: 5ebQ6APn39L3L3J
+schedule_id:
+  Advanced_English_US: "137123"
+  Advanced_English_UK: "137124"
+  Advanced_English_US_Group: "174928"
+  Advanced_English_UK_Group: "174930"
+  RSA_MICHELIN: "144842"
+  RSA_DUTCH: "204175"
+  RSA_ENGLISH: ""
+  RSA_FRENCH: ""
+  RSA_GERMAN: ""
+  RSA_ITALIAN: ""
+  RSA_SPANISH: ""

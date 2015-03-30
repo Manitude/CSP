@@ -1,0 +1,288 @@
+#cs_coach{
+    float: left;
+    margin-right: 5px;
+}
+#coach, #language{
+    width: 150px;
+}
+#filter_language_div{
+    float: left;
+    width: 100%
+}
+.cs_available_slot {
+	background-color: #E3E2D5 !important;
+}
+.cs_recurring_slot {
+	background-color: #D6E4EA !important;
+}
+.cs_solid_session_slot {
+	background-color: #BFD3DD !important;
+}
+.cs_reassigned_session_slot { 
+    background-color: #FFFF66 !important; 
+}
+.cs_reassigned_appointment_session_slot { 
+    background-color: #FFFF66 !important; 
+}
+.cs_time_off_slot {
+	background-color: #D5E5AF !important;
+}
+.cs_appointment_session_slot {
+    background-color: #33CC66 !important;
+}
+.cs_appointment_recurring_session_slot {
+    background-color: #33FF99 !important;
+}
+.cs_sub_needed_solid_session_slot{
+	border: 1px solid red !important;
+	background-color: #BFD3DD !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.cs_sub_needed_appointment_session_slot{
+    border: 1px solid red !important;
+    background-color: #33CC66 !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.not_clickable{
+	cursor:default;
+}
+.cs_sub_canl_session_slot, .daylight_switch, .cs_cancelled{
+	background-color: #B6B6AB !important;
+}
+
+#create_session_coach{
+    width: 95%;
+}
+
+#language_div{
+    float: left;
+    min-width: 160px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.create_language_div{
+    float: left;
+    min-width: 160px;
+}
+
+#session_type_div{
+    float: left;
+/*    height: 40px;     */
+    width: 55%;
+    margin-bottom: 3px;  
+}
+
+#appointment_type_div{
+    float: right;
+/*    height: 40px;       */
+    margin-bottom: 10px;
+    margin-right: 9px;
+}
+
+.level-unit-dropdown {
+    width: 70px;
+    margin-left: 2px;
+    float: left;
+}
+
+.level_unit_div{
+    float: right;
+    height: 40px;
+    width: 190px;
+    height: 50px;
+}
+
+.village_div{
+    float: left;
+    height: 50px;
+    width: 160px;
+}
+
+.cefr_div{
+    float: left;
+/*    height: 40px;     */
+    width: 160px;
+    margin-bottom: 10px;
+}
+.topic_div{
+    float: right;
+/*    height: 40px;       */
+    width: 190px;
+    margin-bottom: 10px;
+}
+
+.number_of_seats_div{
+    float: right;
+/*    height: 50px;    was previously 55px before Sprint29 changes */
+    width: 190px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    margin-left: 10px;
+}
+
+
+#session_details_text_div{
+/*    margin-top: 6px;  */
+    
+}
+
+#session_details_text{
+    float: bottom;
+    height: 100%;
+    width: 100%;
+    resize: vertical;
+}
+
+#session_details_text_div_edit{
+     height: 55px;
+    margin-top: 10px;
+}
+
+#session_details_text_edit{
+    float: bottom;
+    height: 100%;
+    width: 100%;
+    resize: vertical;
+}
+
+#recurring_checkbox, #teacher_confirmed_div{
+    float: left;
+    height: 40px;
+}
+
+#recurring_confirmed_checkboxes{
+     width: 200px;
+}
+
+#max_qual_of_the_coach{
+    font-weight: bold;
+}
+.max_qual_create{
+    margin-top: 25px;
+}
+#create_session_button{
+    float: right;
+}
+.wc-cal-event .wc-title {
+    font-family: "Myriad Pro";
+    font-size: 8pt;
+    top: 5%;
+}
+.remove_clear {
+    clear: none !important
+}
+#avail_link, #time_off_link{
+    padding-left: 10px;
+    text-decoration: underline;
+    float: left;
+}
+#header_date_div{
+    width: 100%;
+}
+.enable_sub_links{
+    color: #1090CF;
+    cursor: pointer;
+    font-size: 11px;
+    text-decoration: underline;
+}
+#learner_details{
+    width: 250px;
+    float: left;
+    margin-top: 10px;
+}
+#session_buttons{
+    color: #AAAAAA;
+    float: right;
+    margin: 5px 15px 10px 0px;
+}
+#launch_session_div{
+    height:15px;
+    margin-bottom: 5px;
+}
+#assign_sub, #request_sub{
+    margin-right: 10px;
+}
+#subs_link{
+    width: 100px;
+    float: right;
+}
+#upcoming_classes_btn{
+    float: right;
+    width: 170px;
+}
+#assign_substitute{
+    width: 290px;
+}
+#assign_substitute_button{
+    margin-left: 10px;
+}
+.solo_icon{
+    width:15px;
+    height:15px;
+    float: left;
+    margin-left: 2px;
+}
+.export_schedules_button {
+    float:right;
+    border: 1px solid #CCCCCC;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1em;
+    padding: 2px;
+    position:absolute;
+    margin-top: 10px;
+    width: 170px;
+}
+
+#head_section{
+    width: 360px;
+}
+
+.aria_detail_table{
+    width: 100%;
+}
+
+.aria_detail_table td{
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+
+#session_details_display_div{
+    margin-top: 10px;
+}
+#session_details_display_textarea{
+    height: 100%;
+    max-height: 100%;
+    width: 100%;
+    margin-top: 5px;
+    border: none;
+}
+
+#number_of_seats_aria_div{
+    float: right;
+/*    height: 50px;    was previously 55px before Sprint29 changes */
+    width: 190px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#coach_dialect{
+    font-weight: bold;
+}
+#hidding_data_for_lotus{
+    padding-bottom: 10px;
+}
+#coach_info_div{
+    float: left;
+    width: 100%;
+}
+#coach_session_info_div{
+    float: right;
+    width: 100%;
+}

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/WebDev/!svn/ver/85735/plugins/lcdb_client/test
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/85735/plugins/lcdb_client/test/test_helper.rb
+END
+lcdb_client_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/85735/plugins/lcdb_client/test/lcdb_client_test.rb
+END

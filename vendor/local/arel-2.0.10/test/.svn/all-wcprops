@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test
+END
+test_attributes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/test_attributes.rb
+END
+test_table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/test_table.rb
+END
+test_select_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/test_select_manager.rb
+END
+test_delete_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/test_delete_manager.rb
+END
+test_update_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/test_update_manager.rb
+END
+test_activerecord_compat.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/test_activerecord_compat.rb
+END
+test_crud.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/test_crud.rb
+END
+test_insert_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/test_insert_manager.rb
+END
+helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/helper.rb
+END

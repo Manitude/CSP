@@ -1,0 +1,28 @@
+<%if !@substitution_data.blank? %>
+  <div id="substitution_alert">
+    <table id="sub_alert_table" >
+      <tr>
+        <td class= "substitution_needed">SUBSTITUTION NEEDED!</td>
+        <td>
+          <table id="sub_data">
+            <% @substitution_data.each do |sub| %>
+              <tr>
+                <td class="width3">
+                  <%if sub[:show_warning_icon] %>
+                    <img class ="warning_icon" src="/images/warning_red_16_16.png"/>
+                  <%end%>
+                </td>
+                <td class="width18"><%= sub[:language] %></td>
+                <td class="width15"><%= (Time.parse(sub[:date_time]).strftime("%a,&nbsp;%b&nbsp;%d,&nbsp;%Y")).html_safe %></td>
+                <td class="width15"><%= Time.parse(sub[:date_time]).strftime("%I:%M%p") %></td>
+                <td class="width10"><%= sub[:level]%>,&nbsp;<%= sub[:unit] %></td>
+              </tr>
+            <%end%>
+          </table>
+        </td>
+        <td><div id="see_all_substitutions"><font class = "substitution_font"><a href="#"> see all sub requests</a></font></div></td>
+        <td><div id="close_button" class="substitution_close_button" >X</div></td>
+      </tr>
+    </table>
+  </div>
+<%end%>

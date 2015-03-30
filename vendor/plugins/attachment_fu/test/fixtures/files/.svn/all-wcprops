@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/fixtures/files
+END
+rails.png
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/fixtures/files/rails.png
+END
+foo.txt
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/fixtures/files/foo.txt
+END

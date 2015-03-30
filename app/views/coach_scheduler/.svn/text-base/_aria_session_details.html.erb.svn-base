@@ -1,0 +1,35 @@
+<%if @aria_session_details %>
+<br><br>
+<table class = "aria_detail_table" style="padding-top: 5px;">
+  <tr>
+    <td width="50%">Language: <%= @coach_session.language.display_name %> </td>
+    <td width="50%">
+      SuperSaaS ID: <%= @coach_session.eschool_session_id == nil ? 'N/A': @coach_session.eschool_session_id %>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      CEFR Level: <%= @learner_level || "N/A" %>
+    </td>
+    <td width="50%">
+      <%if @coach_session.number_of_seats > 1 %>
+      Number of Seats: <%= @coach_session.number_of_seats %>
+      <%end%>
+    </td>
+  </tr>
+</table>
+<table class = "aria_detail_table">
+  <%if @coach_session.number_of_seats > 1 %>
+  <tr>
+    <td>
+      Topic: <%= @coach_session.topic.try(:title) || "N/A" %>
+    </td>
+  </tr>
+  <%end%>
+  <tr>
+    <td>
+      Learner: <%= @aria_session_details == ["None"] ? 'None': @aria_session_details.to_sentence%>
+    </td>
+  </tr>
+</table>
+<%end%>

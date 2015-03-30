@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/WebDev/!svn/ver/129358/gems/eventmachine/0.12.11
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/51076/gems/eventmachine/0.12.11/README
+END
+.specification
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/101053/gems/eventmachine/0.12.11/.specification
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/120814/gems/eventmachine/0.12.11/Rakefile
+END
+setup.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/51076/gems/eventmachine/0.12.11/setup.rb
+END
+compile_native_library.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/120776/gems/eventmachine/0.12.11/compile_native_library.rb
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/51076/gems/eventmachine/0.12.11/.gitignore
+END
+eventmachine.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/51076/gems/eventmachine/0.12.11/eventmachine.gemspec
+END

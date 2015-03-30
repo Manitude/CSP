@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap
+END
+test_nil.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_nil.rb
+END
+test_property.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_property.rb
+END
+test_generator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_generator.rb
+END
+test_streamhandler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_streamhandler.rb
+END
+test_envelopenamespace.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_envelopenamespace.rb
+END
+test_mapping.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_mapping.rb
+END
+test_httpconfigloader.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_httpconfigloader.rb
+END
+htpasswd
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/htpasswd
+END
+test_empty.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_empty.rb
+END
+test_nestedexception.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_nestedexception.rb
+END
+test_response_as_xml.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_response_as_xml.rb
+END
+test_custommap.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_custommap.rb
+END
+test_cookie.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_cookie.rb
+END
+test_custom_ns.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_custom_ns.rb
+END
+test_basetype.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_basetype.rb
+END
+test_soapelement.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_soapelement.rb
+END
+test_no_indent.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_no_indent.rb
+END
+test_styleuse.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_styleuse.rb
+END
+test_extraattr.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/test_extraattr.rb
+END

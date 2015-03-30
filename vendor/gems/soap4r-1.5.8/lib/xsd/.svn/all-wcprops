@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd
+END
+codegen.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/codegen.rb
+END
+iconvcharset.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/iconvcharset.rb
+END
+charset.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/charset.rb
+END
+datatypes1999.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/datatypes1999.rb
+END
+mapping.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/mapping.rb
+END
+xmlparser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/xmlparser.rb
+END
+datatypes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/datatypes.rb
+END
+ns.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/ns.rb
+END
+namedelements.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/namedelements.rb
+END
+qname.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/qname.rb
+END

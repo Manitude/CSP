@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/unit/client
+END
+adapter_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/unit/client/adapter_spec.rb
+END
+settings_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/unit/client/settings_spec.rb
+END
+logging_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/unit/client/logging_spec.rb
+END
+entity_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/unit/client/entity_spec.rb
+END

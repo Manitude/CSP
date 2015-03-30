@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/LICENSE
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/README.rdoc
+END
+compile_native_library.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/compile_native_library.rb
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/CHANGELOG
+END
+default.mspec
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/default.mspec
+END

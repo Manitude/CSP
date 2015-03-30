@@ -1,0 +1,202 @@
+<style type="text/css">
+.ui-tooltip{
+  width: 380px ! important;
+}
+</style>
+<%= form_tag update_session_from_cs_path,{:id => 'edit_session_form'} do -%>
+  <%= hidden_field_tag 'all_languages_max_unit', @edit_data[:coach_session].coach.all_languages_and_max_unit_hash.to_json %>
+  <%= hidden_field_tag 'lotus_languages', Language.lotus_languages.collect(&:identifier).to_json%>
+  <%= hidden_field_tag 'action_type', 'SAVE' %>
+  <%= hidden_field_tag 'coach_session_id',@edit_data[:coach_session].id %>
+  <%= hidden_field_tag 'previously_recurring', @edit_data[:selected_recurring] %>
+  <%= hidden_field_tag 'learners_signed_up', @edit_data[:learners_signed_up].to_i %>
+  <%= hidden_field_tag 'previous_language', @edit_data[:coach_session].language_identifier %>
+  <%= hidden_field_tag 'previous_level', @edit_data[:selected_language_level] %>
+  <%= hidden_field_tag 'previous_unit', @edit_data[:selected_language_unit] %>
+  <%= hidden_field_tag 'previous_village', @edit_data[:selected_village_id] %>
+  <%= hidden_field_tag 'previous_seats', @edit_data[:selected_seats] %>
+  <%= hidden_field_tag 'availability', @edit_data[:is_availabile] %>
+  <%= hidden_field_tag 'full_slot_availability', (@edit_data[:aria_recurring_availability] == "available" && @edit_data[:is_availabile] == "available") ? 'available' : 'unavailable' %>
+  <%= hidden_field_tag 'is_one_hour_session', @edit_data[:coach_session].is_one_hour? %> 
+  <%= hidden_field_tag 'recurring_disabled', @edit_data[:recurring_disabled] %> 
+  <%= hidden_field_tag 'is_appointment', @edit_data[:coach_session].appointment? %> 
+  <%= hidden_field_tag 'appointment_type_id', @edit_data[:coach_session].appointment_type_id %> 
+  <%= hidden_field_tag 'start_time', @edit_data[:coach_session].session_start_time.to_i*1000 %>
+  <%= hidden_field_tag 'recurring_ends_at', @edit_data[:recurring_ends_at] ? TimeUtils.time_in_user_zone(@edit_data[:recurring_ends_at]).strftime("%m/%d/%Y") : "false" %>
+  <%= hidden_field_tag 'end_due_to_template', @edit_data[:end_due_to_template] ? TimeUtils.time_in_user_zone(@edit_data[:end_due_to_template]).strftime("%m/%d/%Y") : "false" %>
+  <%= hidden_field_tag 'aria_end_due_to_template', @edit_data[:aria_end_due_to_template] ? TimeUtils.time_in_user_zone(@edit_data[:aria_end_due_to_template]).strftime("%m/%d/%Y") : "false" %>
+<% if !@edit_data[:coach_session].aria? %>
+ <div class = "cs_edit_session">
+  <table id="language_table" class = "width100">
+    <tr>
+      <% if (@edit_data[:coach_session].language.is_tmm?) %>
+        <td class = "width100">
+          <div class = "cs_ce_sess_lang" id="ce_sess_lang"><%= @edit_data[:coach_session].appointment? ? "Appointment: #{@edit_data[:coach_session].language.display_name_without_type} - #{@edit_data[:coach_session].appointment_type_title}" : "Session Language: #{@edit_data[:coach_session].language.display_name}"%></div>
+        </td>
+        <td class = "width100">
+          <div id="language_id" display="none"></div>
+        </td>
+      <% else %>
+        <td class = "width50">
+          <div class = "cs_ce_sess_lang" id="ce_sess_lang">Session Language</div>
+          <div><%= select_tag 'language_id', coach_languages(@edit_data[:coach_session].coach_id, @edit_data[:coach_session].language_identifier, false, false, true,@edit_data[:coach_session].session_start_time, true,!(@edit_data[:coach_session].language.is_tmm?),!(@edit_data[:coach_session].language.is_tmm?),!(@edit_data[:coach_session].language.is_tmm?)), :style => "width:160px;", :from => "edit" %>
+          </div> 
+        </td>
+        <td class = "cs_recurring" >
+          <span id="ce_sess_recurring">
+            Recurring<%= check_box_tag 'recurring', 'true', @edit_data[:selected_recurring], {:style => "vertical-align: bottom;",:disabled => @edit_data[:recurring_disabled]} %>
+          </span>
+          <% if @edit_data[:selected_recurring] && @edit_data[:recurring_ends_at] %>
+            <br/>
+            <span id="ce_sess_recurring_ends">
+              Recurring Ends: <%= TimeUtils.time_in_user_zone(@edit_data[:recurring_ends_at]).strftime("%m/%d/%Y") %>
+            </span>
+          <% end %>
+        </td>
+      <% end %>
+    </tr>
+  </table>
+  <br />
+  <!--added by ela-->
+  <%if @edit_data[:coach_session].tmm? %>
+          <%= hidden_field_tag 'number_of_seats', @edit_data[:selected_seats]%> 
+          <div id="session_details_text_div_edit">
+            <b><%= @edit_data[:coach_session].appointment? ? "Appointment" : "Session" %> Details: </b> <!-- <font color="red">*</font> -->
+            <%= text_area_tag 'session_details_text_edit',@edit_data[:session_details_text]%>
+            <p>Characters remaining: <span id="char_count"><%= 500 - (@edit_data[:session_details_text].nil? ? 0 : @edit_data[:session_details_text].length) %></span></p>
+          </div>
+          <br/>
+          <br/>
+        <span id="ce_sess_recurring" class = "cs_ce_sess_recurring">
+          Recurring<%= check_box_tag 'recurring', 'true', @edit_data[:selected_recurring], {:style => "vertical-align: bottom;",:disabled => @edit_data[:recurring_disabled]} %>
+        </span>
+        <% if @edit_data[:selected_recurring] && @edit_data[:recurring_ends_at] %>
+          <br/><span id="ce_sess_recurring_ends">
+            Recurring Ends: <%= TimeUtils.time_in_user_zone(@edit_data[:recurring_ends_at]).strftime("%m/%d/%Y") %>
+          </span>
+        <% end %>
+  <!--added by ela ends-->
+  <%else%>
+  <div id="hidding_data_for_lotus" class = "top_padding5">
+  <table id="data_for_totale_only" class = "width100">
+    <tr>
+      <td class = "width50">
+        <div class ="cs_ce_sess_village" id="ce_sess_village">Village (optional)</div>
+        <%= select_tag 'village_id', options_for_villages_for_scheduler(@edit_data[:selected_village_id]), :style => "width:160px;" %>
+      </td>
+      <td class ="cs_ce_sess_wildcard">
+        <span id="ce_sess_wildcard">
+          Wildcard<%= check_box_tag 'wildcard', "true", @edit_data[:wildcard_level_unit], :onClick => "toggleLevelUnit()", :disabled => @edit_data[:wildcard_disabled] %>
+        </span>
+        <span id="ce_session_teacher_confirmed">
+        Confirmed<%= check_box_tag 'teacher_confirmed', 'true', @edit_data[:coach_session].confirmed? %>
+        </span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class ="cs_ce_sess_village"><br />Number of Seats</div>
+        <div><%= select_tag 'number_of_seats', options_for_seat(@edit_data[:selected_seats],@edit_data[:learners_signed_up] ) ,:style => "width:160px;" %></div>
+      </td>
+      <td class = "align_right">
+        <div class = "cs_edit_unit">
+             <div class="level_unit_label" id="ce_sess_level">Unit<br />
+             <div class = "width_150"> <%= select_tag 'unit', options_for_unit(@edit_data[:selected_language_unit]),:class => "level_unit_in_ms", :disabled => @edit_data[:unit_disabled] %></div>
+             </div>
+             <div class="level_unit_label" id="ce_sess_unit">Lesson<br />
+              <div class = "width_150"> <%= select_tag 'lesson', options_for_lesson(@edit_data[:selected_language_lesson]) ,:class => "level_unit_in_ms", :disabled => @edit_data[:unit_disabled] %></div>
+             </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+      </td>
+      <td class = "cs_max_qual_of_the_coach">
+        <div id="max_qual_of_the_coach"></div>
+        
+      </td>
+    </tr>
+  </table>
+  </div>
+  <%end%>
+  <div class = "cs_button_tray">
+    <% if current_user.is_manager? || @edit_data[:coach_session].appointment? %>
+      <span><%= button_to_function "CANCEL", "confirmationForCancel(this, learners_signed_up);", {:id => "cancel_remove_button", :class => "button_shape", :style => "background-color: #F3F3F4; border: 1px solid #444444;float:left;"} %></span>
+    <% end %>
+    <span><%= button_to_function "SAVE", "confirmationForCoachEdit(this);", {:id => "save_edited_session", :class => "button_shape", :style => "float:right;"} %></span>
+  </div>
+  <% if @edit_data[:is_availabile] == 'unavailable' %>
+    <span class = "cs_coach_not_available">
+      <b>Note: This coach is unavailable, per their template.</b>
+    </span>
+  <% end %>
+</div>
+<% else %><!--ARIA SESSION EDIT -->
+<div id="create_session_coach">
+  <div id="language_div"><%= select_tag 'language_id', coach_languages(@edit_data[:coach_session].coach_id, @edit_data[:coach_session].language_identifier, false, false, true, @edit_data[:coach_session].session_start_time), :style => "width:149px;", :from => "edit" %></div>
+  
+  <div id="number_of_seats_div" class="number_of_seats_div" style="width: 160px; margin-bottom: 20px;">
+        <span>Number of Seats : </span>
+        <span><%= select_tag 'number_of_seats', options_for_select([@edit_data[:selected_seats]]) %></span>
+  </div>
+  <% if  @edit_data[:selected_seats] > 1%>
+    <div id="cefr_div" class="cefr_div">
+          <%= select_tag 'cefr', options_for_cefr(@edit_data[:current_cefr]), :class => "dropdown", :disabled => !(@edit_data[:learners_signed_up].nil? || @edit_data[:learners_signed_up] == 0)%>
+    </div>
+    <div id="topic_div" class="topic_div" style="width: 160px;">
+      <%= select_tag 'topic', options_for_aeb_topics(@edit_data[:current_cefr],@edit_data[:coach_session].language_identifier,@edit_data[:current_topic_id],"-Topic-"), :class => "dropdown",:disabled => !(@edit_data[:learners_signed_up].nil? || @edit_data[:learners_signed_up] == 0)%>
+    </div>
+  <% end %>
+  <div>
+    <span id="ce_sess_recurring">
+              Recurring<%= check_box_tag 'recurring', 'true', @edit_data[:selected_recurring], {:style => "vertical-align: bottom;",:disabled => @edit_data[:recurring_disabled]} %>
+    </span>
+  </div>
+  <% if @edit_data[:selected_recurring] && @edit_data[:recurring_ends_at] %>
+    <br/><span id="ce_sess_recurring_ends">
+      Recurring Ends: <%= TimeUtils.time_in_user_zone(@edit_data[:recurring_ends_at]).strftime("%m/%d/%Y") %>
+    </span>
+  <% end %>
+   <br />
+    <div class = "cs_button_tray">
+      <span><%= button_to_function "CANCEL", "confirmationForCancel(this, learners_signed_up);", {:id => "cancel_remove_button", :class => "button_shape", :style => "background-color: #F3F3F4; border: 1px solid #444444;float:left;"} %></span>
+      <span><%= button_to_function "SAVE", "confirmationForCoachEdit(this);", {:id => "save_edited_session", :class => "button_shape", :style => "float:right;"} %></span>
+    </div>
+    <% if @edit_data[:is_availabile] == 'unavailable' || @edit_data[:aria_recurring_availability] == "unavailable" %>
+      <span class = "cs_coach_not_available">
+        <b>Note: This coach is unavailable, per their template.</b>
+      </span>
+    <% end %>
+  <% end %>
+</div>
+<% end %>
+<script type="text/javascript">
+  if (jQuery('#language_id').val() === "") {
+    jQuery('#language_id').val('<%=@edit_data[:coach_session].language_identifier%>'); 
+  }
+  editOperations(jQuery('#language_id').val(), true);
+  if(jQuery('#is_one_hour_session').val() === "false"){
+    if (jQuery('#language_id').val() !== undefined) {
+      if (jQuery('#language_id').val() !== 'KLE' && jQuery('#language_id').val().search("TMM-") === -1) {
+        jQuery('#village_id, #language_id').attr('disabled', jQuery('#learners_signed_up').val() != "0");
+        jQuery('#number_of_seats').attr('disabled', (jQuery('#learners_signed_up').val() != "0" && jQuery('#number_of_seats').val() === "1"));
+        if ('<%= @edit_data[:wildcard_disabled] %>' == 'true')
+        {
+          jQuery('#wildcard').attr('disabled',true);
+        }
+        if ('<%= @edit_data[:unit_disabled] %>' == 'true')
+        {
+          jQuery('#unit').attr('disabled',true);
+          jQuery('#lesson').attr('disabled',true);
+        }
+      }
+      else if(jQuery('#language_id').val() !== 'KLE'){
+        jQuery('#language_id').attr('disabled',true);
+      }
+    }
+  }
+  else{
+    jQuery('#language_id').attr('disabled', true);
+    jQuery('#number_of_seats').attr('disabled', true);
+  }
+</script>

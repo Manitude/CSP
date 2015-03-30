@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/auth
+END
+htdigest
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/auth/htdigest
+END
+htpasswd
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/auth/htpasswd
+END
+test_digest.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/auth/test_digest.rb
+END
+test_basic.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/auth/test_basic.rb
+END

@@ -1,0 +1,106 @@
+# == Schema Information
+#
+# Table name: unavailable_despite_templates
+#
+#  id                  :integer(4)      not null, primary key
+#  coach_id            :integer(4)      
+#  start_date          :datetime        
+#  end_date            :datetime        
+#  unavailability_type :integer(1)      default(0)
+#  comments            :text(65535)     
+#  approval_status     :integer(1)      default(0)
+#  coach_session_id    :integer(4)      
+#  created_at          :datetime        
+#  updated_at          :datetime        
+#
+
+## YAML Template.
+---
+unavailable_despite_template_01:
+  coach : dutchfellow
+  start_date : 2025-06-13 17:00:00
+  end_date : 2025-06-13 18:00:00
+  unavailability_type : 1
+  approval_status : 1
+  coach_session_id : 634546584
+unavailable_despite_template_02:
+  coach : dutchfellow
+  start_date :  2025-06-13 11:00:00
+  end_date :  2025-06-13 12:00:00
+  unavailability_type : 1
+  approval_status : 1
+  coach_session_id : 896365573
+unavailable_despite_template_03:
+  coach : dutchfellow
+  start_date :  2025-06-13 10:00:00
+  end_date :  2025-06-13 11:00:00
+  unavailability_type : 0
+  approval_status : 1
+  coach_session_id : 9876543
+unavailable_despite_template_04:
+  coach : dutchfellow
+  start_date :  2025-06-13 09:00:00
+  end_date :  2025-06-13 10:00:00
+  unavailability_type : 0
+  approval_status : 1
+  coach_session_id : 581815672
+
+unavailable_despite_template_05:
+  coach : dranjit
+  start_date :  2020-06-13 09:00:00
+  end_date :  2020-07-14 09:00:00
+  unavailability_type : 0
+  approval_status : 1
+  coach_session_id : NULL
+  comments : "abcd"
+
+unavailable_despite_template_06:
+  coach : dutchfellow
+  start_date :  2020-06-13 11:00:00
+  end_date :  2020-06-13 12:00:00
+  unavailability_type : 1
+  approval_status : 1
+  coach_session_id : 996365573
+
+past_unapproved_timeoff_request:
+  id : 123
+  coach : psubramanian
+  start_date :  2010-06-13 09:00:00
+  end_date :  2010-06-13 10:00:00
+  unavailability_type : 0
+  approval_status : 0
+
+future_approved_timeoff_request:
+  id : 345
+  coach : psubramanian
+  start_date :  2099-06-13 09:00:00
+  end_date :  2099-06-13 10:00:00
+  unavailability_type : 0
+  approval_status : 1
+
+future_unapproved_timeoff_request:
+  id : 567
+  coach : psubramanian
+  start_date :  2099-06-13 11:00:00
+  end_date :  2099-06-13 12:00:00
+  unavailability_type : 0
+  approval_status : 0
+
+utd_to_check_avail:
+  id : 568
+  coach : ARA_scheduled_coach
+  start_date :  2012-01-10 11:00:00
+  end_date :  2012-01-10 12:00:00
+  unavailability_type : 0
+  approval_status : 1
+
+unavailable_despite_template_KLE_scheduled:
+  coach : Scheduled_Coach
+  start_date :  '2090-05-15 11:00:00 '
+  end_date :  '2090-05-15 14:00:00 '
+  unavailability_type : 0
+  approval_status : 1
+  coach_session_id : NULL
+  comments : "abcd"
+
+

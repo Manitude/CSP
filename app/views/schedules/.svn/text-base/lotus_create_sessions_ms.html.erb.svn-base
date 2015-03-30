@@ -1,0 +1,38 @@
+<style type="text/css">
+#recurring_container {
+    color: #000000;
+    float: left !important;
+    width: 50% !important;
+}
+#create_new_session_ms {
+  padding: 0px !important;
+}
+</style>
+<div id="create_new_session_ms">
+  <div id="bottom_part_of_facebox" style="float: left; position: relative; width: 100%;">
+    <% if @create_session[:all_coaches].flatten.any? %>
+      <div id="available_coaches_container">
+        <!-- Available Coaches -->
+        Coaches:<br/>
+        <%= render :partial => 'shared/coach_list', :locals => {:coaches => @create_session[:all_coaches], :start_time => @create_session[:session_start_time]}%>
+      </div>
+      <b>Note: Shifts created for unavailable coaches will not be recurring.</b>
+      <div class="right_container lotus_right" style="margin-top: 5px;">
+        <div id="recurring_container" style="display:block; margin-top: 5px;">
+          <%= check_box_tag 'recurring', 'recurring', true %>
+          Recurring
+        </div>
+        <div id="button_container" style="float: right;">
+          <input type = "button" id = "create_session" class = "button_shape" value = "Create" onclick="createCoachSessionFromMS(true, <%=  @create_session[:language].id %>,'<%= @create_session[:session_start_time].to_i %>')"/>
+        </div>
+      </div>
+      <% else %>
+        There are no coaches available at this time slot.
+      <% end %>
+  </div>
+</div>
+<script type="text/javascript">
+  jQuery('#coach_list').attr('multiple', 'multiple');
+  jQuery('#coach_list').attr('size', '5');
+  jQuery('#coach_list').css('width', '195px');
+</script>

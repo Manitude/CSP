@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/addressable-2.3.5/spec/addressable
+END
+idna_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/addressable-2.3.5/spec/addressable/idna_spec.rb
+END
+template_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/addressable-2.3.5/spec/addressable/template_spec.rb
+END
+uri_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/addressable-2.3.5/spec/addressable/uri_spec.rb
+END
+net_http_compat_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/addressable-2.3.5/spec/addressable/net_http_compat_spec.rb
+END

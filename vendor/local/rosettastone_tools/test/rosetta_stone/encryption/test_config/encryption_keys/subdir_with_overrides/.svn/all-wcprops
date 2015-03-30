@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/encryption/test_config/encryption_keys/subdir_with_overrides
+END
+rsa_encryption_public_key.pem
+K 25
+svn:wc:ra_dav:version-url
+V 200
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/encryption/test_config/encryption_keys/subdir_with_overrides/rsa_encryption_public_key.pem
+END
+rsa_encryption_public_key.pem.sample
+K 25
+svn:wc:ra_dav:version-url
+V 207
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/encryption/test_config/encryption_keys/subdir_with_overrides/rsa_encryption_public_key.pem.sample
+END
+rsa_encryption_private_key.pem
+K 25
+svn:wc:ra_dav:version-url
+V 201
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/encryption/test_config/encryption_keys/subdir_with_overrides/rsa_encryption_private_key.pem
+END
+rsa_encryption_private_key.pem.sample
+K 25
+svn:wc:ra_dav:version-url
+V 208
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/encryption/test_config/encryption_keys/subdir_with_overrides/rsa_encryption_private_key.pem.sample
+END

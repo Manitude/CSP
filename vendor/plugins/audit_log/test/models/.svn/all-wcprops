@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/144123/plugins/audit_log/trunk/test/models
+END
+artist.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/144123/plugins/audit_log/trunk/test/models/artist.rb
+END
+song.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/14298/plugins/audit_log/trunk/test/models/song.rb
+END
+album.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/144123/plugins/audit_log/trunk/test/models/album.rb
+END

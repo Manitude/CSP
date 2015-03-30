@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/110091/gems/uniform_notifier/1.0.2/spec/uniform_notifier
+END
+xmpp_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/110091/gems/uniform_notifier/1.0.2/spec/uniform_notifier/xmpp_spec.rb
+END
+customized_logger_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/110091/gems/uniform_notifier/1.0.2/spec/uniform_notifier/customized_logger_spec.rb
+END
+javascript_console_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/110091/gems/uniform_notifier/1.0.2/spec/uniform_notifier/javascript_console_spec.rb
+END
+rails_logger_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/110091/gems/uniform_notifier/1.0.2/spec/uniform_notifier/rails_logger_spec.rb
+END
+growl_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/110091/gems/uniform_notifier/1.0.2/spec/uniform_notifier/growl_spec.rb
+END
+javascript_alert_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/110091/gems/uniform_notifier/1.0.2/spec/uniform_notifier/javascript_alert_spec.rb
+END

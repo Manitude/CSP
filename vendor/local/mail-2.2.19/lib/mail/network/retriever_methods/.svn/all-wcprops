@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/network/retriever_methods
+END
+pop3.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/network/retriever_methods/pop3.rb
+END
+imap.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/network/retriever_methods/imap.rb
+END
+test_retriever.rb
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/network/retriever_methods/test_retriever.rb
+END
+base.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/network/retriever_methods/base.rb
+END

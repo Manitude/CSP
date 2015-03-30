@@ -1,0 +1,5 @@
+Please select the reason that best explains why a substitute is being requested for this <%= params[:is_appointment].present? ? 'appointment' : 'session' %>.<br><br>
+<%= render :partial => 'shared/show_reasons' %>
+<br><br>
+ <input id="request_substitute_button" type="button" class="button medium_button" value="Request"/>
+ <input id="cancel_substitute_button_request" type="button" class="button medium_button" value="Cancel"/>

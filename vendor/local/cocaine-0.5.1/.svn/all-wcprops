@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/Gemfile
+END
+NEWS.md
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/NEWS.md
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/README.md
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/LICENSE
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/Rakefile
+END
+cocaine.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/cocaine.gemspec
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/.gitignore
+END
+GOALS
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/GOALS
+END
+.travis.yml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/.travis.yml
+END

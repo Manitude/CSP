@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/lib/amqp/deprecated
+END
+rpc.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/lib/amqp/deprecated/rpc.rb
+END
+mq.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/lib/amqp/deprecated/mq.rb
+END
+logger.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/lib/amqp/deprecated/logger.rb
+END
+fork.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/lib/amqp/deprecated/fork.rb
+END

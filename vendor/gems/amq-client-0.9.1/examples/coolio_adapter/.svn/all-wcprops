@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/coolio_adapter
+END
+channel_close.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/coolio_adapter/channel_close.rb
+END
+basic_consume_with_acknowledgements.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/coolio_adapter/basic_consume_with_acknowledgements.rb
+END
+queue_bind.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/coolio_adapter/queue_bind.rb
+END
+exchange_declare.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/coolio_adapter/exchange_declare.rb
+END
+queue_unbind.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/coolio_adapter/queue_unbind.rb
+END
+queue_purge.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/coolio_adapter/queue_purge.rb
+END
+basic_publish.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/coolio_adapter/basic_publish.rb
+END
+basic_consume.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/coolio_adapter/basic_consume.rb
+END
+basic_consume_with_rejections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/coolio_adapter/basic_consume_with_rejections.rb
+END
+example_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/coolio_adapter/example_helper.rb
+END
+kitchen_sink1.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/coolio_adapter/kitchen_sink1.rb
+END

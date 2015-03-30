@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/agents
+END
+csp_controller_agent.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/agents/csp_controller_agent.rb
+END
+csp_reflex_events_consumer_agent.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/agents/csp_reflex_events_consumer_agent.rb
+END

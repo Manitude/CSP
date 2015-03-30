@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mocha-0.13.2/test/integration
+END
+shared_tests.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mocha-0.13.2/test/integration/shared_tests.rb
+END
+mini_test_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mocha-0.13.2/test/integration/mini_test_test.rb
+END
+test_unit_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mocha-0.13.2/test/integration/test_unit_test.rb
+END

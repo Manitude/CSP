@@ -1,0 +1,7 @@
+<div>
+  <% if succeeded %>
+    <%= image_tag 'success.png'%>
+  <% else %>
+    <%= image_tag 'failure.png', :title => message %>
+  <% end %>
+</div>

@@ -1,0 +1,2546 @@
+# == Schema Information
+#
+# Table name: coach_availabilities
+#
+#  id                             :integer(4)      not null, primary key
+#  coach_availability_template_id :integer(4)      not null
+#  day_index                      :integer(1)      not null
+#  start_time                     :time            not null
+#  end_time                       :time            not null
+#  created_at                     :datetime        
+#  updated_at                     :datetime        
+#
+
+---
+coach_availabilities_010:
+  created_at: 2010-11-17 15:55:42
+  end_time: "06:00:00"
+  updated_at: 2010-11-17 15:55:42
+  coach_availability_template_id: "2"
+  id: "10"
+  day_index: "2"
+  start_time: "05:00:00"
+coach_availabilities_011:
+  created_at: 2010-11-17 15:55:42
+  end_time: "08:00:00"
+  updated_at: 2010-11-17 15:55:42
+  coach_availability_template_id: "2"
+  id: "11"
+  day_index: "2"
+  start_time: "07:00:00"
+coach_availabilities_012:
+  created_at: 2010-11-17 21:26:22
+  end_time: "10:00:00"
+  updated_at: 2010-11-17 21:26:22
+  coach_availability_template_id: "3"
+  id: "12"
+  day_index: "2"
+  start_time: "09:00:00"
+coach_availabilities_200:
+  created_at: 2010-11-23 10:10:08
+  end_time: "19:00:00"
+  updated_at: 2010-11-23 10:10:08
+  coach_availability_template_id: "24"
+  id: "200"
+  day_index: "1"
+  start_time: "18:00:00"
+coach_availabilities_013:
+  created_at: 2010-11-17 21:26:22
+  end_time: "10:00:00"
+  updated_at: 2010-11-17 21:26:22
+  coach_availability_template_id: "3"
+  id: "13"
+  day_index: "3"
+  start_time: "09:00:00"
+coach_availabilities_120:
+  created_at: 2010-11-22 14:14:57
+  end_time: "18:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "120"
+  day_index: "2"
+  start_time: "17:00:00"
+coach_availabilities_201:
+  created_at: 2010-11-23 10:10:08
+  end_time: "20:00:00"
+  updated_at: 2010-11-23 10:10:08
+  coach_availability_template_id: "24"
+  id: "201"
+  day_index: "1"
+  start_time: "19:00:00"
+coach_availabilities_014:
+  created_at: 2010-11-17 21:26:40
+  end_time: "05:00:00"
+  updated_at: 2010-11-17 21:26:40
+  coach_availability_template_id: "3"
+  id: "14"
+  day_index: "1"
+  start_time: "04:00:00"
+coach_availabilities_040:
+  created_at: 2010-11-20 02:03:06
+  end_time: "12:30:00"
+  updated_at: 2010-11-20 02:03:06
+  coach_availability_template_id: "10"
+  id: "40"
+  day_index: "0"
+  start_time: "11:30:00"
+coach_availabilities_121:
+  created_at: 2010-11-22 14:14:57
+  end_time: "19:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "121"
+  day_index: "2"
+  start_time: "18:00:00"
+coach_availabilities_202:
+  created_at: 2010-11-23 10:10:08
+  end_time: "11:00:00"
+  updated_at: 2010-11-23 10:10:08
+  coach_availability_template_id: "24"
+  id: "202"
+  day_index: "2"
+  start_time: "10:00:00"
+coach_availabilities_310:
+  created_at: 2010-11-26 11:56:04
+  end_time: "12:00:00"
+  updated_at: 2010-11-26 11:56:04
+  coach_availability_template_id: "33"
+  id: "310"
+  day_index: "3"
+  start_time: "11:00:00"
+coach_availabilities_015:
+  created_at: 2010-11-17 21:26:50
+  end_time: "15:00:00"
+  updated_at: 2010-11-17 21:26:50
+  coach_availability_template_id: "3"
+  id: "15"
+  day_index: "1"
+  start_time: "14:00:00"
+coach_availabilities_041:
+  created_at: 2010-11-20 02:03:06
+  end_time: "13:30:00"
+  updated_at: 2010-11-20 02:03:06
+  coach_availability_template_id: "10"
+  id: "41"
+  day_index: "0"
+  start_time: "12:30:00"
+coach_availabilities_122:
+  created_at: 2010-11-22 14:14:57
+  end_time: "20:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "122"
+  day_index: "2"
+  start_time: "19:00:00"
+coach_availabilities_203:
+  created_at: 2010-11-23 10:10:08
+  end_time: "12:00:00"
+  updated_at: 2010-11-23 10:10:08
+  coach_availability_template_id: "24"
+  id: "203"
+  day_index: "2"
+  start_time: "11:00:00"
+coach_availabilities_311:
+  created_at: 2010-11-26 11:56:04
+  end_time: "15:00:00"
+  updated_at: 2010-11-26 11:56:04
+  coach_availability_template_id: "33"
+  id: "311"
+  day_index: "3"
+  start_time: "14:00:00"
+coach_availabilities_230:
+  created_at: 2010-11-23 10:13:17
+  end_time: "14:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "230"
+  day_index: "3"
+  start_time: "13:15:00"
+coach_availabilities_016:
+  created_at: 2010-11-17 21:26:50
+  end_time: "15:00:00"
+  updated_at: 2010-11-17 21:26:50
+  coach_availability_template_id: "3"
+  id: "16"
+  day_index: "2"
+  start_time: "14:00:00"
+coach_availabilities_042:
+  created_at: 2010-11-20 02:04:48
+  end_time: "12:30:00"
+  updated_at: 2010-11-20 02:04:48
+  coach_availability_template_id: "9"
+  id: "42"
+  day_index: "0"
+  start_time: "11:30:00"
+coach_availabilities_123:
+  created_at: 2010-11-22 14:14:57
+  end_time: "21:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "123"
+  day_index: "2"
+  start_time: "20:00:00"
+coach_availabilities_204:
+  created_at: 2010-11-23 10:10:08
+  end_time: "13:00:00"
+  updated_at: 2010-11-23 10:10:08
+  coach_availability_template_id: "24"
+  id: "204"
+  day_index: "2"
+  start_time: "12:00:00"
+coach_availabilities_312:
+  created_at: 2010-11-26 11:56:04
+  end_time: "11:00:00"
+  updated_at: 2010-11-26 11:56:04
+  coach_availability_template_id: "33"
+  id: "312"
+  day_index: "4"
+  start_time: "10:00:00"
+coach_availabilities_231:
+  created_at: 2010-11-23 10:13:17
+  end_time: "15:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "231"
+  day_index: "3"
+  start_time: "14:15:00"
+coach_availabilities_017:
+  created_at: 2010-11-17 21:46:48
+  end_time: "03:00:00"
+  updated_at: 2010-11-17 21:46:48
+  coach_availability_template_id: "3"
+  id: "17"
+  day_index: "3"
+  start_time: "02:00:00"
+coach_availabilities_043:
+  created_at: 2010-11-20 02:04:48
+  end_time: "13:30:00"
+  updated_at: 2010-11-20 02:04:48
+  coach_availability_template_id: "9"
+  id: "43"
+  day_index: "0"
+  start_time: "12:30:00"
+coach_availabilities_124:
+  created_at: 2010-11-22 14:14:57
+  end_time: "22:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "124"
+  day_index: "2"
+  start_time: "21:00:00"
+coach_availabilities_150:
+  created_at: 2010-11-22 14:14:58
+  end_time: "21:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "150"
+  day_index: "5"
+  start_time: "20:00:00"
+coach_availabilities_205:
+  created_at: 2010-11-23 10:10:08
+  end_time: "14:00:00"
+  updated_at: 2010-11-23 10:10:08
+  coach_availability_template_id: "24"
+  id: "205"
+  day_index: "2"
+  start_time: "13:00:00"
+coach_availabilities_313:
+  created_at: 2010-11-26 11:56:04
+  end_time: "14:00:00"
+  updated_at: 2010-11-26 11:56:04
+  coach_availability_template_id: "33"
+  id: "313"
+  day_index: "4"
+  start_time: "13:00:00"
+coach_availabilities_232:
+  created_at: 2010-11-23 10:13:17
+  end_time: "11:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "232"
+  day_index: "4"
+  start_time: "10:15:00"
+coach_availabilities_044:
+  created_at: 2010-11-20 02:04:48
+  end_time: "14:30:00"
+  updated_at: 2010-11-20 02:04:48
+  coach_availability_template_id: "9"
+  id: "44"
+  day_index: "0"
+  start_time: "13:30:00"
+coach_availabilities_070:
+  created_at: 2010-11-22 06:14:07
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 06:14:07
+  coach_availability_template_id: "11"
+  id: "70"
+  day_index: "4"
+  start_time: "15:30:00"
+coach_availabilities_125:
+  created_at: 2010-11-22 14:14:57
+  end_time: "14:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "125"
+  day_index: "3"
+  start_time: "13:00:00"
+coach_availabilities_151:
+  created_at: 2010-11-22 14:14:58
+  end_time: "22:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "151"
+  day_index: "5"
+  start_time: "21:00:00"
+coach_availabilities_206:
+  created_at: 2010-11-23 10:10:08
+  end_time: "18:00:00"
+  updated_at: 2010-11-23 10:10:08
+  coach_availability_template_id: "24"
+  id: "206"
+  day_index: "2"
+  start_time: "17:00:00"
+coach_availabilities_314:
+  created_at: 2010-11-26 11:56:04
+  end_time: "10:00:00"
+  updated_at: 2010-11-26 11:56:04
+  coach_availability_template_id: "33"
+  id: "314"
+  day_index: "5"
+  start_time: "09:00:00"
+coach_availabilities_233:
+  created_at: 2010-11-23 10:13:17
+  end_time: "12:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "233"
+  day_index: "4"
+  start_time: "11:15:00"
+coach_availabilities_019:
+  created_at: 2010-11-18 18:02:10
+  end_time: "13:30:00"
+  updated_at: 2010-11-18 18:02:10
+  coach_availability_template_id: "4"
+  id: "19"
+  day_index: "1"
+  start_time: "12:30:00"
+coach_availabilities_045:
+  created_at: 2010-11-20 02:04:48
+  end_time: "12:30:00"
+  updated_at: 2010-11-20 02:04:48
+  coach_availability_template_id: "9"
+  id: "45"
+  day_index: "1"
+  start_time: "11:30:00"
+coach_availabilities_071:
+  created_at: 2010-11-22 06:14:07
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 06:14:07
+  coach_availability_template_id: "11"
+  id: "71"
+  day_index: "5"
+  start_time: "15:30:00"
+coach_availabilities_126:
+  created_at: 2010-11-22 14:14:57
+  end_time: "15:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "126"
+  day_index: "3"
+  start_time: "14:00:00"
+coach_availabilities_152:
+  created_at: 2010-11-22 14:14:58
+  end_time: "14:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "152"
+  day_index: "6"
+  start_time: "13:00:00"
+coach_availabilities_207:
+  created_at: 2010-11-23 10:10:08
+  end_time: "19:00:00"
+  updated_at: 2010-11-23 10:10:08
+  coach_availability_template_id: "24"
+  id: "207"
+  day_index: "2"
+  start_time: "18:00:00"
+coach_availabilities_315:
+  created_at: 2010-11-26 11:56:04
+  end_time: "13:00:00"
+  updated_at: 2010-11-26 11:56:04
+  coach_availability_template_id: "33"
+  id: "315"
+  day_index: "5"
+  start_time: "12:00:00"
+coach_availabilities_260:
+  created_at: 2010-11-23 22:53:20
+  end_time: "14:15:00"
+  updated_at: 2010-11-23 22:53:20
+  coach_availability_template_id: "17"
+  id: "260"
+  day_index: "2"
+  start_time: "13:15:00"
+coach_availabilities_234:
+  created_at: 2010-11-23 10:13:17
+  end_time: "13:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "234"
+  day_index: "4"
+  start_time: "12:15:00"
+coach_availabilities_046:
+  created_at: 2010-11-20 02:04:48
+  end_time: "12:30:00"
+  updated_at: 2010-11-20 02:04:48
+  coach_availability_template_id: "9"
+  id: "46"
+  day_index: "2"
+  start_time: "11:30:00"
+coach_availabilities_072:
+  created_at: 2010-11-22 06:14:07
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 06:14:07
+  coach_availability_template_id: "11"
+  id: "72"
+  day_index: "6"
+  start_time: "15:30:00"
+coach_availabilities_127:
+  created_at: 2010-11-22 14:14:57
+  end_time: "16:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "127"
+  day_index: "3"
+  start_time: "15:00:00"
+coach_availabilities_153:
+  created_at: 2010-11-22 14:14:58
+  end_time: "15:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "153"
+  day_index: "6"
+  start_time: "14:00:00"
+coach_availabilities_208:
+  created_at: 2010-11-23 10:10:08
+  end_time: "20:00:00"
+  updated_at: 2010-11-23 10:10:08
+  coach_availability_template_id: "24"
+  id: "208"
+  day_index: "2"
+  start_time: "19:00:00"
+coach_availabilities_316:
+  created_at: 2010-11-26 11:56:04
+  end_time: "09:00:00"
+  updated_at: 2010-11-26 11:56:04
+  coach_availability_template_id: "33"
+  id: "316"
+  day_index: "6"
+  start_time: "08:00:00"
+coach_availabilities_261:
+  created_at: 2010-11-23 22:53:20
+  end_time: "13:15:00"
+  updated_at: 2010-11-23 22:53:20
+  coach_availability_template_id: "17"
+  id: "261"
+  day_index: "3"
+  start_time: "12:15:00"
+coach_availabilities_235:
+  created_at: 2010-11-23 10:13:17
+  end_time: "14:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "235"
+  day_index: "4"
+  start_time: "13:15:00"
+coach_availabilities_047:
+  created_at: 2010-11-20 02:04:48
+  end_time: "12:30:00"
+  updated_at: 2010-11-20 02:04:48
+  coach_availability_template_id: "9"
+  id: "47"
+  day_index: "3"
+  start_time: "11:30:00"
+coach_availabilities_073:
+  created_at: 2010-11-22 06:16:09
+  end_time: "18:30:00"
+  updated_at: 2010-11-22 06:16:09
+  coach_availability_template_id: "12"
+  id: "73"
+  day_index: "0"
+  start_time: "17:30:00"
+coach_availabilities_128:
+  created_at: 2010-11-22 14:14:57
+  end_time: "17:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "128"
+  day_index: "3"
+  start_time: "16:00:00"
+coach_availabilities_154:
+  created_at: 2010-11-22 14:14:58
+  end_time: "16:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "154"
+  day_index: "6"
+  start_time: "15:00:00"
+coach_availabilities_180:
+  created_at: 2010-11-22 16:45:22
+  end_time: "11:30:00"
+  updated_at: 2010-11-22 16:45:22
+  coach_availability_template_id: "21"
+  id: "180"
+  day_index: "3"
+  start_time: "10:30:00"
+coach_availabilities_209:
+  created_at: 2010-11-23 10:10:08
+  end_time: "18:00:00"
+  updated_at: 2010-11-23 10:10:08
+  coach_availability_template_id: "24"
+  id: "209"
+  day_index: "3"
+  start_time: "17:00:00"
+coach_availabilities_317:
+  created_at: 2010-11-26 12:01:48
+  end_time: "11:00:00"
+  updated_at: 2010-11-26 12:01:48
+  coach_availability_template_id: "34"
+  id: "317"
+  day_index: "0"
+  start_time: "10:00:00"
+coach_availabilities_262:
+  created_at: 2010-11-23 22:53:20
+  end_time: "14:15:00"
+  updated_at: 2010-11-23 22:53:20
+  coach_availability_template_id: "17"
+  id: "262"
+  day_index: "3"
+  start_time: "13:15:00"
+coach_availabilities_236:
+  created_at: 2010-11-23 10:13:17
+  end_time: "15:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "236"
+  day_index: "4"
+  start_time: "14:15:00"
+coach_availabilities_048:
+  created_at: 2010-11-20 02:04:48
+  end_time: "12:30:00"
+  updated_at: 2010-11-20 02:04:48
+  coach_availability_template_id: "9"
+  id: "48"
+  day_index: "5"
+  start_time: "11:30:00"
+coach_availabilities_129:
+  created_at: 2010-11-22 14:14:57
+  end_time: "18:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "129"
+  day_index: "3"
+  start_time: "17:00:00"
+coach_availabilities_155:
+  created_at: 2010-11-22 14:14:58
+  end_time: "17:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "155"
+  day_index: "6"
+  start_time: "16:00:00"
+coach_availabilities_181:
+  created_at: 2010-11-22 16:45:22
+  end_time: "12:30:00"
+  updated_at: 2010-11-22 16:45:22
+  coach_availability_template_id: "21"
+  id: "181"
+  day_index: "3"
+  start_time: "11:30:00"
+coach_availabilities_318:
+  created_at: 2010-11-26 12:01:48
+  end_time: "12:00:00"
+  updated_at: 2010-11-26 12:01:48
+  coach_availability_template_id: "34"
+  id: "318"
+  day_index: "1"
+  start_time: "11:00:00"
+coach_availabilities_263:
+  created_at: 2010-11-24 06:50:02
+  end_time: "21:30:00"
+  updated_at: 2010-11-24 06:50:02
+  coach_availability_template_id: "27"
+  id: "263"
+  day_index: "0"
+  start_time: "20:30:00"
+coach_availabilities_237:
+  created_at: 2010-11-23 10:13:17
+  end_time: "11:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "237"
+  day_index: "5"
+  start_time: "10:15:00"
+coach_availabilities_075:
+  created_at: 2010-11-22 06:18:10
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 06:18:10
+  coach_availability_template_id: "13"
+  id: "75"
+  day_index: "0"
+  start_time: "15:30:00"
+coach_availabilities_156:
+  created_at: 2010-11-22 14:14:58
+  end_time: "18:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "156"
+  day_index: "6"
+  start_time: "17:00:00"
+coach_availabilities_182:
+  created_at: 2010-11-22 16:45:22
+  end_time: "11:30:00"
+  updated_at: 2010-11-22 16:45:22
+  coach_availability_template_id: "21"
+  id: "182"
+  day_index: "4"
+  start_time: "10:30:00"
+coach_availabilities_319:
+  created_at: 2010-11-26 12:01:48
+  end_time: "13:00:00"
+  updated_at: 2010-11-26 12:01:48
+  coach_availability_template_id: "34"
+  id: "319"
+  day_index: "2"
+  start_time: "12:00:00"
+coach_availabilities_290:
+  created_at: 2010-11-25 12:57:25
+  end_time: "16:00:00"
+  updated_at: 2010-11-25 12:57:25
+  coach_availability_template_id: "30"
+  id: "290"
+  day_index: "6"
+  start_time: "15:00:00"
+coach_availabilities_264:
+  created_at: 2010-11-24 06:50:02
+  end_time: "21:30:00"
+  updated_at: 2010-11-24 06:50:02
+  coach_availability_template_id: "27"
+  id: "264"
+  day_index: "1"
+  start_time: "20:30:00"
+coach_availabilities_238:
+  created_at: 2010-11-23 10:13:17
+  end_time: "12:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "238"
+  day_index: "5"
+  start_time: "11:15:00"
+coach_availabilities_076:
+  created_at: 2010-11-22 06:18:10
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 06:18:10
+  coach_availability_template_id: "13"
+  id: "76"
+  day_index: "1"
+  start_time: "15:30:00"
+coach_availabilities_157:
+  created_at: 2010-11-22 14:14:58
+  end_time: "19:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "157"
+  day_index: "6"
+  start_time: "18:00:00"
+coach_availabilities_183:
+  created_at: 2010-11-22 16:45:22
+  end_time: "11:30:00"
+  updated_at: 2010-11-22 16:45:22
+  coach_availability_template_id: "21"
+  id: "183"
+  day_index: "5"
+  start_time: "10:30:00"
+coach_availabilities_291:
+  created_at: 2010-11-25 13:07:09
+  end_time: "14:00:00"
+  updated_at: 2010-11-25 13:07:09
+  coach_availability_template_id: "31"
+  id: "291"
+  day_index: "0"
+  start_time: "13:00:00"
+coach_availabilities_265:
+  created_at: 2010-11-24 06:50:02
+  end_time: "21:30:00"
+  updated_at: 2010-11-24 06:50:02
+  coach_availability_template_id: "27"
+  id: "265"
+  day_index: "2"
+  start_time: "20:30:00"
+coach_availabilities_239:
+  created_at: 2010-11-23 10:13:17
+  end_time: "13:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "239"
+  day_index: "5"
+  start_time: "12:15:00"
+coach_availabilities_077:
+  created_at: 2010-11-22 06:18:10
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 06:18:10
+  coach_availability_template_id: "13"
+  id: "77"
+  day_index: "2"
+  start_time: "15:30:00"
+coach_availabilities_158:
+  created_at: 2010-11-22 14:14:58
+  end_time: "20:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "158"
+  day_index: "6"
+  start_time: "19:00:00"
+coach_availabilities_184:
+  created_at: 2010-11-22 16:45:22
+  end_time: "11:30:00"
+  updated_at: 2010-11-22 16:45:22
+  coach_availability_template_id: "21"
+  id: "184"
+  day_index: "6"
+  start_time: "10:30:00"
+coach_availabilities_292:
+  created_at: 2010-11-25 13:07:09
+  end_time: "14:00:00"
+  updated_at: 2010-11-25 13:07:09
+  coach_availability_template_id: "31"
+  id: "292"
+  day_index: "1"
+  start_time: "13:00:00"
+coach_availabilities_266:
+  created_at: 2010-11-24 06:50:02
+  end_time: "21:30:00"
+  updated_at: 2010-11-24 06:50:02
+  coach_availability_template_id: "27"
+  id: "266"
+  day_index: "3"
+  start_time: "20:30:00"
+coach_availabilities_078:
+  created_at: 2010-11-22 06:18:10
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 06:18:10
+  coach_availability_template_id: "13"
+  id: "78"
+  day_index: "3"
+  start_time: "15:30:00"
+coach_availabilities_159:
+  created_at: 2010-11-22 14:14:58
+  end_time: "21:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "159"
+  day_index: "6"
+  start_time: "20:00:00"
+coach_availabilities_185:
+  created_at: 2010-11-23 09:00:23
+  end_time: "17:15:00"
+  updated_at: 2010-11-23 09:00:23
+  coach_availability_template_id: "22"
+  id: "185"
+  day_index: "0"
+  start_time: "16:15:00"
+coach_availabilities_293:
+  created_at: 2010-11-25 13:07:09
+  end_time: "14:00:00"
+  updated_at: 2010-11-25 13:07:09
+  coach_availability_template_id: "31"
+  id: "293"
+  day_index: "2"
+  start_time: "13:00:00"
+coach_availabilities_267:
+  created_at: 2010-11-24 06:50:02
+  end_time: "21:30:00"
+  updated_at: 2010-11-24 06:50:02
+  coach_availability_template_id: "27"
+  id: "267"
+  day_index: "4"
+  start_time: "20:30:00"
+coach_availabilities_079:
+  created_at: 2010-11-22 06:18:10
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 06:18:10
+  coach_availability_template_id: "13"
+  id: "79"
+  day_index: "4"
+  start_time: "15:30:00"
+coach_availabilities_186:
+  created_at: 2010-11-23 09:00:23
+  end_time: "17:15:00"
+  updated_at: 2010-11-23 09:00:23
+  coach_availability_template_id: "22"
+  id: "186"
+  day_index: "1"
+  start_time: "16:15:00"
+coach_availabilities_294:
+  created_at: 2010-11-25 13:07:09
+  end_time: "14:00:00"
+  updated_at: 2010-11-25 13:07:09
+  coach_availability_template_id: "31"
+  id: "294"
+  day_index: "3"
+  start_time: "13:00:00"
+coach_availabilities_268:
+  created_at: 2010-11-24 06:50:02
+  end_time: "21:30:00"
+  updated_at: 2010-11-24 06:50:02
+  coach_availability_template_id: "27"
+  id: "268"
+  day_index: "5"
+  start_time: "20:30:00"
+coach_availabilities_187:
+  created_at: 2010-11-23 09:00:23
+  end_time: "17:15:00"
+  updated_at: 2010-11-23 09:00:23
+  coach_availability_template_id: "22"
+  id: "187"
+  day_index: "2"
+  start_time: "16:15:00"
+coach_availabilities_295:
+  created_at: 2010-11-25 13:07:09
+  end_time: "14:00:00"
+  updated_at: 2010-11-25 13:07:09
+  coach_availability_template_id: "31"
+  id: "295"
+  day_index: "4"
+  start_time: "13:00:00"
+coach_availabilities_269:
+  created_at: 2010-11-24 06:50:02
+  end_time: "21:30:00"
+  updated_at: 2010-11-24 06:51:22
+  coach_availability_template_id: "27"
+  id: "269"
+  day_index: "6"
+  start_time: "20:30:00"
+coach_availabilities_188:
+  created_at: 2010-11-23 09:00:23
+  end_time: "17:15:00"
+  updated_at: 2010-11-23 09:00:23
+  coach_availability_template_id: "22"
+  id: "188"
+  day_index: "3"
+  start_time: "16:15:00"
+coach_availabilities_296:
+  created_at: 2010-11-25 13:07:09
+  end_time: "14:00:00"
+  updated_at: 2010-11-25 13:07:09
+  coach_availability_template_id: "31"
+  id: "296"
+  day_index: "5"
+  start_time: "13:00:00"
+coach_availabilities_189:
+  created_at: 2010-11-23 09:00:23
+  end_time: "17:15:00"
+  updated_at: 2010-11-23 09:00:23
+  coach_availability_template_id: "22"
+  id: "189"
+  day_index: "4"
+  start_time: "16:15:00"
+coach_availabilities_297:
+  created_at: 2010-11-25 13:07:09
+  end_time: "14:00:00"
+  updated_at: 2010-11-25 13:07:09
+  coach_availability_template_id: "31"
+  id: "297"
+  day_index: "6"
+  start_time: "13:00:00"
+coach_availabilities_298:
+  created_at: 2010-11-26 11:47:44
+  end_time: "13:00:00"
+  updated_at: 2010-11-26 11:47:44
+  coach_availability_template_id: "32"
+  id: "298"
+  day_index: "0"
+  start_time: "12:00:00"
+coach_availabilities_001:
+  created_at: 2010-11-17 14:49:56
+  end_time: "06:00:00"
+  updated_at: 2010-11-17 14:49:56
+  coach_availability_template_id: "1"
+  id: "1"
+  day_index: "0"
+  start_time: "05:00:00"
+coach_availabilities_299:
+  created_at: 2010-11-26 11:47:44
+  end_time: "13:00:00"
+  updated_at: 2010-11-26 11:47:44
+  coach_availability_template_id: "32"
+  id: "299"
+  day_index: "1"
+  start_time: "12:00:00"
+coach_availabilities_002:
+  created_at: 2010-11-17 14:49:56
+  end_time: "07:00:00"
+  updated_at: 2010-11-17 14:49:56
+  coach_availability_template_id: "1"
+  id: "2"
+  day_index: "0"
+  start_time: "06:00:00"
+coach_availabilities_003:
+  created_at: 2010-11-17 14:49:56
+  end_time: "08:00:00"
+  updated_at: 2010-11-17 14:49:56
+  coach_availability_template_id: "1"
+  id: "3"
+  day_index: "0"
+  start_time: "07:00:00"
+coach_availabilities_110:
+  created_at: 2010-11-22 14:14:57
+  end_time: "17:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "110"
+  day_index: "1"
+  start_time: "16:00:00"
+coach_availabilities_004:
+  created_at: 2010-11-17 14:49:56
+  end_time: "06:00:00"
+  updated_at: 2010-11-17 14:49:56
+  coach_availability_template_id: "1"
+  id: "4"
+  day_index: "1"
+  start_time: "05:00:00"
+coach_availabilities_111:
+  created_at: 2010-11-22 14:14:57
+  end_time: "18:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "111"
+  day_index: "1"
+  start_time: "17:00:00"
+coach_availabilities_300:
+  created_at: 2010-11-26 11:47:44
+  end_time: "13:00:00"
+  updated_at: 2010-11-26 11:47:44
+  coach_availability_template_id: "32"
+  id: "300"
+  day_index: "2"
+  start_time: "12:00:00"
+coach_availabilities_005:
+  created_at: 2010-11-17 14:49:56
+  end_time: "07:00:00"
+  updated_at: 2010-11-17 14:49:56
+  coach_availability_template_id: "1"
+  id: "5"
+  day_index: "1"
+  start_time: "06:00:00"
+coach_availabilities_112:
+  created_at: 2010-11-22 14:14:57
+  end_time: "19:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "112"
+  day_index: "1"
+  start_time: "18:00:00"
+coach_availabilities_301:
+  created_at: 2010-11-26 11:47:44
+  end_time: "13:00:00"
+  updated_at: 2010-11-26 11:47:44
+  coach_availability_template_id: "32"
+  id: "301"
+  day_index: "3"
+  start_time: "12:00:00"
+coach_availabilities_006:
+  created_at: 2010-11-17 14:49:56
+  end_time: "08:00:00"
+  updated_at: 2010-11-17 14:49:56
+  coach_availability_template_id: "1"
+  id: "6"
+  day_index: "1"
+  start_time: "07:00:00"
+coach_availabilities_113:
+  created_at: 2010-11-22 14:14:57
+  end_time: "20:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "113"
+  day_index: "1"
+  start_time: "19:00:00"
+coach_availabilities_220:
+  created_at: 2010-11-23 10:13:17
+  end_time: "14:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "220"
+  day_index: "1"
+  start_time: "13:15:00"
+coach_availabilities_007:
+  created_at: 2010-11-17 15:55:42
+  end_time: "06:00:00"
+  updated_at: 2010-11-17 15:55:42
+  coach_availability_template_id: "2"
+  id: "7"
+  day_index: "0"
+  start_time: "05:00:00"
+coach_availabilities_114:
+  created_at: 2010-11-22 14:14:57
+  end_time: "21:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "114"
+  day_index: "1"
+  start_time: "20:00:00"
+coach_availabilities_140:
+  created_at: 2010-11-22 14:14:57
+  end_time: "20:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "140"
+  day_index: "4"
+  start_time: "19:00:00"
+coach_availabilities_221:
+  created_at: 2010-11-23 10:13:17
+  end_time: "15:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "221"
+  day_index: "1"
+  start_time: "14:15:00"
+coach_availabilities_303:
+  created_at: 2010-11-26 11:47:44
+  end_time: "13:00:00"
+  updated_at: 2010-11-26 11:47:44
+  coach_availability_template_id: "32"
+  id: "303"
+  day_index: "4"
+  start_time: "12:00:00"
+coach_availabilities_008:
+  created_at: 2010-11-17 15:55:42
+  end_time: "08:00:00"
+  updated_at: 2010-11-17 15:55:42
+  coach_availability_template_id: "2"
+  id: "8"
+  day_index: "0"
+  start_time: "07:00:00"
+coach_availabilities_034:
+  created_at: 2010-11-20 02:03:06
+  end_time: "06:30:00"
+  updated_at: 2010-11-20 02:03:06
+  coach_availability_template_id: "10"
+  id: "34"
+  day_index: "0"
+  start_time: "05:30:00"
+coach_availabilities_060:
+  created_at: 2010-11-20 02:25:58
+  end_time: "13:30:00"
+  updated_at: 2010-11-20 02:25:58
+  coach_availability_template_id: "8"
+  id: "60"
+  day_index: "5"
+  start_time: "12:30:00"
+coach_availabilities_115:
+  created_at: 2010-11-22 14:14:57
+  end_time: "22:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "115"
+  day_index: "1"
+  start_time: "21:00:00"
+coach_availabilities_141:
+  created_at: 2010-11-22 14:14:57
+  end_time: "21:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "141"
+  day_index: "4"
+  start_time: "20:00:00"
+coach_availabilities_222:
+  created_at: 2010-11-23 10:13:17
+  end_time: "11:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "222"
+  day_index: "2"
+  start_time: "10:15:00"
+coach_availabilities_304:
+  created_at: 2010-11-26 11:47:44
+  end_time: "13:00:00"
+  updated_at: 2010-11-26 11:47:44
+  coach_availability_template_id: "32"
+  id: "304"
+  day_index: "5"
+  start_time: "12:00:00"
+coach_availabilities_223:
+  created_at: 2010-11-23 10:13:17
+  end_time: "12:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "223"
+  day_index: "2"
+  start_time: "11:15:00"
+coach_availabilities_009:
+  created_at: 2010-11-17 15:55:42
+  end_time: "07:00:00"
+  updated_at: 2010-11-17 15:55:42
+  coach_availability_template_id: "2"
+  id: "9"
+  day_index: "1"
+  start_time: "06:00:00"
+coach_availabilities_035:
+  created_at: 2010-11-20 02:03:06
+  end_time: "07:30:00"
+  updated_at: 2010-11-20 02:03:06
+  coach_availability_template_id: "10"
+  id: "35"
+  day_index: "0"
+  start_time: "06:30:00"
+coach_availabilities_061:
+  created_at: 2010-11-20 02:26:44
+  end_time: "13:30:00"
+  updated_at: 2010-11-20 02:26:44
+  coach_availability_template_id: "7"
+  id: "61"
+  day_index: "1"
+  start_time: "12:30:00"
+coach_availabilities_116:
+  created_at: 2010-11-22 14:14:57
+  end_time: "14:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "116"
+  day_index: "2"
+  start_time: "13:00:00"
+coach_availabilities_142:
+  created_at: 2010-11-22 14:14:58
+  end_time: "22:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "142"
+  day_index: "4"
+  start_time: "21:00:00"
+coach_availabilities_305:
+  created_at: 2010-11-26 11:47:44
+  end_time: "13:00:00"
+  updated_at: 2010-11-26 11:47:44
+  coach_availability_template_id: "32"
+  id: "305"
+  day_index: "6"
+  start_time: "12:00:00"
+coach_availabilities_250:
+  created_at: 2010-11-23 12:11:58
+  end_time: "03:15:00"
+  updated_at: 2010-11-23 12:11:58
+  coach_availability_template_id: "26"
+  id: "250"
+  day_index: "4"
+  start_time: "02:15:00"
+coach_availabilities_224:
+  created_at: 2010-11-23 10:13:17
+  end_time: "13:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "224"
+  day_index: "2"
+  start_time: "12:15:00"
+coach_availabilities_036:
+  created_at: 2010-11-20 02:03:06
+  end_time: "08:30:00"
+  updated_at: 2010-11-20 02:03:06
+  coach_availability_template_id: "10"
+  id: "36"
+  day_index: "0"
+  start_time: "07:30:00"
+coach_availabilities_062:
+  created_at: 2010-11-20 02:26:44
+  end_time: "13:30:00"
+  updated_at: 2010-11-20 02:26:44
+  coach_availability_template_id: "7"
+  id: "62"
+  day_index: "2"
+  start_time: "12:30:00"
+coach_availabilities_117:
+  created_at: 2010-11-22 14:14:57
+  end_time: "15:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "117"
+  day_index: "2"
+  start_time: "14:00:00"
+coach_availabilities_143:
+  created_at: 2010-11-22 14:14:58
+  end_time: "14:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "143"
+  day_index: "5"
+  start_time: "13:00:00"
+coach_availabilities_306:
+  created_at: 2010-11-26 11:56:04
+  end_time: "11:00:00"
+  updated_at: 2010-11-26 11:56:04
+  coach_availability_template_id: "33"
+  id: "306"
+  day_index: "0"
+  start_time: "10:00:00"
+coach_availabilities_251:
+  created_at: 2010-11-23 12:11:58
+  end_time: "03:15:00"
+  updated_at: 2010-11-23 12:11:58
+  coach_availability_template_id: "26"
+  id: "251"
+  day_index: "5"
+  start_time: "02:15:00"
+coach_availabilities_225:
+  created_at: 2010-11-23 10:13:17
+  end_time: "14:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "225"
+  day_index: "2"
+  start_time: "13:15:00"
+coach_availabilities_037:
+  created_at: 2010-11-20 02:03:06
+  end_time: "09:30:00"
+  updated_at: 2010-11-20 02:03:06
+  coach_availability_template_id: "10"
+  id: "37"
+  day_index: "0"
+  start_time: "08:30:00"
+coach_availabilities_063:
+  created_at: 2010-11-20 02:26:44
+  end_time: "13:30:00"
+  updated_at: 2010-11-20 02:26:44
+  coach_availability_template_id: "7"
+  id: "63"
+  day_index: "3"
+  start_time: "12:30:00"
+coach_availabilities_118:
+  created_at: 2010-11-22 14:14:57
+  end_time: "16:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "118"
+  day_index: "2"
+  start_time: "15:00:00"
+coach_availabilities_144:
+  created_at: 2010-11-22 14:14:58
+  end_time: "15:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "144"
+  day_index: "5"
+  start_time: "14:00:00"
+coach_availabilities_170:
+  created_at: 2010-11-22 15:47:47
+  end_time: "15:00:00"
+  updated_at: 2010-11-22 15:47:47
+  coach_availability_template_id: "20"
+  id: "170"
+  day_index: "3"
+  start_time: "14:00:00"
+coach_availabilities_307:
+  created_at: 2010-11-26 11:56:04
+  end_time: "12:00:00"
+  updated_at: 2010-11-26 11:56:04
+  coach_availability_template_id: "33"
+  id: "307"
+  day_index: "1"
+  start_time: "11:00:00"
+coach_availabilities_226:
+  created_at: 2010-11-23 10:13:17
+  end_time: "15:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "226"
+  day_index: "2"
+  start_time: "14:15:00"
+coach_availabilities_038:
+  created_at: 2010-11-20 02:03:06
+  end_time: "10:30:00"
+  updated_at: 2010-11-20 02:03:06
+  coach_availability_template_id: "10"
+  id: "38"
+  day_index: "0"
+  start_time: "09:30:00"
+coach_availabilities_064:
+  created_at: 2010-11-20 02:26:44
+  end_time: "13:30:00"
+  updated_at: 2010-11-20 02:26:44
+  coach_availability_template_id: "7"
+  id: "64"
+  day_index: "4"
+  start_time: "12:30:00"
+coach_availabilities_090:
+  created_at: 2010-11-22 10:26:18
+  end_time: "15:30:00"
+  updated_at: 2010-11-22 10:26:18
+  coach_availability_template_id: "16"
+  id: "90"
+  day_index: "2"
+  start_time: "14:30:00"
+coach_availabilities_119:
+  created_at: 2010-11-22 14:14:57
+  end_time: "17:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "119"
+  day_index: "2"
+  start_time: "16:00:00"
+coach_availabilities_145:
+  created_at: 2010-11-22 14:14:58
+  end_time: "16:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "145"
+  day_index: "5"
+  start_time: "15:00:00"
+coach_availabilities_171:
+  created_at: 2010-11-22 15:47:47
+  end_time: "12:00:00"
+  updated_at: 2010-11-22 15:47:47
+  coach_availability_template_id: "20"
+  id: "171"
+  day_index: "4"
+  start_time: "11:00:00"
+coach_availabilities_308:
+  created_at: 2010-11-26 11:56:04
+  end_time: "13:00:00"
+  updated_at: 2010-11-26 11:56:04
+  coach_availability_template_id: "33"
+  id: "308"
+  day_index: "2"
+  start_time: "12:00:00"
+coach_availabilities_253:
+  created_at: 2010-11-23 12:11:58
+  end_time: "03:15:00"
+  updated_at: 2010-11-23 12:11:58
+  coach_availability_template_id: "26"
+  id: "253"
+  day_index: "6"
+  start_time: "02:15:00"
+coach_availabilities_227:
+  created_at: 2010-11-23 10:13:17
+  end_time: "11:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "227"
+  day_index: "3"
+  start_time: "10:15:00"
+coach_availabilities_039:
+  created_at: 2010-11-20 02:03:06
+  end_time: "11:30:00"
+  updated_at: 2010-11-20 02:03:06
+  coach_availability_template_id: "10"
+  id: "39"
+  day_index: "0"
+  start_time: "10:30:00"
+coach_availabilities_065:
+  created_at: 2010-11-20 02:26:44
+  end_time: "13:30:00"
+  updated_at: 2010-11-20 02:26:44
+  coach_availability_template_id: "7"
+  id: "65"
+  day_index: "5"
+  start_time: "12:30:00"
+coach_availabilities_091:
+  created_at: 2010-11-22 12:34:43
+  end_time: "14:30:00"
+  updated_at: 2010-11-22 12:34:43
+  coach_availability_template_id: "17"
+  id: "91"
+  day_index: "0"
+  start_time: "13:30:00"
+coach_availabilities_146:
+  created_at: 2010-11-22 14:14:58
+  end_time: "17:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "146"
+  day_index: "5"
+  start_time: "16:00:00"
+coach_availabilities_172:
+  created_at: 2010-11-22 15:47:47
+  end_time: "12:00:00"
+  updated_at: 2010-11-22 15:47:47
+  coach_availability_template_id: "20"
+  id: "172"
+  day_index: "5"
+  start_time: "11:00:00"
+coach_availabilities_280:
+  created_at: 2010-11-25 12:22:23
+  end_time: "13:30:00"
+  updated_at: 2010-11-25 12:22:23
+  coach_availability_template_id: "29"
+  id: "280"
+  day_index: "6"
+  start_time: "12:30:00"
+coach_availabilities_254:
+  created_at: 2010-11-23 12:11:58
+  end_time: "03:15:00"
+  updated_at: 2010-11-23 12:11:58
+  coach_availability_template_id: "26"
+  id: "254"
+  day_index: "0"
+  start_time: "02:15:00"
+coach_availabilities_228:
+  created_at: 2010-11-23 10:13:17
+  end_time: "12:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "228"
+  day_index: "3"
+  start_time: "11:15:00"
+coach_availabilities_066:
+  created_at: 2010-11-22 06:14:07
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 06:14:07
+  coach_availability_template_id: "11"
+  id: "66"
+  day_index: "0"
+  start_time: "15:30:00"
+coach_availabilities_092:
+  created_at: 2010-11-22 12:34:43
+  end_time: "14:30:00"
+  updated_at: 2010-11-22 12:34:43
+  coach_availability_template_id: "17"
+  id: "92"
+  day_index: "1"
+  start_time: "13:30:00"
+coach_availabilities_147:
+  created_at: 2010-11-22 14:14:58
+  end_time: "18:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "147"
+  day_index: "5"
+  start_time: "17:00:00"
+coach_availabilities_173:
+  created_at: 2010-11-22 15:47:47
+  end_time: "12:00:00"
+  updated_at: 2010-11-22 15:47:47
+  coach_availability_template_id: "20"
+  id: "173"
+  day_index: "6"
+  start_time: "11:00:00"
+coach_availabilities_281:
+  created_at: 2010-11-25 12:22:23
+  end_time: "14:30:00"
+  updated_at: 2010-11-25 12:22:23
+  coach_availability_template_id: "29"
+  id: "281"
+  day_index: "6"
+  start_time: "13:30:00"
+coach_availabilities_255:
+  created_at: 2010-11-23 22:53:20
+  end_time: "13:15:00"
+  updated_at: 2010-11-23 22:53:20
+  coach_availability_template_id: "17"
+  id: "255"
+  day_index: "0"
+  start_time: "12:15:00"
+coach_availabilities_229:
+  created_at: 2010-11-23 10:13:17
+  end_time: "13:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "229"
+  day_index: "3"
+  start_time: "12:15:00"
+coach_availabilities_067:
+  created_at: 2010-11-22 06:14:07
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 06:14:07
+  coach_availability_template_id: "11"
+  id: "67"
+  day_index: "1"
+  start_time: "15:30:00"
+coach_availabilities_093:
+  created_at: 2010-11-22 12:34:43
+  end_time: "14:30:00"
+  updated_at: 2010-11-22 12:34:43
+  coach_availability_template_id: "17"
+  id: "93"
+  day_index: "2"
+  start_time: "13:30:00"
+coach_availabilities_148:
+  created_at: 2010-11-22 14:14:58
+  end_time: "19:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "148"
+  day_index: "5"
+  start_time: "18:00:00"
+coach_availabilities_174:
+  created_at: 2010-11-22 16:45:21
+  end_time: "11:30:00"
+  updated_at: 2010-11-22 16:45:21
+  coach_availability_template_id: "21"
+  id: "174"
+  day_index: "0"
+  start_time: "10:30:00"
+coach_availabilities_282:
+  created_at: 2010-11-25 12:22:23
+  end_time: "15:30:00"
+  updated_at: 2010-11-25 12:22:23
+  coach_availability_template_id: "29"
+  id: "282"
+  day_index: "6"
+  start_time: "14:30:00"
+coach_availabilities_256:
+  created_at: 2010-11-23 22:53:20
+  end_time: "14:15:00"
+  updated_at: 2010-11-23 22:53:20
+  coach_availability_template_id: "17"
+  id: "256"
+  day_index: "0"
+  start_time: "13:15:00"
+coach_availabilities_068:
+  created_at: 2010-11-22 06:14:07
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 06:14:07
+  coach_availability_template_id: "11"
+  id: "68"
+  day_index: "2"
+  start_time: "15:30:00"
+coach_availabilities_094:
+  created_at: 2010-11-22 13:50:10
+  end_time: "12:00:00"
+  updated_at: 2010-11-22 13:50:10
+  coach_availability_template_id: "18"
+  id: "94"
+  day_index: "3"
+  start_time: "11:00:00"
+coach_availabilities_149:
+  created_at: 2010-11-22 14:14:58
+  end_time: "20:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "149"
+  day_index: "5"
+  start_time: "19:00:00"
+coach_availabilities_175:
+  created_at: 2010-11-22 16:45:22
+  end_time: "12:30:00"
+  updated_at: 2010-11-22 16:45:22
+  coach_availability_template_id: "21"
+  id: "175"
+  day_index: "0"
+  start_time: "11:30:00"
+coach_availabilities_283:
+  created_at: 2010-11-25 12:22:23
+  end_time: "16:30:00"
+  updated_at: 2010-11-25 12:22:23
+  coach_availability_template_id: "29"
+  id: "283"
+  day_index: "6"
+  start_time: "15:30:00"
+coach_availabilities_257:
+  created_at: 2010-11-23 22:53:20
+  end_time: "13:15:00"
+  updated_at: 2010-11-23 22:53:20
+  coach_availability_template_id: "17"
+  id: "257"
+  day_index: "1"
+  start_time: "12:15:00"
+coach_availabilities_069:
+  created_at: 2010-11-22 06:14:07
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 06:21:20
+  coach_availability_template_id: "11"
+  id: "69"
+  day_index: "3"
+  start_time: "15:30:00"
+coach_availabilities_095:
+  created_at: 2010-11-22 13:50:10
+  end_time: "13:00:00"
+  updated_at: 2010-11-22 13:50:10
+  coach_availability_template_id: "18"
+  id: "95"
+  day_index: "3"
+  start_time: "12:00:00"
+coach_availabilities_176:
+  created_at: 2010-11-22 16:45:22
+  end_time: "11:30:00"
+  updated_at: 2010-11-22 16:45:22
+  coach_availability_template_id: "21"
+  id: "176"
+  day_index: "1"
+  start_time: "10:30:00"
+coach_availabilities_284:
+  created_at: 2010-11-25 12:57:25
+  end_time: "16:00:00"
+  updated_at: 2010-11-25 12:57:25
+  coach_availability_template_id: "30"
+  id: "284"
+  day_index: "0"
+  start_time: "15:00:00"
+coach_availabilities_258:
+  created_at: 2010-11-23 22:53:20
+  end_time: "14:15:00"
+  updated_at: 2010-11-23 22:53:20
+  coach_availability_template_id: "17"
+  id: "258"
+  day_index: "1"
+  start_time: "13:15:00"
+coach_availabilities_096:
+  created_at: 2010-11-22 13:50:10
+  end_time: "12:00:00"
+  updated_at: 2010-11-22 13:50:10
+  coach_availability_template_id: "18"
+  id: "96"
+  day_index: "4"
+  start_time: "11:00:00"
+coach_availabilities_177:
+  created_at: 2010-11-22 16:45:22
+  end_time: "12:30:00"
+  updated_at: 2010-11-22 16:45:22
+  coach_availability_template_id: "21"
+  id: "177"
+  day_index: "1"
+  start_time: "11:30:00"
+coach_availabilities_285:
+  created_at: 2010-11-25 12:57:25
+  end_time: "16:00:00"
+  updated_at: 2010-11-25 12:57:25
+  coach_availability_template_id: "30"
+  id: "285"
+  day_index: "1"
+  start_time: "15:00:00"
+coach_availabilities_259:
+  created_at: 2010-11-23 22:53:20
+  end_time: "13:15:00"
+  updated_at: 2010-11-23 22:53:20
+  coach_availability_template_id: "17"
+  id: "259"
+  day_index: "2"
+  start_time: "12:15:00"
+coach_availabilities_097:
+  created_at: 2010-11-22 13:50:10
+  end_time: "13:00:00"
+  updated_at: 2010-11-22 13:50:10
+  coach_availability_template_id: "18"
+  id: "97"
+  day_index: "4"
+  start_time: "12:00:00"
+coach_availabilities_178:
+  created_at: 2010-11-22 16:45:22
+  end_time: "11:30:00"
+  updated_at: 2010-11-22 16:45:22
+  coach_availability_template_id: "21"
+  id: "178"
+  day_index: "2"
+  start_time: "10:30:00"
+coach_availabilities_286:
+  created_at: 2010-11-25 12:57:25
+  end_time: "16:00:00"
+  updated_at: 2010-11-25 12:57:25
+  coach_availability_template_id: "30"
+  id: "286"
+  day_index: "2"
+  start_time: "15:00:00"
+coach_availabilities_098:
+  created_at: 2010-11-22 14:14:57
+  end_time: "14:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "98"
+  day_index: "0"
+  start_time: "13:00:00"
+coach_availabilities_179:
+  created_at: 2010-11-22 16:45:22
+  end_time: "12:30:00"
+  updated_at: 2010-11-22 16:45:22
+  coach_availability_template_id: "21"
+  id: "179"
+  day_index: "2"
+  start_time: "11:30:00"
+coach_availabilities_287:
+  created_at: 2010-11-25 12:57:25
+  end_time: "16:00:00"
+  updated_at: 2010-11-25 12:57:25
+  coach_availability_template_id: "30"
+  id: "287"
+  day_index: "3"
+  start_time: "15:00:00"
+coach_availabilities_099:
+  created_at: 2010-11-22 14:14:57
+  end_time: "15:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "99"
+  day_index: "0"
+  start_time: "14:00:00"
+coach_availabilities_288:
+  created_at: 2010-11-25 12:57:25
+  end_time: "16:00:00"
+  updated_at: 2010-11-25 12:57:25
+  coach_availability_template_id: "30"
+  id: "288"
+  day_index: "4"
+  start_time: "15:00:00"
+coach_availabilities_289:
+  created_at: 2010-11-25 12:57:25
+  end_time: "16:00:00"
+  updated_at: 2010-11-25 12:57:25
+  coach_availability_template_id: "30"
+  id: "289"
+  day_index: "5"
+  start_time: "15:00:00"
+coach_availabilities_100:
+  created_at: 2010-11-22 14:14:57
+  end_time: "16:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "100"
+  day_index: "0"
+  start_time: "15:00:00"
+coach_availabilities_020:
+  created_at: 2010-11-18 18:02:10
+  end_time: "13:30:00"
+  updated_at: 2010-11-18 18:02:10
+  coach_availability_template_id: "4"
+  id: "20"
+  day_index: "2"
+  start_time: "12:30:00"
+coach_availabilities_101:
+  created_at: 2010-11-22 14:14:57
+  end_time: "17:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "101"
+  day_index: "0"
+  start_time: "16:00:00"
+coach_availabilities_021:
+  created_at: 2010-11-18 18:35:21
+  end_time: "12:30:00"
+  updated_at: 2010-11-18 18:35:21
+  coach_availability_template_id: "5"
+  id: "21"
+  day_index: "2"
+  start_time: "11:30:00"
+coach_availabilities_102:
+  created_at: 2010-11-22 14:14:57
+  end_time: "18:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "102"
+  day_index: "0"
+  start_time: "17:00:00"
+coach_availabilities_022:
+  created_at: 2010-11-18 18:35:21
+  end_time: "01:30:00"
+  updated_at: 2010-11-18 18:35:21
+  coach_availability_template_id: "5"
+  id: "22"
+  day_index: "4"
+  start_time: "00:30:00"
+coach_availabilities_103:
+  created_at: 2010-11-22 14:14:57
+  end_time: "19:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "103"
+  day_index: "0"
+  start_time: "18:00:00"
+coach_availabilities_210:
+  created_at: 2010-11-23 10:10:08
+  end_time: "19:00:00"
+  updated_at: 2010-11-23 10:10:08
+  coach_availability_template_id: "24"
+  id: "210"
+  day_index: "3"
+  start_time: "18:00:00"
+coach_availabilities_104:
+  created_at: 2010-11-22 14:14:57
+  end_time: "20:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "104"
+  day_index: "0"
+  start_time: "19:00:00"
+coach_availabilities_130:
+  created_at: 2010-11-22 14:14:57
+  end_time: "19:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "130"
+  day_index: "3"
+  start_time: "18:00:00"
+coach_availabilities_211:
+  created_at: 2010-11-23 10:10:08
+  end_time: "20:00:00"
+  updated_at: 2010-11-23 10:10:08
+  coach_availability_template_id: "24"
+  id: "211"
+  day_index: "3"
+  start_time: "19:00:00"
+coach_availabilities_023:
+  created_at: 2010-11-19 12:23:12
+  end_time: "10:00:00"
+  updated_at: 2010-11-19 12:23:12
+  coach_availability_template_id: "6"
+  id: "23"
+  day_index: "0"
+  start_time: "09:00:00"
+coach_availabilities_105:
+  created_at: 2010-11-22 14:14:57
+  end_time: "21:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "105"
+  day_index: "0"
+  start_time: "20:00:00"
+coach_availabilities_131:
+  created_at: 2010-11-22 14:14:57
+  end_time: "20:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "131"
+  day_index: "3"
+  start_time: "19:00:00"
+coach_availabilities_212:
+  created_at: 2010-11-23 10:13:16
+  end_time: "11:15:00"
+  updated_at: 2010-11-23 10:13:16
+  coach_availability_template_id: "25"
+  id: "212"
+  day_index: "0"
+  start_time: "10:15:00"
+coach_availabilities_024:
+  created_at: 2010-11-19 12:23:12
+  end_time: "10:00:00"
+  updated_at: 2010-11-19 12:23:12
+  coach_availability_template_id: "6"
+  id: "24"
+  day_index: "1"
+  start_time: "09:00:00"
+coach_availabilities_106:
+  created_at: 2010-11-22 14:14:57
+  end_time: "22:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "106"
+  day_index: "0"
+  start_time: "21:00:00"
+coach_availabilities_132:
+  created_at: 2010-11-22 14:14:57
+  end_time: "21:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "132"
+  day_index: "3"
+  start_time: "20:00:00"
+coach_availabilities_213:
+  created_at: 2010-11-23 10:13:17
+  end_time: "12:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "213"
+  day_index: "0"
+  start_time: "11:15:00"
+coach_availabilities_321:
+  created_at: 2010-11-26 12:01:48
+  end_time: "12:00:00"
+  updated_at: 2010-11-26 12:01:48
+  coach_availability_template_id: "34"
+  id: "321"
+  day_index: "3"
+  start_time: "11:00:00"
+coach_availabilities_240:
+  created_at: 2010-11-23 10:13:17
+  end_time: "14:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "240"
+  day_index: "5"
+  start_time: "13:15:00"
+coach_availabilities_107:
+  created_at: 2010-11-22 14:14:57
+  end_time: "14:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "107"
+  day_index: "1"
+  start_time: "13:00:00"
+coach_availabilities_133:
+  created_at: 2010-11-22 14:14:57
+  end_time: "22:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "133"
+  day_index: "3"
+  start_time: "21:00:00"
+coach_availabilities_214:
+  created_at: 2010-11-23 10:13:17
+  end_time: "13:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "214"
+  day_index: "0"
+  start_time: "12:15:00"
+coach_availabilities_322:
+  created_at: 2010-11-26 12:01:48
+  end_time: "15:00:00"
+  updated_at: 2010-11-26 12:01:48
+  coach_availability_template_id: "34"
+  id: "322"
+  day_index: "3"
+  start_time: "14:00:00"
+coach_availabilities_241:
+  created_at: 2010-11-23 10:13:17
+  end_time: "15:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "241"
+  day_index: "5"
+  start_time: "14:15:00"
+coach_availabilities_108:
+  created_at: 2010-11-22 14:14:57
+  end_time: "15:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "108"
+  day_index: "1"
+  start_time: "14:00:00"
+coach_availabilities_134:
+  created_at: 2010-11-22 14:14:57
+  end_time: "14:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "134"
+  day_index: "4"
+  start_time: "13:00:00"
+coach_availabilities_160:
+  created_at: 2010-11-22 14:14:58
+  end_time: "22:00:00"
+  updated_at: 2010-11-22 14:14:58
+  coach_availability_template_id: "19"
+  id: "160"
+  day_index: "6"
+  start_time: "21:00:00"
+coach_availabilities_215:
+  created_at: 2010-11-23 10:13:17
+  end_time: "14:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "215"
+  day_index: "0"
+  start_time: "13:15:00"
+coach_availabilities_323:
+  created_at: 2010-11-26 12:01:48
+  end_time: "11:00:00"
+  updated_at: 2010-11-26 12:01:48
+  coach_availability_template_id: "34"
+  id: "323"
+  day_index: "4"
+  start_time: "10:00:00"
+coach_availabilities_242:
+  created_at: 2010-11-23 10:13:17
+  end_time: "11:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "242"
+  day_index: "6"
+  start_time: "10:15:00"
+coach_availabilities_135:
+  created_at: 2010-11-22 14:14:57
+  end_time: "15:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "135"
+  day_index: "4"
+  start_time: "14:00:00"
+coach_availabilities_161:
+  created_at: 2010-11-22 15:47:47
+  end_time: "12:00:00"
+  updated_at: 2010-11-22 15:47:47
+  coach_availability_template_id: "20"
+  id: "161"
+  day_index: "0"
+  start_time: "11:00:00"
+coach_availabilities_216:
+  created_at: 2010-11-23 10:13:17
+  end_time: "15:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "216"
+  day_index: "0"
+  start_time: "14:15:00"
+coach_availabilities_080:
+  created_at: 2010-11-22 06:18:10
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 06:18:10
+  coach_availability_template_id: "13"
+  id: "80"
+  day_index: "5"
+  start_time: "15:30:00"
+coach_availabilities_109:
+  created_at: 2010-11-22 14:14:57
+  end_time: "16:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "109"
+  day_index: "1"
+  start_time: "15:00:00"
+coach_availabilities_324:
+  created_at: 2010-11-26 12:01:48
+  end_time: "14:00:00"
+  updated_at: 2010-11-26 12:01:48
+  coach_availability_template_id: "34"
+  id: "324"
+  day_index: "4"
+  start_time: "13:00:00"
+coach_availabilities_243:
+  created_at: 2010-11-23 10:13:17
+  end_time: "12:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "243"
+  day_index: "6"
+  start_time: "11:15:00"
+coach_availabilities_136:
+  created_at: 2010-11-22 14:14:57
+  end_time: "16:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "136"
+  day_index: "4"
+  start_time: "15:00:00"
+coach_availabilities_162:
+  created_at: 2010-11-22 15:47:47
+  end_time: "12:00:00"
+  updated_at: 2010-11-22 15:47:47
+  coach_availability_template_id: "20"
+  id: "162"
+  day_index: "1"
+  start_time: "11:00:00"
+coach_availabilities_217:
+  created_at: 2010-11-23 10:13:17
+  end_time: "11:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "217"
+  day_index: "1"
+  start_time: "10:15:00"
+coach_availabilities_081:
+  created_at: 2010-11-22 06:18:10
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 06:18:10
+  coach_availability_template_id: "13"
+  id: "81"
+  day_index: "6"
+  start_time: "15:30:00"
+coach_availabilities_325:
+  created_at: 2010-11-26 12:01:48
+  end_time: "10:00:00"
+  updated_at: 2010-11-26 12:01:48
+  coach_availability_template_id: "34"
+  id: "325"
+  day_index: "5"
+  start_time: "09:00:00"
+coach_availabilities_270:
+  created_at: 2010-11-24 19:19:28
+  end_time: "17:30:00"
+  updated_at: 2010-11-24 19:19:28
+  coach_availability_template_id: "28"
+  id: "270"
+  day_index: "1"
+  start_time: "16:30:00"
+coach_availabilities_244:
+  created_at: 2010-11-23 10:13:17
+  end_time: "13:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "244"
+  day_index: "6"
+  start_time: "12:15:00"
+coach_availabilities_163:
+  created_at: 2010-11-22 15:47:47
+  end_time: "12:00:00"
+  updated_at: 2010-11-22 15:47:47
+  coach_availability_template_id: "20"
+  id: "163"
+  day_index: "2"
+  start_time: "11:00:00"
+coach_availabilities_218:
+  created_at: 2010-11-23 10:13:17
+  end_time: "12:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "218"
+  day_index: "1"
+  start_time: "11:15:00"
+coach_availabilities_056:
+  created_at: 2010-11-20 02:25:57
+  end_time: "13:30:00"
+  updated_at: 2010-11-20 02:25:57
+  coach_availability_template_id: "8"
+  id: "56"
+  day_index: "1"
+  start_time: "12:30:00"
+coach_availabilities_082:
+  created_at: 2010-11-22 06:23:36
+  end_time: "13:00:00"
+  updated_at: 2010-11-22 06:23:36
+  coach_availability_template_id: "14"
+  id: "82"
+  day_index: "0"
+  start_time: "12:00:00"
+coach_availabilities_137:
+  created_at: 2010-11-22 14:14:57
+  end_time: "17:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "137"
+  day_index: "4"
+  start_time: "16:00:00"
+coach_availabilities_326:
+  created_at: 2010-11-26 12:01:48
+  end_time: "13:00:00"
+  updated_at: 2010-11-26 12:01:48
+  coach_availability_template_id: "34"
+  id: "326"
+  day_index: "5"
+  start_time: "12:00:00"
+coach_availabilities_271:
+  created_at: 2010-11-24 19:19:28
+  end_time: "17:30:00"
+  updated_at: 2010-11-24 19:19:28
+  coach_availability_template_id: "28"
+  id: "271"
+  day_index: "2"
+  start_time: "16:30:00"
+coach_availabilities_245:
+  created_at: 2010-11-23 10:13:17
+  end_time: "14:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "245"
+  day_index: "6"
+  start_time: "13:15:00"
+coach_availabilities_164:
+  created_at: 2010-11-22 15:47:47
+  end_time: "13:00:00"
+  updated_at: 2010-11-22 15:47:47
+  coach_availability_template_id: "20"
+  id: "164"
+  day_index: "2"
+  start_time: "12:00:00"
+coach_availabilities_190:
+  created_at: 2010-11-23 09:00:23
+  end_time: "17:15:00"
+  updated_at: 2010-11-23 09:00:23
+  coach_availability_template_id: "22"
+  id: "190"
+  day_index: "5"
+  start_time: "16:15:00"
+coach_availabilities_219:
+  created_at: 2010-11-23 10:13:17
+  end_time: "13:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "219"
+  day_index: "1"
+  start_time: "12:15:00"
+coach_availabilities_057:
+  created_at: 2010-11-20 02:25:57
+  end_time: "13:30:00"
+  updated_at: 2010-11-20 02:25:57
+  coach_availability_template_id: "8"
+  id: "57"
+  day_index: "2"
+  start_time: "12:30:00"
+coach_availabilities_083:
+  created_at: 2010-11-22 06:23:36
+  end_time: "13:00:00"
+  updated_at: 2010-11-22 06:23:36
+  coach_availability_template_id: "14"
+  id: "83"
+  day_index: "1"
+  start_time: "12:00:00"
+coach_availabilities_138:
+  created_at: 2010-11-22 14:14:57
+  end_time: "18:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "138"
+  day_index: "4"
+  start_time: "17:00:00"
+coach_availabilities_327:
+  created_at: 2010-11-26 12:01:48
+  end_time: "09:00:00"
+  updated_at: 2010-11-26 12:01:48
+  coach_availability_template_id: "34"
+  id: "327"
+  day_index: "6"
+  start_time: "08:00:00"
+coach_availabilities_246:
+  created_at: 2010-11-23 10:13:17
+  end_time: "15:15:00"
+  updated_at: 2010-11-23 10:13:17
+  coach_availability_template_id: "25"
+  id: "246"
+  day_index: "6"
+  start_time: "14:15:00"
+coach_availabilities_191:
+  created_at: 2010-11-23 09:00:23
+  end_time: "17:15:00"
+  updated_at: 2010-11-23 09:00:23
+  coach_availability_template_id: "22"
+  id: "191"
+  day_index: "6"
+  start_time: "16:15:00"
+coach_availabilities_058:
+  created_at: 2010-11-20 02:25:57
+  end_time: "13:30:00"
+  updated_at: 2010-11-20 02:25:57
+  coach_availability_template_id: "8"
+  id: "58"
+  day_index: "3"
+  start_time: "12:30:00"
+coach_availabilities_084:
+  created_at: 2010-11-22 06:23:36
+  end_time: "13:00:00"
+  updated_at: 2010-11-22 06:23:36
+  coach_availability_template_id: "14"
+  id: "84"
+  day_index: "2"
+  start_time: "12:00:00"
+coach_availabilities_139:
+  created_at: 2010-11-22 14:14:57
+  end_time: "19:00:00"
+  updated_at: 2010-11-22 14:14:57
+  coach_availability_template_id: "19"
+  id: "139"
+  day_index: "4"
+  start_time: "18:00:00"
+coach_availabilities_165:
+  created_at: 2010-11-22 15:47:47
+  end_time: "14:00:00"
+  updated_at: 2010-11-22 15:47:47
+  coach_availability_template_id: "20"
+  id: "165"
+  day_index: "2"
+  start_time: "13:00:00"
+coach_availabilities_247:
+  created_at: 2010-11-23 12:11:58
+  end_time: "03:15:00"
+  updated_at: 2010-11-23 12:11:58
+  coach_availability_template_id: "26"
+  id: "247"
+  day_index: "1"
+  start_time: "02:15:00"
+coach_availabilities_192:
+  created_at: 2010-11-23 09:05:03
+  end_time: "16:15:00"
+  updated_at: 2010-11-23 09:05:03
+  coach_availability_template_id: "23"
+  id: "192"
+  day_index: "0"
+  start_time: "15:15:00"
+coach_availabilities_059:
+  created_at: 2010-11-20 02:25:58
+  end_time: "13:30:00"
+  updated_at: 2010-11-20 02:25:58
+  coach_availability_template_id: "8"
+  id: "59"
+  day_index: "4"
+  start_time: "12:30:00"
+coach_availabilities_166:
+  created_at: 2010-11-22 15:47:47
+  end_time: "15:00:00"
+  updated_at: 2010-11-22 15:47:47
+  coach_availability_template_id: "20"
+  id: "166"
+  day_index: "2"
+  start_time: "14:00:00"
+coach_availabilities_248:
+  created_at: 2010-11-23 12:11:58
+  end_time: "03:15:00"
+  updated_at: 2010-11-23 12:11:58
+  coach_availability_template_id: "26"
+  id: "248"
+  day_index: "2"
+  start_time: "02:15:00"
+coach_availabilities_086:
+  created_at: 2010-11-22 08:48:42
+  end_time: "14:30:00"
+  updated_at: 2010-11-22 08:48:42
+  coach_availability_template_id: "15"
+  id: "86"
+  day_index: "2"
+  start_time: "13:30:00"
+coach_availabilities_167:
+  created_at: 2010-11-22 15:47:47
+  end_time: "12:00:00"
+  updated_at: 2010-11-22 15:47:47
+  coach_availability_template_id: "20"
+  id: "167"
+  day_index: "3"
+  start_time: "11:00:00"
+coach_availabilities_193:
+  created_at: 2010-11-23 09:05:03
+  end_time: "16:15:00"
+  updated_at: 2010-11-23 09:05:03
+  coach_availability_template_id: "23"
+  id: "193"
+  day_index: "1"
+  start_time: "15:15:00"
+coach_availabilities_087:
+  created_at: 2010-11-22 08:48:42
+  end_time: "15:30:00"
+  updated_at: 2010-11-22 08:48:42
+  coach_availability_template_id: "15"
+  id: "87"
+  day_index: "2"
+  start_time: "14:30:00"
+coach_availabilities_168:
+  created_at: 2010-11-22 15:47:47
+  end_time: "13:00:00"
+  updated_at: 2010-11-22 15:47:47
+  coach_availability_template_id: "20"
+  id: "168"
+  day_index: "3"
+  start_time: "12:00:00"
+coach_availabilities_194:
+  created_at: 2010-11-23 09:05:03
+  end_time: "16:15:00"
+  updated_at: 2010-11-23 09:05:03
+  coach_availability_template_id: "23"
+  id: "194"
+  day_index: "2"
+  start_time: "15:15:00"
+coach_availabilities_276:
+  created_at: 2010-11-25 12:22:23
+  end_time: "13:30:00"
+  updated_at: 2010-11-25 12:22:23
+  coach_availability_template_id: "29"
+  id: "276"
+  day_index: "5"
+  start_time: "12:30:00"
+coach_availabilities_088:
+  created_at: 2010-11-22 08:48:42
+  end_time: "16:30:00"
+  updated_at: 2010-11-22 08:48:42
+  coach_availability_template_id: "15"
+  id: "88"
+  day_index: "2"
+  start_time: "15:30:00"
+coach_availabilities_169:
+  created_at: 2010-11-22 15:47:47
+  end_time: "14:00:00"
+  updated_at: 2010-11-22 15:47:47
+  coach_availability_template_id: "20"
+  id: "169"
+  day_index: "3"
+  start_time: "13:00:00"
+coach_availabilities_195:
+  created_at: 2010-11-23 09:05:03
+  end_time: "16:15:00"
+  updated_at: 2010-11-23 09:05:03
+  coach_availability_template_id: "23"
+  id: "195"
+  day_index: "3"
+  start_time: "15:15:00"
+coach_availabilities_277:
+  created_at: 2010-11-25 12:22:23
+  end_time: "14:30:00"
+  updated_at: 2010-11-25 12:22:23
+  coach_availability_template_id: "29"
+  id: "277"
+  day_index: "5"
+  start_time: "13:30:00"
+coach_availabilities_089:
+  created_at: 2010-11-22 10:26:18
+  end_time: "15:30:00"
+  updated_at: 2010-11-22 10:26:18
+  coach_availability_template_id: "16"
+  id: "89"
+  day_index: "1"
+  start_time: "14:30:00"
+coach_availabilities_196:
+  created_at: 2010-11-23 09:05:03
+  end_time: "16:15:00"
+  updated_at: 2010-11-23 09:05:03
+  coach_availability_template_id: "23"
+  id: "196"
+  day_index: "4"
+  start_time: "15:15:00"
+coach_availabilities_278:
+  created_at: 2010-11-25 12:22:23
+  end_time: "15:30:00"
+  updated_at: 2010-11-25 12:22:23
+  coach_availability_template_id: "29"
+  id: "278"
+  day_index: "5"
+  start_time: "14:30:00"
+coach_availabilities_197:
+  created_at: 2010-11-23 09:05:03
+  end_time: "16:15:00"
+  updated_at: 2010-11-23 09:05:03
+  coach_availability_template_id: "23"
+  id: "197"
+  day_index: "5"
+  start_time: "15:15:00"
+coach_availabilities_279:
+  created_at: 2010-11-25 12:22:23
+  end_time: "16:30:00"
+  updated_at: 2010-11-25 12:22:23
+  coach_availability_template_id: "29"
+  id: "279"
+  day_index: "5"
+  start_time: "15:30:00"
+coach_availabilities_198:
+  created_at: 2010-11-23 09:05:04
+  end_time: "16:15:00"
+  updated_at: 2010-11-23 09:05:04
+  coach_availability_template_id: "23"
+  id: "198"
+  day_index: "6"
+  start_time: "15:15:00"
+coach_availabilities_199:
+  created_at: 2010-11-23 10:10:08
+  end_time: "18:00:00"
+  updated_at: 2010-11-23 10:10:08
+  coach_availability_template_id: "24"
+  id: "199"
+  day_index: "1"
+  start_time: "17:00:00"
+coach_availabilities_200:
+  created_at: 2010-04-29 10:10:08
+  end_time: "14:00:00"
+  updated_at: 2010-11-23 10:10:08
+  coach_availability_template_id: "50"
+  id: "200"
+  day_index: "1"
+  start_time: "13:00:00"
+coach_availabilities_201:
+  end_time: "14:00:00"
+  coach_availability_template_id: "1"
+  id: "201"
+  day_index: "1"
+  start_time: "13:00:00"
+
+coach_availabilities_202:
+  end_time: "10:00:00"
+  coach_availability_template_id: "100"
+  id: "202"
+  day_index: "2"
+  start_time: "09:00:00"
+
+coach_availabilities_203:
+  end_time: "11:00:00"
+  coach_availability_template_id: "100"
+  id: "203"
+  day_index: "2"
+  start_time: "10:00:00"
+
+coach_availabilities_204:
+  end_time: "12:00:00"
+  coach_availability_template_id: "100"
+  id: "204"
+  day_index: "2"
+  start_time: "11:00:00"
+
+coach_availabilities_205:
+  end_time: "10:30:00"
+  coach_availability_template_id: "102"
+  id: "205"
+  day_index: "2"
+  start_time: "09:30:00"
+
+coach_availabilities_206:
+  end_time: "11:30:00"
+  coach_availability_template_id: "102"
+  id: "206"
+  day_index: "2"
+  start_time: "10:30:00"
+
+coach_availabilities_207:
+  end_time: "12:30:00"
+  coach_availability_template_id: "102"
+  id: "207"
+  day_index: "2"
+  start_time: "11:30:00"
+
+coach_availabilities_208:
+  end_time: "10:15:00"
+  coach_availability_template_id: "101"
+  id: "208"
+  day_index: "2"
+  start_time: "09:15:00"
+
+coach_availabilities_209:
+  end_time: "11:15:00"
+  coach_availability_template_id: "101"
+  id: "209"
+  day_index: "2"
+  start_time: "10:15:00"
+
+coach_availabilities_210:
+  end_time: "12:15:00"
+  coach_availability_template_id: "101"
+  id: "210"
+  day_index: "2"
+  start_time: "11:15:00"
+
+coach_availabilities_211:
+  end_time: "13:15:00"
+  coach_availability_template_id: "104"
+  id: "211"
+  day_index: "2"
+  start_time: "12:15:00"
+
+coach_availabilities_212:
+  end_time: "12:15:00"
+  coach_availability_template_id: "104"
+  id: "212"
+  day_index: "2"
+  start_time: "11:15:00"
+
+coach_availabilities_213:
+  end_time: "11:15:00"
+  coach_availability_template_id: "104"
+  id: "213"
+  day_index: "2"
+  start_time: "10:15:00"
+
+coach_availabilities_214:
+  end_time: "13:00:00"
+  coach_availability_template_id: "103"
+  id: "214"
+  day_index: "2"
+  start_time: "12:00:00"
+
+coach_availabilities_215:
+  end_time: "12:00:00"
+  coach_availability_template_id: "103"
+  id: "215"
+  day_index: "2"
+  start_time: "11:00:00"
+
+coach_availabilities_216:
+  end_time: "11:00:00"
+  coach_availability_template_id: "103"
+  id: "216"
+  day_index: "2"
+  start_time: "10:00:00"
+
+coach_availabilities_217:
+  end_time: "13:30:00"
+  coach_availability_template_id: "105"
+  id: "217"
+  day_index: "2"
+  start_time: "12:30:00"
+
+coach_availabilities_218:
+  end_time: "12:30:00"
+  coach_availability_template_id: "105"
+  id: "218"
+  day_index: "2"
+  start_time: "11:30:00"
+
+coach_availabilities_219:
+  end_time: "11:30:00"
+  coach_availability_template_id: "105"
+  id: "219"
+  day_index: "2"
+  start_time: "10:30:00"

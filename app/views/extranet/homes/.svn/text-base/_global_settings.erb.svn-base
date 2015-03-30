@@ -1,0 +1,38 @@
+<div class="admin_dashboard_item">
+  <h3>Global Settings</h3>
+  <%= form_tag :action => 'set_global_settings' do %>
+    <div class="admin_dashboard_sub_item">
+      <div class ="bottom_padded">Average learner wait time in minutes <%= text_field_tag :average_learner_wait_time_threshold, global_settings["average_learner_wait_time_threshold"], :title => "Should be a positive integer" %> </div>
+      <div class ="bottom_padded">Learner / Coach ratio <%= text_field_tag :learner_coach_ratio_threshold, global_settings["learner_coach_ratio_threshold"], :title => "Should be a positive number with a maximum of two digits precision" %> </div>
+      <div class ="bottom_padded">Time in minutes not to send an additional SMS after the one SMS is sent <%= select_tag :minutes_before_not_to_send_additional_sms, options_for_select(1..30, global_settings["minutes_before_not_to_send_additional_sms"].to_i) %> </div>
+      <div class ="bottom_padded">Minutes before session start to alert (SMS) CMs and Supervisors if the coach has not arrived:
+        <%= select_tag :minutes_before_session_for_triggering_sms_alert, options_with_select((1..15).to_a, global_settings["minutes_before_session_for_triggering_sms_alert"].to_i) %>
+      </div>
+      <div class ="bottom_padded">Minutes before session start to send email to the coach and Supervisors if the coach has not arrived:
+        <%= select_tag :minutes_before_session_for_sending_email_alert, options_with_select((1..15).to_a, global_settings["minutes_before_session_for_sending_email_alert"].to_i) %>
+      </div>
+      <div class ="bottom_padded">
+        Live sessions in dashboard should be refreshed in
+        <%= select_tag :seconds_to_refresh_live_sessions_in_dashboard, options_for_select([ 0, 30, 60, 90 ], global_settings["seconds_to_refresh_live_sessions_in_dashboard"].to_i) %>
+         seconds
+      </div>
+      <div class ="bottom_padded">
+        Allow creating a session 
+        <%= select_tag :allow_session_creation_before, options_for_select([ 0, 10, 20, 30, 40, 50, 60 ], global_settings["allow_session_creation_before"].to_i) %>
+        minutes before session start time.
+      </div>
+      <div class ="bottom_padded">
+        Allow creating a session for
+        <%= select_tag :allow_session_creation_after, options_for_select((0..30).step(1), global_settings["allow_session_creation_after"].to_i) %>
+         minutes after session start time.
+      </div>
+      <div class ="bottom_padded">
+        Whom to be notified when delayed_job not picks any tasks for 2 hours
+        <%= email_field_tag :delayed_job_failure_email_recipients, global_settings["delayed_job_failure_email_recipients"] , {:multiple => 'multiple'}%>
+        <br/>
+        (Please enter email-ids seperated by comma.)
+      </div>
+    </div>
+    <%= submit_tag "Save", :class => "admin_dashboard_sub_item" %>
+  <% end -%>
+</div>

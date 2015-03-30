@@ -1,0 +1,200 @@
+<span class = "bold-font"><%= "Today's Date" -%>:</span><span class = "left-space" style="font-weight: normal;"><%= get_today_date %> </span>
+<p class="header preference-border"></p>
+
+<%= form_tag({ :action => 'substitutions_report'}, {:id => "sub_report", :update => "update_sub_report", :remote => true  }) do %>
+<%if @bool%>
+
+ <div id="print-button" style="display:none">
+  <%=  link_to_function(("<span color='black'>Print</span>"+image_tag('icon_print.png', :alt => "Print", :class => "logo" , :title => "Print Schedule")).html_safe, "javascript:print_data()") %>
+</div>
+
+<div id="sub_report_header">
+  <table border="0" class="table_list" style="width:100%;">
+    <tbody>
+    <th>
+      Show sub-requests for:<br/>
+      <%=  select_tag :lang_id, options_for_lang_for_sub_report(@lang_array,@selection_language), {:onchange=> 'populateCoachDropDown();',:class => 'select_class', :style=>'width: 100px;height:23px;'} -%>
+      <%= image_tag 'ajax-spinner.gif',:id => 'ajaxSpinner', :style => "display :none" %>
+    </th>
+  
+    <th>
+      Sessions occurring:<br/>
+      <%=  select_tag :duration, options_for_duration_for_sub_report(@selection_duration), {:class =>'select_class', :style=>'width: 110px;height:23px;', :onclick => 'displayCalendar()' } -%>
+    </th>
+ 
+    <th>
+      <div class="form_element" id="select_coach" style="text-align: center">
+        <div style="float:left;margin-left:20px;margin-right: -25px">
+         Requested By/For:<br>
+         <%=  select_tag :coach_id, options_for_coach_for_sub_report(@coach_array, @selection_coach), {:class =>'select_class', :style=>'width: 110px;height:23px;',:disabled => true} -%>
+        </div>
+        <div style="float:right;margin-right:20px;margin-left: -25px">
+          Grabbed By:<br>
+          <%=  select_tag :grabber_coach_id, options_for_grabber_coach_for_sub_report(@coach_array, @grabber_coach), {:class =>'select_class', :style=>'width: 110px;height:23px;',:disabled => true} -%>
+        </div>
+      </div>
+    </th>
+  
+    <th>
+      Grabbed within:<br/>
+      <%=  select_tag :grabbed_within, options_for_grabbed_within(@selection_grabbed_within), {:class =>'select_class', :style=>'width: 110px;;height:23px;'} -%>
+    </th>
+
+    <th>
+      <input type="submit" id="report_gen" name="Generate Report" value ="Generate Report" onclick ="return startSpinner()"/>
+    </th>
+  </tbody>
+
+
+  </table><br/>
+
+  <div>
+    <div id="calendar_div" style="display:none;text-align: center; width: 50%; padding: 10px; border: 1px solid #CCCCCC; margin:auto">
+      <%= hidden_field_tag :start_date_val , Time.now%>
+      <%= hidden_field_tag :end_date_val , Time.now()+1.month%>
+      <%= calendar_date_select_tag 'start_date', Time.now%> &nbsp;through&nbsp;
+      <%= calendar_date_select_tag 'end_date', Time.now+1.month%>
+    </div>
+  </div>
+
+<% else %>
+  <h3>There are currently no pending substitution requests.</h3>
+<% end %>
+ </div>
+<div>
+<%= image_tag 'big_spinner.gif',:id => 'ajaxLoader', :style => "display :none;padding-left:430px" %>
+</div>
+
+<div id ="update_sub_report" style="display:none;">
+</div>
+
+<%end%>
+
+<%= form_tag('export-to-csv',:method=>'get',:id => 'export_csv_file') do %>
+<%= hidden_field_tag :send,"true"%>
+<%= hidden_field_tag :lang_id_hidden%>
+<%= hidden_field_tag :coach_id_hidden%>
+<%= hidden_field_tag :duration_hidden%>
+<%= hidden_field_tag :grabber_coach_id_hidden%>
+<%= hidden_field_tag :grabbed_within_hidden%>
+<%= hidden_field_tag :start_date_hidden%>
+<%= hidden_field_tag :end_date_hidden%>
+<%end%>
+<br/><br/>
+<div id="csv_id">
+  <span>A complete set of substitution records are available as a downloadable .csv file</span>
+<input type="button" id="csv_button_id" value="Export as .CSV"/>
+</div>
+<br/>
+<br/>
+
+<script type="text/javascript">
+  var myElement = document.getElementById('update_sub_report');
+  if(window.addEventListener) {
+    // For Normal browsers(excluding IE) we do this to attach an event to the onchange of a div or other dom element. The function is triggered.
+    myElement.addEventListener('DOMSubtreeModified', contentChanged, false);
+  }
+
+  function contentChanged()
+  {
+    document.getElementById('ajaxLoader').style.display='none';
+    document.getElementById('update_sub_report').style.display='block';
+    
+  }
+
+  function startSpinner()
+  { 
+    start_date = document.getElementById('start_date').value;
+    end_date = document.getElementById('end_date').value
+    var coach_id = document.getElementById('coach_id').value;
+    var grabber_coach_id = document.getElementById('grabber_coach_id').value;
+    var lang_id = document.getElementById('lang_id').value;
+    var date1 = new Date(start_date);
+    var date2 = new Date(end_date);
+    var one_day=1000*60*60*24
+    var DaysDifference = Math.ceil((date2.getTime()-date1.getTime())/(one_day));  
+     if((date2 < date1) && document.getElementById('duration').value == 'Custom')
+     {
+         alert("Please enter a valid start date and end date");
+         return false;
+     }
+     
+     if(document.getElementById('lang_id').value == '--')
+     {
+        alert('Please select a language');
+        return false;
+     }
+
+     if(document.getElementById('duration').value == "--Select--"){
+        alert('Please select a timeframe');
+        return false;
+     }
+     // When "All language" is selected and all the other options are "All", the custom duration should not exceed 1 month. ( to avoid system timeout error for huge # of records)
+
+     
+    
+      document.getElementById('ajaxLoader').style.display='block';
+      document.getElementById('print-button').style.display='block';
+      document.getElementById('csv_id').style.display='block';
+      jQuery('#lang_id_hidden').val(jQuery('#lang_id').val());
+      jQuery('#coach_id_hidden').val(jQuery('#coach_id').val());
+      jQuery('#duration_hidden').val(jQuery('#duration').val());
+      jQuery('#grabber_coach_id_hidden').val(jQuery('#grabber_coach_id').val());
+      jQuery('#grabbed_within_hidden').val(jQuery('#grabbed_within').val());
+      jQuery('#start_date_hidden').val(jQuery('#start_date').val());
+      jQuery('#end_date_hidden').val(jQuery('#end_date').val());
+      
+      return true ;
+    
+  }
+
+  function displayCalendar()
+  {
+    if(document.getElementById('duration').value == 'Custom'){
+        jQuery('#calendar_div').slideDown("slow");
+    }
+    else{
+        jQuery('#calendar_div').slideUp("slow");
+    }
+  }
+
+  function populateCoachDropDown(){
+
+    var coach_id = document.getElementById('coach_id').value;
+    var grabber_coach_id = document.getElementById('grabber_coach_id').value;
+    var lang_id = document.getElementById('lang_id').value;
+    if(document.getElementById('lang_id').value=='--'){
+      document.getElementById('coach_id').disabled=true;
+      document.getElementById('grabber_coach_id').disabled=true;
+    }
+
+    
+    else{
+      
+      $('ajaxSpinner').show();
+      jQuery.ajax({
+        type: "get",
+        async: true,
+        data: {
+          hidden_lang_id : jQuery('#lang_id').val()
+        },
+        url: '/substitutions-report',
+        complete: function(data) {
+          jQuery('#ajaxSpinner').hide();
+        }
+      });
+    }
+  }
+
+
+  function print_data(){
+    w=window.open();
+    a = jQuery('#substitutions_table').html() ;
+    a = a.replace("<table class=\"table_list\" id=\"sub_report_table\" style=\"margin: 25px auto; width: 100%;\" border=\"0\">" , "<table id=\"sub_report_table\" style=\"margin: 25px auto; width: 100%; font-size: 14px;\" cellpadding=\"7\" border=\"1\" cellspacing = \"0\">");
+    a = a.replace("<th style=\"display:none\">","<th style=\"width:84px\">");
+    a = a.replace(/<td style="display:none">/g,"<td class=\"left-border sub_center\" style= \"width:200px;max-width:200px\">");
+    w.document.write(a);
+    w.print();
+    w.close();
+  }
+</script>

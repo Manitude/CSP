@@ -1,0 +1,24 @@
+<div class="edit_form_container">
+  <% if ['new_template', 'create_template'].include?(params[:action]) %>
+    <div class = 'new_age_form'  style="padding: 2px;">
+      Make Active on: <%= calendar_date_select_tag 'effective_start_date', start_date, :readonly => reviewed, :valid_date_check => "date > (new Date()).stripTime()", :popup => reviewed,:class => "border_less_text_box" %>
+    </div>
+  <% elsif ['copy_template'].include?(params[:action]) %>
+    <div>
+      <span style="float:left;padding-right: 2px;padding-top: 4px;">Make Active on: </span>
+      <%= calendar_date_select_tag 'effective_start_date', start_date, :readonly => reviewed, :valid_date_check => "date > (new Date()).stripTime()", :popup => reviewed ,:style => "padding: 6px 2px;width:115px;" %>
+    </div>
+  <% else %>
+    <% if ['edit_coach_schedule'].include?(params[:action]) %>
+      <div class = 'new_age_form'  style="padding: 2px;">Make Active on:
+        <%= link_to_function image_tag('previous.png', :class => "navigation_image", :alt => "Previous Week" , :title => "Previous Week"), "changeEffectiveStartDateBy7Days('subtract', true)" %>
+        <%= calendar_date_select_tag 'effective_start_date', start_date, :readonly => reviewed, :valid_date_check => "date > (new Date()).stripTime()", :popup => reviewed,:class => "border_less_text_box"%>
+        <%= link_to_function image_tag('next.png', :class => "navigation_image", :alt => "Next Week" , :title => "Next Week"), "changeEffectiveStartDateBy7Days('add', true)" %>
+      <% else %>
+        <div>
+          <span style="float:left;padding-right: 2px;padding-top: 4px;">Active From: </span>
+          <%= calendar_date_select_tag 'effective_start_date', start_date, :readonly => reviewed, :valid_date_check => "date > (new Date()).stripTime()", :popup => reviewed, :style => "padding: 6px 2px;width:115px;" %>
+        <% end %>
+      </div>
+  <% end %>
+  </div>

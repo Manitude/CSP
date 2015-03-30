@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/70063/gems/mysql2/0.2.7/lib/active_record/connection_adapters
+END
+mysql2_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/70063/gems/mysql2/0.2.7/lib/active_record/connection_adapters/mysql2_adapter.rb
+END
+em_mysql2_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/lib/active_record/connection_adapters/em_mysql2_adapter.rb
+END

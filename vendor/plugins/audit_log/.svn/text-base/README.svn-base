@@ -1,0 +1,53 @@
+Audit Logging Plugin
+=======================
+
+Sets up audit logging for an ActiveRecord class. Example:
+
+  class License < ActiveRecord::Base
+    audit_logged
+  end
+
+Available options are:
+
+  :loggable_actions - one or all of [:create, :update, :destroy]. Enables audit logging for
+  the selected ActiveRecord actions. Defaults to logging creates, updates, and destroys.
+
+  :except - a symbol or array of symbols of attributes to not audit log changes on
+
+  :only - a symbol or array of symbols of attributes to only audit log changes on, ignoring
+  changes to any other attributes
+
+  :also_log - a symbol or array of symbols of non ActiveRecord default attributes to log
+  changes on. Example:
+  
+     class License < ActiveRecord::Base 
+       audit_logged :also_log => :agreement_type
+      
+       def agreement_type=(type_string)
+         self.downcased_agreement_type = type_string.downcase
+       end
+       
+       def agreement_type
+         downcased_agreement_type.upcase
+       end
+     end
+  
+  :ignore_special_attributes - true or false, sets whether to ignore special AR columns like
+  created_on and lock_version. Defaults to true.
+
+  :associate - true or false, sets whether to define the audit_log_records and related
+  associations on the class audit logging is being enabled on. Defaults to true.
+
+  :audit_logger_class - specifies a replacement class to use as the audit_logger object. This
+  can be overridden to provide a class with more specialised behaviour such as recording an
+  identifier for the entity making changes to a record. Defaults to using 
+  RosettaStone::AuditLog::AuditLogger, it is recommended you extend this class when adding
+  functionality.
+
+
+The logs can be accessed via the .audit_log_records association on an instance of an audit_logged
+class, and the update_audit_logs destroy_audit_logs create_audit_logs associations for specific
+kinds of audit log.
+
+To install the migrations needed for this plugin, run `rake audit_log:install_migrations` and it 
+will put any required migrations in your RAILS_ROOT/db/migrate directory.

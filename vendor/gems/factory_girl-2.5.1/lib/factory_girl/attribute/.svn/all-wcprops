@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/lib/factory_girl/attribute
+END
+association.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/lib/factory_girl/attribute/association.rb
+END
+dynamic.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/lib/factory_girl/attribute/dynamic.rb
+END
+static.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/lib/factory_girl/attribute/static.rb
+END
+sequence.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/lib/factory_girl/attribute/sequence.rb
+END

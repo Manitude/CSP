@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/test/backend
+END
+pluralization_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/test/backend/pluralization_test.rb
+END
+transliterator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/test/backend/transliterator_test.rb
+END
+metadata_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/test/backend/metadata_test.rb
+END
+exceptions_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/test/backend/exceptions_test.rb
+END
+interpolation_compiler_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/test/backend/interpolation_compiler_test.rb
+END
+chain_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/test/backend/chain_test.rb
+END
+fallbacks_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/test/backend/fallbacks_test.rb
+END
+cache_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/test/backend/cache_test.rb
+END
+cascade_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/test/backend/cascade_test.rb
+END
+key_value_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/test/backend/key_value_test.rb
+END
+memoize_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/test/backend/memoize_test.rb
+END
+simple_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/test/backend/simple_test.rb
+END

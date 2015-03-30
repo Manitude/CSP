@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/WebDev/!svn/ver/41290/gems/clickatell/0.6.0/spec
+END
+spec.opts
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/41290/gems/clickatell/0.6.0/spec/spec.opts
+END
+hash_ext_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/41290/gems/clickatell/0.6.0/spec/hash_ext_spec.rb
+END
+api_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/41290/gems/clickatell/0.6.0/spec/api_spec.rb
+END
+command_executor_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/41290/gems/clickatell/0.6.0/spec/command_executor_spec.rb
+END
+response_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/41290/gems/clickatell/0.6.0/spec/response_spec.rb
+END
+spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/41290/gems/clickatell/0.6.0/spec/spec_helper.rb
+END

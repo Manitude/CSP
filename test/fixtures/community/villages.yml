@@ -1,0 +1,13 @@
+---
+korean_kids_village:
+  name: Korean Kids
+  description: The impressionable youth of Korea
+  id: 8
+japanese_kids_village:
+  name: Japanese Kids
+  description: The impressionable youth of Japan
+  id: 9
+chinese_kids_village:
+  name: Chinese Kids
+  description: The impressionable youth of China
+  id: 10

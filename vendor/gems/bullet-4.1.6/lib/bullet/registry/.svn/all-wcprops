@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/registry
+END
+base.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/registry/base.rb
+END
+association.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/registry/association.rb
+END
+object.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/registry/object.rb
+END

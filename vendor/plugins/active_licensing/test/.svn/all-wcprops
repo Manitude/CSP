@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/157206/plugins/active_licensing/trunk/test
+END
+product_right_hash_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/128978/plugins/active_licensing/trunk/test/product_right_hash_test.rb
+END
+creation_account_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/149111/plugins/active_licensing/trunk/test/creation_account_test.rb
+END
+license_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/156595/plugins/active_licensing/trunk/test/license_test.rb
+END
+request_and_response_handler_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/156595/plugins/active_licensing/trunk/test/request_and_response_handler_test.rb
+END
+multicall_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/85989/plugins/active_licensing/trunk/test/multicall_test.rb
+END
+locking_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/100027/plugins/active_licensing/trunk/test/locking_test.rb
+END
+content_range_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/134901/plugins/active_licensing/trunk/test/content_range_test.rb
+END
+license_server_interface_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/115012/plugins/active_licensing/trunk/test/license_server_interface_test.rb
+END
+consumable_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/149569/plugins/active_licensing/trunk/test/consumable_test.rb
+END
+api_communicator_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/87370/plugins/active_licensing/trunk/test/api_communicator_test.rb
+END
+rubyize_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/128678/plugins/active_licensing/trunk/test/rubyize_test.rb
+END
+lss_mimic_time_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/115012/plugins/active_licensing/trunk/test/lss_mimic_time_test.rb
+END
+product_pool_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/145524/plugins/active_licensing/trunk/test/product_pool_test.rb
+END
+ls_api_integration_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/157206/plugins/active_licensing/trunk/test/ls_api_integration_test.rb
+END
+base_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/86816/plugins/active_licensing/trunk/test/base_test.rb
+END
+extension_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/94313/plugins/active_licensing/trunk/test/extension_test.rb
+END
+product_right_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/134901/plugins/active_licensing/trunk/test/product_right_test.rb
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/132049/plugins/active_licensing/trunk/test/test_helper.rb
+END

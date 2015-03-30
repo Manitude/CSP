@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/lib/icalendar
+END
+parameter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/lib/icalendar/parameter.rb
+END
+component.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/lib/icalendar/component.rb
+END
+helpers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/lib/icalendar/helpers.rb
+END
+conversions.rb.orig
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/lib/icalendar/conversions.rb.orig
+END
+conversions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/lib/icalendar/conversions.rb
+END
+calendar.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/lib/icalendar/calendar.rb
+END
+rrule.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/lib/icalendar/rrule.rb
+END
+tzinfo.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/lib/icalendar/tzinfo.rb
+END
+base.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/lib/icalendar/base.rb
+END
+parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/lib/icalendar/parser.rb
+END

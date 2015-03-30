@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test
+END
+validation_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/validation_test.rb
+END
+extra_attachment_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/extra_attachment_test.rb
+END
+geometry_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/geometry_test.rb
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/test_helper.rb
+END
+basic_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/basic_test.rb
+END
+schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/schema.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/database.yml
+END
+base_attachment_tests.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/test/base_attachment_tests.rb
+END

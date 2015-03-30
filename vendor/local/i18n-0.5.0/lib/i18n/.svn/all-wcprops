@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n
+END
+locale.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/locale.rb
+END
+exceptions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/exceptions.rb
+END
+tests.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/tests.rb
+END
+gettext.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/gettext.rb
+END
+config.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/config.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/version.rb
+END
+backend.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/backend.rb
+END

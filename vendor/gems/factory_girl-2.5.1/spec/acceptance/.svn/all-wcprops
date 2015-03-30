@@ -1,0 +1,155 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance
+END
+overrides_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/overrides_spec.rb
+END
+create_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/create_spec.rb
+END
+attribute_aliases_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/attribute_aliases_spec.rb
+END
+traits_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/traits_spec.rb
+END
+default_strategy_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/default_strategy_spec.rb
+END
+build_stubbed_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/build_stubbed_spec.rb
+END
+sequence_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/sequence_spec.rb
+END
+stub_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/stub_spec.rb
+END
+transient_attributes_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/transient_attributes_spec.rb
+END
+callbacks_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/callbacks_spec.rb
+END
+aliases_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/aliases_spec.rb
+END
+modify_inherited_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/modify_inherited_spec.rb
+END
+definition_without_block_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/definition_without_block_spec.rb
+END
+modify_factories_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/modify_factories_spec.rb
+END
+define_child_before_parent_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/define_child_before_parent_spec.rb
+END
+definition_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/definition_spec.rb
+END
+parent_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/parent_spec.rb
+END
+attributes_ordered_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/attributes_ordered_spec.rb
+END
+build_list_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/build_list_spec.rb
+END
+initialize_with_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/initialize_with_spec.rb
+END
+attributes_for_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/attributes_for_spec.rb
+END
+attributes_from_instance_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/attributes_from_instance_spec.rb
+END
+create_list_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/create_list_spec.rb
+END
+attribute_existing_on_object_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/attribute_existing_on_object_spec.rb
+END
+build_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/spec/acceptance/build_spec.rb
+END

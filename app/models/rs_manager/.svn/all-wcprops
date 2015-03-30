@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/rs_manager
+END
+group.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/rs_manager/group.rb
+END
+management.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/rs_manager/management.rb
+END
+namespace.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/rs_manager/namespace.rb
+END
+rs_manager_connection.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/rs_manager/rs_manager_connection.rb
+END
+user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/rs_manager/user.rb
+END
+role.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/rs_manager/role.rb
+END
+template_namespace.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/models/rs_manager/template_namespace.rb
+END

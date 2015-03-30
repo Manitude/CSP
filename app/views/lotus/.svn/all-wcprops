@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/159015/coach_portal/branches/sprint32/app/views/lotus
+END
+_about_lotus_data.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/lotus/_about_lotus_data.html.erb
+END
+_lotus_real_time_data.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/159015/coach_portal/branches/sprint32/app/views/lotus/_lotus_real_time_data.erb
+END
+_reflex_learner_details.erb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/lotus/_reflex_learner_details.erb
+END
+_last_5_logins.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/lotus/_last_5_logins.html.erb
+END
+_learners_waiting_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/lotus/_learners_waiting_details.html.erb
+END
+_reflex_coach_details.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/lotus/_reflex_coach_details.erb
+END
+_reflex_coach_scheduled_details.erb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/lotus/_reflex_coach_scheduled_details.erb
+END
+_reflex_coach_scheduled_details.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/lotus/_reflex_coach_scheduled_details.html.erb
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosetta_stone/middleware
+END
+flashdata_compatibility.rb
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosetta_stone/middleware/flashdata_compatibility.rb
+END
+disable_assets_logger.rb
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosetta_stone/middleware/disable_assets_logger.rb
+END

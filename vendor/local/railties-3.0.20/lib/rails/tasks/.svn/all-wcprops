@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/tasks
+END
+documentation.rake
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/tasks/documentation.rake
+END
+statistics.rake
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/tasks/statistics.rake
+END
+misc.rake
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/tasks/misc.rake
+END
+annotations.rake
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/tasks/annotations.rake
+END
+framework.rake
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/tasks/framework.rake
+END
+middleware.rake
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/tasks/middleware.rake
+END
+tmp.rake
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/tasks/tmp.rake
+END
+log.rake
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/tasks/log.rake
+END
+routes.rake
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/tasks/routes.rake
+END

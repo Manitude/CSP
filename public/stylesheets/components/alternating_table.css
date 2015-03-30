@@ -1,0 +1,28 @@
+.alternating_table {
+  table-layout: fixed;
+}
+
+.alternating_table tr.odd {
+  background-color: #e0e0e0;
+}
+.alternating_table tr.even {
+  background-color: #f0f0f0;
+}
+
+.alternating_table th {
+  width: 20em;
+  height: 25px;
+  padding: 2px 0 2px 5px;
+  font-weight: bold;
+}
+
+.alternating_table td {
+  width: 6em;
+  height: 25px;
+  padding:2px 8px 2px 4px;
+  white-space:nowrap;
+}
+
+.alternating_table.center_td td{
+  text-align: center;
+}

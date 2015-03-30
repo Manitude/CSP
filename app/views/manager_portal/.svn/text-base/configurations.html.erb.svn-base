@@ -1,0 +1,42 @@
+<p>Configure sessions timeframe based on the language:</p><br />
+
+<%= form_tag configurations_path, :class => 'configure' do -%>
+  <p class="head"><em>Language</em><em>Start time</em></p>
+  <% @langs.each do |lang| -%>
+    <p>
+      <em><%= lang.display_name -%></em>
+      <%= select_tag "lang_ids[#{lang.id}]", options_for_session_start_time(lang.session_start_time) -%>
+    </p>
+  <% end -%>
+  <input type="submit" class="btn" value="Configure" disabled ="true"/>
+<% end -%><br />
+
+<%= form_tag configurations_path, :class => 'configure' do -%>
+  <p class="head"><em>Tech Support Window</em></p>
+  <p>
+    <em>Start Time</em>
+    <%= select_tag "tech_support[start_time]", options_for_select(append_mm(HOURS_IN_A_DAY), @tech_support[:start_time]) %>
+  </p>
+  <p>
+    <em>End Time</em>
+    <%= select_tag "tech_support[end_time]", options_for_select(append_mm(HOURS_IN_A_DAY), @tech_support[:end_time]) %>
+  </p>
+  <input type="submit" class="btn" value="Set Tech Support Window" />
+<% end -%><br />
+
+<%= form_tag configurations_path, :class => 'configure' do -%>
+  <p class="head"><em>Adobe Maintenance Window</em></p>
+  <p>
+    <em>Start Time</em>
+    <%= select_tag "adobe[start_day]", options_for_select(WEEKDAY_NAMES, @adobe[:start_day]) %>
+    <%= select_tag "adobe[start_time]", options_for_select(append_mm(HOURS_IN_A_DAY), @adobe[:start_time]) %>
+  </p>
+  <p>
+    <em>End Time</em>
+    <%= select_tag "adobe[end_day]", options_for_select(WEEKDAY_NAMES, @adobe[:end_day]) %>
+    <%= select_tag "adobe[end_time]", options_for_select(append_mm(HOURS_IN_A_DAY), @adobe[:end_time]) %>
+  </p>
+  <input type="submit" class="btn" value="Set Adobe Maintenance Window" />
+<% end -%><br />
+
+<p><b>Note:</b> All Times in EST</p>

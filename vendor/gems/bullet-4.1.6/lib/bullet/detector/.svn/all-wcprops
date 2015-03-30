@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/detector
+END
+counter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/detector/counter.rb
+END
+unused_eager_association.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/detector/unused_eager_association.rb
+END
+n_plus_one_query.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/detector/n_plus_one_query.rb
+END
+base.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/detector/base.rb
+END
+association.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/detector/association.rb
+END

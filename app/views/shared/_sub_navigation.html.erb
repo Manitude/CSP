@@ -1,0 +1,14 @@
+<% subnav_items = currently_selected_main_nav_item && currently_selected_main_nav_item[:subnav_items] %>
+<% if subnav_items && subnav_items.any? %>
+  <div id="sub_navigation">
+    <ul>
+      <% subnav_items.each do |item| %>
+        <li>
+          <%= link_to(item[:link_text],
+            { :controller => item[:controller], :action => item[:action] },
+            :class => ((params[:controller] == item[:controller]) && (params[:action] == item[:action])) ? 'current' : nil) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

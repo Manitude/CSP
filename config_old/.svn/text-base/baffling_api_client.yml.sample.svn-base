@@ -1,0 +1,4 @@
+host: baffler.rosettastone.com
+port: 80
+proxy_host: opxdev.lan.flt
+proxy_port: 80

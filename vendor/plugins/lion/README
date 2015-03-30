@@ -1,0 +1,235 @@
+Copyright (c) 2009 Rosetta Stone
+
+Lion
+====
+
+== Overview ==
+ * Lion assumes that you want to do things differently than the built-in Rails way of doing translations (hierarchical yml files with dot-separated symbolic keys)
+ * Instead, Lion uses csv files to store your translations, and can support BOTH natural and symbolic keys. ("This would be a natural key", and "this_would_be_a_symbolic_key2931831039")
+ * These csv files not only contain all translations for that key, but also some important metadata:
+  * "context": helps the translator know more about the string's context.
+  * "status" - can be one of the following:
+   * "not_approved": the initial status of all new strings, before the default locale expert gives it an OK.
+   * "being_approved": while the default locale expert is looking over the new string for approval.
+   * "approved": after the default locale expert approves the string.
+   * "being_translated": self explanatory
+   * "translated": self explanatory
+   * "being_verified": upon translation, there is a stage where the translations can be reviewed. This is optional.
+   * "verified": the string has been translated and is ready to be put into production.
+  * "comment": holds any information anyone wants to write about the string
+  * "screenshotable": can be "yes" or "no" or blank. if "yes", then the "context" field is required.
+  * "batch": translations can be sent off in batches.  Every string in a batch will have the same status, such as "being_translated", or "verified", etc.
+  * "test_name": if a screenshot has been taken of this string, this was the test that took the screenshot.  This allows screenshots to be done more quickly than running every single Selenium test.
+ * the db/translations directory is where all the csvs are stored (at least this is the default location in lion.yml)
+ * the db/translations/io directory will have these files:
+  * input.csv - is used as input for ./rake lion:import and the screenshot rake tasks
+  * output.csv - is the output for ./rake lion:export_with_criteria (more on that later)
+  * the next two directories are suggested since a few rake task defaults assume they are there
+   * the db/translations/static directory is where you'll put strings that are likely to never change, such as the names of countries, time_zones, locales, etc.
+   * the db/translations/dynamic directory is where you'll put the rest of your strings... there can be multiple files, named whatever you wish, but we recommend having a file named strings.csv because some rake tasks use that as a default
+
+
+== Usage ==
+ * _("Wrap your strings in an underscore method like this and it will get translated")
+ * unharvested_translate(if_you_must_use_a_variable) # the harvester will yell at you if you use _(a_variable_here) because it will not recognize "a_variable_here" as a key
+ * validation_message("Password must not contain your username") # custom error messages generated from model validations must be specified with the validation_message() method. This merely passes the key into the errors array which can be translated later with an unharvested_translate call. However, the validation_message method is used to harvest strings.
+ * no_screenshot_translate("String that you do not want to take a screenshot of") # options in a select box are a prime example! In screenshot mode, anything translated string that isn't wrapped in this method will have output that is wrapped in a specially identified span tag that allows for the screenshot system to find the string. This doesn't work too well in some places, like option tags.
+
+== Tips ==
+ * in the console, type the following:
+  * Lion::Query.get_translations_hash
+  * If you have a lot of translations, this hash will be huge. This is the hash that is used to look up translations.  The more you know the anatomy of this hash, the more you will be able to debug translations.
+
+== Installation ==
+ * external vendor/plugins/fastercsv to https://svn.lan.flt/svn/WebDev/plugins/fastercsv/1.5.0
+ * external vendor/plugins/exception_notification to https://svn.lan.flt/svn/WebDev/plugins/exception_notification/trunk
+ * copy lion.defaults.yml to config/lion.yml and make appropriate changes
+ * ./rake lion:setup (sets up the csv directories)
+ * create test/unit/translation_test.rb and include Lion::TranslationTest inside "class TranslationTest < ActiveSupport::TestCase"
+ * If you want to take advantage of the screenshot features:
+  * Install Selenium
+  * Specify your selenium suites in lion.yml
+  * require vendor/plugins/lion/lib/screenshot_helper.rb in a test helper file
+  * put the following line in the setup methods of all test classes that you will be using to take screenshots:
+   * I18n.locale = ENV['translation_screenshot_locale'] if ENV['translation_screenshot_locale']
+ * If you want to do model translations, we recommend globalize2
+  * script/plugin install git://github.com/joshmh/globalize2.git
+  * there are examples of model translation tests in lib/test/translation_test.rb.  Just search for "model_translation"
+ * If you want to be able to support Excel exports (via the /lion route), then you will need to add the spreadsheet & ruby-ole gems as an external
+  
+== The rake tasks ==
+
+ * run ./rake -T -D lion and read the descriptions.  Look at the code for more descriptive comments
+ * the most common commands:
+  * ./rake lion:add_new_keys
+  * ./rake lion:import
+  * ./rake lion:delete_unused_keys
+  * ./rake lion:export_with_criteria
+   * This will become your best friend. See comments in the code for use.
+  * ./rake lion:edit_with_criteria
+   * This will become your next-best friend.  See comments in the code for use.
+  * ./rake lion:change_keys_that_are_different_from_default_locale_translation
+  * the screenshots commands are a little more complicated, and will not be run that often.  Please look at the code and description of those tasks
+
+== The Process ==
+
+=== Phase 1: Default Locale Review ===
+
+ * run `translated=none_or_partial ./rake lion:export_with_criteria` and go through each string in output.csv
+  * Does it need to exist?
+  * Anything wrong?
+  * Could it be a graphic instead of a word?
+  * Is the branding correct?  (see application.rb) Are the brands correctly interpolated?
+  * Is it a validation message?
+   * Did it get called with validation_message?
+   * Does it have any interpolations?  Even if there are brands, it can't have interpolations.
+  * Is the status correct?  It should be not_approved
+  * Is is screenshotable?  If not, add context and set screenshotable to no.  If so, specify "yes" for the screenshotable column
+ * run `stat=not_approved to_batch=auto increment_status=true ./rake lion:export_with_criteria` which will put the strings in db/translations/io/output.csv and auto-fill the batch number to the next batch and auto-increment the status from not_approved to being_approved.
+ * Take screenshots of these strings
+  * copy db/translations/io/output.csv to db/translations/io/input.csv, which the screenshot system will use to know which strings to take screenshots of
+  * ./rake lion:screenshots_dry_run (this allows you to run all selenium tests in screenshot mode, which might cause errors that wouldn't happen in normal mode, however it won't take screenshots, so it will go through the tests quickly)
+  * fix any problems, then run ./rake lion:run_tests_and_take_screenshots (by not specifying the locale, it will automatically be the default_locale)
+  * inspect output.csv for any strings that did not get shot.  Fix tests or create new ones then run them one by one by doing something like this:
+   * single_test="test/selenium/single_session/support_pages_test.rb -n test_about_studio_page_for_paid" ./rake lion:run_tests_and_take_screenshots
+   * update the statuses in output.csv to 'being_approved'
+   * run batch=x ./rake lion:update_csvs_and_markdown_from_output_csv
+ * give output.csv to the language expert in your default_locale, and a link to the story docs with the screenshots
+ * when you receive the updated csv
+  * any blank lines?
+  * do any keys or translations look funny?
+  * are the statuses right?
+  * do the batch numbers look right?
+  * if everything is good, save it to db/translations/io/input.csv and run `increment_status=true ./rake lion:import` (this will increment the status from being_approved to approved)
+ * run tests and commit
+
+=== Phase 2: ===
+
+
+---- ignore everything below this if you are not Randy Budnikas ---
+
+todo:
+-------------------
+ * tell them how to structure their community_screenshots app... it's gotta be /translations/iso/asdf
+ * talk about the labeled_form_builder solution for doing error messaging
+
+
+
+
+* Harvesting a new batch of strings to be sent out for translation:
+ * run ./rake i18n:take_only_new_screenshots (this will generate a to_release.csv)
+ * save that file to doc/translations/releases/to_release_round_xxx.csv
+ * commit the screenshots generated in ../../community_screenshots
+ * give ldent the links to the community story docs
+* Retaking screenshots with the updated english:
+ * ./rake i18n:import
+ * ./rake i18n:keys_that_are_different_from_english_translation --trace (to find out which ones changed...)
+  * then possibly run ./rake i18n:change_keys_that_are_different_from_english_translation --trace
+ * commit changes
+ * run ./rake i18n:screenshot_dry_run_after_english_updates --trace and fix any tests that break
+ * ./rake i18n:english_screenshots_after_english_updates --trace
+ * look at doc/transations/to_release.csv for any strings that should have been screenshotted.
+  * Figure out a test that would possibly capture the key
+  * Run the test like this: take_translation_screenshots=true on_every_click=true source=csv ruby test/....blah blah blah
+  * This will update /tmp/translation_screenshots.yml
+  * ./rake i18n:rebuild_to_release_and_archive_after_running_a_single_test --trace (you'll have to specify translation_screenshot_locale=xx-XX)
+ * copy that file to doc/translations/releases/to_release_round_xxx.csv (same release number as when you took the new screenshots)
+ * dry_run=false translation_screenshot_locale=xx-XX ./rake i18n:rebuild_to_release_and_archive_after_running_a_single_test --trace (this will build the story doc html)
+ * commit the screenshots generated in ../../community_screenshots
+ * give nik the links to the community story docs
+* Importing to_release.csv and harvesting screenshots for all the new translations:
+ * Save their .xlsx file to csv using Open Office (not Microsoft Office)
+  * Click "Edit Filter Settings" in the dialog box
+  * Keep current format
+  * Choose "Unicode UTF-8"
+  * keep field delimiter and text delimiter default values
+  * keep "Save cell content as shown" checked
+  * click OK
+ * Copy that file to doc/translations/to_release.csv
+ * run ./rake i18n:import
+  * validations will run.. 
+   * if there are problems with UTF-8 characters getting messed up, the validations will find them.  Fix them and run import again
+   * there shouldn't be any problems with keys that don't exist anymore in our system.  During the first part of the import, those keys are deleted... but a backup of the original file is made for safety
+ * ruby test/unit/translation_test.rb
+ * IMPORTANT!!!!!!!! svn ci doc/translations/to_release.csv (because the dry run will look at what is in svn as the source)
+ * run ./rake i18n:screenshot_dry_run_after_translation_import --trace and fix any tests that break
+ * run ./rake i18n:screenshots_for_all_locales_after_all_language_import --trace which will take screenshots of whatever was given to you in to_release.csv
+ * save the newly generated to_release.csv into doc/translations/releases/to_release_round_xxx.csv (again, the same round number used when you harvested the new screenshots)
+ * commit any new screenshots generated in ../../community_screenshots
+ * give Nik the links to the community story docs
+  * He will then go back to lionbridge and they will look at the screenshots of the foreign locales, and make possibly more edits.  If Nik gives us back to_release.csv again, do the import, then save to to_release_round_xxx.csv once more
+
+== the conventions ==
+
+ * NEVER use variables inside _() or translation tests will fail
+ * If you need to translate a variable, use unharvested_translate(), but you will then also have to write tests that will ensure that the variable you're sending has translations.  If that is not possible, then be creative with interpolation, or create a bunch of separate strings and conditionals.
+ * ONLY use single or double quotes inside the underscore method, do not use _(%Q[my string]) because the harvester will not pick it up
+ * the value used to signify an untranslated string is __untranslated__, but this should be automatically added for you if you call ./rake i18n:copy
+ * If you take screenshots, or want to view screenshots in your local docs, you need to have the community_screenshots project checked out two directories lower than your community app
+ * ActiveRecord errors:
+  * We are straying from the native implementation of ActiveRecord errors for the following reasons:
+   * We decided to use human-readable keys instead of symbolic keys for translations, (makes code more readable, is similar to gettext, don't have to slow down and think of a unique symbol) so we developed our own implementation of translations that sits on top of the built-in translation framework, "_()"
+   * The yml structure is a hierarchical stack of symbols, which is different from how we store our strings in en-US.yml, etc.
+   * Importing and exporting the hierarchical structure would be much more difficult because we need to flatten our translations into csvs for submitting to lionbridge
+   * Having one yml format, and one place for translations, and one translation implementation is simpler.
+  * So what do we have to do differently?
+   * We need to add errors by hand, using the syntax: errors.add('attribute_name', _("This field is required", {}, true, true)), where the last arg is bypass=true.  This enables our harvester to know about the string, but bypasses the translation of the string at that time because the app will try to translate it later.. if you translate it at this point, you will get a translation missing error at runtime because it will try to translate the already-translated string.
+   * Using the built-in "<humanized_attribute_name> is required" type of error messaging does not lend itself well to all translations... the attribute name MUST be at the start of the string, and in some translations this might not make sense.
+
+== site_settings.yml and handling untranslated situations ==
+
+ * "raise_on_missing_translations" means that if _('this string is not in any yml file') then it will raise an error.  Should be true on dev and test boxes... false on production boxes
+ * "raise_on_untranslated_translations" means that if _('the translation of this string is "__untranslated__" in the yml file for the locale in question') it will raise an error.  Should be set to true when we want to know if we have __untranslated__ anywhere.... or we could grep for __untranslated__ so i don't know how useful this is.
+
+== badges and social apps ==
+
+ * translations are taken care of in the xml, and the translations surface as model translations
+ 
+ General improvements
+ ----------------------
+== TODO ==
+ Done * ~~make the admin untranslated strings look better... show the english~~
+ Done * ~~make a new method called awaiting_default_locale_string('My string that Laura has not approved yet')~~
+ Done * ~~rename the key '59' to 'semicolon_123123123' and replace in code and csv. Look through all other keys for possible problems, like if their length is less than 6.~~
+ Done * ~~where possible (not in the case of iframes), get rid of wait_for_message_and_take_shot(pass_translation_key_through and instead harvest wait_for_message_and_take_shot~~
+  * In Rails 2.3.4 the MissingInterpolationArgument error does not raise when you try to translate "asdf {{qwer}}" with no interpolation
+  * fix the error you get for "Welcome to {{site_brand}}" when raise_on_mismatched_interpolations is true
+  * on import, only show what was changed
+  * figure out what tool to make so that we know when a new string has been added after the deadline
+  * "Earned in {{brand}}"
+  * make a test for brands... possibly put brands in the config, then iterate through them, finding all default_locale strings that have those in them... then making sure every other translation has that word in it.. if not, warn (don't fail, because it could take weeks to fix)
+  * new column for "group_by"? or have export_with_criteria follow a convention in the context column?
+  * look for "awaiting" screenshot value when harvesting strings
+  * rake task for finding redundant strings
+  * separate all watchlist words like "Session" and "Coach", and have plurals for them
+
+Daily screenshot builds 
+-------------------------
+== TODO ==
+We need dedicated hardware (similar to how we do CI) to gather screenshots daily, so the Translation CM does not need to spend weekends doing screenshots.  Here is a summary of what needs to happen:
+
+ * A dedicated box will svn up and run single_session and multi_session selenium tests in screenshot mode. (I can use my windows box, perhaps)
+ * New screenshot pngs and newly generated story docs will be automatically committed to svn.
+ * A report will be emailed to the team describing which strings did not get shot. Appropriate action can then be taken to either write a selenium test to harvest the string or provide context for the string, and a value of "no" for screenshotable.
+
+This is what is left to do:
+ * ~~if a key is WAS: yes, do not take it out of the markdown... also heal this in markdown now~~
+ * get all "WAS: yes" strings harvested again...
+ * have it break the build when any string has "WAS: yes" for the default locale screenshot.
+ * if a screenshot should have been taken, and it's a new one, put NO for en-US_screenshot and have that break the build
+ * make it so it won't take a screenshot of the sign_in page more than once
+ * documentation for setting yourself up for screenshots
+ * documentation for how to do error messages
+ * handle if it doesn't commit for any reason
+ * ~~maybe make it so a single person can be blamed for the problem~~
+ * put more in TranslationProcess and the email about what to do when there are problems.
+ * get this working on a CI box on a cron
+ * have a "watchlist" config
+ * ~~analyze what tests failed and programmatically blame who is responsible... call this out in the test failure message~~
+ * if a string isn't harvested and it belongs to a test that failed - let that be known
+ 
+ Until we get this working completely, use this command:
+
+ {{{
+ do_not_send_email=true do_not_commit=true RAILS_ENV=production ./rake lion:screenshot_harvest
+ }}}

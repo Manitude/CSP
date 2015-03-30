@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/ancestry-1-3
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/ancestry-1-3/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/ancestry-1-3/README.rdoc
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/ancestry-1-3/.gitignore
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/ancestry-1-3/init.rb
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/ancestry-1-3/install.rb
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/ancestry-1-3/MIT-LICENSE
+END
+ancestry.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/ancestry-1-3/ancestry.gemspec
+END

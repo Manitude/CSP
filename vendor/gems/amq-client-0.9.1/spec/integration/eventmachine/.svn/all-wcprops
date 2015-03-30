@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine
+END
+connection_start_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/connection_start_spec.rb
+END
+spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/spec_helper.rb
+END
+basic_return_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/basic_return_spec.rb
+END
+basic_get_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/basic_get_spec.rb
+END
+connection_close_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/connection_close_spec.rb
+END
+basic_cancel_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/basic_cancel_spec.rb
+END
+channel_close_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/channel_close_spec.rb
+END
+channel_flow_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/channel_flow_spec.rb
+END
+basic_ack_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/basic_ack_spec.rb
+END
+exchange_declare_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/exchange_declare_spec.rb
+END
+tx_commit_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/tx_commit_spec.rb
+END
+queue_declare_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/queue_declare_spec.rb
+END
+tx_rollback_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/tx_rollback_spec.rb
+END
+concurrent_basic_publish_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/concurrent_basic_publish_spec.rb
+END
+basic_consume_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/eventmachine/basic_consume_spec.rb
+END

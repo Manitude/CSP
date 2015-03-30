@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/support_user_portal
+END
+view_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/support_user_portal/view_profile.html.erb
+END
+edit_admin_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/support_user_portal/edit_admin_profile.html.erb
+END
+preference_settings.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/support_user_portal/preference_settings.html.erb
+END
+edit_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/support_user_portal/edit_profile.html.erb
+END

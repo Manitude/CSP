@@ -1,0 +1,40 @@
+<%= stylesheet_link_tag 'report' %>
+<span class = "bold-font"><%= "Today's Date" -%>:</span>
+<span class="left-space" style="font-weight: normal;"><%= get_today_date %> </span>
+<span class="report_info_button"><%= link_to_function image_tag('i_icon.gif',:alt => 'About this data' ,:title => 'About this data' ), "fixedFaceBoxWithHeader('#{about_report_data_path}?from_page=#{params[:action]}', 
+  '#{params[:action] == 'show' ? 'ReFLEX Advanced English Coach Activity Report Key' : 'ReFLEX All American English Coach Activity Report Key'}')" %></span>
+<form id="reflex_report_form">
+  <div class="coach_activity_right_container">
+    <span class="selector">
+      <%= select_tag :region, options_for_region %>
+    </span>
+    <span class="selector">
+      <%= select_tag :timeframe, options_for_duration_for_coach_report(selected = "Today"), :onChange => "changeTimeframe(this)" %>
+    </span>
+    <input type="hidden" value="<%= reflexurl_value %>" id="reflexurl"></input>
+    <%= submit_tag "Generate", :id => "reflex_report_generator", :style => "float:right;" %>
+    <div id="custom_time_select" style="margin-left:175px;">
+      <%= calendar_date_select_tag 'start_date', Time.now.beginning_of_day.strftime("%B %d, %Y %I:%M %p"), :class => 'datetimepicker' %>
+      &nbsp;through&nbsp;
+      <%= calendar_date_select_tag 'end_date', Time.now.end_of_day.strftime("%B %d, %Y %I:%M %p"), :class => 'datetimepicker' %>
+    </div>
+  </div>
+</form>
+<div id="reflex_data">
+  <%= image_tag 'big_spinner.gif', :id => 'big_spinner', :style => "display :none;margin-left:50%;margin-top:10px" %>
+  <div id="reflex_data_contents" style="overflow:auto;display:none;max-height:700px">
+
+  </div>
+  <div id="export_to_csv" style="display:none; float:right; margin-top: 10px">
+    <%= form_tag(reflexurl_value+'_csv', :method=>'get') do %>
+      <%= hidden_field_tag :region_hidden %>
+      <%= hidden_field_tag :start_date_hidden%>
+      <%= hidden_field_tag :end_date_hidden%>
+
+      <div>
+        <span style="font-size: 82%; padding-right: 5px;">A complete set of the above report is available as a downloadable .csv file</span>
+        <input type="submit" id="csv_button_id" value="EXPORT AS .CSV"/>
+      </div>
+    <% end %>
+  </div>
+</div>

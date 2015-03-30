@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime
+END
+minus_month_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/minus_month_spec.rb
+END
+clone_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/clone_spec.rb
+END
+relationship_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/relationship_spec.rb
+END
+limits_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/limits_spec.rb
+END
+accessor_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/accessor_spec.rb
+END
+parsing_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/parsing_spec.rb
+END
+now_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/now_spec.rb
+END
+strptime_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/strptime_spec.rb
+END
+conversions_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/conversions_spec.rb
+END
+parse_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/parse_spec.rb
+END
+next_prev_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/next_prev_spec.rb
+END
+downto_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/downto_spec.rb
+END
+step_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/step_spec.rb
+END
+day_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/day_spec.rb
+END
+eql_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/eql_spec.rb
+END
+leap_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/leap_spec.rb
+END
+hash_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/hash_spec.rb
+END
+allocate_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/allocate_spec.rb
+END
+boat_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/boat_spec.rb
+END
+constructor_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/constructor_spec.rb
+END
+encoding_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/encoding_spec.rb
+END
+upto_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/upto_spec.rb
+END
+add_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/add_spec.rb
+END
+dup_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/dup_spec.rb
+END
+format_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/format_spec.rb
+END
+minus_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/minus_spec.rb
+END
+add_month_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/add_month_spec.rb
+END
+strftime_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/strftime_spec.rb
+END
+succ_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/home_run-1.0.7/spec/datetime/succ_spec.rb
+END

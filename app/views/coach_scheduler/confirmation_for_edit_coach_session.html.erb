@@ -1,0 +1,91 @@
+<div style ="margin: 20px;width: 300px">
+   
+  <%= form_tag update_session_from_cs_path(:coach_session_id => @coach_session_id),{:id => 'confirmation_coach_edit_session_form'} do -%>
+    <div id ="message_content">
+      <%= hidden_field_tag 'action_type_from_confirm' %>
+      <%if @button == "CANCEL"%>
+        <span>Do you want to cancel this session only, or cancel both this session and all future occurrences?</span>
+      <%else%>
+        <%if @button == "NO, DO NOT MAKE RECURRING"%>
+          <span> <%= @coach.user_name %> is unavailable at this time.  Are you sure you want to create a recurring session for them?"</span>
+        <%else%>
+          <span>Do you want to apply these changes to all recurring sessions?</span>
+        <%end%>
+        <%= hidden_field_tag 'language_id', @language_id %>
+        <%= hidden_field_tag 'village_id', @village_id %>
+        <%= hidden_field_tag 'level', @level %>
+        <%= hidden_field_tag 'unit', @unit %>
+        <%= hidden_field_tag 'number_of_seats', @no_of_seats %>
+        <%= hidden_field_tag 'recurring', @recurring %>
+        <%= hidden_field_tag 'teacher_confirmed', @teacher_confirmed %>
+        <%= hidden_field_tag 'wildcard', @wildcard %>
+        <%= hidden_field_tag 'previously_recurring', @selected_recurring %>
+        <%= hidden_field_tag 'learners_signed_up', @learners_signed_up %>
+        <%= hidden_field_tag 'cancel_future_sessions', 'true' %>
+        <%= hidden_field_tag 'availability', @available %>
+      <%end%>
+    </div>
+    <div id ="processing_id" style="display:none;">
+      <div style=" text-align: center; padding: 10px;"><span style="color:green; font-size: 15px;">Processing ...</span></div>
+      <div style=" text-align: center; "><%= image_tag '/images/big_spinner.gif', :id => 'spinner_image' %></div>
+    </div>
+    <div id="confirmation_buttons" style="float: right;padding-top: 10px">
+      <%if @button == "NO, DO NOT MAKE RECURRING"%>
+        <span><%= button_to_function @button_with_recurrence, "confirmSave('#{@future_session}',this.value);", { :class => "button_shape"} %></span>
+        <span><%= submit_tag @button, {:name => "action_type_from_confirm", :class => "button_shape", :style => "background-color: #F3F3F4; border: 1px solid #444444;", :onclick => "return removeRecurring(this.value,false);"} %></span>
+      <%else%>
+        <span><%= submit_tag @button, {:name => "action_type_from_confirm", :class => "button_shape", :style => "background-color: #F3F3F4; border: 1px solid #444444;", :onclick => "return showProcessing(this.value,false);"} %></span>
+        <span><%= button_to_function @button_with_recurrence, "confirmSave('#{@future_session}',this.value);", { :class => "button_shape"} %></span>
+      <%end%>
+    </div>
+  <%end%>
+
+<%= javascript_tag do %>
+    function confirmSave(future_session,action_type){
+      if ((action_type === 'SAVE ALL' || action_type === 'YES, CONTINUE') && future_session !== 'NO FUTURE SESSION'){
+        jQuery.alerts.okButton = ' Continue ';
+        jQuery.alerts.cancelButton = ' Cancel ';
+        jQuery.alerts.confirm(future_session,"Confirm",function(result){
+          if(result){
+            document.getElementById('cancel_future_sessions').value = "true";
+            return showProcessing(action_type, true)
+          }else{
+            document.getElementById('cancel_future_sessions').value = "false";
+            return false;
+          }
+        });
+      }else{
+        showProcessing(action_type, true)
+      }
+      return true;
+     }
+
+    function showProcessing(action_type, sumbit_on){
+        var save       = jQuery('input[type=submit][value=SAVE THIS SESSION ONLY]')
+        var save_w_r   = jQuery('input[type=button][value=SAVE ALL]')
+        var cancel     = jQuery('input[type=submit][value=CANCEL]')
+        var cancel_w_r = jQuery('input[type=button][value=CANCEL WITH RECURRENCE]')
+        var remove     = jQuery('input[type=submit][value=REMOVE]')
+        var remove_w_r = jQuery('input[type=button][value=REMOVE WITH RECURRENCE]')
+        var yes_continue = jQuery('input[type=button][value=YES, CONTINUE]')
+        var no_dont_make_reucrring = jQuery('input[type=submit][value=NO, DO NOT MAKE RECURRING]')
+        submit_buttons = [save, save_w_r, cancel, cancel_w_r, remove, remove_w_r, yes_continue, no_dont_make_reucrring];
+        jQuery.each(submit_buttons, function(index, element){
+          element.hide();
+        });
+        jQuery('#message_content').hide();
+        jQuery('#processing_id').show();
+        jQuery('#action_type_from_confirm').val(action_type);
+        if (sumbit_on){
+          jQuery('#confirmation_coach_edit_session_form').submit();
+        }
+     return true;
+    }
+
+    function removeRecurring(action_type, sumbit_on){
+      jQuery('input:hidden').filter('#recurring').val('false');
+      return showProcessing(action_type, sumbit_on);
+    }
+
+  <% end %>
+</div>

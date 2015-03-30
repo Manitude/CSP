@@ -1,0 +1,26 @@
+#calender_date_box{
+    padding: 5px;
+    border:1px solid #CCCCCC;
+}
+#start_date, #end_date{
+    text-align: center;
+    border: medium none;
+    width: 115px;
+}
+#previous_week, #next_week{
+    width: 16px;
+    height: 16px;
+    margin-left:  -3px;
+    margin-right: -4px;
+    margin-bottom: -3px;
+}
+#today_button{
+    background: url("/images/field_bg.png") repeat-x scroll 0 -23px transparent;
+    border: 1px solid #CECECE;
+    color: #444444;
+    margin-right: 10px;
+    height: 27px;
+}
+.ui-datepicker-trigger{
+    margin-bottom: -3px;
+}

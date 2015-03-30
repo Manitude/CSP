@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/encodings
+END
+quoted_printable.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/encodings/quoted_printable.rb
+END
+base64.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/encodings/base64.rb
+END
+binary.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/encodings/binary.rb
+END
+7bit.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/encodings/7bit.rb
+END
+8bit.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/encodings/8bit.rb
+END
+transfer_encoding.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/encodings/transfer_encoding.rb
+END

@@ -1,0 +1,20 @@
+<div style="width: 100%;">
+  <% unless notifications.blank? %>
+    <% prev_date = nil %>
+    <table style="border-left:none;border-top:none;width: 100%">
+      <% notifications.each do |notification| %>
+        <% cur_date = notification.rel_date %>
+        <% if  cur_date !=  prev_date %>
+          <%  prev_date = cur_date %>
+          <tr><th class="notification_header" colspan="2" style="text-align:left"><b><%= prev_date %></b></th></tr>
+        <% end %>
+        <tr id="<%= notification.target_object.id %>" >
+          <td class="notification_msg"><%= notification.message %></td>
+          <td class="notification_link"><%= notification.cta_links%></td>
+        </tr>
+      <% end %>
+    </table>
+  <% else %>
+    <p class="notice">There are no notifications for you.</p>
+  <% end %>
+</div>

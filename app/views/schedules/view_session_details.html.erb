@@ -1,0 +1,25 @@
+<% if @session_details.blank? %>
+Something went wrong. Please try again.
+<% else %>
+<div class="top_container">
+  <div class="top_left_element"><%= @session_details[:level_unit] %></div>
+  <div class="top_right_element">Avg attendance/session: <%= @session_details[:session_details].average_attendance.to_f.round(1) %></div>
+</div>
+<div class="btm_container">
+  <div >Coach: <span id="coach_full_name"><%= @session_details[:coach_full_name] %></span> </div>
+  <div >
+    <%if @session_details[:learner_details] && !@session_details[:learner_details].empty?%>
+      <div style="float: left"><%= @session_details[:learner_text]  %></div>
+      <div class="popup_learner_list">
+        <%learner_details_count = @session_details[:learner_details].size %>
+        <% @session_details[:learner_details].each do |learner| %>
+          <span class="learner"><%= link_to_function ((learner_details_count == 1) ? "#{learner.name}" : "#{learner.name},") , :onclick => "showLearner('#{@session_details[:session_details].eschool_session_id}','#{learner.id}',this)"%></span>
+          <%learner_details_count -= 1%>
+        <% end %>
+      </div>
+    <% else %>
+      <div style ="float: left"><%= @session_details[:learner_text_no_learners]%></div>
+    <% end %>
+  </div>
+</div>
+<% end %>

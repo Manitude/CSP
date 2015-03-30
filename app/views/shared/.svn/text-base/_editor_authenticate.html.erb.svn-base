@@ -1,0 +1,29 @@
+  <% if (coach_logged_in? || manager_logged_in? || tier1_support_lead_logged_in?) -%>
+    <div id = "coach_alert_div">
+        <%= link_to "Coach Alert", href = 'javascript:void(0);', :id => "coach_alert", :class => "on_duty_list" if coach_logged_in? && alert_is_active %>
+        <%= link_to "Coach Alert", href = 'javascript:void(0);', :id => "coach_manager_alert", :class => "on_duty_list" if (manager_logged_in? || tier1_support_lead_logged_in?)%>
+        <%= image_tag('/images/warning_red.png',:size => "15x15", :title => "Coach alert", :id => "alert_icon", :style => alert_is_active ? nil : "display: none;") %>
+    </div>
+  <% end -%>
+  <% if (coach_logged_in? || manager_logged_in?) -%>
+  <div id = "live_chat_div">
+    <div id = "on_duty_link1">
+      <%= link_to "Studio Team On Duty" ,href = 'javascript:void(0);', :id => "on_duty_list", :class => "on_duty_list" %>
+    </div>
+  </div>
+  <div id = "live_chat_div">
+    <%= link_to "Live Support Chat" , href = 'javascript:void(0);', :id => "live_help", :url => support_chat_link -%><br/>
+    <div id = "on_duty_link2" style="display: none;" >
+      <%= link_to "Studio Team On Duty" ,  href = 'javascript:void(0);', :id => "on_duty_list" %>
+    </div>
+  </div>
+<% end -%>
+<ul id="authenticate">
+  <% if logged_in? -%>
+    <li><%= "#{_("WelcomeF876582F")}," %>  <%= current_user_name %></li>
+    <li><%= link_to _('Sign_Out4D8289E1'), logout_path %><br /></li>
+    <li><%= link_to_super_user if coach_logged_in?-%></li>
+  <% else -%>
+    <li><%= link_to _('Sign_InE3BDA758'), login_path %></li>
+  <% end -%>
+</ul>

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/relation
+END
+calculations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/relation/calculations.rb
+END
+predicate_builder.rb
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/relation/predicate_builder.rb
+END
+query_methods.rb
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/relation/query_methods.rb
+END
+batches.rb
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/relation/batches.rb
+END
+finder_methods.rb
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/relation/finder_methods.rb
+END
+spawn_methods.rb
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/relation/spawn_methods.rb
+END

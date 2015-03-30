@@ -1,0 +1,37 @@
+<div class ="popup_learner_container">
+  <% if @coach_names.blank? %>
+    <div style ="float: left" id="message">No coaches available</div>
+  <% else %>
+    <% if params[:details_for] == "paused" %>
+      <div class="popup_coach_list_with_time">
+        <table id="popup_coach_list_entries" >
+          <thead>
+            <tr>
+              <th scope="col" style="width:200px;">Coach</th>
+              <th scope="col">Time Paused</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @coach_names.each do |coach| %>
+              <tr>
+                <td><%= coach[:name] %></td>
+                <td><%= coach[:time] %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    <% else %>
+      <div class="popup_coach_list">
+        <% @coach_names.each do |coach| %>
+          <div class="coach_element" <% if coach[:not_scheduled] %>style = "color: red"<% end %>><%= coach[:name] %></div>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+<%= javascript_tag do %>
+  jQuery(document).ready(function() {
+  setFaceboxWidth();
+  });
+<% end %>

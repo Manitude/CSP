@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @box_link.title %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @box_link.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_box_link_path(@box_link) %> |
+<%= link_to 'Back', box_links_path %>

@@ -1,0 +1,29 @@
+<div id="create_new_session_ms">
+  
+  <div id="bottom_part_of_facebox" style="float: left; position: relative; width: 100%;">
+    <% if @extra_session[:coaches].any? %>
+      <div id="available_coaches_container">
+        Included Coaches :
+        <%= render(:partial => 'coach_lists', :locals => {:coaches => @extra_session[:coaches], :excluded_coaches => []} )%>
+      </div>
+      <div class="right_container lotus_extra_right">
+        <div id="extra_session_name" style="padding-bottom: 10px;">
+          Session Name:
+          <div>
+            <%= text_field_tag 'session_name_txt' %>
+          </div>
+        </div>
+        <div id="button_container">
+          <input type = "button" id = "create_session" class = "button_shape" value = "Create" onclick="createExtraSessionReflex(false,true, <%=  @extra_session[:lang_id] %>,'<%= @extra_session[:session_start_time].to_i %>')"/>
+        </div>
+      </div>
+    <% else %>
+      There are no active coaches qualified to teach this language.
+    <% end %>
+  </div>
+</div>
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    crir.init();
+  });
+</script>

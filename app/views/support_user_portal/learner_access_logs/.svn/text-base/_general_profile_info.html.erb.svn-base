@@ -1,0 +1,26 @@
+<div id="general_info">
+  <p class="header">General</p><br />
+  <div class="separating_line"></div>
+  <div class="float_left" style="width:100%">
+    <div class="wide_label_row">
+      <span class="label">Name</span><span class="formw"><%= get_text(@learner.name) %></span>
+    </div>
+    <div class="wide_label_row">
+      <span class="label">Email</span><span class="formw"><%= get_text(@learner.email) %></span>
+    </div>
+    <div class="wide_label_row">
+      <span class="label">Location</span><span class="formw"><%= get_text(@learner.address_info) %></span>
+    </div>
+    <div class="wide_label_row">
+      <span class="label">GUID</span><span class="formw" style="font-family: monospace; font-size: 12px;" ><%= get_text(@learner.guid) %></span>
+    </div>
+    <div class="wide_label_row">
+      <span class="label">Source</span><span class="formw"><%= get_text(@learner.type) %></span>
+    </div>
+    <% if @learner.community_user? %>
+      <div class="wide_label_row">
+        <span class="label">Activated</span><span class="formw"><%= get_text(@learner.activated_at) %></span>
+      </div>
+    <% end -%>
+  </div>
+</div>

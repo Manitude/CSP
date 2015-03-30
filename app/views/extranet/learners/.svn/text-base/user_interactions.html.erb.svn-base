@@ -1,0 +1,52 @@
+<div class="form_container">
+  <div id="profile">
+    <p class="header">
+      <span class="header-left">View World interactions of <%= "#{@learner.first_name} #{@learner.last_name}" %> </span>
+      <span class="header-right"><%= link_to_learner_profile("Back to learner's profile page", @learner) %></span>
+    </p>
+    
+    <br/>
+    <%  if user_interactions && user_interactions["interaction"] %>
+      <div class="learner_moderation_table">
+      <table class='se_tab'>
+        <tr>
+          <th>Partner's Email</th>
+          <th>Preferred Name</th>
+          <th>Gender</th>
+          <th>Interaction Count</th>
+          <th>Last Interaction</th>
+       </tr>
+       <% [user_interactions["interaction"]].flatten.each do |interaction| %>
+        <tr>
+            <td><%= link_to interaction["partner"]["email"],:action => "show", :email => interaction["partner"]["email"] if interaction["partner"] && interaction["partner"]["email"] %></td>
+            <td><%= interaction["partner"]["preferred_name"] if interaction["partner"] %></td>
+            <td><%= interaction["partner"]["gender"] if interaction["partner"] %></td>
+            <td><%= interaction["interaction_count"]  %></td>
+            <td><%= Time.at(interaction["last_interaction_at"].to_i).strftime("%m/%d/%Y %H:%M:%S") %></td>
+          </tr>
+      <% end %>
+        <tr>
+          <td colspan="4" align="center">
+            <% if user_interactions["pagination"] && user_interactions["pagination"]["total_pages"].to_i > 1 %>
+            <div class="pagination">
+             <%=  user_interactions["pagination"]["current_page"].to_i == 1 ? '« Previous' : link_to("« Previous", user_interaction_path(:id => @learner.id,:page => user_interactions["pagination"]["current_page"].to_i == 1 ? user_interactions["pagination"]["current_page"].to_i : user_interactions["pagination"]["current_page"].to_i-1)) %>
+             <% user_interactions["pagination"]["total_pages"].to_i.times do |x|%>
+               <%=  user_interactions["pagination"]["current_page"].to_i == x+1 ? x+1 : link_to( x+1, user_interaction_path(:id => @learner.id,:page => x+1 )) %>
+             <%end%>
+             <%= user_interactions["pagination"]["current_page"].to_i == user_interactions["pagination"]["total_pages"].to_i ? 'Next »' : link_to("Next »", user_interaction_path(:id => @learner.id,:page => user_interactions["pagination"]["current_page"].to_i == user_interactions["pagination"]["total_pages"].to_i ? user_interactions["pagination"]["current_page"].to_i : user_interactions["pagination"]["current_page"].to_i+1 )) %>
+            </div>
+            <%end%>
+          </td>
+        </tr>
+    </table>
+   </div>
+  <% else %>
+    <% unless user_interactions %>
+      <p class="notice">Sorry, either Baffler API is down or the server encountered an error.</p>
+    <% else %>
+      <p class="notice">No World Interaction history found.</p>
+    <% end %>
+  <% end %>
+  <p class="header" style="border-bottom:none"></p>
+ </div>
+</div>

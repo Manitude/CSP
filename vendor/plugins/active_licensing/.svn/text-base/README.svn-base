@@ -1,0 +1,18 @@
+ActiveLicensing
+===============
+
+The ActiveLicensing plugin provides an interface to the License Server API, and replaces both the old License Sales Servlet Interface plugin and the previous license_sales_servlet_interface.rb library file.
+
+Note that this plugin also requires rosettastone_tools to be loaded.
+
+Usage (single-call mode):
+  ls = RosettaStone::ActiveLicensing::Base.instance
+  ls.license.add(:creation_account => 'my test creation account', :license => 'multicall15', :password => 'password', :test => true)
+  
+Usage (multi-call mode):
+
+  ls = RosettaStone::ActiveLicensing::Base.instance
+  ls.multicall do
+    license.add(:creation_account => 'my test creation account', :license => 'multicall15', :password => 'password', :test => true)
+    license.add_product_right(:license => 'multicall15', :product => 'FAR', :version => 2)
+  end

@@ -1,0 +1,39 @@
+<div class="admin_dashboard_item">
+  <h3>Jobs queued</h3>
+  <% if delayed_job_data.size >0 %>
+    <table id = "admin_dashboard_table">
+      <thead style ="background-color: #FFF;">
+        <tr>
+          <th>Priority</th>
+          <th>Attempts</th>
+          <th>Handler</th>
+          <th>Last Error</th>
+          <th>Run at</th>
+          <th>Locked at</th>
+          <th>Failed at</th>
+          <th>Locked by</th>
+          <th>Created at</th>
+          <th>Update at</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% delayed_job_data.each do |job|%>
+          <tr>
+            <td><%= job.priority %></td>
+            <td><%= job.attempts %></td>
+            <td><%= get_text job.handler %></td>
+            <td><%= get_text job.last_error %></td>
+            <td><%= get_rel_time job.run_at %></td>
+            <td><%= get_rel_time job.locked_at %></td>
+            <td><%= get_rel_time job.failed_at %></td>
+            <td><%= get_text job.locked_by %></td>
+            <td><%= get_rel_time job.created_at %></td>
+            <td><%= get_rel_time job.updated_at %></td>
+          </tr>
+        </tbody>
+      <% end %>
+    </table>
+  <%else%>
+    <div class="admin_dashboard_sub_item"> Currently there are no delayed jobs running in the background</div>
+  <%end%>
+</div>

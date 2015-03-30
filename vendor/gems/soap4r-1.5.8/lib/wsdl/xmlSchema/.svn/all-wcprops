@@ -1,0 +1,257 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema
+END
+include.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/include.rb
+END
+simpleContent.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/simpleContent.rb
+END
+minlength.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/minlength.rb
+END
+maxlength.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/maxlength.rb
+END
+union.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/union.rb
+END
+choice.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/choice.rb
+END
+simpleType.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/simpleType.rb
+END
+group.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/group.rb
+END
+complexRestriction.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/complexRestriction.rb
+END
+importer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/importer.rb
+END
+complexExtension.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/complexExtension.rb
+END
+sequence.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/sequence.rb
+END
+importHandler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/importHandler.rb
+END
+fractiondigits.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/fractiondigits.rb
+END
+content.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/content.rb
+END
+anyAttribute.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/anyAttribute.rb
+END
+simpleRestriction.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/simpleRestriction.rb
+END
+length.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/length.rb
+END
+simpleExtension.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/simpleExtension.rb
+END
+enumeration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/enumeration.rb
+END
+totaldigits.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/totaldigits.rb
+END
+any.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/any.rb
+END
+element.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/element.rb
+END
+whitespace.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/whitespace.rb
+END
+parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/parser.rb
+END
+schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/schema.rb
+END
+complexContent.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/complexContent.rb
+END
+attribute.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/attribute.rb
+END
+mininclusive.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/mininclusive.rb
+END
+unique.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/unique.rb
+END
+maxinclusive.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/maxinclusive.rb
+END
+all.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/all.rb
+END
+complexType.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/complexType.rb
+END
+data.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/data.rb
+END
+annotation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/annotation.rb
+END
+import.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/import.rb
+END
+list.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/list.rb
+END
+minexclusive.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/minexclusive.rb
+END
+pattern.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/pattern.rb
+END
+maxexclusive.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/maxexclusive.rb
+END
+attributeGroup.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/attributeGroup.rb
+END
+xsd2ruby.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/wsdl/xmlSchema/xsd2ruby.rb
+END

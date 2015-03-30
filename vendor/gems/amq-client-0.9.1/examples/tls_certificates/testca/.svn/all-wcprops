@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/testca
+END
+index.txt
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/testca/index.txt
+END
+openssl.cnf
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/testca/openssl.cnf
+END
+cacert.cer
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/testca/cacert.cer
+END
+index.txt.attr.old
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/testca/index.txt.attr.old
+END
+serial.old
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/testca/serial.old
+END
+index.txt.attr
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/testca/index.txt.attr
+END
+serial
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/testca/serial
+END
+cacert.pem
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/testca/cacert.pem
+END
+index.txt.old
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/tls_certificates/testca/index.txt.old
+END

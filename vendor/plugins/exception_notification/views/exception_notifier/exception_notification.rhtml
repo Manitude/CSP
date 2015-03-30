@@ -1,0 +1,6 @@
+A <%= @exception.class %> occurred in <%= @controller.controller_name %>#<%= @controller.action_name %> on <%= Time.now.to_s %>:
+
+  <%= @exception.message %>
+  <%= @backtrace.first %>
+
+<%= @sections.map { |section| render_section(section) }.join %>

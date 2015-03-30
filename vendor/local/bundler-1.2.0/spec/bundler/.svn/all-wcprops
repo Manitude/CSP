@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/spec/bundler
+END
+source_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/spec/bundler/source_spec.rb
+END
+dsl_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/spec/bundler/dsl_spec.rb
+END
+gem_helper_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/spec/bundler/gem_helper_spec.rb
+END
+definition_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/spec/bundler/definition_spec.rb
+END

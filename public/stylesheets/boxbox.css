@@ -1,0 +1,46 @@
+/************* =BOXBOX ***************/
+.boxbox_hidden_element {
+
+}
+
+.boxbox_actions {
+  text-align: center;
+}
+
+.boxbox_actions>* {
+  margin-right: 5px;
+}
+
+#boxbox_shadow {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0%;
+  background-color: black;
+  z-index: 4600;
+  /* Different browsers rock opacity differently */
+  -moz-opacity: 0.7;
+  opacity: .70;
+  filter: alpha(opacity=70);
+}
+
+#boxbox_content {
+  position: absolute;
+  top: 15%;
+  left: 25%;
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-color: white;
+  z-index: 4701;
+  overflow: auto;
+  -moz-box-shadow: 3px 3px 14px rgba(20, 20, 20, 0.5);
+  -webkit-box-shadow: 3px 3px 14px rgba(20, 20, 20, 0.5);
+  box-shadow: 3px 3px 14px rgba(20, 20, 20, 0.5);
+  text-align: left;
+}
+

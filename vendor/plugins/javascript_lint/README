@@ -1,0 +1,52 @@
+Javascript Lint
+===============
+
+Introduction:
+-------------
+
+This plugin serves as a wrapper for jsl (javascript lint: http://javascriptlint.com).  It makes it easy to check for "lintyness" of your Javascript in automated Rails tests.
+
+Usage:
+------
+
+There are several ways to use this plugin in your tests.
+
+ 1. Standalone: the javascript lint tests can be executed on their own using one of the following commands:
+   * ./rake test:javascript_lint
+   * ruby vendor/plugins/javascript_lint/lib/test/javascript_lint_test.rb
+ 2. Included as a unit test: simply add the following two lines to any Test::Unit::TestCase class and test methods will be generated automatically:
+   * require 'test/javascript_lint_test_definitions'
+   * include RosettaStone::JavascriptLint::JavascriptLintTestDefinitions
+ 3. Using assertions: there are several test assertion methods provided by this plugin, and they can be used directly in your tests:
+   * assert_lintless_javascript(javascript_string)
+   * assert_lintless_javascript_file(javascript_or_html_file_path) 
+
+Configuration:
+--------------
+
+Two configurable parameters allow you to specify which files get checked with the javascript lint tests:
+
+ 1. Search directories
+    By default, the javascript lint tests search for javascript or HTML files in public/javascripts and test/javascript.  This can be changed with:
+    RosettaStone::JavascriptLint.javascript_directories
+ 2. Files to exclude
+    After globbing all JS & HTML files in the configured directories, certain files are excluded based on strings or regexes in:
+    RosettaStone::JavascriptLint.files_to_exclude
+    
+Both of these parameters have defaults defined in init.rb.
+
+Requirements:
+-------------
+
+It is recommended that you have jsl installed on your system and in your path.  However, this plugin embeds binaries for several common platforms, so it might just work.  Try it.  If it doesn't work, install javascript lint on your system.
+
+Javascript Lint installation:
+ * for Mac OS X: sudo port install javascript-lint
+ * for linux: download from http://www.javascriptlint.com/download.htm and compile
+
+URLs
+----------------
+
+ * http://www.javascriptlint.com/
+
+ 

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/42126/plugins/ssl_functionality/trunk/test
+END
+ssl_functionality_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/41645/plugins/ssl_functionality/trunk/test/ssl_functionality_test.rb
+END
+ssl_functionality_integration_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/42126/plugins/ssl_functionality/trunk/test/ssl_functionality_integration_test.rb
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/33638/plugins/ssl_functionality/trunk/test/test_helper.rb
+END

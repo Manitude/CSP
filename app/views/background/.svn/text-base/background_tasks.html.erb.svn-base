@@ -1,0 +1,44 @@
+<div style ="margin: 15px;">
+  <% if manager_logged_in? %>
+    <%= form_tag(background_tasks_path, :method => "post") do -%>
+      <table id="filter-table">
+        <tr>
+          <td colspan="2" style="text-align: center;">Type:<span style = "padding-left:2px; padding-right:10px;"><%= select_tag(:bt_type, options_for_select(@background_type, :selected => params[:bt_type]), {:style => "width:160px;"} ) %></span></td>
+          <td colspan="2" style="text-align: center;">Triggered By:<span style = "padding-left:2px; padding-right:10px;"><%= select_tag(:bt_triggered_by, options_for_select(@triggered_by, :selected => params[:bt_triggered_by]), {:style => "width:160px;"} ) %> </span></td>
+          <td colspan="2" style="text-align: center;">State:<span style = "padding-left:2px; padding-right:10px;"><%= select_tag(:bt_state, options_for_select(@state, :selected => params[:bt_state]), {:style => "width:160px;"} ) %> </span></td>
+          <td><input id="submit" type="submit" value="FILTER" name="filter"/> </td>
+        </tr>
+      </table>
+      <br />
+    <% end %>
+    <% if @background_tasks.blank? %>
+      <p class = "no_audit_logs"> There are no background tasks present.</p>
+    <% else %>
+      <table id = "audit_log_table">
+        <thead style ="background-color: #FFF;">
+          <tr>
+            <th>Type</th>
+            <th>Triggered By</th>
+            <th>State</th>
+            <th>Message</th>
+            <th>Errors</th>
+            <th>Start time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @background_tasks.each do |task|%>
+            <tr>
+              <td><%= get_text task.background_type %></td>
+              <td><%= get_text task.triggered_by %></td>
+              <td><%= get_text task.state %></td>
+              <td><%= get_text (task.message).gsub('.', '<br/>') %></td>
+              <td><%= get_text task.error %></td>
+              <td><%= get_timestamp task.job_start_time %></td>
+            </tr>
+          </tbody>
+        <% end %>
+      </table>
+      <div id ="audit_log_pagination" > <%= will_paginate @background_tasks, :previous_label => image_tag('/images/pagination/previous_page.png'), :next_label => image_tag('/images/pagination/next_page.png'), :params =>{:user_name => params[:user_name], :user_role => params[:user_role]} -%> </div>
+    <% end %>
+  <% end %>
+</div>

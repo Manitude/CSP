@@ -1,0 +1,9 @@
+smashing_pumpkins_update_1:
+  loggable_type: 'Artist'
+  loggable: the_smashing_pumpkins
+  attribute_name: 'name'
+  action: 'update'
+  previous_value: 'The Mashing Pumpkings'
+  new_value: 'The Smashing Pumpkins'
+  timestamp: 1.hour.ago
+  created_at: 1.hour.ago

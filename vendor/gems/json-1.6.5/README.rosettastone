@@ -1,0 +1,38 @@
+There are some Rosetta Stone modifications in this copy of the JSON gem.  All of them are implemented as additional files on top of the original gem; none of the gem's distribution files have been modified (except for .specification file).
+
+The local modifications were made to allow embedding platform-specific compiled binaries of the JSON C extension into the gem to enable easier distribution and version management.
+
+Adding a build for a new architecture is simple:
+ 1. Install the JSON gem on your system as you normally would (gem install json)
+ 2. Copy the outputs of ruby -e 'p RUBY_PLATFORM' and ruby -e 'p RUBY_VERSION' on your system (minus the quotes)
+ 3. In lib/rosettastone/json/ext/ create the required directory structure (mkdir -p RUBY_PLATFORM/RUBY_VERSION)
+ 4. Compile and copy over your binaries to the newly created directory structure
+ 5. ./rake system_readiness
+ 6. Test & commit
+
+Upgrading to a new version of the JSON gem should be simple:
+ 1. Install the JSON gem on your system as you normally would (gem install json)
+ 2. In environment.rb, specify the version explicitly in the config.gem line for the json gem
+ 3. ./rake gems:unpack
+ 4. Recreate the changes needed in .specification file. See WebDev SVN commit 56337 for reference
+ 5. Copy lib/rosettastone from the previous version of the embedded gem into the new one
+ 6. On each supported platform, rebuild and recopy the binaries into the appropriate platform-specific directories
+ 7. ./rake system_readiness
+ 8. Test & commit
+
+Using this embedded gem in your Rails application:
+ 1. Edit svn:externals in vendor/gems to add the gem
+ 2. Edit config/environment.rb, and add a line as follows:
+    config.gem 'json'
+ 3. Add config/initializers/json.rb, with the following contents:
+---------
+# The embedded gem is already loaded; these must be loaded after the rest of the environment
+
+# There used to be a workaround hack here but is no longer.
+# I'm done dealing with Rails' stupidity regarding to_json.
+# Bottom line, you will NEVER be able to utilize JSON Gem's
+# native extension to generate JSON Strings with Rails.
+
+# run ./rake system_readiness to verify compatibility
+require 'rosettastone/system_readiness/json'
+---------

@@ -1,0 +1,74 @@
+<br/>
+  <% if @coach.can_read_studio_sessions_attended? && (!student.attended_session.class.eql? String)%>
+    <% unless student.attended_session.blank? %>
+      <div class="wide_label_row" style="width:340px;">
+        <span class="label">Last Attended Session</span>
+      </div>
+      <div class="col-1">
+        <span><%= name_from_code(student.attended_session.language) %></span><br />
+        <span><%= (student.attended_session.on).to_time.in_time_zone("Eastern Time (US & Canada)").strftime("%a, %b %d, %Y - %I:%M%p") %></span><br/>
+        <span>Coach: <%= student.attended_session.coach? ? student.attended_session.coach : 'N/A' %></span>
+      </div>
+      <div class="col-2">
+        <span>Level <%= student.attended_session.level %> Unit <%= student.attended_session.unit %></span><br />
+        <span>Attendance: <%= link_to student.attended_session.attendance_record, learner_studio_history_path(@learner.id, @view_access_flag)%></span><br/>
+        <span>Session Rating: <%= link_to get_session_rating(student.attended_session), '#', :id => 'rating_attended' %></span>
+      </div>
+    <% end %>
+  <% end %>
+  <% if @coach.can_read_studio_sessions_skipped? && (!student.skipped_session.class.eql? String)%>
+    <% unless student.skipped_session.blank? %>
+      <div class="wide_label_row" style="width:340px;">
+        <span class="label">Last Skipped Session</span>
+      </div>
+      <div class="col-1">
+        <span><%= name_from_code(student.skipped_session.language) %></span><br />
+        <span><%= (student.skipped_session.on).to_time.in_time_zone("Eastern Time (US & Canada)").strftime("%a, %b %d, %Y - %I:%M%p") %></span><br />
+        <span>Coach: <%= student.skipped_session.coach? ? student.skipped_session.coach : 'N/A' %></span>
+      </div>
+      <div class="col-2">
+        <span>Level <%= student.skipped_session.level %> Unit <%= student.skipped_session.unit %></span><br />
+         <span>Attendance: <%= link_to student.skipped_session.attendance_record, learner_studio_history_path(@learner.id, @view_access_flag) %></span><br/>
+        <span>Session Rating:<%= get_session_rating student.skipped_session %></span>
+      </div>
+    <% end %>
+  <% end %>
+  <% if @coach.can_read_studio_sessions_scheduled? && (!student.next_session.class.eql? String)%>
+    <% unless student.next_session.blank? %>
+      <div class="wide_label_row" style="width:340px;font-weight:bold;">
+        <span class="label">Next Scheduled Session</span>
+      </div>
+      <div class="col-1">
+        <span><%= name_from_code(student.next_session.language) %></span><br />
+        <span><%= (student.next_session.on).to_time.in_time_zone("Eastern Time (US & Canada)").strftime("%a, %b %d, %Y - %I:%M%p") %></span><br />
+        <span>Coach: <%= student.next_session.coach? ? student.next_session.coach : 'N/A' %></span>
+      </div>
+      <div class="col-2">
+        <span>Level <%= student.next_session.level %> Unit <%= student.next_session.unit %></span><br />
+        <span>Attendance: <%= link_to student.next_session.attendance_record, learner_studio_history_path(@learner.id, @view_access_flag) %></span><br/>
+        <span>Session Rating: <%= get_session_rating student.attended_session %></span>
+      </div>
+    <% end %>
+  <% end %>
+
+  <br />
+  <div class="float_left padding_top_30" style="width: 25%; clear: both;padding-left:0px;">
+    <% if @coach.can_read_studio_sessions_attended? %>
+      <div class="wide_label_row">
+        <span class="label" style="width:180px;">Total Attended sessions</span><span class="formw"><%= student.attended %></span>
+      </div>
+    <% end %>
+    <% if @coach.can_read_studio_sessions_skipped? %>
+      <div class="wide_label_row">
+        <span class="label" style="width:180px;">Total Skipped sessions</span><span class="formw"><%= @learner.get_skipped_session %></span>
+      </div>    
+      <div class="wide_label_row">
+        <span class="label" style="width:180px;">Total Future sessions</span><span class="formw"><%= student.upcoming %></span>
+      </div>
+    <% end %>
+  </div>
+  <div class="wide_label_row">
+    <%if student.attended.to_i+student.skipped.to_i != 0 %>
+      <span class="label" style="width:200px;"><%= link_to "Learner Studio History", learner_studio_history_path(@learner.id, @view_access_flag) %></span>
+    <% end %>
+  </div>

@@ -1,0 +1,27 @@
+<div id="number_of_seats_div">
+  Number of Seats: <br/>
+    <%= select_tag 'number_of_seats', options_for_select([@edit_session[:no_of_seats]]), :class => "aria_editsessionselect", :disabled => true%>
+    <br/><br/>
+</div>
+ <% if @edit_session[:no_of_seats] != 1 %>
+ <table class="width100">
+  <tr>
+    <th class="width50">
+      <div id = "cefr_select" class="width100" >
+        CEFR Level:<br/><%= select_tag "cefr_level", options_for_cefr(@current_topic[0].try(:cefr_level)), :class => "aria_editsessionselect", :disabled => !@edit_session[:learners_signed_up].nil? && @edit_session[:learners_signed_up] != 0 %>
+      </div>
+    </th>
+    <th class="topics_aeb">
+      <div id = "topic_select" class= "topics_div_aeb">
+        Topic:<br/> <%= select_tag "topic_id", options_for_aeb_topics(@current_topic[0].try(:cefr_level), @edit_session[:language].identifier, @edit_session[:topic_id]), :class => "aebtopicselect", :disabled => !@edit_session[:learners_signed_up].nil? && @edit_session[:learners_signed_up] != 0 || @edit_session[:no_of_seats] == 1 %>
+      </div>
+    </th>
+  </tr>
+ </table>
+<%end%>
+<div id="recurring_div"><br />
+  Recurring: 
+  <%= check_box_tag 'recurring', 'recurring', @edit_session[:recurring], { :disabled => @edit_session[:recurring_disabled]} %>
+</div>
+
+

@@ -1,0 +1,89 @@
+= rujitsu
+
+A ruby gem with various helper methods to smooth out your Ruby development.  
+
+== Install
+
+  gem install brightbox-rujitsu --source http://gems.github.com
+  
+== Including
+
+  require "rujitsu"
+  require "rujitsu/grammar"
+
+For using in irb, there's a nice shortcut for you to use:
+
+  $ irb -rubygems -rujitsu
+
+(This works because <tt>-r</tt> is the argument to require a file, and both 'ubygems.rb' and 'ujitsu.rb' exist.)
+
+=== Rails
+
+To require in rails 2.2, add the following to your <tt>environment.rb</tt> file.
+
+  config.gem "rujitsu"
+
+If you use RSpec you might want to add the following to your <tt>environments/test.rb</tt>:
+
+  config.gem "rujitsu", :lib => "rujitsu/grammar"
+
+== Documentation
+
+Run <tt>rake docs</tt> and open doc/index.html.
+
+== Usage
+
+=== Generating random strings
+
+The Fixnum class has a couple of extensions allowing you to generate random strings.  
+
+  5.random_letters
+  5.random_numbers
+  5.random_characters
+  
+You can also generate a variable length string.  
+
+  (3..5).random_letters
+  
+This generates a string of random letters whose length is 3, 4 or 5 characters.  
+
+<em>(All the above methods exist in the singular too. eg, <tt>1.random_letter</tt>)</em>
+
+=== URL-friendly strings
+
+The String class has an extension that strips out URL-unfriendly characters.  
+
+  ""$%hello!@ 123 there'".to_url # => "hello-123-there" 
+
+=== Truncating strings
+
+The String class has an extension that truncates it to a customisable length with a customisable suffix.
+
+  "this is a string".truncate(:length => 15) # => "this is a st..."
+  
+=== Testing for inclusion within a container
+
+As Rubyists we are all familiar with using include? to test if our variable is one of a number of values.  
+
+  if ['hello', 'world'].include?(@my_value) ... 
+  
+However, it doesn't read correctly.  Rujitsu allows you to write the following as it reads much more like English.  
+
+  if @my_value.in? ['hello', 'world'] ... 
+
+=== Grammar
+
+So far the grammar library just adds the method <tt>should_recieve</tt> for rspec assertions. Use it to find out what it does!
+
+
+== Released under the MIT Licence
+
+Copyright (c) 2008 Brightbox Systems Ltd 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+See http://www.brightbox.co.uk/ for contact details.  

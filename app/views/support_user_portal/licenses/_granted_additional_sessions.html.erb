@@ -1,0 +1,28 @@
+<%= link_to_function "Manage Consumables", 
+          "fixedFaceBoxWithHeader('#{show_consumable_form_path(:solo_expire_date => params[:solo_expire_date], :group_expire_date => params[:group_expire_date], :pooler_type => 'ProductRight', :solo_product_right => solo_product_right, :language => params[:language], :end_date => params[:end_date], :license_guid => license_guid, :group_product_right => group_product_right)}', 
+           'Manage Studio Consumables')" %>
+<table id="additional_consumables" width="700px" style="margin-top : 10px">
+  <thead>
+    <th>Case Number</th>
+    <th>Action</th>
+    <th>Type</th>
+    <th>Number</th>
+    <th>Reason</th>
+    <th>Date/Time</th>
+    <th>User</th>
+  </thead>
+  <tbody></tbody>
+</table>
+<script type="text/javascript">
+  jQuery(document).ready(function(){
+    jQuery.each(additional_sessions["<%= language %>"], function(i, session){
+      jQuery('#additional_consumables tbody').append("<tr><td>"+session.case_number+"</td>"+
+              "<td>"+session.action+"</td>"+
+              "<td>"+session.consumable_type+"</td>"+
+              "<td>"+session.number_of_sessions+"</td>"+
+              "<td>"+session.reason+"</td>"+
+              "<td>"+moment(new Date(session.created_at)).format("L hh:mm a")+"</td>"+
+              "<td>"+session.added_by+"</td></tr>");
+    });
+  });
+</script>

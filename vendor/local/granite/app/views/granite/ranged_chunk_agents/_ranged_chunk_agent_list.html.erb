@@ -1,0 +1,43 @@
+<table summary="ranged chunk agent list" class="agent_list table table-striped">
+  <tr>
+    <th>Agent Class</th>
+    <th>Chunk Size</th>
+    <th>Number of Chunks</th>
+    <th>Interval</th>
+    <th>Cursor</th>
+    <th>Last Processed</th>
+    <th>Chunking Millisecs</th>
+    <th>Locked</th>
+    <th><%= link_to "Enable", :action => 'enable_all' %>/<%= link_to "Disable", :action => 'disable_all' %> All</th>
+    <th>Actions</th>
+  </tr>
+  <% even = false %>
+  <% total_last_run_duration = 0 %>
+  <% @ranged_chunk_agents.sort_by(&:agent_class).each do |rca| %>
+    <% even = !even %>
+    <% toggle_class = even ? 'even' : 'odd' %>
+    <% css_class = toggle_class %>
+  <tr class="<%= css_class %>">
+    <td><%= rca.agent_class %></td>
+    <td><%= rca.chunk_size %></td>
+    <td><%= rca.chunks %></td>
+    <td><%= rca.interval %></td>
+    <td><%= rca.cursor %></td>
+    <td><%= rca.last_processed_timestamp %></td>
+    <td><%= rca.last_chunking_time %></td>
+    <td><%= rca.locked? ? image_tag('icons/lock-closed.gif', :title => "Locked") : "" %></td>
+    <td>
+      <%= rca.enabled? %>
+    </td>
+    <td>
+    <%= link_to('', url_for(:action => :toggle_enabled, :id => rca.id), :class => 'icon-retweet')%>
+    <%= link_to '',  url_for(:action => :edit, :id => rca.id), :class => 'icon-pencil' %>  
+    <%= link_to('', url_for(:action => :destroy, :id => rca.id), :class => 'icon-remove-sign', :method => :delete, :confirm => 'This will delete the chunk agent. Are you sure?') %>  <%= link_to('', url_for(:action => :run, :id => rca.id), :class => 'icon-play')%></td>
+  </tr>
+  <% end %>
+</table>
+
+<br/>
+  
+  
+  <%= link_to "New Ranged Chunk Agent", url_for(:action => :new) %>

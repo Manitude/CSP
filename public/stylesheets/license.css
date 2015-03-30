@@ -1,0 +1,82 @@
+#session_details_div {
+    font-size: 11px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 5px;
+    width: 100%;
+}
+
+#all_consumables_popup .consumables_table {
+    margin-top: 10px;
+}
+
+.consumables_table th, .consumables_table td {
+    border: 1px solid #cccccc;
+    padding: 4px !important;
+    text-align: center;
+    font-size: 11px;
+}
+
+#future_sessions_div {
+    margin-left: 5px;
+    float: right;
+    height: 120px;
+    width: 440px;
+    overflow-y: auto;
+}
+
+#consumable_details_div{
+    display: inline-block;
+}
+
+.session_detail {
+    float: left;
+    font-weight: normal;
+    margin-right: 40px;
+    margin-top: 4px;
+}
+
+#additional_session_div {
+    margin-top: 15px;
+}
+
+#calender_date_box {
+    border: 1px solid #cccccc;
+    padding: 4px;
+}
+
+#calender_date_box input {
+    border: none;
+    text-align: center;
+    width: 120px;
+}
+
+#extension-dates img {
+    height: 11px;
+    width: 18px;
+}
+
+#facebox th {
+    font-weight: bold;
+}
+
+#additional_consumables th, #additional_consumables td {
+    border: 1px solid #cccccc;
+    padding: 4px !important;
+    text-align: center;
+    font-size: 11px;
+}
+
+#expire-date {
+    margin-left: 85px;
+}
+
+#all_consumables_popup #future_sessions_div {
+    float: right;
+    height: 120px;
+    margin-left: 20px;
+    margin-top: 10px;
+    overflow-y: auto;
+    width: 225px;
+}
+

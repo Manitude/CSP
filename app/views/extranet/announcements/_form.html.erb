@@ -1,0 +1,30 @@
+<%= form_for(@announcement) do |f| %>
+  <%= f.error_messages %>
+  <p class="subnote">Fields labeled with <i>*</i> are required.</p>
+  <div class="formfield">
+    <div class="field">
+      <span class="required">*</span>
+      <%= f.label :subject, 'Subject'%>
+      <%= f.text_field :subject %>
+    </div>
+    <div class="field">
+      <span class="required">*</span>
+      <%= f.label :body, 'Body' %>
+      <%= f.text_area :body %>
+    </div>
+    <div class="field">
+      <span class="required">*</span>
+      <%= f.label :expires_on, 'Expires on' %>
+      <%= calendar_date_select_tag "announcement[expires_on]", format_time(@announcement.expires_on, "%B %e, %Y") , :popup => "force" %>
+    </div>
+    <div class="field">
+      <%= f.label :language, 'Language' %>
+      <%= f.select :language_id, options_for_language(@languages) -%>
+    </div>
+    <div class="field">
+      <%= f.label :region, 'Region' %>
+      <%= f.select :region_id, options_for_language(Region.options) -%>
+    </div>
+    <p> <%= f.submit 'Save' %> </p>
+  </div>
+<% end %>

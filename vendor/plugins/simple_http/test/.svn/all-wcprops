@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/WebDev/!svn/ver/68801/plugins/simple_http/trunk/test
+END
+basic_authentication_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/68801/plugins/simple_http/trunk/test/basic_authentication_test.rb
+END
+proxy_settings_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/68801/plugins/simple_http/trunk/test/proxy_settings_test.rb
+END
+simple_http_test_servers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/68801/plugins/simple_http/trunk/test/simple_http_test_servers.rb
+END
+response_validity_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/68801/plugins/simple_http/trunk/test/response_validity_test.rb
+END
+header_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/68801/plugins/simple_http/trunk/test/header_test.rb
+END
+timeouts_and_exceptions_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/68801/plugins/simple_http/trunk/test/timeouts_and_exceptions_test.rb
+END
+request_validity_and_method_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/68801/plugins/simple_http/trunk/test/request_validity_and_method_test.rb
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/68801/plugins/simple_http/trunk/test/test_helper.rb
+END

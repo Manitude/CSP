@@ -1,0 +1,72 @@
+table {
+  border-spacing: 0px;
+  width: 100%;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+.compact {
+  font-size: smaller;
+}
+.ruled td {
+  border-bottom: 1px solid;
+}
+.ruled tr:last-child td {
+  border-bottom: none;
+}
+tr:nth-child(even) {
+  background: #e0e0e0;
+}
+
+.cleanHeaders th {
+  border-style: none none solid none;
+  border-color: black;
+  border-width: 1px;
+  text-align: left;
+  background: transparent;
+}
+
+li.file_list {
+  display: inline-block;
+  width: 20%;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: rgba(200,200,200,0.2);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  /* firefox misrenders the box-shadow on the top of a fieldset with a caption */
+  -webkit-box-shadow: 2px 2px 7px rgba(20, 20, 20, 0.3);
+}
+legend {
+  color: #000;
+  font-weight: bold;
+}
+
+img.logo {
+  float: right;
+  width: 215px;
+  height: 186px;
+}
+
+#error {
+  margin-bottom: 1em;
+  background-color: #fff;
+  border: 1px solid red;
+  padding: 1em;
+}
+
+.check {
+  width: 10px;
+}
+
+.key {
+  width: 35em;
+}

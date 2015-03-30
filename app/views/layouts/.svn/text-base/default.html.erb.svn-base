@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Customer Success Portal: <%= page_title %></title>
+    <link href="/favicon.ico" rel="shortcut icon" type="image/ico" />
+    <%= stylesheet_link_tag 'reset', 'styles', 'extranet/extranet', 'coach_portal', 'extranet/calendar/red/style', 'facebox','master_scheduler', 'components/alternating_table', 'jquery.alerts','jquery.jOrgChart', 'staffing', 'jquery-ui-1.8.11.custom','jquery.qtip.min','date_navigator','html_table','support_user_portal_table','license_extension' %>
+    <%= javascript_include_tag :defaults,'jquery','facebox','calendar_grid', 'jquery.expander', 'jquery.jOrgChart', 'jquery.tablesorter', 'jquery.blockUI', 'jquery-ui-1.8.22.custom.min', 'jquery-ui-timepicker-addon', 'moment.min','jquery.alerts','jquery.qtip.min','qtip_utils','extranet','lotus','support_user_portal/license' ,'staffing','scheduling_threshold','substitution','datepicker','date_navigator','mailer', 'keyboard', 'report', 'support_user_portal/available_sessions','html_table' %>
+  </head>
+  <body id="ccs">
+    <%= render :partial => 'shared/header' %>
+    <%= render :partial => 'shared/body_content' %>
+
+    <% if @learner -%>
+      <%= javascript_include_tag "Util", 'RworldSocialAppInfo', 'TotaleCourseInfo'%>
+      <%= javascript_tag do -%>
+        SuccessExtranet.setConfig({"user_id": <%= @learner.id %>, "user_guid": "<%= @learner.guid %>"});
+        <%= yield :inline_javascript %>
+      <% end -%>
+    <% end -%>
+  </body>
+</html>

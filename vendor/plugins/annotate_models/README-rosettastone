@@ -1,0 +1,3 @@
+This plugin was checked out from http://repo.pragprog.com/svn/Public/plugins/annotate_models/ on 2008-03-21 at remote revision 23.
+
+lib/annotate_models.rb has a few RS hacks to make it work with models that are in subdirectories of app/models but aren't in modules. 

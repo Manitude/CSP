@@ -1,0 +1,39 @@
+<div id = 'topic_list_table_div'><br>
+ <% if @topics && @topics.size > 0%>
+  <table class = 'table_list scrollTable' id = 'topic_list_table'>
+    <thead class = 'fixedHeader'>
+    <tr>
+    <th class = 'old_th204'>GUID</th>
+    <th class = 'old_th174'>Title</th>
+    <th class = 'old_th354'>Description </th>
+    <th class = 'old_th89'>Language </th>
+    <th class = 'old_th54'>Level </th>
+    <th class = 'old_th78'>Action </th>
+    </tr>
+    </thead>
+    <tbody class = 'scrollContent' id = 'scrollContent' >
+      <% @topics.each do |topic| %>
+      <tr id = "<%= topic.id %>">
+        <td class = 'tb200'> <%= topic.guid %> </td>
+        <td class= 'tb170'><%= link_to_function "#{topic.title}", "fixedFaceBoxWithHeader('#{edit_topic_path(topic)}', 'Edit Topic Details')" %></td>
+        <td class= 'tb350'><%=topic.description%></td>
+        <td class= 'tb85'><%=Language[topic.language].try(:identifier)%></td>
+        <td class= 'tb50'><%=topic.cefr_level%></td>
+        <td class= 'tb57'>
+          <input class = "topics_list" type="checkbox" id=<%= topic.id %> <%= 'checked=checked' if topic[:selected] %>  />&nbsp;&nbsp;
+          <%= link_to image_tag('hide.png', :size => '24x17' ,:alt => "Hide", :title => "Hide"), topic, :confirm => "Are you sure to hide the topic - #{topic.title}?", :method => :Delete %>
+        </td>
+      </tr>
+      <%end%>
+    </tbody>
+  </table>
+  
+  <% else %>  No Topics available for the selected filter(s)
+
+  <%end%><br /><br />
+
+  <div class = 'topic_list_tray'>
+    <%= link_to "Update", update_topics_path, :id=>"update_topics_list", :class => "button" %> &nbsp;&nbsp;&nbsp;&nbsp;
+    <%= link_to_function "Add new topic", "fixedFaceBoxWithHeader('#{new_topic_path}', 'Create New Topic')", :class => "button" %>
+    <%= link_to "Save" , 'javascript:void(0);', :class => "button", :id => "save_topics_list", :style => "float:right;" if @topics && @topics.size > 0 %>
+  </div>

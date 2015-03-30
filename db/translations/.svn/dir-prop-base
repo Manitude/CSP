@@ -1,0 +1,6 @@
+K 13
+svn:externals
+V 70
+static -r80777 https://svn.lan.flt/svn/WebDev/translation_csvs/static
+
+END

@@ -1,0 +1,26 @@
+#stuff mentioned below will not work in local development boxes
+
+development:
+  host: ashrabmq1
+  user: data_analysis_group
+  password: SiphonSomeEve
+  vhost: /locos_secondary
+
+production:
+  user: coachportal_production
+  password: ItsMyBeer!
+  host: 10.130.70.195
+  vhost: /coachportal_production
+
+locos_development:
+  host: ashrabmq1
+  user: data_analysis_group
+  password: SiphonSomeEve
+  vhost: /locos_secondary
+
+locos_production:
+  user: locos_csp
+  password: locos_csp
+  host: 10.130.70.195
+  vhost: /locos_production
+

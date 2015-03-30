@@ -1,0 +1,14 @@
+<p>
+  <b>Name:</b>
+  <%=h @link.name %>
+</p>
+
+<p>
+  <b>URL:</b>
+  <%=h link_to @link.url, @link.url, :target => "_blank" %>
+</p>
+
+<% if manager_logged_in? -%>
+ <%= link_to 'Edit', edit_link_path(@link) %> |
+<% end %>
+<%= link_to 'Back', links_path %>

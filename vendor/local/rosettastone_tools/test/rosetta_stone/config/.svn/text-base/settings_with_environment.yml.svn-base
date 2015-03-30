@@ -1,0 +1,3 @@
+test:
+  property: overridden
+not_overridden_property: overridden

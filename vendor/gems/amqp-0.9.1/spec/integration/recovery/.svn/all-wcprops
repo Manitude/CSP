@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/recovery
+END
+per_channel_automatic_recovery_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/recovery/per_channel_automatic_recovery_spec.rb
+END
+per_channel_automatic_recovery_on_graceful_broker_shutdown_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/recovery/per_channel_automatic_recovery_on_graceful_broker_shutdown_spec.rb
+END

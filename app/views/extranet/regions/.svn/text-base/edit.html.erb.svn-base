@@ -1,0 +1,9 @@
+<%= render :partial => "form" %> 
+
+<%= link_to 'Show', @region %> |
+<%= link_to 'Regions List', regions_path %>
+
+
+
+
+

@@ -1,0 +1,68 @@
+<a id="schedule_link" href="<%=  @view_schedule_url %>">View Schedule</a>
+<style type="text/css">
+  .justclear{clear:none}
+</style>
+<script type="text/javascript">
+  var availabilities = <%=raw @availabilities_hash %>;
+</script>
+<%= hidden_field_tag 'coach_id', @coach.id %>
+<%= hidden_field_tag 'is_manager', @is_manager %>
+<%= hidden_field_tag 'removable', @selected_template ? @selected_template.removable_info[:status] : false %>
+<%= hidden_field_tag 'is_current_template_draft', (@selected_template ? @selected_template.status : '1') %>
+<%= hidden_field_tag 'is_aria', @coach.is_aria? %>
+<%= error_messages_for :availability_template %>
+<%= form_tag(create_template_path, :method => "post",:id=>'template1') do %>
+  <div id="headerline">
+    <div id="today_date" style="font-weight:bold;margin-bottom:10px;">
+      Today's Date : <span style="font-weight: normal;"></span>
+    </div>
+      <% if @template_list_for_select.size == 0 && @is_manager %>
+        <p class = "notice">No Templates available for this coach.</p>
+      <% else %>
+        <span style="float:left;padding-right: 2px;padding-top: 4px;">Select Template : </span>
+        <%= select_tag('template', options_for_select(@template_list_for_select, (@selected_template ? @selected_template.id : 0) ), {:class => "coach_availablity_dropdown" }) %>
+        <% if !@is_manager %>
+          <input type="button" value="Create New"  class="button_coach_availability"  id="button_create" style="float:left;"/>
+        <% end %>
+        <div id="template_date">
+          Make Active on : <input type="text" id="template_start_date" readonly="readonly" value="<%= format_time(@template_start_date) %> " />
+          <img src="/images/calendar_date_select/calendar.gif" alt="" style="display: none;" id="disabled_cal"/>
+        </div>
+        <%= submit_tag "Save and Submit",:class => "button_coach_availability", :onclick =>  "return handleSaveButtonClick(this)" , :style => "float:right;margin-right:0px;"%>
+        <% if !@is_manager %>
+          <%= submit_tag "Save",:class => "button_coach_availability", :onclick => " return handleSaveButtonClick(this)" , :style => "float:right;"%>
+        <% end %>
+      <% end %>
+  </div>
+<% end %>
+<% unless @template_list_for_select.size == 0 && @is_manager %>
+    <div id="spinner"><%= image_tag 'big_spinner.gif' %></div>
+    <div class ="my-schedule" id ="my_schedule">
+      <div id="week-calendar">
+        <!-- Calendar gets populated here -->
+      </div>
+    </div>
+  <div class="bottom_section">
+    <div>
+      <%= hidden_field_tag 'requested_action', ''%>
+      <div style="float: left;display: none;" id="template_status"> <b>Status : Draft</b></div>
+      <div class="btm_right_section  button_separator">
+        <% if @selected_template && @selected_template.removable_info[:show_delete_button] %>
+          <%= submit_tag "Delete Template",:class => "button_coach_availability", :id => 'delete_template'%>
+        <% else %>
+          <%= submit_tag "Delete Template",:class => "button_coach_availability", :id => 'delete_template', :style=>"display:none;"%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div id="edit-popup-container">
+    <div id="edit-popup-content">
+      <div class="message_intro">SAVE SCHEDULE TEMPLATE</div><br/>
+      <div> Title: <span><%= text_field_tag('label_in_popup','What to call this schedule (required)',:size=>50,:maxlength=>40,:onfocus=>"changeLabel(1)",:onblur =>  "changeLabel(2)" ) %></span></div><br/>
+      <div class ="button" style="float:right;" onclick ="saveTemplate()"><a>Save</a></div>
+      <div class='button  button_separator' style="float:right;" onclick= "closeEditPopup()"><a>Cancel</a></div>
+    </div>
+  </div>
+<% end %>
+<%=  javascript_include_tag 'availability' %>
+<%= stylesheet_link_tag 'availability' %>

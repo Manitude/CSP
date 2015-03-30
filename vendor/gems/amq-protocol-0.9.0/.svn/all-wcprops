@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/WebDev/!svn/ver/112021/gems/amq-protocol/0.9.0
+END
+protocol.rb.pytemplate
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/protocol.rb.pytemplate
+END
+.travis.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/.travis.yml
+END
+__init__.py
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/__init__.py
+END
+tasks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/tasks.rb
+END
+PROFILING.md
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/PROFILING.md
+END
+.rspec
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/.rspec
+END
+.gitmodules
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/.gitmodules
+END
+codegen.py
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/codegen.py
+END
+.specification
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/101053/gems/amq-protocol/0.9.0/.specification
+END
+amq-protocol.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/112021/gems/amq-protocol/0.9.0/amq-protocol.gemspec
+END
+post-processing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/post-processing.rb
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/.gitignore
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/Gemfile
+END
+README.textile
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/README.textile
+END
+codegen_helpers.py
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/codegen_helpers.py
+END
+irb.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/irb.rb
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/LICENSE
+END
+amqp_0.9.1_changes.json
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/amqp_0.9.1_changes.json
+END

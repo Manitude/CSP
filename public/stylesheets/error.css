@@ -1,0 +1,10 @@
+/* used by the error.rhtml layout */
+
+body { font: .75em/1.4 Tahoma, Arial, Verdana; text-align: center; background-color: #437BB4}
+.message { color: #999; border-top: 1px solid #bbb; padding-top: 5px; }
+#container { width: 500px; margin: 20px auto 0 auto; text-align: left; }
+h1 { font-size: 1.2em; }
+img { border: 0;}
+#header { background: #ffd519 url(/images/texture_strip.jpg) 0 100% repeat-x; padding-bottom: 2em; margin-bottom: 1.5em;}
+#header h1 { display: inline; position: absolute; top: 32px; left: 277px; }
+#header img#header_logo { padding: 1em 20px; }

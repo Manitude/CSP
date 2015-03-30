@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/environments
+END
+test.rb.tt
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/environments/test.rb.tt
+END
+development.rb.tt
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/environments/development.rb.tt
+END
+production.rb.tt
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/environments/production.rb.tt
+END

@@ -1,0 +1,15 @@
+<div class="moderation_details" id="moderation_details">
+  <p class="header">Moderation Details</p><br />
+  <div class="float_left" style="width: 80%; clear: both">
+    <div class="wide_label_row">
+      <% if community_moderator_logged_in? %>
+        <span title="View Chat History"><%= link_to("View Chat History", selected_learner_chat_history_path(:id => @learner.id)) %></span><br />
+        <span title="View World Interactions"><%= link_to("View World Interactions", user_interaction_path(:id => @learner.id)) %></span><br />
+      <%end%>
+      <span title="View Game History"><%= link_to("View Game History", game_history_path(:id => @learner.id)) %></span><br />
+      <% if community_moderator_logged_in? %>
+        <span title="View Invitation History"><%= link_to("View Invitation History", user_invite_history_path(:id => @learner.id)) %></span><br />
+      <%end%>
+   </div>
+   </div>
+</div>

@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration
+END
+direct_exchange_routing_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/direct_exchange_routing_spec.rb
+END
+automatic_recovery_predicate_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/automatic_recovery_predicate_spec.rb
+END
+immediate_messages_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/immediate_messages_spec.rb
+END
+queue_status_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/queue_status_spec.rb
+END
+queue_exclusivity_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/queue_exclusivity_spec.rb
+END
+declare_and_immediately_bind_a_server_named_queue_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/declare_and_immediately_bind_a_server_named_queue_spec.rb
+END
+channel_level_exception_with_multiple_channels_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/channel_level_exception_with_multiple_channels_spec.rb
+END
+store_and_forward_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/store_and_forward_spec.rb
+END
+multiple_consumers_per_queue_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/multiple_consumers_per_queue_spec.rb
+END
+fanout_exchange_routing_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/fanout_exchange_routing_spec.rb
+END
+message_acknowledgement_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/message_acknowledgement_spec.rb
+END
+basic_return_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/basic_return_spec.rb
+END
+basic_get_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/basic_get_spec.rb
+END
+channel_level_exception_handling_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/channel_level_exception_handling_spec.rb
+END
+topic_subscription_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/topic_subscription_spec.rb
+END
+ordering_of_published_messages_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/ordering_of_published_messages_spec.rb
+END
+headers_exchange_routing_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/headers_exchange_routing_spec.rb
+END
+reply_queue_communication_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/reply_queue_communication_spec.rb
+END
+mandatory_messages_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/mandatory_messages_spec.rb
+END
+automatic_binding_for_default_direct_exchange_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/automatic_binding_for_default_direct_exchange_spec.rb
+END
+exchange_declaration_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/exchange_declaration_spec.rb
+END
+queue_declaration_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/queue_declaration_spec.rb
+END
+declare_one_hundred_server_named_queues_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/declare_one_hundred_server_named_queues_spec.rb
+END
+channel_close_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/channel_close_spec.rb
+END
+redelivery_of_unacknowledged_messages_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/redelivery_of_unacknowledged_messages_spec.rb
+END
+tx_commit_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/tx_commit_spec.rb
+END
+tx_rollback_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/tx_rollback_spec.rb
+END
+message_metadata_access_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/message_metadata_access_spec.rb
+END
+queue_redeclaration_with_incompatible_attributes_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/queue_redeclaration_with_incompatible_attributes_spec.rb
+END
+connection_level_exception_handling_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/connection_level_exception_handling_spec.rb
+END
+hello_world_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/hello_world_spec.rb
+END
+authentication_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/authentication_spec.rb
+END

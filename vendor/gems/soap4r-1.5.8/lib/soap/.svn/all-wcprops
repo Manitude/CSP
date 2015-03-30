@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/WebDev/!svn/ver/48754/gems/soap4r/1.5.8/lib/soap
+END
+mappingRegistry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/mappingRegistry.rb
+END
+property.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/property.rb
+END
+rpcRouter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/rpcRouter.rb
+END
+filter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/filter.rb
+END
+marshal.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/marshal.rb
+END
+attachment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/attachment.rb
+END
+streamHandler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/streamHandler.rb
+END
+element.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/element.rb
+END
+charset.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/charset.rb
+END
+mapping.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/mapping.rb
+END
+mimemessage.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/mimemessage.rb
+END
+XMLSchemaDatatypes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/XMLSchemaDatatypes.rb
+END
+rpcUtils.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/rpcUtils.rb
+END
+server.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/server.rb
+END
+ns.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/48754/gems/soap4r/1.5.8/lib/soap/ns.rb
+END
+netHttpClient.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/netHttpClient.rb
+END
+wsdlDriver.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/wsdlDriver.rb
+END
+generator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/generator.rb
+END
+driver.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/driver.rb
+END
+httpconfigloader.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/httpconfigloader.rb
+END
+XMLSchemaDatatypes1999.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/XMLSchemaDatatypes1999.rb
+END
+parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/parser.rb
+END
+namespace.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/namespace.rb
+END
+cgistub.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/cgistub.rb
+END
+qname.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/qname.rb
+END
+nestedexception.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/nestedexception.rb
+END
+soap.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/soap.rb
+END
+baseData.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/baseData.rb
+END
+processor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/processor.rb
+END
+standaloneServer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/standaloneServer.rb
+END
+proxy.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/proxy.rb
+END
+compat.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/compat.rb
+END

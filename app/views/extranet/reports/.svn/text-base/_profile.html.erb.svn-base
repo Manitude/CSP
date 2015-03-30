@@ -1,0 +1,12 @@
+<tbody>
+  <tr>
+    <td><%= profile.email %></td>
+    <td><%= profile.first_name %></td>
+    <td><%= profile.last_name %></td>
+    <td><%= profile.preferred_name %></td>
+    <td><%= profile.city %></td>
+    <td><%= profile.state_province %></td>
+    <td><%= Time.at(profile.created_at.to_i).strftime(" %b %d, %Y %m:%S") %></td>
+    <td><%= Time.at(profile.updated_at.to_i).strftime(" %b %d, %Y %m:%S") %></td>
+  </tr>
+</tbody>

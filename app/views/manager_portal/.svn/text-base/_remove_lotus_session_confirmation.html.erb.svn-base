@@ -1,0 +1,8 @@
+<% form_tag remove_lotus_session_path(:coach_session_id => @coach_session.id, :time => @time,
+  :lang_identifier => @lang_identifier, :current_coach_id => @coach.id) do -%>
+  <div id="remove-lotus-session-form">
+    <div>Are you sure you want to remove this session?</div>
+    <input class="button medium_button" type="submit" value="Yes" />
+    <input class="button medium_button" type="submit" value="No" onclick="jQuery('#remove-lotus-session-confirmation').slideUp();return false;" />
+  </div>
+<% end -%>

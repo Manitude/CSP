@@ -1,0 +1,34 @@
+<% override = File.join(::Rails.root.to_s, "config", "dblogin.yml") %>
+
+default: &default
+  adapter: mysql2
+  username: root
+  password: 
+  host: localhost
+  encoding: utf8
+  timezone: '+00:00'
+
+<%= ERB.new(IO.read(override), nil, nil, '_jerbout').result if File.exist?(override) %>
+
+development:
+  database: coachportal_production
+  <<: *default
+
+test:
+  database: coachportal_test
+  <<: *default
+
+production:
+  database: coachportal_production
+  <<: *default
+
+production-slave:
+  database: coachportal_production
+  host: ashdbcoachportal-report.lan.flt
+  username: readonly
+  password: cumul0u5
+  adapter: mysql2
+  port: 3306
+
+
+<%= ERB.new(IO.read(override), nil, nil, '_jerbout').result if File.exist?(override) %>

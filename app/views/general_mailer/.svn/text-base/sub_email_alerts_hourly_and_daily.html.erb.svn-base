@@ -1,0 +1,8 @@
+ <div>  
+  <b>RosettaStone has sessions that need substitution:</b>
+  <%@data.each do |sub|%>
+    <div style ="margin-left: 20px;"><%= raw (sub[:language]).display_name %> Substitute Needed: <%= sub[:subsitution_date].to_time.strftime("%I:%M %p %a %b %d %Y") %> </div>
+  <%end%>
+  <br/>
+  <div><%= @content.html_safe %></div>
+</div>

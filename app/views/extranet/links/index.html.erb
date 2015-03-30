@@ -1,0 +1,30 @@
+
+<% unless @links.empty? %>
+<table class='se_tab'>
+  <tr>
+    <th>Name</th>
+    <th>URL</th>
+  </tr>
+
+<% @links.each do |link| %>
+  <tr>
+    <td><%=h link.name %></td>
+    <td><%=h link_to link.url, link.url, :target => "_blank" %></td>
+    <td class="links"><%= link_to image_tag('/images/extranet/show.gif', :alt => "Show", :title => "Show"), link %></td>
+     <% if manager_logged_in? -%>
+      <td class="links"><%= link_to image_tag('/images/extranet/edit.png', :alt => "Edit", :title => "Edit"), edit_link_path(link) %></td>
+      <td class="links"><%= link_to image_tag('/images/extranet/delete.png', :alt => "Delete", :title => "Delete"), link, :confirm => 'Are you sure?', :method => :Delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<% else %>
+   <p class="notice"> No records found </p>
+<% end %>
+
+<% if manager_logged_in? -%>
+ <%= link_to 'New link', new_link_path %>
+<% end %>

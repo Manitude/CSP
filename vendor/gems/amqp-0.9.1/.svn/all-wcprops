@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/WebDev/!svn/ver/112019/gems/amqp/0.9.1
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/Rakefile
+END
+.yardopts
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/.yardopts
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/.gitignore
+END
+.travis.yml
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/.travis.yml
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/CHANGELOG
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/Gemfile
+END
+.rspec
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/.rspec
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/README.md
+END
+.specification
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/WebDev/!svn/ver/101053/gems/amqp/0.9.1/.specification
+END
+amqp.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/WebDev/!svn/ver/112019/gems/amqp/0.9.1/amqp.gemspec
+END

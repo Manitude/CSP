@@ -1,0 +1,26 @@
+<div id="reflex_learners_details">
+  <% if !learners.blank? %>
+    <div class="learners_header_container">
+      <span class="learner_header">First Name</span>
+      <span class="learner_header">Last Name</span>
+      <span class="learner_header">Preferred Name</span>
+    </div>
+      <% learners.each do |learner| %>
+        <div class="learners_names_list">
+          <span class="learner_name"><%= learner["first_name"] %></span>
+          <span class="learner_name"><%= learner["last_name"] %></span>
+          <span class="learner_name"><%= learner["preferred_name"] %></span>
+        </div>
+      <% end %>
+    <% else %>
+    <div style ="float: left">
+      <div id="message"><%= "No learners available" %></div>
+    </div>
+  <% end %>
+</div>
+
+<%= javascript_tag do %>
+  jQuery(document).ready(function() {
+    setFaceboxWidth();
+  });
+<% end %>

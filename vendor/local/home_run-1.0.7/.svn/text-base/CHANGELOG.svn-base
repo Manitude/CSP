@@ -1,0 +1,101 @@
+=== 1.0.7 (2012-08-08)
+
+* Make DateTime constructors handle fractional seconds in seconds argument (jeremyevans)
+
+=== 1.0.6 (2012-02-27)
+
+* Merge DateTime#<=> into Date#<=> to work around ActiveSupport bug (jeremyevans) (#45, #41, #38, #36)
+
+=== 1.0.5 (2011-12-22)
+
+* Handle DateTime.jd with a single float argument (jeremyevans)
+
+=== 1.0.4 (2011-09-02)
+
+* Handle time zone offsets given as strings in the constructors (jeremyevans) (#37)
+
+=== 1.0.3 (2011-07-05)
+
+* Work around segfault in rb_ary_push during extension initialization (jeremyevans)
+
+=== 1.0.2 (2011-03-18)
+
+* Support fractional timestamps in the ISO date parser (funny-falcon)
+
+* Support more variations in timezone formats in the ISO date parser (funny-falcon)
+
+=== 1.0.1 (2011-02-28)
+
+* Make #step with a 0 step value raise an ArgumentError (jeremyevans)
+
+* Fix #dup and #clone to work correctly (jeremyevans) (#21)
+
+=== 1.0.0 (2011-02-01)
+
+* Define the ZONES hash in ruby to work around probable interpreter bug (jeremyevans)
+
+=== 0.9.4 (2010-10-18)
+
+* Have methods of subclasses of Date and DateTime return instances of the subclass (jeremyevans)
+
+=== 0.9.3 (2010-09-20)
+
+* Don't attempt to undefine already undefined method if you require date_ext twice with two different paths (jeremyevans)
+
+=== 0.9.2 (2010-09-13)
+
+* Make DateTime#sec_fraction on ruby 1.9 to be compatible with 1.9 stdlib (jeremyevans)
+
+* Remove the use of the %hhi sprintf format specifier, for greater standards compatibility (jeremyevans)
+
+* Fix a bug where the same symbol was present in multiple objects, causing build failures with -fno-common (jeremyevans) (#10)
+
+=== 0.9.1 (2010-09-01)
+
+* Fix strptime for %Y%m%d and similar formats (jeremyevans) (#9)
+
+* Require rake-compiler when building from source (may need to clean out your ext/date_ext directory manually) (jeremyevans)
+
+* Include the ragel-generated file in the repository, so you don't need ragel to build from source (jeremyevans)
+
+* Respect Encoding.default_internal for returned strings on 1.9 (brianmario, jeremyevans)
+
+* Handle problems with zones in the -HH,DDD or -HH.DDD formats (jeremyevans)
+
+* Compile C files separately, instead of including C files in other C files (jeremyevans)
+
+* On ruby 1.9, return strings in US-ASCII encoding instead of ASCII-8BIT (jeremyevans) (#8)
+
+* Reorganize directory structure to use the standard ruby extension structure (luislavena, jeremyevans)
+
+* Support Date/DateTime#step without a block returning an Enumerator on 1.9 (jeremyevans) (#6)
+
+* Support ruby build with CALC_EXACT_MALLOC_SIZE (nocode) (#5)
+
+* Add Ragel parser for Apache Common Log Format date format (jeremyevans)
+
+* Add Ragel parser for RFC 822 date format (jeremyevans)
+
+* Fix loading date/format.rb directly where the date extension hasn't been included but the Date class has been opened (jeremyevans) (#3)
+
+* Don't override ruby's default extension optimization flags (jeremyevans)
+
+* Fix compilation on Solaris with the Sun Studio Compiler (ankopainting)
+
+* Handle YYYY/MM/DD date format in the ISO 8601 Ragel parser (jeremyevans)
+
+* Add a home_run.rb file to allow you to require 'home_run' to load the extension, useful on Heroku with ruby 1.8 (jeremyevans) (#2)
+
+* Don't think that Mac OS X/Darwin users are on Windows (jeremyevans) (#1)
+
+* Tighten up offset limits to exactly 14 hours from UTC (jeremyevans)
+
+* Make dates outside of the allowed range raise RangeErrors (jeremyevans)
+
+* Add range check for DateTime#+ and related methods (jeremyevans)
+
+* Add range check for DateTime#new! (jeremyevans)
+
+=== 0.9.0 (2010-08-20)
+
+* Initial Public Release

@@ -1,0 +1,29 @@
+<% unless @regions.empty? %>
+<table class='se_tab'>
+  <tr>
+    <th>Name</th>
+  </tr>
+
+<% @regions.each do |region| %>
+  <tr>
+    <td><%=h region.name %></td>
+    <td class="links"><%= link_to image_tag('/images/extranet/show.gif', :alt => "Show", :title => "Show"), region %></td>
+     <% unless coach_logged_in? -%>
+      <td class="links"><%= link_to image_tag('/images/extranet/edit.png', :alt => "Edit", :title => "Edit"), edit_region_path(region) %></td>
+      <td class="links"><%= link_to image_tag('/images/extranet/delete.png', :alt => "Delete", :title => "Delete"), region, :confirm => 'Are you sure?', :method => :Delete %></td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<% else %>
+  <p class="notice"> No data available</p>
+<% end %>
+   
+<% unless coach_logged_in? -%>
+  <%= link_to 'New region', new_region_path %>
+<% end %>
+
+

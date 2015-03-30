@@ -1,0 +1,4 @@
+---
+
+excluded_coach_sessions1:
+  coach_id : accounts(:dranjit).id

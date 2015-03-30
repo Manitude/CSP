@@ -1,0 +1,37 @@
+<style type="text/css">
+  #coach_id {
+    width: 180px;
+  }
+</style>
+<br/><br/>
+<div id="cm-calendar-header">
+  <%if @display_template%>
+    Select Template:
+    <%end%>
+    <%= select_tag('template', options_for_select(@template_list_for_select,@display_template ? @display_template.id : "new_template"),
+      {:style=>"width:140px;", :onchange=> "javascript: getTemplate(this.value,#{@coach.id})",:class => "dropdown" })  if @display_template %>
+  <% if @display_template %>
+        &nbsp;&nbsp;Make Active on: <%= calendar_date_select_tag 'effective_start_date', params[:effective_start_date] || @display_template.effective_start_date, :readonly => @display_template.reviewed?, :valid_date_check => "date > (new Date()).stripTime()", :popup => @display_template.reviewed?,:style => "padding: 6px 2px;width:115px;" %>
+  <% end %>
+  <div id="cm-select-dropdowns">
+    <%= select_tag 'lang_identifier', options_for_languages(true, params[:lang_identifier]), {:style=>"width:180px;display:none;", :class => "dropdown", :onchange=> "javascript: getCoach(jQuery('#coach_id').val());"} %>
+    <span id="select_coach" style = "display:none;"><%= select_tag 'coach_id', options_for_coaches, {:class => "dropdown", :onchange=> "javascript: getCoach(this.value)"} %></span>
+  </div>
+  <% if @coach %>
+    <% lang_identifier = params[:lang_identifier].to_s %>
+    <span class ="" <%= 'style="display:none"' if @start_time_list.empty? %>>
+      &nbsp;&nbsp; Apply to
+      <%= select_tag('language_start_time_drop_down', options_for_lang_start_time_edit_schedule(@start_time_list,@start_time),
+      {:style=>"", :onchange=> "javascript: changeTemplatePath(this.value,#{@coach.id},'#{lang_identifier}')",:class => "dropdown" }) %>
+    </span>
+  <%  end %>
+<%= image_tag 'ajax-spinner.gif',:id => 'ajaxSpinner', :style => "display :none" %>
+  <% if @coach %>
+  <% if @availability_templates.any? %>
+    <% if @display_template -%>
+      <span style="float:right;margin-right:0px;"><a><%= submit_tag "Save and Submit", :class => "button_coach_availability",:onclick => "return open_availability_edit_popup(this)", :style => "margin-right:0px;" %></a></span>
+    <% end %>
+  <% end %>
+<% end %>
+
+</div>

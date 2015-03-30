@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates
+END
+gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/gitignore
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/Gemfile
+END
+config.ru
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config.ru
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/README
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/Rakefile
+END

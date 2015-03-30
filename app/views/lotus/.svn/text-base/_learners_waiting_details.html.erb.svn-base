@@ -1,0 +1,16 @@
+<div id="reflex_learners_details">
+  <% if @learners_waiting.blank? %>
+    There are no learners waiting.
+  <% else %>
+    <div class="learners_header_container">
+      <span class="learner_header">Learner Name</span>
+      <span class="learner_long_header">Waiting Duration(in minutes)</span>
+    </div>
+    <% @learners_waiting.each do |learner| %>
+      <div class="learners_names_list">
+        <span class="learner_name"><%= learner["display_name"]%></span>
+        <span class="learner_long_attribute"><%= learner["waiting_duration"]%></span>
+      </div>
+    <%end%>
+  <% end %>
+</div>

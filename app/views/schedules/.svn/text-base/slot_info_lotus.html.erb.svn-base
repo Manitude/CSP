@@ -1,0 +1,53 @@
+<div class ="btm-section">
+  <div id="shift_details">
+    <div class="shift_detail_header">
+      <div class ="header_element first">Coach Name</div>
+      <div class ="header_element">Status</div>
+      <div class ="header_element large">Recurrence Ends</div>
+      <div class ="header_element">Action</div>
+    </div>
+    <div class="shift_detail_header"><hr/></div>
+    <% unless @slot_info[:shift_details].blank? %>
+      <div id="actuals_row_container">
+        <% @slot_info[:shift_details].each do |session| %>
+          <div class = "actuals_row <%=session[:color]%>" id= '<%= session[:coach_session_id] %>'>
+            <div class ="actuals_row_element first" id= 'actuals_row_coach_name<%= session[:coach_session_id] %>' data_isExtraSession ="<%=  session[:status] == 'Extra Session' %>">
+              <%= session[:coach_id] ? link_to(session[:coach_full_name], view_coach_profile_path(:coach_id => session[:coach_id]) , :target => "_blank") : (session[:sub_req_coach] ? link_to(session[:sub_req_coach], view_coach_profile_path(:coach_id => session[:sub_req_coach_id]) , :target => "_blank") : "---") %>
+            </div>
+            <div class ="actuals_row_element" id= 'actuals_row_status<%= session[:coach_session_id] %>'><%= session[:status]%></div>
+            <div class ="actuals_row_element large"> <%= session[:recurring_ends_at]%></div>
+            <div class ="actuals_row_element action" id= 'actuals_row_link<%= session[:coach_session_id] %>'alt ="<%=  @slot_info[:session_start_time] %>">
+              <% if @slot_info[:session_start_time] > (Time.now.utc - 60.minutes) %>
+                <%if session[:status] == 'Extra Session' %>
+                  <a href="#" onclick='cancelExtraSession("<%= session[:coach_session_id] %>");return false;'><%= session[:remove_text] %></a>
+                  &nbsp;&nbsp;&nbsp;<a href="#" onclick="editExtraSessionReflex('<%=session[:coach_session_id]%>',this);return false;">Edit</a>
+                <%elsif session[:status] == 'Active'%>
+                  <a href="#" onclick='removeActualSession("<%= session[:coach_session_id] %>", this);return false;'><%= session[:remove_text] %></a>
+                  &nbsp;&nbsp;&nbsp;<a href="#" onclick="saveLotusSessionChanges('<%=session[:coach_session_id]%>',this);return false;" data_coach_id = "<%=session[:coach_id]%>"><%= session[:recurring_text] %></a>
+                <% end %>
+              <% end %>
+              <% if @slot_info[:session_start_time] > (Time.now.utc + 60.minutes) && session[:status] == 'Substitute required'  %>
+                &nbsp;&nbsp;&nbsp;<a href="#" onclick="editActualLotusSession('<%=session[:coach_session_id]%>',this);return false;">Assign Sub</a>
+              <% end %>
+            </div>
+          </div>
+        <%  end %>
+      </div>
+    <% else %>
+      <div>No schedules created yet.</div>
+    <% end %>
+    <div class="locals_header">Coaches to be scheduled<hr/></div>
+    <% unless @slot_info[:local_sessions].empty? %>
+      <div id="locals_row_container">
+        <% @slot_info[:local_sessions].each do |session| %>
+          <div class='locals_row'>
+            <div class='locals_row_element first' id='<%= session[:coach_id] %>'><a target='_blank' href='/view-coach-profile/<%=session[:coach_id]%>'><%= session[:coach_full_name] %></a></div>
+            <div class='locals_row_element'><%= session[:status] %></div>
+            <div class="locals_row_element large"> <%= session[:recurring_ends_at]%></div>
+            <div class='locals_row_element'><a href="#"onclick='deleteLocalSession("<%= session[:type] %>",<%=session[:session_id]%>,"<%= session[:status] %>",this);return false;'>Remove</a></div>
+          </div>
+        <%end%>
+      </div>
+    <%end%>
+  </div>
+</div>

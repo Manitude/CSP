@@ -1,0 +1,6 @@
+# Contains a list of *app servers* as array.
+# Options
+#  app_servers: An array of app_servers present to which search index files needs to be rsynced (~ nil if none)
+#   app_servers: ~
+#   app_servers: ["walker", "texas"]
+app_servers: ~

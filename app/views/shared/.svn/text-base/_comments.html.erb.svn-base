@@ -1,0 +1,5 @@
+<div class="comments">
+  <div style="width:20%; float:left;" >Comments:</div>
+  <div style="width:80%; float:left;" ><%= text_area_tag 'comments', session[:template] && session[:template][:comments] || display_template.comments ,
+      {:cols => 80, :rows => 5, :readonly => display_template.reviewed? } %></div>
+</div>

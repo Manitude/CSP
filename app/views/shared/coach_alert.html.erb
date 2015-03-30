@@ -1,0 +1,44 @@
+<style type="text/css">
+form.button_to {  
+    margin:0;
+    padding:0;
+    display:inline;
+}
+
+form.button_to div, form.button_to div input {  
+    display: inline;
+}
+</style>
+<div id = 'coach_alert_box'>
+	<% if manager_logged_in? || tier1_support_lead_logged_in?%>
+		<% if params[:scenario] %>
+			<span>
+				<%= @alert[:description] %>
+			</span><br /><br />
+		<div style="width: 100%; text-align: center;">
+			<%= button_to "I'VE READ IT",  href = 'javascript:void(0);', :id => "read_it_alert"%>
+		</div>
+		<% else %>
+		<span>
+			<%= hidden_field_tag 'alert_desc', @alert[:description] %>
+			<%= text_area_tag :coach_alert_message, @alert[:description], :rows => 5, :style => "background-color: #F0F0F0; width: 430px; height: 70px;" %>
+			<p>Characters remaining: <span id="char_count"><%= 1000 - (@alert[:description].nil? ? 0 : @alert[:description].length) %></span></p>
+		</span><br />
+		<div style="width: 95%; text-align: right;">
+			<%= button_to "Publish",  href = 'javascript:void(0);', :id => "publish_alert", :disabled => true %>
+			&nbsp;&nbsp;
+			<%= button_to "Remove",  href = 'javascript:void(0);', :id => "remove_alert", :disabled => @alert[:description].nil? ? true : false %> 
+		</div>
+		<% end %>
+	<%end%>
+	<% if coach_logged_in?%>
+		<span>
+			<%= @alert[:description] %>
+		</span><br /><br />
+		<div style="width: 100%; text-align: center;">
+			<%= button_to "I'VE READ IT",  href = 'javascript:void(0);', :id => "read_it_alert"%>
+		</div>
+	<% end %>
+</div>
+<script type="text/javascript">
+</script>

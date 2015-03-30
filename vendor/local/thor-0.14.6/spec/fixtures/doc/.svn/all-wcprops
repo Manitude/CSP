@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/fixtures/doc
+END
+block_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/fixtures/doc/block_helper.rb
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/fixtures/doc/README
+END
+%file_name%.rb.tt
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/fixtures/doc/%25file_name%25.rb.tt
+END
+config.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/fixtures/doc/config.rb
+END

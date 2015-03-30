@@ -1,0 +1,107 @@
+--- !ruby/object:Gem::Specification 
+name: eventmachine
+version: !ruby/object:Gem::Version 
+  hash: 57
+  segments: 
+  - 0
+  - 12
+  - 11
+  version: 0.12.11
+platform: ruby
+authors: []
+
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-04-29 00:00:00 -04:00
+default_executable: 
+dependencies: []
+
+description: 
+email: 
+executables: []
+
+extensions: []
+
+extra_rdoc_files: []
+
+files: 
+- lib
+- lib/em
+- lib/jeventmachine.rb
+- lib/eventmachine.rb
+- lib/pr_eventmachine.rb
+- lib/evma.rb
+- lib/rosettastone
+- lib/evma
+- ext/ssl.cpp
+- ext/rubymain.cpp
+- ext/cmain.cpp
+- ext/ssl.h
+- ext/page.cpp
+- ext/emwin.cpp
+- ext/epoll.cpp
+- ext/kb.cpp
+- ext/project.h
+- ext/i486-linux
+- ext/cplusplus.cpp
+- ext/binder.h
+- ext/em.h
+- ext/ed.cpp
+- ext/binder.cpp
+- ext/universal-darwin9.0
+- ext/ed.h
+- ext/extconf.rb
+- ext/eventmachine.h
+- ext/powerpc-darwin8.11.0
+- ext/files.cpp
+- ext/pipe.cpp
+- ext/files.h
+- ext/fastfilereader
+- ext/sigs.cpp
+- ext/x86_64-linux
+- ext/epoll.h
+- ext/eventmachine_cpp.h
+- ext/page.h
+- ext/em.cpp
+- ext/emwin.h
+- ext/sigs.h
+- ext/i686-darwin10
+has_rdoc: false
+homepage: 
+licenses: []
+
+post_install_message: 
+rdoc_options: []
+
+require_paths: 
+- lib
+- ext
+required_ruby_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+  version: 
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+  version: 
+requirements: []
+
+rubyforge_project: 
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 3
+summary: 
+test_files: []
+

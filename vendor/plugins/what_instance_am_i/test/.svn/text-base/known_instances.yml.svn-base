@@ -1,0 +1,16 @@
+production:
+  - production1
+  - production2
+  - !ruby/regexp /^productionstandard\d+$/
+
+staging:
+  - staging1
+  - staging2
+
+cobra:
+  - cobra
+
+testing:
+  - !ruby/regexp /^rshbgdev\d+$/
+
+fallthrough: development

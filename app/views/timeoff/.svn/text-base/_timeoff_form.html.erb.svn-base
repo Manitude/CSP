@@ -1,0 +1,20 @@
+<div style="padding-top:10px">
+  <label for ="modification_start_date" style="float:left;font-weight: bold;width: 75px;">Start Time:</label>
+  <input type="text" id="modification_start_date" class="datetimepicker" readonly="readonly" value="<%= format_time(@modification.start_date, "%B %d, %Y %I:%M %p") %>" />
+</div>
+<div style="padding-top:10px">
+  <label for ="modification_end_date" style="float:left;font-weight: bold;width: 75px;">End Time:</label>
+  <input type="text" id="modification_end_date" class="datetimepicker" readonly="readonly" value="<%= format_time(@modification.end_date, "%B %d, %Y %I:%M %p") %>" />
+</div>
+<!-- make use of calendar_min_datetime instead of modification_start_date in datepicker.rb for 54873-->
+<input type="hidden" id="calendar_min_datetime" value="<%= format_time(@next_slot_start_time, "%B %d, %Y %I:%M %p") %>"/>
+<div style="padding-top:10px">
+  <label for ="comments" style="float:left;font-weight: bold;">Reason:</label><br/>
+  <textarea rows="5" cols="50" id="comments"><%= @modification.comments %></textarea>
+</div>
+<br/>
+<input id="is_aria_only" type="hidden" value=<%= @coach.is_only_aria? %> />
+<input id="from_timeoff" type="hidden" value=<%=true%> />
+<input id="save_timeoff" type="button" value="Save" style="float:right;" />
+<input type="button" id="cancel_timeoff" value="Cancel" style="float:left;" onclick="jQuery(this).closest('.qtip').remove();"/>
+<%= javascript_include_tag 'datepicker' %>

@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/WebDev/!svn/ver/96415/gems/factory_girl-2.5.1
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/Gemfile
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/Rakefile
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/LICENSE
+END
+.yardopts
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/.yardopts
+END
+GETTING_STARTED.md
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/GETTING_STARTED.md
+END
+CONTRIBUTION_GUIDELINES.md
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/CONTRIBUTION_GUIDELINES.md
+END
+.travis.yml
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/.travis.yml
+END
+.autotest
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/.autotest
+END
+Changelog
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/Changelog
+END
+.rspec
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/.rspec
+END
+README.md
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/README.md
+END
+.specification
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/.specification
+END
+Appraisals
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/Appraisals
+END
+Gemfile.lock
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/Gemfile.lock
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/.gitignore
+END
+cucumber.yml
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/93209/gems/factory_girl-2.5.1/cucumber.yml
+END

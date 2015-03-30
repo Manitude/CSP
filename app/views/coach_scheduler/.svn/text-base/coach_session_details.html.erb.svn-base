@@ -1,0 +1,120 @@
+<div id="head_section">
+  <% if @coach_session %>
+      <%=hidden_field_tag 'start_time', @coach_session.session_start_time.utc %>
+      <%=hidden_field_tag 'coach', @coach.id %>
+      <%=hidden_field_tag 'coach_session_id', @coach_session.id %>
+      <%= hidden_field_tag 'no_of_Seats', @coach_session.number_of_seats %>
+      <%= hidden_field_tag 'is_one_hour_session', @is_one_hour_session %>
+      <%= hidden_field_tag 'slot_time', @time %>
+      <%= hidden_field_tag 'from_cs', true %>
+      <%= hidden_field_tag 'previously_recurring', @selected_recurring %>
+      <%= hidden_field_tag 'is_appointment', @coach_session.appointment? %>
+      <%= hidden_field_tag 'learner_count', @learner_details.try(:size).to_i %>
+          <span id="title">
+          <%= format_time_for_popup(@time)%>
+            <% if !@is_coach || @coach_session.tmm?%>
+              <%if @editing_is_possible and !@conflict_session %>
+                <span>
+                <%= button_to_function "Edit", "editCoachSession(this, #{@coach_session.session_start_time.to_i*1000})" , {:class => "button", :style => "padding: 1px 4px;"}%>
+                </span>
+              <% end  %>
+            <%end%>
+            <%if !@is_coach && !@coach_session.is_cancelled? and !@substituted and @cancel_current_session and !@conflict_session %>
+              <span><%= button_to_function "CANCEL", "confirmationForCancel(this,learner_count);", {:id => "cancel_remove_button", :class => "button_shape", :style => "padding: 1px 4px;"} %></span>
+            <% end  %>
+            <%if @create_button %>
+              <span>
+                  <%= button_to_function "CREATE NEW", "cancelledCreatePopup('#{coach_logged_in? ? nil : @coach_session.language_identifier}', '#{@time.to_i}','#{@coach_availability}', this)" , {:class => "button", :style => "padding: 1px 4px;"}%>
+              </span>
+            <% end  %>
+            
+          </span>
+          <% if !@conflict_session and !@coach_session.is_cancelled? and @coach_session.session_status != 0 and @assign_sub_link %>
+            <span id="subs_link">
+              <% if !@is_coach  %><span id="assign_sub" class="<%= "enable_sub_links" if !@coach_session.is_passed? %>">Assign a Sub</span> <% end %>
+              <br/>
+            <% if !@substituted %><span id="request_sub" class="<%= "enable_sub_links" if !@coach_session.is_passed? %>">Request a Sub</span> <% end %>
+            </span>
+          <% end %>
+  <!-- Totale session details -->
+
+        <% if @session_details %>
+            <div style="<%if @coach_session.cancelled%>color:Gray<%end%>;">
+            <%= @coach_session.language.display_name %><%= ("<br/><font color='red'>Unconfirmed</font>").html_safe if @session_details.teacher_confirmed != "true" && !@substituted %>
+            </div>
+            <div style="color:<%@coach_session.cancelled ? 'Gray' : '#F88C5C'%>;">
+            <%= @coach_session.village_name %>
+            </div>
+
+            <div id ="learner_details">
+            <%if !@learner_details.blank? %>
+                <div style="float: left"><%= @coach_session.is_passed? ? "Learners Attended:" : "Learners:" %></div>
+                <div class="popup_learner_list">
+                <% @learner_details.each_index do |index| %><span class="learner"><%= link_to_function ((index == 0 ? "":", ") +@learner_details[index].name) , :onclick => "showLearner('#{@session_details.eschool_session_id}','#{@learner_details[index].id}', this)"%></span><% end %>
+                </div>
+            <% else %>
+                <div style ="<%if @coach_session.cancelled%>color:Gray<%end%>;float: left"><%= @coach_session.is_passed? ? "No Learners Attended" : "No Learners have signed up." %></div>
+            <% end %> 
+            <div class="popup_average" style="<%if @coach_session.cancelled%>color:Gray<%end%>;"> Avg attendance/session : <%= @session_details ? @session_details.average_attendance.to_f.round(1) : "0" %></div>
+            </div>
+
+            <div class="popup_average" id = "eschool_session_id_div" style="<%if @coach_session.cancelled%>color:Gray<%end%>;"> 
+            Eschool Session Id :<%= @coach_session.eschool_session_id == nil ? 'NA': @coach_session.eschool_session_id %>
+            </div>
+        <% else %>
+          <!-- Aria session details -->
+          <%= render 'aria_session_details' if @coach_session.aria? %>
+          <%= render 'tmm_session_details' if @coach_session.tmm? %>
+
+          <%if @coach_session.supersaas? %>
+              <% if @coach_session.session_status == 0 %>
+                <%if !@is_coach %>
+                  </br></br>
+                  This session was created in violation of scheduling threshold in Supersaas. Please add a reservation for this Coach in SuperSaas, then click the Update Button below.
+                  </br></br>
+                  <%if !@coach_session.is_passed? %>
+                    <span>
+                      <%= button_to_function "Update", "updateAriaSession(this,#{@coach_session.id})" , {:class => "button", :style => "padding: 1px 4px;"}%>
+                    </span>
+                  <%end%>
+                <% else %>
+                  </br></br>
+                    A reservation does not exist for this session. Please contact your Manager or Supervisor so it can be updated.
+                  </br>
+                <%end%>
+              <% elsif ((!@aria_session_details && @coach_session.aria?) || (!@tmm_session_details && @coach_session.tmm_michelin?)) and !@coach_session.is_cancelled? %>      
+                <%if !@is_coach %>
+                  </br></br>
+                  This session is not present in SuperSaas. Please cancel this session and add a new one for this timeslot.
+                  </br></br>
+                  <div id="session_buttons">
+                  <% if !@coach_session.is_started?%>
+                    <span><%= button_to_function "CANCEL", "confirmationForCancel(this);", {:id => "cancel_remove_button", :class => "button_shape", :style => "background-color: #F3F3F4; border: 1px solid #444444;float:left;"} %>
+                    </span>
+                  <% end %>
+                  </div>
+                <% else %>
+                  </br></br>
+                  This session is not present in SuperSaas. Please contact your manager or supervisor so it can be added.
+                  </br>
+                <% end %>
+              <%end%>
+            <%end%>
+        <% end %>
+
+        <div id="session_buttons">
+          <% if @is_coach %>
+          <% if !@coach_session.supersaas? && !@coach_session.language.is_tmm?%>
+         <% if !@substituted %> <div id='launch_session_div' class='button' style= "<% if @launch_url.nil? %> color:gray; cursor:default; background: 0px transparent; background-color: #CDCDCD;"<%end%>"> <%= link_to_launch("Launch Session", @launch_url, @coach_session.id) %></div> <% end %>
+          <% elsif @coach_session.aria?%>
+              <%= button_to_function "Launch Session", "launchAriaSession(this,#{@coach_session.id},'#{@aria_learner_guid}')" , {:class => "button", :disabled => (!@coach_session.falls_under_20_mins? || @coach_session.supersaas_session.blank? || @coach_session.supersaas_coach.blank?) }%>
+          <% end %>
+          <% end %>
+          <% if @coach_session.totale? %>
+            <% if !@substituted %>  <div id='session_feedback' class='button' style= "<% if @sess_feedback.nil? %> color:gray; cursor:default; background: 0px transparent; background-color: #CDCDCD;"<%end%>" >  <%= link_to_if @sess_feedback, "Session Feedback", @sess_feedback, :target => "_blank" ,:style => "color:#1090CF"%> </div> <% end %>
+          <%end%>
+        </div>
+  <% else %>
+    There is some error, please try again.
+  <% end %>
+</div>

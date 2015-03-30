@@ -1,0 +1,9 @@
+<div class="admin_dashboard_item">
+  <h3>Simulate a Background process</h3>
+  <% form_tag('/homes/simulate_delayed_job') do -%>
+    <div class="admin_dashboard_sub_item">
+      Hit Simulate button to trigger a dummy operation that runs in background for 10 seconds.
+      <input type="submit" value="Simulate"/>
+    </div>
+  <% end -%>
+</div>

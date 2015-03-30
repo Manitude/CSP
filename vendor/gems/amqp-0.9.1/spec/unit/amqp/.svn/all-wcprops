@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/unit/amqp
+END
+bit_set_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/unit/amqp/bit_set_spec.rb
+END
+channel_id_allocation_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/unit/amqp/channel_id_allocation_spec.rb
+END
+int_allocator_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/unit/amqp/int_allocator_spec.rb
+END
+client_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/unit/amqp/client_spec.rb
+END
+connection_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/unit/amqp/connection_spec.rb
+END

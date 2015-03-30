@@ -1,0 +1,27 @@
+# == Schema Information
+#
+# Table name: roles
+#
+#  id   :integer(4)      not null, primary key
+#  name :string(255)     not null
+#
+
+--- 
+roles_006: 
+  name: SupportLead
+  id: "6"
+roles_001: 
+  name: Admin
+  id: "1"
+roles_002: 
+  name: CoachManager
+  id: "2"
+roles_003: 
+  name: Coach
+  id: "3"
+roles_004: 
+  name: All
+  id: "4"
+roles_005: 
+  name: SupportUser
+  id: "5"

@@ -1,0 +1,57 @@
+<div id="level_unit_container">
+  <div class="village_border">
+    <div id ="external_village_id_div_in_local_edit">
+      <span class="wildcard">(optional)</span>
+      <br/>
+      <%= select_tag 'village_id', options_for_villages_for_scheduler(selected_village), :class => "village_id_in_ms editsessionselect" , :disabled => @edit_session[:disable_village] %>
+    </div>
+  </div>
+  <div id="number_of_seats_container">
+    <span class="wildcard">Number of Seats</span> <br/> <span class="seats_border">
+      <%= select_tag 'number_of_seats', options_for_seat(selected_seats, (@edit_session[:learners].present? ? @edit_session[:learners].size.to_i : 0)),:class => "editsessionselect", :disabled => @edit_session[:no_of_seats]==="1" && !@edit_session[:learners].blank?  %>
+    </span>
+  </div>
+</div>
+<%# end %>
+<div id="recurring_container_for_edit">
+  <span class="wildcard">Wildcard</span>
+  <%= check_box_tag 'wildcard', 'true', wildcard_selected, :onClick => "toggleLevelUnit()", :disabled => wildcard_disabled %>
+  <span class="wildcard">Recurring</span>
+  <%= check_box_tag 'recurring', 'recurring', recurring_selected, { :disabled => @edit_session[:recurring_disabled]} %>
+  <span class="wildcard">Confirmed</span>
+  <%= check_box_tag 'teacher_confirmed', 'true', teacher_confirmed %>
+  <br/><span class="wildcard recurring_end_date">
+    <% if @edit_session[:recurring_ends_at] %>
+      Recurring Ends: <%= @edit_session[:recurring_ends_at].strftime("%m/%d/%Y") %>
+    <% end %>
+  </span>
+</div>
+<div class="level_unit_border level_unit_border_for_edit">
+  <%if @wc_release_date > @edit_session[:session_start_time]%>
+    <div class="level_unit_label">Level</div>
+    <div class="level_unit_label">Unit</div>
+    <br />
+    <%= select_tag 'level', options_for_level( selected_level),:class => "level_unit_in_ms", :disabled => wildcard_selected %>
+    <%= select_tag 'unit', options_for_coach_session_language_unit( selected_unit) ,:class => "level_unit_in_ms", :disabled => wildcard_selected%>
+    <br /><br />
+    <div style="float:left;font-weight: bold;" id="max_qual_of_the_coach"> </div>
+  <%else%>
+    <div class="level_unit_label">Unit</div>
+    <div class="level_unit_label">Lesson</div>
+    <br />
+    <%= select_tag 'unit', options_for_unit( selected_unit) ,:class => "level_unit_in_ms", :disabled => unit_disabled %>
+    <%= select_tag 'lesson', options_for_lesson( selected_lesson),:class => "level_unit_in_ms", :disabled => unit_disabled  %>
+    <br /><br />
+    <div style="float:left; font-weight: bold;" id="max_qual_of_the_coach"> </div><br />
+  <%end%>
+</div>
+
+<style type="text/css">
+    #ui-tooltip-1 {
+        width: 450px !important;
+    }
+
+    #edit_local_session {
+        max-width: 500px !important;
+    }
+</style>

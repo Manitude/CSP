@@ -1,0 +1,49 @@
+COACH_PORTAL_PRODUCTION_RAILS_ROOT=/usr/website/coachportal/current 
+# Updates users index 
+59 * * * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake users:update >> log/user_update.log --only_one_rake --silent 
+ 
+# Updates the user license information from the License Server 
+23 * * * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake users:update_license_info --only_one_rake --silent 
+ 
+# Run the nightly script at 2AM every night 
+0 2 * * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake ccs:find_teacher_profile_conflicts  --only_one_rake --silent 
+ 
+# Run this at the 1st minute of every hour 
+1 * * * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake mailer:hourly_email_alert  --only_one_rake --silent 
+
+# Run this at the 1st minute of every hour 
+1 * * * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake ccs:check_job_not_picked_up --only_one_rake --silent
+ 
+# Run this at the 31st minute of every hour 
+31 * * * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake coach_manager:alert_cm_for_a_session_with_no_coach_within_configured_time  --only_one_rake --silent 
+ 
+# Run this Everyday at 0001 Hrs 
+1 0 * * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake mailer:update_mails_sent_count  --only_one_rake --silent 
+ 
+# Run this Everyday at 2345 Hrs 
+45 23 * * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake mailer:daily_email_alert  --only_one_rake --silent 
+
+# Run this Everyday at 11AM 
+0 7 * * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake mailer:daily_timeoff_request_email_alert  --only_one_rake --silent 
+
+# Run this the first of everymonth at 23:00 hrs
+0 23 1 * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake mailer:monthly_policy_alert  --only_one_rake --silent
+
+# Run this every sunday at 23:00 hrs
+0 23 * * 0 cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake mailer:weekly_policy_alert  --only_one_rake --silent
+
+# Run the nightly script at 1AM every night 
+0 1 * * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake clean:audit_log_records_and_user_actions_records  --only_one_rake --silent 
+ 
+# Run this Every minute 
+* * * * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake ccs:trigger_sms_if_coach_not_present  --only_one_rake --silent 
+ 
+# Run this Every minute 
+* * * * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake ccs:check_delayed_job --only_one_rake --silent
+ 
+ 
+# Run this Every Minute  
+* * * * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake sms:reflex_alert --only_one_rake --silent 
+
+# Runs everyday at 11AM : Unassigned PHL session reports
+0 7 * * * cd $COACH_PORTAL_PRODUCTION_RAILS_ROOT && RAILS_ENV=production ./bundle exec ./rake mailer:mail_phl_session_report  --only_one_rake --silent

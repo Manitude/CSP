@@ -1,0 +1,43 @@
+<% if @data[:coach].active %>
+  <a id="avail_link" href="/availability">Manage My Availability</a>
+  <style type="text/css">
+    .justclear{clear:none}
+  </style>
+<% end %>
+<a id="time_off_link" href ="JavaScript:void(0);">Time Off</a>
+<%= button_to_function "View My Upcoming Classes", { :id => "upcoming_classes_btn", :onclick => ""} %>
+<% if @data[:week_extremes][0].utc >= TimeUtils.beginning_of_week  %>
+  <br/>
+  <form method="get" action="/export_schedules_in_csv/<%= (@data[:week_extremes][0]).to_i %>" style = "float:right;">
+    <button type="submit" class = "export_schedules_button" >Export This Schedule</button>
+  </form>
+<% end %>
+<div id="header_date_div">
+  <div>
+    <div id='coach_info_div'>
+      <span id="today_date">Today's Date: </span><span> <%= today_date %></span>
+    </div>
+    <%= render 'coach_session_info_details' %>
+  </div>
+  <div id="substitution_alert_div"></div>
+  <%= hidden_field_tag 'my_coach_id', @data[:coach].id %> 
+  <%= hidden_field_tag 'my_coach_is_tmm', @data[:coach].is_tmm? %>
+  <%= hidden_field_tag 'substitution_refresh_time', SUBSTITUTION_DATA_REFRESH_TIME %>
+  <%= hidden_field_tag 'substitution_alert_div_size', 0 %>
+  <%= hidden_field_tag 'from_page', 'cp' %>
+  <%= hidden_field_tag 'is_aria', @data[:coach].is_aria? %>
+  <div id="scheduler_form_data">
+    <%= render :partial => 'shared/date_navigator', :locals => {:week_start => format_time(@data[:week_extremes][0]), :week_end => format_time(@data[:week_extremes][1])} %>
+    <div id="scheduler_language">
+      <%= select_tag 'my_schedule_language', coach_languages(@data[:coach].id, @data[:language], false, true, false, nil, false, false, false, false, true), :class => "dropdown" %>
+    </div>
+    <%= button_to_function("GO", :id => "go_button" ) %>
+  </div>
+</div>
+<div id="week-calendar"></div>
+<script type="text/javascript">
+  data = <%=raw @data[:schedules] %>;
+  coach_id_for_upcoming_sessions = <%= @data[:coach].id %>;
+</script>
+<%= javascript_include_tag 'coach_scheduler', 'substitution', 'date_navigator', 'datepicker', 'timeoff' %>
+<%= stylesheet_link_tag 'coach_scheduler', 'date_navigator', 'scheduler' %>

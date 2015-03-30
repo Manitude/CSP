@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/157206/plugins/active_licensing/trunk/lib
+END
+product_pool.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/134901/plugins/active_licensing/trunk/lib/product_pool.rb
+END
+base.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/134901/plugins/active_licensing/trunk/lib/base.rb
+END
+stubs_for_product_pool_apis.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/134901/plugins/active_licensing/trunk/lib/stubs_for_product_pool_apis.rb
+END
+extension.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/68743/plugins/active_licensing/trunk/lib/extension.rb
+END
+product_right.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/134901/plugins/active_licensing/trunk/lib/product_right.rb
+END
+creation_account.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/129083/plugins/active_licensing/trunk/lib/creation_account.rb
+END
+product_right_hash.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/111044/plugins/active_licensing/trunk/lib/product_right_hash.rb
+END
+exceptions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/146829/plugins/active_licensing/trunk/lib/exceptions.rb
+END
+license.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/156595/plugins/active_licensing/trunk/lib/license.rb
+END
+request_and_response_handler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/156595/plugins/active_licensing/trunk/lib/request_and_response_handler.rb
+END
+multicall.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/85989/plugins/active_licensing/trunk/lib/multicall.rb
+END
+locking.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/100027/plugins/active_licensing/trunk/lib/locking.rb
+END
+content_range.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/82895/plugins/active_licensing/trunk/lib/content_range.rb
+END
+async_api_communicator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/149936/plugins/active_licensing/trunk/lib/async_api_communicator.rb
+END
+consumable.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/149569/plugins/active_licensing/trunk/lib/consumable.rb
+END
+license_server_interface.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/68743/plugins/active_licensing/trunk/lib/license_server_interface.rb
+END
+rubyize.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/128678/plugins/active_licensing/trunk/lib/rubyize.rb
+END
+api_communicator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/95957/plugins/active_licensing/trunk/lib/api_communicator.rb
+END
+multicall_api_communicator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157206/plugins/active_licensing/trunk/lib/multicall_api_communicator.rb
+END
+oracle_mimic_time.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/68743/plugins/active_licensing/trunk/lib/oracle_mimic_time.rb
+END
+active_licensing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/98140/plugins/active_licensing/trunk/lib/active_licensing.rb
+END

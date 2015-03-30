@@ -1,0 +1,35 @@
+<div class="form_container">
+  <div id="profile">
+<p class="header">Moderation Reports - <%= @profile_type == 'new'? "New Profiles" : "Updated Profiles" %> </p>
+<div class="check_profiles">
+    <br />
+  <%= form_tag({:controller => 'reports', :action => 'recently_modified_profiles'}, {:method => :get}) do -%>
+    <span class="start-end-date">Start Date:</span>
+    <!-- First time the page loads, set a default date. Next time, load the previous values. -->
+    <% if(!params[:from]&& !params[:to]); params[:from] = Time.now - 1.day; params[:to] = Time.now; end %>
+    <%= calendar_date_select_tag :from, params[:from], :embedded => false, :minute_interval => 15, :time => true, :valid_date_check => "date < new Date()" %>
+    <span class="start-end-date">End Date:</span>
+    <%= calendar_date_select_tag :to, params[:to], :embedded => false, :minute_interval => 15, :time => true, :valid_date_check => "date < new Date()" %>
+    
+    <span><input type="hidden" id="type" name="type" value="<%= @profile_type %>" /><%= submit_tag 'Search', :id => 'submit' %></span>
+  <% end -%>
+<p class="header" />
+  <%unless @profiles.nil? %>
+    <div id="search-results">
+      <% unless @profiles.empty? -%>
+        <table id="curricula" class='se_tab'>
+          <thead>
+            <tr><th>Email</th><th>First Name</th><th>Last Name</th><th>Preferred Name</th><th>City</th><th>State</th><th align="right">Created</th><th>Updated</th></tr>
+          </thead>
+          <%= render :partial => "profile", :collection => @profiles %>
+        </table>
+      <% end %>
+     </div>
+  <% end -%>
+</div>
+</div>
+</div>
+
+
+
+

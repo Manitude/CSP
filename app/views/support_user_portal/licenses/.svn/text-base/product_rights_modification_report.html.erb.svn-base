@@ -1,0 +1,26 @@
+<%= javascript_include_tag 'jquery.fixheadertable.min' %>
+<span class = "bold-font"><%= "Today's Date" -%>:</span><span class = "left-space" style="font-weight: normal;"><%= @user_time %> </span>
+<%= form_tag('product_rights_modification_report',:method=>'get',:id => 'filter', :onsubmit =>"return validateDates();") do %>
+<div id ="ext_add_date_feilds" class="ext_date" style=" padding: 10px 4px 10px 5px;">
+  <%= hidden_field_tag :from_date %>
+  <%= hidden_field_tag :to_date %>
+  <%= hidden_field_tag :form_request %>
+  <%= hidden_field_tag :report_type,"/product_rights_modification" %>
+  <span style="float:left" >Show Records from :&nbsp;</span>
+      <%=calendar_date_select_tag("cal_from_date","", :readonly => true)%>
+    through:
+      <%=calendar_date_select_tag("cal_to_date","", :readonly => true)%>
+    <span style="padding-left:215px;">
+      <input type="button" id="report_gen" class = "ui-button" value="GENERATE REPORT"/>
+    </span>
+  <div>
+    <%= image_tag 'big_spinner.gif',:id => 'ajaxLoader', :style => "display :none;padding-left:430px" %>
+  </div>
+  <div id ="update_prod_report" style="display:none;height:30px">
+  </div>
+  <div id="csv_id" style="padding:0px">
+      <span>A complete set of Product Rights modification records are available as a downloadable .csv file</span>
+      <input type="submit" id="report_gen_csv"  style ="-moz-border-radius: 8px" value="EXPORT AS .CSV"/>
+  </div>
+<% end %>
+</div>

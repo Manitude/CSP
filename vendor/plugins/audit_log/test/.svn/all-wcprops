@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/WebDev/!svn/ver/144123/plugins/audit_log/trunk/test
+END
+schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/74349/plugins/audit_log/trunk/test/schema.rb
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/14298/plugins/audit_log/trunk/test/database.yml
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/144123/plugins/audit_log/trunk/test/test_helper.rb
+END

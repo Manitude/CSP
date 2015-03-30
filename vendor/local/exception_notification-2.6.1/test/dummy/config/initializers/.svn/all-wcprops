@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/exception_notification-2.6.1/test/dummy/config/initializers
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/exception_notification-2.6.1/test/dummy/config/initializers/inflections.rb
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/exception_notification-2.6.1/test/dummy/config/initializers/session_store.rb
+END
+secret_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/exception_notification-2.6.1/test/dummy/config/initializers/secret_token.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/exception_notification-2.6.1/test/dummy/config/initializers/backtrace_silencers.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/exception_notification-2.6.1/test/dummy/config/initializers/mime_types.rb
+END

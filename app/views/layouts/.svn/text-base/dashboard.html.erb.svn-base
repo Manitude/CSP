@@ -1,0 +1,14 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>Customer Success Portal: <%= page_title %></title>
+    <link href="/favicon.ico" rel="shortcut icon" type="image/ico" />
+    <%= stylesheet_link_tag 'reset', 'styles', 'extranet/extranet', 'coach_portal', 'facebox', 'components/alternating_table', 'jquery.alerts', 'fixed_header_table','dashboard', 'master_scheduler','lotus','jquery.qtip.min','html_table','support_user_portal_table','license_extension' %>
+    <%= javascript_include_tag :defaults, 'jquery', 'facebox', 'jquery.expander', 'jquery.alerts',"jquery.blockUI", 'lotus', 'dashboard', 'jquery.fixheadertable.min', 'extranet', 'cookie', 'jquery.qtip.min', 'qtip_utils' ,'mailer', 'keyboard','html_table'%>
+  </head>
+  <body id="ccs">
+    <%= render :partial => 'shared/header' %>
+    <%= render :partial => 'shared/body_content' %>
+  </body>
+</html>

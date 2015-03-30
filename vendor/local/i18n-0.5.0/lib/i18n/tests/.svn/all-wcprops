@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/tests
+END
+procs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/tests/procs.rb
+END
+defaults.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/tests/defaults.rb
+END
+interpolation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/tests/interpolation.rb
+END
+localization.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/tests/localization.rb
+END
+lookup.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/tests/lookup.rb
+END
+link.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/tests/link.rb
+END
+pluralization.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/tests/pluralization.rb
+END
+basics.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/i18n-0.5.0/lib/i18n/tests/basics.rb
+END

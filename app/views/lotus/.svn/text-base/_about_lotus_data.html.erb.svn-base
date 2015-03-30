@@ -1,0 +1,58 @@
+<div id="lotus_data_details">
+  <div class="detail_item">
+    <span class="attribute">Coaches Teaching:</span>
+    <span class="description">The number of coaches currently engaged in conversation with a learner. Refreshed every 30 seconds.</span>
+  </div>
+  <div class="detail_item">
+    <span class="attribute">Coaches Polling:</span>
+    <span class="description">The number of coaches currently in the waiting room, ready to be matched with a learner. Refreshed every 30 seconds.</span>
+  </div>
+  <div class="detail_item">
+    <span class="attribute">Coaches Not Teaching:</span>
+    <span class="description">The total number of coaches who are in the system but not able to be matched because they are currently either paused,<br/>in a support room, configuring or reinitializing their player. Refreshed every 30 seconds.</span>
+  </div>
+  <div class="detail_item">
+    <span class="attribute">Paused:</span>
+    <span class="description">Coaches who have selected the pause option on the player. These coaches are temporarily not able to be matched.<br/>Refreshed every 30 seconds.</span>
+  </div>
+  <div class="detail_item">
+    <span class="attribute">Receiving Support:</span>
+    <span class="description">Coaches who are in a support room right now and so are unable to be matched. Refreshed every 30 seconds.</span>
+  </div>
+  <div class="detail_item">
+    <span class="attribute">Configuring Player:</span>
+    <span class="description">Coaches who have newly entered the player and are going through configuration steps<br/>and are not yet ready to be matched.Refreshed every 30 seconds.</span>
+  </div>
+  <div class="detail_item">
+    <span class="attribute">Initializing Player:</span>
+    <span class="description">Coaches who are in the process of either entering or returning to a matchable state.  Refreshed every 30 seconds.</span>
+  </div>
+  <div class="detail_item">
+    <span class="attribute">Total Coaches in Player:</span>
+    <span class="description">Sum total of coaches teaching, coaches polling, and coaches not teaching. Refreshed every 30 seconds.</span>
+  </div>
+  <div class="detail_item">
+    <span class="attribute">Learners in Skills:</span>
+    <span class="description">The number of Learners who have started entered Skills within the last 30 minutes.</span>
+  </div>
+  <div class="detail_item">
+    <span class="attribute">Learners in Rehearsals:</span>
+    <span class="description">The number of Learners who have started entered Rehearsal within the last 30 minutes.</span>
+  </div>
+  <div class="detail_item">
+    <span class="attribute">Learners Waiting:</span>
+    <span class="description">The average number of Learners (for JLE and KLE) who have completed Rehearsal<br/>and are waiting for a coach to start a Conversation.</span>
+  </div>
+  <div class="detail_item">
+    <span class="attribute">Average wait time:</span>
+    <span class="description">The average number of minutes, over the last 30 minutes, a learner (for JLE and KLE) has been waiting for a coach.</span>
+  </div>
+  <div class="detail_item">
+    <span class="attribute">Longest wait time:</span>
+    <span class="description">The length of time, in minutes, over the last 30 minutes, the longest waiting learner has been in queue.</span>
+  </div>
+  <div class="detail_item">
+    <span class="attribute">Coaches Scheduled:</span>
+    <span class="description">Coaches who are scheduled, in the Customer Success Portal, to teach right now.</span>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+<div class="report_generated_for_div">
+  <span class="report_generated_for_span"><b>Report Generated for:</b> <%= params[:start_date] %> - <%= params[:end_date] %></span>
+</div>
+<table id="coach_report_table" border="0" class="table_list" >
+  <thead  style="display:block; width :1912px" >
+    <tr>
+      <th class="show_right_border table_background"></th>
+      <th class="show_right_border table_background" style="border-bottom : 1px solid #ccc"colspan="13">Session/Shifts</th>
+      <th class="show_right_border table_background" style="border-bottom : 1px solid #ccc"colspan="6">Substitutions</th>
+      <th class="show_right_border table_background"></th>
+      <th class="show_right_border table_background" style="border-bottom : 1px solid #ccc"colspan="3">Time Off</th>
+    </tr>
+    <tr>
+      <th class="show_right_border table_background" style="min-width: 170px;">Coach Name   </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Scheduled TOTALe   </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Scheduled ReFLEX   </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Scheduled Total   </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Taught ReFLEX(Hrs)    </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Mins Paused  </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> % Paused </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Avg Session (Mins)  </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> % Incomplete  </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> No Show TOTALe   </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Canceled TOTALe</th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Feedback </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Completed sessions (Reflex) </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Total Taught(Hrs) </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Requested TOTALe </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Requested ReFLEX </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Requested Total </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Grabbed TOTALe </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Grabbed ReFLEX </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Grabbed Total </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> In Player (min) prior to session (TOTALe) </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Requested / Approved  </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Denied   </th>
+      <th class="show_right_border top_border table_background" style="min-width: 75px;max-width: 75px;"> Total Duration</th>
+    </tr>
+  </thead>
+  <tbody style='display:block;overflow-y:scroll;max-height:320px'>
+    <div>
+    <% @coaches.each do |coach| %>
+      <tr>
+        <td class=" hide_left_border" style="min-width: 170px;max-width:170px;overflow:hidden;"><%= coach.coach_name %></td>
+        <td class=" all_american_report_cell"><%= coach.scheduled_totale %></td>
+        <td class=" all_american_report_cell"><%= coach.scheduled_reflex %></td>
+        <td class=" all_american_report_cell"><%= coach.scheduled_total %></td>
+        <td class=" all_american_report_cell"><%= coach.taught_reflex.to_f.round(2) %></td>
+        <td class=" all_american_report_cell"><%= coach.mins_paused %></td>
+        <td class=" all_american_report_cell"><%= coach.per_paused %></td>
+        <td class=" all_american_report_cell"><%= coach.avg_session %></td>
+        <td class=" all_american_report_cell"><%= coach.per_incomplete %></td>
+        <td class=" all_american_report_cell"><%= coach.no_show_totale %></td>
+        <td class=" all_american_report_cell"><%= coach.cancelled%></td>
+        <td class=" all_american_report_cell"><%= coach.incomplete_feedbacks %>/<%= coach.complete_feedbacks %></td>
+        <td class=" all_american_report_cell"><%= coach.complete %></td>
+        <td class=" all_american_report_cell"><%= coach.taught_total %></td>
+        <td class=" all_american_report_cell"><%= coach.requested_totale %></td>
+        <td class=" all_american_report_cell"><%= coach.requested_reflex %></td>
+        <td class=" all_american_report_cell"><%= coach.requested_total %></td>
+        <td class=" all_american_report_cell"><%= coach.grabbed_totale %></td>
+        <td class=" all_american_report_cell"><%= coach.grabbed_reflex %></td>
+        <td class=" all_american_report_cell"><%= coach.grabbed_total %></td>
+        <td class=" all_american_report_cell"><%= coach.in_player %></td>
+        <td class=" all_american_report_cell"><%= coach.requested %>/<%= coach.approved %></td>
+        <td class=" all_american_report_cell"><%= coach.denied %></td>
+        <td class="" style="min-width: 60px;max-width: 60px;"><%= coach.total_time_off == 0 ? coach.total_time_off : coach.total_time_off.to_s+' day(s)' %></td>
+      </tr>
+    <% end %>
+    </div>
+  </tbody>
+  <tfoot style="display:block" >
+    <tr>
+        <td class="table_background hide_left_border" style="min-width: 170px;">Language Total</td>
+        <td class="table_background all_american_report_cell"><%= @totals[:scheduled_totale] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:scheduled_reflex] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:scheduled_total] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:taught_reflex] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:mins_paused] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:per_paused] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:avg_session] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:per_incomplete] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:no_show_totale] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:cancelled]%></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:incomplete_feedbacks] %>/<%= @totals[:complete_feedbacks] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:complete] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:taught_total] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:requested_totale] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:requested_reflex] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:requested_total] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:grabbed_totale] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:grabbed_reflex] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:grabbed_total] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:in_player] == 0 ? "N/A" : @totals[:in_player] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:requested] %>/<%= @totals[:approved] %></td>
+        <td class="table_background all_american_report_cell"><%= @totals[:denied] %></td>
+        <td class="table_background all_american_report_cell">
+          <%= @totals[:total_time_off] == 0 ? @totals[:total_time_off] : @totals[:total_time_off].to_s+' day(s)' %>
+        </td>
+      </tr>
+  </tfoot>
+</table>

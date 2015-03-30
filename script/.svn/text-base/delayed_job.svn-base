@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+bundler_path = File.join(File.dirname(__FILE__), '../',  "vendor", "local", "bundler-1.2.0", "lib")
+$:.unshift bundler_path
+require File.expand_path(File.join(File.dirname(__FILE__), '..', 'config', 'environment'))
+require 'delayed/command'
+Delayed::Command.new(ARGV).daemonize

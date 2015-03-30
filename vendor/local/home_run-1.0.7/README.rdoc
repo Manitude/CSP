@@ -1,0 +1,332 @@
+= home_run
+
+home_run is an implementation of ruby's Date/DateTime classes in C,
+with much better performance (20-200x) than the version in the
+standard library, while being almost completely compatible.
+
+== Performance increase (microbenchmarks)
+
+The speedup you'll get depends mostly on your version of ruby, but
+also on your operating system, platform, and compiler.  Here are
+some comparative results for common methods:
+
+  #                 | i386  | i386  | i386  | i386  | amd64 |
+  #                 |Windows| Linux | Linux | Linux |OpenBSD|
+  #                 | 1.8.6 | 1.8.7 | 1.9.1 | 1.9.2 | 1.9.2 |
+  #                 |-------+-------+-------+------ +-------|
+  Date.civil        |   82x |   66x |  27x  |  21x  |  14x  |
+  Date.parse        |   56x |   56x |  33x  |  30x  |  25x  |
+  Date.today        |   17x |    6x |   2x  |   2x  |   2x  |
+  Date.strptime     |   43x |   62x |  63x  |  37x  |  23x  |
+  DateTime.civil    |  252x |  146x |  52x  |  41x  |  17x  |
+  DateTime.parse    |   52x |   54x |  32x  |  27x  |  20x  |
+  DateTime.now      |   78x |   35x |  11x  |   8x  |   4x  |
+  DateTime.strptime |   63x |   71x |  58x  |  35x  |  23x  |
+  Date#strftime     |  156x |  104x | 110x  |  70x  |  62x  |
+  Date#+            |   34x |   32x |   5x  |   5x  |   4x  |
+  Date#<<           |  177x |  220x |  86x  |  72x  |  40x  |
+  Date#to_s         |   15x |    6x |   5x  |   4x  |   2x  |
+  DateTime#strftime |  146x |  107x | 114x  |  71x  |  60x  |
+  DateTime#+        |   34x |   37x |   8x  |   6x  |   3x  |
+  DateTime#<<       |   88x |  106x |  40x  |  33x  |  16x  |
+  DateTime#to_s     |  144x |   47x |  54x  |  29x  |  24x  |
+
+== Real world difference
+
+The standard library Date class is slow enough to be the
+bottleneck in much (if not most) of code that uses it.
+Here's a real world benchmark showing the retrieval of
+data from a database (using Sequel), first without home_run,
+and then with home_run.
+
+  $ script/console production
+  Loading production environment (Rails 2.3.5)
+  >> require 'benchmark'
+  => false
+  >> puts Benchmark.measure{Employee.all}
+    0.270000   0.020000   0.290000 (  0.460604)
+  => nil
+  >> puts Benchmark.measure{Notification.all}
+    2.510000   0.050000   2.560000 (  2.967896)
+  => nil
+
+  $ home_run script/console production
+  Loading production environment (Rails 2.3.5)
+  >> require 'benchmark'
+  => false
+  >> puts Benchmark.measure{Employee.all}
+    0.100000   0.000000   0.100000 (  0.114747)
+  => nil
+  >> puts Benchmark.measure{Notification.all}
+    0.860000   0.010000   0.870000 (  0.939594)
+
+Without changing any application code, there's a 4x
+increase when retrieving all employees, and a 3x
+increase when retrieving all notifications.  The
+main reason for the performance difference between
+these two models is that Employee has 5 date columns,
+while Notification only has 3.
+
+== Installing the gem
+
+  gem install home_run
+
+The standard gem requires compiling from source, so you need a working
+compiler toolchain.  Since few Windows users have a working compiler
+toolchain, a windows binary gem is available that works on both 1.8
+and 1.9.
+
+== Installing into site_ruby
+
+After installing the gem:
+
+  home_run --install
+
+Installing into site_ruby means that ruby will always use home_run's
+Date/DateTime classes instead of the ones in the standard library.
+
+If you ever want to uninstall from site_ruby:
+
+  home_run --uninstall
+
+== Running without installing into site_ruby
+
+If you don't want to install into site_ruby, you can use home_run's
+Date/DateTime classes for specific programs by running your script
+using home_run:
+
+  home_run ruby ...
+  home_run irb ...
+  home_run unicorn ...
+  home_run rake ...
+
+This manipulates the RUBYLIB and RUBYOPT environment variables so
+that home_run's Date/DateTime classes will be used.
+
+You can also just require the library:
+
+  require 'home_run'
+
+This should only be used as a last resort.  Because rubygems requires
+date, you can end up with situations where the Date instances created
+before the require use the standard library version of Date, while the
+Date instances created after the require use this library's version.
+However, in some cases (such as on Heroku), this is the only way to
+easily use this library.  If you need to do this and you are using
+Rails 3, make sure you require home_run before rails/all in
+config/application.rb.
+
+== Usage with bundler
+
+Use the following in your Gemfile:
+
+  gem 'home_run', :require=>'date'
+
+You need the :require option because otherwise it will require
+'home_run', which can lead to problems.
+
+== Running the specs
+
+You can run the rubyspec based specs after installing the gem, if
+you have MSpec installed (gem install mspec):
+
+  home_run --spec
+
+If there are any failures, please report them as a bug.
+
+== Running comparative benchmarks
+
+You can run the benchmarks after installing the gem:
+
+  home_run --bench
+
+The benchmarks compare home_run's Date/DateTime classes to the
+standard library ones, showing you the amount of time an average
+call to each method takes for both the standard library and
+home_run, and the number of times home_run is faster or slower.
+Output is in CSV, so an entry like this:
+
+  Date._parse,362562,10235,35.42
+
+means that:
+
+* The standard library's Date._parse averaged 362,562 nanoseconds
+  per call.
+* home_run's Date._parse averaged 10,235 nanoseconds per call.
+* Therefore, home_run's Date._parse method is 35.42 times faster
+
+The bench task tries to be fair by ensuring that it runs the
+benchmark for at least two seconds for both the standard
+library and home_run's versions.
+
+== Usage
+
+home_run aims to be compatible with the standard library, except
+for differences mentioned below.  So you can use it the same way
+you use the standard library.
+
+== Differences from standard library
+
+* Written in C (mostly) instead of ruby.  Stores information in a
+  C structure, and therefore has a range limitation.  home_run
+  cannot handle dates after 5874773-08-15 or before -5877752-05-08
+  on 32-bit platforms (with larger limits for 64-bit platforms).
+* The Date class does not store fractional days (e.g. hours, minutes),
+  or offsets. The DateTime class does handle fractional days and
+  offsets.
+* The DateTime class stores fractional days as the number of
+  nanoseconds since midnight, so it cannot deal with differences
+  less than a nanosecond.
+* Neither Date nor DateTime uses rational.  Places where the standard
+  library returns rationals, home_run returns integers or floats.
+* Because rational is not used, it is not required.  This can break
+  other libraries that use rational without directly requiring it.
+* There is no support for modifying the date of calendar reform, the
+  sg arguments are ignored and the Gregorian calendar is always used.
+  This means that julian day 0 is -4173-11-24, instead of -4712-01-01.
+* The undocumented Date#strftime format modifiers are not supported.
+* The DateTime offset is checked for reasonableness. home_run
+  does not support offsets with an absolute difference of more than
+  14 hours from UTC.
+* DateTime offsets are stored in minutes, so it will round offsets
+  with fractional minutes to the nearest minute.
+* All public class and instance methods for both Date and DateTime
+  are implemented, except that on 1.9, _dump and _load are used
+  instead of marshal_dump and marshal_load.
+* Only the public API is compatible, the private methods in the
+  standard library are not implemented.
+* The marshalling format differs from the one used by the standard
+  library.  Note that the 1.8 and 1.9 standard library date
+  marshalling formats differ from each other.
+* Date#step treats the step value as an integer, so it cannot handle
+  steps of fractional days.  DateTime#step can handle fractional
+  day steps, though.
+* When parsing the %Q modifier in _strptime, the hash returned
+  includes an Integer :seconds value and a Float :sec_fraction
+  value instead of a single rational :seconds value.
+* The string returned by #inspect has a different format, since it
+  doesn't use rational.
+* The conversion of 2-digit years to 4-digit years in Date._parse
+  is set to true by default.  On ruby 1.8, the standard library
+  has it set to false by default.
+* You can use the Date::Format::STYLE hash to change how to parse
+  DD/DD/DD and DD.DD.DD date formats, allowing you to get ruby 1.9
+  behavior on 1.8 or vice-versa.  This is probably the only new
+  feature in that isn't in the standard library.
+
+Any other differences will either be documented here or considered
+bugs, so please report any other differences you find.
+
+== Known incompatibilities
+
+Some other libraries are known to be incompatible with this
+extension due to the above differences:
+
+* ActiveSupport 3.1 - DateTime#<=> broken because it relies on
+  Date#<=> working for DateTimes.
+* Date::Performance - Date#<=> assumes @ajd instance variable
+  (unnecessary anyway, as home_run is faster)
+* Runt - assumes @ajd instance variable
+
+== Reporting issues/bugs
+
+home_run uses GitHub Issues for tracking issues/bugs:
+
+  http://github.com/jeremyevans/home_run/issues
+
+== Contributing
+
+The source code is on GitHub:
+
+  http://github.com/jeremyevans/home_run
+
+To get a copy:
+
+  git clone git://github.com/jeremyevans/home_run.git
+
+There are a few requirements:
+
+* rake
+* rake-compiler
+* MSpec (not RSpec) for running the specs.  The specs are based on
+  the rubyspec specs, which is why they use MSpec.
+* RDoc 2.5.10+ if you want to build the documentation.
+* Ragel 6.5+ if you want to modify the ragel parser.
+
+== Compiling
+
+To compile the library from a git checkout, after installing the
+requirements:
+
+  rake compile
+
+== Testing
+
+The default rake task runs the specs, so just run:
+
+  rake
+
+You need to compile the library and install MSpec before running the
+specs.
+
+== Benchmarking
+
+To see the speedup that home_run gives you over the standard library:
+
+  rake bench
+
+To see how much less memory home_run uses compared to the standard
+library:
+
+  rake mem_bench
+
+To see how much less garbage is created when instantiating objects
+with home_run compared to the standard library:
+
+  rake garbage_bench
+
+If you want to run all three benchmarks at once:
+
+  rake bench_all
+
+== Platforms Supported
+
+home_run has been tested on the following:
+
+=== Operating Systems/Platforms
+
+* Linux (x86_64, i386)
+* Mac OS X 10.6 (x86_64, i386), 10.5 (i386)
+* OpenBSD (amd64, i386)
+* Solaris 10 (sparc)
+* Windows XP (i386)
+* Windows 7 (x64)
+
+=== Compiler Versions
+
+* gcc (3.3.5, 4.0.1, 4.2.1, 4.4.3, 4.5.0)
+* Sun Studio Compiler (5.9)
+
+=== Ruby Versions
+
+* jruby cext branch (as of commit 1969c504229bfd6f2de1, 2010-08-23,
+  compiles and runs specs correctly, segfaults on benchmarks)
+* rbx head (as of commit 0e265b92727cf3536053, 2010-08-16)
+* ruby 1.8.6 (p0, p110, p398, p399)
+* ruby 1.8.7 (p174, p248, p299, p302)
+* ruby 1.9.1 (p243, p378, p429, p430)
+* ruby 1.9.2 (p0)
+* ruby head
+
+If your platform, compiler version, or ruby version is not listed
+above, please test and send me a report including:
+
+  * Your operating system and platform (e.g. i386, x86_64/amd64)
+  * Your compiler
+  * Your ruby version
+  * The output of home_run --spec
+  * The output of home_run --bench
+
+== Author
+
+Jeremy Evans <code@jeremyevans.net>

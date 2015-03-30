@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/docs/diagrams/redhat
+END
+direct_exchange.png
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/docs/diagrams/redhat/direct_exchange.png
+END
+fanout_exchange.png
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/docs/diagrams/redhat/fanout_exchange.png
+END
+topic_exchange.png
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/docs/diagrams/redhat/topic_exchange.png
+END

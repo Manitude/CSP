@@ -1,0 +1,1 @@
+CoachPortal::Application.config.secret_token  ='0b6cb772eb634157110ee686cf8e6081e95dbef2ba4b5600acf97a33be83e5aa98f191c76899d1eb8ac68189fcc6d1be5966a0938e57d4b838c6fc75c3c4ad69'

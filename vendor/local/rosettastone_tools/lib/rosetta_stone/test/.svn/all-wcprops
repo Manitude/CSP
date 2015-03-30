@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosetta_stone/test
+END
+test_stop_on_error.rb
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosetta_stone/test/test_stop_on_error.rb
+END
+assert_tidy_with_overescaping_checks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosetta_stone/test/assert_tidy_with_overescaping_checks.rb
+END
+test_unit_ext.rb
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosetta_stone/test/test_unit_ext.rb
+END
+crossdomain_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosetta_stone/test/crossdomain_test.rb
+END
+combined_test_execution.rb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosetta_stone/test/combined_test_execution.rb
+END
+test_session_ext.rb
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosetta_stone/test/test_session_ext.rb
+END
+meta_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosetta_stone/test/meta_test.rb
+END
+changing_constant.rb
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosetta_stone/test/changing_constant.rb
+END
+action_controller_meta_tests.rb
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosetta_stone/test/action_controller_meta_tests.rb
+END
+time_zone_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/lib/rosetta_stone/test/time_zone_test.rb
+END

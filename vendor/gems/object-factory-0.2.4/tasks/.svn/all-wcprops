@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/WebDev/!svn/ver/96347/gems/object-factory/0.2.4/tasks
+END
+Manifest
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/96347/gems/object-factory/0.2.4/tasks/Manifest
+END
+CHANGELOG
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/96347/gems/object-factory/0.2.4/tasks/CHANGELOG
+END
+object-factory.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/96347/gems/object-factory/0.2.4/tasks/object-factory.gemspec
+END
+rspec.rake
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/96347/gems/object-factory/0.2.4/tasks/rspec.rake
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/96347/gems/object-factory/0.2.4/tasks/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/96347/gems/object-factory/0.2.4/tasks/README.rdoc
+END
+github.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/96347/gems/object-factory/0.2.4/tasks/github.rb
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/96347/gems/object-factory/0.2.4/tasks/init.rb
+END

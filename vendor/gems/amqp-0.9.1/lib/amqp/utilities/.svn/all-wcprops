@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/lib/amqp/utilities
+END
+server_type.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/lib/amqp/utilities/server_type.rb
+END
+event_loop_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/lib/amqp/utilities/event_loop_helper.rb
+END

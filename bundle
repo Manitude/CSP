@@ -1,0 +1,55 @@
+#!/usr/bin/env ruby 
+ 
+$:.unshift File.join(File.dirname(__FILE__), "lib") 
+ 
+def boot_bundle 
+begin 
+  require File.expand_path('../config/rubygems_boot', __FILE__) 
+  $:.unshift File.join(File.dirname(__FILE__), "vendor", "local", "bundler-1.2.0", "lib") 
+  require 'bundler' 
+  $:.each do |path| 
+    if path =~ %r'/bundler-0.(\d+)' && $1.to_i < 9 
+      err = "Please remove Bundler 0.8 versions." 
+      err << "This can be done by running `gem cleanup bundler`." 
+      abort(err) 
+    end 
+  end 
+ 
+  require 'bundler/cli' 
+  require 'bundler/friendly_errors' 
+  Bundler.with_friendly_errors { Bundler::CLI.start } 
+rescue LoadError => e 
+  puts e.backtrace 
+  puts "Please add rake to vendor/rake. We don't want to use a system Gem" 
+end 
+end 
+ 
+ # ENV['PROFILE'] == "true"
+def task_locked?(task_name)
+  return true if File.exists?(File.dirname(__FILE__)+'/tmp/' + task_name+'.lock') && File.mtime(File.dirname(__FILE__)+'/tmp/' + task_name+'.lock') > Time.now - 180
+  if File.exists?(File.dirname(__FILE__)+'/tmp/' + task_name+'.lock')
+     File.delete(File.dirname(__FILE__)+'/tmp/' + task_name+'.lock')
+  end
+  return false
+end
+
+def lock_task(task_name)
+  msg = "\n*******Task #{task_name} has been locked at #{Time.now}.********\n"
+  File.open(File.dirname(__FILE__)+'/tmp/' + task_name+'.lock', "w") {|f| f.write(msg)}
+  File.open(File.dirname(__FILE__)+'/log/production.log', "a") {|f| f.write(msg)}
+end
+
+#tHE FOLLOWING CODE IS TO ENSURE ONLY ONE TASK IS RUNNING AT A TIME. TO MAKE SO, APPEND --only_one_rake AT THE COMMAND LINE 
+if(ARGV.include? '--only_one_rake') 
+  ARGV.delete('--only_one_rake') # WE DON'T WANT THIS PARAM IN FURTHER EXECUTION. SO, WE ARE REMOVING IT HERE. 
+  task_name = ARGV[2].split(':')[1]
+  if task_locked?(task_name)
+    File.open(File.dirname(__FILE__)+'/log/production.log', "a") {|f| f.write("\n*******Another instance of the task #{task_name} is already running at #{Time.now}.********\n")}
+  else
+    lock_task(task_name)
+    boot_bundle
+  end
+else
+  boot_bundle
+end 
+

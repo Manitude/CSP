@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/WebDev/!svn/ver/157206/plugins/active_licensing/trunk
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/31102/plugins/active_licensing/trunk/README
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/132051/plugins/active_licensing/trunk/Rakefile
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/127276/plugins/active_licensing/trunk/init.rb
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/75567/plugins/active_licensing/trunk/Gemfile
+END
+active_licensing.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/153668/plugins/active_licensing/trunk/active_licensing.gemspec
+END

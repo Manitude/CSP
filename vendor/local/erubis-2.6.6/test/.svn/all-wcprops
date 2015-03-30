@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/erubis-2.6.6/test
+END
+test-erubis.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/erubis-2.6.6/test/test-erubis.rb
+END
+assert-text-equal.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/erubis-2.6.6/test/assert-text-equal.rb
+END
+test-users-guide.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/erubis-2.6.6/test/test-users-guide.rb
+END
+testutil.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/erubis-2.6.6/test/testutil.rb
+END
+test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/erubis-2.6.6/test/test.rb
+END
+test-main.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/erubis-2.6.6/test/test-main.rb
+END
+test-enhancers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/erubis-2.6.6/test/test-enhancers.rb
+END
+test-engines.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/erubis-2.6.6/test/test-engines.rb
+END

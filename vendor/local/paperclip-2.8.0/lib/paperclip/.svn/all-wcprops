@@ -1,0 +1,107 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip
+END
+thumbnail.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/thumbnail.rb
+END
+iostream.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/iostream.rb
+END
+missing_attachment_styles.rb
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/missing_attachment_styles.rb
+END
+upfile.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/upfile.rb
+END
+callback_compatibility.rb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/callback_compatibility.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/version.rb
+END
+attachment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/attachment.rb
+END
+railtie.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/railtie.rb
+END
+geometry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/geometry.rb
+END
+style.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/style.rb
+END
+schema.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/schema.rb
+END
+attachment_options.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/attachment_options.rb
+END
+storage.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/storage.rb
+END
+matchers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/matchers.rb
+END
+url_generator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/url_generator.rb
+END
+interpolations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/interpolations.rb
+END
+processor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip-2.8.0/lib/paperclip/processor.rb
+END

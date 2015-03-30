@@ -1,0 +1,98 @@
+# == Schema Information
+#
+# Table name: trigger_events
+#
+#  id          :integer(4)      not null, primary key
+#  name        :string(255)
+#  description :text(65535)
+#
+
+---
+trigger_events_014:
+  name: APPROVE_TEMPLATE_WITH_MODIFICATIONS
+  id: "15"
+  description: When a CM approves a template with modifications
+trigger_events_003:
+  name: REJECT_TEMPLATE_WITH_CHANGES
+  id: "3"
+  description: Coach Manager requests changes to a new template
+trigger_events_015:
+  name: TEMPLATE_CHANGED
+  id: "16"
+  description: Coach changes a template without violating policy.
+trigger_events_004:
+  name: POLICY_VIOLATION
+  id: "4"
+  description: Coach violates studio policy by changing a schedule less than 2 weeks in advance.
+trigger_events_016:
+  name: SUBSTITUTE_REQUESTED
+  id: "17"
+  description: Coach requests a substitute for a session.
+trigger_events_005:
+  name: REQUEST_TIME_OFF_BY_VIOLATING_POLICY
+  id: "5"
+  description: Coach requests time off less than 2 weeks in advance.
+trigger_events_017:
+  name: TIME_OFF_CUT_SHORT
+  id: "18"
+  description: Coach has reduced his/her requested time off.
+trigger_events_006:
+  name: REQUEST_TIME_OFF
+  id: "6"
+  description: Coach requests time off over 2 weeks in advance.
+trigger_events_018:
+  name: CM_CREATED_NEW_TEMPLATE
+  id: "19"
+  description: Coach Manager creates a new template for the coach.
+trigger_events_007:
+  name: ACCEPT_TIME_OFF
+  id: "7"
+  description: Coach Manager accepts a request for time off.
+trigger_events_008:
+  name: SUBSTITUTION_GRABBED
+  id: "9"
+  description: A substitute Coach grabs an available session.
+trigger_events_009:
+  name: SESSION_CANCELLED
+  id: "10"
+  description: Coach Manager cancels a session because no substitute could be found.
+trigger_events_010:
+  name: MANUALLY_REASSIGNED
+  id: "11"
+  description: Coach Manager manually reassigns an available session to a substitute.
+trigger_events_011:
+  name: UPDATE_COACH_SCHEDULE
+  id: "12"
+  description: Coach Manager manually changes the schedule of a coach in Master Scheduler
+trigger_events_012:
+  name: COACH_ACCEPT_TEMPLATE_CHANGES
+  id: "13"
+  description: When a Coach accepts a template that a CM has suggested changes to, the CM should be notified of the acceptance
+trigger_events_001:
+  name: PROCESS_NEW_TEMPLATE
+  id: "1"
+  description: System processes a new template for review by a Coach Manager.
+trigger_events_013:
+  name: COACH_REJECT_TEMPLATE_CHANGES
+  id: "14"
+  description: When a Coach declines a template that a CM has suggested changes to, the CM should be notified of the declined template
+trigger_events_002:
+  name: APPROVE_TEMPLATE
+  id: "2"
+  description: Coach Manager approves a new template.
+trigger_events_019:
+  name: TIME_OFF_EDITED
+  id: "20"
+  description: Coach has edited his/her requested time off.
+trigger_events_021:
+  name: SUBSTITUTE_REQUESTED_FOR_COACH
+  id: "21"
+  description: Coach Manager requests a substitute for a session on behalf of coach.
+trigger_events_022:
+  name: CM_DELETED_TEMPLATE
+  id: "22"
+  description: Triggers when a coach manager deletes coach's template
+trigger_events_025:
+  name: DECLINE_TIME_OFF
+  id: "25"
+  description: Coach Manager declines a request for time off.

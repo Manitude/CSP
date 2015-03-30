@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/module
+END
+attr_internal.rb
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/module/attr_internal.rb
+END
+reachable.rb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/module/reachable.rb
+END
+aliasing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/module/aliasing.rb
+END
+anonymous.rb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/module/anonymous.rb
+END
+attribute_accessors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/module/attribute_accessors.rb
+END
+attr_accessor_with_default.rb
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/module/attr_accessor_with_default.rb
+END
+delegation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/module/delegation.rb
+END
+deprecation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/module/deprecation.rb
+END
+remove_method.rb
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/module/remove_method.rb
+END
+introspection.rb
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/module/introspection.rb
+END
+synchronization.rb
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/module/synchronization.rb
+END
+method_names.rb
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/module/method_names.rb
+END

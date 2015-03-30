@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/actions
+END
+file_manipulation_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/actions/file_manipulation_spec.rb
+END
+create_file_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/actions/create_file_spec.rb
+END
+empty_directory_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/actions/empty_directory_spec.rb
+END
+directory_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/actions/directory_spec.rb
+END
+inject_into_file_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/thor-0.14.6/spec/actions/inject_into_file_spec.rb
+END

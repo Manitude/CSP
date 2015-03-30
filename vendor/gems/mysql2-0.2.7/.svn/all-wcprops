@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/WebDev/!svn/ver/112014/gems/mysql2/0.2.7
+END
+.specification
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/70063/gems/mysql2/0.2.7/.specification
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/WebDev/!svn/ver/67503/gems/mysql2/0.2.7/README.rdoc
+END
+compile_native_library.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/70064/gems/mysql2/0.2.7/compile_native_library.rb
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/.gitignore
+END
+CHANGELOG.md
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/CHANGELOG.md
+END
+README.rosettastone
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/70063/gems/mysql2/0.2.7/README.rosettastone
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/Gemfile
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/MIT-LICENSE
+END
+mysql2.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/WebDev/!svn/ver/112014/gems/mysql2/0.2.7/mysql2.gemspec
+END
+.rspec
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/.rspec
+END

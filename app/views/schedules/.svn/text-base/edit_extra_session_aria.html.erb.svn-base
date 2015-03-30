@@ -1,0 +1,48 @@
+<div id="edit_local_session" style="width: 100%;float:left">
+  
+  <% if @session_details[:coaches].any? %>
+    <div class="right_container" style="width: 100%;">
+      <div id="excluded_coaches_list_div" style="float: left;margin-top: 10px;width: 50%">
+        Included Coaches: <br/>
+        <%= render(:partial => 'coach_lists', :locals => {:coaches => @session_details[:coaches], :excluded_coaches => @session_details[:excluded_coaches]} )%>
+      </div>
+      <div id="aeb_container" style="float: right;width: 45%">
+
+        <div id ="session_name_container" style="width: 50%">
+          <span class="wildcard">Session Name</span>
+          <%= text_field_tag 'session_name_txt', @session_details[:session_name] %>
+        </div>
+        <div id="number_of_seats_container"  style="margin-top: 10px;">
+          <span class="wildcard">Number of Seats</span> <br/> <span class="seats_border">
+            <%= select_tag 'number_of_seats', options_for_select((1..10).to_a,@session_details[:number_of_seats].to_i),:class => "editsessionselect",:disabled => true %>
+          </span>
+        </div>
+      </div>
+
+    </div>
+        <% if @session_details[:number_of_seats] != 1 %>
+          <table style="width: 100%">
+            <tr>
+              <th style="width: 50%">
+                <div id = "cefr_select" class="width100" >
+            CEFR Level:<br/><%= select_tag "cefr_level", options_for_cefr(@current_topic[0].try(:cefr_level)), :class => "aria_editsessionselect", :disabled => !@session_details[:learners_signed_up].nil? && @session_details[:learners_signed_up] != 0 %>
+                </div>
+              </th>
+              <th style="width: 50%">
+                <div id = "topic_select" class= "topics_div_aeb">
+            Topic:<br/> <%= select_tag "topic_id", options_for_aeb_topics(@current_topic[0].try(:cefr_level), @session_details[:language].identifier, @session_details[:topic_id]), :class => "aebtopicselect", :disabled => !@session_details[:learners_signed_up].nil? && @session_details[:learners_signed_up] != 0 || @session_details[:number_of_seats] == 1 %>
+                </div>
+              </th>
+            </tr>
+          </table>
+        <%end%>
+    <div id="level_unit_container" style="float: right; position: relative; margin-bottom: 0;">
+      <div id="button_container" style="float: right; margin-top: 10px;">
+        <input type = "button" id = "edit_extra_session_btn_lotus" class = "button" value = "SAVE" onclick ="updateExtraSessions('<%= @session_details[:extra_session].id %>', '<%= @session_details[:type] %>',this)"/>
+      </div>
+    </div>
+  <% else %>
+    There are no coaches available at this timeslot.
+  <% end %>
+
+</div>

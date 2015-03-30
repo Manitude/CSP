@@ -1,0 +1,26 @@
+<p>Enter your username and password</p>
+<%= form_for :coach, current_user, :html => {:id => 'account_form'} do |f| %>
+  <%= f.label :user_name, "User name" %>
+  <%= f.text_field :user_name, :class => 'text' %>
+  <%= f.label :password, "Password" %>
+  <%= f.password_field :password, :class => 'text' %>
+  <%= f.hidden_field :time_zone %>
+  <input type="submit" class="btn" value="Sign In" />
+<% end %>
+
+<%= javascript_include_tag 'jstz.min'  %>
+<%= javascript_tag do -%>
+jQuery(document).ready(function () {
+  jQuery('#coach_user_name').focus();
+  jQuery('#coach_time_zone').val(jstz.determine().name());
+});
+  
+<% end -%>
+
+<p>
+  <%= link_to 'Forgot your password?' , 'https://webmail.trstone.com/QPM/User/Identification/', :target => '_asdfasdfasdf' %>
+</p>
+
+<p>
+  To request access to this site, contact the <%= link_to 'list owner', 'http://people/mailing_lists/members/' + URI.escape(AdGroup.coach) %>.
+</p>

@@ -1,0 +1,39 @@
+<div style ="margin: 15px;">
+  <% if manager_logged_in? || admin_logged_in? %>
+    <%= form_tag(home_track_users_path, :method => "post") do -%>
+      <table id="filter-table">
+        <tr>
+          <td colspan="2" style="text-align: center;">User Name:<span style = "padding-left:2px; padding-right:10px;"><%= select_tag(:user_name, options_for_select(@user_name, :selected => params[:user_name]), {:style => "width:160px;"} ) %></span></td>
+          <td colspan="2" style="text-align: center;">User Role:<span style = "padding-left:2px; padding-right:10px;"><%= select_tag(:user_role, options_for_select(@user_role, :selected => params[:user_role]), {:style => "width:160px;"} ) %> </span></td>
+          <td><input id="submit" type="submit" value="FILTER" name="filter"/> </td>
+        </tr>
+      </table>
+      <br />
+    <% end %>
+    <% if @users_actions.blank? %>
+      <p class = "no_audit_logs"> There are no user track logs present.</p>
+    <% else %>
+      <table id = "audit_log_table">
+        <thead style ="background-color: #FFF;">
+          <tr>
+            <td>User Name</td>
+            <td>User Role</td>
+            <td>Action</td>
+            <td>Time Of Action</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% @users_actions.each do |log|%>
+            <tr>
+              <td><%= get_text log.user_name %></td>
+              <td><%= get_text log.user_role %></td>
+              <td><%= get_text log.action %></td>
+              <td><%= get_timestamp log.created_at %></td>
+            </tr>
+          </tbody>
+        <% end %>
+      </table>
+      <div id ="audit_log_pagination" > <%= will_paginate @users_actions, :previous_label => image_tag('/images/pagination/previous_page.png'), :next_label => image_tag('/images/pagination/next_page.png'), :params =>{:user_name => params[:user_name], :user_role => params[:user_role]} -%> </div>
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5
+END
+CHANGES
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/CHANGES
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/install.rb
+END
+MIT-LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/MIT-LICENSE
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/README.rdoc
+END
+TODO
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/TODO
+END
+.gemtest
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/.gemtest
+END

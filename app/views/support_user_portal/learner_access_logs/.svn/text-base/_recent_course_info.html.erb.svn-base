@@ -1,0 +1,67 @@
+<div id="recent_course_info">
+  <p class="header">Course - <%= name_from_code(course_tracking_info["language"]) %></p>
+  <br/>
+  <div class="float_left" style="width: 67%; clear: both">
+    <div class="wide_label_row">
+      <span class="label">Highest Water Mark</span><span class="formw" title="Level.Unit.Lesson">
+        <%="#{get_number course_tracking_info["high_water_mark"]["level"]}.#{get_number course_tracking_info["high_water_mark"]["unit"]}.#{get_number course_tracking_info["high_water_mark"]["lesson"]}" %>
+      </span>
+    </div>
+
+    <div class="wide_label_row">
+      <span class="label">Most Recent Completed</span><span class="formw" title="Level.Unit.Lesson">
+        <%="#{get_number course_tracking_info["last_completed"]["level"]}.#{get_number course_tracking_info["last_completed"]["unit"]}.#{get_number course_tracking_info["last_completed"]["lesson"]}" %>
+      </span>
+    </div>
+
+    <div class="wide_label_row">
+      <span class="label">Last Access</span>
+      <span class="formw"><%= get_text course_tracking_info["last_access_time"] %></span>
+    </div>
+  </div>
+
+
+  <div class="float_left" style="width: 67%; clear: both; padding-top: 10px;">
+    <span class="subheading">Progress per language per level</span><br />
+    <%= form_tag({:controller => 'licenses', :action => 'course_info_details'}, :method => :get) do -%>
+      <input type="hidden" name="learner" value= <%=  learner.id%> />
+      <div class="wide_label_row">
+        <span class="label">Language</span><span class="formw"><%= select_tag :lang, options_for_select([course_tracking_info["progressed_languages"]["language"]].flatten.map {|lan| lan["code"]}, course_tracking_info["language"]) %></span>
+      </div>
+      <div class="wide_label_row">
+        <span class="label">Level</span><span class="formw"><%= select_tag :level %></span>
+      </div>
+      <%= submit_tag "Submit" %>
+    <%  end -%>
+  </div>
+
+  <div class="float_left path_score_details" style="width: 100%; clear: both; padding-top: 10px;">
+    <% if !baffler_path_scores.blank? && !baffler_path_scores["path_scores"].blank? -%>
+      <span class="subheading">Path Score Details - <%= name_from_code(course_tracking_info["language"]) %></span>
+
+      <div class="wide_label_row">
+        <span class="label">Unit</span><span class="label">Lesson</span><span class="label">Path Type</span><span class="label">Complete</span><span class="label">Date</span>
+      </div>
+
+      <% [baffler_path_scores["path_scores"]["path_score"]].flatten.each do |path_score| -%>
+        <div class="wide_label_row" style="font-weight: normal !important;">
+          <span class="lighter_label"><%= path_score["unit"] %></span>
+          <span class="lighter_label"><%= path_score["lesson"] %></span>
+          <span class="lighter_label"><%= path_score["path_type"] %></span>
+          <span class="lighter_label"><%= path_score["complete"] %></span>
+          <span class="lighter_label"><%= path_score["updated_at"] %></span>
+        </div>
+
+      <% end -%>
+    <% end -%>
+  </div>
+
+  <% content_for :inline_javascript do -%>
+    <% langs = [course_tracking_info["progressed_languages"]["language"]].flatten
+    langs_levels = {}
+    langs.each { |lang| langs_levels[lang["code"]] = lang["levels"]["level"] }
+    -%>
+    SuccessExtranet.TotaleCourseInfo.setLangLevels(<%= langs_levels.to_json %>);
+  <% end %>
+
+</div>

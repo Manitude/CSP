@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/68945/gems/hoptoad_notifier/2.4.9/test
+END
+hoptoad_2_0.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/test/hoptoad_2_0.xsd
+END
+hoptoad_tasks_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/test/hoptoad_tasks_test.rb
+END
+javascript_notifier_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/test/javascript_notifier_test.rb
+END
+configuration_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/test/configuration_test.rb
+END
+recursion_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/test/recursion_test.rb
+END
+catcher_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/68945/gems/hoptoad_notifier/2.4.9/test/catcher_test.rb
+END
+rails_initializer_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/test/rails_initializer_test.rb
+END
+user_informer_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/test/user_informer_test.rb
+END
+notifier_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/test/notifier_test.rb
+END
+logger_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/test/logger_test.rb
+END
+backtrace_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/test/backtrace_test.rb
+END
+sender_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/test/sender_test.rb
+END
+rack_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/test/rack_test.rb
+END
+helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/68945/gems/hoptoad_notifier/2.4.9/test/helper.rb
+END
+notice_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/68945/gems/hoptoad_notifier/2.4.9/test/notice_test.rb
+END

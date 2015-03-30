@@ -1,0 +1,261 @@
+# == Schema Information
+#
+# Table name: tasks
+#
+#  id      :integer(4)      not null, primary key
+#  name    :string(255)     not null
+#  section :string(255)     
+#  code    :string(255)     
+#
+
+--- 
+tasks_042: 
+  section: Learner Profile
+  name: Age (birth date)
+  code: learner_age
+  id: "42"
+tasks_031: 
+  section: Course Activity (for all associated languages tied to account)
+  name: Last Access Timestamp
+  code: last_access
+  id: "31"
+tasks_020: 
+  section: Studio (Coach specific)
+  name: "Total # of availability modifications requested within 2 weeks of live events (YTD)"
+  code: total_no_of_availability_mod_requested_in_2_weeks
+  id: "20"
+tasks_019: 
+  section: Studio (Coach specific)
+  name: "Total # of availability modifications requested (YTD)"
+  code: total_no_of_availability_mod
+  id: "19"
+tasks_008: 
+  section: Coach Profile
+  name: Time Zone
+  code: coach_time_zone
+  id: "8"
+tasks_043: 
+  section: Learner Profile
+  name: Gender
+  code: learner_gender
+  id: "43"
+tasks_032: 
+  section: Licenses (for all associated languages tied to account)
+  name: Product rights
+  code: product_rights
+  id: "32"
+tasks_021: 
+  section: Studio (Coach specific)
+  name: "Total # of Studio session cancellations (YTD)"
+  code: total_no_of_studio_session_cancellations
+  id: "21"
+tasks_010: 
+  section: Coach Profile
+  name: Coach Manager
+  code: coach_manager
+  id: "10"
+tasks_009: 
+  section: Coach Profile
+  name: Region (Seattle, DC, NYC, Remote, etc.)
+  code: coach_region
+  id: "9"
+tasks_044: 
+  section: Learner Profile
+  name: Location
+  code: learner_location
+  id: "44"
+tasks_033: 
+  section: Licenses (for all associated languages tied to account)
+  name: License expiration date
+  code: license_expiration_date
+  id: "33"
+tasks_022: 
+  section: Studio (Coach specific)
+  name: "Total # of Sessions where the Coach didn\xE2\x80\x99t show up"
+  code: total_no_of_sessions_where_the_coach_not_shown_up
+  id: "22"
+tasks_011: 
+  section: Coach Profile
+  name: "Primary phone number (Add \xE2\x80\x9CReceive text message reminders/requests?\xE2\x80\x9D field)"
+  code: coach_pri_phone_no
+  id: "11"
+tasks_045: 
+  section: Learner Profile
+  name: High water mark
+  code: learner_high_water_mark
+  id: "45"
+tasks_034: 
+  section: Licenses (for all associated languages tied to account)
+  name: Ability to extend license subscription duration
+  code: extend_license_subscription_duration
+  id: "34"
+tasks_023: 
+  section: Studio (Coach specific)
+  name: Post session learner feedback
+  code: post_session_learner_feedback
+  id: "23"
+tasks_012: 
+  section: Coach Profile
+  name: "Secondary phone number (Add \xE2\x80\x9CReceive text message reminders/requests\xE2\x80\x9D field)"
+  code: coach_sec_phone_no
+  id: "12"
+tasks_001: 
+  section: Coach Profile
+  name: Full Name
+  code: coach_full_name
+  id: "1"
+tasks_046: 
+  section: Learner Profile
+  name: Studio sessions attended
+  code: studio_sessions_attended
+  id: "46"
+tasks_035: 
+  section: Licenses (for all associated languages tied to account)
+  name: Ability to edit/add product rights
+  code: ability_modify_product_rights
+  id: "35"
+tasks_024: 
+  section: Studio (Coach specific)
+  name: Post session Coach feedback (learner evaluations)
+  code: post_session_coach_feedback
+  id: "24"
+tasks_013: 
+  section: Coach Profile
+  name: Photo
+  code: coach_photo
+  id: "13"
+tasks_002: 
+  section: Coach Profile
+  name: Preferred Name
+  code: coach_preferred_name
+  id: "2"
+tasks_047: 
+  section: Learner Profile
+  name: Studio sessions skipped
+  code: studio_sessions_skipped
+  id: "47"
+tasks_036: 
+  section: Licenses (for all associated languages tied to account)
+  name: Ability to reset password
+  code: ability_reset_password
+  id: "36"
+tasks_025: 
+  section: World Activity (for all associated languages tied to account)
+  name: Games that the Coach has played (Counts, Game Names, Timestamps)
+  code: games_played
+  id: "25"
+tasks_014: 
+  section: Coach Profile
+  name: Bio
+  code: coach_bio
+  id: "14"
+tasks_003: 
+  section: Coach Profile
+  name: Rosetta Stone Email
+  code: coach_rs_email
+  id: "3"
+tasks_048: 
+  section: Learner Profile
+  name: Studio sessions scheduled
+  code: studio_sessions_scheduled
+  id: "48"
+tasks_037: 
+  section: Configurable Settings
+  name: Coach Active? (Yes/No)
+  code: coach_active
+  id: "37"
+tasks_026: 
+  section: World Activity (for all associated languages tied to account)
+  name: Total time spent in each Game
+  code: time_in_game
+  id: "26"
+tasks_015: 
+  section: Coach Profile
+  name: Coach Manager Notes
+  code: coach_manager_notes
+  id: "15"
+tasks_004: 
+  section: Coach Profile
+  name: Personal Email
+  code: coach_personal_email
+  id: "4"
+tasks_050: 
+  section: Learner Profile
+  name: CST Discovery Information
+  code: cst_discovery_information
+  id: "50"
+tasks_049: 
+  section: Learner Profile
+  name: Learner Evaluations
+  code: learner_evaluation
+  id: "49"
+tasks_038: 
+  section: Configurable Settings
+  name: Language qualifications
+  code: language_qualifications
+  id: "38"
+tasks_027: 
+  section: World Activity (for all associated languages tied to account)
+  name: Total time spent in World (total time all games)
+  code: time_in_world
+  id: "27"
+tasks_016: 
+  section: Coach Profile
+  name: Weekly Templates
+  code: weekly_template
+  id: "16"
+tasks_005: 
+  section: Coach Profile
+  name: Skype ID
+  code: coach_skype_id
+  id: "5"
+tasks_040: 
+  section: Learner Profile
+  name: Name
+  code: learner_name
+  id: "40"
+tasks_039: 
+  section: Configurable Settings
+  name: "Level qualifications \xE2\x80\x93 If the Coach changes this, the CM must be notified and approve this change before implemented. "
+  code: level_qualifications
+  id: "39"
+tasks_028: 
+  section: Course Activity (for all associated languages tied to account)
+  name: Total time spent in Language(s) (Drill down capability to view dates/times of activity)
+  code: time_in_language
+  id: "28"
+tasks_017: 
+  section: Studio (Coach specific)
+  name: Schedule of Sessions
+  code: schedule_of_sessions
+  id: "17"
+tasks_006: 
+  section: Coach Profile
+  name: Birth Date (only day and month)
+  code: coach_birth_date
+  id: "6"
+tasks_041: 
+  section: Learner Profile
+  name: Preferred Name
+  code: learner_preferred_name
+  id: "41"
+tasks_030: 
+  section: Course Activity (for all associated languages tied to account)
+  name: Most Recent Path Completed
+  code: recent_path_completed
+  id: "30"
+tasks_029: 
+  section: Course Activity (for all associated languages tied to account)
+  name: High Water Mark
+  code: high_water_mark
+  id: "29"
+tasks_018: 
+  section: Studio (Coach specific)
+  name: "Total # of Studio sessions allowed per week  (current)"
+  code: total_no_of_studio_session
+  id: "18"
+tasks_007: 
+  section: Coach Profile
+  name: Hire Date
+  code: hire_date
+  id: "7"

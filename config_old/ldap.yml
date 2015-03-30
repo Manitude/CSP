@@ -1,0 +1,61 @@
+# For ActiveDirectory 
+bypass_authentication: true
+spoof_authentication: true
+spoof_password: 'D3f@ult'
+
+# Relates an LDAP group to an Application Specific group
+# Maintained here to allow better administrative control.
+groups:
+   prod:
+     coach: "~RS Coach Portal - Coach"
+     coach_manager: "~RS Coach Portal - Manager"
+     admin: "~RS Coach Portal - Admin"
+     support_lead: "~RS Coach Portal - T1 Leads"
+     support_user: "~RS Coach Portal - T1 Users"
+     community_moderator: "~RS Coach Portal - Moderator"
+     led_user: "~RS LE Dashboard - Production"
+     support_concierge_user: "~RS Coach Portal - Concierge"
+     support_harrisonburg_user: "~RS Coach Portal - T2"
+     coach_supervisor: "~RS Coach Portal - Coach Supervisor"
+   test:
+     coach: "@RS NonProduction Coach Access"
+     coach_manager: "@RS NonProduction CoachManager Access"
+     admin: "@RS NonProduction SEAdmin Access"
+     support_lead: "@RS Nonproduction T1 Leads"
+     support_user: "@RS Nonproduction T1 Access"
+     community_moderator: "@RS Nonproduction Moderators Access"
+     led_user: "@RS LE Dashboard - Non-Production"
+     support_concierge_user: "@RS Nonproduction Concierge Access"
+     support_harrisonburg_user: "@RS Nonproduction T2 Access"
+     coach_supervisor: "@RS Nonproduction Coach Supervisor Access"
+
+development:
+   host: "daldc2.rosettastone.local"
+   port: "636"
+   treebase: "dc=rosettastone,dc=local"
+   identifier_attribute: "samaccountname"
+   group_identifier_attribute: "name"
+   encryption: 'simple_tls'
+   auth:
+     method: 'simple'
+     username: 'linuxldap@rosettastone.local'
+     password: 'IH2v3N0P2ssw0rd'
+
+test:
+  host: "127.0.0.1"
+  port: "1389"
+  treebase: "dc=trstone,dc=com"
+  identifier_attribute: "uid"
+  group_identifier_attribute: "name"
+
+production:
+   host: "daldc2.rosettastone.local"
+   port: "636"
+   treebase: "dc=rosettastone,dc=local"
+   identifier_attribute: "samaccountname"
+   group_identifier_attribute: "name"
+   encryption: 'simple_tls'
+   auth:
+     method: 'simple'
+     username: 'linuxldap@rosettastone.local'
+     password: 'IH2v3N0P2ssw0rd'

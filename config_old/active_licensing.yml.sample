@@ -1,0 +1,46 @@
+# Each environment takes the following options:
+#
+# Required Parameters:
+#   host - the address where the license server can be contacted
+#   port - TCP port where the license server can be contacted
+#   endpoint_path - URL where the api endpoint can be reached
+#     e.g. if the license server is at http://licenseserver.rosettastone.com/api on port 80, use:
+#       host: licenseserver.rosettastone.com
+#       port: 80
+#       endpoint_path: /api
+#
+# Optional Parameters
+#   proxy_host - the address of the proxy server to use for HTTP connections
+#   proxy_port - the port of the proxy server to use for HTTP connections
+#   open_timeout - timeout (in seconds) for the client to wait for establishing an HTTP connection to the License Server
+#   read_timeout - timeout (in seconds) for the client to wait for a response from the License Server
+#   ---
+#   The api_username and api_password configs should be added to any environment which will be
+#   connecting to a license server instance that has basic auth restriction enabled.
+#   api_username - the name of the api consumer used with HTTP basic authentication; if missing, client does not use HTTP auth.
+#   api_password - the password for the api consumer specified in api_username; if missing, the client does not use HTTP auth.
+
+development:
+  host: licenseserver.rosettastone.com
+  port: 80
+  proxy_host: 127.0.0.1
+  proxy_port: 80
+  endpoint_path: /api
+  api_username: ollc 
+  api_password: 15B42A91203FCDF3
+test:
+  host: licenseserver.rosettastone.com
+  port: 80
+  proxy_host: opxdev.lan.flt
+  proxy_port: 80
+  endpoint_path: /api
+  api_username: ollc 
+  api_password: 15B42A91203FCDF3
+production:
+  host: licenseserver.rosettastone.com
+  port: 80
+  proxy_host: opxdev.lan.flt
+  proxy_port: 80
+  endpoint_path: /api
+  api_username: ollc 
+  api_password: 15B42A91203FCDF3

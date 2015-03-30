@@ -1,0 +1,20 @@
+<div id='body-content'>
+  <% if logged_in? %>
+    <%= render :partial => 'shared/default_navigation' %>
+  <% end %>
+  <div id="content">
+    <div id="content-header">
+      <div id="flash_content_div">
+        <%= display_flash_content %>
+      </div>
+      <div>
+        <div style="padding-bottom:2px;">
+          <h2><%= page_title %></h2>
+        </div>
+        <%= render :partial => 'shared/profile_links' -%>
+      </div>
+      <div class="justclear"/>
+    </div>
+    <%= yield %>
+  </div><!-- end #content -->
+</div> <!-- end #body-content -->

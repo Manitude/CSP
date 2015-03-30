@@ -1,0 +1,24 @@
+SSL Functionality
+=================
+
+Helpers for apps that need to support SSL under various conditions.
+
+See also: config/ssl.yml and the sample file included in this directory.
+
+Instructions for integrating into your app:
+-------------------------------------------
+
+ * Add this plugin to your app
+ * cp vendor/plugins/ssl_functionality/ssl.yml.sample config/
+ * svn add config/ssl.yml.sample
+ * cp config/ssl.yml.sample config/ssl.yml
+ * svn ignore that file
+ 
+Usage:
+------
+
+In the simplest case, you can just add the following line to a controller that should use SSL whenever the instance is configured for it:
+
+before_filter RosettaStone::ForceSsl
+
+In more complex cases you may be interested in the methods added to ActionController in lib/action_controller_ext.rb.

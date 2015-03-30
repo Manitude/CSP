@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/WebDev/!svn/ver/87257/gems/bunny/0.7.4/lib/qrack
+END
+client.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/77805/gems/bunny/0.7.4/lib/qrack/client.rb
+END
+queue.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/qrack/queue.rb
+END
+subscription.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/qrack/subscription.rb
+END
+channel.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/qrack/channel.rb
+END
+qrack08.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/qrack/qrack08.rb
+END
+amq-client-url.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/87257/gems/bunny/0.7.4/lib/qrack/amq-client-url.rb
+END
+qrack09.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/qrack/qrack09.rb
+END
+errors.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/qrack/errors.rb
+END

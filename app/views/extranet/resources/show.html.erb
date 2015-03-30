@@ -1,0 +1,16 @@
+<p>
+  <b>Title:</b>
+  <%=h @resource.title %>
+</p>
+<p>
+  <b>Description:</b>
+  <%=h @resource.description %>
+</p>
+<p>
+  <b>Target File:</b>
+  <%=  link_to @resource.filename,:download => true %>
+</p>
+<% if manager_logged_in? -%>
+  <%= link_to 'Edit', edit_resource_path(@resource) %> |
+<% end %>
+<%= link_to 'Back', resources_path %>

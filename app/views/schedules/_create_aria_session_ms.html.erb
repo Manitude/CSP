@@ -1,0 +1,35 @@
+<div id="aeb">
+  <div id ="session_type_select">
+    <span class="wildcard" >Session Type:</span>
+    <%= select_tag 'extra_session_chk',
+      options_for_select(["Standard Session","Extra Session"] ,"Standard Session"),{:style=>'float:left'} 
+    %>
+    <%= hidden_field_tag "is_emergency_slot",is_emergency %>
+  </div>
+
+  <div id ="session_name_container">
+    <span class="wildcard">Session Name</span>
+    <%= text_field_tag 'session_name_txt' %>
+  </div>
+
+  <div id="number_of_seats_div">
+    <span class="wildcard">Number of Seats:</span>
+    <%= select_tag 'number_of_seats', options_for_aria_seats, :class => "aria_editsessionselect" %>
+  </div>
+
+  <div id ="cefr_select">
+    <span class="wildcard">CEFR Level: </span>
+    <br/> <%= select_tag "cefr_level", options_for_cefr("--","Select"), :class => "aria_editsessionselect" %>
+  </div>
+
+  <div id ="topic_select">
+    <span class="wildcard">Topic: </span>
+    <br/>
+    <%= select_tag "topic_id", options_for_select(["Select"],"Select"), :class => "aebtopicselect", :disabled => true%>
+  </div>
+
+  <div id="recurring_container" class="standard_session">
+    <span class="wildcard">Recurring</span>
+    <%= check_box_tag 'recurring', 'recurring', true %>
+  </div>
+</div>

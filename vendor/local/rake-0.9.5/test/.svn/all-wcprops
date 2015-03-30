@@ -1,0 +1,287 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test
+END
+test_rake_directory_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_directory_task.rb
+END
+test_rake_task_argument_parsing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_task_argument_parsing.rb
+END
+test_rake_task_lib.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_task_lib.rb
+END
+test_rake_path_map.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_path_map.rb
+END
+test_rake_rules.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_rules.rb
+END
+test_private_reader.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_private_reader.rb
+END
+test_rake_file_utils.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_file_utils.rb
+END
+test_rake_file_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_file_task.rb
+END
+test_rake_test_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_test_task.rb
+END
+test_rake_functional.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_functional.rb
+END
+file_creation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/file_creation.rb
+END
+test_rake_win32.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_win32.rb
+END
+test_rake_application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_application.rb
+END
+test_rake_makefile_loader.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_makefile_loader.rb
+END
+test_rake_definitions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_definitions.rb
+END
+test_rake_require.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_require.rb
+END
+test_rake_extension.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_extension.rb
+END
+test_sys.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_sys.rb
+END
+test_rake_package_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_package_task.rb
+END
+test_rake_application_options.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_application_options.rb
+END
+helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/helper.rb
+END
+test_rake.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake.rb
+END
+test_rake_task_manager_argument_resolution.rb
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_task_manager_argument_resolution.rb
+END
+test_rake_task_with_arguments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_task_with_arguments.rb
+END
+test_rake_file_list_path_map.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_file_list_path_map.rb
+END
+test_rake_file_creation_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_file_creation_task.rb
+END
+test_rake_task_arguments.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_task_arguments.rb
+END
+test_rake_ftp_file.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_ftp_file.rb
+END
+test_rake_early_time.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_early_time.rb
+END
+test_rake_name_space.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_name_space.rb
+END
+test_rake_task_manager.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_task_manager.rb
+END
+test_rake_thread_pool.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_thread_pool.rb
+END
+test_rake_pseudo_status.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_pseudo_status.rb
+END
+test_rake_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_task.rb
+END
+test_rake_path_map_partial.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_path_map_partial.rb
+END
+test_rake_rake_test_loader.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_rake_test_loader.rb
+END
+test_rake_rdoc_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_rdoc_task.rb
+END
+test_rake_path_map_explode.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_path_map_explode.rb
+END
+test_rake_reduce_compat.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_reduce_compat.rb
+END
+test_rake_file_list.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_file_list.rb
+END
+test_thread_history_display.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_thread_history_display.rb
+END
+test_rake_invocation_chain.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_invocation_chain.rb
+END
+test_rake_multi_task.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_multi_task.rb
+END
+test_rake_backtrace.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_backtrace.rb
+END
+test_rake_top_level_functions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_top_level_functions.rb
+END
+test_rake_dsl.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_dsl.rb
+END
+test_rake_clean.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rake-0.9.5/test/test_rake_clean.rb
+END

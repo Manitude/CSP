@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/51076/gems/eventmachine/0.12.11/java/src/com/rubyeventmachine/application
+END
+Connection.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/51076/gems/eventmachine/0.12.11/java/src/com/rubyeventmachine/application/Connection.java
+END
+PeriodicTimer.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/51076/gems/eventmachine/0.12.11/java/src/com/rubyeventmachine/application/PeriodicTimer.java
+END
+Timer.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/51076/gems/eventmachine/0.12.11/java/src/com/rubyeventmachine/application/Timer.java
+END
+Application.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/51076/gems/eventmachine/0.12.11/java/src/com/rubyeventmachine/application/Application.java
+END
+ConnectionFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/51076/gems/eventmachine/0.12.11/java/src/com/rubyeventmachine/application/ConnectionFactory.java
+END
+DefaultConnectionFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WebDev/!svn/ver/51076/gems/eventmachine/0.12.11/java/src/com/rubyeventmachine/application/DefaultConnectionFactory.java
+END

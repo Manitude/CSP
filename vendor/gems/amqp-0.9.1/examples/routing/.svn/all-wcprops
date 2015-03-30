@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/routing
+END
+pubsub.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/routing/pubsub.rb
+END
+round_robin_with_the_default_exchange.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/routing/round_robin_with_the_default_exchange.rb
+END
+headers_routing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/routing/headers_routing.rb
+END
+fanout_routing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/routing/fanout_routing.rb
+END
+weather_updates.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/routing/weather_updates.rb
+END
+unroutable_mandatory_message_is_returned.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/routing/unroutable_mandatory_message_is_returned.rb
+END
+round_robin_with_direct_exchange.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/routing/round_robin_with_direct_exchange.rb
+END

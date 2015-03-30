@@ -1,0 +1,121 @@
+<div id="coach_report">
+  <span class = "bold-font"><%= "Today's Date" -%>:</span>
+  <span class="left-space" style="font-weight: normal;"><%= get_today_date %> </span>
+  <span id="report_generated_for"></span>
+  <div class="selection_container">
+    <%= form_tag('/get_time_off_ui', :remote => true) do -%>
+      <span class="selector">
+        <%= select_tag :lang_identifier, options_for_languages(true, nil, true, true) %>
+      </span>
+      <span class="selector">
+        <%= select_tag :region, options_for_region(nil, true, "id".to_sym, "name".to_sym, "Hub City")  %>
+      </span>
+      <span class="selector">
+        <%=  select_tag :timeframe, options_for_duration_for_coach_report %>
+      </span>
+      <span class="selector">
+        <%=  select_tag :time_off_status, options_for_time_off_status %>
+      </span>
+      
+      <span style="float: right"><%= submit_tag 'Generate Report', :onClick => "return getReport()", :disabled => true, :id => "generate_button" %></span>
+
+      <div id="custom_time_select">
+        <%= calendar_date_select_tag 'start_date', (Time.now - 1.month).beginning_of_day.strftime("%B %d, %Y %I:%M %p"), :class => 'datetimepicker' %> &nbsp;through&nbsp;
+        <%= calendar_date_select_tag 'end_date', (Time.now.end_of_day.strftime("%B %d, %Y %I:%M %p")), :class => 'datetimepicker' %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= image_tag 'big_spinner.gif', :id => 'big_spinner' %>
+  <div id ="coach_time_off_data">
+    <!-- Contains the time off data -->
+  </div>
+
+  <%= form_tag('export_time_off_report', :method=>'get',:id => 'time_off_export_csv_file') do %>
+    <%= hidden_field_tag :lang_identifier_hidden %>
+    <%= hidden_field_tag :time_off_status_hidden %>
+    <%= hidden_field_tag :region_hidden %>
+    <%= hidden_field_tag :timeframe_hidden %>
+    <%= hidden_field_tag :start_date_hidden%>
+    <%= hidden_field_tag :end_date_hidden%>
+
+    <div id="csv_id">
+      <span>A complete set of the coach time off report is available as a downloadable .csv file</span>
+      <input type="submit" id="time_off_csv" value="EXPORT AS CSV"/>
+    </div>
+  <% end %>
+
+</div>
+<script type="text/javascript">
+
+  getGenerateRange();
+  jQuery('#lang_identifier, #timeframe').change(function(){
+    if(jQuery('#lang_identifier').val() == "" || jQuery('#timeframe').val() == "Select a Timeframe")
+      jQuery("#generate_button").attr("disabled", "disabled");
+    else
+      jQuery("#generate_button").removeAttr("disabled");
+
+    if(jQuery('#timeframe').val() == "Custom")
+      jQuery('#custom_time_select').slideDown("slow");
+    else
+      jQuery('#custom_time_select').slideUp("slow");
+  });
+
+  jQuery('#coach_time_off_data').bind('DOMNodeInserted',function(){
+    jQuery('#big_spinner').hide();
+    jQuery('#coach_time_off_data').show();
+    jQuery('#csv_id').show();
+    jQuery('#report_generated_for').show();
+  });
+
+  function getReport() {
+    start_date  = jQuery('#start_date').val();
+    end_date    = jQuery('#end_date').val();
+    var date1 = new Date(start_date);
+    var date2 = new Date(end_date);
+    if((date2 < date1) && jQuery('#timeframe').val() == "Custom") {
+      alert("End date must not be less than the start date selected.");
+      return false;
+    }
+    getGenerateRange();
+    jQuery('#coach_time_off_data').hide();
+    jQuery('#csv_id').hide();
+    jQuery('#big_spinner').show();
+    jQuery('#lang_identifier_hidden').val(jQuery('#lang_identifier').val());
+    jQuery('#region_hidden').val(jQuery('#region').val());
+    jQuery('#time_off_status_hidden').val(jQuery('#time_off_status').val());
+    jQuery('#timeframe_hidden').val(jQuery('#timeframe').val());
+    jQuery('#start_date_hidden').val(jQuery('#start_date').val());
+    jQuery('#end_date_hidden').val(jQuery('#end_date').val());
+  }
+
+
+  function getGenerateRange() {
+    timeframe = jQuery('#timeframe').val();
+    query_params = "timeframe="+timeframe
+    start_date  = jQuery('#start_date').val();
+    end_date    = jQuery('#end_date').val();
+    query_params += "&start_date="+start_date+"&end_date="+end_date // passed everytime.
+    if(timeframe != "Select a Timeframe") {
+      jQuery.ajax({
+        type: 'GET',
+        url: '/get_generate_range',
+        dataType: "html",
+        data: query_params,
+        asynchronous: true,
+        success: function(data) {
+          jQuery('#report_generated_for').html(data);
+        },
+        error: function() {
+          alert('Something went wrong. Please report this problem.');
+        }
+      });
+    }
+  }
+
+</script>
+<style>
+  #start_date, #end_date {
+    width: 165px;
+  }
+</style>

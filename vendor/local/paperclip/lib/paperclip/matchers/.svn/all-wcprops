@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip/lib/paperclip/matchers
+END
+validate_attachment_presence_matcher.rb
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip/lib/paperclip/matchers/validate_attachment_presence_matcher.rb
+END
+validate_attachment_size_matcher.rb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip/lib/paperclip/matchers/validate_attachment_size_matcher.rb
+END
+validate_attachment_content_type_matcher.rb
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip/lib/paperclip/matchers/validate_attachment_content_type_matcher.rb
+END
+have_attached_file_matcher.rb
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/paperclip/lib/paperclip/matchers/have_attached_file_matcher.rb
+END

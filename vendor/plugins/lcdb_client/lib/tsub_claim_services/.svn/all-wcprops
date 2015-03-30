@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/143355/plugins/lcdb_client/lib/tsub_claim_services
+END
+driver.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/143355/plugins/lcdb_client/lib/tsub_claim_services/driver.rb
+END
+service_classes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/143355/plugins/lcdb_client/lib/tsub_claim_services/service_classes.rb
+END
+mapping_registry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/143355/plugins/lcdb_client/lib/tsub_claim_services/mapping_registry.rb
+END

@@ -1,0 +1,5 @@
+<tr id = tr_<%= appointment_row.id.to_s %>>
+    <td class="tb200"><%= appointment_row.title %></td>
+    <td class="tb70"><%= check_box_tag( appointment_row.id, appointment_row.active, appointment_row.active, :class => 'appointment_type_active')%>
+    <td class="tb70"><%= link_to_function image_tag('extranet/edit.png', :title => 'Edit', :id => 'edit_' + appointment_row.id.to_s),"constructQtipWithTip(jQuery('#edit_#{appointment_row.id.to_s}'), 'Edit Appointment Type','#{edit_appointment_type_path(appointment_row)}',{})" %></td>
+  </tr>

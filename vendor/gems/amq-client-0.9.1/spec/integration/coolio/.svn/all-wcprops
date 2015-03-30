@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/coolio
+END
+connection_close_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/coolio/connection_close_spec.rb
+END
+tx_rollback_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/coolio/tx_rollback_spec.rb
+END
+basic_cancel_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/coolio/basic_cancel_spec.rb
+END
+basic_consume_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/coolio/basic_consume_spec.rb
+END
+connection_start_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/coolio/connection_start_spec.rb
+END
+channel_close_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/coolio/channel_close_spec.rb
+END
+basic_ack_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/coolio/basic_ack_spec.rb
+END
+channel_flow_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/coolio/channel_flow_spec.rb
+END
+spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/coolio/spec_helper.rb
+END
+basic_get_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/coolio/basic_get_spec.rb
+END
+basic_return_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/coolio/basic_return_spec.rb
+END
+exchange_declare_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/coolio/exchange_declare_spec.rb
+END
+tx_commit_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/integration/coolio/tx_commit_spec.rb
+END

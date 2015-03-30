@@ -1,0 +1,20 @@
+<div class="form_container">
+  <%= link_to 'Back to License Details', support_portal_home_path(:license_identifier => @learner.email) %>
+
+  <div id="profile">
+    <%= render :partial => "/support_user_portal/learner_access_logs/general_profile_info" %>
+    <div id="community_profile">
+      <% if @learner.community_user? -%>
+        <%= render :partial => "/support_user_portal/learner_access_logs/public_private_info" %>
+        <%= render :partial => "/support_user_portal/learner_access_logs/languages" %><br />
+      <% end %>
+    </div>
+    <%= render :partial => "/support_user_portal/learner_access_logs/studio_info", :locals => {:student => @as_a_student} if @as_a_student %>
+    <% if @learner.community_user? -%>
+      <%= render :partial => "/support_user_portal/learner_access_logs/recent_course_info", :locals => { :course_tracking_info => @baffler_course_tracking_info, :learner => @learner, :baffler_path_scores => nil } if(@baffler_course_tracking_info && !@baffler_course_tracking_info["progressed_languages"].blank?) %>
+      <%= render :partial => "/support_user_portal/learner_access_logs/rworld_info", :locals => { :baffler_details => @baffler_details, :social_app_languages => @baffler_social_app_languages, :connections_count => @connections_count } %>
+      <%= render :partial => "/support_user_portal/learner_access_logs/time_on_languages", :locals => { :baffler_time_spent_on_languages => @baffler_time_spent_on_languages } unless @baffler_time_spent_on_languages.blank? %>
+    <% end %>
+    <p class="header" style="border-bottom:none"></p>
+  </div>
+</div>

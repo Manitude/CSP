@@ -1,0 +1,27 @@
+Index: lib/exception_notifier.rb
+===================================================================
+--- lib/exception_notifier.rb	(revision 50679)
++++ lib/exception_notifier.rb	(working copy)
+@@ -33,6 +33,10 @@
+   @@sections = %w(request session environment backtrace)
+   cattr_accessor :sections
+ 
++  # Rosetta Stone local modification to truncate subject lines
++  @@subject_truncate_length = 120
++  cattr_accessor :subject_truncate_length
++
+   self.template_root = "#{File.dirname(__FILE__)}/../views"
+ 
+   def self.reloadable?() false end
+@@ -40,7 +44,10 @@
+   def exception_notification(exception, controller, request, data={})
+     content_type "text/plain"
+ 
+-    subject    "#{email_prefix}#{controller.controller_name}##{controller.action_name} (#{exception.class}) #{exception.message.inspect}"
++    # Rosetta Stone local modification to truncate subject lines
++    subject_string = "#{email_prefix}#{controller.controller_name}##{controller.action_name} (#{exception.class}) #{exception.message.inspect}" 
++    subject_string = subject_string[0...subject_truncate_length] + '...' if subject_string.length > subject_truncate_length
++    subject subject_string
+ 
+     recipients exception_recipients
+     from       sender_address

@@ -1,0 +1,43 @@
+<div id="profile">
+  <%= error_messages_for 'coach' -%>
+  <p class="header">General</p>
+  <div id="general" class="pad-top-20">
+    <ul class="col1">
+      <li><label><%= "AD Name*" %></label> <%= text_field :coach, :user_name-%></li>
+      <li><%= label :full_name, 'Full Name*' -%> <%= text_field :coach, :full_name -%></li>
+      <li><%= label :preferred_name, 'Preferred Name', :id => "name_label" -%> <%= text_field :coach, :preferred_name -%></li>
+      <li><%= label :birth_date, 'Birth Date*' -%> <%= date_select :coach, :birth_date, reasonable_year_options -%></li>
+      <li><%= label :hire_date, 'Hire Date*' -%> <%= date_select :coach, :hire_date, :start_year => 2000 -%></li>
+      <li>
+        <ul id="qualifications-list">
+          <%= render :partial => "qualification" %>
+        </ul>
+      </li>
+       <li class="add"><%= link_to "Add Another", "#add", :id => "add-another" %></li> 
+     </li>
+    </ul>
+    <ul class="col2">
+      <li><%= label :rs_email, 'RS Email*' -%> <%= text_field :coach, :rs_email -%></li>
+      <li><%= label :personal_email, 'Personal Email' -%> <%= text_field :coach, :personal_email -%></li>
+      <li><%= label :skype_id, 'Skype ID' -%> <%= text_field :coach, :skype_id -%></li>
+      <li><%= label :mobile_phone, 'Mobile Phone' -%> <%= text_field :coach, :mobile_country_code, :size => 5 -%><span class ="phone_space">&nbsp;</span><%= text_field :coach, :mobile_phone, :size => 19 -%></li>
+      <li><%= label :primary_phone, 'Primary Phone*' -%> <%= text_field :coach, :primary_country_code, :size => 5 -%><span class ="phone_space">&nbsp;</span><%= text_field :coach, :primary_phone, :size => 19 -%></li>
+      <li><%= label :secondary_phone, 'Secondary Phone' -%> <%= text_field :coach, :secondary_phone -%></li>
+      <li><%= label :region, 'Region' -%> <%= select :coach, :region_id, options_with_select(Region.options,@coach.region ? @coach.region.id: nil), {} -%></li>
+      <li><%= label :photo, "Profile Picture" -%> <%= file_field :coach, :photo -%> &nbsp;<%= image_tag('i_icon.gif', :height => '20', :width => '20', :id => 'upload-info') -%></li>
+      <% if !@coach.errors.any? && @coach.photo.exists? then %>
+        <li>
+          <label>&nbsp;</label> <span><a href="#" id="remove-pic">Remove?</a> &nbsp;<a href="#" style="display:none" id="remove-pic-undo">Undo</a></span>
+        </li>
+        <li><label>&nbsp;</label> <%= image_tag(@coach.photo.url, :id => 'profile-picture', :width => '100') %></li>
+      <% end %>
+      <li><%= hidden_field_tag("remove_profile_picture", false) %></li>
+      <li><%= label :coach_manager, 'Coach Manager' %><%= text_field :coach_contact, :coach_manager -%></li>
+      <li><%= label :supervisor, 'Supervisor' %><%= text_field :coach_contact, :supervisor -%></li>
+    </ul>
+  </div>
+  <p class="header">Bio</p>
+  <div id="bio" class="pad-top-20">
+    <%= text_area :coach, :bio, :size => '150x10' -%>
+  </div>
+</div>

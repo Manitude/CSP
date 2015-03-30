@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/regressions
+END
+concurrent_publishing_on_the_same_channel_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/regressions/concurrent_publishing_on_the_same_channel_spec.rb
+END
+empty_message_body_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/regressions/empty_message_body_spec.rb
+END
+issue66_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/spec/integration/regressions/issue66_spec.rb
+END

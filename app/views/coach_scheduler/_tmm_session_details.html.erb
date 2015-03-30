@@ -1,0 +1,56 @@
+<% if @tmm_session_details && !(@coach_session.cancelled)%>
+	<% if (@coach_session.tmm? && !@coach_session.tmm_live?) %>
+		<table class = "aria_detail_table" style="padding-top: 5px;">
+			<tr>
+				<td width="50%" style="padding-right: 2%">
+					<table width="100%">
+						<tr>
+							<td><%= @coach_session.language.display_name %> </td>
+						</tr>
+						<% if @coach_session.supersaas_learner.empty? %> 
+							<tr>
+								<td>Learner: None </td>
+							</tr>
+						<% else %>							
+							<tr>
+								<td>Topic: <%= @phone_data[:topic] %> </td>
+							</tr>
+			    			<tr>
+								<td>Learner: <%=  @phone_data[:learner_name] %> </td>
+							</tr>
+							<tr>
+								<td>Contact: <%= (@phone_data[:learner_contact_type]+'<br>'+@phone_data[:learner_contact_value]).html_safe%></td>
+							</tr>
+							<tr>
+								<td>Company: <%= @phone_data[:learner_company] %></td>
+							</tr>
+						<% end %>
+					</table>
+				</td>
+			
+				<td width="50%" style="padding-left: 2%">
+					<table width="100%">
+						<tr>
+							<td>Supersaas ID: <%= @coach_session.eschool_session_id == nil ? 'N/A': @coach_session.eschool_session_id %> </td>
+						</tr>
+						<% if !(@coach_session.details.nil?) && @coach_session.details != "" %>
+						<tr>
+							<td><b>Session Details:</b><br/> 
+								<textarea readonly id="session_details_display_textarea"><%=@coach_session.details.to_s %></textarea>
+							</td>
+						</tr>
+						<% end %>
+					</table>
+				</td>
+			</tr>
+		</table>
+	<% end %>
+<% else %>
+	<div id="session_details_display_div">
+		<%= @coach_session.appointment? ? "Appointment: #{@coach_session.language.display_name_without_type} - #{@coach_session.appointment_type_title}" : @coach_session.language.display_name%>
+		<% if !(@coach_session.details.nil?) && @coach_session.details != "" %>
+		<br/><br/><b> <%= @coach_session.appointment? ? 'Appointment Details:' : 'Session Details:' %><b><br/>
+		<textarea readonly id="session_details_display_textarea"><%=@coach_session.details%></textarea>
+		<% end %>
+	</div>
+<% end %>

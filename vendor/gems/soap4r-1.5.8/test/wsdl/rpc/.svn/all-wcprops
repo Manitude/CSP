@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/rpc
+END
+rpc.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/rpc/rpc.wsdl
+END
+test_rpc_lit.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/rpc/test_rpc_lit.rb
+END
+test-rpc-lit.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/rpc/test-rpc-lit.wsdl
+END
+test_rpc.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/rpc/test_rpc.rb
+END

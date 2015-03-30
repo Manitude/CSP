@@ -1,0 +1,7 @@
+<%= (calendar(:year => @date.year, :previous_month_text => pre, :month =>@date.month, :next_month_text => nex, :abbrev => (0..0)) do |d|
+    if @events_start_date.include?(d)
+      [link_to(d.mday,"show_events_by_date/#{d}"), {:class => "specialDay"}]
+    else
+      [d.mday, {:class => "day"}]
+    end
+  end).html_safe %>

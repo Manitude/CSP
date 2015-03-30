@@ -1,0 +1,33 @@
+<style>
+  table {
+    border-collapse: collapse;
+    font-size: 14;
+      }
+
+      table, th, td {
+          border: 1px solid black;
+          }
+</style>
+<div>
+  <p>Please find the list of pending Time Off requests below. Note all times are listed in Eastern Time.</p><br>
+  <table id="pending_timeoff_requests_table">
+    <tr>
+      <th> Coach </th>
+      <th> Languages </th>
+      <th> Begins </th>
+      <th> Ends </th>
+      <th> Reason </th>
+    </tr>
+    <% @data.each do |treq|%>
+      <tr>
+        <td><%=treq.coach.full_name %> </td>
+        <td><%=treq.coach.languages.collect(&:identifier).join(", ")%></td>
+        <td><%=TimeUtils.format_time(treq.start_date,"%m/%d/%Y,%I:%M:%S %p")%></td>
+        <td><%=TimeUtils.format_time(treq.end_date,"%m/%d/%Y,%I:%M:%S %p")%></td>
+        <td><%=treq.comments%></td>
+      </tr>
+    <% end %>
+  </table><br>
+<p>Thanks,<br>
+Customer Success Portal</p>
+</div>

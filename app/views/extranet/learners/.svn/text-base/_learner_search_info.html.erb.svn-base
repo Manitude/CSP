@@ -1,0 +1,40 @@
+<div style="padding: 10px;">
+ 
+  Learner Search can be performed using either data included in customers' profiles, or by entering their License details. <br>
+
+<b>Search using Learner Data</b><br>
+You may search for Learners by using any combination of the fields listed below, then clicking the SEARCH button. Partial values may be entered into the text fields (e.g., 'Marga' can be entered in the First Name field to search for a customer whose first name is Margaret). Please note that using License Identifier (for Consumer Learners) and User Name (for Institutional) will usually return the most precise results.</br></br>
+
+First Name </br>
+Last Name</br>
+License Identifier (email address)</br>
+User Name (Institutional Customers only)</br>
+Mobile Phone Number</br>
+Language </br>
+Village</br><br>
+
+<b>Search using License Details </b><br>
+You may also search for customers using their License details by selecting the appropriate ID type (License GUID, Activation ID or Product GUID), entering the full ID in the text field, then clicking the SEARCH button. Unlike Leaner data, the complete ID must be entered in order to successfully perform the search.  <br><br> 
+
+Note:  searches using a combination of both Learner and License data are not supported. If values are entered in both sections of the Learner Search page, the results returned will be based on the details entered in the Learner Data section.   <br><br>
+
+<b>Resetting the Form</b><br>
+You may clear all data entered or selected by clicking the "Clear All Input fields" link.<br><br>
+
+<b>Search Results</b></br>
+If your search is successful, up to 100 records that best match the criteria you entered will be returned. The details listed below will be displayed immediately. Otherwise, the "No Matches Found" found message will appear.  </br></br> 
+
+Learner's Full Name</br>
+License Identifier (email address for Consumer Learners, and User Name for Institutional)</br>
+License GUID</br>
+Village (if applicable) </br>
+Mobile Phone Number (if available)</br></br>
+
+You may also mouseover the Learners' names to see their Account Type (Consumer or Institutional), and all languages (if any) for which they have active Product Rights. The dialog can be closed by clicking on it, or by mousing over another Learner's name to view their details. </br></br>
+
+Note: the following message may be displayed in the hover occasionally when the Customer Success Portal is unable to access data from License Server: 'License Information is not available for the given identifier/GUID.' These outages are normally  brief, but please contact the Help Desk if the issue persists for a prolonged period of time. </br></br> 
+
+<b>Navigation</b></br>
+You may access the desired Learner's Profile page by clicking the "View Learner" link in the Actions column that corresponds with his or her record. You can return to the Learner Search Page by either clicking your browser's back button if you wish to view other Learners who were returned in the search, or the "New Search" link if you want to clear the fields from the previous search. </br></br>
+
+</div>

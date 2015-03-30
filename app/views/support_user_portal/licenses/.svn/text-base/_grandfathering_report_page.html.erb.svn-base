@@ -1,0 +1,93 @@
+<style type="text/css">
+    /* define width of table. Add 16px to width for scrollbar.           */
+    /* All other non-IE browsers.                                        */
+    div.tableContainer table {
+        width: 750px
+    }
+
+    /* set table header to a fixed position. WinIE 6.x only                                       */
+    /* In WinIE 6.x, any element with a position property set to relative and is a child of       */
+    /* an element that has an overflow property set, the relative value translates into fixed.    */
+    /* Ex: parent element DIV with a class of tableContainer has an overflow property set to auto */
+    thead.fixedHeader tr {
+        position: relative
+    }
+
+    /* set THEAD element to have block level attributes. All other non-IE browsers            */
+    /* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+    thead.fixedHeader tr {
+        display: block;
+    }
+    thead.fixedHeader > tr >th{
+        word-wrap:break-word;
+    }
+    /* define the table content to be scrollable                                              */
+    /* set TBODY element to have block level attributes. All other non-IE browsers            */
+    /* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+    /* induced side effect is that child TDs no longer accept width: auto                     */
+    tbody.scrollContent {
+        display: block;
+        max-height: 400px;
+        overflow: scroll;
+        width: 100%
+    }
+
+    tbody > tr > td{
+        word-wrap:break-word;
+    }
+    .fixedHeader th{
+        padding:0 !important;
+    }
+</style>
+
+<%if !@grandfather_logs.blank? %>
+    <div id ="product_rights_table" style ="max-height:400px; border: 1px solid #555">
+      <br />
+      <table border="0" class="table_list scrollTable" id="prod_report_table" style="width:100%; border-bottom: 1px solid #CCCCCC; table-layout : fixed;max-height:400px;">
+
+        <thead style="word-wrap:break-word;">
+        <tr style="background-color: #CCCCCC;">
+          <th style="text-align: center; ">Date</th>
+          <th style="text-align: center; ">User</th>
+          <th style="text-align: center; ">Case Number</th>
+          <th style="text-align: center; ">Reason</th>
+          <th style="text-align: center; ">Customer GUID</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <% !@grandfather_logs.each do |prod| %>
+            <tr style="">
+              <td class="left-border sub_center" style=""><%= TimeUtils.format_time(prod.created_at, '%m/%d/%y %I:%M %p') %></td>
+              <td class="left-border sub_center" style=""><%= prod.account.full_name %></td>
+              <td class="left-border sub_center" style=""><%= prod.case_number %></td>
+              <td class="left-border sub_center" style=""><%= prod.reason %></td>
+              <td class="left-border sub_center" style=""><%= prod.license_guid %></td>
+            </tr>
+        <% end %>
+        </tbody>
+
+      </table>
+    </div>
+
+<%else%>
+    <br/><br/>
+    <div> <h4>No Grandfathering Report Logs available for the given time frame.</h4> </div>
+<%end%>
+
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        var product_size = <%= @grandfather_logs.size %>;
+        if (product_size != 0) {
+            jQuery('#csv_id').show();
+        }
+        jQuery('#prod_report_table').fixheadertable({
+            height: 400,
+            colratio: [150,160,170,160,270]
+        });
+    });
+    jQuery('.body').css('overflow-x','hidden');
+    jQuery('.t_fixed_header').css('border', '1px solid');
+
+
+</script>

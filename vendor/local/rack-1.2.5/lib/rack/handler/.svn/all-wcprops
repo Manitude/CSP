@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/lib/rack/handler
+END
+cgi.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/lib/rack/handler/cgi.rb
+END
+thin.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/lib/rack/handler/thin.rb
+END
+mongrel.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/lib/rack/handler/mongrel.rb
+END
+scgi.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/lib/rack/handler/scgi.rb
+END
+swiftiplied_mongrel.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/lib/rack/handler/swiftiplied_mongrel.rb
+END
+webrick.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/lib/rack/handler/webrick.rb
+END
+lsws.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/lib/rack/handler/lsws.rb
+END
+evented_mongrel.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/lib/rack/handler/evented_mongrel.rb
+END
+fastcgi.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rack-1.2.5/lib/rack/handler/fastcgi.rb
+END

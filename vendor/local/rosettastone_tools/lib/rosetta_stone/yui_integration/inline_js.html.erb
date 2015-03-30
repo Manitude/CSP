@@ -1,0 +1,139 @@
+var <%= @options[:variable_name] %> = new YAHOO.widget.Editor('<%= @options[:dom_id] %>', {
+    height: '<%= @options[:height] %>',
+    width: '<%= @options[:width] %>',
+    animate: true,
+<% if @options[:handle_submit] %>    handleSubmit: true,<% end %>
+    markup: 'xhtml',
+    toolbar: {
+      titlebar: '<%= @options[:title] %>',
+      buttons: [
+        { group: 'textstyle', label: 'Font Style',
+          buttons: [
+            { type: 'push', label: 'Bold CTRL + SHIFT + B', value: 'bold' },
+            { type: 'push', label: 'Italic CTRL + SHIFT + I', value: 'italic' },
+            { type: 'separator' },
+            { type: 'push', label: 'Subscript', value: 'subscript', disabled: true },
+            { type: 'push', label: 'Superscript', value: 'superscript', disabled: true },
+            { type: 'separator' },
+            { type: 'color', label: 'Font Color', value: 'forecolor', disabled: true },
+            { type: 'color', label: 'Background Color', value: 'backcolor', disabled: true },
+            { type: 'separator' },
+            { type: 'push', label: 'Remove Formatting', value: 'removeformat', disabled: true },
+            { type: 'push', label: 'Show/Hide Hidden Elements', value: 'hiddenelements' }
+          ]
+        },
+        { type: 'separator' },
+        { group: 'alignment', label: 'Alignment',
+          buttons: [
+            { type: 'push', label: 'Align Left CTRL + SHIFT + [', value: 'justifyleft' },
+            { type: 'push', label: 'Align Center CTRL + SHIFT + |', value: 'justifycenter' },
+            { type: 'push', label: 'Align Right CTRL + SHIFT + ]', value: 'justifyright' },
+            { type: 'push', label: 'Justify', value: 'justifyfull' }
+          ]
+        },
+        { type: 'separator' },
+        { group: 'parastyle', label: 'Paragraph Style',
+          buttons: [
+            { type: 'select', label: 'Normal', value: 'heading', disabled: true,
+              menu: [
+                { text: 'Normal', value: 'none', checked: true },
+                { text: 'Header 3', value: 'h3' },
+                { text: 'Header 4', value: 'h4' }
+              ]
+            }
+          ]
+        },
+        { type: 'separator' },
+        { group: 'indentlist', label: 'Indenting and Lists',
+          buttons: [
+            { type: 'push', label: 'Indent', value: 'indent', disabled: true },
+            { type: 'push', label: 'Outdent', value: 'outdent', disabled: true },
+            { type: 'push', label: 'Create an Unordered List', value: 'insertunorderedlist' },
+            { type: 'push', label: 'Create an Ordered List', value: 'insertorderedlist' }
+          ]
+        },
+        { type: 'separator' },
+        { group: 'insertitem', label: 'Insert Item',
+          buttons: [
+            { type: 'push', label: 'HTML Link CTRL + SHIFT + L', value: 'createlink', disabled: true }
+          ]
+        }
+      ]
+    }
+});
+
+<% if @options[:switching_enabled] %>
+function switchToRawHtml () {
+  if (this.editing_mode == 'rawhtml') { return; }
+  this.syncContent();
+
+  this_e = this.get('element');
+  this_ec = this.get('element_cont');
+  this_ec_child = this_ec.get('firstChild');
+
+  YAHOO.util.Dom.setStyle(this_ec_child, 'position', 'absolute');
+  YAHOO.util.Dom.setStyle(this_ec_child, 'top', '-9999px');
+  YAHOO.util.Dom.setStyle(this_ec_child, 'left', '-9999px');
+
+  this_ec.removeClass('yui-editor-container');
+
+  YAHOO.util.Dom.setStyle(this_e, 'visibility', 'visible');
+  YAHOO.util.Dom.setStyle(this_e, 'top', '');
+  YAHOO.util.Dom.setStyle(this_e, 'left', ''); 
+  YAHOO.util.Dom.setStyle(this_e, 'position', 'static');
+
+  this.editing_mode = 'rawhtml';
+}
+
+function switchToWysiwyg () {
+  if (this.editing_mode == 'wysiwyg') { return; }
+  this.syncContent();
+
+  this_e = this.get('element');
+  this_ec = this.get('element_cont');
+  this_ec_child = this_ec.get('firstChild');
+
+  YAHOO.util.Dom.setStyle(this_ec_child, 'position', 'static');
+  YAHOO.util.Dom.setStyle(this_ec_child, 'top', '0');
+  YAHOO.util.Dom.setStyle(this_ec_child, 'left', '0');
+
+  this._setDesignMode('on');
+
+  YAHOO.util.Dom.setStyle(this_e, 'visibility', 'hidden');
+  YAHOO.util.Dom.setStyle(this_e, 'top', '-9999px');
+  YAHOO.util.Dom.setStyle(this_e, 'left', '-9999px');
+  YAHOO.util.Dom.setStyle(this_e, 'position', 'absolute');
+
+  this_ec.addClass('yui-editor-container');
+
+  this.editing_mode = 'wysiwyg';
+}
+
+function syncContent () {
+  if (this.editing_mode == 'wysiwyg') { this.saveHTML(); }
+  else { this.setEditorHTML(this.get('textarea').value); }
+}
+
+<%= @options[:variable_name] %>.switchToRawHtml = switchToRawHtml;
+<%= @options[:variable_name] %>.switchToWysiwyg = switchToWysiwyg;
+<%= @options[:variable_name] %>.syncContent = syncContent;
+<%= @options[:variable_name] %>.editing_mode = 'wysiwyg';
+<% end %>
+
+<% if @options[:style_overrides] # Style Overrides -%>
+<%= @options[:variable_name] %>.on('editorContentLoaded', function() {
+  var head = this._getDoc().getElementsByTagName('head')[0];
+  
+  <% @options[:style_overrides].each_with_index do |stylesheet, index| %>
+  var link<%= index %> = this._getDoc().createElement('link');
+  link<%= index %>.setAttribute('rel', 'stylesheet');
+  link<%= index %>.setAttribute('type', 'text/css');
+  link<%= index %>.setAttribute('href', '<%= stylesheet %>');
+  head.appendChild(link<%= index %>);
+  <% end %>
+});
+<% end # Style Overrides -%>
+
+<%= @options[:custom_overrides] %>
+
+<%= @options[:variable_name] %>.render();

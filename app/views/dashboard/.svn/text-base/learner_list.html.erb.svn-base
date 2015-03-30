@@ -1,0 +1,8 @@
+<%if session[:set_filter]== true %>
+  <h4 style="margin:5px;">Filter ON (<%= session[:filter_language]%>)</h4>
+<%end%>
+<div id="learner_list" style="width:900px;">
+  <%= render :partial => 'learner_list' %>
+</div>
+
+

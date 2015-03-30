@@ -1,0 +1,57 @@
+= Version 0.3.1 (2009-12-04)
+
+rujitsu/grammar now raises the proper rule (one of the most important updates ever)
+
+= Version 0.3 (2009-11-30)
+
+Added Object#in? to test for inclusion within a container (easier to use syntax than Array#include?)
+
+= Version 0.2.5 (2009-04-08)
+
+Adding a few debugging methods in rujitsu/inspect
+Added rujitsu/all to require everything in rujitsu
+
+= Version 0.2 (2009-04-06)
+
+Adding :exclude to Fixnum#random_*
+
+= Version 0.1.9 (2009-02-20)
+
+Added specifying only even or odd random numbers
+
+= Version 0.1.8 (2009-01-24)
+
+Added String#truncate + matching specs
+
+= Version 0.1.7 (2008-12-08)
+
+Added the limiter to Range#random_numbers
+
+= Version 0.1.6 (2008-12-08)
+
+Added a limiter to Fixnum#random_numbers
+
+= Version 0.1.5 (2008-12-03)
+
+Added random_vowels and random_consonants
+
+= Version 0.1.4 (2008-11-27)
+
+Added the grammar section
+
+= Version 0.1.3 (2008-11-24)
+
+Cleaned up invalid characters
+Refactored generate_random_string_using method (thanks to zachinglis)
+
+= Version 0.1.2 (2008-11-24)
+
+Added full test suite
+
+= Version 0.1.1 (2008-11-22)
+
+Added range based random character generation
+
+= Version 0.1.0 (2008-11-22)
+
+Initial Release; random character generation, URL-friendly strings.  

@@ -1,0 +1,48 @@
+<%= stylesheet_link_tag "html_table" %>
+<%= javascript_include_tag "html_table" %>
+<div id ="time_off_table_div"><br>
+  <%if @time_off_data && @time_off_data.size > 0 %>
+  <table class="table_list scrollTable" id="time_off_table">
+  <thead class="fixedHeader ">
+    <tr>
+      <th class = 'old_th150'>Name</th>
+      <th class = 'old_th110'>Hub City</th>
+      <th class = 'old_th140'>Start Date</th>
+      <th class = 'old_th140'>End Date</th>
+      <th class = 'old_th60'>Duration</th>
+      <th class = 'old_th80'>Status</th>
+      <th class = 'old_th80'>Affected<br> Session(s)*</th>
+      <th class = 'old_th134'>Action</th>
+    </tr>
+  </thead>
+   <tbody class="scrollContent">
+    <% @time_off_data.each do |t| %>
+      <tr id = "<%= t[:time_off_id] %>" >
+        <td id = "<%= t[:coach_id]%>" class = 'tb150' style = 'border-bottom: 1px solid #D3EDF9; color: #007AAF'  onclick = 'get_languages(this)'><a><%= t[:coach_name] %> </a></td>
+        <td class = 'tb110'><%= t[:coach_region] %></td>
+        <td class = 'tb140'><%= t[:time_off_start] %></td>
+        <td class = 'tb140'><%= t[:time_off_end] %></td>
+        <td class = 'tb60'><%= t[:duration] %></td>
+        <td class = 'tb80' id = "status_<%= t[:time_off_id] %>"><%= t[:time_off_status] %></td>
+        <td class = 'tb80'><%= t[:affected_count] %></td>
+        <td class = 'tb117'>
+          <% if t[:action] == "links" %> 
+          <a href='javascript:void(0);' class='approve_timeoff'>Approve</a> | <a href='javascript:void(0);' class='approve_timeoff'>Deny</a>
+          <% elsif t[:action] == "text" %>
+            Approve | Deny
+          <% end %>
+         </td>
+      </tr>
+    <% end %>
+      </tbody>
+
+</table>
+<div class = 'top_padding10'><span class = 'font_size75'> <%= ' Affected Sesions - # of Sessions Scheduled, Cancelled or Substituted' %> </span></div>
+  <%else%>
+  <div> <p>There are currently no time off reports.</p> </div>
+  <%end%>
+  <script type="text/javascript">
+    jQuery(document).ready(function() {
+      if(<%=@time_off_data.size%> == 0){jQuery('#csv_id').hide();}
+    }); 
+  </script>  

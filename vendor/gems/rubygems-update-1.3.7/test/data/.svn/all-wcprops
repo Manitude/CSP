@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/test/data
+END
+gem-public_cert.pem
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/test/data/gem-public_cert.pem
+END
+gem-private_key.pem
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/52938/gems/rubygems-update/1.3.7/test/data/gem-private_key.pem
+END

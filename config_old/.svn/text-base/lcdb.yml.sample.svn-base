@@ -1,0 +1,17 @@
+default: &default
+  claim:
+    end_point: http://ashtesias01.rosettastone.local:7003/ClaimServices/ClaimServices
+    token: "OWtqZDIzOTVha2xzcjgyM25tYTI5Mw"
+  lcdb:
+    #end_point: http://ashdevias01.rosettastone.local:7003/LCDBServices/LCDBServicesPort
+    end_point: http://ashtesias01.rosettastone.local:7003/LCDBServices/LCDBServicesPort
+    token: "OWtqZDIzOTVha2xzcjgyM25tYTI5Mw"
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

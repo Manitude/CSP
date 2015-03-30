@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/elements
+END
+content_disposition_element.rb
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/elements/content_disposition_element.rb
+END
+envelope_from_element.rb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/elements/envelope_from_element.rb
+END
+content_location_element.rb
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/elements/content_location_element.rb
+END
+message_ids_element.rb
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/elements/message_ids_element.rb
+END
+content_transfer_encoding_element.rb
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/elements/content_transfer_encoding_element.rb
+END
+phrase_list.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/elements/phrase_list.rb
+END
+received_element.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/elements/received_element.rb
+END
+address_list.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/elements/address_list.rb
+END
+content_type_element.rb
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/elements/content_type_element.rb
+END
+date_time_element.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/elements/date_time_element.rb
+END
+address.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/elements/address.rb
+END
+mime_version_element.rb
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/elements/mime_version_element.rb
+END

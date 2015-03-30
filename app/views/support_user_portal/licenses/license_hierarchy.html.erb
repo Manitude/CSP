@@ -1,0 +1,14 @@
+<ul id="org" style="display:none">
+  <%@family_tree.each do |family,learners|%>
+    <li>
+      <%=family%>
+      <ul>
+        <%learners.each do |learner|%>
+          <li><a href="<%=learner[0]%>" class="learner_guid"><div style="width:100%;height:100%"><span class="<%=learner[1]%>"><%=learner[3]%></span><br/><span class="<%=learner[1]%>"><%=learner[1]%></span><br/> <span class="<%=learner[2]%>"><%=learner[2]%></span></div></a></li>
+        <%end%>
+      </ul>
+    </li>
+  <%end%>
+</ul>
+
+<div id="chart" class="orgChart"></div>

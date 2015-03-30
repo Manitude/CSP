@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/soap/wsdl2ruby/section
+END
+section.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/soap/wsdl2ruby/section/section.xsd
+END
+test_section.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/soap/wsdl2ruby/section/test_section.rb
+END
+expectedClassdef.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/soap/wsdl2ruby/section/expectedClassdef.rb
+END

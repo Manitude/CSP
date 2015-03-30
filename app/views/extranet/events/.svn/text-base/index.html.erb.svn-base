@@ -1,0 +1,34 @@
+<% unless @events.empty? %>
+  <table class='se_tab'>
+    <tr>
+      <th>Name</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Language</th>
+      <th>Region</th>
+    </tr>
+
+    <% @events.each do |event| %>
+      <tr>
+        <td><%=h event.event_name %></td>
+        <td><%=h format_time(event.event_start_date, "%b %d, %Y %Z") %></td>
+        <td><%=h format_time(event.event_end_date, "%b %d, %Y %Z") %></td>
+        <td><%=h event.language_id == -1 ? "All" : event.language.display_name %></td>
+        <td><%=h event.region_id == -1 ? "All": event.region.name%></td>
+        <td class="links"><%= link_to image_tag('/images/extranet/show.gif', :alt => "Show", :title => "Show"), event %></td>
+        <% if manager_logged_in? -%>
+          <td class="links"><%= link_to image_tag('/images/extranet/edit.png', :alt => "Edit", :title => "Edit"), edit_event_path(event) %></td>
+          <td class="links"><%= link_to image_tag('/images/extranet/delete.png', :alt => "Delete", :title => "Delete"), event, :confirm => 'Are you sure?', :method => :delete %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+  <br />
+<% else %>
+  No data available<br /><br />
+<% end %>
+
+<% if manager_logged_in? -%>
+  <%= link_to 'New calendar event', new_event_path %>
+<% end %>
+

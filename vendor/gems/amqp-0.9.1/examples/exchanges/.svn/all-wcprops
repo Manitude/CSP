@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/exchanges
+END
+autodeletion_of_exchanges.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/exchanges/autodeletion_of_exchanges.rb
+END
+declare_an_exchange_without_assignment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/exchanges/declare_an_exchange_without_assignment.rb
+END

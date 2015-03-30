@@ -1,0 +1,61 @@
+<div id="profile">
+  <p class="header" style="border-bottom: 2px solid gray;"></p>
+  <% if (params[:action].to_s == "view_coach_profiles") %>
+    <div id="preference-settings-button">
+     <%unless tier1_support_lead_logged_in?%>
+     <input type="button" value="<%= _("Edit21077124") %>" onclick="document.location='<%= edit_coach_path(@coach.id) %>'"/>
+     <%end%>
+    </div>
+  <%end -%>
+  <div id="general">
+    <ul class="col1">
+      <li><label><%= _("Full_Name82853947") %></label> <span><%= get_text @coach.full_name -%></span></li>
+      <li><label><%= _("Coach_Id9A93C251") %></label> <span><%= get_text @coach.id -%></span></li>
+      <li><label><%= _("AD_NameBD52F356") %></label> <span><%= get_text @coach.user_name -%></span></li>
+      <li><label><%= _("Preferred_Name77198152") %></label> <span><%= get_text @coach.preferred_name -%></span></li>
+      <li><label><%= "Rosetta Email" %></label> <span><%= get_text @coach.rs_email -%></span></li>
+      <li><label><%= _("Personal_Email491AD2AA") %></label> <span><%= get_text @coach.personal_email -%></span></li>
+      <li><label><%= _("Skype_ID867ABF81") %></label> <span><%= get_text @coach.skype_id -%></span></li>
+      <li><label><%= "Aim ID" %></label> <span><%= get_text @coach.aim_id -%></span></li>
+      <li><label><%= _("Primary_Phone599295E5") %></label> <span><%= get_text phone_code_format(@coach.primary_country_code) + phone_format(@coach.primary_phone) -%></span></li>
+      <li><label><%= _("Secondary_PhoneEB85EC35") %></label> <span><%= get_text phone_format(@coach.secondary_phone) -%></span></li>
+      <li><label><%= "Mobile Phone" %></label> <span><%= get_text phone_code_format(@coach.mobile_country_code) + phone_format(@coach.mobile_phone) -%></span></li>
+      <li><label><%= _("AddressC2F3561D") %></label> <table><tbody><tr><td><%= get_text @coach.address -%></td></tr></tbody></table></li>
+      <li><label><%= "Hire Date" %></label> <span><%= get_text @coach.hire_date -%></span></li>
+      <li><label><%= _("Country9CCEF0FA") %></label> <span><%= get_text RosettaStone::Country.find_by_country_code(@coach.country) -%></span></li>
+      <li><label><%= _("Region8CEF440") %></label> <span><%= get_region_id @coach.region_id -%></span></li>
+    </ul>
+    <ul class="col2">
+      <% if @coach.type == 'Coach' %>
+        <li><label>Active?</label> <span><%= get_text @coach.active_label -%></span></li>
+      <% end %>
+      <li><label><%= "Role" %></label> <span><%= get_text @coach.type -%></span></li>
+      <li><label><%= "Display Language" %></label> <span><%= SupportLanguage.find_by_language_code(@coach.native_language).name %></span></li>
+      <li><label><%= "Language Qualification" %> </label> <table><tbody><tr><td><%= get_text @coach.language_qualification_label -%></td></tr></tbody></table></li>
+      <% if @coach.is_supersaas? %>
+      <li><label><%= "Coach GUID" %> </label> <span><%= get_text @coach.coach_guid -%></span></li>
+      <% end %>
+      <li><label><%= "Unit Qualification" %></label> <table><tbody><tr><td><%= get_text @coach.units_qualification_label -%></td></tr></tbody></table></li>
+      <li><label><%= "Coach Manager" %></label> <span><%= get_text @coach.coach_manager -%></span></li>
+      <li><label><%= "Supervisor" %></label><span><%= get_text @coach.supervisor -%></span></li>
+      <li><fieldset class = "profile-fieldset" >
+          <legend><span><div class = "about_me">About Me</div></span></legend>
+          <div>
+            <div id="prof-pic-div">
+              <% if @coach.photo.exists? then %>
+                <%= image_tag(@coach.photo.url, :width => '100') %>
+              <% else %>
+                <%= image_tag("user.png", :width => '100') %>
+              <% end %>
+            </div>
+            <div class = "left-space birthdate">
+              <span class = "bold-font"> <%= "Birthdate" %></span><span class = "left-space" ><%= get_text @coach.birth_date -%></span>
+            </div>
+            <div class = "left-space top_bottom_space"><%= @coach.bio -%></div>
+          </div>
+        </fieldset>
+      </li>
+    </ul>
+  </div>
+</div>
+

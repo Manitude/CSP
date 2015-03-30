@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/man
+END
+bundle-update.ronn
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/man/bundle-update.ronn
+END
+bundle.ronn
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/man/bundle.ronn
+END
+index.txt
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/man/index.txt
+END
+bundle-exec.ronn
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/man/bundle-exec.ronn
+END
+bundle-platform.ronn
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/man/bundle-platform.ronn
+END
+gemfile.5.ronn
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/man/gemfile.5.ronn
+END
+bundle-config.ronn
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/man/bundle-config.ronn
+END
+bundle-install.ronn
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/man/bundle-install.ronn
+END
+bundle-package.ronn
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/man/bundle-package.ronn
+END

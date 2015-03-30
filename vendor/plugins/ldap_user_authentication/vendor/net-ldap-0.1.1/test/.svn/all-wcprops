@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/test
+END
+test_snmp.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/test/test_snmp.rb
+END
+test_ldif.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/test/test_ldif.rb
+END
+test_entry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/test/test_entry.rb
+END
+test_password.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/test/test_password.rb
+END
+test_filter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/test/test_filter.rb
+END
+testdata.ldif
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/test/testdata.ldif
+END
+test_ber.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/test/test_ber.rb
+END
+common.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/test/common.rb
+END

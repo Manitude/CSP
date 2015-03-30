@@ -1,0 +1,21 @@
+<style type="text/css">
+.qtip {
+	width: 500px;
+}
+</style>
+<span style="font-size:12px">
+<% if @error %>
+<div> <%= @error  %> </div>
+<% else %>
+	<%= @reason %>
+<% end %>
+</span>
+<script type="text/javascript">
+ jQuery(document).ready(function(){
+ 	jQuery('.ui-icon-close').hide();
+    jQuery('.qtip').click(function(){
+       jQuery('.qtip').remove();
+    });
+});
+</script>
+  

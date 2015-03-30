@@ -1,0 +1,396 @@
+div.tableContainer table {
+}
+
+/* set table header to a fixed position. WinIE 6.x only                                       */
+/* In WinIE 6.x, any element with a position property set to relative and is a child of       */
+/* an element that has an overflow property set, the relative value translates into fixed.    */
+/* Ex: parent element DIV with a class of tableContainer has an overflow property set to auto */
+thead.fixedHeader tr {
+  position: relative
+}
+
+/* set THEAD element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+thead.fixedHeader tr {
+  display: block
+}
+
+.table_list th {
+    border: 1px solid #CCCCCC;
+    white-space: normal;
+}
+
+/* define the table content to be scrollable                                              */
+/* set TBODY element to have block level attributes. All other non-IE browsers            */
+/* this enables overflow to work on TBODY element. All other non-IE, non-Mozilla browsers */
+/* induced side effect is that child TDs no longer accept width: auto                     */
+tbody.scrollContent {
+    display: block;
+    max-height: 288px !important;
+    overflow: auto;
+    width: 100%
+}
+
+tbody.scrollContent_mod {
+    display: block;
+    max-height: 262px;
+    overflow: auto;
+    width: 100%
+}
+
+tbody > tr > td{
+    word-wrap:break-word;
+}
+  .table_list_substitution{
+    margin: 25px auto;
+    width: 100%;
+    border-bottom: 1px solid #CCCCCC;
+    border-top: 1px solid #CCCCCC;
+  }
+  .table_list_substitution td, .table_list_substitution th {
+    padding: 4px 2px;
+    text-align: center;
+  }
+  .table_list_substitution td {
+    text-align: left;
+    font-size:11px;
+  }
+  .select_class {
+    font-size: 9px;
+  }
+  .table_list_substitution th {
+    text-transform: none;
+    font-size: 10px;
+    background: none repeat scroll 0 0 #F0F0F0;
+    color: #666666;
+    font-weight: bold;
+  }
+  .sub_center {
+    padding-left:10px !important;
+  }
+  .coach_requesting_column {
+    max-width: 50px;
+    word-wrap: break-word;
+  }
+  .ui-tooltip {
+    max-width: 540px;
+    min-width: 380px;
+  }
+  .table_list_substitution td.left-border, .table_list_substitution th.left-border {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #CCCCCC;
+    border-image: none;
+    border-style: none none none solid;
+    border-width: medium medium medium 1px;
+  }
+  .table_list_substitution td.left-right-border, .table_list_substitution th.left-right-border {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #CCCCCC;
+    border-image: none;
+    border-style: none solid;
+    border-width: medium 1px;
+  }
+
+#topic_list_table_div{
+  max-height: 431px;
+}
+
+#topic_list_table{
+  border: 1px solid #CCCCCC;
+  width : 967px; !important;
+}
+
+#scrollContent{
+  overflow-y: scroll;
+}
+
+.topic_list_tray{
+  width: 100%; 
+  text-align: left;
+}
+
+#time_off_table_div{
+  max-height: 413px;
+}
+
+#time_off_table{
+  border: 1px solid #CCCCCC !important;
+}
+
+#sub_report_table{
+  width: 100%; 
+  border-bottom: 1px solid #CCCCCC;
+}
+
+#substitutions_table{
+  max-height: 380px;
+}
+
+#substitution_alert{
+  float: left;
+  padding-bottom: 5px;
+}
+.substitution_needed{
+  color: red; 
+  text-align: center;
+}
+#see_all_substitutions{
+  padding-left: 10px;
+}
+.substitution_font{
+  text-decoration: underline; 
+  color: #0098DB;
+}
+.substitution_close_button{
+  cursor:pointer
+}
+#sub_alert_table{
+  -moz-border-radius: 6px 6px 6px 6px; 
+  border: medium solid #BB0132;
+  width : 950px; !important;
+}
+.top_padding10{
+  padding-top: 10px;
+}
+
+.top_padding5{
+  padding-top: 5px;
+}
+
+.font_size75{
+  font-size: 75%;
+}
+
+.time_off_no_border{
+  border: 0;
+}
+
+.time_off_border{
+  border: none;
+  border-top:1px solid #CCCCCC;
+}
+
+.cs_edit_session{
+/*  margin: 15px 20px;  Edited as part of CSP-1070*/ 
+}
+
+.cs_ce_sess_lang{
+  font-size: 8pt;
+  padding-bottom: 2px;
+}
+
+.cs_recurring{
+  width: 50%; 
+  text-align: left; 
+  padding-left: 8px;
+}
+
+.cs_ce_sess_recurring{
+  padding-top: 10px; 
+  float: left; 
+  width: 100%
+}
+
+.cs_ce_sess_village{
+  text-align: left; 
+  font-size: 8pt;
+  padding-bottom: 2px;
+}
+
+.cs_ce_sess_wildcard{
+  width: 50%;
+  text-align: left;
+  padding-left: 8px;
+}
+
+.cs_edit_unit{
+  border: 0; 
+  padding: 10px 10px 5px 0px;
+}
+
+#ce_sess_level{
+  text-align: left;
+  font-size: 8pt;
+  padding-left: 10px;
+  width: 76px;
+}
+
+#ce_sess_unit{
+  text-align: left;
+  font-size: 8pt;
+  padding-left: 2px;
+  width: 50px;
+}
+
+.cs_max_qual_of_the_coach{
+  text-align: left;
+  padding-left: 10px;
+}
+
+.cs_button_tray{
+  float: right; 
+/*  margin: 10px 0px 20px 0px;  Edited as part of CSP-1070*/
+  margin: 5px 0px 10px 0px;
+  width: 100%;
+}
+
+.cs_coach_not_available{
+  float: left;
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+.left-space{
+  font-weight: normal;
+}
+.pull-right{
+  float: right;
+}
+.width100{
+  width: 100%;
+}
+.width90{
+  width: 90%;
+}
+.width80{
+  width: 80%;
+}
+
+.width50{
+  width: 50%;
+}
+.width25{
+  width: 25%;
+}
+.width24{
+  width: 24%;
+}
+.width20{
+  width: 20%;
+}
+#width20{
+  width: 20%;
+}
+.width18{
+  width: 18%;
+}
+.width15{
+  width: 15%;
+}
+#width15{
+  width: 15%;
+}
+#width10{
+  width: 10%;
+}
+.width10{
+  width: 10%;
+}
+.width3{
+  width: 3%;
+}
+.width_150{
+  width: 150px;
+}
+.align_right{
+  text-align: right;
+}
+.align-bottom{
+  vertical-align: bottom;
+}
+#align-bottom{
+  vertical-align: bottom;
+}
+#notification_coach{
+  padding-left: 20px; 
+  vertical-align: bottom;
+}
+#notification_lang{
+  padding-left: 30px; 
+  vertical-align: bottom;
+}
+.notification_timeframe{
+  background: none repeat scroll 0 0 #DDDDDD; 
+  padding: 8px 2px 4px 4px;
+}
+.notification_custom_date{
+  margin-left: 5px; 
+  padding: 0px!important;
+}
+.notification_container{
+  height: 350px;
+  overflow: auto;
+}
+#view_session_details_popup_table_div{
+  overflow: auto; 
+  height: 200px;
+  float: left;
+}
+#no_extensions{
+  width: 605px; 
+  border: 1px solid #CCCCCC; 
+  margin-top: 10px;
+  padding: 10px 10px 10px 25px;
+  -moz-border-radius: 4px 4px 4px 4px; 
+  background-color: #F0F0F0;
+}
+#view_session_details_popup_table{
+  border: 0;
+}
+.margin25{
+  margin: 25px;
+}
+.licenses_cannot_add_extension{
+  -moz-border-radius: 10px 10px 10px 10px; 
+  float: right; 
+  margin: 20px 20px 15px 0pt; 
+  padding: 7px; 
+  background-color: #CCCCCC;
+}
+.license_info_table_div{
+  margin-bottom: 10px; 
+  border-bottom: 2px solid #cccccc;
+}
+.margin_bottom15{
+  margin-bottom: 15px;
+}
+.group_guid{
+  padding:0 2px;
+  vertical-align: baseline;
+}
+.license_info_div{
+  margin-bottom: 15px; 
+  padding-bottom: 5px; 
+  border-bottom : 2px solid #cccccc;
+}
+.end_user_license{
+  border: 1px solid #CCCCCC; 
+  margin-bottom: 10px; 
+  padding: 10px 10px 10px 25px;
+  -moz-border-radius: 4px 4px 4px 4px; 
+  background-color: #F0F0F0;
+}
+#village_search_box{
+  display: block;
+  padding-bottom: 5px;
+}
+
+#village_search_box #search_id {
+  width : 184px;
+  color : #333333;
+}
+#village_list{
+  max-height: 431px;
+}
+#village_list_table{
+  border: 1px solid #CCCCCC;
+}
+#scroll{
+  overflow-y: scroll;
+}

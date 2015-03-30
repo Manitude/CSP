@@ -1,0 +1,217 @@
+<style type="text/css">
+  #profile .header {
+    border-bottom:1px solid #CCCCCC;
+  }
+  .learner_table_list td.left-border, .learner_table_list th.left-border {
+    border: none;
+    border-left: 1px solid #CCCCCC;
+  }
+  .learner_table_list td, .learner_table_list th {
+    padding: 4px 2px 0 4px;
+  }
+  .learner_table_list td {
+    font-size:10px;
+  }
+  .learner_table_list_center_align {
+    text-align: center;
+  }
+  .learner_table_list_left_align {
+    text-align: left;
+  }
+  .learner_table_list th {
+    text-transform: none;
+    font-size: 9px;
+  }
+  .learner_table_list th.t0,.learner_table_list td.t0 {
+    width:135px;
+  }
+
+
+  .history_center {
+    padding-left:6px !important;
+  }
+  table.learner_table_list thead tr .header{
+    background-image: url("/images/bg.gif");
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-left: 2px;
+  }
+  table.learner_table_list thead tr .headerSortUp {
+    background-image: url("/images/asc.gif");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  table.learner_table_list thead tr .headerSortDown {
+    background-image: url("/images/desc.gif");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  table.learner_table_list{
+    border: 1px solid #CCCCCC;
+    clear:both;
+  }
+  #profile .unsortable {
+    border-bottom:1px solid #CCCCCC;
+    font-weight: bold;
+    padding: 9px 3px 5px 5px;
+    background-color: #dddddd;
+  }
+  #profile .header{
+    background-color: #dddddd;
+    color: #000000;
+    padding: 9px 3px 5px 5px;
+  }
+  #learner_language_div {
+    margin-top:  25px;
+  }
+  #learner_language_label, #date_label {
+    font-weight:bold;
+  }
+  #profile_link{
+    float: left;
+    margin-left: 7px;
+  }
+  #studio-history-page-heading{
+    font-weight: bold;
+    font-size: 1.5em;
+    float: left;
+  }
+  #studio_history_today_date{
+    padding-bottom: 5px;
+  }
+
+  #feedback_export_to_csv__button_id {
+    border-radius : 7px;
+    margin-right: 8px;
+    float:right;
+  }
+</style>
+<div>
+  <div id="studio-history-page-heading"> <%= "Studio History for " + @learner.name  %> </div>
+  <div id="profile_link">
+    <%= link_to_learner_profile("Back to learner's profile page", @learner) %>
+  </div>
+  <br/>
+  <div  id="studio_history_today_date">
+    <span id ="date_label">Today's Date:</span> <%= get_today_date %>
+  </div>
+</div>
+<div class="form_container">
+  <div id="profile">
+    <div class="student_studio_history" id="student_studio_history">
+      <div id="eschool" style="padding:10px">
+        <% if !student.eschool_sessions.blank? -%>
+          <div id="learner_language_div" >
+            <span id="learner_language_label"> Language being learned:</span>
+            <span id="learner_language_value"><%= " #{name_from_code student.eschool_sessions[0].language_code}"%></span>
+          </div>
+        <% end %>
+        <table id="myTable" class="learner_table_list" style="width:100%">
+          <% if !student.eschool_sessions.blank? -%>
+            <thead style="display:block;">
+              <tr>
+                <th class="left-border" style="width:137px">Date & Time (EST)</th>
+                <th class="left-border unsortable" style="width:162px">Learner Date & Time (<%= ActiveSupport::TimeZone[student.time_zone].now.zone %>)</th>
+                <th class="left-border unsortable" style="width:42px">Level</th>
+                <th class="left-border unsortable" style="width:35px">Unit</th>
+                <th class="left-border" style="width:71px">Attended</th>
+                <th class="left-border learner_table_list_center_align unsortable" style="width:213px">Coach</th>
+                <th class="left-border unsortable" style="width:57px">Duration</th>
+                <th class="left-border learner_table_list_center_align unsortable" style="width:62px"> Feedback</th>
+                <th class="left-border" style="width:77px">Tech Issues</th>
+                <th class="left-border" style="width:89px">Followup?</th>
+              </tr>
+            </thead>
+            <tbody style ="overflow-y:auto; max-height:350px;display:block;">
+              <% student.eschool_sessions.each do |es| %>
+                <tr style="">
+                  <% feedback_for_session = (es.attributes.include?("feedbacks") && !es.feedbacks.blank?) ? es.feedbacks : [] %>
+                  <% feedback_hash = feedback_hash_formation(feedback_for_session)%>
+                  <td class="learner_table_list_left_align left-border history_center" style="width:115px"><%= es.start_time.to_time.in_time_zone("Eastern Time (US & Canada)").strftime("%m/%d/%y %I:%M %p") %></td>
+                  <td class="learner_table_list_left_align left-border history_center" style="width:137px"><%= es.start_time.to_time.in_time_zone(student.time_zone).strftime("%m/%d/%y %I:%M %p") %></td>
+                  <td class="learner_table_list_left_align left-border history_center" style="width:39px"><%= es.level %></td>
+                  <td class="learner_table_list_left_align left-border history_center" style="width:32px"><%= es.unit %></td>
+                  <td class="learner_table_list_center_align left-border history_center" style="width:67px"><%= es.attended == "true" ? "Attended" : es.cancelled == "true" ? "Cancelled" : (DateTime.parse(es.start_time) > Time.now.utc) ? "Future" : "Skipped" %></td>
+                  <td class="learner_table_list_left_align left-border history_center" style="width:175px"><%= es.attributes.include?("coach_id") ? ((es.coach_id && manager_logged_in?) ? (link_to_function  es.coach, "linkToCoachProfile(#{es.coach_id},#{coach_found_in_csp(es.coach_id)})") : es.coach) : (es.coach = "n/a") %></td>
+                  <td class="learner_table_list_center_align left-border history_center" style="width:54px"><%= es.last_seen_at && es.first_seen_at ? difference_of_time_mmss(es.last_seen_at.to_time, es.first_seen_at.to_time) : "--" %></td>
+                  <td class="learner_table_list_center_align left-border history_center" style="width:59px"><%= (link_to_function  "View", "feedbackCaller(#{feedback_for_session.to_json},'#{escape_single_quotes(es.coach)}','#{es.attributes.include?("coach_id") ? es.coach_id : nil}','#{es.start_time.to_time.in_time_zone("Eastern Time (US & Canada)").strftime("%m/%d/%y %I:%M %p")}','#{name_from_code es.language_code}')")  %></td>
+                  <td class="learner_table_list_center_align left-border history_center" style="width:68px"><%= es.technical_issues == "true" ? "YES" : "NO" %></td>
+                  <td class="learner_table_list_center_align left-border history_center" style="width:64px"><%= !feedback_for_session.blank? ? (feedback_hash["followup"] ? (feedback_hash["followup"].value ? feedback_hash["followup"].value[0..2].upcase : "N/A") :  "N/A") : "N/A"%></td>
+                </tr>
+              <% end %>
+            </tbody>
+          <% else -%>
+            <p class="notice">No studio sessions found for this user.</p>
+          <% end -%>
+        </table>
+      </div>
+      <div id="export_feedback_to_csv"> <%= form_tag('/export_student_history_to_csv',:method=>'get',:id => 'feedback_export_to_csv_form') do %>
+          <%= hidden_field_tag :learner_guid, @learner.guid%>
+          <% unless student.eschool_sessions.blank? %>
+            <input type="submit" id="feedback_export_to_csv__button_id" value="Export as .CSV"/>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag 'jquery-latest.js', 'jquery.tablesorter.js','facebox.js','jquery.alerts.js' %>
+<script type="text/javascript">
+  $(document).ready(function()
+  {
+    $("#myTable").tablesorter({
+      headers: {
+        1: {
+          sorter: false
+        },
+        2: {
+          sorter: false
+        },
+        3: {
+          sorter: false
+        },
+        5: {
+          sorter: false
+        },
+        7: {
+          sorter: false
+        }
+      }
+    });
+  });
+
+  function feedbackCaller(feedback_array_json,coach_name,coach_id,start_time,language_name){
+    var path = '/student_evaluation_feedback';
+    jQuery.facebox(function (){
+      jQuery.ajax({
+        type: "post",
+        async: true,
+        data: {
+          feedback_array_json: feedback_array_json,
+          coach_name: coach_name,
+          coach_id: coach_id,
+          start_time: start_time,
+          language_name: language_name
+        },
+        url: path,
+        success: function(data){jQuery.facebox(data);}
+
+      });
+    });
+  }
+
+  function linkToCoachProfile(coach_id,coach_found_in_csp){
+    if (coach_found_in_csp){
+      var path = "/view-coach-profiles?coach_id="+coach_id;
+      window.location.href = path;
+    }else {
+      alert("Coach Profile does not exist.");
+    }
+  }
+ 
+  //$(document).ready(function()
+  //{
+  //  $("#myTable").tablesorter( {sortList: [[0,0], [1,0]]} );
+  //}
+  //);
+</script>

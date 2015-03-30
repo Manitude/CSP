@@ -1,0 +1,35 @@
+<div class="admin_dashboard_item">
+  <h3>Master Scheduler Push Lock</h3>
+  <% if master_scheduler_sessions_data.size >0 %>
+    <table id = "admin_dashboard_table">
+      <thead style ="background-color: #FFF;">
+        <tr>
+          <th>Language</th>
+          <th>Total Sessions</th>
+          <th>Time When Pushed</th>
+          <th>&nbsp;</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% master_scheduler_sessions_data.each do |sess|%>
+          <tr>
+            <td><%= get_language_text sess.lang_identifier %></td>
+            <td><%= get_text sess.total_sessions %></td>
+            <td><%= get_rel_time sess.created_at %></td>
+            <td>
+              <% form_tag({:action => 'release_lock', :session_record_id => sess.id },
+                :update => "sess_id#{sess.id}", :remote => true) do -%>
+                <div id="sess_id<%=sess.id%>">
+                  <input type="submit" id="release<%=sess.id%>" class="button-link link remove_link_decor" value="Release Lock" onclick="return confirmAndProceed('cancel<%=sess.id%>','ajaxLoader<%=sess.id%>','reassign_block<%=sess.id%>') "/>
+                  <%= image_tag 'spinner_transp.gif',:id => "ajaxLoader#{sess.id}", :style => "display :none" %>
+                </div>
+              <% end -%>
+            </td>
+          </tr>
+        </tbody>
+      <% end %>
+    </table>
+  <%else%>
+    <div class="admin_dashboard_sub_item"> Currently there are no sessions being pushed to Eschool </div>
+  <%end%>
+</div>

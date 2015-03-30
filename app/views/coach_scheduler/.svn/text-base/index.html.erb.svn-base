@@ -1,0 +1,39 @@
+<% if @data[:coach].present? %>
+  <a id="avail_link" href="/availability/<%= @data[:coach].id %>">Edit this Coach's Availability</a>
+  <style type="text/css">
+    .justclear{clear:none}
+  </style>
+<% end %>
+<div id="header_date_div">
+  <div>
+    <div id='coach_info_div'>
+      <% if (coach_dialect = @data[:coach].try(:dialects)).present? %>
+      <div><span id="coach_dialect">Dialects: </span><%= coach_dialect.collect(&:name).uniq.to_sentence %></div>
+      <% end %>
+      <span id="today_date">Today's Date: </span><span> <%= today_date %></span>
+    </div>
+    <%= render 'coach_session_info_details' %>
+  </div>
+  <div id="substitution_alert_div"></div>
+  <%= hidden_field_tag 'substitution_refresh_time', SUBSTITUTION_DATA_REFRESH_TIME %>
+  <%= hidden_field_tag 'substitution_alert_div_size', 0 %>
+  <div id="scheduler_form_data">
+    <%= render :partial => 'coach_scheduler_form' %>
+  </div>
+</div>
+<% if @data[:coach].present? %>
+  <br/><%=hidden_field_tag 'selected_coach', @data[:coach].id %>
+  <%= hidden_field_tag 'is_only_aria', @data[:coach].is_only_aria? %>
+  <%= hidden_field_tag 'is_totale', @data[:coach].is_totale? %>
+  <%= hidden_field_tag 'allow_session_creation_after', @data[:allow_session_creation_after] %>
+  <div id="filter_language_div">
+    <span style="font-weight: bold;">Filter Schedule by :</span><%= select_tag 'filter_language', coach_languages(@data[:coach].id, @data[:filter_language], false, true, false, nil, false, false, false, false,false, true),:class => "dropdown longer_dropdown" %>
+  </div>
+  <div id="week-calendar"></div>
+  <script type="text/javascript">
+      data = <%= @data[:schedules] %>;
+      now = <%= @data[:now] %>;
+  </script>
+<% end %>
+<%= javascript_include_tag 'coach_scheduler', 'substitution', 'date_navigator' %>
+<%= stylesheet_link_tag 'coach_scheduler', 'date_navigator', 'scheduler' %>

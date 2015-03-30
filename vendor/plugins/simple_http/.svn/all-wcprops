@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/WebDev/!svn/ver/71511/plugins/simple_http/trunk
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/WebDev/!svn/ver/68739/plugins/simple_http/trunk/init.rb
+END
+install.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/68739/plugins/simple_http/trunk/install.rb
+END
+uninstall.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/68739/plugins/simple_http/trunk/uninstall.rb
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/19447/plugins/simple_http/trunk/README
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/19390/plugins/simple_http/trunk/Rakefile
+END

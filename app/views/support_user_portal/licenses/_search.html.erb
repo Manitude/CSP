@@ -1,0 +1,19 @@
+<div style="float:left">
+  <fieldset>
+
+    <div id="license_identifier_search">
+      <%= form_tag :url => {:controller => 'support_user_portal/licenses', :action =>'license_details'} do %>
+        Search by:
+        <%= radio_button_tag('search_field', 'identifier', true, {:onclick => "document.getElementById('license').value = '#{params[:license_identifier]}'"}) %>
+        <%= label_tag('search_field_identifier', 'License identifier') %>
+        <%= radio_button_tag('search_field', 'GUID', false, {:onclick => "document.getElementById('license').value =''"}) %>
+        <%= label_tag('search_field_guid', 'License GUID') %>
+        <br>
+        <%= text_field_tag :license, params[:license_identifier]%>
+        <%= submit_tag 'View', :class => 'submit' %>
+      <% end %>
+    </div>
+
+  </fieldset>
+  <% if flash[:error].nil? && flash[:notice].nil? && @error %><div id="assist_error" class="error"><%= @error.to_s %></div><% end %>
+</div>

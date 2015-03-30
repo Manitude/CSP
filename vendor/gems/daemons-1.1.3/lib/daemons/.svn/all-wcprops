@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/WebDev/!svn/ver/68363/gems/daemons/1.1.3/lib/daemons
+END
+change_privilege.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/68363/gems/daemons/1.1.3/lib/daemons/change_privilege.rb
+END
+cmdline.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/68363/gems/daemons/1.1.3/lib/daemons/cmdline.rb
+END
+daemonize.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/68363/gems/daemons/1.1.3/lib/daemons/daemonize.rb
+END
+pidmem.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/68363/gems/daemons/1.1.3/lib/daemons/pidmem.rb
+END
+pid.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/68363/gems/daemons/1.1.3/lib/daemons/pid.rb
+END
+pidfile.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/68363/gems/daemons/1.1.3/lib/daemons/pidfile.rb
+END
+application_group.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/68363/gems/daemons/1.1.3/lib/daemons/application_group.rb
+END
+exceptions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/68363/gems/daemons/1.1.3/lib/daemons/exceptions.rb
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/68363/gems/daemons/1.1.3/lib/daemons/application.rb
+END
+controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/68363/gems/daemons/1.1.3/lib/daemons/controller.rb
+END
+etc_extension.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/68363/gems/daemons/1.1.3/lib/daemons/etc_extension.rb
+END
+monitor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/68363/gems/daemons/1.1.3/lib/daemons/monitor.rb
+END

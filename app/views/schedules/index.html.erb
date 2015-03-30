@@ -1,0 +1,12 @@
+<div id="header_date_div">
+  <span id="today_date">Today's Date:</span>
+  <span><%= today_date %> </span>
+  <div id="substitution_alert_div"></div>
+  <%= hidden_field_tag 'substitution_refresh_time', SUBSTITUTION_DATA_REFRESH_TIME %>
+  <%= hidden_field_tag 'substitution_alert_div_size', 0 %>
+  <div id="scheduler_form_data">
+    <%= render :partial =>'scheduler_form' %></div>
+  <div id="week-calendar"></div>
+  <%= javascript_include_tag 'scheduler', 'substitution', 'lotus', 'date_navigator' %>
+  <%= stylesheet_link_tag 'scheduler', 'lotus', 'date_navigator' %>
+</div>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/WebDev/!svn/ver/69567/plugins/baffling_api_client/trunk
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/30904/plugins/baffling_api_client/trunk/README
+END
+baffling_api_client.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/30904/plugins/baffling_api_client/trunk/baffling_api_client.yml.sample
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/30904/plugins/baffling_api_client/trunk/Rakefile
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/42284/plugins/baffling_api_client/trunk/init.rb
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/xsd
+END
+test_xmlschemaparser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/xsd/test_xmlschemaparser.rb
+END
+test_xsd.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/xsd/test_xsd.rb
+END
+xmlschema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/xsd/xmlschema.xml
+END
+test_ns.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/xsd/test_ns.rb
+END
+xmllang.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/xsd/xmllang.xml
+END
+noencoding.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/xsd/noencoding.xml
+END
+test_noencoding.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/xsd/test_noencoding.rb
+END

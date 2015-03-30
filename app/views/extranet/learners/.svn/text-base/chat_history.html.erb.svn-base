@@ -1,0 +1,50 @@
+<div class="form_container">
+  <div id="profile">
+    <p class="header">
+      <span class="header-left">View Chat history of <%= "#{@learner.first_name} #{@learner.last_name}" %></span>
+      <span class="header-right"><%= link_to_learner_profile("Back to learner's profile page", @learner) %></span>
+    </p>
+   <%if chat_history && chat_history["conversation"]%>
+      <div class="learner_moderation_table">
+      <table class='se_tab' border="1">
+        <tr>
+          <th>Other Participants</th>
+          <th>Date and Time</th>
+          <th>Text Content</th>
+          <th>Type</th>
+       </tr>
+       <% [chat_history["conversation"]].flatten.each do |conv_history| %>
+       <% [conv_history["messages"]["message"]].flatten.each do |message| %>
+       <%= (message["sender"] == @learner.guid) ? ("<tr style='background-color: #C0C0C0'>").html_safe : ("<tr>").html_safe %>
+           <td ><%= link_to message["email"],:action => "show", :guid => message["sender"] if  message["sender"] %></td>
+           <td ><%= Time.at(message["message_time"].to_i).strftime("%m/%d/%Y %H:%M:%S") %></td>
+           <td><%= wrap_long_string(message["message_text"],50) %></td>
+           <td ><%= conv_history["type"] %></td>
+        </tr>  
+      <% end %>
+      <% end %>
+        <tr>
+          <td colspan="4" align="center">
+            <% if chat_history["pagination"]["total_pages"].to_i > 1 %> 
+            <div class="pagination">
+               <%=  chat_history["pagination"]["current_page"].to_i == 1 ? '« Previous' : link_to("« Previous", chat_history_path(:id => @learner.id,:page => chat_history["pagination"]["current_page"].to_i == 1 ? chat_history["pagination"]["current_page"].to_i : chat_history["pagination"]["current_page"].to_i-1)) %>
+               <% chat_history["pagination"]["total_pages"].to_i.times do |x|%>
+                  <%= chat_history["pagination"]["current_page"].to_i == x+1 ? x+1 : link_to( x+1, chat_history_path(:id => @learner.id,:page => x+1 )) %>
+               <%end%>
+               <%=chat_history["pagination"]["current_page"].to_i == chat_history["pagination"]["total_pages"].to_i ? 'Next »' : link_to("Next »", chat_history_path(:id => @learner.id,:page => chat_history["pagination"]["current_page"].to_i == chat_history["pagination"]["total_pages"].to_i ?chat_history["pagination"]["current_page"].to_i : chat_history["pagination"]["current_page"].to_i+1 )) %>
+            </div>
+             <%end%>
+          </td>
+        </tr>
+    </table>
+   </div>
+  <% else %>
+    <% unless chat_history %>
+      <p class="notice">Sorry, either Baffler API is down or the server encountered an error.</p>
+    <% else %>
+      <p class="notice">No chat history found.</p>
+    <% end %>
+  <%  end %>
+  <p class="header" style="border-bottom:none"></p>
+ </div>
+</div>

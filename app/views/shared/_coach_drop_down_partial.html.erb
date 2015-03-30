@@ -1,0 +1,8 @@
+<div style="float:left;margin-left:20px;margin-right: -25px">
+  Requested By/For:<br>
+  <%=  select_tag :coach_id, options_for_coach_for_sub_report(@coach_array, @selection_coach), {:class =>'select_class', :style=>'width: 110px;height:23px;'} -%>
+</div>
+<div style="float:right;margin-right:20px;margin-left: -25px">
+  Grabbed By:<br>
+  <%=  select_tag :grabber_coach_id, options_for_grabber_coach_for_sub_report(@coach_array, @grabber_coach), {:class =>'select_class', :style=>'width: 110px;height:23px;'} -%>
+</div>

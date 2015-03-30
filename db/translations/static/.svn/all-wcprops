@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/WebDev/!svn/ver/79493/translation_csvs/static
+END
+countries.csv
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/42259/translation_csvs/static/countries.csv
+END
+time_zones.csv
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/48519/translation_csvs/static/time_zones.csv
+END
+date_times.csv
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/79232/translation_csvs/static/date_times.csv
+END
+languages.csv
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/79493/translation_csvs/static/languages.csv
+END
+product_languages.csv
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/79312/translation_csvs/static/product_languages.csv
+END
+rs_locales.csv
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/48517/translation_csvs/static/rs_locales.csv
+END

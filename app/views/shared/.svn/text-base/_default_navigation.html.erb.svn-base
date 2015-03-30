@@ -1,0 +1,77 @@
+<div id="main-navigation">
+  <div id="left-nav">
+    <ul>
+      <% default_navigation_items.each do |nav| %>
+        <% if nav == currently_selected_default_nav_item  && params[:view_access] != 'true' %>
+          <% subnav_items = currently_selected_default_nav_item && currently_selected_default_nav_item[:subnav_items] %>
+          <li class="current <%='has-child' if subnav_items && subnav_items.any?%>">
+            <% if nav[:url_options] %>
+              <%= link_to(nav[:link_text], nav[:url_options]) %>
+            <%  elsif nav[:function_name] %>
+              <% function_params = "('" %>
+              <% nav[:function_params].each do |fp| %>
+                <%  function_params = function_params + fp + "','" %>
+              <% end %>
+              <% function_params = function_params.chop.chop + ")" %>
+              <%= link_to_function(nav[:link_text], nav[:function_name]+function_params) %>
+            <% end %>
+          </li>
+          <% if subnav_items && subnav_items.any? %>
+            <li>
+              <ul class="sub_navigation">
+                <% subnav_items.each do |item| %>
+                <% ele_class = ((item == currently_selected_default_sub_nav_item) ? 'active' : 'main') + ((item == currently_selected_default_sub_nav_item && item[:subnav_items])? ' has-child' : '')%>
+                  <li class = '<%= ele_class %>' >
+                    <% if item[:url_options] %>
+                      <%= link_to(item[:link_text], "/#{item[:url_options]}") %>
+                    <%  elsif item[:function_name] %>
+                      <% function_params = "('" %>
+                      <% item[:function_params].each do |fp| %>
+                        <%  function_params = function_params + fp + "','" %>
+                      <% end %>
+                      <% function_params = function_params.chop.chop + ")" %>
+                      <%= link_to_function(item[:link_text], item[:function_name]+function_params) %>
+                    <% else %>
+                      <% if item[:link_text]=='Session practice'%>
+                        <%= link_to(item[:link_text], {},{:href=>item[:controller]}) %>
+                      <% elsif item[:link_text]=='Success Correspondence'%>
+                        <%= link_to(item[:link_text], {},{:href=>item[:controller]}) %>
+                      <%  else %>
+                        <%= link_to(item[:link_text], { :controller => item[:controller], :action => item[:action] }) %>
+                      <% end %>
+                    <% end %>
+                  </li>
+                  <% if item == currently_selected_default_sub_nav_item && item[:subnav_items] %>
+                  <ul class="sub_sub_navigation">
+                    <%sub_nav_items = item[:subnav_items]%>
+                    <% sub_nav_items.each do |sub_item| %>
+                      <li class = <%= currently_selected?(sub_item) ? 'active' : 'main' %> >
+                        <%= link_to(sub_item[:link_text], { :controller => sub_item[:controller], :action => sub_item[:action] }) %>
+                      </li>
+                    <%end%>
+                  </ul>
+                  <%end%>
+                <% end %>
+              </ul>
+            </li>
+          <% end %>
+        <% else %>
+          <li class="main">
+            <% if nav[:url_options] %>
+              <%= link_to(nav[:link_text], nav[:url_options]) %>
+            <%  elsif nav[:function_name] %>
+              <% function_params = "('" %>
+              <% nav[:function_params].each do |fp| %>
+                <%  function_params = function_params + fp + "','" %>
+              <% end %>
+              <% function_params = function_params.chop.chop + ")" %>
+              <%= link_to_function(nav[:link_text], nav[:function_name]+function_params) %>
+            <% elsif nav[:link_text]=='Success Correspondence'%>
+                 <%= link_to(nav[:link_text], {},{:href=>nav[:controller]}) %>
+            <% end %>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+</div>

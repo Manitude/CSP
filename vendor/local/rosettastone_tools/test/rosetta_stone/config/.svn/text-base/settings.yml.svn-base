@@ -1,0 +1,4 @@
+overridden: true
+deep_merge_test:
+  overridden: 2
+  original: 2

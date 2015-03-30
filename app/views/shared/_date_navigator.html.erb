@@ -1,0 +1,10 @@
+<div id ="calendar_data">
+  <input id="today_button" type="button" value="Today" />
+  <span id="calender_date_box">
+    <%= link_to_function image_tag('previous.png', :id => "previous_week", :alt => "Previous Week" , :title => "Previous Week"), ""  %>
+    <input type="text" id="start_date" value="<%= week_start %>" />
+    -
+    <input type="text" id="end_date" value="<%= week_end %>" />
+    <%= link_to_function image_tag('next.png', :id => "next_week", :alt => "Next Week" , :title => "Next Week"), "" %>
+  </span>
+</div>

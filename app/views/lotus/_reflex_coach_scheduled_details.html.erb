@@ -1,0 +1,40 @@
+
+<div class ="popup_learner_container">
+    <% if @coaches.blank? %>
+        <div style ="float: left"><div id="message"><%= "No coaches available" %></div></div>
+    <% else %>
+        <div class="popup_coach_list_with_time">
+            <table id="popup_coach_list_entries" >
+                <thead>
+                    <tr>
+                        <th scope="col" width="200px">Coach</th>
+                        <th scope="col">In Player At</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @coaches.each do |coach| %>
+                    <tr>
+                        <td <% if !coach[:in_player] %>style = "color: red"<% end %>><%= coach[:name] %></td>
+                        <% if !coach[:in_player] %>
+                            <td style = "color: red">Not In Player</td>
+                        <% else %>
+                            <td>
+                                <% if coach[:logins].present? %>
+                                    <a id="entry_time" coachid="<%= coach[:coach_id] %>" coachname="<%= coach[:name] %>" ><%= coach[:logins].first.in_time_zone("Eastern Time (US & Canada)").strftime("%I:%M %p") %><a>
+                                <% else %>
+                                    No login history found. 
+                                <% end %>
+                            </td>
+                        <% end %>
+                    </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    <% end %>
+</div>
+<%= javascript_tag do %>
+  jQuery(document).ready(function() {
+    setFaceboxWidth();
+  });
+<% end %>

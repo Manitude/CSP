@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/test/component
+END
+test_todo.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/test/component/test_todo.rb
+END
+test_timezone.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/test/component/test_timezone.rb
+END
+test_event.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/test/component/test_event.rb
+END

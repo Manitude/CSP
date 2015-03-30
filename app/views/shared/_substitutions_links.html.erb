@@ -1,0 +1,76 @@
+<style type="text/css">
+  /*  background: none repeat scroll 0 0 #F3F2EF;*/
+  #substitutions_navigation_tab {
+    border-bottom: 1px solid #CCCCCC;
+    margin-bottom: 1em;
+    margin-top: 2em;
+    padding: 6px 0 1px;
+    position: relative;
+    right: 20px;
+    width: 104%;
+  }
+  #substitutions_navigation_tab ul {
+    height: 1%;
+    margin-bottom: -2px;
+    margin-left: 1em;
+    overflow: hidden;
+  }
+  #substitutions_navigation_tab ul li {
+    color: #0098DB;
+    float: left;
+    font-size: 1.2em;
+    margin-bottom: -2px;
+    margin-right: 2px;
+  }
+  #substitutions_navigation_tab ul li a {
+    border-bottom: 0 none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    display: block;
+    padding: 7px 10px;
+  }
+  #substitutions_navigation_tab ul li a:hover {
+    border-bottom: 0 none;
+    color: #333333;
+    display: block;
+    padding: 7px 10px;
+    text-decoration: none;
+  }
+  #substitutions_navigation_tab ul li a.current {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-color: #CCCCCC #CCCCCC -moz-use-text-color;
+    border-style: solid solid none;
+    border-width: 1px 1px 0;
+    color: #0098DB;
+    padding: 7px 10px;
+  }
+</style>
+
+<% if page_title.to_s == "Manage Substitutions" %>
+  <div id ="substitutions_navigation_tab">
+    <ul>
+      <li>
+        <span class = "left-space"> <%= link_to "Manage Substitutions", manager_substitutions_path, {:class => "current"} %> </span>
+      </li>
+      <li>
+        <span class = "left-space"> <%= link_to "Substitutions Report", substitutions_report_path %> </span>
+      </li>
+    </ul>
+  </div>
+<% elsif page_title.to_s == "Substitutions Report"-%>
+  <div id ="substitutions_navigation_tab">
+    <ul>
+      <li>
+        <span class = "left-space"> <%= link_to "Manage Substitutions", manager_substitutions_path %> </span>
+      </li>
+      <li>
+        <span class = "left-space"> <%= link_to "Substitutions Report", substitutions_report_path, {:class => "current"} %> </span>
+      </li>
+    </ul>
+  </div>
+<% end -%>

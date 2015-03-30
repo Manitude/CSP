@@ -1,0 +1,32 @@
+<%if !@view_access_flag%>
+  <% if params[:is_combined_page] != "true" %>
+    <h2><%= @page_title_new %></h2>
+    <span style="padding-left:10px; font-size: 10px;">
+      <%if can_view_license_link?%>
+        <%= link_to("View Learner Profile", "/view_learner/#{@learner.guid}") %>
+        <span style="padding:0 5px;vertical-align:baseline;">|</span>
+      <%end%>
+      <%= link_to("New Search", learners_path) %>
+    </span>
+  <%end%>
+<%end%>
+<div class="form_container">
+  <div id="profile">
+    <%= render :partial => "general_profile_info" %>
+    <div>
+      <div class="float_left" style="clear:left; width:45%">
+        <%= render :partial => "languages" %>
+        <%= render :partial => "studio_info" if @learner.can_show_studio_info? %>
+      </div>
+    </div>
+    <div class="float_left" style="clear:right; width:45%">
+      <%= render :partial => "days_logged_in", :locals => { :course_tracking_info => @learner.baffler_course_tracking_info, :learner => @learner, :baffler_path_scores => nil } %>
+    </div>
+      <%= render :partial =>"reflex_conversation" if @learner.can_show_reflex_conversation? %>
+      <%= render :partial => "recent_course_info", :locals => { :course_tracking_info => @baffler_course_tracking_info, :learner => @learner, :baffler_path_scores => nil, :lang => @lang, :level => @level } if @learner.can_show_course_info? %>
+      <%= render :partial => "rworld_info", :locals => { :baffler_details => @baffler_details, :social_app_languages => @baffler_social_app_languages, :connections_count => @connections_count } %>
+      <%= render :partial => "time_on_languages", :locals => { :baffler_time_spent_on_languages => @baffler_time_spent_on_languages } unless @baffler_time_spent_on_languages.blank? %>
+      <%= render :partial => "moderation_details",:locals => {:learner => @learner}%>
+    <p class="header" style="border-bottom:none"></p>
+  </div>
+</div>

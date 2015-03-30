@@ -1,0 +1,3 @@
+Rosetta Stone local modifications:
+ * added 'lib/rosettastone' to the require_paths in .specification and the .gemspec file
+ * added files in lib/rosettastone to implement platform-specific loading

@@ -1,0 +1,19 @@
+<%= javascript_include_tag 'facebox' %>
+<div id="logged_in_info">
+  <p class="header">Days Logged In</p><br />
+  <div class="wide_label_row">
+    <span class="formw">
+      <%= link_to_function "Logged In History", "fixedFacebox('#{logged_in_history_path(:id => @learner.id)}')"  %>
+    </span>
+  </div>
+  <div class="wide_label_row">
+    <span class="label">Last Logged in</span>
+    <span class="formw"><%= @last_logged_in %></span>
+  </div>
+  <br/>
+  <div class="wide_label_row">
+    <span class="label"> <div id="calendar">
+        <%= render :partial=> "shared/extranet/my_calendar", :locals => {:days_logged_in => @days_logged_in}%>
+      </div></span>
+  </div>
+</div>

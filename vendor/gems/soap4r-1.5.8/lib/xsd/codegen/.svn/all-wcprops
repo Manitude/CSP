@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/codegen
+END
+classdef.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/codegen/classdef.rb
+END
+moduledef.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/codegen/moduledef.rb
+END
+gensupport.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/codegen/gensupport.rb
+END
+methoddef.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/codegen/methoddef.rb
+END
+commentdef.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/xsd/codegen/commentdef.rb
+END

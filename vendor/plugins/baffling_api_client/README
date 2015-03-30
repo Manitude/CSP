@@ -1,0 +1,10 @@
+Baffling Api Client
+===================
+
+You can use this client to connect to the baffling API of Baffler.
+
+ * Hook up this plugin in your app.
+ * Use the basic format of baffling_api_client.yml.sample to create a baffling_api_client.yml in your app's config directory.
+ * Do stuff with the client.
+
+More information can likely be found in the story documentation for Baffler.

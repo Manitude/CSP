@@ -1,0 +1,117 @@
+  <%= stylesheet_link_tag 'tier1' %>
+  <%= javascript_include_tag 'jquery-latest.js', 'jquery.tablesorter.js','facebox.js','jquery.alerts.js', 'support_user_portal/available_sessions.js' %>
+  <script type="text/javascript">
+      var reload_url = '<%= @reload_url %>';
+  </script>
+  <style type="text/css">
+    #teacher #content {overflow:visible; height:auto; clear:both;}
+    #header {overflow:visible}
+    label {display:inline}
+    #extranet #content table th {text-align:center;}
+    #classroom_type_div {margin-bottom: 10px;}
+  </style>
+
+<div style=" margin-bottom: 10px;"><%= link_to 'Back to Learner Profile', "/view_learner/#{@user.guid}" if @user %></div>
+
+<div class="language_village_info">
+  <span id ="language_name" style="padding-right: 20px;">Language: <%= @language %></span>
+  <span id ="village_name">Village:  <%= @village %></span>
+</div>
+<% if(@show_solo_sessions && @show_group_sessions) %>
+  <div id="classroom_type_div">
+    Classroom Type: 
+    <%= select_tag 'classroom_type', options_for_select([ ["All" , "all"], ["Solo" , "solo"], ["Group" , "group"] ], params[:classroom_type]), :class => "dropdown" %>
+  </div>
+<% end %>
+<% if @eschool_sessions.any? %>
+  <table id ="sessions_table" summary="dashboard_data" class="tier1_table_list tablesorter">
+    <thead>
+      <tr>
+        <th>Date & Time (<%= Time.now.in_time_zone(current_user.tzone).strftime("%Z")%>)</th>
+        <th>Learner Date & Time (<%= Time.now.in_time_zone(@learner_timezone).strftime("%Z")%>)</th>
+        <th class="unsortable">Level</th>
+        <th class="unsortable">Unit</th>
+        <th class="unsortable">Lesson</th>
+        <th class="unsortable">Wildcard?</th>
+        <th>Coach</th>
+        <th class="unsortable">Learners/Seats</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @eschool_sessions.each do |es| %>
+        <tr>
+          <td><%= es.user_start_time %></td>
+          <td><%= es.learner_start_time %></td>
+          <td><span class="learners_level"><%= es.level %></span></td>
+          <td><span class="learners_unit"><%= es.unit %></span></td>
+          <td><span class="learners_lesson"><%= es.lesson %></span></td>
+          <td <%= 'style="text-align:center;"' if es.wildcard_display == "-" %> ><span class="learners_wildcard"><%= es.wildcard_display %></span></td>
+          <td><%= es.teacher %></td>
+          <td style="text-align: center;">
+            <%= link_to_function es.filled_seats, "fixedFacebox('#{attendances_path(
+                  :number_of_seats => es.number_of_seats, 
+                  :license_identifier => @license_identifier, 
+                  :guid => @guid, 
+                  :lang_identifier => @lang_identifier, 
+                  :level_string => @level_string,
+                  :session_id => es.session_id, 
+                  :class_id => es.eschool_class_id, 
+                  :product_right_ends_at => @product_right_ends_at, 
+                  :current_page => (@pagination && @pagination.current_page), 
+                  :session_details => es.start_time.to_time.in_time_zone(current_user.tzone).strftime("%a %m/%d/%y %l:%M %p").gsub(' ', '&nbsp;'), 
+                  :wildcard_units => (es.wildcard == 'true' && es.wildcard_locked == 'false' ? es.wildcard_units : ''),
+                  :show_solo_sessions => @show_solo_sessions,
+                  :show_group_sessions => @show_group_sessions,
+                  :level => es.level,
+                  :unit => es.unit,
+                  :lesson => es.lesson
+              )}')", :class => 'learners_seats', :no_of_seats => es.number_of_seats %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+      <% if @pagination && @pagination.total_pages.to_i > 1 %>
+        <table width ="100%">
+      <tr>
+        <td colspan="8" align="center" style="text-align: center">
+          <div class="pagination">
+            <% if @pagination && @pagination.current_page.to_i == 1 %>
+              <%= "<< Previous"%>
+            <% else %>
+              <%= link_to("<< Previous", eschool_sessions_path(:license_identifier => @license_identifier ,:guid => @guid, :lang_identifier => @lang_identifier ,:level_string => @level_string,:product_right_ends_at => @product_right_ends_at,:requested_page => @pagination.current_page.to_i-1, :classroom_type => params[:classroom_type], :solo_available_from => params[:solo_available_from], :group_available_from => params[:group_available_from], :is_old_learner => params[:is_old_learner])) %>
+            <% end %>
+            <% @pagination && @pagination.total_pages.to_i.times do |x|%>
+              <% if @pagination && @pagination.current_page.to_i == (x+1) %>
+                <%= x+1 %>
+              <% else %>
+                <%= link_to( x+1, eschool_sessions_path(:license_identifier => @license_identifier , :guid => @guid,:lang_identifier => @lang_identifier ,:level_string => @level_string,:product_right_ends_at => @product_right_ends_at,:requested_page => x+1, :classroom_type => params[:classroom_type], :solo_available_from => params[:solo_available_from], :group_available_from => params[:group_available_from], :is_old_learner => params[:is_old_learner])) %>
+              <% end %>
+            <%end%>
+            <% if @pagination && (@pagination.current_page.to_i == @pagination.total_pages.to_i) %>
+              <%= "Next >>"%>
+            <% else %>
+              <%= link_to("Next >>", eschool_sessions_path(:license_identifier => @license_identifier , :guid => @guid,:lang_identifier => @lang_identifier ,:level_string => @level_string,:product_right_ends_at => @product_right_ends_at,:requested_page => @pagination.current_page.to_i+1, :classroom_type => params[:classroom_type], :solo_available_from => params[:solo_available_from], :group_available_from => params[:group_available_from], :is_old_learner => params[:is_old_learner])) %>
+            <% end %>
+          </div>
+        </td>
+      </tr>
+    </table>
+  <%end%>
+  <div style="text-align:right;">
+    <%= form_tag('export-sessions-to-csv',:method=>'get',:id => 'show') do %>
+      <%= hidden_field_tag :license_identifier, @license_identifier %>
+      <%= hidden_field_tag :lang_identifier, @lang_identifier %>
+      <%= hidden_field_tag :guid, @guid %>
+      <%= hidden_field_tag :level_string, @level_string %>
+      <%= hidden_field_tag :product_right_ends_at, @product_right_ends_at %>
+      <%= hidden_field_tag :content_range_array, @content_range_array %>
+      <br/><br/>
+      <div>
+        <input type="submit" id="csv_button_id" value="Export as .CSV"/>
+      </div>
+    <%end%>
+  </div>
+<% else %>
+  <p>There are no Sessions occurring now.</p>
+<% end %>

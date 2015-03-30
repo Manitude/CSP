@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/WebDev/!svn/ver/158391/plugins/lcdb_client/lib
+END
+LCDBServices.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/157082/plugins/lcdb_client/lib/LCDBServices.wsdl
+END
+ClaimServices.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/111641/plugins/lcdb_client/lib/ClaimServices.wsdl
+END
+lcdb_client.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/158391/plugins/lcdb_client/lib/lcdb_client.rb
+END
+PaymentService.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/111117/plugins/lcdb_client/lib/PaymentService.wsdl
+END

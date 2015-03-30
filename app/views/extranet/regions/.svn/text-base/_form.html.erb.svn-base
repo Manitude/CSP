@@ -1,0 +1,12 @@
+<%= form_for(@region) do |f| %>
+  <%= f.error_messages %>
+  <p class="subnote">Fields labeled with <i>*</i> are required.</p>
+  <div class="formfield">
+    <div class="field">
+      <span class="required">*</span>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <p><%= f.submit 'Save' %></p>
+  </div>
+<% end %>

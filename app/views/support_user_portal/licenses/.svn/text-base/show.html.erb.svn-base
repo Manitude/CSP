@@ -1,0 +1,48 @@
+<%= stylesheet_link_tag 'tier1' %>
+<style type="text/css">
+  #teacher #content {overflow:visible; height:auto; clear:both;}
+  #header {overflow:visible}
+  label {display:inline}
+</style>
+<%= stylesheet_link_tag 'boxbox' %>
+<%= javascript_include_tag 'support_user_portal/cordinc_tooltip', 'support_user_portal/boxbox', 'support_user_portal/editor_usability_enhancements' %>
+<%= render :partial => 'support_user_portal/licenses/search' %>
+<% if @details != '' && @details != 'Error' %>
+
+  <br style="clear:both"/>
+
+  <div id="license_details">
+    <div id="main">
+      <h2><%= @details["identifier"] %><span style="font-size: 12px; padding-left: 10px; font-weight: normal;"><%= link_to "View Learner Profile", hash_for_view_access_log_path(:license_guid => @details["guid"]) %></span></h2>
+      <%= render :partial => 'support_user_portal/licenses/details' %>
+
+      <% if @prights %>
+        <table summary="product rights" id="product_rights">
+          <caption>Product Rights</caption>
+          <thead>
+            <tr>
+              <th>Lang/Ver/Family</th>
+              <th>Content Ranges</th>
+              <th>Valid Through</th>
+              <th>Projected Through</th>
+              <th>Activation ID</th>
+              <th>GUID</th>
+              <th>Extensions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <%= render :partial => 'support_user_portal/licenses/product_right' %>
+          </tbody>
+        </table>
+
+        <div id="tool_tip_container">
+          <div id="tool_tip_successor"></div>
+        </div>
+      <% end %>
+    </div>
+    <br style="clear: both" />
+  </div>
+
+<% else %>
+  <%= @details.to_s %>
+<% end %>

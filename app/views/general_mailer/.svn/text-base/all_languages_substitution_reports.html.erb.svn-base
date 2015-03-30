@@ -1,0 +1,16 @@
+Hi <%= @user_preferred_name %>,
+<br/><br/>
+Please find the Substitution Report you requested at <%= TimeUtils.format_time(nil,"%m/%d/%y %I:%M %p %Z") %> attached to this email for the following filters:
+<br>
+Sessions occuring : <%= @time_period %><br>
+Langauge : <%= @lang %><br>
+Requested By/For : <%= @requested_by %><br>
+Grabbed By : <%= @grabbed_by %><br>
+<br/>
+<br/>
+<br/><br/>
+Customer Success Portal<br/>
+http://coachportal.rosettastone.com<br/>
+<img src="http://coachportal.rosettastone.com/images/rs_logo_mail.png" alt="" />
+<br/>
+Please consider the environment before printing this e-mail.

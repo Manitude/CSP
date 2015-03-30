@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/extranet
+END
+_events.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/extranet/_events.html.erb
+END
+_search.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/extranet/_search.html.erb
+END
+_sub_navigation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/extranet/_sub_navigation.html.erb
+END
+_calendar.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/extranet/_calendar.html.erb
+END
+_notifications.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/extranet/_notifications.html.erb
+END
+calendar.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/extranet/calendar.html.erb
+END
+_moderator_navigation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/extranet/_moderator_navigation.html.erb
+END
+_my_calendar.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/extranet/_my_calendar.html.erb
+END
+_navigation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/extranet/_navigation.html.erb
+END
+_substitutions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/extranet/_substitutions.html.erb
+END
+_rightnav.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/extranet/_rightnav.html.erb
+END
+_tier1_navigation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/extranet/_tier1_navigation.html.erb
+END

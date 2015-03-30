@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/qualified
+END
+lp.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/qualified/lp.wsdl
+END
+test_qualified.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/qualified/test_qualified.rb
+END
+np.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/qualified/np.wsdl
+END
+test_unqualified.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/qualified/test_unqualified.rb
+END
+lp.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/wsdl/qualified/lp.xsd
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/WebDev/!svn/ver/144257/plugins/keepalive/trunk
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/WebDev/!svn/ver/87366/plugins/keepalive/trunk/README
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/WebDev/!svn/ver/120051/plugins/keepalive/trunk/Rakefile
+END
+init.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/WebDev/!svn/ver/87366/plugins/keepalive/trunk/init.rb
+END
+keepalive.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/125455/plugins/keepalive/trunk/keepalive.gemspec
+END

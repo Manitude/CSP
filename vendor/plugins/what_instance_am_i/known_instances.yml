@@ -1,0 +1,41 @@
+# sgjp is singapore
+# ash is ashburn
+production:
+  - !ruby/regexp /^(rs)?ash.+/
+  - !ruby/regexp /^sgjp.+/
+  - !ruby/regexp /^rshbgprodhydra\d+$/
+
+preproduction:
+  []
+
+staging:
+  - kotter
+  - walker
+  - texas
+  - ranger
+  - cahill
+  - !ruby/regexp /^stg.+/
+  - !ruby/regexp /^sgstg.+/
+  - !ruby/regexp /^rshbgdeploy\d+$/
+  - !ruby/regexp /^rshbgstghydra\d+$/
+  - !ruby/regexp /^rshbgcq\d+$/
+
+
+# the vm known as cobra was once rshbgdev09 and may be once again.  Protect this with 
+# two entries.
+cobra:
+  - cobra
+  - rshbgdev09
+
+opxdev:
+  - rshbgdev04
+  - devoe01
+
+testing:
+  - opxtest
+  - freud
+  - !ruby/regexp /^rshbgdev(?!(04|09))\d{2}$/
+  - !ruby/regexp /^rshbgdevhydra\d+$/
+  - !ruby/regexp /^hudsonBuilder\d+$/
+
+fallthrough: development

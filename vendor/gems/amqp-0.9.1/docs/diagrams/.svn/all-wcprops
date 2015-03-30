@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/docs/diagrams
+END
+003_weathr_example_routing.png
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/docs/diagrams/003_weathr_example_routing.png
+END
+005_direct_exchange.png
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/docs/diagrams/005_direct_exchange.png
+END
+004_fanout_exchange.png
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/docs/diagrams/004_fanout_exchange.png
+END
+007_rabbitmq_publisher_confirms.png
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/docs/diagrams/007_rabbitmq_publisher_confirms.png
+END
+002_blabbr_example_routing.png
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/docs/diagrams/002_blabbr_example_routing.png
+END
+006_amqp_091_message_acknowledgements.png
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/docs/diagrams/006_amqp_091_message_acknowledgements.png
+END
+001_hello_world_example_routing.png
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/docs/diagrams/001_hello_world_example_routing.png
+END

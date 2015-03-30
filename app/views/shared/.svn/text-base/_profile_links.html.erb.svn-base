@@ -1,0 +1,25 @@
+<% if admin_logged_in? && (page_title.to_s == _("My_ProfileFE3EBF53") || page_title.to_s == _("Edit_Profile995570ED")) %>
+  <% if params[:action].to_s != "edit_admin_profile" %>
+    <span class = "left-space"> <%= link_to _("Edit21077124"), edit_admin_profile_path %> </span>
+  <%  else %>
+    <span class = "left-space"> <%= link_to "Return to My Profile", view_support_profile_path%> </span>
+  <%  end -%>    
+<% elsif page_title.to_s == _("My_ProfileFE3EBF53") || page_title.to_s == _("Edit_Profile995570ED") && !coach_logged_in? %>
+  <% if params[:action].to_s != "edit_profile" %>
+    <span class = "left-space"> <%= link_to _("Edit21077124"), edit_support_profile_path %> </span>
+  <%  else %>
+    <span class = "left-space"> <%= link_to "Return to My Profile", view_support_profile_path%> </span>
+  <%  end -%>
+  <span class = "left-space"> <%= link_to "Edit Contact Preferences", support_preference_settings_path %> </span>
+<% elsif page_title.to_s == "View Profile" || page_title.to_s == _("Edit_Profile995570ED") %>
+  <% if params[:action].to_s != "edit_profile" %>
+    <span class = "left-space"> <%= link_to _("Edit21077124"), edit_profile_path %> </span>
+  <%  else %>
+    <span class = "left-space"> <%= link_to "Return to My Profile", view_profile_path %> </span>
+  <%  end -%>
+  <span class = "left-space"> <%= link_to "Edit Contact Preferences", support_preference_settings_path %> </span>
+<% elsif page_title.to_s == _("Contact_Preferences2785E088") && !coach_logged_in? %>
+  <span class = "left-space"> <%= link_to "Return to My Profile", view_support_profile_path %> </span>
+<% elsif page_title.to_s == _("Contact_Preferences2785E088") && coach_logged_in? %>
+  <span class = "left-space"> <%= link_to "Return to My Profile", view_profile_path %> </span>
+<% end -%>

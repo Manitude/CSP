@@ -1,0 +1,65 @@
+  .common_table_css {width: 100%; border: 0;}
+  .common_table_css td tr {padding-top: 10px; text-align: left;}
+  .ext_date span {padding-left: 5px;}
+  .ext_gray_button {background-color: #F3F3F4; border: 1px solid #444444;float:left;}
+  #ext_date_feilds {display: none;}
+  #popup_ok{
+    background-color: #F3F3F4 !important;
+    margin-bottom: 20px !important;
+  }
+
+  .case{
+  	padding: 10px 0;
+  }
+.add_time{
+  width: 330px; 
+  vertical-align: bottom;
+}
+.bottom_align{
+	vertical-align: bottom;
+}
+.add_time_unit{
+	padding: 10px 0 10px 10px;
+}
+#add_projected_through{
+	font-size: 12px; padding: 20px 10px 10px 20px;
+}
+.group_div{
+	padding: 7px 0px 5px 6px;
+}
+.group_td{
+	width: 350px; 
+	vertical-align: bottom;
+}
+#group_label{
+	padding-left: 25px;
+}
+.solo_duration{
+	padding-left: 10px;
+}
+.cycles_td{
+	width: 300px; 
+	vertical-align: bottom;
+}
+.cycles_div{
+	padding: 7px 0px 5px 6px;
+}
+.cycles_padding{
+	padding-left: 25px;
+}
+#remove_projected_through{
+	font-size: 12px; 
+	padding: 20px 10px 10px 20px;
+}
+.reason_div{
+	padding: 0px 0 0 25px;
+}
+.add_consumable{
+	float: right; 
+	margin-top: 10px;
+}
+#confirm_alert{
+	display: none;
+	z-index: 1000;
+	background-color: white;
+}

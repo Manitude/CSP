@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/validations
+END
+associated.rb
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/validations/associated.rb
+END
+uniqueness.rb
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/validations/uniqueness.rb
+END

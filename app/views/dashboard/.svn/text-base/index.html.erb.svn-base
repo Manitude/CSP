@@ -1,0 +1,110 @@
+<% if manager_logged_in? %>
+    <style type="text/css">
+    .justclear{clear:none}
+  </style>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to_function "Email Coaches scheduled within the next 30 minutes", "fixedFacebox('#{mail_template_path}')" %>
+  <br/>
+<% end %>
+<% if tier1_support_user_or_lead_logged_in? %>
+   <style type="text/css">
+    .justclear{clear:none}
+  </style>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to_function "Email Coaches and Studio Team", "fixedFacebox('#{mail_template_path}')" %>
+  <br/>
+<% end %>
+<div style="clear: both;" />
+<div style="font-weight: bold; float: left;" id="today_date">
+  <span style="float: left;">
+    Today's Date:
+  </span>
+  <span class="today_date_in_dashboard">
+    <%= get_today_date %>
+  </span>
+  <div id="non_assistable_sessions_alert">
+    <img alt=""  src="images/warning_red.png" style="padding-top: 4px;"/>
+    <div class = "non_assistable_session_alert" style="color:red;">Help requested for non-chat devices</div>
+  </div>
+  <div id="non_assistable_sessions_filter_div">
+    <input type="checkbox" id="non_assistable_sessions_filter"/>
+    <div class = "non_assistable_session_alert"><label for="non_assistable_sessions_filter" style="cursor:pointer;">Show only non-chat device sessions</label></div>
+  </div>
+  <div id="disable_dashboard_refresh_div">
+    <input type="checkbox" id="disable_dashboard_refresh"/>
+    <div class = "disable_dashboard_refresh_element"><label for="disable_dashboard_refresh" style="cursor:pointer;">Disable <br/> refresh</label></div>
+  </div>
+</div>
+
+<br/><br/>
+ <div id="help_requested_by" style="display: none">
+  <h4>Help Requested By:</h4>
+  <div class = "some_div">
+    <table id = 'help_requested_by_table' width="100%"></table>
+  </div>
+</div>
+
+<div id="dashboard_lotus_real_time_data" style = "visibility : hidden">
+<div id="lotus_real_time_data" class="big-info-wo-alert">
+    Loading data...
+</div>
+</div>
+<div id="spacer"></div>
+<div class="justclear just_left full_width">
+  <%= form_tag filter_sessions_path, :method => :get, :id => 'filter_session_form' do %>
+      <div id="support_language_element">
+        <span id="support_language"><%= _("Support_LanguageA13EEFA5") %></span>
+        <br/>
+        <%= select_tag(:support_language_id, options_for_support_language) %>
+      </div>
+      <div id="session_language_element">
+        <span id="support_language"><%= _("Session_Language9E2404F2") %></span>
+        <br/>
+        <%= select_tag(:session_language_id, options_for_session_language) %>
+      </div>
+      <div id="session_start_time_element">
+        <span id="support_language">Sessions that are</span>
+        <br/>
+        <%= select_tag(:session_start_time_id, options_for_time_frame) %>
+      </div>
+      <%= submit_tag _("FILTER8F3C989B"), {:id => 'filter'} %>
+
+      <div id="session_start_time_element_Coach">
+       <span id="session_support_field" class="session_support_field_label" >Coach/Learner Name</span>
+       <br/>
+       <input type="text-field" id="coach_filter" class="session_support_field_txt" placeholder="Type name to search list..."/>
+      </div> 
+  <% end %>
+</div>
+
+<div id="table_container">
+  <table id="session_table">
+    <thead>
+    <tr id="session_header">
+      <th><%= _("SESSIONEF012BCE") %></th>
+      <th><%= _("COACHC80DAF7C") %></th>
+      <th>LEARNERS EXP/ATT</th>
+      <th>VILLAGE</th>
+      <th>ACTIONS</th>
+      <th><%= _("Audio_Devices2703B613") %></th>
+    </tr>
+    </thead>
+    <tbody id="session_table_body">
+    </tbody>
+  </table>
+</div>
+
+<img id="big_spinner" alt="Big_spinner" src="/images/big_spinner.gif"/>
+
+<div style="display: none">
+  <%= _('Are_you_sure_you_want_to_cancel_this_session8A03F2CAE7AEF4') %>
+</div>
+
+<script type="text/javascript">
+    var translations = <%= raw get_translations %>
+    var REFRESH_INTERVAL_FOR_LIVE_SESSIONS = <%= GlobalSetting.dashboard_refresh_seconds %>
+    numberOfRecordsToLoad = <%= App.total_dashboard_row_count%>
+    username = '<%= current_user.user_name%>';
+</script>
+
+<div id="temp_container">
+  <img id='dashboard_spinner' src="/images/spinner-sm.gif" alt="Wait..."/>
+</div>

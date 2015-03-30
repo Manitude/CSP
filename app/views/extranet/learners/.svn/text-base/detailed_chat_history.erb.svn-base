@@ -1,0 +1,74 @@
+<div id = "chat_history_title">
+	<%if params["conversation_type"] == "PublicConversation"%>
+    <div>
+      <%= calendar_date_select_tag 'start_date', params["start_date"].blank? ? (Time.now - 1.month).beginning_of_day.strftime("%b %d, %Y %I:%M %p") : params["start_date"].to_time.in_time_zone(current_user.tzone).strftime("%b %d, %Y %I:%M %p") , :class => 'datetimepicker' %> &nbsp;through&nbsp;
+      <%= calendar_date_select_tag 'end_date', params["end_date"].blank? ? (Time.now.end_of_day.strftime("%b %d, %Y %I:%M %p")) : params["end_date"].to_time.in_time_zone(current_user.tzone).strftime("%b %d %Y %I:%M %p"), :class => 'datetimepicker' %>
+      <input type="submit" id="filter_button" value="Filter"/>
+      <%= image_tag 'ajax-spinner.gif', :id => 'ajaxSpinner', :style => "display :none" %>
+    </div>
+    <%end%>
+	<span><%="View Chat history of #{@learner.first_name} #{@learner.last_name}"%></span>
+	<%= link_to_learner_profile("Back to learner's profile page", @learner) %>
+	<%= link_to "Back to Chat history", selected_learner_chat_history_path(:id => @learner.id) %>
+</div>
+
+<table id = "chat_history_conversation">
+	<% if !chat_data.blank? %>
+	<thead id = "conversation_thead">
+		<th>Other Participants</th>
+		<th>Date and Time</th>
+		<th>Text Content</th>
+		
+	</thead>
+
+	<tbody id="conversation_tbody">
+	     	<% chat_data.each do |message| %>
+				<tr class=<%=message[:selected_message_or_learner]%>>
+					<td><%= (message[:other_participant] == 'Studio Coach') ? 'Studio Coach' :  link_to_learner_profile(message[:other_participant], message[:learner]) %></td>
+					<td><%= message[:date_time] %></td>
+					<td><%= message[:message] %></td>
+				</tr>
+			<%end%>
+			<tr>
+          <td colspan="4" align="center">
+            <% if total_pages > 1 %> 
+            <div class="pagination">
+               <%=  current_page == 1 ? '« Previous' : link_to("« Previous", detailed_chat_history_path(:id => @learner.id, :start_date => params["start_date"], :end_date => params["end_date"], :conversation_type => params["conversation_type"], :timeframe_range => params["timeframe_range"], :message_id => params["message_id"], :page => current_page == 1 ? current_page : current_page-1 )) %>
+               <% total_pages.to_i.times do |x|%>
+                  <%= current_page == x+1 ? x+1 : link_to( x+1, detailed_chat_history_path(:id => @learner.id,:start_date => params["start_date"], :end_date => params["end_date"], :conversation_type => params["conversation_type"], :timeframe_range => params["timeframe_range"], :message_id => params["message_id"], :page => x+1 )) %>
+               <%end%>
+               <%=current_page == total_pages.to_i ? 'Next »' : link_to("Next »", detailed_chat_history_path(:id => @learner.id, :start_date => params["start_date"], :end_date => params["end_date"], :conversation_type => params["conversation_type"], :timeframe_range => params["timeframe_range"], :message_id => params["message_id"], :page => current_page == total_pages.to_i ?current_page : current_page+1 )) %>
+            </div>
+             <%end%>
+          </td>
+        </tr>
+	</tbody>
+   <% else %>
+      <thead id="conversation_thead"></thead>
+      <tbody id="conversation_tbody">
+      <tr>
+        <td colspan="3">No chat history found</td>
+      </tr>
+      </tbody>
+  <% end %>
+</table>
+<script type="text/javascript">
+    $('#filter_button').click(function () {
+        jQuery('#ajaxSpinner').show();
+        $.ajax({
+            url:"detailed_chat_history",
+            type:"GET",
+            data:{id: <%= @learner.id%>, start_date:jQuery('#start_date').val(), end_date:jQuery('#end_date').val(), message_id: <%= params["message_id"]%>, conversation_type: '<%= params["conversation_type"]%>'  },
+            success:function (data) {
+                var tbody = jQuery(data).find('tbody');
+                var thead = jQuery(data).find('thead');
+                $('#conversation_thead').html(thead.html());
+                $('#conversation_tbody').html(tbody.html());
+                jQuery('#ajaxSpinner').hide();
+            },
+            error:function (error) {
+                alert('Something went wrong, Please try again.');
+            }
+        })
+    });
+</script>

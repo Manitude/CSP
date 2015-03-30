@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples
+END
+inspecting_server_information.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/inspecting_server_information.rb
+END
+hello_world_with_an_empty_string.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/hello_world_with_an_empty_string.rb
+END
+hello_world_with_large_payload.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/hello_world_with_large_payload.rb
+END
+hello_world.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/hello_world.rb
+END
+hello_world_with_eventmachine_in_a_separate_thread.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/hello_world_with_eventmachine_in_a_separate_thread.rb
+END

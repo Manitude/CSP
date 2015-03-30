@@ -1,0 +1,87 @@
+<% if @all_language_report %>
+  The All Language Coach Activity report will be mailed to your Rosetta Stone email once it has completed processing.
+    <script type="text/javascript">
+      jQuery('#csv_id').hide();
+    </script>
+<% elsif @coaches.any? %>
+<script type="text/javascript">
+    jQuery(".scrollContent").css('overflow-y','auto');
+    if(jQuery(".scrollContent").children().size() <= 8){
+      jQuery(".scrollContent tr td:last-child").width(jQuery(".scrollContent tr td:last-child").width()+21);
+    }
+</script>
+
+  <table id="coach_report_table" border="0" class="table_list" style="table-layout:fixed;width: 972px;" >
+    <thead style="display:block; width: 972px;">
+      <tr>
+        <th class="thu1 show_right_border"></th>
+        <th class="thu2 show_right_border" colspan="5">Session/Shifts</th>
+        <th class="thu3 show_right_border"></th>
+        <th class="thu4 show_right_border" colspan="3">Substitutions</th>
+        <th class="thu5 show_right_border" colspan="3">Time Offs</th>
+        <th class="thu6 show_right_border"></th>
+      </tr>
+      <tr>
+        <th class="thl01 activity_report_cell" style="border-top: none">Coach Name</th>
+        <th class="thl02 activity_report_cell">Scheduled<br/>Past/Future</th>
+        <th class="thl03 activity_report_cell">Taught (Hrs)</th>
+        <th class="thl14 activity_report_cell">Solo (Hrs)</th>
+        <th class="thl04 activity_report_cell">No Show</th>
+        <th class="thl05 activity_report_cell">Canceled</th>
+        <th class="thl06 activity_report_cell">In/Complete<br/>Feedback</th>
+        <th class="thl07 activity_report_cell">Requested</th>
+        <th class="thl08 activity_report_cell">Grabbed</th>
+        <th class="thl09 activity_report_cell" title="Number of subs as a percentage of total sessions taught.">% of taught</th>
+        <th class="thl10 activity_report_cell">Requested/<br/>Approved</th>
+        <th class="thl11 activity_report_cell">Denied</th>
+        <th class="thl12 activity_report_cell" title="Total time offs granted">Total Duration</th>
+        <th class="thl13 activity_report_cell">In player (min)<br/> prior to session</th>
+      </tr>
+    </thead>
+    <tbody class="scrollContent" style="overflow-y: scroll !important; width: 972px;">
+      <% @coaches.each do |coach| %>
+        <tr style="">
+          <td class="td01 hide_left_border"><%= coach[:full_name] %></td>
+          <td class="td02"><%= "#{coach[:scheduled_past]} / #{coach[:scheduled_future]}" %></td>
+          <td class="td03"><%= coach[:taught_count] %></td>
+          <td class="td14"><%= coach[:scheduled_past_solo] %></td>
+          <td class="td04"><%= coach[:no_show] %></td>
+          <td class="td05"><%= coach[:cancelled_count] %></td>
+          <td class="td06"><%= get_in_complete_feedback(coach[:incomplete_feedbacks], coach[:complete_feedbacks]) %></td>
+          <td class="td07"><%= coach[:subs_requested] %></td>
+          <td class="td08"><%= coach[:subs_grabbed] %></td>
+          <td class="td09"><%= coach[:pc_taught] %></td>
+          <td class="td10"><%= coach[:time_offs_requested] %>/<%= coach[:time_offs_approved] %></td>
+          <td class="td11"><%= coach[:time_offs_denied] %></td>
+          <td class="td12"><%= coach[:total_time_off] %></td>
+          <td class="td13" class=<%= coach[:in_player_time].to_f < 0 ? "negative_red" : "" %>><%= coach[:in_player_time] %></td>
+        </tr>
+      <% end %>
+    </tbody>
+
+    <tfoot style="display:block; width: 972px;" class="fixedHeader">
+      <tr>
+        <th class="tfd01">Language Total</th>
+        <th class="tfd02"><%= "#{@totals[:scheduled_past]}/#{@totals[:scheduled_future]}" %></th>
+        <th class="tfd03"><%= @totals[:taught] %></th>
+        <th class="tfd14"><%= @totals[:scheduled_past_solo] %></th>
+        <th class="tfd04"><%= @totals[:no_show] %></th>
+        <th class="tfd05"><%= @totals[:cancelled] %></th>
+        <th class="tfd06"><%= get_in_complete_feedback(@totals[:incomplete_feedback], @totals[:complete_feedback]) %></th>
+        <th class="tfd07"><%= @totals[:subs_requested] %></th>
+        <th class="tfd08"><%= @totals[:subs_grabbed] %></th>
+        <th class="tfd09"><%= @totals[:pc_taught] %></th>
+        <th class="tfd10"><%= "#{@totals[:requested_time_offs]}/#{@totals[:approved_time_offs]}" %></th>
+        <th class="tfd11"><%= @totals[:denied_time_offs] %></th>
+        <th class="tfd12"><%= @totals[:total_time_off] %></th>
+        <th class="tfd13"><%= @totals[:in_player_time] %></th>
+      </tr>
+    </tfoot>
+
+  </table>
+<% else %>
+  There are no coaches to show for this language and region combination.
+  <script type="text/javascript">
+    jQuery('#csv_id').hide();
+  </script>
+<% end %>

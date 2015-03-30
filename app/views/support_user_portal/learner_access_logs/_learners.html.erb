@@ -1,0 +1,5 @@
+<tr style="line-height:25px">
+  <td><%= link_to(highlight_search_result(learners.name, params), learner_path(:id => learners.id)) %></td>
+  <td><%= highlight_search_result(learners.email, params) %></td>
+  <td><%= learners.type %><%= "(#{learners.subscriptions.to_sentence})" unless learners.subscriptions.blank?  %></td>
+</tr>

@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionmailer-3.0.20/lib/action_mailer
+END
+deprecated_api.rb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionmailer-3.0.20/lib/action_mailer/deprecated_api.rb
+END
+railtie.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionmailer-3.0.20/lib/action_mailer/railtie.rb
+END
+tmail_compat.rb
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionmailer-3.0.20/lib/action_mailer/tmail_compat.rb
+END
+base.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionmailer-3.0.20/lib/action_mailer/base.rb
+END
+test_case.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionmailer-3.0.20/lib/action_mailer/test_case.rb
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionmailer-3.0.20/lib/action_mailer/test_helper.rb
+END
+mail_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionmailer-3.0.20/lib/action_mailer/mail_helper.rb
+END
+log_subscriber.rb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionmailer-3.0.20/lib/action_mailer/log_subscriber.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionmailer-3.0.20/lib/action_mailer/version.rb
+END
+adv_attr_accessor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionmailer-3.0.20/lib/action_mailer/adv_attr_accessor.rb
+END
+collector.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionmailer-3.0.20/lib/action_mailer/collector.rb
+END
+delivery_methods.rb
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionmailer-3.0.20/lib/action_mailer/delivery_methods.rb
+END
+old_api.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionmailer-3.0.20/lib/action_mailer/old_api.rb
+END

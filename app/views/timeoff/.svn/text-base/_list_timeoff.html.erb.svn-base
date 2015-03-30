@@ -1,0 +1,41 @@
+<% unless @approved_modifications.blank? %>
+  <h5><b>Approved:</b></h5>
+  <table class = "time_off_no_border" id="list_timeoff_table">
+    <% @approved_modifications.each do |mod| %>
+      <tr>
+        <td class = "width80"><b><%= format_time(mod.start_date,"%a %b %d %Y,%I:%M %p") +' to '+ format_time(mod.end_date, "%a %b %d %Y,%I:%M %p") %></b></td>
+        <td class="width10">
+          &nbsp;&nbsp;<a id='<%= mod.id %>' class="edit_timeoff" href="JavaScript:void(0);">Edit</a>
+        </td>
+        <td class="width10">
+          &nbsp;&nbsp;<a id='<%= mod.id %>' class="cancel_timeoff" href="JavaScript:void(0);">Cancel</a>
+        </td>
+      </tr>
+    <% end %>
+    <tr><td  colspan =11 class="time_off_border" ></td></tr>
+  </table><br></br>
+<%end%>
+<%unless @unapproved_modifications.blank? %>
+  <h5><b>Pending:</b></h5>
+  <table class = "time_off_no_border">
+    <% @unapproved_modifications.each do |mod| %>
+      <% mod_id = mod.id.to_s %>
+      <tr>
+        <td class = "width80"><b><%= format_time(mod.start_date, "%a %b %d %Y,%I:%M %p") +' to '+ format_time(mod.end_date, "%a %b %d %Y,%I:%M %p") %></b></td>
+
+        <td class = "width10">
+          &nbsp;&nbsp;<a id='<%= mod.id %>' class="edit_timeoff" href="JavaScript:void(0);">Edit</a>
+        </td>
+        <td class = "width10">
+          &nbsp;&nbsp;<a id='<%= mod.id %>' class="cancel_timeoff" href="JavaScript:void(0);">Cancel</a>
+        </td>
+      </tr>
+    <% end %>
+    <tr><td  colspan =11 class="time_off_border"></td></tr>
+  </table><br></br>
+<%end%>
+<%= hidden_field_tag :start_of_that_week -%>
+<%if @approved_modifications.blank? && @unapproved_modifications.blank? %>
+  No existing timeoffs !! <br/><br/>
+<%end%>
+<input type="button" id="new_time_off" class="btn" value="Create New Time Off" />

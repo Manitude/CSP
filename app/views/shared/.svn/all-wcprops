@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/159084/coach_portal/branches/sprint32/app/views/shared
+END
+_reason_for_cancel_session.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_reason_for_cancel_session.html.erb
+END
+_substitutions_report_partial.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_substitutions_report_partial.html.erb
+END
+_sub_navigation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_sub_navigation.html.erb
+END
+_coach_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_coach_list.html.erb
+END
+_notifications.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_notifications.html.erb
+END
+_show_reasons.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_show_reasons.html.erb
+END
+_success_failure.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_success_failure.erb
+END
+_i_am_back_early.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_i_am_back_early.html.erb
+END
+_locked_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_locked_profile.html.erb
+END
+_editor_authenticate.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_editor_authenticate.html.erb
+END
+_coach_list_with_qual.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/159084/coach_portal/branches/sprint32/app/views/shared/_coach_list_with_qual.html.erb
+END
+_date_navigator.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_date_navigator.html.erb
+END
+_server_error.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_server_error.rhtml
+END
+_view_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_view_profile.html.erb
+END
+_substitutions_links.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_substitutions_links.html.erb
+END
+_navigation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_navigation.html.erb
+END
+_coach_inactive.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_coach_inactive.html.erb
+END
+_profile_links.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_profile_links.html.erb
+END
+_coach_drop_down_partial.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_coach_drop_down_partial.html.erb
+END
+coach_alert.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/coach_alert.html.erb
+END
+_template_date_select.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_template_date_select.html.erb
+END
+_sub_request_confirmation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_sub_request_confirmation.html.erb
+END
+_cancelled_message.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_cancelled_message.erb
+END
+_next_session_start_time.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_next_session_start_time.html.erb
+END
+on_duty_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/on_duty_list.html.erb
+END
+_comments.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_comments.html.erb
+END
+_substitutions_alert.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_substitutions_alert.html.erb
+END
+_body_content.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_body_content.html.erb
+END
+_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_header.html.erb
+END
+application_configuration.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/application_configuration.html.erb
+END
+get_crossdomain_xml.xml.erb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/get_crossdomain_xml.xml.erb
+END
+_client_error.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_client_error.rhtml
+END
+_default_navigation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/shared/_default_navigation.html.erb
+END

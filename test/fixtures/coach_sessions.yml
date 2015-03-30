@@ -1,0 +1,241 @@
+# == Schema Information
+#
+# Table name: coach_sessions
+#
+#  id                  :integer(4)      not null, primary key
+#  coach_user_name     :string(255)
+#  eschool_session_id  :integer(4)
+#  session_start_time  :datetime
+#  created_at          :datetime
+#  updated_at          :datetime
+#  cancelled           :boolean(1)
+#  external_village_id :integer(4)
+#  language_identifier :string(255)
+#  single_number_unit  :integer(4)
+#  number_of_seats     :integer(4)
+#  attendance_count    :integer(4)
+#
+
+---
+session_starting_at_4_hours_from_now:
+  coach: psubramanian
+  session_start_time: <%= Time.now.in_time_zone("UTC").beginning_of_hour+4.hours %>
+  eschool_session_id: 343
+  cancelled: 0
+  language_identifier: ESP
+  coach_showed_up: 0
+  language_id: <%= Language.find_by_identifier('ESP').id %>
+
+session_starting_at_15_hours_from_now_for_rramesh:
+  coach: ARA_scheduled_coach
+  session_start_time: <%= Time.now.in_time_zone("UTC").beginning_of_hour+15.hours %>
+  eschool_session_id: 355
+  cancelled: 0
+  language_identifier: ARA
+  coach_showed_up: 0
+  language_id: <%= Language.find_by_identifier('ARA').id %>
+
+session_reflex_starting_at_24_hours_from_now_for_rramesh:
+  coach: ARA_scheduled_coach
+  session_start_time: <%= Time.now.in_time_zone("UTC").beginning_of_hour+24.hours %>
+  eschool_session_id: nil
+  cancelled: 0
+  language_identifier: KLE
+  language_id: <%= Language.find_by_identifier('KLE').id %>
+  coach_showed_up: 0
+
+
+<% 1.upto(5) do |n| %>
+session_starting_at_4_hours_from_now_recurring_<%= n %>:
+  coach: psubramanian
+  <% if Time.zone.now.dst? == (Time.zone.now + n.weeks).dst? %>
+  session_start_time: <%= Time.now.in_time_zone("UTC").beginning_of_hour+4.hours + (n*7).days%>
+  <%elsif Time.zone.now.dst? == true %>
+  session_start_time: <%= Time.now.in_time_zone("UTC").beginning_of_hour+5.hours + (n*7).days%>
+  <%else%>
+  session_start_time: <%= Time.now.in_time_zone("UTC").beginning_of_hour+3.hours + (n*7).days%>
+  <%end%>
+  eschool_session_id: <%= 12*n %>
+  cancelled: 0
+  language_identifier: ESP
+  language_id: <%= Language.find_by_identifier('ESP').id %>
+  coach_showed_up: 0
+<%end%>
+
+session_ESP_scheduled:
+  coach: ESPscheduledcoach
+  session_start_time: <%= Time.now.in_time_zone("UTC").beginning_of_hour+4.hours %>
+  eschool_session_id: 344
+  cancelled: 0
+  language_identifier: ESP
+  language_id: <%= Language.find_by_identifier('ESP').id %>
+
+
+sheduled_for_KLEsheduled:
+  coach: KLEscheduled
+  session_start_time: '2090-05-15 13:00:00 '
+  eschool_session_id: NULL
+  cancelled: 0
+  language_identifier: KLE
+  language_id: <%= Language.find_by_identifier('KLE').id %>
+
+coach_session_001:
+  coach: psubramanian
+  session_start_time: '2020-05-15 13:00:00 '
+  eschool_session_id: NULL
+  cancelled: 0
+  language_identifier: ESP
+  language_id: <%= Language.find_by_identifier('ESP').id %>
+
+coach_session_extra:
+  coach: NULL
+  session_start_time: '2025-05-15 13:00:00 '
+  eschool_session_id: NULL
+  cancelled: 0
+  language_identifier: ESP
+  type: ExtraSession
+  language_id: <%= Language.find_by_identifier('ESP').id %>
+
+coach_session_002:
+  coach: ssitoke
+  session_start_time: '2020-05-15 13:00:00 '
+  eschool_session_id: 555
+  cancelled: 0
+  language_identifier: ARA
+  language_id: <%= Language.find_by_identifier('ARA').id %>
+
+coach_session_003:
+  coach: ssitoke
+  session_start_time: '2025-05-15 13:00:00 '
+  eschool_session_id: NULL
+  cancelled: 0
+  language_identifier: ARA
+  language_id: <%= Language.find_by_identifier('ARA').id %>
+  type: ConfirmedSession
+coach_session_004:
+  coach: DutchCoach
+  session_start_time: '2011-06-13 13:00:00'
+  eschool_session_id: NULL
+  cancelled: 0
+  language_identifier: KLE
+  language_id: <%= Language.find_by_identifier('KLE').id %>
+coach_session_005:
+  coach: dutchfellow
+  session_start_time: '2025-06-13 13:00:00'
+  eschool_session_id: NULL
+  cancelled: 0
+  language_identifier: KLE
+  language_id: <%= Language.find_by_identifier('KLE').id %>
+coach_session_006:
+  coach: dutchfellow
+  session_start_time: '2025-06-13 12:00:00'
+  eschool_session_id: 123456
+  cancelled: 0
+  language_identifier: ARA
+  language_id: <%= Language.find_by_identifier('ARA').id %>
+coach_session_007:
+  coach: NULL
+  session_start_time: '2025-06-13 17:00:00'
+  eschool_session_id: NULL
+  cancelled: 0
+  language_identifier: KLE
+  language_id: <%= Language.find_by_identifier('KLE').id %>
+coach_session_008:
+  coach: NULL
+  session_start_time: '2025-06-13 11:00:00'
+  eschool_session_id: NULL
+  cancelled: 0
+  language_identifier: ARA
+  language_id: <%= Language.find_by_identifier('ARA').id %>
+coach_session_009:
+  coach: NULL
+  session_start_time: '2025-06-13 10:00:00'
+  eschool_session_id: 9876543
+  cancelled: 0
+  language_identifier: ARA
+  language_id: <%= Language.find_by_identifier('ARA').id %>
+coach_session_010:
+  coach: NULL
+  session_start_time: '2025-06-13 09:00:00'
+  eschool_session_id: NULL
+  cancelled: 0
+  language_identifier: KLE
+  language_id: <%= Language.find_by_identifier('KLE').id %>
+
+coach_session_011_cancelled:
+  coach: ARA_scheduled_coach
+  session_start_time: '2025-06-09 10:00:00'
+  eschool_session_id: 9876599
+  cancelled: 1
+  language_identifier: ARA
+  language_id: <%= Language.find_by_identifier('ARA').id %>
+
+coach_session_012_cancelled:
+  coach: ARA_scheduled_coach
+  session_start_time: '2025-06-10 11:00:00'
+  eschool_session_id: 9876599
+  cancelled: 0
+  language_identifier: KLE
+  language_id: <%= Language.find_by_identifier('KLE').id %>
+
+coach_session_013:
+  coach: dutchfellow
+  session_start_time: '2025-06-14 08:00:00'
+  eschool_session_id: 123456
+  cancelled: 0
+  language_identifier: ARA
+  language_id: <%= Language.find_by_identifier('ARA').id %>
+
+coach_session_KLE_cancelled:
+  coach: ARA_scheduled_coach
+  session_start_time: <%= Time.now.in_time_zone("UTC").beginning_of_hour  + 2.hours %>
+  cancelled: 1
+  language_identifier: KLE
+  language_id: <%= Language.find_by_identifier('KLE').id %>
+
+sub_requested_for_KLEsheduled:
+  session_start_time: '2090-05-15 13:00:00 '
+  eschool_session_id: NULL
+  cancelled: 0
+  language_identifier: KLE
+  language_id: <%= Language.find_by_identifier('KLE').id %>
+
+coach_session_ARA_to_be_cancelled_2:
+  coach: ARA_scheduled_coach
+  session_start_time: <%= (Time.now.in_time_zone("UTC").beginning_of_hour + 2.hours).to_s(:db) %>
+  eschool_session_id: 999
+  cancelled: 0
+  language_identifier: ARA
+  language_id: <%= Language.find_by_identifier('ARA').id %>
+
+coach_session_ARA_to_be_cancelled_1:
+  coach: ARA_scheduled_coach
+  session_start_time: <%= (Time.now.in_time_zone("UTC").beginning_of_hour + 3.hours).to_s(:db) %>
+  eschool_session_id: 998
+  cancelled: 0
+  language_identifier: ARA
+  language_id: <%= Language.find_by_identifier('ARA').id %>
+
+coach_session_ARA_to_be_cancelled_2_no_coach:
+  coach: NULL
+  session_start_time: <%= (Time.now.in_time_zone("UTC").beginning_of_hour + 2.hours).to_s(:db) %>
+  eschool_session_id: 997
+  cancelled: 0
+  language_identifier: ARA
+  language_id: <%= Language.find_by_identifier('ARA').id %>
+
+coach_session_ARA_to_be_cancelled_1_no_coach:
+  coach: NULL
+  session_start_time: <%= (Time.now.in_time_zone("UTC").beginning_of_hour + 8.hours).to_s(:db) %>
+  eschool_session_id: 996
+  cancelled: 0
+  language_identifier: ARA
+  language_id: <%= Language.find_by_identifier('ARA').id %>
+
+coach_session_ARA_to_be_cancelled_2_and_nil_eschool_id:
+  coach: ARA_scheduled_coach
+  session_start_time: <%= (Time.now.in_time_zone("UTC").beginning_of_hour + 10.hours).to_s(:db) %>
+  cancelled: 0
+  language_identifier: ARA
+  language_id: <%= Language.find_by_identifier('ARA').id %>
+  session_status: 0

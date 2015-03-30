@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/filter
+END
+filterchain.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/filter/filterchain.rb
+END
+streamhandler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/filter/streamhandler.rb
+END
+handler.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/lib/soap/filter/handler.rb
+END

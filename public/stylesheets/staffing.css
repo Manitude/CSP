@@ -1,0 +1,154 @@
+.staffing_file_history_table {
+    width: 100%; border: 1px solid #CCCCCC;
+    margin-top: 3%
+  }
+
+  .staffing_file_history_table th {
+    background: #AAAAAA; text-align: center; border: 1px solid #CCCCCC
+  }
+
+  .staffing_file_history_table td {
+    text-align: center;
+    border: none;
+    border-left: 1px solid #CCCCCC;
+    padding: 10px 3px;
+  }
+
+  .staffing_file_history_table tr {
+      max-width: 70px;
+      height: 36px;
+  }
+
+  .staffing_file_history_table th.sortable {
+    text-align: center;
+    font: bolder;
+  }
+
+  #staffing_file_info_pagination span{
+    vertical-align: top
+  }
+  #staffing_file_info_pagination a {
+    vertical-align: top
+  }
+
+  #staffing_data_file{
+    border: 1px solid #CCCCCC;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1em;
+    padding: 3px;
+    width: auto;
+  }
+
+  #note {
+    border: 1px solid black;
+    padding: 3px 5px;
+    margin-top: 5%;
+  }
+
+  table.staffing_file_history_table thead tr .header{
+    background-image: url("/images/bg.gif");
+    background-repeat: no-repeat;
+    background-position: right;
+    padding-left: 2px;
+    padding-right: 10px;
+  }
+  table.staffing_file_history_table thead tr .headerSortUp {
+    background-image: url("/images/asc.gif");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+  table.staffing_file_history_table thead tr .headerSortDown {
+    background-image: url("/images/desc.gif");
+    background-repeat: no-repeat;
+    background-position: right;
+  }
+
+  #staffing_file_info_pagination{
+    text-align: center
+  }
+
+  input.upload{
+    border-radius: 0.5em 0.5em 0.5em 0.5em;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1em;
+    border: 1px solid #AAAAAA;
+    padding: 2px;
+    margin-left: 5px;
+}
+
+.today_button_in_staffing{
+    border: 1px solid #CCCCCC;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1em;
+    padding: 4px;
+    float: left;
+}
+
+.inside_date_box_staffing{
+    margin-left: 8px;
+    margin-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 1px;
+    border: 1px solid #CCCCCC;
+}
+
+.create_button_in_staffing{
+    border: 1px solid #CCCCCC;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1em;
+    padding: 4px;
+}
+
+.create_button_in_staffing, #calendar_data{
+    float: left;
+    margin-right: 5px;
+}
+
+.close-popup, .close-smr-popup, .close-smr-session-popup, .close-smr-edit-popup, .close-smr-create-popup {
+    color: blue;
+    cursor: pointer;
+    font-size: 13px;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+#smr-create-popup-content {
+    background: url("/images/shift_alert_mid_1px_plain.png") repeat-y scroll 0 0 transparent;
+    float: left;
+    padding: 0 12px;
+    width: 530px;
+}
+
+#create_new_session_smr  {
+    float: left;
+    padding: 0 25px 25px;
+    width: 450px;
+}
+
+#smr-create-popup-container {
+    display: none;
+    float: left;
+    position: absolute;
+    width: 554px;
+}
+
+.smr-popup-btm {
+    background: url("/images/shift_alert_btm_plain.png") no-repeat scroll center bottom transparent;
+    float: left;
+    height: 31px;
+    position: relative;
+    width: 554px;
+}
+
+.smr-popup-top {
+    background:transparent url('/images/shift_alert_top_plain.png') no-repeat scroll 0 0;
+    min-height:12px;
+    width:554px;
+    position:relative;
+    float:left;
+}
+
+#staffing_table_container div {
+  border: none !important;
+}

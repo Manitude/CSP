@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/patterns/request_reply
+END
+client.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/patterns/request_reply/client.rb
+END
+server.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/patterns/request_reply/server.rb
+END

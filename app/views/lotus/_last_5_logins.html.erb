@@ -1,0 +1,4 @@
+<div ><br>
+<% @last_logins.each do | time | %>
+<p align="center" style="font-size:12px!important"><%= time.in_time_zone("Eastern Time (US & Canada)").strftime("%m/%d/%y %I:%M %p") %></p>
+<% end %></div>

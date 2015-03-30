@@ -1,0 +1,68 @@
+<%= javascript_include_tag 'hogan-2.0.0.min','staffing_report','jquery.fixheadertable.min','crir', 'jquery.blockUI' %>
+<%= stylesheet_link_tag 'crir' %>
+<h3>ReFLEX Staffing Model Reconciliation Report</h3>
+<div id="staffing_report_wrapper">
+  <div id="staffing_filter_container">
+    <span>
+      Select Staff Model :
+      <%= select_tag "staffing_report_week", options_for_available_weeks(params[:week_id]),  {:class =>'staffing_select_class'} -%>
+    </span>
+    <span style="margin-left: 10px">
+      Select Date :
+      <% if !@options_for_date.blank? %>
+        <%= select_tag "staffing_report_date", @options_for_date,  {:class =>'staffing_select_class'} -%>
+      <% else %>
+        <%= select_tag "staffing_report_date", '<option>All</option>',  {:class =>'staffing_select_class', :disabled => true} -%>
+      <% end %>
+    </span>
+    <span id="export_staffing_data" style="float: right; display: none">
+      <%= form_tag('export_staffing_report', :method=>'get') do %>
+        <%= hidden_field_tag :week_id %>
+        <input type="submit" id="csv_button_id" value="Export As CSV"/>
+      <% end %>
+    </span>
+  </div>
+  <div id="staffing_table_container">
+    <table id="staffing_report_table">
+      <thead id="staffing_report_header">
+      <th><%= Time.now.in_time_zone("Eastern Time (US & Canada)").strftime("%Z") %> Date/Time</th>
+      <th>KST Date/Time</th>
+      <th>Time Slot (<%= Time.now.in_time_zone("Eastern Time (US & Canada)").strftime("%Z") %>)</th>
+      <th>Requests Projected</th>
+      <th>Actual Scheduled</th>
+      <th>Delta</th>
+      <th>Extra Sessions Scheduled</th>
+      <th>Extra Sessions Grabbed</th>
+      <th>Actions</th>
+      </thead>
+      <tbody id="staffing_report_body">
+        <tr height="70px">
+          <td colspan="9">No Data To Show</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="staffing-report-legend">
+    <div class="legend-group" style="margin-right: 180px">
+      <div>Scheduled Under Projection </div>
+      <div class="staffing-legend-box" style="background-color: #E6EFB9">1-3</div>
+      <div class="staffing-legend-box" style="background-color: #CAE19A">4-6</div>
+      <div class="staffing-legend-box" style="background-color: #B0D89E">7 or More</div>
+    </div>
+    <div class="legend-group">
+      <div>Scheduled To Projection </div>
+      <div class="staffing-legend-box" style="background-color: #FEF3DA">0</div>
+    </div>
+    <div class="legend-group" style="float: right">
+      <div>Scheduled Above Projection </div>
+      <div class="staffing-legend-box" style="background-color: #F8F49B">1-3</div>
+      <div class="staffing-legend-box" style="background-color: #FDC588">4-6</div>
+      <div class="staffing-legend-box" style="background-color: #F79C7B">7 or More</div>
+    </div>
+  </div>
+</div>
+
+<div id="smr-create-popup-container" style="display: block; left: 622px; top: 694px; position: absolute;">
+
+  <div id="smr-create-popup-content" >Test Content1</div>
+</div>

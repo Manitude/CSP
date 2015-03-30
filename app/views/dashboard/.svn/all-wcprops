@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/159015/coach_portal/branches/sprint32/app/views/dashboard
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/159015/coach_portal/branches/sprint32/app/views/dashboard/index.html.erb
+END
+_learner_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/dashboard/_learner_list.html.erb
+END
+learner_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/dashboard/learner_list.html.erb
+END

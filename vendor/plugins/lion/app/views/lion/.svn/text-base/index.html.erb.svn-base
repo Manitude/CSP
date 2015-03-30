@@ -1,0 +1,140 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+<fieldset id="filter">
+  <legend>Filters</legend>
+  <img src="<%= lion_icon_base_64 %>" alt="Lion" title="Translations.... HOOOOOOOO!" class="logo"/>
+  <ul>
+  <li>File:
+  <ul>
+  <% Lion.used_csv_files.each do |file| %>
+    <li class="file_list">
+    <input type="checkbox" <%= 'checked="true"' unless params[id_for_file(file)] == "false" %> id="<%= id_for_file(file) %>" name="<%= id_for_file(file)%>"/>
+    <label for="<%= id_for_file(file) %>"><%= short_filename(file) %></label>
+    </li>
+  <% end %>
+  </ul>
+    </li>
+  <li><span title="A number or 'none'. Must be an exact match. 'None' means a string that hasn't had a batch number assigned.">Batch:</span> <input type="text" id="batch" value="<%= params[:batch]%>"/></li>
+  <li><span title="Searches keys">Key :</span> <input type="text" id="key" value="<%= params[:key]%>"/></li>
+  <li><span title="Full text search on the en-US string. Case sensitive.">en-US string:</span> <input type="text" id="default_string" value="<%= params[:default_string]%>"/></li>
+  </ul>
+  <p><a href="" id="permalink">Permalink</a></p>
+</fieldset>
+
+<form id="content" method="post" action="<%= lion_export_path %>">
+  <fieldset>
+  <input type="checkbox" id="assign_batch_number" name="assign_batch_number"/>
+  <label for="assign_batch_number">Assign new batch number to exported keys</label>
+  <br/>
+  <% if @allow_excel_export %>
+    <input type="submit" value="Export Selected Keys as XLS" name="xls_export"/>
+  <% else %>
+    <p>This application needs the spreadsheet and ruby-ole gems installed in order to export as XLS!</p>
+  <% end %>
+  <input type="submit" value="Export Selected Keys as UTF-8 CSV" name="csv_export"/>
+  </fieldset>
+  <fieldset>
+  <input id="select_all" type="button" value="Select All in View"/>
+  <input id="deselect_all" type="button" value="Select None in View"/>
+  <table class="ruled compact collapsed cleanHeaders">
+    <thead>
+    <tr>
+      <th class="check">&nbsp;</th>
+      <th class="key">Key</th>
+      <th class="default_string">en-US</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% Lion.used_csv_files.each do |file| %>
+      <% Lion::CSV.get_data_from_files([file]).each do |data| %>
+        <tr id="<%= data['key'] %>" class="key <%= [id_for_file(file), "batch_#{data['batch']}",data['key']].join(' ') %>">
+          <td class="check"><input type="checkbox" name="keys[<%= data['key'] %>]"/></td>
+          <td class="key"><%= link_to(data['key'], lion_show_path(:key=>data['key']), :title=>"View all details for this key") %></td>
+          <td class="default_string" title="<%= data.headers.sort.map{|key| "#{key}: #{h(data[key])}" if data[key].present?}.compact.join("&#10;") %>"><%= data['en-US'] %></td>
+        </tr>
+      <% end %>
+    <% end %>
+    </tbody>
+  </table>
+    </fieldset>
+</form>
+
+<% javascript_tag do %>
+  var Filter = {
+  filter_table: function() {
+    $$('#content tbody tr').each(function(element) { element.hide(); });
+    var classes_to_include = [];
+    var batch_value = $('batch').getValue();
+    var key_value = $('key').getValue();
+    var default_string_value = $('default_string').getValue();
+    var selector_base = "#content tbody tr";
+    var permalink_params = {};
+
+    if (batch_value) {
+      permalink_params['batch'] = batch_value;
+      if (batch_value == "none") {
+        batch_value = "";
+      }
+      selector_base += ".batch_" + batch_value;
+    }
+    if (default_string_value) {
+      permalink_params['default_string'] = default_string_value;
+    }
+    if (key_value) {
+      permalink_params['key'] = key_value;
+    }
+
+    selected_files = $$('#filter input[type=checkbox]').each(function(selected_file) {
+      if (selected_file.checked) {
+        $$(selector_base + '.' + selected_file.name).each(function(element) {
+          var show = true;
+          //Check if it begins with the key
+          if (key_value && !(new RegExp(key_value.toLowerCase()).test(element['id'].toLowerCase()))) {
+            show = false;
+          }
+          var en_us_value = element.children[2].innerHTML;
+          if (default_string_value && !(new RegExp(default_string_value.toLowerCase()).test(en_us_value.toLowerCase()))) {
+            show = false;
+          }
+          if (show) {
+            element.show();
+          }
+        });
+      } else {
+        permalink_params[selected_file.id] = "false";
+      }
+    });
+    $('permalink').href = "?" + Object.toQueryString(permalink_params);
+  }
+  }
+  $('filter').observe('change', function(event){
+    Filter.filter_table();
+  });
+  $$('#filter input[type=text]').each(function(element){
+    element.observe('keyup', function(event){
+      Filter.filter_table();
+    });
+  });
+  Event.observe(window, 'load', function(event) {
+    Filter.filter_table();
+  });
+
+  $('select_all').observe('click', function(event){
+    $$('#content table tbody tr').each(function(tr) {
+      if (tr.visible()) {
+        tr.children[0].children[0].checked = true;
+      }
+    });
+  });
+
+  $('deselect_all').observe('click', function(event){
+    $$('#content table tbody tr').each(function(tr) {
+      if (tr.visible()) {
+        tr.children[0].children[0].checked = false;
+      }
+    });
+  });
+
+<% end %>

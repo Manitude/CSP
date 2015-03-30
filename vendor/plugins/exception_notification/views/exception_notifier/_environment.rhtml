@@ -1,0 +1,10 @@
+* Server : <%= Socket.gethostname %>
+* Process: <%= $$ %>
+
+<% max = @request.env.keys.max { |a,b| a.length <=> b.length } -%>
+<% @request.env.keys.sort.each do |key| -%>
+<%# $RAW_POST_DATA contains everything in the post which is duplicated
+    in the other stuff we show and why bother filtering yet another thing. -%>
+<% next if key == 'RAW_POST_DATA' -%>
+* <%= "%-*s: %s" % [max.length, key, filter_sensitive_post_data_from_env(key, @request.env[key].to_s.strip).gsub(/password([^=]*)=[^&]*/, 'password\1=[FILTERED]')] %>
+<% end -%>

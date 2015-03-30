@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/68961/gems/hoptoad_notifier/2.4.9/lib/hoptoad_notifier
+END
+configuration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/lib/hoptoad_notifier/configuration.rb
+END
+railtie.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/lib/hoptoad_notifier/railtie.rb
+END
+rails.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/lib/hoptoad_notifier/rails.rb
+END
+shared_tasks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/lib/hoptoad_notifier/shared_tasks.rb
+END
+backtrace.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/lib/hoptoad_notifier/backtrace.rb
+END
+user_informer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/lib/hoptoad_notifier/user_informer.rb
+END
+rack.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/lib/hoptoad_notifier/rack.rb
+END
+sender.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/lib/hoptoad_notifier/sender.rb
+END
+notice.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/68945/gems/hoptoad_notifier/2.4.9/lib/hoptoad_notifier/notice.rb
+END
+rails3_tasks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/lib/hoptoad_notifier/rails3_tasks.rb
+END
+capistrano.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/lib/hoptoad_notifier/capistrano.rb
+END
+tasks.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/lib/hoptoad_notifier/tasks.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/lib/hoptoad_notifier/version.rb
+END

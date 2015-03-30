@@ -1,0 +1,10 @@
+<div id="req-sub-form">
+  <span style="padding: 0 40px ">Are you sure ?</span>
+  <%= hidden_field_tag 'learners_count', @learner_count ? @learner_count : "0" -%>
+  <%= hidden_field_tag 'lang_identifier', @coach_session.language_identifier -%>
+  <%= hidden_field_tag 'current_coach_id', @coach.id -%>
+  <%= hidden_field_tag 'external_village_id', @external_village_id -%>
+  <input type="submit" id="request_sub" class="button small-button" value="YES" onclick="enableProgressBar('request_sub','ajaxLoader',true)" />
+  <input type="submit" id="request_sub" class="button small-button" value="NO" onclick="jQuery('#substitution-request-confirmation').slideUp(); document.getElementById('popup-container').style.top = (parseInt(document.getElementById('popup-container').style.top, 10) + 35).toString() + 'px'; return false; " /> 
+  <%= image_tag 'ajax-spinner.gif',:id => 'ajaxLoader', :style => "display :none" %>
+</div>

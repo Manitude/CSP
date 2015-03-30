@@ -1,0 +1,29 @@
+default: &default
+  adapter: mysql2
+  username: root
+  password:
+  host: localhost
+  encoding: utf8
+  timezone: '+00:00'
+  pool: 8
+
+remote_access: &remote_access
+  host: localhost
+  username: root
+  password:
+  adapter: mysql2
+  encoding: utf8
+  port: 3306
+
+community_<%= ::Rails.env %>:
+  <<: *remote_access
+  database: community_<%= ::Rails.env %>
+
+rs_manager_<%= ::Rails.env %>:
+  <<: *remote_access
+  database: viper_service_<%= ::Rails.env %>
+
+license_server_<%= ::Rails.env %>:
+  <<: *remote_access
+  database: license_server_<%= ::Rails.env %>
+

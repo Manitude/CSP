@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/homes
+END
+track_users.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/homes/track_users.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/homes/index.html.erb
+END
+_lock_released.erb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/homes/_lock_released.erb
+END
+audit_logs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/homes/audit_logs.html.erb
+END
+view_profile.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/homes/view_profile.html.erb
+END
+_delayed_jobs_list.erb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/homes/_delayed_jobs_list.erb
+END
+_global_settings.erb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/homes/_global_settings.erb
+END
+_master_scheduler_push_lock.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/homes/_master_scheduler_push_lock.erb
+END
+_simulate_background_process.erb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/homes/_simulate_background_process.erb
+END
+admin_dashboard.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/homes/admin_dashboard.html.erb
+END
+_auditing.erb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/homes/_auditing.erb
+END
+_sync_affected_sessions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/extranet/homes/_sync_affected_sessions.html.erb
+END

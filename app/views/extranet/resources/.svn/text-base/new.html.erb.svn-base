@@ -1,0 +1,25 @@
+<%= form_for(@resource, :html => { :multipart => true }) do |f| %>
+  <%= f.error_messages %>
+  <p class="subnote">Fields labeled with <i>*</i> are required.</p>
+  <div class="formfield">
+    <div class="field">
+      <span class="required">*</span>
+      <%= f.label :title, 'Title' %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <span class="required">*</span>
+      <%= f.label :description, 'Description' %>
+      <%= f.text_area :description, :cols => 60, :rows => 6 %>
+    </div>
+    <div class="field">
+      <span class="required">*</span>
+      <%= f.label :filename, 'Filename' %>
+      <%= f.file_field :uploaded_data %>
+      <div id="upload_message">Please use all browsers except firefox to upload any resource.</div>
+    </div>
+    <p> <%= f.submit 'Create' %> </p>
+  </div>
+<% end %>
+
+<%= link_to 'Back', resources_path %>

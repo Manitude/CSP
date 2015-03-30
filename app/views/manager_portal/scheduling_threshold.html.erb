@@ -1,0 +1,29 @@
+<span class = "bold-font"><%= "Today's Date" -%>:</span><span class = "left-space" style="font-weight: normal;"><%= get_today_date %> </span>
+<div id="validation_message" style="color:red;font-size: 15px;float:left"></div>
+<p class="header preference-border"></p>
+
+  <%= form_for(@language_scheduling_threshold,:url=>{:action=>'scheduling_threshold'},:as => :post,:id => 'filter') do |f| %>
+    <div>
+      <%= f.select(:language_id, options_for_lang_from_threshold_page(@language_scheduling_threshold.language_id), {}, :onchange => 'populateLanguageData("fromSelect")', :class => 'select_class', :style=>'width: 150px;',:id => "language_id")-%>
+    </div>
+    <br/>
+    <div class="threshold_form">
+      <%= f.label "Maximum assignment/week" %>
+    </div>
+    <%= f.text_field :max_assignment ,:id => "max_assignment",:type => "number"%>
+    <br/><br/>
+    <div class="threshold_form">
+      <%= f.label "Maximum grabbed/week" %>
+    </div>
+    <%= f.text_field :max_grab ,:id => "max_grab" %>
+    <br/><br/>
+    <div class="threshold_form">
+      <%= f.label "Hours prior to imminent session override"%>
+    </div>
+    <%= f.text_field :hours_prior_to_sesssion_override ,:id => "hours_prior_to"%>
+    <br/><br/>
+    <%= submit_tag "Save", :name => 'save_button',:id=>"submit",:onclick=>"return validateThresholds()"%>
+    <%= submit_tag "Reset", :name => 'reset_button',:id=>"reset",:onclick=>"return populateLanguageData('fromReset')"%>
+  <% end %>
+
+  <br/>

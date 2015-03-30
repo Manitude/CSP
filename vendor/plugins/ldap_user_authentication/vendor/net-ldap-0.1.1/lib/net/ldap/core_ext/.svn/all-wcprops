@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/lib/net/ldap/core_ext
+END
+fixnum.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/lib/net/ldap/core_ext/fixnum.rb
+END
+string.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/lib/net/ldap/core_ext/string.rb
+END
+all.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/lib/net/ldap/core_ext/all.rb
+END
+array.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/lib/net/ldap/core_ext/array.rb
+END
+false_class.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/lib/net/ldap/core_ext/false_class.rb
+END
+bignum.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/lib/net/ldap/core_ext/bignum.rb
+END
+true_class.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/lib/net/ldap/core_ext/true_class.rb
+END

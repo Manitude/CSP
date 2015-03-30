@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/yaml_ext
+END
+non_loaded_class.yml
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/yaml_ext/non_loaded_class.yml
+END
+non_loaded_class.rb
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/yaml_ext/non_loaded_class.rb
+END
+non_existent_class.yml
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/yaml_ext/non_existent_class.yml
+END

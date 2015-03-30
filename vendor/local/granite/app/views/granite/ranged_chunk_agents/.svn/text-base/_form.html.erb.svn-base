@@ -1,0 +1,49 @@
+<% if @ranged_chunk_agent && @ranged_chunk_agent.errors.any? %>
+  <ul>
+    <% @ranged_chunk_agent.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<fieldset>
+  <div class="row container-fluid">
+    <div class="form_element">
+      <%= form.label :agent_class %>
+      <%= form.text_field :agent_class, :class=>:text %>
+      <%# form.collection_select :agent_class, RangedChunkAgents.constants.grep(/Agent/), :to_s, :to_s %>
+    </div>
+    <div class="form_element">
+      <%= form.label :enabled %>
+      <%= form.check_box :enabled, :class=>:text %><br/>
+    </div>
+    <div class="form_element">
+      <%= form.label :chunk_size %>
+      <%= form.text_field :chunk_size, :class=>:text %>
+    </div>
+    <div class="form_element">
+      <%= form.label :chunks %>
+      <%= form.text_field :chunks, :class=>:text %>
+    </div>
+    <div class="form_element">
+      <%= form.label :interval %>(in seconds, if unset, runs every cron iteration)<br/>
+      <%= form.text_field :interval, :class=>:text %>
+    </div>
+    <div class="form_element">
+      <%= form.label :cursor %>
+      <%= form.text_field :cursor, :class=>:text %>
+    </div>
+    <div class="form_element">
+      <%= form.label :last_processed_timestamp %>
+      <%= form.datetime_select :last_processed_timestamp, :class=>:date %>
+    </div>
+  </div>
+</fieldset>
+
+<!-- <th>Agent Class</th>
+<th>Chunk Size</th>
+<th>Number of Chunks</th>
+<th>Interval</th>
+<th>Cursor</th>
+<th>Last Processed</th> -->
+

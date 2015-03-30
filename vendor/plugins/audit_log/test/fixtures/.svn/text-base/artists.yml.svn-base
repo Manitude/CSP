@@ -1,0 +1,9 @@
+the_smashing_pumpkins:
+  name: "The Smashing Pumpkins"
+  year_formed: 1988
+  home_town: "Chicago, Illinois, USA"
+
+slint:
+  name: "Slint"
+  year_formed: 1986
+  home_town: "Louisville, Kentucky, USA"

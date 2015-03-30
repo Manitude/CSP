@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/error_handling
+END
+connection_loss_handler_that_fails_over.rb
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/error_handling/connection_loss_handler_that_fails_over.rb
+END
+connection_loss_handler_with_automatic_recovery.rb
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/error_handling/connection_loss_handler_with_automatic_recovery.rb
+END
+handling_a_channel_level_exception.rb
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/error_handling/handling_a_channel_level_exception.rb
+END
+connection_failure_callback.rb
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/error_handling/connection_failure_callback.rb
+END
+connection_loss_handler_with_manual_recovery.rb
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/error_handling/connection_loss_handler_with_manual_recovery.rb
+END
+connection_failure_exception.rb
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/error_handling/connection_failure_exception.rb
+END

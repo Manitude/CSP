@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/52118/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/lib/net
+END
+ber.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/lib/net/ber.rb
+END
+snmp.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/lib/net/snmp.rb
+END
+ldif.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/52117/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/lib/net/ldif.rb
+END
+ldap.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/52118/plugins/ldap_user_authentication/vendor/net-ldap-0.1.1/lib/net/ldap.rb
+END

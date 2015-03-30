@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/159151/coach_portal/branches/sprint32/lib/tasks
+END
+rcov.rake
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/tasks/rcov.rake
+END
+user_update.rake
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/tasks/user_update.rake
+END
+trigger_sms_if_coach_not_present.rake
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/tasks/trigger_sms_if_coach_not_present.rake
+END
+update_duration_right_extension_log.rake
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/tasks/update_duration_right_extension_log.rake
+END
+delete_audit_log_and_user_actions_data.rake
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/tasks/delete_audit_log_and_user_actions_data.rake
+END
+task_helpers.rake
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/tasks/task_helpers.rake
+END
+coach_availability_update_daylight_diff.rake
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/tasks/coach_availability_update_daylight_diff.rake
+END
+project_setup.rake
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/tasks/project_setup.rake
+END
+delete_coaches.rake
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/tasks/delete_coaches.rake
+END
+if_french_live_then_michelin.rake
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/tasks/if_french_live_then_michelin.rake
+END
+alert_sms.rake
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/tasks/alert_sms.rake
+END
+send_email_if_coach_not_present.rake
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/tasks/send_email_if_coach_not_present.rake
+END
+create_RSA_coaches_on_saas.rake
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/158334/coach_portal/branches/sprint32/lib/tasks/create_RSA_coaches_on_saas.rake
+END
+alert_mailer.rake
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/159093/coach_portal/branches/sprint32/lib/tasks/alert_mailer.rake
+END
+users.rake
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/tasks/users.rake
+END
+hoptoad_notifier_tasks.rake
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/tasks/hoptoad_notifier_tasks.rake
+END
+cm_tasks.rake
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/159093/coach_portal/branches/sprint32/lib/tasks/cm_tasks.rake
+END
+coach_create_false_coach.rake
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/159151/coach_portal/branches/sprint32/lib/tasks/coach_create_false_coach.rake
+END

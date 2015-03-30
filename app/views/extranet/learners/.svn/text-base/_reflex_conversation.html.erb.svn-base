@@ -1,0 +1,27 @@
+<div id="reflex_info">
+  <p class="header">ReFLEX History</p><br />
+  <div class="wide_label_row">
+    <span class="label">Total time in Daily Training Sessions</span>
+    <span class="formw">N/A</span>
+  </div>
+  <div class="wide_label_row">
+    <span class="label">Daily Training Sessions started</span>
+    <span class="formw">N/A</span>
+  </div>
+  <div class="wide_label_row">
+    <span class="label">Daily Training Sessions completed</span>
+    <span class="formw">N/A</span>
+  </div>
+  <div class="wide_label_row">
+    <span class="label">Skills Sessions completed</span>
+    <span class="formw">N/A</span>
+  </div>
+  <div class="wide_label_row">
+    <span class="label">Rehearsals Completed</span>
+    <span class="formw">N/A</span>
+  </div>
+  <div class="wide_label_row">
+    <span class="label">Dojo sessions completed</span>
+    <span class="formw"><%= get_text(@learner.number_of_completed_reflex_sessions) %></span>
+  </div>
+</div>

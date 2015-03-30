@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/support_user_portal/eschool_sessions
+END
+show_eschool_sessions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/support_user_portal/eschool_sessions/show_eschool_sessions.html.erb
+END
+_attendances.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/support_user_portal/eschool_sessions/_attendances.html.erb
+END

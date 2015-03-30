@@ -1,0 +1,14 @@
+<div id="ms-legend">
+  <div class="legend-box" id="orange-box"></div>
+  <div class="legend-text">Fewer sessions are scheduled than have been historically needed.</div>
+  <div class="legend-box" id="dark-tan-box"></div>
+  <div class="legend-text">Not Pushed to <%= app_name %></div>
+  <div class="legend-box" id="light-tan-box"></div>
+  <div class="legend-text">Pushed to <%= app_name %></div>
+  <div class="legend-box" id="recurring_sessions_legend"></div>
+  <div class="legend-text">Recurring Sessions</div>
+  <% if app_name == "eSchool" %>
+  <div class="legend-box" id="extra_sessions_legend"></div>
+  <div class="legend-text">Extra Sessions</div>
+  <% end %>
+</div>

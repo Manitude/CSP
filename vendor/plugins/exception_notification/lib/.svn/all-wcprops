@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/80954/plugins/exception_notification/trunk/lib
+END
+exception_notifiable.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/38844/plugins/exception_notification/trunk/lib/exception_notifiable.rb
+END
+exception_notifier_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/78722/plugins/exception_notification/trunk/lib/exception_notifier_helper.rb
+END
+exception_notifier.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/80954/plugins/exception_notification/trunk/lib/exception_notifier.rb
+END

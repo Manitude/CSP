@@ -1,0 +1,52 @@
+<div id="level_unit_container">
+  <div class="village_border">
+    <div id ="external_village_id_div_in_local_edit">
+      <span class="wildcard">(optional)</span>
+      <br/>
+      <%= select_tag 'village_id', options_for_villages_for_scheduler(selected_village), :disabled => (selected_village != 'all'), :class => "village_id_in_ms editsessionselect" %>
+    </div>
+  </div>
+  <div id="number_of_seats_container">
+    <span class="wildcard">Number of Seats</span> <br/> <span class="seats_border">
+      <%= select_tag 'number_of_seats', options_for_select((1..10).to_a,selected_seats),:class => "editsessionselect" %>
+    </span>
+  </div>
+</div>
+<div id="extra_session_container" style="<%= "margin-top: -43px; display:none;" if params[:action] == "edit_local_session_ms" %>">
+  <span class="wildcard">Session Type</span>
+  <%= select_tag 'extra_session_chk', options_for_select(["Standard Session", "Extra Session"],"Standard Session") %>
+  <div id ="session_name_container" style="display: none;">
+    <span class="wildcard">Session Name</span>
+    <%= text_field_tag 'session_name_txt' %>
+  </div>
+</div>
+<%# end %>
+<div id="recurring_container">
+  <span class="wildcard">Recurring</span>
+  <%= check_box_tag 'recurring', 'recurring', recurring_selected %>
+  <span class="wildcard">Confirmed</span>
+  <%= check_box_tag 'teacher_confirmed', 'true', teacher_confirmed %>
+</div>
+<div class="level_unit_border level_unit_border1">
+  <%if @wc_release_date > @create_session[:session_start_time]%>
+    <div class="level_unit_label">Level</div>
+    <div class="level_unit_label">Unit</div>
+    <br/>
+    <%= select_tag 'level', options_for_level( selected_level),:class => "level_unit_in_ms" %>
+    <%= select_tag 'unit', options_for_coach_session_language_unit( selected_unit) ,:class => "level_unit_in_ms"%>
+    <br/>
+    <div style="float:left;font-weight: bold;" id="max_qual_of_the_coach"> </div>
+  <%else%>
+    <div class="level_unit_label">Unit</div>
+    <div class="level_unit_label">Lesson</div>
+    <br/>
+    <%= select_tag 'unit', options_for_unit( selected_unit) ,:class => "level_unit_in_ms"%>
+    <%= select_tag 'lesson', options_for_lesson( selected_lesson),:class => "level_unit_in_ms" %>
+    <br/>
+    <div style="float:left;font-weight: bold;" id="max_qual_of_the_coach"> </div>
+  <%end%>
+</div>
+
+
+
+

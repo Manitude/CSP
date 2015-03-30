@@ -1,0 +1,57 @@
+<br/><div> 
+<div id="label_id" style="position:absolute;">Import Staffing Model for week of:</div>
+  <div id="content_after_label">
+    <%= render :partial => 'shared/date_navigator', :locals => {:week_start => format_time(@week_extremes[0]), :week_end => format_time(@week_extremes[1])} %>
+    <%=button_to_function("create", :onclick => "fileUpload();", :class => "create_button_in_staffing")%>
+  </div>
+</div>
+<div id="note"><b>Note:</b> Please import ﬁle with Dates and Times in Korean Standard Time (KST). Dates must be provided in MM/DD/YYYY format, and times in
+  12 hour format (e.g., 12:00 AM, 3:00 PM, etc.). Dates and time will need to be adjusted for changes between Eastern Standard Time (EST) and
+  Eastern Daylight Time, as South Korea does not observe Daylight Savings. Generally, ﬁles for weeks during EST will begin with Sunday,
+  2:00 PM KST, and will begin with Sunday, 1:00 PM KST during EDT.
+</div>
+<br/>
+<br/><div><h2>Import History</h2></div><br/>
+<table id = "import_history" class = "staffing_file_history_table">
+  <thead>
+    <tr>
+      <th class="sortable">Date</th>
+      <th>File Name</th>
+      <th>Schedule Week</th>
+      <th class="sortable">Created By</th>
+      <th class="sortable">Status</th>
+      <th>Records Created</th>
+      <th width="26%">Messages</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%@staffing_file_info.each do |staffing_file_info|%>
+      <tr>
+        <%disable_link = staffing_file_info.status == "Error" ? (StaffingFileInfo.find_success_file_for_a_week(staffing_file_info.start_of_the_week).size == 0) : true%>
+        <td><%=staffing_file_info.created_at.to_time.in_time_zone("Eastern Time (US & Canada)").strftime("%m/%d/%Y %I:%M %p")%></td>
+        <td><%=disable_link ? (link_to(staffing_file_info.file_name, download_staffing_data_file_path(staffing_file_info.id))) : staffing_file_info.file_name%></td>
+
+        <% start_week = staffing_file_info.start_of_the_week.to_time.in_time_zone("Eastern Time (US & Canada)").strftime("%m/%d/%Y") %>
+        <% end_week = (staffing_file_info.start_of_the_week.to_time.in_time_zone("Eastern Time (US & Canada)") + 6.day).strftime("%m/%d/%Y") %>
+        <td><%=staffing_file_info.status == "Success" ? (link_to("#{start_week} to #{end_week}", view_report_path(:week_id => staffing_file_info.id))) : ("#{start_week} to #{end_week}")%></td>
+        <td><%=staffing_file_info.coach_manager.full_name%></td>
+        <td><%=staffing_file_info.status%></td>
+        <td><%=staffing_file_info.records_created%></td>
+        <td><%=staffing_file_info.messages%></td>
+      </tr>
+
+    <%end%>
+  </tbody>
+</table>
+<br/>
+<div id ="staffing_file_info_pagination" > <%= will_paginate @staffing_file_info, :method => :post, :previous_label => "Previous", :next_label => "Next"-%> </div>
+
+<script type="text/javascript">
+  jQuery.noConflict();
+  jQuery("#label_id").css("font-size", "14px");
+  jQuery("#content_after_label").css("margin-left",jQuery("#label_id").width()+5);
+  jQuery("#label_id").css("height",jQuery("#content_after_label").height());
+  jQuery("#label_id").css("margin-top","0.4%");
+
+  begining_of_week = <%=  @week_extremes[0].to_i*1000 %>
+</script>

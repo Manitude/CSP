@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/159151/coach_portal/branches/sprint32/lib
+END
+adobe_response_parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/adobe_response_parser.rb
+END
+send_sms_substitution.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/send_sms_substitution.rb
+END
+mailing_job.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/mailing_job.rb
+END
+community_api.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/community_api.rb
+END
+delay_ext.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/delay_ext.rb
+END
+hoptoad_ext.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/hoptoad_ext.rb
+END
+ambient.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/ambient.rb
+END
+saas_response_parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/158360/coach_portal/branches/sprint32/lib/saas_response_parser.rb
+END
+sub_sequence.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/sub_sequence.rb
+END
+all_languages_substitution_report.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/all_languages_substitution_report.rb
+END
+eschool_response_parser.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/eschool_response_parser.rb
+END
+authenticated_system.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/authenticated_system.rb
+END
+push_to_eschool_job.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/push_to_eschool_job.rb
+END
+coach_activation_job.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/coach_activation_job.rb
+END
+cronjob.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/cronjob.rb
+END
+filter_email.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/filter_email.rb
+END
+ms_utils.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/158348/coach_portal/branches/sprint32/lib/ms_utils.rb
+END
+baffling_api.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/baffling_api.rb
+END
+all_languages_coach_activity_report.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/lib/all_languages_coach_activity_report.rb
+END

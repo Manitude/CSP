@@ -1,0 +1,28 @@
+K 13
+svn:externals
+V 1776
+active_licensing                  https://svn.lan.flt/svn/WebDev/plugins/active_licensing/trunk
+annotate_models           -r81710 https://svn.lan.flt/svn/WebDev/plugins/annotate_models/trunk
+attachment_fu             -r81710 https://svn.lan.flt/svn/WebDev/plugins/attachment_fu/trunk
+audit_log                         https://svn.lan.flt/svn/WebDev/plugins/audit_log/trunk
+baffling_api_client       -r81710 https://svn.lan.flt/svn/WebDev/plugins/baffling_api_client/trunk
+calendar_helper           -r81710 https://svn.lan.flt/svn/WebDev/plugins/calendar_helper/trunk
+exception_notification    -r81710 https://svn.lan.flt/svn/WebDev/plugins/exception_notification/trunk
+facebox_render            -r81710 https://svn.lan.flt/svn/WebDev/plugins/facebox_render/0.9.9
+httpack                   -r81710 https://svn.lan.flt/svn/WebDev/plugins/httpack/trunk
+in_place_editing          -r81710 https://svn.lan.flt/svn/WebDev/plugins/in_place_editing/trunk
+javascript_lint           -r81710 https://svn.lan.flt/svn/WebDev/plugins/javascript_lint/trunk
+keepalive                         https://svn.lan.flt/svn/WebDev/plugins/keepalive/trunk
+lcdb_client               	  https://svn.lan.flt/svn/WebDev/plugins/lcdb_client
+ldap_user_authentication  -r81710 https://svn.lan.flt/svn/WebDev/plugins/ldap_user_authentication
+lion                              https://svn.lan.flt/svn/WebDev/plugins/lion/branches/rails-2.3.8
+simple_http               -r81710 https://svn.lan.flt/svn/WebDev/plugins/simple_http/trunk
+sms                       -r81710 https://svn.lan.flt/svn/WebDev/plugins/sms/trunk
+ssl_functionality         -r81710 https://svn.lan.flt/svn/WebDev/plugins/ssl_functionality/trunk
+what_instance_am_i        -r81710 https://svn.lan.flt/svn/WebDev/plugins/what_instance_am_i/trunk
+
+K 10
+svn:ignore
+V 0
+
+END

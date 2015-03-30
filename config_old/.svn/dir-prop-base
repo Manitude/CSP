@@ -1,0 +1,21 @@
+K 10
+svn:ignore
+V 194
+active_licensing.yml
+app_servers.yml
+baffling_api_client.yml
+cocomo.yml
+community.yml
+dblogin.yml
+eschool.yml
+eve.yml
+hoptoad.yml
+ldap.yml
+lion.yml
+site_settings.yml
+sms.yml
+ssl.yml
+totale.yml
+
+
+END

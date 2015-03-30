@@ -1,0 +1,50 @@
+  <%if @all_products && @all_products.size > 0 %>
+  <div id ="product_rights_table">
+    <br/>
+    <table border="0" class="table_list scrollTable" id="prod_report_table" >
+      <thead class="consumables_wrap">
+        <tr class="consumables_bkg">
+          <th class="align_centre">Date</th>
+          <th class="align_centre ">Added by</th>
+          <th class="align_centre ">Case Number </th>
+          <th class="align_centre ">Type</th>
+          <th class="align_centre ">Quantity</th>
+          <th class="align_centre ">Reason</th>
+          <th class="align_centre ">Customer License</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @all_products.each do |prod| %>
+          <tr >
+          <td class="left-border sub_center"><%= prod[:date] %></td>
+          <td class="left-border sub_center"><%= prod[:full_name] %></td>
+          <td class="left-border sub_center"><%= prod[:case_number] %></td>
+          <td class="left-border sub_center"><%= prod[:consumable_type] %></td>
+          <td class="left-border sub_center"><%= prod[:number_of_sessions] %></td>
+          <td class="left-border sub_center"><%= prod[:reason] %></td>
+          <td class="left-border sub_center"><%= prod[:license_guid] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    </div>
+
+  <%else%>
+  <br/></br>
+    <div> <h4>No Consumable Logs available for the given time frame.</h4> </div>
+  <%end%>
+
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    if(<%=@all_products.size%> != 0){
+      jQuery('#csv_id').show();
+    }
+    jQuery('#prod_report_table').fixheadertable({
+      height: 400,
+      colratio: [120,160,70,60,60,200,246]
+    });
+  });
+  jQuery('.body').css('overflow-x','hidden');
+  jQuery('.t_fixed_header').css('border', '1px solid');
+</script>

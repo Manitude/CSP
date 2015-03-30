@@ -1,0 +1,66 @@
+<div id = 'on_duty_list_div' style="width: 850px;">
+	<%if @list.empty? %>
+	    <center></center><font color = "red">There are currently no managers or supervisors on duty. </font>
+	    </center><br><br>
+	<%else%>
+	<div class = "currently_duty_scroller">
+	<table class = "on_duty_table_list" cellspacing = "20">
+		<tr> <th class = "name_wrap"> Name </th> <th> Phone (cell) </th> <th> Phone (office) </th> <th class = "email_wrap"> Email </th> <th class = "schedule"> Available </th> 
+		<% @list.each do |l| %>
+		<tr>
+			<td class = "name_wrap"> <%= l[:name] %> </td>
+	        <td ><%= l[:phone_cell].blank? ? "<center>--</center>".html_safe : l[:phone_cell]%></td>
+	        <td ><%= l[:phone_desk].blank? ? "<center>--</center>".html_safe : l[:phone_desk]%></td>
+	        <td class = "email_wrap"><%= l[:email]%></td>
+	        <td class = "schedule"> <%= l[:available_start].strftime("%I:%M %p") %> to <%= l[:available_end].strftime("%I:%M %p") %> ET</td>
+		</tr>
+		<%end%>
+	</table>
+	</div>
+	<%end%>
+	<br>
+	<span><%= text_area_tag :on_duty_text_message, @message[:attribute_value], :rows => 5, :readonly => !manager_logged_in?, :style => "background-color: #F0F0F0; width: 99.5%", :title => "Studio team on duty message", :placeholder => manager_logged_in? ? "Enter message here" : "There is no message to display" %></span><br><br>
+	<div style="width: 100%; text-align: center;"><%= link_to "Edit On Duty List" ,  href = 'javascript:void(0);', :id => "edit_on_duty_list" if manager_logged_in? %> &nbsp;&nbsp;<%= link_to "Save Message" ,  href = 'javascript:void(0);', :id => "save_on_duty_message" if manager_logged_in?  %> </div>
+	<div id ='confirmation_text' style="text-align: center; width: 100%;"> </div>
+</div>
+<% if manager_logged_in? %>
+<div id ='edit_on_duty_list_div' style="display: none; width: 700px;">
+<%if @full_list.empty? %>
+	    <center></center><font color = "red">There are no managers or supervisors. </font>
+	    </center><br><br>
+	<%else%>
+	
+	<table class = "on_duty_table_list" cellspacing = "20" style="width: 100%;">
+		<tr><td class = "checkbox_field"> </td>
+			<th class = "name_field"> Studio Team Members:</th>
+			<th class = "time_field"> Start Time: </th>
+			<th> End Time: </th>
+		</tr>
+	</table>
+	<div class = "on_duty_scroller">
+		<table class = "on_duty_table_list" cellspacing = "20" style="width: 100%;">
+		<% @full_list.each do |l| %>
+		<tr>
+			<td class = "checkbox_field">
+				<input class = "on_duty" type="checkbox" id=<%= l[:id] %> <%= 'checked=checked' if l[:on_duty] %> value = <%= l[:id] %> />
+			</td>
+			<td class = "name_field"><%= l[:name] %></td>
+	        <td class = "time_field"><%= select_tag l[:id].to_s+"_start_time", options_for_time_selector( l[:available_start].nil? ? "12:00" : l[:available_start].strftime("%I:%M"))%>
+	        	<%= select_tag l[:id].to_s+"_sampm", options_for_select(["AM","PM"], l[:available_start].nil? ? "AM" : l[:available_start].strftime("%p")) %>
+	        </td>
+	        <td >
+	        	<%= select_tag l[:id].to_s+"_end_time", options_for_time_selector( l[:available_end].nil? ? "12:00" : l[:available_end].strftime("%I:%M"))%>
+	        	<%= select_tag l[:id].to_s+"_eampm", options_for_select(["AM","PM"], l[:available_end].nil? ? "AM" : l[:available_end].strftime("%p")) %>
+	        </td>
+		</tr>
+		<%end%>
+		</table>
+	</div>
+	<%end%>
+	<br>
+	Please enter times in Eastern Time.
+	<div style="width: 100%; text-align: right;">
+		<%= button_to "Save" , 'javascript:void(0);', :class => "button", :id => "save_on_duty_list" %> </div>
+	</div>
+
+<% end %>

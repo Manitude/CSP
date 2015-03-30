@@ -1,0 +1,13 @@
+# Error Codes From Eschool
+XS137: student not studying this course
+XS156: student's content range does not allow this eschool session
+XS198: student has no available consumable
+XS2xx: errors related to eschool session's attributes
+XS219: session full
+XS237: session cancelled
+XS245: session not available for 1 on 1
+XS261: session not available for this level, unit, lesson
+XS302: cannot book anymore sessions at this time
+XS315: cannot double book - overlapping time
+XS326: cannot double book - already scheduled this level-unit-lesson
+XS427: session couldn't be cancelled due to cancellation policy window

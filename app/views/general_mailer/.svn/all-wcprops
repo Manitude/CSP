@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/158324/coach_portal/branches/sprint32/app/views/general_mailer
+END
+email_alert_for_sessions_cancelled_with_learners.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/general_mailer/email_alert_for_sessions_cancelled_with_learners.html.erb
+END
+cm_notifications_email.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/general_mailer/cm_notifications_email.html.erb
+END
+email_alert_for_coach_not_present.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/general_mailer/email_alert_for_coach_not_present.html.erb
+END
+timeoff_request_email_alerts_daily.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/general_mailer/timeoff_request_email_alerts_daily.html.erb
+END
+substitutions_email.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/general_mailer/substitutions_email.html.erb
+END
+all_languages_substitution_reports.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/general_mailer/all_languages_substitution_reports.html.erb
+END
+email_alert_for_unassigned_phl_session.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/general_mailer/email_alert_for_unassigned_phl_session.html.erb
+END
+cm_notification_email.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/general_mailer/cm_notification_email.html.erb
+END
+notification_email_alerts_hourly_and_daily.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/general_mailer/notification_email_alerts_hourly_and_daily.html.erb
+END
+sub_email_alerts_hourly_and_daily.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/general_mailer/sub_email_alerts_hourly_and_daily.html.erb
+END
+email_alert_for_RSA_denied_cancelled_sessions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WebDev/!svn/ver/158324/coach_portal/branches/sprint32/app/views/general_mailer/email_alert_for_RSA_denied_cancelled_sessions.html.erb
+END
+email_alert_for_substitution_policy_violation.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/general_mailer/email_alert_for_substitution_policy_violation.html.erb
+END
+calendar_events_email_alerts_hourly_and_daily.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/general_mailer/calendar_events_email_alerts_hourly_and_daily.html.erb
+END
+all_languages_coach_activity_reports.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/general_mailer/all_languages_coach_activity_reports.html.erb
+END
+template_notification_email.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/views/general_mailer/template_notification_email.html.erb
+END

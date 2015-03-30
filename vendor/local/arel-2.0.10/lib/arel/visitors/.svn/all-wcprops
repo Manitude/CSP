@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/visitors
+END
+postgresql.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/visitors/postgresql.rb
+END
+mysql.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/visitors/mysql.rb
+END
+oracle.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/visitors/oracle.rb
+END
+dot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/visitors/dot.rb
+END
+where_sql.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/visitors/where_sql.rb
+END
+order_clauses.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/visitors/order_clauses.rb
+END
+depth_first.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/visitors/depth_first.rb
+END
+join_sql.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/visitors/join_sql.rb
+END
+mssql.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/visitors/mssql.rb
+END
+visitor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/visitors/visitor.rb
+END
+sqlite.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/visitors/sqlite.rb
+END
+to_sql.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/lib/arel/visitors/to_sql.rb
+END

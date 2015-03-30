@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/lib/amq/protocol
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/lib/amq/protocol/version.rb
+END
+table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/lib/amq/protocol/table.rb
+END
+table_value_decoder.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/lib/amq/protocol/table_value_decoder.rb
+END
+frame.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/lib/amq/protocol/frame.rb
+END
+type_constants.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/lib/amq/protocol/type_constants.rb
+END
+client.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/lib/amq/protocol/client.rb
+END
+table_value_encoder.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/86504/gems/amq-protocol/0.9.0/lib/amq/protocol/table_value_encoder.rb
+END

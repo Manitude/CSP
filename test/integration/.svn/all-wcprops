@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/integration
+END
+login_process_integration_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/integration/login_process_integration_test.rb
+END
+manager_portal_integration_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/integration/manager_portal_integration_test.rb
+END

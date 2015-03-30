@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/WebDev/!svn/ver/159204/coach_portal/branches/sprint32
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/159008/coach_portal/branches/sprint32/Gemfile
+END
+bundle
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/bundle
+END
+config.ru
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config.ru
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/README
+END
+Gemfile.lock
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/159008/coach_portal/branches/sprint32/Gemfile.lock
+END
+rake
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/rake
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/Rakefile
+END
+.metrics
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/.metrics
+END

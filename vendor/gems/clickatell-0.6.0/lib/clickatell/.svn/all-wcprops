@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/41290/gems/clickatell/0.6.0/lib/clickatell
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/41290/gems/clickatell/0.6.0/lib/clickatell/version.rb
+END
+api.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/41290/gems/clickatell/0.6.0/lib/clickatell/api.rb
+END
+response.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/41290/gems/clickatell/0.6.0/lib/clickatell/response.rb
+END
+utility.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/41290/gems/clickatell/0.6.0/lib/clickatell/utility.rb
+END

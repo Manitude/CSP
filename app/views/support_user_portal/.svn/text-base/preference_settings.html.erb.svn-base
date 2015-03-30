@@ -1,0 +1,213 @@
+<span class = "bold-font"><%= _("Todays_DateCA0A6E95") %>:</span><span class = "left-space"><%= get_today_date %> </span>
+<p class="header preference-border"></p>
+<div id="preference-settings">
+  <%= form_for :preference_setting, @preference_setting, :html => { :id => 'preference-form', :name => 'preferenceform' } do |f| -%>
+    <input type="hidden" id="preference_setting_account_id" name="preference_setting[account_id]" value="<%= current_user.id %>" />
+
+    <fieldset class = "profile-fieldset" >
+      <legend class = "big-font bold-font legend_border" ><%= "Contact Preferences" %></legend>
+
+      <%= f.fields_for :account, @support_user do |form| %>
+        <table id="preference-settings-user-table" class="user_settings">
+          <tr>
+            <td class = "label_space"><span class = "space bold-font"><%=  "#{_('Rosetta_Email232327BE')}"+check_mandatory -%></span></td>
+            <% if coach_logged_in? -%>
+            <td class = "field_space"><%= form.text_field :rs_email, :disabled => true -%></td>
+            <% else -%>
+            <td class = "field_space"><%= form.text_field :rs_email -%></td>
+            <% end -%>
+            <td><span class = "space bold-font"><%= _("Mobile_phone_number44430190") %></span></td>
+            <td><%= form.text_field :mobile_country_code, :size => 3 -%><span id="asterix_id" style="display:none;float:left;color: red">*</span> <%= form.text_field :mobile_phone, :size => 10 ,:onblur => "check_mobile_country_code()"-%></td>
+            <td><span class = "space bold-font"><%= _("Skype_ID867ABF81") %></span></td>
+            <td class = "field_space"><%= form.text_field :skype_id -%></td>
+          </tr>
+          <tr>
+            <td class = "label_space"><span class = "space bold-font"><%= _("Personal_Email491AD2AA") %></span></td>
+            <td class = "field_space"><%= form.text_field :personal_email  -%></td>
+            <td><span class = "space bold-font"><%=  "#{_('Primary_Phone599295E5')}"+check_mandatory -%></span></td>
+            <td><%= form.text_field :primary_country_code, :size => 3 -%> <%= form.text_field :primary_phone, :size => 10 -%></td>
+            <td><span class = "space bold-font messenger"><%= _("AIM_ID211CF597") %></span></td>
+            <td class = "field_space"><%= form.text_field :aim_id -%></td>
+          </tr>
+          <tr>
+            <td class = "label_space"><span class = "space bold-font">Send a maximum of </span></td>
+            <td><%= f.text_field :daily_cap ,:size => 3 -%> (0-500) emails per day</td>
+            <td><span class = "space bold-font"><%=  "#{ _('Secondary_PhoneEB85EC35')}" -%></span></td>
+            <td><%= form.text_field :secondary_phone, :size => 10 -%></td>
+          </tr>
+        </table>
+      <% end %>
+      <div id="comm_spliter"><%= _("If_no_other_options_are_chosen_on_screen_alerts_wiFCFACC67") %></div>
+      <table id="preference-settings-table">
+        <tr>
+          <td><span class = "space bold-font"><%= _("Substitutions_Alerts99DA45EB") %></span></td>
+          <td><span class = "space"><%= f.check_box :substitution_alerts_email %> <span class ="text_v_alignment"><%= _("Email26535370") %></span></span></td>
+          <td><span class = "space"><%= f.select(:substitution_alerts_email_type, options_for_emails)%></span></td>
+          <td><span class = "space"><%= f.select(:substitution_alerts_email_sending_schedule, options_for_schedule)%></span></td>
+          <% if coach_logged_in? %>
+            <td>
+              <span class = "space">
+                <% if get_mobile_number(current_user.id).to_s == _("Mobile_Phone_NADC15EC65") %>
+                  <input id="preference_setting_substitution_alerts_sms" type="checkbox" value="0" disabled="disabled" name="preference_setting[substitution_alerts_sms]"/>
+                  <span class ="text_v_alignment space"><%= _("SMS_toEC106195") -%></span>
+                <% else %>
+                  <%= f.check_box :substitution_alerts_sms %>
+                  <span class ="text_v_alignment"><%= _("SMS_toEC106195") -%></span>
+                <% end -%>
+              </span>
+            </td>
+            <td><span class = "space" id = "substitution_mobile_no"><%= get_mobile_number(current_user.id) %></span></td>
+            <% end %>
+        </tr>
+        <tr>
+          <td><span class = "space bold-font"><%= _("NotificationsD37EFB26") %></span></td>
+          <td><span class = "space"><%= f.check_box :notifications_email %> <span class ="text_v_alignment"><%= _("Email26535370") %></span></span></td>
+          <td><span class = "space"><%= f.select(:notifications_email_type, options_for_emails)%></span></td>
+          <td><span class = "space"><%= f.select(:notifications_email_sending_schedule, options_for_schedule)%></span></td>
+        </tr>
+        <tr>
+          <td><span class = "space bold-font"><%= _("Calendar_NoticesA1A9DBC8") %></span></td>
+          <td><span class = "space"><%= f.check_box :calendar_notices_email %> <span class ="text_v_alignment"><%= _("Email26535370") %></span></span></td>
+          <td><span class = "space"><%= f.select(:calendar_notices_email_type, options_for_emails)%></span></td>
+          <td><span class = "space"><%= f.select(:calendar_notices_email_sending_schedule, options_for_schedule)%></span></td>
+        </tr>
+       <% if manager_logged_in? %>
+        <tr>
+          <td><span class = "space bold-font">Substitution Policy Notifications</span></td>
+          <td><span class = "space"><%= f.check_box :substitution_policy_email %> <span class ="text_v_alignment"><%= _("Email26535370") %></span></span></td>
+          <td><span class = "space"><%= f.select(:substitution_policy_email_type, options_for_emails)%></span></td>
+          <td><span class = "space"><%= f.select(:substitution_policy_email_sending_schedule, options_for_substitution_policy_alert)%></span></td>
+        </tr>
+      
+        <tr>
+          <td><span class = "space bold-font">Timeoff Request Alerts</span></td>
+          <td><span class = "space"><%= f.check_box :timeoff_request_email %> <span class ="text_v_alignment"><%= _("Email26535370") %></span></span></td>
+          <td><span class = "space"><%= f.select(:timeoff_request_email_type, options_for_emails)%></span></td>
+        </tr>
+
+          <tr>
+            <td><span class = "space bold-font"><%= "Coach Not Present Alerts" %></span></td>
+            <td>
+              <span class = "space">
+                <% if get_mobile_number(current_user.id).to_s == _("Mobile_Phone_NADC15EC65") %>
+                  <%= f.check_box :coach_not_present_alert, :disabled => true %>
+                  <span class ="text_v_alignment space"><%= _("SMS_toEC106195") -%></span>
+                <% else %>
+                  <%= f.check_box :coach_not_present_alert %>
+                  <span class ="text_v_alignment"><%= _("SMS_toEC106195") -%></span>
+                <% end -%>
+              </span>
+            </td>
+            <td><span class = "space" id = "coach_not_present_mobile_no"><%= get_mobile_number(current_user.id) %></span></td>
+          </tr>
+          <tr>
+            <td><span class = "space bold-font"><%= "Receive ReFLEX SMS Alerts" %></span></td>
+            <td>
+              <span class = "space">
+                <% if get_mobile_number(current_user.id).to_s == _("Mobile_Phone_NADC15EC65") %>
+                  <%= f.check_box :receive_reflex_sms_alert, :disabled => true %>
+                  <span class ="text_v_alignment space"><%= _("SMS_toEC106195") -%></span>
+                <% else %>
+                  <%= f.check_box :receive_reflex_sms_alert %>
+                  <span class ="text_v_alignment"><%= _("SMS_toEC106195") -%></span>
+                <% end -%>
+              </span>
+            </td>
+            <td><span class = "space" id = "reflex_alert_mobile_no"><%= get_mobile_number(current_user.id) %></span></td>
+          </tr>
+        <% end %>
+      </table>
+      <br/>
+    </fieldset>
+    <br/>
+    <fieldset class = "profile-fieldset" >
+      <legend class = "big-font bold-font" ><%= _("Display_PreferencesBE8B69F4") %></legend>
+      <% if tier1_user_logged_in?
+        conditions = ['language_code = "en-US" || language_code = "ja-JP" || language_code = "ko-KR"']
+      else
+        conditions = ['language_code = "en-US"']
+      end %>
+
+      <table id="preference-settings-table-display">
+        <% if tier1_user_logged_in? -%>
+          <tr>
+            <td><span class = "support_space bold-font"><%= _("Display_Language7262C1B4") %></span></td>
+            <%= f.fields_for :account, @support_user do |form| %>
+              <td><span class = "support_space"><%= form.select :native_language, options_from_collection_for_select(SupportLanguage.where(conditions), :language_code, :name, @support_user.native_language), {}, {:onchange => 'jQuery("#one_time_locale").val(jQuery("#preference_setting_account_native_language option:selected").val())'} -%></span></td>
+            <% end %>
+            <td><span class = "support_space bold-font"><%= _("Start_PageBF5E0012") %></span></td>
+            <td><span class = "support_space"><%= f.select(:start_page, options_for_start_page) %></span></td>    
+          </tr>
+        <% end %>
+        <%= hidden_field_tag("one_time_locale", @support_user.native_language)%>
+        <% if !tier1_user_logged_in? -%>
+          <tr>
+            <td><span class = "space bold-font"><%= _("Display_Language7262C1B4") %></span></td>
+            <%= f.fields_for :account, @support_user do |form| %>
+              <td><span class = "space"><%= form.select :native_language, options_from_collection_for_select(SupportLanguage.where(conditions), :language_code, :name, @support_user.native_language), {}, {:onchange => 'jQuery("#one_time_locale").val(jQuery("#preference_setting_account_native_language option:selected").val())'} -%></span></td>
+            <% end %>        
+            <td><span class = "space bold-font"><%= _("Substitution_Alert3867A017") %></span></td>
+            <td><span> <%= _("Time_before_sessionshift_start_time_to_display_C5BC18FD") %>: <%= f.select(:substitution_alerts_display_time, options_for_substitution_alert_display_time)%></span></td>
+          </tr>
+          <tr>
+            <td><span class = "space">&nbsp;</span></td><td><span class = "space">&nbsp;</span></td><td><span class = "space">&nbsp;</span></td>
+            <td><span class ="text_v_alignment"><%= _("Number_of_substitution_alerts_to_be_shown_on_scree7A91D2F3") %>: <%= f.select(:no_of_substitution_alerts_to_display, options_for_substitution_display_count)%></span></td>
+          </tr>
+        <% end -%>    
+       
+        <% if coach_logged_in? -%>
+          <tr>
+            <td><span class = "space bold-font"><%= _("Start_PageBF5E0012") %></span></td>
+            <td><span class = "space"><%= f.select(:start_page, options_for_start_page) %></span></td>
+            <td><span class = "space bold-font"><%= _("Session_Alert444B25F2") %></span></td>
+            <td><span><%= _("Minutes_before_sessionshift_start_time_to_show_sesBE3C031B") %>: <%= f.select(:session_alerts_display_time, options_for_session_alert_display_time)%></span></td>
+          </tr>
+        <% end -%>
+
+        <% if coach_logged_in? || manager_logged_in? -%>
+          <tr>
+            <% if manager_logged_in? %>
+              <td><span class = "space bold-font"><%= _("Start_PageBF5E0012") %></span></td>
+              <td><span class = "space"><%= f.select(:start_page, options_for_start_page) %></span></td>
+            <%else%>
+              <td><span class = "space">&nbsp;</span></td><td><span class = "space">&nbsp;</span></td>
+            <%end -%>
+            <td><span class = "space bold-font"><%= _("Home_Page6C6D5D6C") %></span></td><td><span> <span class ="text_v_alignment"><%= _("Number_of_announcements_to_be_shown_on_home_page6078DDA2") %> :</span> <%= f.select(:no_of_home_announcements, options_for_count)%></span></td>
+          </tr>
+          <tr><td><span class = "space">&nbsp;</span></td><td><span class = "space">&nbsp;</span></td><td><span class = "space">&nbsp;</span></td><td><span> <span class ="text_v_alignment"><%= _("Number_of_events_to_be_shown_on_home_pageEFCB1E3C") %>:</span> <%= f.select(:no_of_home_events, options_for_count)%></span></td></tr>
+          <tr>
+            <% if manager_logged_in? %>
+              <td><span class = "space bold-font disabled_space"><%= _("MS_LanguageEE069666") %></span></td>
+              <td><span class = "space"><%= f.select(:default_language_for_master_scheduler, options_for_languages(false, @preference_setting.default_language_for_master_scheduler))%></span></td>
+            <% else %>
+              <td><span class = "space">&nbsp;</span></td><td><span class = "space">&nbsp;</span></td>
+            <% end %>
+            <td><span class = "space">&nbsp;</span></td><td><span> <span class ="text_v_alignment"><%= _("Number_of_notifications_to_be_shown_on_home_pageD376A031") %>:</span> <%= f.select(:no_of_home_notifications, options_for_count)%></span></td></tr>
+          <tr><td><span class = "space">&nbsp;</span></td><td><span class = "space">&nbsp;</span></td><td><span class = "space">&nbsp;</span></td><td><span> <span class ="text_v_alignment"><%= _("Number_of_substitutions_to_be_shown_on_home_page967AC007") %>:</span> <%= f.select(:no_of_home_substitutions, options_for_count_substitutions)%></span></td></tr>
+        <% end -%>
+      </table>
+      <br/>
+      <% if manager_logged_in? %>
+        <table>
+          <tr>
+            <td><span class =" bold-font text_v_alignment"><%= raw "Resend hourly notice if a sub coach has not been found #{f.select(:min_time_to_alert_for_session_with_no_coach, options_for_no_coach_session_alert_time)} hours within start time using " %></span></td>
+            <td><span class = "space"><%= f.check_box :orphaned_session_alert_email %> <span class ="text_v_alignment "><%= _("Email26535370") %></span></span></td>
+            <td><span class = "space"><%= f.select(:orphaned_session_alert_email_type, options_for_emails)%></span></td>
+            <td><span class = "space"><%= f.check_box :orphaned_session_alert_screen %> <span class ="text_v_alignment "><%= "On Screen" %></span></span></td>            
+          </tr>
+          </table><br/>
+        <% end -%>      
+    </fieldset>
+    <div id = "save-preference" ><%= f.submit _("Save_PreferencesEB857B40"), :onclick => "return check_mobile_country_code();" -%></div>
+   <% end -%>
+
+  <!-- Javascript tags should stay last of the page -->
+  <%= javascript_tag "updateCheckBoxes();" -%>
+  <!-- This is a quick solution jQuery to disable not implemented field. In future sprint, we need to remove this jquery and implement the functionality. -->
+
+  <%= javascript_tag "enableCheckBoxes();" if coach_logged_in? and get_mobile_number(current_user.id).to_s != _("Mobile_Phone_NADC15EC65")%>
+
+  <%= javascript_tag "updateCmCheckBoxes();" if manager_logged_in?%>
+
+</div>
+

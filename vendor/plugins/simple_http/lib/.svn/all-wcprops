@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/WebDev/!svn/ver/71511/plugins/simple_http/trunk/lib
+END
+api_client.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/68739/plugins/simple_http/trunk/lib/api_client.rb
+END
+request.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/68739/plugins/simple_http/trunk/lib/request.rb
+END
+simple_http.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/71273/plugins/simple_http/trunk/lib/simple_http.rb
+END
+client.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/71511/plugins/simple_http/trunk/lib/client.rb
+END
+fix_request.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/71273/plugins/simple_http/trunk/lib/fix_request.rb
+END
+response.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/68739/plugins/simple_http/trunk/lib/response.rb
+END
+convenience_methods.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/68739/plugins/simple_http/trunk/lib/convenience_methods.rb
+END
+fix_bufferedio.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/68739/plugins/simple_http/trunk/lib/fix_bufferedio.rb
+END

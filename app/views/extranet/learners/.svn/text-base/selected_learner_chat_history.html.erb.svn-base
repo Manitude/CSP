@@ -1,0 +1,138 @@
+<div id="chat_filter">
+  <span>Chat type:</span><span><%= select_tag "chat_type", options_for_chat_type(!params["conversation_type"].blank? ? params["conversation_type"] : 'All') %></span>
+  <span>Time Frame:</span><span><%= select_tag "timeframe_range", options_for_duration_for_chat_history(selected = params["timeframe_range"] ? params["timeframe_range"] : "Today") %></span>
+  <span><input type="submit" id="filter_button" value="Filter"/></span>
+  <%= image_tag 'ajax-spinner.gif', :id => 'ajaxSpinner', :style => "display :none" %>
+  <span>
+    <div id="timeframe">
+        <div style='background: none repeat scroll 0 0 #DDDDDD; margin-top:7px; width: 340px; padding: 2px;'>
+          <%= calendar_date_select_tag 'start_date', params["start_date"] ? params["start_date"].to_time.beginning_of_day.strftime("%B %d, %Y") : (Time.now - 1.month).beginning_of_day.strftime("%B %d, %Y"), :class => 'jquery_datepicker', :readonly => "readonly" %> &nbsp;through&nbsp;
+          <%= calendar_date_select_tag 'end_date', params["end_date"] ? params["end_date"].to_time.end_of_day.strftime("%B %d %Y") : (Time.now.end_of_day.strftime("%B %d, %Y")), :class => 'jquery_datepicker' , :readonly => "readonly" %>
+        </div>
+      </div>
+    </span>
+</div>
+
+
+<div id="chat_history_title">
+  <span><%= "View Chat history of #{@learner.first_name} #{@learner.last_name}" %></span>
+  <%= link_to_learner_profile("Back to learner's profile page", @learner) %>
+</div>
+
+
+<table id="chat_history_conversation">
+  <% if !chat_data.blank? %>
+      <thead id="conversation_thead">
+      <th>Date and Time</th>
+      <th>Text Content</th>
+      <th>Type</th>
+      </thead>
+
+      <tbody id="conversation_tbody">
+      <% chat_data.each do |conversation| %>
+          <tr>
+            <td><%= conversation[:date_time] %></td>
+            <td>
+              <span class="link_to_detailed_chat_history" message_id=<%= conversation[:message_id] %> learner_id=<%= @learner.id %> c_type=<%= conversation[:conversation_type].gsub(' ', '')%> message_time=<%= URI.escape(conversation[:date_time]) %> id=<%= "message_" + conversation[:message_id] %>> <%= conversation[:message] %> </span>
+            </td>
+            <td><%= conversation[:conversation_type] %></td>
+          </tr>
+      <% end %>
+       <tr>
+          <td colspan="4" align="center">
+            <% if total_pages > 1 %> 
+            <div class="pagination">
+               <%=  current_page == 1 ? '« Previous' : link_to("« Previous", selected_learner_chat_history_path(:id => @learner.id, :start_date => params["start_date"], :end_date => params["end_date"], :conversation_type => params["conversation_type"], :timeframe_range => params["timeframe_range"], :page => current_page == 1 ? current_page : current_page-1 )) %>
+               <% total_pages.to_i.times do |x|%>
+                  <%= current_page == x+1 ? x+1 : link_to( x+1, selected_learner_chat_history_path(:id => @learner.id,:start_date => params["start_date"], :end_date => params["end_date"], :conversation_type => params["conversation_type"], :timeframe_range => params["timeframe_range"],:page => x+1 )) %>
+               <%end%>
+               <%=current_page == total_pages.to_i ? 'Next »' : link_to("Next »", selected_learner_chat_history_path(:id => @learner.id, :start_date => params["start_date"], :end_date => params["end_date"], :conversation_type => params["conversation_type"], :timeframe_range => params["timeframe_range"], :page => current_page == total_pages.to_i ? current_page : current_page+1 )) %>
+            </div>
+             <%end%>
+          </td>
+        </tr>
+      </tbody>
+  <% else %>
+      <thead id="conversation_thead"></thead>
+      <tbody id="conversation_tbody">
+      <tr>
+        <td colspan="3">No chat history found</td>
+      </tr>
+      </tbody>
+  <% end %>
+</table>
+
+<script type="text/javascript">
+
+    $('#filter_button').click(function () {
+      var start_date = new Date(jQuery('#start_date').val());
+      var end_date = new Date(jQuery('#end_date').val());
+      var date = new Date()
+       if(jQuery('#timeframe_range').val() == 'Custom'){
+        if(start_date > date || end_date > date){
+          alert('From/To date cannot be greater than today');
+          return false;
+        }
+        if(start_date > end_date ){
+          alert('From date cannot be greater than To date');
+          return false;
+        }
+        
+       }
+
+       
+        jQuery('#ajaxSpinner').show();
+        $.ajax({
+            url:"selected_learner_chat_history",
+            type:"GET",
+            data:{
+              conversation_type:$('#chat_type option:selected').val(),
+              id: <%= @learner.id%>, start_date:jQuery('#start_date').val(), 
+              end_date:jQuery('#end_date').val(), 
+              timeframe_range:jQuery('#timeframe_range').val()  
+            },
+            success:function (data) {
+                var tbody = jQuery(data).find('tbody');
+                var thead = jQuery(data).find('thead');
+                $('#conversation_thead').html(thead.html());
+                $('#conversation_tbody').html(tbody.html());
+                jQuery('#ajaxSpinner').hide();
+            },
+            error:function (error) {
+                alert('Something went wrong, Please try again.');
+            }
+        })
+    });
+
+    $('#timeframe_range').change(function () {
+        if (jQuery('#timeframe_range').val() == 'Select a Timeframe') {
+            jQuery('#filter_button').attr('disabled', 'disabled');
+        } else {
+            jQuery('#filter_button').removeAttr('disabled', 'disabled');
+        }
+
+        if (jQuery('#timeframe_range').val() == "Custom") {
+            jQuery('#timeframe').slideDown("slow");
+            jQuery('#timeframe').css('padding-left', jQuery('#timeframe_range').position().left - jQuery('#timeframe').position().left);
+        }
+        else {
+          jQuery('#timeframe').slideUp("slow");
+        }
+    });
+
+    $(document).ready(function () {
+        if (jQuery('#timeframe_range').val() == "Custom"){
+            jQuery('#timeframe').show();
+            jQuery('#timeframe').css('padding-left', jQuery('#timeframe_range').position().left - jQuery('#timeframe').position().left);
+          }
+        else{
+            jQuery('#timeframe').hide();
+          }
+
+    });
+
+    jQuery('span[id^="message_"]').live("click", function () {
+        window.location = '/detailed_chat_history?id=' + this.getAttribute('learner_id') + '&message_id=' + this.getAttribute('message_id') + '&message_date_time=' + this.getAttribute('message_time') + '&conversation_type=' + this.getAttribute('c_type') + '&start_date=' +  '' + '&end_date=' + ''
+    });
+
+</script>

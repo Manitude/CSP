@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/databases
+END
+ibm_db.yml
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/databases/ibm_db.yml
+END
+jdbc.yml
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/databases/jdbc.yml
+END
+frontbase.yml
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/databases/frontbase.yml
+END
+postgresql.yml
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/databases/postgresql.yml
+END
+sqlite3.yml
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/databases/sqlite3.yml
+END
+mysql.yml
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/databases/mysql.yml
+END
+oracle.yml
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/databases/oracle.yml
+END
+jdbcpostgresql.yml
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/databases/jdbcpostgresql.yml
+END
+jdbcsqlite3.yml
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/databases/jdbcsqlite3.yml
+END
+jdbcmysql.yml
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/railties-3.0.20/lib/rails/generators/rails/app/templates/config/databases/jdbcmysql.yml
+END

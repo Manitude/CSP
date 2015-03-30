@@ -1,0 +1,51 @@
+<div id="profile">
+  <p class="header" style="border-bottom: 2px solid gray;"></p>
+  <div id="general">
+    <ul class="col1">
+      <li><label><%= _("External_Id9A93C251") %></label> <span><%= get_text @support_user.id -%></span></li>
+      <li><label><%= _("Full_Name82853947") %></label> <span><%= get_text @support_user.full_name -%></span></li>
+      <li><label><%= _("AD_NameBD52F356") %></label> <span><%= get_text @support_user.user_name -%></span></li>
+      <li><label><%= _("Preferred_Name77198152") %></label> <span><%= get_text @support_user.preferred_name -%></span></li>
+      <li><label><%= _("Rosetta_Email232327BE") %></label> <span><%= get_text @support_user.rs_email -%></span></li>
+      <li><label><%= _("Personal_Email491AD2AA") %></label> <span><%= get_text @support_user.personal_email -%></span></li>
+      <li><label><%= _("Skype_ID867ABF81") %></label> <span><%= get_text @support_user.skype_id -%></span></li>
+      <li><label><%= _("AIM_ID211CF597") %></label> <span><%= get_text @support_user.aim_id -%></span></li>
+      <li><label><%= _("Primary_Phone599295E5") %></label> <span><%= get_text phone_code_format(@support_user.primary_country_code) + phone_format(@support_user.primary_phone) -%></span></li>
+      <li><label><%= _("Secondary_PhoneEB85EC35") %></label> <span><%= get_text phone_format(@support_user.secondary_phone) -%></span></li>
+      <li><label><%= _("Mobile_phone_number44430190") %></label> <span><%= get_text phone_code_format(@support_user.mobile_country_code) +  phone_format(@support_user.mobile_phone) -%></span></li>
+      <li><label><%= _("AddressC2F3561D") %></label> <span><%= get_text @support_user.address -%></span></li>
+      <li><label><%= _("Country9CCEF0FA") %></label> <span><%= get_text RosettaStone::Country.find_by_country_code(@support_user.country) -%></span></li>
+    </ul>
+    <ul class="col2">
+      <li><label><%= _("RoleF75B2554") %></label> <span><%= get_text @support_user.type -%></span></li>
+      <% unless admin_logged_in? %>
+        <li><label><%= _("Display_Language7262C1B4") %></label> <span><%= SupportLanguage.find_by_language_code(@support_user.native_language).name %></span></li>
+        <li><label><%= _("Other_Language8BC417D2") %></label> <span style="float:left"><%= get_text @other_languages.join("<br/>") -%></span></li>
+      <% end %>
+      <% if manager_logged_in? %>
+        <li><label name="is_supervisor_label"><%= _("Is_Supervisor1B0FADF3")%></label> <span><% if @support_user.is_supervisor %> <%= _("Yes4DAA7349")%><%else%><%= _("NoF22E0CBD")%><%end%> </span></li>
+      <%end%>
+      <li>
+        <fieldset class = "profile-fieldset" >
+          <legend><span><div class = "about_me"><%= _("About_MeF0B34752")%></div></span></legend>
+            <div>
+              <% if manager_logged_in? %>
+                <div id="prof-pic-div">
+                  <% if @support_user.photo.exists? then %>
+                    <%= image_tag(@support_user.photo.url, :width => '100') %>
+                  <% else %>
+                    <%= image_tag("user.png", :width => '100') %>
+                  <% end %>
+                </div>
+              <% end %>
+              <div class = "left-space birthdate">
+                <span class = "bold-font"> <%= _("Birthdate1015DE80") %></span><span class = "left-space" ><%= get_text @support_user.birth_date -%></span>
+              </div>
+              <div class = "left-space top_bottom_space"><%= @support_user.bio -%></div>
+             </div>
+        </fieldset>
+      </li>
+      </ul>
+  </div>
+</div>
+

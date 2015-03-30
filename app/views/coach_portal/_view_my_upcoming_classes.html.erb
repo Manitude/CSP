@@ -1,0 +1,24 @@
+<%if @upcoming_sessions.blank? %>
+  You have no sessions scheduled for this week.
+<%else%>
+  <div class="print-button-for-week">
+    <%=image_tag('icon_print.png', :alt => "Print", :class => "logo", :print_element_id => "upcoming_sessions" , :title => "Print Schedule", :id => "print_button") %>
+  </div>
+  <div class = "upcoming_sessions" id="upcoming_sessions">
+    <% current_date = nil %>
+    <% @upcoming_sessions.each do |session| %>
+      <% session_day = format_time(session.session_start_time, '%A, %B %d') %>
+      <% if current_date != session_day %>
+        <% current_date = session_day %>
+        <br/><span class="upcoming_sessions_day"><%= current_date %></span><br/>
+      <% end %>
+      <div <%if session.falls_under_alerts_display_time? %> style="background-color: yellow;"<% end %>>
+        <br />
+        - <b><%= session.display_name_in_upcoming_classes %></b>
+        (<a href="javascript:void(0);" class="quick_details" is_appointment="<%= session.appointment?.to_s %>" start_time="<%= session.session_start_time.to_i %>">
+          <%= format_time(session.session_start_time, '%I:%M %p') %> - <%= format_time(session.session_end_time, '%I:%M %p') %>
+        </a>)
+      </div>
+    <% end %>
+  </div>
+<%end%>

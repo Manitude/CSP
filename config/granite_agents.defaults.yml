@@ -1,0 +1,12 @@
+agents:
+ CspControllerAgent: 1
+ CspReflexEventsConsumerAgent: 1
+
+raider:
+  max_message_retries: 3
+  delay_between_retries: 1800 
+
+community_update_agent_configs:
+  start_send_initial_profile_setup_message: 1326240000
+
+log_level: warn

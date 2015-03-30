@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/xsd/xsd2ruby
+END
+test_xsd2ruby.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/xsd/xsd2ruby/test_xsd2ruby.rb
+END
+expected_mysample.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/xsd/xsd2ruby/expected_mysample.rb
+END
+expected_mysample_mapping_registry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/xsd/xsd2ruby/expected_mysample_mapping_registry.rb
+END
+expected_mysample_mapper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/xsd/xsd2ruby/expected_mysample_mapper.rb
+END
+section.xsd
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/xsd/xsd2ruby/section.xsd
+END

@@ -1,0 +1,15 @@
+<div>
+  <% if succeeded %>
+    <%= javascript_tag do%>
+      var href_str = window.location.href;
+      var index = window.location.href.indexOf('?')
+      if( index >= 0){
+        window.location.href = href_str.substring(0, index)+'?coach_id='+<%=  coach_id%>+'&locked='+true;
+      }else{
+        window.location.href = window.location.href+'?coach_id='+<%=  coach_id%>+'&locked='+true;
+      }
+    <% end %>
+  <% else %>
+    <div><b>Sorry. This coach has been locked already.</b></div>
+  <% end %>
+</div>

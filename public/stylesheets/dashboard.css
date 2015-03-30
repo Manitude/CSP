@@ -1,0 +1,320 @@
+
+#dashboard_data .table_list td, #learner_list .table_list td {
+    background: none;
+}
+
+#audio_status_legend.table_list td {
+    background: none;
+}
+
+.table_list th, #learner_list .table_list th, #audio_status_legend.table_list th {
+    background: #aaa
+}
+
+.audio_input_device_red {
+    background: #f66 !important;
+}
+
+#other_reasons {
+    width : 150px !important;
+}
+
+a.view_only_link, a.cancel_link {
+    margin-right: 7px;
+    color: #1090CF;
+    cursor: pointer;
+}
+
+a.full_support_link, a.assign_sub_link {
+    margin-left: 7px;
+    color: #1090CF;
+    cursor: pointer;
+}
+
+#temp_container {
+    display: none;
+}
+
+.audio_input_device_yellow {
+    background: #ff6 !important;
+}
+
+.audio_input_device_green {
+    background: #6f6 !important;
+}
+
+.audio_input_device_unknown_device {
+    background: #66f !important;
+}
+
+div.t_fixed_header_main_wrapper {
+    clear: both;
+}
+
+div.t_fixed_header tr th,
+div.t_fixed_header tr td {
+    text-overflow: clip;
+    white-space: normal;
+}
+
+
+tr.starts_in_future {
+    background: #fff !important;
+}
+
+.already_finished {
+    background: #ddd !important;
+}
+
+.in_progress {
+    background: #afa !important;
+}
+
+.needs_teacher_now {
+    background: #faa !important;
+}
+
+#dashboard_data {
+    width: 100%;
+    height: 600px;
+}
+
+#filter_session_form {
+    clear: both;
+    float: left;
+}
+
+.cancelled_session {
+    color:red;
+    font-weight:bold;
+}
+
+/*Uncomment to have an additional highlight around the leaeners newly added to the dashboard screen*/
+#dashboard_data .table_list td, #dashboard_data .table_list th {
+    vertical-align: middle;
+}
+
+#audio_status_legend {
+    clear: none;
+    float: right;
+    width: 500px;
+}
+
+td.learners_present {
+    cursor: pointer;
+}
+
+.reassign {
+    color: #1090CF;
+    border: none;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.middle_align {
+    vertical-align: middle;
+}
+
+#big_spinner {
+    clear: both;
+    float: left;
+    text-align: center;
+    margin: 35px 0 0 225px;
+}
+
+#session_data {
+    width: 100%;
+    clear: both;
+    float: left;
+}
+
+#session_table {
+    width: 100%;
+    /*display: none;*/
+ }
+
+.headtable .head {
+    clear: both;
+    float: left;
+}
+
+.headtable{
+    margin-right: 0px !important;
+}
+
+#session_table tr td {
+    font-size: 10px;
+    margin: 5px;
+    padding: 8px 2px;
+    vertical-align: middle;
+    border: 1px solid #CCCCCC;
+}
+
+#session_header {
+    background: none repeat scroll 0 0 #AAAAAA;
+    vertical-align: middle;
+}
+
+.full_width {
+    width: 100%;
+}
+
+.session_info {
+    text-align: center !important;
+}
+
+#filter {
+    float: left;
+    border: 1px solid #CCCCCC;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    padding: 3px;
+    margin: 33px 0 5px 26px;
+    height: 24px;
+}
+
+
+#support_language {
+    float: left;
+    margin: 5px 0;
+    width: 130px;
+}
+
+#session_start_time_element_Coach {
+    float: left;
+    margin: 5px 0 5px 26px;
+    width: 160px;
+}
+
+#session_language {
+    float: left;
+    margin: 5px 0 0 7px
+}
+
+#filter_session {
+    width: 100%;
+}
+
+#session_start_time {
+    float: left;
+    margin: 5px 0 0 78px;
+}
+
+#session_language_element {
+    float: left;
+    margin: 5px 0 5px 26px;
+}
+
+#support_language_element {
+    float: left;
+    margin: 5px 0 5px 5px;
+    width: 110px;
+}
+
+#session_start_time_element {
+    float: left;
+    margin: 5px 0 5px 26px;
+}
+
+#session_start_time_id {
+    width: 210px;
+}
+
+.count_has_technical_problem {
+    color: #BF0030 ! important
+}
+
+#dashboard_lotus_real_time_data #lotus_real_time_data{
+    z-index: 1;
+}
+
+div.body{
+    overflow-x: hidden !important;
+}
+
+#non_assistable_sessions_alert{
+    display: none;
+    width: 150px;
+    padding-left: 15px;
+    font-weight: normal;
+    font-size: 10px;
+    float: left;
+}
+
+#non_assistable_sessions_filter_div {
+    padding-left: 5px;
+    font-weight: normal;
+    font-size: 10px;
+    float: left;
+}
+
+#disable_dashboard_refresh_div {
+    padding-left: 0px;
+    font-weight: normal;
+    font-size: 10px;
+    float: left;
+}
+.today_date_in_dashboard{
+    font-weight: normal;
+    float: left;
+    padding-left: 4px;
+}
+.non_assistable_session_alert{
+    float: right;
+    width: 120px;
+}
+
+.disable_dashboard_refresh_element{
+    float: right;
+    width: 120px;
+}
+
+#spacer {
+    width: 100%;
+    height: 120px;
+    float : right;
+    display: none;
+}
+.solo_icon{
+    width:15px;
+    height:15px;
+    float: right;
+    margin-top: -13px !important;
+    margin-right: 2px !important;
+}
+
+#help_requested_by_table{
+    position: relative;
+    float: left;
+    /*border: 0.5px solid black;*/
+}
+.some_div{
+    width: 600px;
+    height: 100px;
+    overflow: auto;
+    border: 0.5px solid black;
+}
+.help_requested_by_table_cell{
+    padding-left: 5px;
+}
+.help_requested_by_type_cell{
+    padding-left: 3px;
+}
+.help_requested_by_session_cell{
+    padding-left: 5px;
+}
+.session_support_field_label{
+    width: 145px !important;
+    float: left;
+    margin: 5px 0px;
+}
+.session_support_field_txt{
+    width: 145px !important;
+    float: left;
+}
+
+.first_seen_at_img {
+    cursor: pointer;
+}

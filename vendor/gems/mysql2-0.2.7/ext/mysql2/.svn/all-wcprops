@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/WebDev/!svn/ver/70063/gems/mysql2/0.2.7/ext/mysql2
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/70063/gems/mysql2/0.2.7/ext/mysql2/Makefile
+END
+mysql2_ext.h
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/ext/mysql2/mysql2_ext.h
+END
+client.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/67503/gems/mysql2/0.2.7/ext/mysql2/client.c
+END
+result.c
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/ext/mysql2/result.c
+END
+client.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/ext/mysql2/client.h
+END
+result.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/ext/mysql2/result.h
+END
+extconf.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/ext/mysql2/extconf.rb
+END
+mysql2_ext.c
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/ext/mysql2/mysql2_ext.c
+END

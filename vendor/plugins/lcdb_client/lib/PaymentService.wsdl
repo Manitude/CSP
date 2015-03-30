@@ -1,0 +1,227 @@
+<definitions name='PaymentServiceWSImplService' targetNamespace='http://domain.rst1.com/services/business/rsPayment' xmlns='http://schemas.xmlsoap.org/wsdl/' xmlns:ns1='http://domain.rst1.com/Paymentdetail' xmlns:ns2='http://domain.rst1.com/Global' xmlns:ns3='http://domain.rst1.com/Faults' xmlns:ns4='http://domain.rst1.com/Result' xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://domain.rst1.com/services/business/rsPayment' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+ <types>
+  <xs:schema targetNamespace='http://domain.rst1.com/services/business/rsPayment' version='1.0' xmlns:ns1='http://domain.rst1.com/Paymentdetail' xmlns:ns2='http://domain.rst1.com/Faults' xmlns:ns3='http://domain.rst1.com/Result' xmlns:tns='http://domain.rst1.com/services/business/rsPayment' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+   <xs:import namespace='http://domain.rst1.com/Paymentdetail'/>
+   <xs:import namespace='http://domain.rst1.com/Faults'/>
+   <xs:import namespace='http://domain.rst1.com/Result'/>
+   <xs:element name='authCreditCard' nillable='true' type='tns:authCreditCard'/>
+   <xs:element name='authCreditCardResponse' nillable='true' type='tns:authCreditCardResponse'/>
+   <xs:element name='getPaymentDeatilResponse' nillable='true' type='ns1:PaymentDetail'/>
+   <xs:element name='getPaymentDetail' nillable='true' type='ns1:PaymentDetail'/>
+   <xs:element name='messageServiceFault' nillable='true' type='ns2:FaultResponse'/>
+   <xs:element name='setPaymentDetail' nillable='true' type='ns1:PaymentDetail'/>
+   <xs:element name='setPaymentDetailResponse' nillable='true' type='ns3:Result'/>
+   <xs:complexType name='authCreditCard'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='authRec' type='tns:authCreditCardRequestType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='authCreditCardRequestType'>
+    <xs:sequence>
+     <xs:element name='shipPostalCode' type='xs:string'/>
+     <xs:element name='postalCode' type='xs:string'/>
+     <xs:element name='shipCity' type='xs:string'/>
+     <xs:element name='currencyCode' type='xs:string'/>
+     <xs:element name='customerip' type='xs:string'/>
+     <xs:element name='shipState' type='xs:string'/>
+     <xs:element name='state' type='xs:string'/>
+     <xs:element name='cnty' type='xs:string'/>
+     <xs:element name='shipCuontry' type='xs:string'/>
+     <xs:element name='shipAddr' type='xs:string'/>
+     <xs:element name='bankAcctUseId' type='xs:string'/>
+     <xs:element name='address1' type='xs:string'/>
+     <xs:element name='address2' type='xs:string'/>
+     <xs:element name='address3' type='xs:string'/>
+     <xs:element name='country' type='xs:string'/>
+     <xs:element name='city' type='xs:string'/>
+     <xs:element name='amount' type='xs:string'/>
+     <xs:element name='orgId' type='xs:string'/>
+     <xs:element name='customerId' type='xs:string'/>
+     <xs:element name='stt' type='xs:string'/>
+     <xs:element name='expireDate' type='xs:string'/>
+     <xs:element name='cvv' type='xs:string'/>
+     <xs:element name='variable' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='authCreditCardResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:authCreditCardResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='authCreditCardResponseType'>
+    <xs:sequence>
+     <xs:element name='authCode' type='xs:string'/>
+     <xs:element name='paymentProcessorId' type='xs:string'/>
+     <xs:element name='avsResult' type='xs:string'/>
+     <xs:element name='cvvResult' type='xs:string'/>
+     <xs:element name='vendor' type='xs:string'/>
+     <xs:element name='attempts' type='xs:string'/>
+     <xs:element name='gcStoreId' type='xs:string'/>
+     <xs:element name='paymentProductId' type='xs:string'/>
+     <xs:element name='authAmount' type='xs:string'/>
+     <xs:element name='paymentMethodId' type='xs:string'/>
+     <xs:element name='gcOrderId' type='xs:string'/>
+     <xs:element name='returnCode' type='xs:string'/>
+     <xs:element name='returnMessage' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+  </xs:schema>
+  <xs:schema elementFormDefault='qualified' targetNamespace='http://domain.rst1.com/Paymentdetail' version='1.0' xmlns:ns1='http://domain.rst1.com/Global' xmlns:tns='http://domain.rst1.com/Paymentdetail' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+   <xs:import namespace='http://domain.rst1.com/Global'/>
+   <xs:element name='paymentDetail' type='tns:PaymentDetail'/>
+   <xs:complexType name='PaymentDetail'>
+    <xs:sequence>
+     <xs:element name='customerId' type='xs:int'/>
+     <xs:element name='currency' type='xs:string'/>
+     <xs:element name='orgId' type='xs:int'/>
+     <xs:element name='acctNum' type='xs:string'/>
+     <xs:element name='acctName' type='xs:string'/>
+     <xs:element name='expireDate' type='xs:string'/>
+     <xs:element name='primaryFlag' type='xs:string'/>
+     <xs:element name='paymentAddress' type='ns1:Address'/>
+     <xs:element name='updateInvoice' type='xs:string'/>
+     <xs:element name='bankName' type='xs:string'/>
+     <xs:element name='bankCntry' type='xs:string'/>
+     <xs:element name='bankCode' type='xs:string'/>
+     <xs:element name='billName' type='ns1:Person'/>
+     <xs:element name='licenseGUID' type='xs:string'/>
+     <xs:element name='result' type='xs:string'/>
+     <xs:element name='message' type='xs:string'/>
+    </xs:sequence>
+    <xs:attribute name='paymentId' type='xs:int' use='required'/>
+   </xs:complexType>
+  </xs:schema>
+  <xs:schema elementFormDefault='qualified' targetNamespace='http://domain.rst1.com/Faults' version='1.0' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+   <xs:complexType name='FaultResponse'>
+    <xs:sequence>
+     <xs:element name='errorType' type='xs:int'/>
+     <xs:element name='message' type='xs:string'/>
+    </xs:sequence>
+    <xs:attribute name='oid' type='xs:int' use='required'/>
+   </xs:complexType>
+  </xs:schema>
+  <xs:schema elementFormDefault='qualified' targetNamespace='http://domain.rst1.com/Result' version='1.0' xmlns:tns='http://domain.rst1.com/Result' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+   <xs:element name='result' type='tns:Result'/>
+   <xs:complexType name='Result'>
+    <xs:sequence>
+     <xs:element name='result' type='xs:string'/>
+     <xs:element name='message' type='xs:string'/>
+    </xs:sequence>
+    <xs:attribute name='oid' type='xs:int' use='required'/>
+   </xs:complexType>
+  </xs:schema>
+  <xs:schema elementFormDefault='qualified' targetNamespace='http://domain.rst1.com/Global' version='1.0' xmlns:tns='http://domain.rst1.com/Global' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+   <xs:complexType name='Address'>
+    <xs:sequence>
+     <xs:element name='city' type='xs:string'/>
+     <xs:element name='adrLine1' type='xs:string'/>
+     <xs:element name='adrLine2' type='xs:string'/>
+     <xs:element name='postalCode' type='xs:string'/>
+     <xs:element name='country' type='xs:string'/>
+     <xs:element name='email' type='xs:string'/>
+     <xs:element name='phone' type='xs:string'/>
+     <xs:element name='mobile' type='xs:string'/>
+     <xs:element name='state' type='xs:string'/>
+     <xs:element name='timeZone' type='xs:string'/>
+     <xs:element name='alternateEmail' type='xs:string'/>
+     <xs:element name='county' type='xs:string'/>
+    </xs:sequence>
+    <xs:attribute name='adroid' type='xs:long' use='required'/>
+   </xs:complexType>
+   <xs:complexType name='Person'>
+    <xs:sequence>
+     <xs:element name='firstName' type='xs:string'/>
+     <xs:element name='lastName' type='xs:string'/>
+     <xs:element name='dob' type='xs:string'/>
+     <xs:element name='gender' type='tns:GenderEnum'/>
+     <xs:element name='displayName' type='xs:string'/>
+    </xs:sequence>
+    <xs:attribute name='usroid' type='xs:long' use='required'/>
+   </xs:complexType>
+   <xs:simpleType name='GenderEnum'>
+    <xs:restriction base='xs:string'>
+     <xs:enumeration value='Female'/>
+     <xs:enumeration value='Male'/>
+    </xs:restriction>
+   </xs:simpleType>
+  </xs:schema>
+ </types>
+ <message name='PaymentServiceWS_getPaymentDetailResponse'>
+  <part element='tns:getPaymentDeatilResponse' name='getPaymentDeatilResponse'></part>
+ </message>
+ <message name='PaymentServiceWS_getPaymentDetail'>
+  <part element='tns:getPaymentDetail' name='getPaymentDetail'></part>
+ </message>
+ <message name='PaymentServiceWS_setPaymentDetail'>
+  <part element='tns:setPaymentDetail' name='setPaymentDetail'></part>
+ </message>
+ <message name='PaymentServiceWS_authCreditCardResponse'>
+  <part element='tns:authCreditCardResponse' name='authCreditCardResponse'></part>
+ </message>
+ <message name='PaymentServiceWS_authCreditCard'>
+  <part element='tns:authCreditCard' name='authCreditCard'></part>
+ </message>
+ <message name='PaymentServiceWS_setPaymentDetailResponse'>
+  <part element='tns:setPaymentDetailResponse' name='setPaymentDetailResponse'></part>
+ </message>
+ <message name='messageServiceFault'>
+  <part element='tns:messageServiceFault' name='messageServiceFault'></part>
+ </message>
+ <portType name='PaymentServiceWS'>
+  <operation name='authCreditCard' parameterOrder='authCreditCard'>
+   <input message='tns:PaymentServiceWS_authCreditCard'></input>
+   <output message='tns:PaymentServiceWS_authCreditCardResponse'></output>
+  </operation>
+  <operation name='getPaymentDetail' parameterOrder='getPaymentDetail'>
+   <input message='tns:PaymentServiceWS_getPaymentDetail'></input>
+   <output message='tns:PaymentServiceWS_getPaymentDetailResponse'></output>
+   <fault message='tns:messageServiceFault' name='messageServiceFault'></fault>
+  </operation>
+  <operation name='setPaymentDetail' parameterOrder='setPaymentDetail'>
+   <input message='tns:PaymentServiceWS_setPaymentDetail'></input>
+   <output message='tns:PaymentServiceWS_setPaymentDetailResponse'></output>
+   <fault message='tns:messageServiceFault' name='messageServiceFault'></fault>
+  </operation>
+ </portType>
+ <binding name='PaymentServiceWSBinding' type='tns:PaymentServiceWS'>
+  <soap:binding style='document' transport='http://schemas.xmlsoap.org/soap/http'/>
+  <operation name='authCreditCard'>
+   <soap:operation soapAction='authCreditCard'/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='getPaymentDetail'>
+   <soap:operation soapAction='getPaymentDetail'/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+   <fault name='messageServiceFault'>
+    <soap:fault name='messageServiceFault' use='literal'/>
+   </fault>
+  </operation>
+  <operation name='setPaymentDetail'>
+   <soap:operation soapAction='setPaymentDetail'/>
+   <input>
+    <soap:body use='literal'/>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+   <fault name='messageServiceFault'>
+    <soap:fault name='messageServiceFault' use='literal'/>
+   </fault>
+  </operation>
+ </binding>
+ <service name='PaymentServiceWSImplService'>
+  <port binding='tns:PaymentServiceWSBinding' name='PaymentServiceWS'>
+   <soap:address location='http://ashstgas0.lan.flt:8080/business.services/PaymentService'/>
+  </port>
+ </service>
+</definitions>

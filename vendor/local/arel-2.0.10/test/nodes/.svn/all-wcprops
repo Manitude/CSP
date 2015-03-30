@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/nodes
+END
+test_node.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/nodes/test_node.rb
+END
+test_delete_statement.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/nodes/test_delete_statement.rb
+END
+test_update_statement.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/nodes/test_update_statement.rb
+END
+test_select_core.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/nodes/test_select_core.rb
+END
+test_count.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/nodes/test_count.rb
+END
+test_insert_statement.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/nodes/test_insert_statement.rb
+END
+test_sql_literal.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/nodes/test_sql_literal.rb
+END
+test_equality.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/nodes/test_equality.rb
+END
+test_not.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/nodes/test_not.rb
+END
+test_or.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/nodes/test_or.rb
+END
+test_as.rb
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/nodes/test_as.rb
+END
+test_select_statement.rb
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/nodes/test_select_statement.rb
+END
+test_sum.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/arel-2.0.10/test/nodes/test_sum.rb
+END

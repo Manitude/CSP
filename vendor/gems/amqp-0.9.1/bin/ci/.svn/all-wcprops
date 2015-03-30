@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/bin/ci
+END
+before_build.sh
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/bin/ci/before_build.sh
+END

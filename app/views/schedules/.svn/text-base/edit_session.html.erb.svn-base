@@ -1,0 +1,31 @@
+<input type="hidden" id = "learner_count" value="<%= @edit_session[:learners].present? ? @edit_session[:learners].size : 0 %>" />
+<input type="hidden" id = "old_coach_id" value="<%= @edit_session[:coach_id].to_i %>" />
+<input type="hidden" id = "previously_recurring_ms" value="<%= @edit_session[:recurring]%>" />
+<div id="edit_local_session" <% if @edit_session[:language].is_tmm? %> style="width: 380px; float:left;" <% else %> style="width: 100%; float:left" <% end %>>
+    <div class="right_container">
+      Coach:
+      <br/>
+      <%= render :partial => (@edit_session[:language].is_tmm? ? 'shared/coach_list_with_qual' : 'shared/coach_list'), :locals => {:coaches => @edit_session[:coaches], :start_time => @edit_session[:session_start_time],:language_id => @edit_session[:language].id}%>
+    </div>
+  <% if (@edit_session[:coaches][0].size + @edit_session[:coaches][1].size) > 0 %>
+    <%if @edit_session[:language].is_aria? %>
+      <%= render :partial => 'edit_aria_session' %>
+      <br/>
+    <% elsif @edit_session[:language].is_tmm? %>
+      <%= render :partial => 'edit_tmm_session' %>
+      <br/>        
+    <%else%> 
+      <%= render :partial => 'right_session_edit', :locals => {:selected_level => @edit_session[:level] ,:selected_unit => @edit_session[:unit].to_i,:selected_lesson => @edit_session[:lesson].to_i,:selected_seats => @edit_session[:no_of_seats].to_i, :recurring_selected  => @edit_session[:recurring], :teacher_confirmed => @edit_session[:teacher_confirmed],  :selected_village => @edit_session[:ext_village_id], :wildcard_selected =>  @edit_session[:wildcard], :wildcard_disabled => @edit_session[:wildcard_disabled], :unit_disabled => @edit_session[:unit_disabled] }  %>
+       <br/>
+    <% end %>
+    <div id="button_container" style="float:left; width: 100%; padding-right:5px; padding-bottom:5px;">
+      <input class="button_shape edit_button" type="button" style="float: right;" value="SAVE" onclick="saveEditedSession('<%=@edit_session[:type]%>','<%= @edit_session[:session_id]%>',this)"></input>
+    </div>
+  <% end %>
+</div>
+
+<script type="text/javascript">
+  jQuery('#coach_list').val('<%=@edit_session[:coach_id]%>')
+  maxlevel(jQuery("#coach_list").find('option:selected').attr('max_unit'));
+  updateRecurringEndsAtDate();
+</script>

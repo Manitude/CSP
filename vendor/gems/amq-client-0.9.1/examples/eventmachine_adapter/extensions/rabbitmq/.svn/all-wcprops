@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/extensions/rabbitmq
+END
+publisher_confirmations_with_transient_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/extensions/rabbitmq/publisher_confirmations_with_transient_messages.rb
+END
+publisher_confirmations_with_unroutable_message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/extensions/rabbitmq/publisher_confirmations_with_unroutable_message.rb
+END
+handling_confirm_select_ok.rb
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/extensions/rabbitmq/handling_confirm_select_ok.rb
+END

@@ -1,0 +1,10 @@
+<div id="attended_session_attendance_details" style="display:none">
+  <%= render :partial => '/support_user_portal/learner_access_logs/session_attendance_details', :locals =>{:session_details=> student.attended_session }%>
+</div>
+<div id="skipped_session_attendance_details" style="display:none">
+  <%= render :partial => '/support_user_portal/learner_access_logs/session_attendance_details', :locals =>{:session_details=> student.skipped_session }%>
+</div>
+<div id="next_session_attendance_details" style="display:none">
+  <%= render :partial => '/support_user_portal/learner_access_logs/session_attendance_details', :locals =>{:session_details=> student.next_session }%>
+</div>
+

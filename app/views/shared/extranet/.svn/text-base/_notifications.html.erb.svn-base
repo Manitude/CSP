@@ -1,0 +1,5 @@
+<% if ps_show_count_is_not_zero?("no_of_home_notifications")%>
+  <%= render :partial => 'shared/notifications', :locals => {:notifications => notifications} -%>
+<% else %>
+  <h6>There are no Notifications to show. Please check your preference settings</h6>
+<% end %>

@@ -1,0 +1,947 @@
+<definitions name='LCDBServicesImplService' targetNamespace='http://domain.rst1.com/services/business/lcd' xmlns='http://schemas.xmlsoap.org/wsdl/' xmlns:soap='http://schemas.xmlsoap.org/wsdl/soap/' xmlns:tns='http://domain.rst1.com/services/business/lcd' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+ <types>
+  <xs:schema targetNamespace='http://domain.rst1.com/services/business/lcd' version='1.0' xmlns:tns='http://domain.rst1.com/services/business/lcd' xmlns:xs='http://www.w3.org/2001/XMLSchema'>
+   <xs:element name='checkTrial' nillable='true' type='tns:checkTrial'/>
+   <xs:element name='checkTrialResponse' nillable='true' type='tns:checkTrialResponse'/>
+   <xs:element name='createBillingProfile' nillable='true' type='tns:createBillingProfile'/>
+   <xs:element name='createBillingProfileResponse' nillable='true' type='tns:createBillingProfileResponse'/>
+   <xs:element name='getCustomerDetails' nillable='true' type='tns:getCustomerDetails'/>
+   <xs:element name='getCustomerDetailsResponse' nillable='true' type='tns:getCustomerDetailsResponse'/>
+   <xs:element name='getMarketValue' nillable='true' type='tns:getMarketValue'/>
+   <xs:element name='getMarketValueResponse' nillable='true' type='tns:getMarketValueResponse'/>
+   <xs:element name='getOrder' nillable='true' type='tns:getOrder'/>
+   <xs:element name='getOrderResponse' nillable='true' type='tns:getOrderResponse'/>
+   <xs:element name='getPastDuePayments' nillable='true' type='tns:getPastDuePayments'/>
+   <xs:element name='getPastDuePaymentsResponse' nillable='true' type='tns:getPastDuePaymentsResponse'/>
+   <xs:element name='getRenewal' nillable='true' type='tns:getRenewal'/>
+   <xs:element name='getRenewalResponse' nillable='true' type='tns:getRenewalResponse'/>
+   <xs:element name='pingLCDBServices' nillable='true' type='tns:pingLCDBServices'/>
+   <xs:element name='pingLCDBServicesResponse' nillable='true' type='tns:pingLCDBServicesResponse'/>
+   <xs:element name='setCustomerDetails' nillable='true' type='tns:setCustomerDetails'/>
+   <xs:element name='setCustomerDetailsResponse' nillable='true' type='tns:setCustomerDetailsResponse'/>
+   <xs:element name='setCustomerNumber' nillable='true' type='tns:setCustomerNumber'/>
+   <xs:element name='setCustomerNumberResponse' nillable='true' type='tns:setCustomerNumberResponse'/>
+   <xs:element name='setOrder' nillable='true' type='tns:setOrder'/>
+   <xs:element name='setOrderResponse' nillable='true' type='tns:setOrderResponse'/>
+   <xs:element name='setPrGuid' nillable='true' type='tns:setPrGuid'/>
+   <xs:element name='setPrGuidResponse' nillable='true' type='tns:setPrGuidResponse'/>
+   <xs:element name='setProductRights' nillable='true' type='tns:setProductRights'/>
+   <xs:element name='setProductRightsResponse' nillable='true' type='tns:setProductRightsResponse'/>
+   <xs:element name='setRenewal' nillable='true' type='tns:setRenewal'/>
+   <xs:element name='setRenewalResponse' nillable='true' type='tns:setRenewalResponse'/>
+   <xs:element name='switchAccount' nillable='true' type='tns:switchAccount'/>
+   <xs:element name='switchAccountResponse' nillable='true' type='tns:switchAccountResponse'/>
+   <xs:element name='switchLanguage' nillable='true' type='tns:switchLanguage'/>
+   <xs:element name='switchLanguageResponse' nillable='true' type='tns:switchLanguageResponse'/>
+   <xs:element name='token' nillable='true' type='xs:string'/>
+   <xs:element name='updateLicense' nillable='true' type='tns:updateLicense'/>
+   <xs:element name='updateLicenseResponse' nillable='true' type='tns:updateLicenseResponse'/>
+   <xs:element name='updateOrderPayStatus' nillable='true' type='tns:updateOrderPayStatus'/>
+   <xs:element name='updateOrderPayStatusResponse' nillable='true' type='tns:updateOrderPayStatusResponse'/>
+   <xs:element name='updatePersonDetails' nillable='true' type='tns:updatePersonDetails'/>
+   <xs:element name='updatePersonDetailsResponse' nillable='true' type='tns:updatePersonDetailsResponse'/>
+   <xs:element name='validateProductRights' nillable='true' type='tns:validateProductRights'/>
+   <xs:element name='validateProductRightsResponse' nillable='true' type='tns:validateProductRightsResponse'/>
+   <xs:complexType name='getOrder'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='tns:getOrderDetailsRequestType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getOrderDetailsRequestType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='licenseGuid' type='xs:string'/>
+     <xs:element minOccurs='0' name='pastDueOnly' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getOrderResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:getOrderDetailsResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getOrderDetailsResponseType'>
+    <xs:sequence>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='order' nillable='true' type='tns:order'/>
+     <xs:element minOccurs='0' name='returnCode' type='xs:string'/>
+     <xs:element minOccurs='0' name='returnMessage' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='order'>
+    <xs:sequence>
+     <xs:element name='licenseGuid' type='xs:string'/>
+     <xs:element name='email' type='xs:string'/>
+     <xs:element name='order_number' type='xs:string'/>
+     <xs:element minOccurs='0' name='customer_number' type='xs:string'/>
+     <xs:element name='ordered_date' type='xs:string'/>
+     <xs:element minOccurs='0' name='orig_sys_document_ref' type='xs:string'/>
+     <xs:element minOccurs='0' name='sales_channel' type='xs:string'/>
+     <xs:element minOccurs='0' name='order_total' type='xs:double'/>
+     <xs:element minOccurs='0' name='captureStatus' type='xs:string'/>
+     <xs:element minOccurs='0' name='payment_type' type='xs:string'/>
+     <xs:element minOccurs='0' name='cancel_flag' type='xs:string'/>
+     <xs:element name='org' type='xs:string'/>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='orderItems' nillable='true' type='tns:orderItems'/>
+     <xs:element minOccurs='0' name='past_due_flag' type='xs:string'/>
+     <xs:element minOccurs='0' name='due_date' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='orderItems'>
+    <xs:sequence>
+     <xs:element name='order_line_id' type='xs:int'/>
+     <xs:element name='item' type='xs:string'/>
+     <xs:element name='language' type='xs:string'/>
+     <xs:element minOccurs='0' name='line_status' type='xs:string'/>
+     <xs:element minOccurs='0' name='pr_guid' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='setOrder'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='tns:order'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='setOrderResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:genericResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='genericResponseType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='returnCode' type='xs:string'/>
+     <xs:element minOccurs='0' name='returnMessage' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='setCustomerDetails'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='tns:customer'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='customer'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='customer_number' type='xs:string'/>
+     <xs:element name='customer_flag' type='xs:string'/>
+     <xs:element name='learner_flag' type='xs:string'/>
+     <xs:element name='masterGuid' type='xs:string'/>
+     <xs:element minOccurs='0' name='sold_to_org_id' type='xs:string'/>
+     <xs:element minOccurs='0' name='org_id' type='xs:string'/>
+     <xs:element name='first_name' type='xs:string'/>
+     <xs:element name='last_name' type='xs:string'/>
+     <xs:element name='email' type='xs:string'/>
+     <xs:element minOccurs='0' name='orig_sys_document_ref' type='xs:string'/>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='customerDetails' nillable='true' type='tns:customerDetails'/>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='license' nillable='true' type='tns:license'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='customerDetails'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='site_use_id' type='xs:string'/>
+     <xs:element name='site_type' type='xs:string'/>
+     <xs:element name='first_name' type='xs:string'/>
+     <xs:element name='last_name' type='xs:string'/>
+     <xs:element name='phonetic_first_name' type='xs:string'/>
+     <xs:element name='phonetic_last_name' type='xs:string'/>
+     <xs:element name='address1' type='xs:string'/>
+     <xs:element minOccurs='0' name='address2' type='xs:string'/>
+     <xs:element minOccurs='0' name='city' type='xs:string'/>
+     <xs:element minOccurs='0' name='country' type='xs:string'/>
+     <xs:element name='state_province' type='xs:string'/>
+     <xs:element name='zip' type='xs:string'/>
+     <xs:element minOccurs='0' name='phone' type='xs:string'/>
+     <xs:element name='email' type='xs:string'/>
+     <xs:element minOccurs='0' name='credit_card_id' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='license'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='licenseGUID' type='xs:string'/>
+     <xs:element minOccurs='0' name='masterFlag' type='xs:string'/>
+     <xs:element minOccurs='0' name='suspendStatus' type='xs:string'/>
+     <xs:element minOccurs='0' name='suspendReason' type='xs:string'/>
+     <xs:element minOccurs='0' name='rsPan' type='xs:string'/>
+     <xs:element minOccurs='0' name='apiKey' type='xs:string'/>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='licenseDetails' nillable='true' type='tns:licenseDetails'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='licenseDetails'>
+    <xs:sequence>
+     <xs:element name='prGUIDRec' type='tns:prguidType'/>
+     <xs:element name='language' type='xs:string'/>
+     <xs:element name='autoRenewalFlag' type='xs:string'/>
+     <xs:element minOccurs='0' name='renewalPrice' type='xs:string'/>
+     <xs:element minOccurs='0' name='renewalTerm' type='xs:string'/>
+     <xs:element minOccurs='0' name='bankAcctusesId' type='xs:int'/>
+     <xs:element minOccurs='0' name='processingId' type='xs:string'/>
+     <xs:element minOccurs='0' name='vendor' type='xs:string'/>
+     <xs:element minOccurs='0' name='item' type='xs:string'/>
+     <xs:element minOccurs='0' name='currency' type='xs:string'/>
+     <xs:element minOccurs='0' name='trialFlag' type='xs:string'/>
+     <xs:element minOccurs='0' name='trialStartDate' type='xs:string'/>
+     <xs:element minOccurs='0' name='trialEndDate' type='xs:string'/>
+     <xs:element minOccurs='0' name='source' type='xs:string'/>
+     <xs:element minOccurs='0' name='start_date' type='xs:string'/>
+     <xs:element minOccurs='0' name='end_date' type='xs:string'/>
+     <xs:element minOccurs='0' name='subscriptionID' type='xs:string'/>
+    </xs:sequence>
+    <xs:attribute name='groupId' type='xs:int'/>
+   </xs:complexType>
+   <xs:complexType name='prguidType'>
+    <xs:sequence>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='prGUID' nillable='true' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='setCustomerDetailsResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:genericResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='setCustomerNumber'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='tns:setCustNumberRequestType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='setCustNumberRequestType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='bill_to_site_use_id' type='xs:string'/>
+     <xs:element minOccurs='0' name='customer_number' type='xs:string'/>
+     <xs:element minOccurs='0' name='orig_sys_document_ref' type='xs:string'/>
+     <xs:element minOccurs='0' name='ship_to_site_use_id' type='xs:string'/>
+     <xs:element minOccurs='0' name='sold_to_org_id' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='setCustomerNumberResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:genericResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='updatePersonDetails'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='tns:updatePersonDetailRequest'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='updatePersonDetailRequest'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='licenseGuid' type='xs:string'/>
+     <xs:element minOccurs='0' name='personDetails' type='tns:customerDetails'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='updatePersonDetailsResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:genericResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getCustomerDetails'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='tns:getCustomerDetailsRequestType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getCustomerDetailsRequestType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='email' type='xs:string'/>
+     <xs:element minOccurs='0' name='licenseGuid' type='xs:string'/>
+     <xs:element minOccurs='0' name='language' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getCustomerDetailsResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:getCustomerDetailsResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getCustomerDetailsResponseType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='customer' type='tns:customer'/>
+     <xs:element minOccurs='0' name='pastDueResponse' type='tns:getPastDueResponse'/>
+     <xs:element minOccurs='0' name='returnCode' type='xs:string'/>
+     <xs:element minOccurs='0' name='returnMessage' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getPastDueResponse'>
+    <xs:sequence>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='pastDue' nillable='true' type='tns:pastDuePaymentType'/>
+     <xs:element minOccurs='0' name='returnCode' type='xs:string'/>
+     <xs:element minOccurs='0' name='returnMessage' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='pastDuePaymentType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='missedPayments' type='xs:int'/>
+     <xs:element minOccurs='0' name='amountDue' type='xs:double'/>
+     <xs:element minOccurs='0' name='language' type='xs:string'/>
+     <xs:element minOccurs='0' name='orderNumber' type='xs:string'/>
+     <xs:element minOccurs='0' name='paymentType' type='xs:string'/>
+     <xs:element minOccurs='0' name='returnCode' type='xs:string'/>
+     <xs:element minOccurs='0' name='returnMessage' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='updateOrderPayStatus'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='tns:order'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='updateOrderPayStatusResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:genericResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getRenewal'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='tns:getRenewalRequestType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getRenewalRequestType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='licenseGUID' type='xs:string'/>
+     <xs:element minOccurs='0' name='Language' type='xs:string'/>
+     <xs:element minOccurs='0' name='pr_guid' type='xs:string'/>
+    </xs:sequence>
+    <xs:attribute name='groupId' type='xs:int'/>
+   </xs:complexType>
+   <xs:complexType name='getRenewalResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:getRenewalResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getRenewalResponseType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='licenseGuid' type='xs:string'/>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='licenseDetails' nillable='true' type='tns:licenseDetails'/>
+     <xs:element minOccurs='0' name='returnCode' type='xs:string'/>
+     <xs:element minOccurs='0' name='returnMessage' type='xs:string'/>
+    </xs:sequence>
+    <xs:attribute name='groupId' type='xs:int'/>
+   </xs:complexType>
+   <xs:complexType name='setRenewal'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='tns:setRenewalRequestType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='setRenewalRequestType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='licenseGuid' type='xs:string'/>
+     <xs:element minOccurs='0' name='language' type='xs:string'/>
+     <xs:element minOccurs='0' name='prGUID' type='xs:string'/>
+     <xs:element minOccurs="0" name="source" type="xs:string"/>
+     <xs:element name='autoRenewalFlag' type='xs:string'/>
+     <xs:element minOccurs='0' name='renewalPrice' type='xs:string'/>
+     <xs:element minOccurs='0' name='renewalTerm' type='xs:string'/>
+     <xs:element minOccurs='0' name='bankAcctUsesId' type='xs:int'/>
+     <xs:element minOccurs="0" name="rsPan" type="xs:string"/>
+     <xs:element minOccurs='0' name='processingId' type='xs:string'/>
+     <xs:element minOccurs='0' name='vendor' type='xs:string'/>
+     <xs:element minOccurs='0' name='item' type='xs:string'/>
+     <xs:element minOccurs='0' name='currency' type='xs:string'/>
+    </xs:sequence>
+    <xs:attribute name='groupId' type='xs:int'/>
+   </xs:complexType>
+   <xs:complexType name='setRenewalResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:genericResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='pingLCDBServices'>
+    <xs:sequence/>
+   </xs:complexType>
+   <xs:complexType name='pingLCDBServicesResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:genericResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getPastDuePayments'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='tns:getPastDueRequestType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getPastDueRequestType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='licenseGuid' type='xs:string'/>
+     <xs:element minOccurs='0' name='email' type='xs:string'/>
+     <xs:element minOccurs='0' name='language' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getPastDuePaymentsResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:getPastDueResponse'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='checkTrial'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='tns:getCheckTrialRequestType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getCheckTrialRequestType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='email' type='xs:string'/>
+     <xs:element minOccurs='0' name='language' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='checkTrialResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:getCheckTrialResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getCheckTrialResponseType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='eligibleFlag' type='xs:string'/>
+     <xs:element minOccurs='0' name='returnCode' type='xs:string'/>
+     <xs:element minOccurs='0' name='returnMessage' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='updateLicense'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='tns:license'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='updateLicenseResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:genericResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='setPrGuid'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='licenseGuid' type='xs:string'/>
+     <xs:element minOccurs='0' name='language' type='xs:string'/>
+     <xs:element minOccurs='0' name='prGUID' type='tns:prguidType'/>
+    </xs:sequence>
+    <xs:attribute name='groupId' type='xs:int'/>
+   </xs:complexType>
+   <xs:complexType name='setPrGuidResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:genericResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='switchAccount'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='arg0' type='tns:switchAccountRequestType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='switchAccountRequestType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='licenseGuid' type='xs:string'/>
+     <xs:element minOccurs='0' name='orgId' type='xs:string'/>
+     <xs:element name='customerId' type='xs:decimal'/>
+     <xs:element name='currency' type='xs:string'/>
+     <xs:element name='billTo' type='tns:customerDetails'/>
+     <xs:element name='shipTo' type='tns:customerDetails'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='switchAccountResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:genericResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getMarketValue'>
+    <xs:sequence>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='activationId' nillable='true' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getMarketValueResponse'>
+    <xs:sequence>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='return' type='tns:getMarketValueResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='getMarketValueResponseType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='purchaseDate' type='xs:string'/>
+     <xs:element minOccurs='0' name='activationId' type='xs:string'/>
+     <xs:element minOccurs='0' name='currency' type='xs:string'/>
+     <xs:element minOccurs='0' name='orgId' type='xs:string'/>
+     <xs:element minOccurs='0' name='returnCode' type='xs:string'/>
+     <xs:element minOccurs='0' name='returnMessage' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='setProductRights'>
+    <xs:sequence>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='activationId' nillable='true' type='xs:string'/>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='productRights' nillable='true' type='tns:prDetails'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='prDetails'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='family' type='xs:string'/>
+     <xs:element minOccurs='0' name='extRefId' type='xs:string'/>
+     <xs:element minOccurs='0' name='productRight' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='setProductRightsResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:genericResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='switchLanguage'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='productRight' type='xs:string'/>
+     <xs:element minOccurs='0' name='language' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='switchLanguageResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:genericResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='validateProductRights'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='emailAddress' type='xs:string'/>
+     <xs:element minOccurs='0' name='language' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='validateProductRightsResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:productRightResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='productRightResponseType'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='returnCode' type='xs:string'/>
+     <xs:element minOccurs='0' name='returnMessage' type='xs:string'/>
+     <xs:element maxOccurs='unbounded' minOccurs='0' name='prGuid' nillable='true' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='createBillingProfile'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='customer' type='tns:customer'/>
+     <xs:element minOccurs='0' name='paymentDetails' type='tns:paymentDetails'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='paymentDetails'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='creditCardNum' type='xs:string'/>
+     <xs:element minOccurs='0' name='expirationDate' type='xs:string'/>
+     <xs:element minOccurs='0' name='cardHolderName' type='xs:string'/>
+     <xs:element name='currency' type='xs:string'/>
+    </xs:sequence>
+   </xs:complexType>
+   <xs:complexType name='createBillingProfileResponse'>
+    <xs:sequence>
+     <xs:element minOccurs='0' name='return' type='tns:genericResponseType'/>
+    </xs:sequence>
+   </xs:complexType>
+  </xs:schema>
+ </types>
+ <message name='LCDBServices_createBillingProfileResponse'>
+  <part element='tns:createBillingProfileResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_setProductRights'>
+  <part element='tns:setProductRights' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_getCustomerDetails'>
+  <part element='tns:getCustomerDetails' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_getRenewal'>
+  <part element='tns:getRenewal' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_switchAccount'>
+  <part element='tns:switchAccount' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_checkTrial'>
+  <part element='tns:checkTrial' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_getRenewalResponse'>
+  <part element='tns:getRenewalResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_getPastDuePayments'>
+  <part element='tns:getPastDuePayments' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_createBillingProfile'>
+  <part element='tns:createBillingProfile' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_setCustomerNumber'>
+  <part element='tns:setCustomerNumber' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_setCustomerNumberResponse'>
+  <part element='tns:setCustomerNumberResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_setOrder'>
+  <part element='tns:setOrder' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_getMarketValueResponse'>
+  <part element='tns:getMarketValueResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_switchLanguage'>
+  <part element='tns:switchLanguage' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_updateLicense'>
+  <part element='tns:updateLicense' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_setCustomerDetailsResponse'>
+  <part element='tns:setCustomerDetailsResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_getOrderResponse'>
+  <part element='tns:getOrderResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_setRenewalResponse'>
+  <part element='tns:setRenewalResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_pingLCDBServicesResponse'>
+  <part element='tns:pingLCDBServicesResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_getOrder'>
+  <part element='tns:getOrder' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_updateOrderPayStatusResponse'>
+  <part element='tns:updateOrderPayStatusResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_updateLicenseResponse'>
+  <part element='tns:updateLicenseResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_switchLanguageResponse'>
+  <part element='tns:switchLanguageResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_setPrGuid'>
+  <part element='tns:setPrGuid' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_validateProductRightsResponse'>
+  <part element='tns:validateProductRightsResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_checkTrialResponse'>
+  <part element='tns:checkTrialResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_updatePersonDetailsResponse'>
+  <part element='tns:updatePersonDetailsResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_setOrderResponse'>
+  <part element='tns:setOrderResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_validateProductRights'>
+  <part element='tns:validateProductRights' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_updatePersonDetails'>
+  <part element='tns:updatePersonDetails' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_setRenewal'>
+  <part element='tns:setRenewal' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_getPastDuePaymentsResponse'>
+  <part element='tns:getPastDuePaymentsResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_setCustomerDetails'>
+  <part element='tns:setCustomerDetails' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_getMarketValue'>
+  <part element='tns:getMarketValue' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_setPrGuidResponse'>
+  <part element='tns:setPrGuidResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_switchAccountResponse'>
+  <part element='tns:switchAccountResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_pingLCDBServices'>
+  <part element='tns:pingLCDBServices' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_updateOrderPayStatus'>
+  <part element='tns:updateOrderPayStatus' name='param'></part>
+  <part element='tns:token' name='token'></part>
+ </message>
+ <message name='LCDBServices_setProductRightsResponse'>
+  <part element='tns:setProductRightsResponse' name='result'></part>
+ </message>
+ <message name='LCDBServices_getCustomerDetailsResponse'>
+  <part element='tns:getCustomerDetailsResponse' name='result'></part>
+ </message>
+ <portType name='LCDBServices'>
+  <operation name='checkTrial' parameterOrder='param token'>
+   <input message='tns:LCDBServices_checkTrial'></input>
+   <output message='tns:LCDBServices_checkTrialResponse'></output>
+  </operation>
+  <operation name='createBillingProfile' parameterOrder='param token'>
+   <input message='tns:LCDBServices_createBillingProfile'></input>
+   <output message='tns:LCDBServices_createBillingProfileResponse'></output>
+  </operation>
+  <operation name='getCustomerDetails' parameterOrder='param token'>
+   <input message='tns:LCDBServices_getCustomerDetails'></input>
+   <output message='tns:LCDBServices_getCustomerDetailsResponse'></output>
+  </operation>
+  <operation name='getMarketValue' parameterOrder='param token'>
+   <input message='tns:LCDBServices_getMarketValue'></input>
+   <output message='tns:LCDBServices_getMarketValueResponse'></output>
+  </operation>
+  <operation name='getOrder' parameterOrder='param token'>
+   <input message='tns:LCDBServices_getOrder'></input>
+   <output message='tns:LCDBServices_getOrderResponse'></output>
+  </operation>
+  <operation name='getPastDuePayments' parameterOrder='param token'>
+   <input message='tns:LCDBServices_getPastDuePayments'></input>
+   <output message='tns:LCDBServices_getPastDuePaymentsResponse'></output>
+  </operation>
+  <operation name='getRenewal' parameterOrder='param token'>
+   <input message='tns:LCDBServices_getRenewal'></input>
+   <output message='tns:LCDBServices_getRenewalResponse'></output>
+  </operation>
+  <operation name='pingLCDBServices' parameterOrder='param token'>
+   <input message='tns:LCDBServices_pingLCDBServices'></input>
+   <output message='tns:LCDBServices_pingLCDBServicesResponse'></output>
+  </operation>
+  <operation name='setCustomerDetails' parameterOrder='param token'>
+   <input message='tns:LCDBServices_setCustomerDetails'></input>
+   <output message='tns:LCDBServices_setCustomerDetailsResponse'></output>
+  </operation>
+  <operation name='setCustomerNumber' parameterOrder='param token'>
+   <input message='tns:LCDBServices_setCustomerNumber'></input>
+   <output message='tns:LCDBServices_setCustomerNumberResponse'></output>
+  </operation>
+  <operation name='setOrder' parameterOrder='param token'>
+   <input message='tns:LCDBServices_setOrder'></input>
+   <output message='tns:LCDBServices_setOrderResponse'></output>
+  </operation>
+  <operation name='setPrGuid' parameterOrder='param token'>
+   <input message='tns:LCDBServices_setPrGuid'></input>
+   <output message='tns:LCDBServices_setPrGuidResponse'></output>
+  </operation>
+  <operation name='setProductRights' parameterOrder='param token'>
+   <input message='tns:LCDBServices_setProductRights'></input>
+   <output message='tns:LCDBServices_setProductRightsResponse'></output>
+  </operation>
+  <operation name='setRenewal' parameterOrder='param token'>
+   <input message='tns:LCDBServices_setRenewal'></input>
+   <output message='tns:LCDBServices_setRenewalResponse'></output>
+  </operation>
+  <operation name='switchAccount' parameterOrder='param token'>
+   <input message='tns:LCDBServices_switchAccount'></input>
+   <output message='tns:LCDBServices_switchAccountResponse'></output>
+  </operation>
+  <operation name='switchLanguage' parameterOrder='param token'>
+   <input message='tns:LCDBServices_switchLanguage'></input>
+   <output message='tns:LCDBServices_switchLanguageResponse'></output>
+  </operation>
+  <operation name='updateLicense' parameterOrder='param token'>
+   <input message='tns:LCDBServices_updateLicense'></input>
+   <output message='tns:LCDBServices_updateLicenseResponse'></output>
+  </operation>
+  <operation name='updateOrderPayStatus' parameterOrder='param token'>
+   <input message='tns:LCDBServices_updateOrderPayStatus'></input>
+   <output message='tns:LCDBServices_updateOrderPayStatusResponse'></output>
+  </operation>
+  <operation name='updatePersonDetails' parameterOrder='param token'>
+   <input message='tns:LCDBServices_updatePersonDetails'></input>
+   <output message='tns:LCDBServices_updatePersonDetailsResponse'></output>
+  </operation>
+  <operation name='validateProductRights' parameterOrder='param token'>
+   <input message='tns:LCDBServices_validateProductRights'></input>
+   <output message='tns:LCDBServices_validateProductRightsResponse'></output>
+  </operation>
+ </portType>
+ <binding name='LCDBServicesBinding' type='tns:LCDBServices'>
+  <soap:binding style='document' transport='http://schemas.xmlsoap.org/soap/http'/>
+  <operation name='checkTrial'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_checkTrial' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='createBillingProfile'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_createBillingProfile' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='getCustomerDetails'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_getCustomerDetails' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='getMarketValue'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_getMarketValue' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='getOrder'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_getOrder' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='getPastDuePayments'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_getPastDuePayments' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='getRenewal'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_getRenewal' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='pingLCDBServices'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_pingLCDBServices' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='setCustomerDetails'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_setCustomerDetails' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='setCustomerNumber'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_setCustomerNumber' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='setOrder'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_setOrder' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='setPrGuid'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_setPrGuid' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='setProductRights'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_setProductRights' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='setRenewal'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_setRenewal' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='switchAccount'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_switchAccount' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='switchLanguage'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_switchLanguage' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='updateLicense'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_updateLicense' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='updateOrderPayStatus'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_updateOrderPayStatus' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='updatePersonDetails'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_updatePersonDetails' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+  <operation name='validateProductRights'>
+   <soap:operation soapAction=''/>
+   <input>
+    <soap:body parts='param' use='literal'/>
+    <soap:header message='tns:LCDBServices_validateProductRights' part='token' use='literal'></soap:header>
+   </input>
+   <output>
+    <soap:body use='literal'/>
+   </output>
+  </operation>
+ </binding>
+ <service name='LCDBServicesImplService'>
+  <port binding='tns:LCDBServicesBinding' name='LCDService'>
+   <soap:address location='http://ashstgas0.lan.flt:8080/business.services/LCDService'/>
+  </port>
+ </service>
+</definitions>

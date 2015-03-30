@@ -1,0 +1,45 @@
+<div class="center_left">
+  <div class="center_left">
+    <% if manager_logged_in? || coach_logged_in? %>
+    <div>
+        <span style="float: left;" ><h2>Substitutions</h2></span>
+        <br/>
+      </div>
+      <hr/>
+      <%= render :partial => 'shared/extranet/substitutions' -%>
+      <br/><br/>
+    <% end %>
+
+    <% unless admin_logged_in? %>
+      <div>
+        <span style="float: left;" ><h2>Notifications</h2></span>
+        <br/>
+      </div>
+      <hr/>
+      <% if @notifications.any? %>
+        <%= link_to "SEE ALL", (manager_logged_in? ? manager_notifications_path : notifications_path), :class => 'right'  %>
+      <%end%>
+      <%= render :partial => 'shared/extranet/notifications', :locals => {:notifications => @notifications} -%>
+      <br/><br/>
+    <%end%>
+    <div>
+      <h2 style="float: none">Announcements </h2>
+    </div>
+    <hr/>
+    <% if ps_show_count_is_not_zero?("no_of_home_announcements")  %>
+      <% if @announcements.any? %>
+        <%= link_to "SEE ALL", announcements_path, :class => 'right'  %>
+        <% @announcements.each do |announcement| %>
+          <p><b> - <%= link_to announcement.subject, "/announcements/#{announcement.id}" %> <%=h format_time(announcement.expires_on, "%b %d, %Y %Z") %></b></p>
+        <% end %>
+      <% else %>
+        <p class="notice" >There are no announcements for now.</p>
+      <% end%>
+    <% else %>
+     <p class="notice" >There are no announcements to show. Please check your preference settings.</p>
+    <%end%>
+    <br/><br/>
+  </div>
+</div>
+<%= render :partial => 'shared/extranet/rightnav' %>
+<div id="extras" style="display:none;"></div>

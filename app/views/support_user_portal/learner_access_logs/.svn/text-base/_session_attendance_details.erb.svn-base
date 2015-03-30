@@ -1,0 +1,32 @@
+<br />
+<%= link_to_learner_profile("Back to learner's profile page", @learner) %>
+<p class="header">Session Attendance Details</p>
+<div id="eschool" style="padding:10px">
+  <table>
+    <% #raise debug(session_details.attendance_details) %>
+    <% unless session_details.blank? -%>
+      <thead>
+        <tr>
+          <th>Student Name</th>
+          <th>Attended</th>
+          <th>How Exited</th>
+          <th>Has Technical problems</th>
+          <th>First Seen At/ Last Seen At</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% session_details.attendance_details.each do |record| %>
+          <tr>
+            <td title="<%= record.email %>"><%= record.full_name %></td>
+            <td><%= (record.attended == 'true') ? 'YES' : 'NO' %></td>
+            <td><%= record.how_exited %></td>
+            <td><%= record.has_technical_problem %></td>
+            <td><%= record.first_seen_at %><br /><%= record.last_seen_at %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    <% else -%>
+      <p class="notice">No attendance details of found for the required session.</p>
+    <% end -%>
+  </table>
+</div>

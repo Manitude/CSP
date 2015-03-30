@@ -1,0 +1,35 @@
+<%= form_for(@event) do |f| %>
+  <%= f.error_messages %>
+  <p class="subnote">Fields labeled with <i>*</i> are required.</p>
+  <div class="formfield">
+    <div class="field">
+      <span class="required">*</span>
+      <%= f.label :event_name %>
+      <%= f.text_field :event_name %>
+    </div>
+    <div class="field">
+      <span class="required">*</span>
+      <%= f.label :event_description %>
+      <%= f.text_area :event_description %>
+    </div>
+    <div class="field">
+      <span class="required">*</span>
+      <%= f.label :event_start_date %>
+      <%= calendar_date_select_tag "event[event_start_date]", format_time(@event.event_start_date, "%B %e, %Y"), :popup => "force"%>
+    </div>
+    <div class="field">
+      <span class="required">*</span>
+      <%= f.label :event_end_date %>
+      <%= calendar_date_select_tag "event[event_end_date]", format_time(@event.event_end_date, "%B %e, %Y"),  :date_check => "event[event_start_date] < event[event_end_date]", :popup => "force"%>
+    </div>
+    <div class="field">
+      <%= f.label :language %>
+      <%= f.select :language_id, options_for_language(@languages) -%>
+    </div>
+    <div class="field">
+      <%= f.label :region %>
+      <%= f.select :region_id, options_for_language(Region.options) -%>
+    </div>
+    <p><%= f.submit 'Save' %></p>
+  </div>
+<% end %>

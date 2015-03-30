@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/queues
+END
+rejecting_messages_without_requeueuing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/queues/rejecting_messages_without_requeueuing.rb
+END
+accessing_message_metadata.rb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/queues/accessing_message_metadata.rb
+END
+cancel_default_consumer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/queues/cancel_default_consumer.rb
+END
+automatic_binding_for_default_direct_exchange.rb
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/queues/automatic_binding_for_default_direct_exchange.rb
+END
+queue_status.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/queues/queue_status.rb
+END
+declare_and_bind_a_server_named_queue.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/queues/declare_and_bind_a_server_named_queue.rb
+END
+declare_a_queue_without_assignment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/queues/declare_a_queue_without_assignment.rb
+END
+basic_get.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/queues/basic_get.rb
+END
+using_explicit_acknowledgements.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/queues/using_explicit_acknowledgements.rb
+END

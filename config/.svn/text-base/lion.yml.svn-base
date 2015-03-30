@@ -1,0 +1,179 @@
+---
+# This is the locale that translations will default to if there are no
+# translations, and it will be the default I18n.locale of the app.
+default_locale: en-US
+
+# Rails puts some en.yml files in various places. Tho this is likely not to
+# change, it's probably good to put it as a config
+rails_en_locale: en
+
+# this is the location that you store your screenshot files.  This directory 
+# will need to have a "translations" subdirectory, and under "translations" 
+# there will need to be a subdirectory for every supported locale.
+screenshots_base_file_path: /Users/rabudnikas/code/opx/apps/community_screenshots
+
+# this is the relative path from the doc/story/html/translations/00x/yy-ZZ.html
+# file so that the img src values work
+path_to_screenshots_directory: ../../../../../../../community_screenshots/translations
+
+# if set to true, then "keys will look like this".  If set to false, then 
+# "keys_will_look_like_this10293812". Using symbolic keys means more stability
+# because the keys will not change, however using natural keys looks better to
+# the developer (but you will eventually see that this creates more work in
+# other areas).  If you use natural keys, you can switch to symbolic keys by
+# calling ./rake lion:convert_keys_to_symbols
+using_natural_keys: false
+
+# if using symbolic keys, strings will be converted_to_underscore and truncated
+# at this number of characters, then a hash representing the entire string will
+# be appended on the end. IMPORTANT: if you change this, you will want to run
+# ./rake lion:update_things_that_depend_on_auto_generated_symbolic_key_length 
+# or I am not responsible for the pain that will ensue.
+auto_generated_symbolic_key_length: 50
+
+# one of the problems of using natural keys is that it's easier to run into key
+# collisions (two keys are identical, but the meanings of the words are 
+# actually different, such as the english word "Building" which is both a noun
+# and a verb.).  To avoid this natural key problem, you can create special
+# csv files that contain keys that are different from the default_locale
+# translation. These special files will not be considered when tests try to
+# find keys that are different from the default_locale translation.
+files_that_can_have_default_locale_translation_different_from_the_key_if_using_natural_keys: 
+- db/translations/static/time_zones.csv
+
+used_translations_directories:
+- static
+- dynamic
+
+unused_translations_directories:
+- unused
+
+# These are the Selenium suites that will run when taking screenshots of your
+# strings. For example, the single_session suite would be located at
+# test/selenium/single_session
+selenium_suites: []
+
+# these are the method names that our tests look for in order to find strings
+translation_method_names_that_are_harvested:
+- _
+- no_screenshot_translate
+- validation_message
+
+# These patterns are used to find files which may contain translateable
+# strings. If you add directories which might contain translateable strings,
+# you will want to add them here.
+patterns_of_ruby_files_to_search_for_translation_strings: 
+- app,**,*.*rb
+- lib,**,*.rb
+- app,**,*.rhtml
+- config,**,*.rb
+- test,**,*.rb
+
+# Javascript strings can also be translated, so here are patterns that are used
+# to find translateable strings in javascript files.
+patterns_of_javascript_files_to_search_for_translation_strings: 
+- public,javascripts,**,*.js
+- public,ejs,**,*.ejs
+
+# these are relative paths starting from the csv_base_directory, so if the
+# base directory is /foo/bar, and the file you want to list is at
+# /foo/bar/baz/strings.csv and /foo/bar/booz/strings.csv, then the values here
+# should be 'baz/strings.csv' and 'booz/strings.csv'
+# BE CAREFUL! These are untested by Lion. You will need to write your own
+# tests to make sure the data in these files are valid.
+csvs_that_contain_non_harvestable_keys:
+- 'static/countries.csv'
+- 'static/time_zones.csv'
+- 'static/rs_locales.csv'
+- 'static/date_times.csv'
+- 'static/languages.csv'
+- 'static/product_languages.csv'
+
+# Here is the list of all the locales your application needs to support.
+# IMPORTANT: tests will assume that you have translations for the locale
+# names listed here.
+supported_locale_mapping: 
+- de-DE,German
+- en-US,English
+- es-419,Spanish
+- fr-FR,French
+- it-IT,Italian
+- ja-JP,Japanese
+- ko-KR,Korean
+- zh-CN,Chinese
+- pt-BR,Portuguese
+- ru-RU,Russian
+
+# Rails locales are not iso codes... So if you are being iso-code compliant,
+# put your mappings here.
+rails_locale_to_iso_locale_mapping:
+- de,de-DE
+- en,en-US
+- es,es-419
+- fr,fr-FR
+- it,it-IT
+- ja,ja-JP
+- ko,ko-KR
+- zh,zh-CN
+- pt,pt-BR
+- ru,ru-RU
+
+# Since ruby 1.8 does not do proper UTF-8 sorting, this is a hack that can
+# allow you to substitute the diacritic for the appropriate ASCII character.
+# See comments around Lion::Utilities.substitute_diacritics_for_ruby_sorting
+diacritic_mapping:
+- ä,a
+- â,a
+- à,a
+- á,a
+- ã,a
+- Ä,A
+- Å,A
+- Á,A
+- À,A
+- ç,c
+- é,e
+- è,e
+- ê,e
+- ë,e
+- É,E
+- Ê,E
+- È,E
+- í,i
+- ï,i
+- î,i
+- ì,i
+- Î,I
+- Í,I
+- ñ,n
+- ö,o
+- ô,o
+- ó,o
+- ò,o
+- õ,o
+- Ö,O
+- ß,ss
+- ú,u
+- ù,u
+- û,u
+- ü,u
+- Ü,U
+
+# the lion:find_diacritics rake task uses this array of latin-character
+# locales to search for diacritics. If you find any more diacritics, add
+# them to the diacritic_mapping.
+latin_character_locales: 
+- de-DE
+- en-US
+- es-419
+- fr-FR
+- it-IT
+- pt-BR
+
+# these should be fairly self-explanatory. Be careful of these settings in
+# production!!!
+raise_on_missing_translations: false
+raise_on_untranslated_translations: false
+raise_on_mismatched_interpolations_in_translations: false
+fail_on_unnecessary_whitespace_in_translations: false
+csv_base_directory: db/translations

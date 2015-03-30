@@ -1,0 +1,15 @@
+default: &default
+  api_key: 'f897bfa2ea2d012db9da63fe3bec3c57'
+  host: hoptoad.rosettastone.com
+  port: 80
+  proxy_host: opxdev.lan.flt
+  proxy_port: 80
+  
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default

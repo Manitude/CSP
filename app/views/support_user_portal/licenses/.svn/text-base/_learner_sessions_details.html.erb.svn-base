@@ -1,0 +1,116 @@
+<script type="text/javascript">
+  all_consumables["<%= language %>"] = <%= all_consumables.to_json.html_safe %>
+  extensions["<%= language %>"] = <%= all_consumables.collect {|c| {:start => c[:start], :end => c[:end]} }.to_json.html_safe %>
+  upcoming_sessions["<%= language %>"] = <%= upcoming_sessions.collect {|session| session.attributes }.to_json.html_safe %>
+  additional_sessions["<%= language %>"] = <%= additional_sessions.collect {|session| session.attributes }.to_json.html_safe %>
+  license_guid = "<%= license_guid %>"
+  language = "<%= language %>"
+  learner_email = "<%= email %>"
+  village = "<%= @village %>"
+
+</script>
+<div id="session_details_div">
+  <div id="session_details_header" style="width : 100%">
+    <span>Sessions for <%= consumables[:start].strftime("%D") %> to <%= consumables[:end].strftime("%D") %> Cycle</span>
+    <% unless is_old_learner %>
+      <span style="margin-left:10px; font-weight: normal;">
+        <%= link_to_function "View Other Extension Cycle",
+          "fixedFaceBoxWithHeader('#{view_all_consumables_path(:language => language,:end_date => end_date)}','Session Details for #{@learner.name}')" %>
+      </span>
+    <% end %>
+  </div>
+  <div id="consumable_details_div">
+    <table class="consumables_table" width="500px">
+      <thead>
+        <th>Type</th>
+        <th>Starting Available</th>
+        <th>Consumed</th>
+        <th>Scheduled</th>
+        <th>Currently Available</th>
+        <th>Expires On</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Group</td>
+          <td><%= consumables[:group][:start_available] %></td>
+          <td><%= consumables[:group][:consumed] %></td>
+          <td><%= consumables[:group][:scheduled] %></td>
+          <td><%= consumables[:group][:currently_available] %></td>
+          <td><%= consumables[:group][:expires_at] %></td>
+        </tr>
+        <tr>
+          <td>Solo</td>
+          <td><%= consumables[:solo][:start_available] %></td>
+          <td><%= consumables[:solo][:consumed] %></td>
+          <td><%= consumables[:solo][:scheduled] %></td>
+          <td><%= consumables[:solo][:currently_available] %></td>
+          <td><%= consumables[:solo][:expires_at] %></td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td><%= consumables[:total][:start_available] %></td>
+          <td><%= consumables[:total][:consumed] %></td>
+          <td><%= consumables[:total][:scheduled] %></td>
+          <td><%= consumables[:total][:currently_available] %></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="future_sessions_div">
+    <% upcoming_sessions.each_with_index do |session, index| %>
+      <% if session.attributes['session_time'].to_time >= consumables[:start] and session.attributes['session_time'].to_time < consumables[:end] %>
+        <%= ("<span><b>Scheduled for this Cycle</b></span><br/>").html_safe if index == 0 %>
+        <div class="session_detail remove_learner_from_session_<%= index %>">
+          <%= session.attributes['number_of_seats'].to_i == 1 ? "Solo" : "Group" %> - <%= (session.attributes['session_time'].to_time).in_time_zone("Eastern Time (US & Canada)").strftime("%a %b %e, %Y") %><br/>
+          <%= (session.attributes['session_time'].to_time).in_time_zone("Eastern Time (US & Canada)").strftime("%I:%M %p") %><br/>
+          Level <%= session.attributes['level'] %> Unit <%= session.attributes['unit'] %> Lesson <%= session.attributes['lesson'] %><br/>
+          Coach: <%= session.attributes['coach'] %><br/>
+          <% session_start_time = DateTime.strptime(session.attributes['on'], "%Y-%m-%d %H:%M:%S %z").utc.to_time.strftime("%Y-%m-%d %H:%M:%S") %>
+           <a onclick="return confirm_remove('<%= DateTime.strptime( session.attributes['on'], "%Y-%m-%d %H:%M:%S %z").to_time.in_time_zone("Eastern Time (US & Canada)").strftime("%a %m/%d/%y %I:%M %p") %>','<%= Language[language].display_name %>', <%= index %>,this);" href="javascript:void(0)" url="/remove_learner_from_session?coach=<%= session.attributes['coach'] %>&on=<%= session_start_time %>&email=<%= email%>&language=<%= language%>&level=<%= session.attributes['level']%>&village=<%= @village %>">Remove from Session</a>
+           
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div id="additional_session_div">
+    <%= "Additional Sessions Recently Granted" unless additional_sessions.empty? %>
+    <span style="margin-left:10px; font-weight: normal;">
+    <%= link_to_function "Manage Consumables", 
+          "fixedFaceBoxWithHeader('#{show_consumable_form_path(:solo_expire_date => consumables[:solo][:expires_at], :group_expire_date => consumables[:end], :pooler_type => 'ProductRight', :solo_product_right => consumables[:solo_product_right], :end_date => end_date,:language => language, :license_guid => license_guid, :group_product_right => consumables[:group_product_right])}', 
+           'Manage Studio Consumables')" %>
+    <% unless additional_sessions.empty? %> | 
+         <%= link_to_function "View All History", 
+          "fixedFaceBoxWithHeader('#{granted_additional_sessions_path(:solo_expire_date => consumables[:solo][:expires_at], :group_expire_date => consumables[:end], :solo_product_right => consumables[:solo_product_right], :language => language, :end_date => end_date, :license_guid => license_guid, :group_product_right => consumables[:group_product_right])}', 'Consumable Management History for #{@learner.name}')" %>
+    <% end %>
+    </span>
+    <% unless additional_sessions.empty? %>
+      <table class="consumables_table" width="700px">
+        <thead>
+          <th>Case Number</th>
+          <th>Action</th>
+          <th>Type</th>
+          <th>Number</th>
+          <th>Reason</th>
+          <th>Date/Time</th>
+          <th>User</th>
+        </thead>
+        <tbody>
+          <% additional_sessions.each_with_index do |session, i| %>
+            <% unless i >= 3 %>
+              <tr>
+                <td><%= session[:case_number] %></td>
+                <td><%= session[:action] %></td>
+                <td><%= session[:consumable_type] %></td>
+                <td><%= session[:number_of_sessions] %></td>
+                <td><%= session[:reason]  %></td>
+                <td><%= format_time(session[:created_at], "%D %I:%M %p") %></td>
+                <td><%= session[:added_by] %></td>
+              </tr>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    <% end %>
+  </div>
+</div>

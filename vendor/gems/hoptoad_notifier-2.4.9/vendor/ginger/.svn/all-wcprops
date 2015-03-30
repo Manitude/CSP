@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/vendor/ginger
+END
+LICENCE
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/vendor/ginger/LICENCE
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/vendor/ginger/Rakefile
+END
+.gitignore
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/vendor/ginger/.gitignore
+END
+README.textile
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/vendor/ginger/README.textile
+END
+ginger.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/vendor/ginger/ginger.gemspec
+END

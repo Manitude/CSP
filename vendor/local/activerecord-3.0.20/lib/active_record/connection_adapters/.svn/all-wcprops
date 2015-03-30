@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/connection_adapters
+END
+sqlite_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/connection_adapters/sqlite_adapter.rb
+END
+abstract_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/connection_adapters/abstract_adapter.rb
+END
+postgresql_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/connection_adapters/postgresql_adapter.rb
+END
+sqlite3_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/connection_adapters/sqlite3_adapter.rb
+END
+mysql_adapter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/active_record/connection_adapters/mysql_adapter.rb
+END

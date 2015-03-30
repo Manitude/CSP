@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/spec/bullet/notification
+END
+base_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/spec/bullet/notification/base_spec.rb
+END
+counter_cache_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/spec/bullet/notification/counter_cache_spec.rb
+END
+unused_eager_loading_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/spec/bullet/notification/unused_eager_loading_spec.rb
+END
+n_plus_one_query_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/spec/bullet/notification/n_plus_one_query_spec.rb
+END

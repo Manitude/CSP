@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/34876/plugins/javascript_lint/trunk/test/javascript
+END
+file_with_warning.js
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/34876/plugins/javascript_lint/trunk/test/javascript/file_with_warning.js
+END
+empty_file.js
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/34876/plugins/javascript_lint/trunk/test/javascript/empty_file.js
+END
+file_with_no_warnings.js
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/34876/plugins/javascript_lint/trunk/test/javascript/file_with_no_warnings.js
+END

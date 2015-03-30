@@ -1,0 +1,11 @@
+<%= render :partial => 'shared/date_navigator', :locals => {:week_start => format_time(@data[:week_extremes][0]), :week_end => format_time(@data[:week_extremes][1])} %>
+<div id="scheduler_language_category">
+  <%= select_tag 'language_category', options_for_language_type(@data[:default_language]), :class => "dropdown" %>
+</div>
+<div id="scheduler_language">
+  <%= select_tag 'language', options_for_filter_languages(@data[:language], @data[:default_language] ), :class => "dropdown longer_dropdown" %>
+</div>
+<div id="cs_coach">
+  <select id="coach" class ="dropdown"></select>
+</div>
+<%= button_to_function("GO", :id => "go_button" ) %>

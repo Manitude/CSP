@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/date
+END
+conversions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/date/conversions.rb
+END
+acts_like.rb
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/date/acts_like.rb
+END
+zones.rb
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/date/zones.rb
+END
+freeze.rb
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/date/freeze.rb
+END
+calculations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activesupport-3.0.20/lib/active_support/core_ext/date/calculations.rb
+END

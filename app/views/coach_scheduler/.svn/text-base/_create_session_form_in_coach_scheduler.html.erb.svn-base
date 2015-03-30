@@ -1,0 +1,105 @@
+<style type="text/css">
+.ui-tooltip{
+  width: 475px !important;
+}
+</style>
+<% if @slot_info[:error_message ] %>
+<div id="create_error_message">
+  <%=  @slot_info[:error_message ] %>
+</div>
+
+<% else %>
+<div id="create_session_coach">
+  <div>
+    <div id="dropdowns_div" style="float: left; margin-bottom: 10px; width: 48%;">
+      <div>
+        <div class="create_language_div">
+            <%=  select_tag 'language_id', coach_languages(@slot_info[:coach].id, @slot_info[:language], true, false, false, @slot_info[:start_time],@slot_info[:aria_not_allowed],@slot_info[:aria_not_allowed],@slot_info[:aria_not_allowed]) , :class => "dropdown" %>
+        </div>
+        <span id ="aria_note" style="float: left; padding-top: 4px; min-width: 160px;">
+          <% if  @slot_info[:start_time].min == 30 %>
+            Session will start at <%= TimeUtils.format_time(@slot_info[:start_time] - 30.minutes,"%I:%M %p") %>
+          <% end %>    
+        </span>
+      </div>
+    </div>
+    <div id="session_type_div" style="display: none;">
+      <%= select_tag 'session_type', options_for_select(session_types_list) , :class => "dropdown", :disabled => coach_logged_in? %> 
+    </div>
+    <div id="appointment_type_div" style="display: none;">
+      <%= select_tag 'appointment_type_id', options_for_appointment_types , :class => "dropdown" %> 
+    </div>
+    <!--added by ela-->
+    <div id="session_details_text_div" style="float: left;">
+      <span id="session_details_header" style="float: left; width: 201px;"><b>Session Details: </b></span>
+      <%= text_area_tag 'session_details_text',@slot_info[:session_details_text], :cols => 34 %>
+      <br/><p style="padding-bottom: 0em;">Characters remaining: <span id="char_count">500</span></p><br/>
+    </div>
+    <!--added by ela ends-->
+    <div id="number_of_seats_div" class="number_of_seats_div" style="display:none; margin-left: 10px;">
+      <span>Number of Seats : </span>
+      <span><%= select_tag 'number_of_seats', options_for_select((1..10).to_a, 4) %></span>
+    </div>
+    <div id="number_of_seats_aria_div" class="number_of_seats_div" <% if @slot_info[:start_time].min == 30 %>style="margin-bottom: 23px; display:none;" <% else %> style="display:none;" <% end %> >
+      <span>Number of Seats : </span>
+      <span><%= select_tag 'number_of_seats_aria', options_for_aria_seats(nil) %></span>
+    </div>
+    <div id="cefr_div" class="cefr_div" style="display:none;">
+      <%= select_tag 'cefr', options_for_cefr("--","-CEFR-"), :class => "dropdown" %>
+    </div>
+    <div id="topic_div" class="topic_div" style="display:none;">
+        <select id="topic" class ="dropdown" disabled="disabled">
+          <option value="">-Topic-</option>
+        </select>
+    </div>
+    <div id="level_unit_div" class="level_unit_div" style="display:none;">
+      <%= select_tag 'unit', options_for_unit, :class => "level-unit-dropdown" %>
+      <%= select_tag 'lesson', options_for_lesson, :class => "level-unit-dropdown"%>
+      <div id="max_qual_of_the_coach" class="max_qual_create"></div>
+    </div>
+    <div id="village_div" class="village_div" style="display:none;">
+      <%= select_tag 'village_id',options_for_villages(nil, "Select a Village", "No Village") , :class => "dropdown" %>
+      <b>(Optional)</b>
+    </div>
+  </div>
+  <div style="float: left; width: 75%;">
+    <div id="recurring_confirmed_checkboxes">
+      <div id="recurring_checkbox">
+        Recurring <span><%= check_box_tag 'recurring','recurring', @slot_info[:recurring_default_value], :disabled => @slot_info[:recurring_not_allowed] %></span>
+      </div>
+      <div id="teacher_confirmed_div">
+        Confirmed <span><%= check_box_tag 'teacher_confirmed','true', true %></span>
+      </div>
+    </div>
+  </div>
+   <div class="pull-right"><input type="button" value ="CREATE" id="create_session_button" class="button_separator button_shape" /></div>
+  
+  <span style="float:left;font-size:11px" id = "slot_warning" empty=<%= @slot_info[:warning].blank? %> >
+    <%if @slot_info[:warning] %>
+    <b> Note1: <%= @slot_info[:warning] %> </b><br />
+    <% end %>
+  </span>
+</div> 
+  <%= hidden_field_tag 'aria_availability', @slot_info[:aria_recurring_availability] && @slot_info[:availability] && !@slot_info[:recurring_not_allowed] %> 
+  <%= hidden_field_tag 'recurring_not_allowed',@slot_info[:recurring_not_allowed] %>
+  <%= hidden_field_tag 'aria_recurring_not_allowed',@slot_info[:aria_recurring_not_allowed] %>
+  <%= hidden_field_tag 'non_aria_availability',  !@slot_info[:recurring_not_allowed] && @slot_info[:availability] %>  
+  <%= hidden_field_tag 'lotus_languages', @slot_info[:reflex_lang] %>
+  <%= hidden_field_tag 'all_languages_max_unit', @slot_info[:all_languages_and_max_unit_array] %>
+  <%= hidden_field_tag 'start_time',@slot_info[:start_time] %>
+  <%= hidden_field_tag 'coach_id',@slot_info[:coach].id %>
+  <%= hidden_field_tag 'availability', @slot_info[:availability]? 'available' : 'unavailable' %>
+  <%= hidden_field_tag 'no_existing_template', @slot_info[:no_existing_template] %>
+  <%= hidden_field_tag 'is_one_hour_session', false %>
+  <%= hidden_field_tag 'full_slot_availability', (@slot_info[:aria_recurring_availability] && @slot_info[:availability]) ? 'available' : 'unavailable' %>
+  <%= hidden_field_tag 'threshold_reached', @slot_info[:threshold_reached] %>
+  <%= hidden_field_tag 'recurring_ends_at', @slot_info[:recurring_ends_at] ? TimeUtils.time_in_user_zone(@slot_info[:recurring_ends_at]).strftime("%m/%d/%Y") : "false" %>
+  <%= hidden_field_tag 'aria_recurring_ends_at', @slot_info[:aria_recurring_ends_at] ? TimeUtils.time_in_user_zone(@slot_info[:aria_recurring_ends_at]).strftime("%m/%d/%Y") : "false" %>
+  <%= hidden_field_tag 'time_off_in_current_slot', @slot_info[:time_off_in_current_slot] %>
+  <%= hidden_field_tag 'time_off_in_other_half_slot', @slot_info[:time_off_in_other_half_slot] %>
+  <%= hidden_field_tag 'has_appointment_in_other_half', @slot_info[:has_appointment_in_other_half].present?.to_s %>
+   <!-- present? returns false for false and nil; true for true -->
+  <script type="text/javascript">
+    language_change(jQuery('#language_id').val(), false, jQuery("#language_div"));
+  </script>
+<% end %>

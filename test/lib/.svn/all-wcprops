@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/lib
+END
+sample_response.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/lib/sample_response.xml
+END
+hoptoad_ext_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/lib/hoptoad_ext_test.rb
+END
+eschool_session_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/lib/eschool_session_test.rb
+END
+eschool_response_parser_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/lib/eschool_response_parser_test.rb
+END

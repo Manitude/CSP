@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet
+END
+registry.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/registry.rb
+END
+detector.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/detector.rb
+END
+active_record2.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/active_record2.rb
+END
+active_record3.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/active_record3.rb
+END
+notification_collector.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/notification_collector.rb
+END
+active_record31.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/active_record31.rb
+END
+dependency.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/dependency.rb
+END
+mongoid3.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/mongoid3.rb
+END
+rack.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/rack.rb
+END
+action_controller2.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/action_controller2.rb
+END
+mongoid24.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/mongoid24.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/version.rb
+END
+notification.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/110091/gems/bullet/4.1.6/lib/bullet/notification.rb
+END

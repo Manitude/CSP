@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3
+END
+HISTORY
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/HISTORY
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/LICENSE
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/Rakefile
+END
+setup.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/setup.rb
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/README.rdoc
+END
+compile_native_library.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/compile_native_library.rb
+END
+MANIFEST
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/MANIFEST
+END
+libxml-ruby.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/libxml-ruby-2.3.3/libxml-ruby.gemspec
+END

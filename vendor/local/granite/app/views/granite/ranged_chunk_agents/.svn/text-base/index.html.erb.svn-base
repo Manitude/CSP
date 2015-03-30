@@ -1,0 +1,9 @@
+<h2>Ranged Chunk Agents</h2>
+<% if @ranged_chunk_agent && @ranged_chunk_agent.errors.any? %>
+  <ul>
+    <% @ranged_chunk_agent.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= render :partial => 'granite/ranged_chunk_agents/ranged_chunk_agent_list' %>

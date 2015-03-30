@@ -1,0 +1,25 @@
+<%= render :partial => 'grid_left_half', :locals => {:data => data, :day => day, :hour => hour} %>
+
+<% facebox 'coach_selector_popup?day='+day.to_s+'&date='+(@start_of_that_week + day.days).strftime('%B %d, %Y')+'&hour='+hour.to_s+'&lang_identifier='+@language_identifier+'&classes='+data[:classes].to_s+'&avg_attendance='+data[:avg_attendance].to_s,
+  :id => 'link['+day.to_s+']['+hour.to_s+']',
+  :if => (data[:committed_coaches]+data[:available_coaches] != 0) do %>
+  <div class ="right_inner_element right_inner_color_<%= data[:color_code] %>">
+    <% if data[:warning_code] == 'yellow' %>
+      <div id="yellows<%=day%><%=hour%>">
+        <%=  image_tag('warning_yellow.png', :alt => "Warning", :title => "There are not enough Coaches scheduled or available to match the number of sessions held historically at this time.") %>
+      </div>
+    <% elsif data[:warning_code] == 'red' %>
+      <div id="reds<%=day%><%=hour%>">
+        <%=  image_tag('warning_red.png', :alt => "Warning", :title => "There are scheduled sessions outside of tech support hours.") %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+<!-- DO NOT MOVE THE FOLLOWING SCRIPT TO APPLICATION.JS -->
+<script type="text/javascript">
+  jQuery(document).ready(function($) {
+    var link_div = document.getElementById('link[<%= day %>][<%= hour %>]');
+    jQuery(link_div).facebox();
+  })
+</script>

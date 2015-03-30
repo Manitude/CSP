@@ -1,0 +1,12 @@
+<div>  
+	<p>Studio Team,</p>
+	<br /><br />
+	<p>The following sessions were cancelled in CSP, however an error prevented them from being cancelled in RSA. Please be sure that their respective learners are notified.</p><br />
+	<div style="margin-left: 20px;">
+		<p><%= @data[:start_time] %> - <%= @data[:language] %> assigned to <%= @data[:coach] %></p>
+		<p>Learner: <%= @data[:learner] %>, <%= @data[:learner_contact_info] %></p>
+	</div>
+	<br /><br />
+	<p>Regards,<br />
+	Customer Success Portal</p>
+</div>

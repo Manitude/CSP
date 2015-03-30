@@ -1,0 +1,51 @@
+# Useful Rabbit integration commands
+
+<pre>
+# This allows you to publish some xml that looks like the curriculums/update xml
+# it needs to be run in the tracking environment
+
+  def example_xml_payload(opts = {})
+    opts[:guid] ||= '116e2ae2-6e24-414a-98d5-8b87157098b8'
+    opts[:course] ||= 'SK-DEU-L2-NA-PE-NA-NA-Y-3'
+%Q[<?xml version="1.0" encoding="UTF-8"?>
+<callback_data>
+  <guid>#{opts[:guid]}</guid>
+  <license_identifier>danhodos</license_identifier>
+  <curriculum>
+    <speech_enabled_bookmark_occurrence type="integer">2</speech_enabled_bookmark_occurrence>
+    <speech_disabled_bookmark_occurrence type="integer">2</speech_disabled_bookmark_occurrence>
+    <course>#{opts[:course]}</course>
+    <created_at type="datetime">1278706886590</created_at>
+    <updated_at type="datetime">1278706886590</updated_at>
+    <speech_disabled_bookmark_unit_index type="integer">1</speech_disabled_bookmark_unit_index>
+    <speech_enabled_bookmark_unit_index type="integer">1</speech_enabled_bookmark_unit_index>
+    <speech_enabled_bookmark_lesson_index type="integer">2</speech_enabled_bookmark_lesson_index>
+    <speech_disabled_bookmark_lesson_index type="integer">2</speech_disabled_bookmark_lesson_index>
+    <id type="integer">997214322</id>
+    <curriculum_data>
+          &lt;path index=&quot;0&quot; unitIndex=&quot;0&quot; lessonIndex=&quot;0&quot; type=&quot;general&quot; /&gt;
+      &lt;path index=&quot;1&quot; unitIndex=&quot;0&quot; lessonIndex=&quot;1&quot; type=&quot;grammar&quot; /&gt;
+      &lt;path index=&quot;2&quot; unitIndex=&quot;0&quot; lessonIndex=&quot;0&quot; type=&quot;reading&quot; /&gt;
+      &lt;path index=&quot;3&quot; unitIndex=&quot;0&quot; lessonIndex=&quot;1&quot; type=&quot;general&quot; /&gt;
+        </curriculum_data>
+    <user_id type="integer">833434</user_id>
+    <speech_enabled_bookmark_path_type>BASKET_WEAVING</speech_enabled_bookmark_path_type>
+    <speech_disabled_bookmark_path_type>BASKET_WEAVING</speech_disabled_bookmark_path_type>
+  </curriculum>
+</callback_data>]
+  end
+
+EventQueueCallbackProducer.set_exchange('/curriculums/update')
+EventQueueCallbackProducer.enable_compression = false
+EventQueueCallbackProducer.publish(example_xml_payload)
+
+# this allows you to connect to the bandit queue. It needs to be run in baffler environment
+
+b = Bunny.new(BanditProducer.connection_config.configuration_hash(true))
+b.start
+ex = b.exchange('events', {:type => :fanout, :durable => true, :autodelete => false})
+q = b.queue('mylittleclient')
+q.bind('events')
+q.pop
+b.stop
+</pre>

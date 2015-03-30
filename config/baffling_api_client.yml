@@ -1,0 +1,6 @@
+host: baffler.rosettastone.com
+port: 80
+#proxy_host: opxdev.lan.flt
+proxy_host: giocondo.lan.flt
+#proxy_port: 80
+proxy_port: 3128

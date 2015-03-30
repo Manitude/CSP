@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/69567/plugins/baffling_api_client/trunk/test
+END
+baffling_api_client_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/69567/plugins/baffling_api_client/trunk/test/baffling_api_client_test.rb
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/57817/plugins/baffling_api_client/trunk/test/test_helper.rb
+END
+baffling_api_user.rb
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/35342/plugins/baffling_api_client/trunk/test/baffling_api_user.rb
+END

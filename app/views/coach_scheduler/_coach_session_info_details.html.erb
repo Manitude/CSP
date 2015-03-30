@@ -1,0 +1,17 @@
+<% if @data[:coach_session_count] %>
+<div id='coach_session_info_div'>
+    <div style="width: auto; display:inline-block;">
+    	<span id="today_date">Scheduled: </span>
+    	<span id="scheduled_count"><%= @data[:coach_session_count][:scheduled] %></span>
+    	 (<span id="scheduled_hrs"><%= @data[:coach_session_count][:scheduled_hours] %></span> hrs),
+    </div>
+    <div style="width: auto; display:inline-block;">
+    	<span id="today_date">Cancelled: </span>
+    	<span id="cancelled_count" ><%= @data[:coach_session_count][:cancelled] %></span>,
+    </div>
+    <div style="width: auto; display:inline-block;">
+    	<span id="today_date">Sub-requested: </span>
+    	<span id="sub_requested_count" ><%= @data[:coach_session_count][:sub_requested] %></span>
+    </div>
+</div>
+<% end %>

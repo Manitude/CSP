@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/lib/mysql2
+END
+client.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/lib/mysql2/client.rb
+END
+result.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/lib/mysql2/result.rb
+END
+em.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/lib/mysql2/em.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/lib/mysql2/version.rb
+END
+em_fiber.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/lib/mysql2/em_fiber.rb
+END
+error.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/67410/gems/mysql2/0.2.7/lib/mysql2/error.rb
+END

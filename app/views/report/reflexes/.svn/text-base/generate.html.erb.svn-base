@@ -1,0 +1,66 @@
+<div class="report_generated_for_div">
+  <span class="report_generated_for_span"><b>Report Generated for:</b> <%= params[:start_date] %> - <%= params[:end_date] %></span>
+</div>
+<table id="coach_report_table" border="0" class="table_list" >
+    <thead style="display:block; min-width: 958px;" >
+      <tr>
+        <th class="show_right_border table_background" style="border-bottom : 1px solid #ccc"></th>
+        <th class="show_right_border table_background" style="border-bottom : 1px solid #ccc" colspan="7">Session/Shifts</th>
+        <th class="show_right_border table_background" style="border-bottom : 1px solid #ccc" colspan="2">Substitutions</th>
+        <th class="show_right_border table_background" style="border-bottom : 1px solid #ccc" colspan="3">Time Off</th>
+      </tr>
+      <tr>
+        <th class="show_right_border table_background" style="min-width: 170px;">Coach Name   </th>
+        <th class="show_right_border top_border table_background" style="min-width: 64px;max-width: 64px;"> Hours Scheduled   </th>
+        <th class="show_right_border top_border table_background" style="min-width: 64px;max-width: 64px;"> Hours in Player    </th>
+        <th class="show_right_border top_border table_background" style="min-width: 70px;max-width: 70px;"> Mins Paused     </th>
+        <th class="show_right_border top_border table_background" style="min-width: 64px;max-width: 64px;"> % Paused     </th>
+        <th class="show_right_border top_border table_background" style="min-width: 64px;max-width: 64px;"> Avg Session (Mins) </th>
+        <th class="show_right_border top_border table_background" style="min-width: 64px;max-width: 64px;"> % Incomplete  </th>
+        <th class="show_right_border top_border table_background" style="min-width: 64px;max-width: 64px;"> Completed sessions  </th>
+        <th class="show_right_border top_border table_background" style="min-width: 64px;max-width: 64px;"> Requested </th>
+        <th class="show_right_border top_border table_background" style="min-width: 64px;max-width: 64px;"> Grabbed  </th>
+        <th class="show_right_border top_border table_background" style="min-width: 64px;max-width: 64px;"> Requested / Approved  </th>
+        <th class="show_right_border top_border table_background" style="min-width: 64px;max-width: 64px;"> Denied   </th>
+        <th class="show_right_border top_border table_background" style="min-width: 65px;max-width: 65px;"> Total Duration</th>
+      </tr>
+    </thead>
+    <tbody style="overflow-y:scroll; display:block; max-height:320px;">
+      <% @coaches.each do |coach| %>
+        <tr>
+          <td class=" hide_left_border" style="min-width: 170px;max-width:170px;overflow:hidden;"><%= coach.coach_name %></td>
+          <td class="" style="min-width: 63px;max-width: 63px;"><%= coach.hours_count %></td>
+          <td class="" style="min-width: 63px;max-width: 63px;"><%= coach.hours_in_player %></td>
+          <td class="" style="min-width: 69px;max-width: 69px;"><%= coach.paused %></td>
+          <td class="" style="min-width: 63px;max-width: 63px;"><%= coach.per_paused %></td>
+          <td class="" style="min-width: 63px;max-width: 63px;"><%= coach.avg_session %></td>
+          <td class="" style="min-width: 63px;max-width: 63px;"><%= coach.incomplete %></td>
+          <td class="" style="min-width: 63px;max-width: 63px;"><%= coach.complete %></td>
+          <td class="" style="min-width: 63px;max-width: 63px;"><%= coach.substitution %></td>
+          <td class="" style="min-width: 63px;max-width: 63px;"><%= coach.grabbed %></td>
+          <td class="" style="min-width: 63px;max-width: 63px;"><%= coach.requested %>/<%= coach.approved %></td>
+          <td class="" style="min-width: 63px;max-width: 63px;"><%= coach.denied %></td>
+          <td class="" style="min-width: 51px;max-width: 51px;"><%= coach.total_time_off == 0 ? coach.total_time_off : coach.total_time_off.to_s+' day(s)' %></td>
+        </tr>
+      <% end %>
+  </tbody>
+  <tfoot style="display:block" >
+    <tr>
+        <td class="table_background" style="min-width: 169px;"> Language Total </td>
+        <td class="table_background" style="min-width: 63px;max-width: 63px;"><%= @total[:hours_count] %></td>
+        <td class="table_background" style="min-width: 63px;max-width: 63px;"><%= @total[:hours_in_player] %></td>
+        <td class="table_background" style="min-width: 69px;max-width: 69px;"><%= @total[:paused] %></td>
+        <td class="table_background" style="min-width: 63px;max-width: 63px;"><%= @total[:per_paused] %></td>
+        <td class="table_background" style="min-width: 63px;max-width: 63px;"><%= @total[:avg_session] %></td>
+        <td class="table_background" style="min-width: 63px;max-width: 63px;"><%= @total[:incomplete] %></td>
+        <td class="table_background" style="min-width: 63px;max-width: 63px;"><%= @total[:complete] %></td>
+        <td class="table_background" style="min-width: 63px;max-width: 63px;"><%= @total[:substitution] %></td>
+        <td class="table_background" style="min-width: 63px;max-width: 63px;"><%= @total[:grabbed] %></td>
+        <td class="table_background" style="min-width: 63px;max-width: 63px;"><%= @total[:requested] %>/<%= @total[:approved] %></td>
+        <td class="table_background" style="min-width: 63px;max-width: 63px;"><%= @total[:denied] %></td>
+        <td class="table_background" style="min-width: 64px;max-width: 64px;">
+          <%= @total[:total_time_off] == 0 ? @total[:total_time_off] : @total[:total_time_off].to_s+' day(s)' %>
+        </td>
+      </tr>
+  </tfoot>
+</table>

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/delayed_job-3.0.4/spec
+END
+message_sending_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/delayed_job-3.0.4/spec/message_sending_spec.rb
+END
+performable_method_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/delayed_job-3.0.4/spec/performable_method_spec.rb
+END
+lifecycle_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/delayed_job-3.0.4/spec/lifecycle_spec.rb
+END
+spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/delayed_job-3.0.4/spec/spec_helper.rb
+END
+yaml_ext_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/delayed_job-3.0.4/spec/yaml_ext_spec.rb
+END
+sample_jobs.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/delayed_job-3.0.4/spec/sample_jobs.rb
+END
+test_backend_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/delayed_job-3.0.4/spec/test_backend_spec.rb
+END
+performable_mailer_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/delayed_job-3.0.4/spec/performable_mailer_spec.rb
+END
+worker_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/delayed_job-3.0.4/spec/worker_spec.rb
+END

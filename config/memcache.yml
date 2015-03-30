@@ -1,0 +1,6 @@
+development:
+  memcache_host: localhost
+test:
+  memcache_host: rshbgdev10.lan.flt
+production:
+  memcache_host: rshbgdev10.lan.flt

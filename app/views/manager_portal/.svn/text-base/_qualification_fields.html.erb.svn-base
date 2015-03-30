@@ -1,0 +1,7 @@
+<div class="fields">
+  <%= f.label :language_id, 'Language/Unit Qualif.' -%>
+  <%= f.select :language_id, options_with_select(Language.options), {}, {:disabled => @disabled,:onChange => "disableMaxUnit()"} -%>
+  <%= f.select :max_unit, options_with_select(Unit.options, 0),{} -%>
+  <%= link_to_remove_fields("remove", f) if i > 0 -%>
+  <br style="clear:both"/>
+</div>

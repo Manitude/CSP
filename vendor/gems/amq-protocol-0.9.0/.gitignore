@@ -1,0 +1,9 @@
+/*.gem
+/.rvmrc
+tmp
+*.pyc
+/vendor/bundle
+/vendor/amq-*
+/coverage
+Gemfile.lock
+.rbx/*

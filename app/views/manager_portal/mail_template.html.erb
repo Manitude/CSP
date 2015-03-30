@@ -1,0 +1,29 @@
+<%= form_tag( {:controller =>'manager_portal', :action =>'send_mail_to_coaches'} , :id => 'send_mail_to_coaches', :name => 'send_mail_to_coaches') do %>
+  <span>
+  <% if manager_logged_in? %>  Send email to coaches scheduled to teach <%end %>
+  <% if tier1_support_user_or_lead_logged_in? %> Send email to Coaches and Studio team <%end%>
+  </span>
+  <div class="language_threshold">
+    <%=  select_tag :all_languages, options_for_lang_for_mail(@languages),:class => 'select_class', :style=>'width: 120px;height:23px;'%>
+  </div>
+  <div style="padding: 10px 0">
+    <span>To: </span><br/>
+    <span><%= text_area_tag :to, "", :name => "to" ,:rows => 5, :cols => 100,
+        :style => "-moz-border-radius: 12px;padding: 5px 0 0 5px;resize:none;",  :title => "To address" %></span>
+  </div>
+  <div style="padding: 10px 0">
+    <span>Subject: </span><br/>
+    <span><%= text_field_tag :subject, nil, :size => 100, :maxlength => 60, :style => "-moz-border-radius: 6px; margin-left:3px;" , :id => "subject" %></span>
+  </div>
+  <div style="padding: 10px 0">
+    <span>Message: </span><br/>
+    <span><%= text_area_tag :body, "", :rows => 20, :cols => 100, :style => "-moz-border-radius: 12px;padding: 5px 0 0 5px;resize:none;", :title => "Your message", :placeholder => "Enter Text" %></span>
+  </div>
+  <div style="float: right; margin-top:10px">
+    <input id="send_mail_button" type="button" value="Send" />
+    <input id="cancel_mail_button" type="button" value="Cancel" />
+  </div>
+<% end %>
+<script type="text/javascript">
+  populateEmailAddress("all");
+</script>

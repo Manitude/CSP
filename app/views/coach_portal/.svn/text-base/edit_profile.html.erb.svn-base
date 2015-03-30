@@ -1,0 +1,69 @@
+<%= form_for :coach, @coach, :html => { :id => 'profile-form', :name => 'profileform', :multipart => true } do |f| -%>
+  <div id="profile">
+    <%= f.error_messages -%>
+    <p class="header"></p>
+    <div id="general" class="pad-top-20 edit_profile" style="float:left;">
+      <ul class="col1">
+        <li><%= f.label :full_name, "#{_('Full_Name82853947')}*" -%> <%= get_text @coach.full_name  -%></li>
+        <li><%= f.label :user_name, "#{_('AD_NameBD52F356')}" %> <%= get_text @coach.user_name -%></li>
+        <li><%= f.label :preferred_name, _('Preferred_Name77198152') -%> <%= f.text_field :preferred_name -%></li>
+        <% @coach.qualifications.each do |qualification| %>
+          <% next if qualification.language.is_tmm_michelin? %>
+          <li><%= f.label :lang_qualifications, "Language" %> <%= qualification.language.display_name -%> <%= qualification.dialect.nil? ? "" : " - " + qualification.dialect.name %></li>
+          <li class="<%= classify(qualification.language.display_name)+'_unit' -%> <%= "hide_units" unless qualification.language.is_a? TotaleLanguage  -%>"><%= f.label :unit_qualifications, "Unit Qualification" %> <%= select_tag "qualification[#{qualification.language.id}]", options_for_select(Unit.options, qualification.max_unit) -%></li>
+        <% end %>
+         <li><%= f.label :address, _('AddressC2F3561D') -%> <%= f.text_area :address, :size => "45x3" -%></li>
+        <li><%= f.label :country, "#{_('Country9CCEF0FA')}*" -%> <%= f.select :country, options_for_select(RosettaStone::Country.options_for_select_country_code, @coach.country) -%></li>
+        <li><%= f.label :region, _('Region8CEF440') -%> <%= f.select :region_id, options_with_select(Region.options, @coach.region ? @coach.region.id: nil), {} -%></li>
+        <% unless @coach.is_aria? || @coach.is_tmm? %>
+          <li>
+            <%= f.label :other_languages, _('Other_Languages7358B8E4') -%><input id="olang-button" name="olang-button" type="button" value="<%= _("Show923C763F") %>" style="cursor:pointer;" onclick="otherLangs();"/>
+            <br style="clear:both"/>
+            <label>&nbsp;</label>
+            <div id="olang-div">
+              <%(SupportLanguage.find :all, :conditions => ['language_code != "none"']).each do |sl| %>
+                <%= check_box "olang","#{sl.language_code}" %>
+                <%= label(:language, sl.name) %>
+                <br style="clear:both"/>
+              <% end %>
+            </div>
+          </li>
+          <% end %>
+        <li><%= f.label :bio, "About Me" -%> <%= f.text_area :bio, :size => "45x3" -%></li>
+        <li><%= f.label :birth_date, "Birth Date*" -%> <%= f.date_select :birth_date, reasonable_year_options -%></li>
+        <li><%= f.label :photo, "Profile Picture" %> <%= f.file_field :photo %> &nbsp;<%= image_tag('i_icon.gif', :height => '20', :width => '20', :id => 'upload-info') %></li>
+        <% if !@coach.errors.any? && @coach.photo.exists? then %>
+          <li>
+            <label>&nbsp;</label> <span><a href="#" id="remove-pic">Remove?</a> &nbsp;<a href="#" style="display:none" id="remove-pic-undo">Undo</a></span>
+          </li>
+          <li><label>&nbsp;</label> <%= image_tag(@coach.photo.url, :id => 'profile-picture', :width => '100') %></li>
+        <% end %>
+        <li><%= hidden_field_tag("remove_profile_picture", false) %></li>
+        <li><%= hidden_field_tag("one_time_locale", @coach.native_language)%></li>
+        <li><div id="profile-save"><%= f.submit _('SaveF55495E0'), :onclick => "return validateCoachProfile()" -%></div></li>
+         </ul>
+    </div>
+  </div>
+<% end -%>
+
+<script type="text/javascript">
+  function otherLangs(){
+    if (jQuery("#olang-div").css('display') == "block"){
+      jQuery("#olang-div").hide();
+      document.profileform["olang-button"].value = "<%= _("Show923C763F") %>";
+    } else {
+      jQuery("#olang-div").show();
+      document.profileform["olang-button"].value = "<%= _("Hide4AB6415") %>";
+    }
+  }
+
+  jQuery(document).ready(function() {
+  <% if @coach.other_languages? %>
+    <% @coach.other_languages.split(',').each do |lang_code| %>
+          document.profileform["olang[<%= lang_code %>]"][1].checked = true
+    <% end %>
+  <% end %>
+  jQuery(".hide_units ").hide();
+  handleRemoveProfilePictureEvents();
+  });
+</script>

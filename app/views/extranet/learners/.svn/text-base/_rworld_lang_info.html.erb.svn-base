@@ -1,0 +1,33 @@
+<div class="rworld_lang_info" id="rworld_lang_info">
+  <br style="clear: both;"/>
+  <span class="subheading">Social Apps</span>
+  <br/><br/>
+  <% unless baffler_details["social_apps"]["social_app"].blank? -%>
+    <div class="outlined_table">
+      <table class="se_tab social_apps">
+        <tr>
+          <th style="text-align:center">Application</th>
+          <th style="text-align:center">Name</th>
+          <th style="text-align:center">Count</th>
+          <th style="text-align:center">Time Spent</th>
+        </tr>
+        <% [baffler_details["social_apps"]["social_app"]].flatten.each do |s_app| -%>
+          <tr>
+            <td><%= s_app["identifier"] %></td>
+            <td><%= s_app["display_name"] %></td>
+            <td style="text-align:right"><%= s_app["count"] %></td>
+            <td style="text-align:center"><%= Time.at(s_app["seconds"].to_i).utc.strftime("%H:%M:%S")  %></td>
+          </tr>
+        <% end %>
+        <tr>
+          <th></th>
+          <th>TOTAL</th>
+          <th style="text-align:right"><%= get_text baffler_details["social_apps"]["total"]["count"] %></th>
+          <th style="text-align:center"><%= Time.at(baffler_details["social_apps"]["total"]["seconds"].to_i).utc.strftime("%H:%M:%S")  %></th>
+        </tr>
+      </table>
+    </div>
+  <% else %>
+    <p class="notice">No Social Apps played.</p>
+  <% end %>
+</div>

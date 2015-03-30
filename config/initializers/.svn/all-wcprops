@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/159110/coach_portal/branches/sprint32/config/initializers
+END
+secret_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/158902/coach_portal/branches/sprint32/config/initializers/secret_token.rb
+END
+global_constants.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/159110/coach_portal/branches/sprint32/config/initializers/global_constants.rb
+END

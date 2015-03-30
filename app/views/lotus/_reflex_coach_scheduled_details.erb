@@ -1,0 +1,17 @@
+<div class ="popup_learner_container">
+	<% if @coaches.blank? %>
+		<div style ="float: left"><div id="message"><%= "No coaches available" %></div></div>
+	<% else %>
+		<div class="popup_coach_list">
+ 	    	<% @coaches.each do |coach| %>  
+ 	        	<div class="coach_element" <% if !coach[:in_player] %>style = "color: red"<% end %>><%= coach[:name] %></div>  		
+ 	        <% end %>
+ 		</div>
+ 
+ 	<% end %>
+</div>
+<%= javascript_tag do %>
+  jQuery(document).ready(function() {
+    setFaceboxWidth();
+  });
+<% end %>

@@ -1,0 +1,21 @@
+<div class="label">Select Coach</div>
+<div class="value"><%= select_tag 'user_name', options_for_coaches(@selected_language, 'user_name', 'full_name'), :onchange => "getMaxQualOfThisCoach();", :disabled => true %>
+  <span id="max_qual_of_this_coach"></span>
+</div>
+
+<script type="text/javascript">
+  function getMaxQualOfThisCoach() {
+    if($('user_name').value == '') {
+      $('max_qual_of_this_coach').hide();
+      alert("Please Select a coach");
+      return;
+    }
+    new Ajax.Updater('max_qual_of_this_coach', '/max_qual_of_coach/' + jQuery('#user_name').val() + '/' + jQuery('#lang_identifier').val(),
+    {asynchronous:true, evalScripts:true, method:'get',
+      onComplete:function(request){
+        $('max_qual_of_this_coach').show();
+      },
+      onSuccess:function(request){}
+    });
+  }
+</script>

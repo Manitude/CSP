@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/WebDev/!svn/ver/96393/gems/rujitsu/0.3.3/spec
+END
+spec_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/96393/gems/rujitsu/0.3.3/spec/spec_helper.rb
+END
+numeric_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/96393/gems/rujitsu/0.3.3/spec/numeric_spec.rb
+END
+spec.opts
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/WebDev/!svn/ver/96393/gems/rujitsu/0.3.3/spec/spec.opts
+END
+fixnum_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/96393/gems/rujitsu/0.3.3/spec/fixnum_spec.rb
+END
+object_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/96393/gems/rujitsu/0.3.3/spec/object_spec.rb
+END
+string_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/96393/gems/rujitsu/0.3.3/spec/string_spec.rb
+END
+range_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/96393/gems/rujitsu/0.3.3/spec/range_spec.rb
+END

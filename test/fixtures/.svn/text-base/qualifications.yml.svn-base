@@ -1,0 +1,98 @@
+# == Schema Information
+#
+# Table name: qualifications
+#
+#  id          :integer(4)      not null, primary key
+#  coach_id    :integer(4)      
+#  language_id :integer(4)      
+#  max_unit    :integer(4)      
+#  created_at  :datetime        
+#  updated_at  :datetime        
+#
+
+KLESchdeuledCoach_qualification:
+  coach: Scheduled_Coach
+  language: KLE
+  max_unit: 1
+
+psubramanian_qualified_to_teach_arabic:
+  coach: psubramanian
+  language: ARA
+  max_unit: 12
+
+jramanathan_qualified_to_teach_spanish:
+  coach: jramanathan
+  language: ESP
+  max_unit: 20
+
+jramanathan_qualified_to_teach_greek:
+  coach: jramanathan
+  language: GRK
+  max_unit: 5
+
+ssitoke_qualified_to_teach_arabic:
+  coach: ssitoke
+  language: ARA
+  max_unit: 12
+
+
+KLEavailable_qualified_to_teach_kle:
+  coach: Available_Coach
+  language: KLE
+  max_unit: 1
+
+ESP_scheduled_qualified_to_teach_spanish:
+  coach: ESPscheduled
+  language: ESP
+  max_unit: 10
+
+vramanan_manages_arabic:
+  manager: vramanan
+  language: ARA
+
+skumar_manages_arabic:
+  manager: skumar
+  language: ARA
+
+kle_qualified_dutch_fellow:
+  coach: dutchfellow
+  language: KLE
+  max_unit: 1
+
+arabic_qualified_dutch_fellow:
+  coach: dutchfellow
+  language: ARA
+  max_unit: 10
+
+psubramanian_qualified_to_teach_advance_english:
+  coach: psubramanian
+  language: KLE
+  max_unit: 1
+
+snallamuthu_qualified_to_teach_advance_english:
+  coach: snallamuthu
+  language: KLE
+  max_unit: 1
+
+drafty_qualified_to_teach_ara:
+  coach: draft_coach
+  language: ARA
+  max_unit: 1
+
+<% TestData.coaches.each do |user_name| %>
+<% if Coach.find_by_user_name(user_name)  %>
+<%= user_name %>:
+  coach_id: <%= Coach.find_by_user_name(user_name).id %>
+  language_id: <%= Language["KLE"].id %>
+  max_unit: <%= 1 %>
+<%= "#{user_name}_ARA" %>:
+  coach_id: <%= Coach.find_by_user_name(user_name).id %>
+  language_id: <%= Language["ARA"].id %>
+  max_unit: <%= 1 %>
+<%= "#{user_name}_AUK" %>:
+  coach_id: <%= Coach.find_by_user_name(user_name).id %>
+  language_id: <%= Language["AUK"].id %>
+  max_unit: <%= 1 %>
+<% end %>
+<% end %>
+

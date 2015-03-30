@@ -1,0 +1,65 @@
+<div class="form_container">
+  <div id="profile">
+    <p class="header">
+      <span class="header-left">View Invitation History of <%= "#{@learner.first_name} #{@learner.last_name}" %> </span>
+      <span class="header-right"><%= link_to_learner_profile("Back to learner's profile page", @learner) %></span>
+    </p>
+
+    <%if user_invite_history && user_invite_history["invitation"] %>
+      <div class="learner_moderation_table">
+      <table class='se_tab'>
+        <tr>
+          <th>Created At</th>
+          <th>Invitation Status</th>
+          <th>Invitation UID</th>
+          <th>Game Name</th>
+          <th>Modality</th>
+          <th>Partner Id</th>
+       </tr>
+       <% [user_invite_history["invitation"]].flatten.each do |participant| %>
+        <tr>
+         <td><%= Time.at(participant["created_at"].to_i).strftime("%m/%d/%Y %H:%M:%S") if participant["created_at"]%></td>
+         <td><%= participant["invitation_status"] %></td>
+         <td><%= participant["invitation_uid"] %></td>
+         <td><%= participant["game_name"] %></td>
+         <td><%= (participant["game_modality"]? participant["game_modality"].capitalize : "") %></td>
+         <td width = "200px">
+           <% if  participant["partner_guid"]  %>
+             <% if participant["partner_guid"].is_a? Array
+               participant["partner_guid"].each do |each_guid| %>
+                 <%= link_to (@guids[each_guid] ? @guids[each_guid] : "[email not found]"),:action => "show",
+                   :guid => each_guid%>
+               <%end
+             else %>
+               <%= link_to (@guids[participant["partner_guid"]] ? @guids[participant["partner_guid"]] : "[email not found]" ),:action => "show",
+                 :guid => participant["partner_guid"]%>
+             <% end %>
+           <% end %>
+         </td>
+         </tr>
+      <% end %>
+          <tr>
+          <td colspan="4" align="center">
+            <% if user_invite_history["pagination"]["total_pages"].to_i > 1 %>
+            <div class="pagination">
+              <%= user_invite_history["pagination"]["current_page"].to_i == 1 ? '« Previous' : link_to("« Previous", user_invite_history_path(:id => @learner.id,:page => user_invite_history["pagination"]["current_page"].to_i == 1 ? user_invite_history["pagination"]["current_page"].to_i : user_invite_history["pagination"]["current_page"].to_i-1)) %>
+             <% user_invite_history["pagination"]["total_pages"].to_i.times do |x|%>
+               <%= user_invite_history["pagination"]["current_page"].to_i == x+1 ? x+1 :link_to( x+1, user_invite_history_path(:id => @learner.id,:page => x+1 )) %>
+              <%end%>
+              <%= user_invite_history["pagination"]["current_page"].to_i == user_invite_history["pagination"]["total_pages"].to_i ? 'Next »' : link_to("Next »", user_invite_history_path(:id => @learner.id,:page => user_invite_history["pagination"]["current_page"].to_i == user_invite_history["pagination"]["total_pages"].to_i ? user_invite_history["pagination"]["current_page"].to_i : user_invite_history["pagination"]["current_page"].to_i+1 )) %>
+            </div>
+             <%end%>
+          </td>
+        </tr>
+    </table>
+   </div>
+  <% else %>
+    <% unless user_invite_history %>
+      <p class="notice">Sorry, either Baffler API is down or the server encountered an error.</p>
+    <% else %>
+      <p class="notice">No invitation history found.</p>
+    <% end %>
+  <%  end %>
+  <p class="header" style="border-bottom:none"></p>
+ </div>
+</div>

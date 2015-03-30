@@ -1,0 +1,5 @@
+host: http://totale.rosettastone.com
+#proxy_host: http://rshbgdev04.lan.flt:8080
+proxy_host: http://giocondo.lan.flt:3128
+username: support
+password: 5upp0rtd00d

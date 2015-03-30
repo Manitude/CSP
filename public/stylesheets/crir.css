@@ -1,0 +1,46 @@
+/* Checkboxes */
+label.checkbox_checked {
+    background: #E5E5E5 url(/images/tick.png) no-repeat;
+    display: block;
+    padding-left: 25px;
+    font-weight: normal;
+}
+label.checkbox_unchecked  {
+    background: #fff url(/images/no_image.png) no-repeat;
+    display: block;
+    padding-left: 25px;
+    font-weight: normal;
+}
+
+/* Radio Buttons */
+label.radio_checked {
+    background: #E5E5E5 url(/images/tick.png) no-repeat;
+    display: block;
+    padding-left: 25px;
+    font-weight: normal;
+}
+label.radio_unchecked  {
+    background:  #fff url(/images/no_image.png) no-repeat;
+    display: block;
+    padding-left: 25px;
+    font-weight: normal;
+}
+
+
+/* Hover State */
+label:hover{
+    color: #575B60;
+}
+
+label.highlighted {
+    border: 1px solid #333;
+}
+
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+/* STOP EDITTING - DO NOT CHANGE OR REMOVE        */
+.crirHidden {
+    position: absolute;
+    left: -1000px;
+}
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+

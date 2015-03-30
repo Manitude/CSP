@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/WebDev/!svn/ver/75213/gems/uuidtools/2.1.2/tasks
+END
+git.rake
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/75213/gems/uuidtools/2.1.2/tasks/git.rake
+END
+rubyforge.rake
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/75213/gems/uuidtools/2.1.2/tasks/rubyforge.rake
+END
+metrics.rake
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/75213/gems/uuidtools/2.1.2/tasks/metrics.rake
+END
+rdoc.rake
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/75213/gems/uuidtools/2.1.2/tasks/rdoc.rake
+END
+clobber.rake
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/75213/gems/uuidtools/2.1.2/tasks/clobber.rake
+END
+gem.rake
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/75213/gems/uuidtools/2.1.2/tasks/gem.rake
+END
+benchmark.rake
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/75213/gems/uuidtools/2.1.2/tasks/benchmark.rake
+END
+spec.rake
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/WebDev/!svn/ver/75213/gems/uuidtools/2.1.2/tasks/spec.rake
+END

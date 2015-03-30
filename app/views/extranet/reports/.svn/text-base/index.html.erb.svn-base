@@ -1,0 +1,9 @@
+<div class="form_container">
+  <div id="profile">
+    <p class="header">Moderation Reports</p>
+    <br />
+    <%= link_to("View New Profiles","https://totale.rosettastone.com/community_moderation/learners_created", :target => "_blank") %><br />
+    <%= link_to("View Updated Profiles","https://totale.rosettastone.com/community_moderation/learner_profile_changed", :target => "_blank") %><br />
+    <%= link_to("View Recent Logins","https://totale.rosettastone.com/community_moderation/learners_logged_in", :target => "_blank") %><br />
+ </div>
+</div>

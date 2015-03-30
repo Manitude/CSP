@@ -1,0 +1,26 @@
+<%= form_for(@box_link, :html => { :onsubmit => "return validateBoxForm();"}) do |f| %>
+  <% if @box_link.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@box_link.errors.count, "error") %> prohibited this box_link from being saved:</h2>
+
+      <ul>
+      <% @box_link.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </div>
+  <br/>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

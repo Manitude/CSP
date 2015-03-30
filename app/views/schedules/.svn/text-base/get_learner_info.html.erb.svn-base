@@ -1,0 +1,20 @@
+<div class="learner" style="float:left">
+  <% if @learner_session_detail %>
+    <div class="learner_data">
+      <%= @learner_data.name %><br/>
+      <%= link_to 'view profile', learners_path+"/#{@learner_data.id}", :target => "_blank", :id => 'view_profile' %>
+    </div>
+    <div class="learner_details">
+      <span style="padding-right:41px;">Email:</span><%= @learner_data.email %><br/>
+      <span style="padding-right:5px;">Time Zone:</span> <%= @time_zone %><br/><br/>
+      <% language = []
+      language = @languages.split("\n").sort if !@languages.empty?
+    %>
+     <!-- <span style="padding-right:5px;">Languages:</span>--><%#= language.join(",") if !language.empty? %>
+    </div>
+  <% end %>
+</div>
+<div class="print-button-for-week">
+  <%params[:start_date]=Date.today%>
+</div>
+

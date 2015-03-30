@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionpack-3.0.20/lib/action_dispatch/middleware/session
+END
+mem_cache_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionpack-3.0.20/lib/action_dispatch/middleware/session/mem_cache_store.rb
+END
+abstract_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionpack-3.0.20/lib/action_dispatch/middleware/session/abstract_store.rb
+END
+cookie_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/actionpack-3.0.20/lib/action_dispatch/middleware/session/cookie_store.rb
+END

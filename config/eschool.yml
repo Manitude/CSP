@@ -1,0 +1,11 @@
+#For LocalDev instance:
+host: http://localhost:3001
+proxy_host: http://127.0.0.1:3001
+username: eschool_api_client
+password: 0c8d865e-505d-4778-adfe-8a427db3111f
+
+#For pointing to OPXDev:
+#host: http://eschool.rosettastone.com:80
+#proxy_host: http://opxdev.lan.flt:8080
+#username: eschoolplayer
+#password: FNYN654HWF8RR7

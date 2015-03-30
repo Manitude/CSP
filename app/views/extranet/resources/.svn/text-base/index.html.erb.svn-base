@@ -1,0 +1,28 @@
+<% if @resources.empty? %>
+  <p class="notice">There is no resource to display.</p>
+<% else %>
+  <table class="se_tab fullcontent">
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Target File</th>
+    </tr>
+    <% @resources.each do |resource| %>
+      <tr>
+        <td title="<%=h resource.title %>"><%=h truncate(resource.title) %></td>
+        <td title="<%=h resource.description %>"><%=h truncate(resource.description) %></td>
+        <td title="<%=h resource.filename %>"><%=  link_to truncate(resource.filename), :controller => "resources", :action => "show", :id => resource, :download => true %> </td>
+        <td class="links"><%= link_to image_tag('/images/extranet/show.gif', :alt => "Show", :title => "Show"), resource %></td>
+         <% if manager_logged_in? -%>
+          <td class="links"><%= link_to image_tag('/images/extranet/edit.png', :alt => "Edit", :title => "Edit"), edit_resource_path(resource) %></td>
+          <td class="links"><%= link_to image_tag('/images/extranet/delete.png', :alt => "Delete", :title => "Delete"), resource, :confirm => 'Are you sure?', :method => :Delete %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
+<br />
+<br />
+<% if manager_logged_in? -%>
+  <%= link_to 'Add a new resource', new_resource_path %>
+<% end %>

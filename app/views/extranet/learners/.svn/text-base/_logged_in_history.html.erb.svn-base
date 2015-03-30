@@ -1,0 +1,20 @@
+<div class="form_container" style="padding-left: 50px">
+  <% if !@login_history.nil?  and !@login_history.blank? %>
+    <table style="border: thin solid black;width:250px">
+      <thead>
+        <tr>
+          <th style="border: thin solid black"><b>Date & Time (EST)</b></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @login_history.each do |d| %>
+          <tr>
+            <td style="border: thin solid black;text-align: left"><%= d%></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else -%>
+    <p class="notice">No History Found</p>
+  <% end -%>
+</div>

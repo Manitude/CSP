@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/spec/cocaine/command_line/runners
+END
+posix_runner_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/spec/cocaine/command_line/runners/posix_runner_spec.rb
+END
+fake_runner_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/spec/cocaine/command_line/runners/fake_runner_spec.rb
+END
+backticks_runner_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/spec/cocaine/command_line/runners/backticks_runner_spec.rb
+END
+process_runner_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/spec/cocaine/command_line/runners/process_runner_spec.rb
+END

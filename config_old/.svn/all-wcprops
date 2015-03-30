@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/158401/coach_portal/branches/sprint32/config
+END
+ssl.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/ssl.yml.sample
+END
+rubygems_boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/rubygems_boot.rb
+END
+eschool_error_codes.yml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/eschool_error_codes.yml
+END
+big_blue_button.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/big_blue_button.yml.sample
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/routes.rb
+END
+super_saas.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/WebDev/!svn/ver/158401/coach_portal/branches/sprint32/config/super_saas.yml.sample
+END
+cocomo.defaults.yml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/cocomo.defaults.yml
+END
+active_licensing.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/active_licensing.yml.sample
+END
+dblogin.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/dblogin.yml.sample
+END
+granite_agents.defaults.yml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/granite_agents.defaults.yml
+END
+ldap.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/ldap.yml.sample
+END
+hoptoad.defaults.yml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/hoptoad.defaults.yml
+END
+community.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/community.yml.sample
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/application.rb
+END
+totale.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/totale.yml.sample
+END
+eschool.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/eschool.yml.sample
+END
+baffling_api_client.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/baffling_api_client.yml.sample
+END
+memcache.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/memcache.yml.sample
+END
+sms.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/sms.yml.sample
+END
+lcdb.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/lcdb.yml.sample
+END
+crontab
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/crontab
+END
+preinitializer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/preinitializer.rb
+END
+schedule.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/schedule.rb
+END
+aria_integration.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/aria_integration.yml.sample
+END
+locos.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/locos.yml.sample
+END
+lion.yml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/lion.yml
+END
+adobe_connect.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/adobe_connect.yml.sample
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/database.yml
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/boot.rb
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/environment.rb
+END
+lion.defaults.yml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/lion.defaults.yml
+END
+app_servers.yml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/app_servers.yml.sample
+END
+rabbit.defaults.yml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/config/rabbit.defaults.yml
+END

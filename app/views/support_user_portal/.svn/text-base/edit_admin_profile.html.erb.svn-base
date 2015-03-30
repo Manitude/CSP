@@ -1,0 +1,47 @@
+<%= form_for :support_user, @admin_user, :html => { :id => 'profile-form', :name => 'profileform', :multipart => true } do |f| -%>
+  <div id="profile">
+    <%= f.error_messages -%>
+    <p class="header" style="border-bottom: 2px solid gray;"></p>
+    <div id="general" class="pad-top-20" style="float:left;">
+      <ul class="col1">
+        <li><%= f.label :full_name, "#{_('Full_Name82853947')}"+check_mandatory -%> <%= f.text_field :full_name, {:size => "37"} -%></li>
+        <li><%= f.label :user_name, "#{_('AD_NameBD52F356')}" -%> <%=  get_text @admin_user.user_name -%></li>
+        <li><%= f.label :preferred_name, _('Preferred_Name77198152') -%> <%= f.text_field :preferred_name, {:size => "37"} -%></li>
+        <li><%= f.label :address, _('AddressC2F3561D') -%> <%= f.text_area :address, :size => "35x3" -%></li>
+        <li><%= f.label :country, "#{_('Country9CCEF0FA')}"+check_mandatory -%> <%= f.select :country, options_for_select(RosettaStone::Country.options_for_select_country_code, @admin_user.country) -%></li>
+        <li><%= f.label :bio, _("About_MeF0B34752") -%> <%= f.text_area :bio, :size => "35x3" -%></li>
+        <li><%= f.label :birth_date, "#{_('Birthdate1015DE80')}"+check_mandatory -%> <%= f.date_select :birth_date, reasonable_year_options -%></li>
+        <li><%= hidden_field_tag("one_time_locale", @admin_user.native_language)%></li>
+      </ul>
+      <ul class="col2">
+        <li><%= f.label :rs_email, 'RS Email' -%> <%= f.text_field :rs_email -%></li>
+        <li><%= f.label :personal_email, 'Personal Email' -%> <%= f.text_field :personal_email -%></li>
+        <li><%= f.label :skype_id, 'Skype ID' -%> <%= f.text_field :skype_id -%></li>
+        <li><%= f.label :aim_id, 'AIM ID' -%> <%= f.text_field :aim_id -%></li>
+        <li>
+          <%= f.label :primary_phone, 'Primary Phone' -%> 
+          <%= f.text_field :primary_country_code, :size => 5 -%>
+          <span class ="phone_space">&nbsp;&nbsp;</span>
+          <%= f.text_field :primary_phone, :size => 20 -%>
+        </li>
+        <li>
+          <%= f.label :secondary_phone, 'Secondary Phone' -%> 
+          <%= f.text_field :secondary_phone -%>
+        </li>
+        <li>
+          <%= f.label :mobile_phone, 'Mobile Phone' -%> 
+          <%= f.text_field :mobile_country_code, :size => 5 -%>
+          <span class ="phone_space">&nbsp;&nbsp;</span>
+          <%= f.text_field :mobile_phone, :size => 20 -%>
+        </li>
+        <li><div id="admin_profile-save"><%= f.submit _('SaveF55495E0') -%></div></li>
+      </ul>
+    </div>
+  </div>
+<% end -%>
+
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    handleRemoveProfilePictureEvents();
+  });
+</script>

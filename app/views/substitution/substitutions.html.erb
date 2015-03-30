@@ -1,0 +1,76 @@
+<span class = "bold-font"><%= "Today's Date" -%>:</span>
+<span class = "left-space">
+  <%= get_today_date %>
+  <% if manager_logged_in? %>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= link_to_function "Email Coaches scheduled within the next 30 minutes", "fixedFacebox('#{mail_template_path}')" %>
+  <% end %>
+</span>
+<p class="header preference-border"></p>
+<% unless @substitutions[:weeks_exceeded_in_threshold].blank? %>
+  <div id ="sub_exceeded_message">You have reached or exceeded the maximum number of sessions for the following week(s). Please contact your Coach Manager if
+        you would like to teach additional sessions.
+    <% @substitutions[:weeks_exceeded_in_threshold].each do |weeks_start_time| %>
+      <div class ="weeks_exceeded_threshold">
+        <%= format_time(weeks_start_time) %> - <%= format_time(weeks_start_time + 6.days) %>
+      </div>
+    <% end %>
+  </div>
+<%  end %>
+
+<table class="table_list_substitution">
+  <tr>
+    <th class="left-border" id = "width20">
+      <%= select_tag :coach_id, options_for_coach(@substitutions[:coach], params[:coach_id], true), {:class => 'select_class substitutions_form', :style => 'width: 110px;'} -%>
+    </th>
+    <th class="left-border" id = "width15">
+      <%=  select_tag :lang_id, options_for_lang_including_appointments(@substitutions[:lang], @substitutions[:appointment_langs], params[:lang_id]), {:class => 'select_class substitutions_form', :style=> 'width: 100px;'} -%>
+    </th>
+    <th class="left-border" id = "width10">Level/Unit</th>
+    <th class="left-border" id = "width20">
+        Show Sub Requests For:<br/>
+      <%=  select_tag :duration, options_for_duration(params[:duration]), {:class =>'select_class substitutions_form', :style=>'width: 100px;'} -%>
+    </th>
+    <th class="left-border" id = "width10">Learners</th>
+    <th class="left-border" id = "width10">Village</th>
+
+    <th class="left-right-border" id = "width15">Actions</th>
+  </tr>
+
+  <% if @substitutions[:data].blank? %>
+    <tr>
+      <td class="left-right-border sub_center" colspan="7">
+        <p>There are no substitutions to display for the selected search filters.</p>
+      </td>
+    </tr>
+  <% else %>
+    <% @substitutions[:data].each do |sub| %>
+      <tr>
+        <td class="left-border sub_center coach_requesting_column"><%= sub[:coach] %></td>
+        <td class="left-border sub_center"><%= sub[:language] %></td>
+        <td class="left-border sub_center"><%= sub[:level_unit_lession] %></td>
+        <td class="left-border sub_center">
+          <%= format_time(sub[:subsitution_date], "%a %d %b %Y %I:%M %p") %>
+        </td>
+        <td class="left-border sub_center"><%= sub[:learners_signed_up] %></td>
+        <td class="left-border sub_center"><%= sub[:village]  %></td>
+        <td class="left-right-border sub_center">
+        <%if coach_logged_in?%>
+          <input type="button" id="<%=  sub[:sub_id] %>" class="btn grab_session" value="Grab" <% if sub[:grab_disable] %> disabled <% end %>/>
+        <% else %>
+         <%= link_to_function 'Cancel',"constructQtipWithTip(this, 'CANCEL SESSION', '/reason_for_cancellation?sub_id=#{sub[:sub_id]}&called_from=substitution', {  width: 1000 })", :id => "cancel_subbed_session_#{sub[:sub_id]}" if sub[:learners_signed_up].to_i != 0 %> 
+          <%= link_to_function 'Cancel', "cancelSubbedSessionConfirmation(#{sub[:sub_id]})", :id => "cancel_subbed_session_#{sub[:sub_id]}" if sub[:learners_signed_up].to_i == 0 %>
+          &nbsp;&nbsp;&nbsp; 
+          <%= link_to_function 'Re-assign',"fixedFaceBoxWithHeaderAndID('/fetch_available_coaches?sub_id=#{sub[:sub_id]}','ASSIGN SUBSTITUTE','reassign_substitution_#{sub[:sub_id]}')", :id => "reassign_substitution_#{sub[:sub_id]}"%>
+        <% end %>
+      </td>
+    </tr>
+    <% end %>
+  <% end %>
+</table>
+
+<br/>
+<%= will_paginate @substitutions[:data] %>
+
+<%if manager_logged_in? && !params[:lang_id].blank? and !@substitutions[:data].blank? %>
+  <input type="button" id="trigger_sms" value="Trigger SMS" class="pull-right"/>
+<%end%>

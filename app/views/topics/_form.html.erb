@@ -1,0 +1,50 @@
+<div id="error_div" class="error" style ="display:none"></div>
+<%= form_for @topic , :html => { :id => 'topics_form', :multipart => true } do |f| %>
+  <% if @topic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@topic.errors.count, "error") %> prohibited this topic from being saved:</h2>
+
+      <ul>
+      <% @topic.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p class="subnote">Fields labeled with <i>*</i> are required.</p>
+  <div class="formfield">
+  <div class="field">
+    <%= f.label :guid, "GUID"%><br />
+    <%= f.text_field :guid %>
+  </div>
+  </div>
+  <div class="formfield">
+  <div class="field">
+    <span class="required">*</span>
+    <%= f.label :title, "Title", :size =>"45" %>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <span class="required">*</span>
+    <%= f.label :description, "Description" %>
+    <%= f.text_area :description ,:size => "45x8"%>
+  </div>
+  <div class="field">
+    <span class="required">*</span>
+    <%= f.label :language, "Language" %>
+    <%= f.select :language, options_for_aria(@topic.language) -%>
+  </div>
+  <div class="field">
+    <span class="required">*</span>
+    <%= f.label :cefr_level, "CEFR Level" %><%= f.select :cefr_level, options_for_cefr(@topic.cefr_level,'-CEFR level-') -%>
+    
+  </div>
+  <div class="field">
+    <%= f.label :selected, "Active" %>
+    <%= f.check_box :selected ,:checked => @topic.selected %>
+  </div>
+  <div class="actions">
+    <input id="save" type="button" value="Save" onclick = "validateAndSave();" style="margin-left: 130px; padding :3px 20px;" />
+  </div>
+ </div>
+<% end %>

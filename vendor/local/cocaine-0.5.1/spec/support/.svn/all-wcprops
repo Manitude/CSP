@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/spec/support
+END
+fake_logger.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/spec/support/fake_logger.rb
+END
+with_exitstatus.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/spec/support/with_exitstatus.rb
+END
+stub_os.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/spec/support/stub_os.rb
+END
+nonblocking_examples.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/cocaine-0.5.1/spec/support/nonblocking_examples.rb
+END

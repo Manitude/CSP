@@ -1,0 +1,93 @@
+<div id="real_lotus_real_time_data_divs" style = "visibility :hidden"> <!--hiding the reflex real time data -->
+  <span style="float:left;"><a href="javascript:displayRow();"><img src="/images/next.png" id="img" alt="img" title ="Click to expand"/></a></span>
+  <span class="lotus_info_button"><%= link_to_function image_tag('i_icon.gif',:alt => 'About this data' ,:title => 'About this data' ), "fixedFacebox('#{about_lotus_data_path}')" %></span>
+
+  <div class="lotus_header">
+    <span class="left_half">
+      <div class="left_half_element" style="padding-left: 4px;">
+        <span><%= link_to_function 'Total Coaches in Player',"fixedFacebox('#{reflex_coach_details_path(:details_for => 'total_in_player')}')" %></span>
+        <span style="float: right; color: red"><%=  real_time_lotus_data_global["total_in_player"].size %></span>
+      </div>
+    </span>
+    <span class="right_half" style="padding-left: 10px;">
+      <div class="right_half_element">
+        <span><%= link_to_function 'Learners waiting' ,"fixedFacebox('#{learners_waiting_details_path}')" %></span>
+        <span style="float: right; color: red;"><%= real_time_lotus_data_global["learners_waiting"].size %></span>
+      </div>
+    </span>
+  </div>
+
+  <div id="caption_row">
+    <hr/>
+    <div class="lotus_details">
+      <span class="left_half">
+        <div class="left_half_element">
+          <span><%= link_to_function 'Coaches Teaching',"fixedFacebox('#{reflex_coach_details_path(:details_for => 'teaching')}')" %></span>
+          <span class="left_ele_attr"><%= real_time_lotus_data_global["teaching"].size %></span>
+        </div>
+        <div class="left_half_element">
+          <span><%= link_to_function 'Coaches Polling',"fixedFacebox('#{reflex_coach_details_path(:details_for => 'polling')}')" %></span>
+          <span class="left_ele_attr"><%= real_time_lotus_data_global["polling"].size %></span>
+        </div>
+        <div class="left_half_element">
+          <span><%= link_to_function 'Coaches Not Teaching',"fixedFacebox('#{reflex_coach_details_path(:details_for => 'not_teaching')}')" %></span>
+          <span class="left_ele_attr"><%= real_time_lotus_data_global["not_teaching"].size %></span>
+        </div>
+        <div class="small left_half_element">
+          <span class="small_ele_value"><%= real_time_lotus_data_global["paused"].size %></span>
+          <span class="small_ele_attr" ><%= link_to_function 'Paused',"fixedFacebox('#{reflex_coach_details_path(:details_for => 'paused')}')" %></span>
+        </div>
+        <div class="small left_half_element">
+          <span class="small_ele_value"><%= real_time_lotus_data_global["in_support"].size %></span>
+          <span class="small_ele_attr" ><%= link_to_function 'Receiving Support',"fixedFacebox('#{reflex_coach_details_path(:details_for => 'in_support')}')" %></span>
+        </div>
+        <div class="small left_half_element">
+          <span class="small_ele_value"><%= real_time_lotus_data_global["calibrating"].size %></span>
+          <span class="small_ele_attr" ><%= link_to_function 'Configuring Player',"fixedFacebox('#{reflex_coach_details_path(:details_for => 'calibrating')}')" %></span>
+        </div>
+        <div class="small left_half_element">
+          <span class="small_ele_value"><%= real_time_lotus_data_global["initializing"].size %></span>
+          <span class="small_ele_attr" ><%= link_to_function 'Initializing Player',"fixedFacebox('#{reflex_coach_details_path(:details_for => 'initializing')}')" %></span>
+        </div>
+        <div class="left_half_element">
+          <span><%= link_to_function 'Total Coaches Scheduled',"fixedFacebox('#{reflex_coach_scheduled_details_path}')" %></span>
+          <span class="left_ele_attr" id="coaches_scheduled"><%= real_time_lotus_data_global["teachers_scheduled"].size %></span>
+        </div>
+      </span>
+      <span class="right_half">
+        <div class="right_half_element">
+          <span>Learners in Skills and Rehearsal</span>
+          <span class="right_ele_attr" id="skills_rehearsals"><%= real_time_lotus_data_global["skills_or_rehearsal"].size %></span>
+        </div>
+        <div class="right_half_element">
+          <span><%= link_to_function 'Learners in Skills', "fixedFacebox('#{reflex_learner_details_path(:details_for => 'skills')}')" %></span>
+          <span class="right_ele_attr" id="skills"><%= real_time_lotus_data_global["skills"].size %></span>
+        </div>
+        <div class="right_half_element">
+          <span><%= link_to_function 'Learners in Rehearsal', "fixedFacebox('#{reflex_learner_details_path(:details_for => 'conversations')}')" %></span>
+          <span class="right_ele_attr" id="rehearsals"><%= real_time_lotus_data_global["conversations"].size %></span>
+        </div>
+        <div class="right_half_element">
+          <span>Average wait time</span>
+          <span class="right_ele_attr"><%= convert_to_minutes_and_seconds(real_time_lotus_data_global["average_learners_waiting_time_sec_for_both"]) %></span>
+        </div>
+        <div class="right_half_element">
+          <span>Longest wait time</span>
+          <span class="right_ele_attr"><%= convert_to_minutes_and_seconds(real_time_lotus_data_global["longest_learners_waiting_time_sec_for_both"]) %></span>
+        </div>
+        <div class="right_half_element" style="padding-top:35px">
+          <span><%= link_to_function 'Coaches scheduled in the next half-hour' ,"fixedFacebox('#{reflex_coach_details_path(:details_for => 'teachers_scheduled_in_next_hour')}')" %></span>
+          <span id ="coaches_scheduled_in_the_next_hour" class="right_ele_attr" ><%= real_time_lotus_data_global["teachers_scheduled_in_next_hour"].size %></span>
+        </div>
+      </span>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  elem = document.getElementById("caption_row");
+  elem.style.display = captionRowStatus;
+  var images = document.getElementById("img");
+  images.src = imageLink;
+  images.title = imageTitle
+</script>

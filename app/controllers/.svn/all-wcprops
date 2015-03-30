@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/WebDev/!svn/ver/159202/coach_portal/branches/sprint32/app/controllers
+END
+availability_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/controllers/availability_controller.rb
+END
+coach_scheduler_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/WebDev/!svn/ver/159107/coach_portal/branches/sprint32/app/controllers/coach_scheduler_controller.rb
+END
+coach_roster_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/controllers/coach_roster_controller.rb
+END
+report_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/controllers/report_controller.rb
+END
+substitution_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/159236/coach_portal/branches/sprint32/app/controllers/substitution_controller.rb
+END
+coach_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/controllers/coach_controller.rb
+END
+background_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/controllers/background_controller.rb
+END
+schedules_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/159185/coach_portal/branches/sprint32/app/controllers/schedules_controller.rb
+END
+appointment_types_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/controllers/appointment_types_controller.rb
+END
+scheduling_thresholds_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/controllers/scheduling_thresholds_controller.rb
+END
+dashboard_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/158894/coach_portal/branches/sprint32/app/controllers/dashboard_controller.rb
+END
+box_links_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/controllers/box_links_controller.rb
+END
+timeoff_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/controllers/timeoff_controller.rb
+END
+manager_portal_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/WebDev/!svn/ver/159093/coach_portal/branches/sprint32/app/controllers/manager_portal_controller.rb
+END
+coach_portal_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/controllers/coach_portal_controller.rb
+END
+staffing_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/controllers/staffing_controller.rb
+END
+topics_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/controllers/topics_controller.rb
+END
+application_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/158250/coach_portal/branches/sprint32/app/controllers/application_controller.rb
+END
+village_preferences_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/controllers/village_preferences_controller.rb
+END
+lotus_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/app/controllers/lotus_controller.rb
+END

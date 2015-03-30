@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Biblio:</b>
+  <%= @topic.guid %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @topic.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @topic.description %>
+</p>
+
+<p>
+  <b>Cefr level:</b>
+  <%= @topic.cefr_level %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @topic.language %>
+</p>
+
+<p>
+  <b>Selected:</b>
+  <%= @topic.selected %>
+</p>
+
+
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Back', topics_path %>

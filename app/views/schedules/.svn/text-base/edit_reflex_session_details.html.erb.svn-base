@@ -1,0 +1,25 @@
+<div id="edit_actual_session_ms">
+  <% if @session_details[:coaches].any? || @session_details[:unavailable_coaches].any? %>
+    <div id="available_coaches_container">
+      Coaches:
+      <div id="coach_list_container_lotus">
+        <select name ="coach_list" id="coach_list" style="text-align: left;width: 195px" onchange="validate_coach(this)">
+          <option value="--Available Coaches--">--Available Coaches--</option>
+          <% @session_details[:coaches].each do |coach|%>
+            <option id="option-<%= coach.id %>" value="option-<%= coach.id %>" threshold = <%= coach.threshold %> status="available" coach_id ="<%= coach.id %>" user_name="<%= coach.user_name %>"><%=coach.full_name%></option>
+          <% end %>
+
+          <option value="--Unavailable Coaches--">--Unavailable Coaches--</option>
+          <% @session_details[:unavailable_coaches].each do |coach|%>
+            <option id="option-<%= coach.id %>" value="option-<%= coach.id %>" threshold = <%= coach.threshold %> status="unavailable" coach_id ="<%= coach.id %>"  user_name="<%= coach.user_name %>"><%=coach.full_name%></option> <% end %>
+        </select>
+      </div>
+    </div>
+    <div  id="button_container1" style="float: right;padding: 20px 20px 0px 0px">
+      <input type = "button" id = "edit_reflex_session_btn_lotus" class = "button" value = "SAVE" onclick ="saveAssignSub('<%= @session_details[:session_id] %>',this)"/>
+    </div>
+  <% else %>
+    No Coaches Available in This TimeSlot
+  <% end %>
+
+</div>

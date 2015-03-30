@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/WebDev/!svn/ver/158484/coach_portal/branches/sprint32/test/fixtures
+END
+language_configurations.yml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/language_configurations.yml
+END
+user_actions.yml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/user_actions.yml
+END
+preference_settings.yml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/preference_settings.yml
+END
+topics.yml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/topics.yml
+END
+coach_sessions.yml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/coach_sessions.yml
+END
+languages.yml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/WebDev/!svn/ver/158484/coach_portal/branches/sprint32/test/fixtures/languages.yml
+END
+excluded_coaches_sessions.yml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/excluded_coaches_sessions.yml
+END
+notifications.yml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/notifications.yml
+END
+notification_recipients.yml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/notification_recipients.yml
+END
+qualifications.yml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/qualifications.yml
+END
+scheduler_metadata.yml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/scheduler_metadata.yml
+END
+unavailable_despite_templates.yml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/unavailable_despite_templates.yml
+END
+coach_availabilities.yml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/coach_availabilities.yml
+END
+accounts.yml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/accounts.yml
+END
+cm_preferences.yml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/cm_preferences.yml
+END
+notification_message_dynamics.yml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/notification_message_dynamics.yml
+END
+roles.yml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/roles.yml
+END
+tasks.yml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/tasks.yml
+END
+coach_availability_templates.yml
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/coach_availability_templates.yml
+END
+support_windows.yml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/support_windows.yml
+END
+trigger_events.yml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/trigger_events.yml
+END
+dialects.yml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/dialects.yml
+END
+session_details.yml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/session_details.yml
+END
+levels.yml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/test/fixtures/levels.yml
+END

@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/74349/plugins/audit_log/trunk/migrations
+END
+001_audit_log_create_audit_log_records_table.rb
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/WebDev/!svn/ver/74349/plugins/audit_log/trunk/migrations/001_audit_log_create_audit_log_records_table.rb
+END

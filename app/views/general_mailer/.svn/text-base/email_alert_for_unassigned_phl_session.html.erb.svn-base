@@ -1,0 +1,9 @@
+<div>  Please find the list of upcoming unassigned PHL sessions provided below. All start times are displayed in Eastern Time. <br><br>
+		<% @records.each do |record| %>
+			<%= TimeUtils.time_in_user_zone(record.session_start_time).strftime("%-m/%d/%Y, %r")+" - " + record.language_identifier %> <br>
+		<% end %>	
+
+
+	<br>Thanks,<br/>
+	Customer Success Portal.
+</div>

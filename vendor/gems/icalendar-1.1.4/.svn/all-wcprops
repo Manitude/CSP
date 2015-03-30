@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/WebDev/!svn/ver/53740/gems/icalendar/1.1.4
+END
+.specification
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/53740/gems/icalendar/1.1.4/.specification
+END
+History.txt
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/History.txt
+END
+test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/test.rb
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/README.rdoc
+END
+test2.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/test2.rb
+END
+icalendar.gemspec
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/icalendar.gemspec
+END
+test.ical
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/test.ical
+END
+test.ics
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/WebDev/!svn/ver/53735/gems/icalendar/1.1.4/test.ics
+END

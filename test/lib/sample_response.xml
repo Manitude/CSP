@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eschool_sessions type="array">
+  <eschool_session>
+    <eschool_session_id>160070</eschool_session_id>
+    <language>KLE</language>
+    <level>1</level>
+    <unit>1</unit>
+    <teacher>emmiller</teacher>
+    <start_time time_zone="UTC">2011-08-14 04:58:08</start_time>
+    <duration_in_seconds>60</duration_in_seconds>
+    <cancelled>true</cancelled>
+    <number_of_seats>1</number_of_seats>
+    <learners_signed_up>0</learners_signed_up>
+    <students_attended>0</students_attended>
+    <wildcard>false</wildcard>
+    <wildcard_units></wildcard_units>
+    <wildcard_locked>false</wildcard_locked>
+    <teacher_confirmed>true</teacher_confirmed>
+    <external_village_id></external_village_id>
+    <teacher_arrived>false</teacher_arrived>
+  </eschool_session>
+
+  <eschool_session>
+    <eschool_session_id>160071</eschool_session_id>
+    <language>JLE</language>
+    <level>1</level>
+    <unit>
+      1
+    </unit>
+    <teacher>gpope</teacher>
+    <start_time time_zone="UTC">2011-08-14 05:14:51
+    </start_time>
+    <duration_in_seconds>900</duration_in_seconds>
+    <cancelled>false</cancelled>
+    <number_of_seats>1</number_of_seats>
+    <learners_signed_up>1</learners_signed_up>
+    <students_attended>0</students_attended>
+    <wildcard>false</wildcard>
+    <wildcard_units></wildcard_units>
+    <wildcard_locked>false</wildcard_locked>
+    <teacher_confirmed>
+      true
+    </teacher_confirmed>
+    <external_village_id></external_village_id>
+    <teacher_arrived>true</teacher_arrived>
+  </eschool_session>
+  <eschool_session>
+    <eschool_session_id>160073</eschool_session_id>
+    <language>KLE</language>
+    <level>1</level>
+    <unit>1</unit>
+    <teacher>vvillivalam</teacher>
+    <start_time time_zone="UTC">2011-08-14 05:15:54
+    </start_time>
+    <duration_in_seconds>60</duration_in_seconds>
+    <cancelled>true</cancelled>
+    <number_of_seats>1
+    </number_of_seats>
+    <learners_signed_up>0</learners_signed_up>
+    <students_attended>0</students_attended>
+    <wildcard>
+      false
+    </wildcard>
+    <wildcard_units></wildcard_units>
+    <wildcard_locked>false</wildcard_locked>
+    <teacher_confirmed>true
+    </teacher_confirmed>
+    <external_village_id></external_village_id>
+    <teacher_arrived>false
+    </teacher_arrived>
+  </eschool_session>
+  <eschool_session>
+    <eschool_session_id>160072</eschool_session_id>
+    <language>KLE</language>
+    <level>1</level>
+    <unit>1</unit>
+    <teacher>lbarrett</teacher>
+    <start_time time_zone=
+                        "UTC">2011-08-14 05:34:40
+    </start_time>
+    <duration_in_seconds>900</duration_in_seconds>
+    <cancelled>true</cancelled>
+    <number_of_seats>1
+    </number_of_seats>
+    <learners_signed_up>1</learners_signed_up>
+    <students_attended>0</students_attended>
+    <wildcard>
+      false
+    </wildcard>
+    <wildcard_units></wildcard_units>
+    <wildcard_locked>false</wildcard_locked>
+    <teacher_confirmed>true
+    </teacher_confirmed>
+    <external_village_id></external_village_id>
+  </eschool_session>
+</eschool_sessions>

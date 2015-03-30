@@ -1,0 +1,26 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+
+<% if @entry %>
+  <h2><%= h(@entry.key)%></h2>
+  <% interp_keys = @entry.headers.map{|key|Lion::Utilities.get_interpolation_keys(@entry[key])}.flatten.compact.uniq %>
+  <% if interp_keys.present? %>
+    <fieldset>
+      <legend>available interpolation strings</legend>
+      <ul>
+      <% interp_keys.each do |interp_key| %>
+        <li><%= simple_format(h(interp_key)) %></li>
+      <% end %>
+      </ul>
+    </fieldset>
+  <% end %>
+  <% @entry.headers.sort.each do |key| %>
+    <% next if key == "key" || @entry[key].blank? %>
+    <fieldset>
+      <legend><%= key %></legend>
+      <%= simple_format(h(@entry[key])) %>
+    </fieldset>
+  <% end %>
+<% end %>

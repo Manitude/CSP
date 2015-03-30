@@ -1,0 +1,32 @@
+<% learners_data.each do |data| %>
+  <tr style="line-height:25px">
+    <% learner = data['learner'] %>
+    <% if can_view_license_link? %>
+    <td><span class="marker" id=<%= learner.guid %>> <%= learner.name %></span></td>
+    <% else %>
+    <td><%= learner.name %></td>
+    <% end %>
+    <% if learner.user_name.blank? %>
+   
+    <td><%= learner.email %></td>
+   
+    <% else %>
+
+     <td><%= learner.user_name %></td>
+    <%end%>
+
+    
+   
+    <td style="font-family: monospace"><%= learner.guid.blank? ? " -- " : learner.guid %></td>
+    <td ><%= get_text(learner.village_name) %></td>
+    <td ><%= learner.mobile_number.blank? ? "--" : learner.mobile_number %></td>
+    <td style="padding-right: 0px; vertical-align: top;">
+      <div style="height : 20px;"><%= can_view_license_link? ? link_to("View Learner", "/view_learner/#{learner.guid}") :
+                                                               link_to("View Profile", learner_path(:id => learner.id)) %></div>
+    </td>
+  </tr>
+<% end %>
+
+<script type="text/javascript">
+  jQuery('#print-button').show();
+</script>

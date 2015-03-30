@@ -1,0 +1,1 @@
+This plugin was downloaded on 2007-11-29 from http://svn.planetargon.org/rails/plugins/httpack/ at revision 143.

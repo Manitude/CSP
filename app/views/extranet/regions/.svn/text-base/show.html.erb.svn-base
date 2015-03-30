@@ -1,0 +1,9 @@
+<p>
+  <b>Name:</b>
+  <%=h @region.name %>
+</p>
+
+<% unless coach_logged_in? -%>
+<%= link_to 'Edit', edit_region_path(@region) %> |
+<% end %>
+<%= link_to 'Back', regions_path %>

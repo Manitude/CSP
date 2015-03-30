@@ -1,0 +1,43 @@
+<div class="form_container">
+  <div id="profile">
+    <div class="student_studio_history" id="student_studio_history">
+      <%= link_to "Back to learner's access log page", view_access_log_path(:license_identifier => @learner.email) %>
+      <br/>
+      <p class="header">Learner Studio History </p>
+      <div id="eschool" style="padding:10px">
+        <table>
+          <% if !student.eschool_sessions.blank? -%>
+            <thead>
+              <tr>
+                <th style="width:150px">Date & Time (EST)</th>
+                <th style="width:150px">Learner Date & Time (<%= ActiveSupport::TimeZone[student.time_zone].now.zone %>)</th>
+                <th style="width:240px">Language</th>
+                <th style="width:75px">Level</th>
+                <th style="width:75px">Unit</th>
+                <th style="width:100px">Attended</th>
+                <th style="width:100px">Mins in Session</th>
+                <th style="width:100px">Technical Issues?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% student.eschool_sessions.each do |es| %>
+                <tr>
+                  <td><%= es.start_time.to_time.in_time_zone("Eastern Time (US & Canada)") %></td>
+                  <td><%= es.start_time.to_time.in_time_zone(student.time_zone) %></td>
+                  <td><%= name_from_code es.language_code %></td>
+                  <td><%= es.level %></td>
+                  <td><%= es.unit %></td>
+                  <td><%= es.attended == "true" ? "Attended" : es.cancelled == "true" ? "Cancelled" : "Skipped" %></td>
+                  <td><%= es.last_seen_at && es.first_seen_at ? difference_of_time_mmss(es.last_seen_at.to_time, es.first_seen_at.to_time) : "--" %></td>
+                  <td><%= es.technical_issues == "true" ? "Yes" : "No" %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          <% else -%>
+            <p class="notice">No studio sessions found for this user.</p>
+          <% end -%>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

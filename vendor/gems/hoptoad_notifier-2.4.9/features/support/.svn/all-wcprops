@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/features/support
+END
+matchers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/features/support/matchers.rb
+END
+env.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/features/support/env.rb
+END
+hoptoad_shim.rb.template
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/features/support/hoptoad_shim.rb.template
+END
+rails.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/features/support/rails.rb
+END
+terminal.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/68944/gems/hoptoad_notifier/2.4.9/features/support/terminal.rb
+END

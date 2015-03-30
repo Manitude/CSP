@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/WebDev/!svn/ver/77805/gems/bunny/0.7.4/lib/bunny
+END
+exchange08.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/bunny/exchange08.rb
+END
+consumer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/bunny/consumer.rb
+END
+exchange09.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/bunny/exchange09.rb
+END
+queue08.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/bunny/queue08.rb
+END
+subscription08.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/bunny/subscription08.rb
+END
+queue09.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/bunny/queue09.rb
+END
+subscription09.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/bunny/subscription09.rb
+END
+channel08.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/bunny/channel08.rb
+END
+channel09.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/bunny/channel09.rb
+END
+version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/75221/gems/bunny/0.7.4/lib/bunny/version.rb
+END
+client08.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/77805/gems/bunny/0.7.4/lib/bunny/client08.rb
+END
+client09.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/77805/gems/bunny/0.7.4/lib/bunny/client09.rb
+END

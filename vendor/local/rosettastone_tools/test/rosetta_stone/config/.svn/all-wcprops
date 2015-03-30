@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/config
+END
+settings_with_environment.yml
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/config/settings_with_environment.yml
+END
+settings.yml
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/config/settings.yml
+END
+settings_without_settings.yml
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/config/settings_without_settings.yml
+END
+settings_with_environment.defaults.yml
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/config/settings_with_environment.defaults.yml
+END
+settings.defaults.yml
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/config/settings.defaults.yml
+END
+settings_without_override.defaults.yml
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/config/settings_without_override.defaults.yml
+END
+settings_without_defaults_file.yml
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/rosettastone_tools/test/rosetta_stone/config/settings_without_defaults_file.yml
+END

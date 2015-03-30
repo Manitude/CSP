@@ -1,0 +1,77 @@
+10
+
+dir
+158729
+https://svn.lan.flt/svn/WebDev/gems/amq-client/0.9.1/spec
+https://svn.lan.flt/svn/WebDev
+
+
+
+2012-01-23T14:53:00.094434Z
+86503
+eurie
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+169e7656-d7f2-0310-83d5-fda845fb8f35
+
+spec_helper.rb
+file
+
+
+
+
+2014-12-23T06:26:14.884739Z
+a98c78c6df7fa789cbdb4bd449dc4dff
+2012-01-23T14:53:00.094434Z
+86503
+eurie
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+577
+
+benchmarks
+dir
+
+client
+dir
+
+unit
+dir
+
+regression
+dir
+
+integration
+dir
+

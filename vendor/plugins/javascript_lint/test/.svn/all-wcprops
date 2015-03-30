@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/WebDev/!svn/ver/45308/plugins/javascript_lint/trunk/test
+END
+javascript_lint_plugin_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/WebDev/!svn/ver/45308/plugins/javascript_lint/trunk/test/javascript_lint_plugin_test.rb
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/34876/plugins/javascript_lint/trunk/test/test_helper.rb
+END

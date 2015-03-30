@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/lib/technoweenie/attachment_fu/processors
+END
+mini_magick_processor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/lib/technoweenie/attachment_fu/processors/mini_magick_processor.rb
+END
+core_image_processor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/lib/technoweenie/attachment_fu/processors/core_image_processor.rb
+END
+image_science_processor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/lib/technoweenie/attachment_fu/processors/image_science_processor.rb
+END
+gd2_processor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/lib/technoweenie/attachment_fu/processors/gd2_processor.rb
+END
+rmagick_processor.rb
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/WebDev/!svn/ver/24751/plugins/attachment_fu/trunk/lib/technoweenie/attachment_fu/processors/rmagick_processor.rb
+END

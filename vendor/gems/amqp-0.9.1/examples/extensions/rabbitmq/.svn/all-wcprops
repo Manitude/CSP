@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/extensions/rabbitmq
+END
+using_alternate_exchanges.rb
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/extensions/rabbitmq/using_alternate_exchanges.rb
+END
+per_queue_message_ttl.rb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/extensions/rabbitmq/per_queue_message_ttl.rb
+END
+publisher_confirmations_with_transient_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/extensions/rabbitmq/publisher_confirmations_with_transient_messages.rb
+END

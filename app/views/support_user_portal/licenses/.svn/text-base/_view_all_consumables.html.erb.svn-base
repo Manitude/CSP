@@ -1,0 +1,138 @@
+<div id="all_consumables_popup">
+  <div id="extension-dates">
+    Select Extension Cycle : 
+    <span id="calender_date_box">
+      <%= link_to_function image_tag('previous.png', :alt => "Previous Cycle" , :title => "Previous Cycle"), 
+              "changeExtension('prev')"  %>
+      <input type="text" id="start_date" value="" />
+      -
+      <input type="text" id="end_date" value="" />
+      <%= link_to_function image_tag('next.png', :alt => "Next Cycle" , :title => "Next Cycle"), "changeExtension('next')" %>
+    </span>
+    <input type="hidden" id="extension-range" value="0"/>
+  </div>
+  <div id="consumable_details_div">
+    <table class="consumables_table" width="500px">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+  </div>
+  <div id="future_sessions_div">
+  </div>
+  <div id="additional_session_div">
+    <span style="font-weight: normal;">
+    </span>
+  </div>
+</div>
+  
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    jQuery.each(all_consumables["<%= language %>"], function(i, ext_cycle) {
+      if(ext_cycle.show){        
+        jQuery('#start_date').val(moment(new Date(extensions["<%= language %>"][i].start)).format("MMMM D, YYYY"));
+        jQuery('#end_date').val(moment(new Date(extensions["<%= language %>"][i].end)).format("MMMM D, YYYY"));
+        jQuery('#extension-range').val(i);
+      }
+    })
+    populateConsumables();
+    populateUpcomingSessions();
+  });
+
+  function changeExtension(type){
+    currentVal = jQuery('#extension-range').val();
+    if(type === 'next' && Number(currentVal) < (extensions["<%= language %>"].length-1)) {
+      nextVal = Number(currentVal) + 1;
+      jQuery('#start_date').val(moment(new Date(extensions["<%= language %>"][nextVal].start)).format("MMMM D, YYYY"));
+      jQuery('#end_date').val(moment(new Date(extensions["<%= language %>"][nextVal].end)).format("MMMM D, YYYY"));
+      jQuery('#extension-range').val(nextVal);
+      populateConsumables();
+      populateUpcomingSessions();
+    } else if(type === 'prev' && Number(currentVal) > 0) {
+      nextVal = Number(currentVal) - 1;
+      jQuery('#start_date').val(moment(new Date(extensions["<%= language %>"][nextVal].start)).format("MMMM D, YYYY"));
+      jQuery('#end_date').val(moment(new Date(extensions["<%= language %>"][nextVal].end)).format("MMMM D, YYYY"));
+      jQuery('#extension-range').val(nextVal);
+      populateConsumables();
+      populateUpcomingSessions();
+    }
+  }
+
+  function populateConsumables() {
+    extValue = jQuery('#extension-range').val();
+    consumablesObj = all_consumables["<%= language %>"][extValue];
+    jQuery('#all_consumables_popup .consumables_table thead').html('');
+    jQuery('#all_consumables_popup .consumables_table tbody').html('');
+    jQuery('#all_consumables_popup #additional_session_div span').html('');
+    jQuery('#all_consumables_popup .consumables_table thead').append("<tr><th>Type</th><th>Starting Available</th><th>Consumed</th><th>Rolled Over</th><th>Scheduled</th><th>Currently Available</th><th>Expires On</th></tr>");
+    jQuery('#all_consumables_popup .consumables_table tbody')
+      .append("<tr><td>Group</td>"+
+        "<td>"+consumablesObj.group.start_available+"</td>"+
+        "<td>"+consumablesObj.group.consumed+"</td>"+
+        "<td>"+consumablesObj.group.rolled_over+"</td>"+
+        "<td>"+consumablesObj.group.scheduled+"</td>"+
+        "<td>"+consumablesObj.group.currently_available+"</td>"+
+        "<td>"+consumablesObj.group.expires_at+"</td>"+
+        "</tr>");
+    jQuery('#all_consumables_popup .consumables_table tbody')
+      .append("<tr><td>Solo</td>"+
+        "<td>"+consumablesObj.solo.start_available+"</td>"+
+        "<td>"+consumablesObj.solo.consumed+"</td>"+
+        "<td>"+consumablesObj.solo.rolled_over+"</td>"+
+        "<td>"+consumablesObj.solo.scheduled+"</td>"+
+        "<td>"+consumablesObj.solo.currently_available+"</td>"+
+        "<td>"+consumablesObj.solo.expires_at+"</td>"+
+        "</tr>");
+    jQuery('#all_consumables_popup .consumables_table tbody')
+      .append("<tr><td>Total</td>"+
+        "<td>"+consumablesObj.total.start_available+"</td>"+
+        "<td>"+consumablesObj.total.consumed+"</td>"+
+        "<td>"+consumablesObj.total.rolled_over+"</td>"+
+        "<td>"+consumablesObj.total.scheduled+"</td>"+
+        "<td>"+consumablesObj.total.currently_available+"</td>"+
+        "<td></td>"+
+        "</tr>");
+    if(consumablesObj.show && !consumablesObj.is_burned) {
+      jQuery('#all_consumables_popup #additional_session_div span').append("<a>Manage Consumables</a>");
+      jQuery('#all_consumables_popup #additional_session_div span a').bind('click', function() {fixedFaceBoxWithHeader("/show_consumable_form?license_guid="+license_guid+
+        "&pooler_type=ProductRight&solo_product_right="+consumablesObj.solo_product_right+
+        "&solo_expire_date="+consumablesObj.solo.expires_at+
+        "&group_expire_date="+consumablesObj.end+
+        "&end_date="+"<%= end_date %>"+
+        "&language="+"<%= language %>"+
+        "&group_product_right="+consumablesObj.group_product_right, 'Manage Studio Consumables')});
+      jQuery("#all_consumables_popup .consumables_table").find("tr").each(function() { this.removeChild(this.cells[3]); });
+    }
+    if(!consumablesObj.is_burned && !consumablesObj.show) {
+      jQuery('#all_consumables_popup #additional_session_div span').append("<a>Manage Consumables</a>");
+      jQuery('#all_consumables_popup #additional_session_div span a').bind('click', function(){fixedFaceBoxWithHeader("/show_consumable_form?license_guid="+license_guid+
+        "&solo_expire_date="+consumablesObj.solo.expires_at+
+        "&group_expire_date="+consumablesObj.end+
+        "&end_date="+"<%= end_date %>"+
+        "&language="+"<%= language %>"+
+        "&pooler_type=Extension&solo_product_right="+consumablesObj.solo_product_right+
+        "&group_product_right="+consumablesObj.guid, 'Manage Studio Consumables')});
+      jQuery("#all_consumables_popup .consumables_table").find("tr").each(function() { this.removeChild(this.cells[2]); });
+      jQuery("#all_consumables_popup .consumables_table").find("tr").each(function() { this.removeChild(this.cells[2]); });
+    }
+    if(consumablesObj.is_burned) {
+      jQuery("#all_consumables_popup .consumables_table").find("tr").each(function() { this.removeChild(this.cells[4]); });
+      jQuery("#all_consumables_popup .consumables_table").find("tr").each(function() { this.removeChild(this.cells[4]); });
+    }
+  }
+
+    function populateUpcomingSessions() {
+    jQuery('#all_consumables_popup #future_sessions_div').html('<span><b>Scheduled for this Cycle</b></span><br/>');
+    jQuery('#all_consumables_popup #future_sessions_div').hide();
+    jQuery.each(upcoming_sessions["<%= language %>"], function(i, session){
+      currentExtension = extensions["<%= language %>"][Number(jQuery('#extension-range').val())];
+      if((new Date(session.session_time) >= new Date(currentExtension.start)) && new Date(session.session_time) < new Date(currentExtension.end)) {
+        jQuery('#all_consumables_popup #future_sessions_div').show();
+        jQuery('#all_consumables_popup #future_sessions_div').append("<div class='session_detail remove_learner_from_session_"+i+"'>"+(Number(session.number_of_seats) == 1 ? "Solo" : "Group")+" - "+moment(new Date(session.session_time)).format("ddd MMM D, YYYY") + "<br/>" + 
+          moment(new Date(session.session_time)).format("hh:mm A") + "<br/>" + 
+          "Level "+session.level+" Unit "+session.unit+" Lesson "+session.lesson+"<br/>"+
+          "Coach: "+session.coach+"<br/>"+
+           "<a onclick=\"return confirm_remove(\'"+moment(new Date(session.session_time)).format('ddd MM/DD/YY hh:mm A')+"\',\'<%= Language[language].display_name %>\', "+i+",this);\" href=\"javascript:void(0)\" url='/remove_learner_from_session?coach="+session.coach+"&on="+moment.utc(new Date(session.session_time)).format("YYYY-MM-DD HH:mm:ss")+"&email="+learner_email+"&language="+language+"&level="+session.level+"&village="+village+"'>Remove from Session</a>");
+      }
+    });
+  }
+</script>

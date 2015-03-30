@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/spec/install
+END
+deploy_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/spec/install/deploy_spec.rb
+END
+path_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/spec/install/path_spec.rb
+END
+gemspec_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/spec/install/gemspec_spec.rb
+END
+git_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/spec/install/git_spec.rb
+END
+invalid_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/spec/install/invalid_spec.rb
+END
+upgrade_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/bundler-1.2.0/spec/install/upgrade_spec.rb
+END

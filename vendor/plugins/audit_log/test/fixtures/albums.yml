@@ -1,0 +1,20 @@
+adore:
+  artist: the_smashing_pumpkins
+  title: "Adore"
+  producers: "Billy Corgan & Brad Wood"
+  label: "Virgin Records"
+  rating: 5
+
+gish:
+  artist: the_smashing_pumpkins
+  title: "Gish"
+  producers: "Bush Vig & Billy Corgan"
+  label: "Hut"
+  rating: 4
+
+spiderland:
+  artist: slint
+  title: "Spiderland"
+  producers: "No producer credited"
+  label: "Touch & Go"
+  rating: 5

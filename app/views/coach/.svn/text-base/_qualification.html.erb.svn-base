@@ -1,0 +1,18 @@
+   <% @coach.qualifications.each do |qual| %> 
+   <% next if qual.language.try(:is_tmm_michelin?)%>
+   <li class="fields"> 
+     <p> 
+       <%= label "qualifications",  :language_id, "Language Qualif.*" %> 
+       <%= select "qualifications", :language_id, options_with_select(Language.options, qual.language_id) %> 
+       <%= link_to("Remove", "#delete", :class => "remove-qual") %> 
+     </p> 
+     <p> 
+       <%= label "qualifications",  :max_unit, "Units Qualif.*" %> 
+       <%= select "qualifications", :max_unit, options_with_select(Unit.options, qual.max_unit) %> 
+      </p>
+      <p>
+        <%= label "qualifications",  :dialect_id, "Language Dialect:" %> 
+        <%= select "qualifications", :dialect_id, options_with_select(Dialect.options(qual.language_id),qual.dialect_id ) %> 
+      </p> 
+    </li> 
+  <% end %> 

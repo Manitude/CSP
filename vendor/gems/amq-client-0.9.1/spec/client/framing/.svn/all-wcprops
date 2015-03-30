@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/client/framing
+END
+string_frame_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/client/framing/string_frame_spec.rb
+END
+io_frame_spec.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/spec/client/framing/io_frame_spec.rb
+END

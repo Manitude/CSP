@@ -1,0 +1,27 @@
+<dl id="guid">
+  <dt>GUID:</dt>
+  <dd><%= @details["guid"] %></dd>
+</dl>
+<div id="license-info">
+  <dl class="license_detail" title="The parent of this End-User License">
+    <dt>Enterprise License</dt>
+    <dd>
+      <%= @details["creation_account_identifier"] %>
+    </dd>
+  </dl>
+  <dl class="license_detail" title="In addition to other rules, End-User Licenses must be active to be usable">
+    <dt>Active</dt>
+    <dd><%= @details["active"] %></dd>
+  </dl>
+  <dl class="license_detail" title="Original time of End-User License creation">
+    <dt>Created</dt>
+    <dd><%= @details["created_at"] %></dd>
+  </dl>
+  <dl class="license_detail miscellaneous" title="Miscellaneous details">
+    <dt>Etc.</dt>
+    <dd<%= ' class="is_test"' if @details["test"] %>>Test: <%= @details["test"] %></dd>
+    <dd<%= ' class="is_demo"' if @details["demo"] %>>Demo: <%= @details["demo"] %></dd>
+  </dl>
+</div>
+<br style="clear: both;" />
+

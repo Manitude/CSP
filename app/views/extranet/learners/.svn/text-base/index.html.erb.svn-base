@@ -1,0 +1,213 @@
+<div>
+  <h2>Learner Search</h2>
+  <div class="links_area">
+    <%= link_to_function "Clear All Input Fields", "defaultInputFields()" %>
+  </div>
+</div>
+
+<div id="print-button" style="display: none">
+  <%= link_to_function(("<span color='black'>Print</span>"+image_tag('icon_print.png', :alt => "Print", :class => "logo" , :title => "Print Schedule")).html_safe, "javascript:print_data()") %>
+</div>
+<div class="float_right" style="height: 27px;"><span class="learner_info_button"><%= link_to_function image_tag('i_icon.gif' ), "fixedFacebox('#{learner_search_info_path}')" %></span></div>
+<div class="form_container print form_container_learner_search">
+  <div class="selection_panel leaner_search">
+    
+    <%= form_tag(search_result_path, {:id=>"search_form",:method => :get}) do -%>
+     
+        <%= render :partial => "search_form_element" %>
+
+     <div style="margin:15px 10px;">
+        <div style="margin-top: -17px; margin-left: 48%;">
+          --OR--
+        </div>
+        <div class="float_left">
+         <b> License Details </b><br>
+          <div class="row">
+            <%= select_tag "search_by_which_id",
+              options_for_select([["LICENSE GUID", "license_guid"], ["ACTIVATION ID", "activation_id"],["PRODUCT GUID","product_guid"]], params[:search_by_which_id] ? params[:search_by_which_id] : "license_guid"),  {:class =>'select_class'} -%>
+            <%= text_field_tag :search_id, params[:search_id] || "License GUID",
+              {:class => "search_box", :onfocus=>"onSearchIdFocus(this)", :onblur=>"onSearchIdBlur(this)"} %>
+          </div>
+        </div>
+        <div class="float_right" style="margin-right:20px;">
+          <input type="submit" value="SEARCH" onclick="formSubmit()" class="learner_search_button"/>
+        </div>
+     </div>
+
+      <div class="pad"></div>
+      <%= hidden_field_tag :lang_filter,"" %>
+      <%= hidden_field_tag :village_filter,"" %>
+      <%= hidden_field_tag :product_filter,"" %>
+      <%= hidden_field_tag :fname_filter,params[:filter_call]=="true"?params[:fname_filter]:params[:fname] %>
+      <%= hidden_field_tag :fname_option_filter,params[:filter_call]=="true"?params[:fname_option_filter]:params[:search_options_fname]%>
+      <%= hidden_field_tag :lname_filter,params[:filter_call]=="true"?params[:lname_filter]:params[:lname] %>
+      <%= hidden_field_tag :lname_option_filter,params[:filter_call]=="true"?params[:lname_option_filter]:params[:search_options_lname]%>
+      <%= hidden_field_tag :email_filter,params[:filter_call]=="true"?params[:email_filter]:params[:email] %>
+      <%= hidden_field_tag :email_option_filter,params[:filter_call]=="true"?params[:email_option_filter]:params[:search_options_email]%>
+       <%= hidden_field_tag :username_filter,params[:filter_call]=="true"?params[:username_filter]:params[:username] %>
+      <%= hidden_field_tag :phone_filter,params[:filter_call]=="true"?params[:phone_filter]:params[:phone_number] %>
+      <%= hidden_field_tag :license_filter,params[:filter_call]=="true"?params[:license_filter]:params[:search_id] %>
+      <%= hidden_field_tag :learner_filter,params[:filter_call]=="true"?params[:learner_filter]:params[:learner_filter_options] %>
+      <%= hidden_field_tag :filter_call, "" %>
+      <div id ="learner-search-spinner" style="display:inline-block ;padding-left: 425px;">
+        <%= image_tag 'big_spinner.gif' %>
+      </div>
+      <% if !@learners_data.nil? %>
+        <div id="search-results">
+          <table id="search_data"  style="width:100%;">
+            <% if !@learners_data.empty? -%>
+              <thead class="thead">
+                <tr>
+                  <th style="width:15%">LEARNER</th>
+                  <th style="width:20%">LICENSE IDENTIFIER (EMAIL or USER ID)</th>
+                  <th style="width:28%">GUID</th>
+                  <th style="width:12%">VILLAGE</th>
+                  <th style="width:12%">MOBILE PHONE</th>
+                  <th style="width:15%">ACTIONS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <%= render :partial => "learners", :locals =>{:learners_data =>@learners_data} %>
+              </tbody>
+            <% else  -%>
+              <div id="no-records">No Matches Found</div>
+            <% end -%>
+          </table>
+        </div>
+
+        <div id="pagination">
+          <%= will_paginate @learners_data if @learners_data %>
+        </div>
+      <% end -%>
+    <% end -%>
+  </div>
+</div>
+
+<script type="text/javascript">
+
+  jQuery("#learner-search-spinner").hide();
+  var element_values=new Object();
+  var elements=['fname','lname','email','phone_number','username','search_id'];
+  var default_values=['First Name','Last Name','License Identifier (email)','Mobile Phone Number','User Name (Institutional Only)','License GUID','13 characters (ReFLEX), 31 or 32 characters (TOTALe)','Product GUID'];
+  for (var i=0; i < elements.length; i++){
+    element_values[elements[i]] = default_values[i];
+    if(jQuery("#"+elements[i]).val()!== default_values[i]){
+      jQuery("#"+elements[i]).css('color','#000');
+    }
+    if(jQuery("#"+elements[i]).val() == ""){
+      jQuery("#"+elements[i]).val(default_values[i]);
+      jQuery("#"+elements[i]).css('color','#888');
+    }
+  }
+
+  jQuery('#search_by_which_id').change(function(){
+    if(jQuery('#search_by_which_id').val() == "license_guid" && (jQuery('#search_id').val() === "" || jQuery('#search_id').val() === default_values[6] || jQuery('#search_id').val() === default_values[7])) {
+      jQuery('#search_id').val(default_values[5]);
+      jQuery('#search_id').css('color','#888');
+    }
+    if(jQuery('#search_by_which_id').val() == "activation_id" && (jQuery('#search_id').val() === "" || jQuery('#search_id').val() === default_values[5] || jQuery('#search_id').val() === default_values[7])) {
+      jQuery('#search_id').val(default_values[6]);
+      jQuery('#search_id').css('color','#888');
+    }
+    if(jQuery('#search_by_which_id').val() == "product_guid" && (jQuery('#search_id').val() === "" || jQuery('#search_id').val() === default_values[5] || jQuery('#search_id').val() === default_values[6])) {
+      jQuery('#search_id').val(default_values[7]);
+      jQuery('#search_id').css('color','#888');
+    }
+  });
+
+  jQuery('#language').change(function() {
+    if(jQuery('#language').val() == 'ADE' || jQuery('#language').val() == 'BLE' || jQuery('#language').val() == 'CLE' || jQuery('#language').val() == 'KLE' || jQuery('#language').val() == 'JLE') {
+      jQuery('#village').attr('disabled','disabled');
+      jQuery('#village').val('all');
+    } else {
+      jQuery('#village').removeAttr('disabled');
+    }
+  }).change();
+
+/* Added for displaying jAlert when License information not available for the given identifier/ GUID.*/
+<%if params[:error_present]%>
+  jAlert("License information not available for the given identifier/ GUID.");
+<%end%>
+
+
+function inputFocus(i){
+    if(i.value==element_values[i.id]){ i.value=""; i.style.color="#000"; }
+  }
+  function inputBlur(i){
+    if(i.value==""){ i.value=element_values[i.id]; i.style.color="#888"; }
+  }
+
+  function onSearchIdFocus(i){
+    if(i.value==default_values[5] || i.value==default_values[6] || i.value==default_values[7]){ i.value=""; i.style.color="#000"; }
+  }
+
+  function onSearchIdBlur(i){
+    if(i.value=="")
+    {
+      if(jQuery('#search_by_which_id').val() == "license_guid") {
+        i.value=default_values[5];
+      }
+      if(jQuery('#search_by_which_id').val() == "activation_id") {
+        i.value=default_values[6];
+      }
+      if(jQuery('#search_by_which_id').val() == "product_guid") {
+        i.value=default_values[7];
+      }
+      i.style.color="#888";
+    }
+  }
+
+  function blankTextBeforeSubmission(){
+    if(jQuery("#fname").val()==="First Name"){
+      jQuery("#fname").val("");
+    }else{
+      jQuery("#fname_filter").val(jQuery("#fname").val());
+    }
+    if(jQuery("#lname").val()==="Last Name"){
+      jQuery("#lname").val("");
+    }else{
+      jQuery("#lname_filter").val(jQuery("#lname").val());
+    }
+    if(jQuery("#email").val()==="License Identifier (email)"){
+      jQuery("#email").val("");
+    }else{
+      jQuery("#email_filter").val(jQuery("#email").val());
+    }
+    if(jQuery("#phone_number").val()==="Mobile Phone Number"){
+      jQuery("#phone_number").val("");
+    }else{
+      jQuery("#phone_filter").val(jQuery("#phone_number").val());
+    }
+
+  if(jQuery("#username").val()==="User Name (Institutional Only)"){
+      jQuery("#username").val("");
+    }else{
+      jQuery("#username_filter").val(jQuery("#username").val());
+    }
+    if(jQuery("#search_id").val() === default_values[5] || jQuery("#search_id").val() === default_values[6] || jQuery("#search_id").val() === default_values[7]){
+      jQuery("#search_id").val("");
+    }else{
+      jQuery("#search_id").val(jQuery("#search_id").val());
+    }
+    jQuery('#search-results').empty();
+    jQuery('#pagination').empty();
+    jQuery("#learner-search-spinner").show();
+    jQuery("#filter_call").val("false");
+    return true;
+  }
+  function formSubmit(){
+    blankTextBeforeSubmission();
+    jQuery("#search_form").submit();
+  }
+  function print_data(){
+    w=window.open();
+    var newDoc = w.document;
+    newDoc.write(jQuery('#search-results').html());
+    var head  = newDoc.getElementsByTagName('head')[0];
+    var style  = newDoc.createElement('style');
+    style.innerHTML = "th {text-align : left;}";
+    head.appendChild(style);
+    w.print();
+    w.close();
+  }
+</script>

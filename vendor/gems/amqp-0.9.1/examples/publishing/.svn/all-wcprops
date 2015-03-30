@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/publishing
+END
+returned_messages.rb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/publishing/returned_messages.rb
+END
+simplistic_scatter_gather.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/publishing/simplistic_scatter_gather.rb
+END
+publishing_callback.rb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/publishing/publishing_callback.rb
+END
+publishing_a_one_off_message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/WebDev/!svn/ver/86505/gems/amqp/0.9.1/examples/publishing/publishing_a_one_off_message.rb
+END

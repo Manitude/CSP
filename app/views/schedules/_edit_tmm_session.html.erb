@@ -1,0 +1,10 @@
+<%= hidden_field_tag "number_of_seats",1 %>
+<div id="tmm_session_detail_div" style="width: 380px; float: left;">
+  <br><span style="float: left;">Session Details:</span><br />
+  <textarea id="tmm_session_detail" class="tmm_session_detail_edit_div" ><%= @edit_session[:details] %></textarea>
+  <p style="padding-top: 2px">Characters remaining: <span id="char_count"><%= 500 - (@edit_session[:details] ? @edit_session[:details].length : 0) %></span></p>
+</div>
+<div id="recurring_div" style="width: 100%; float:left">
+  Recurring: 
+  <%= check_box_tag 'recurring', 'recurring', @edit_session[:recurring],{:style=>'display: inline-block'} %>
+</div>

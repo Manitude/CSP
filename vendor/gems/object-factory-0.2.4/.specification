@@ -1,0 +1,99 @@
+--- !ruby/object:Gem::Specification 
+name: object-factory
+version: !ruby/object:Gem::Version 
+  hash: 31
+  prerelease: false
+  segments: 
+  - 0
+  - 2
+  - 4
+  version: 0.2.4
+platform: ruby
+authors: 
+- Brightbox Systems Ltd
+autorequire: 
+bindir: bin
+cert_chain: []
+
+date: 2010-02-08 00:00:00 +05:30
+default_executable: 
+dependencies: 
+- !ruby/object:Gem::Dependency 
+  name: rujitsu
+  prerelease: false
+  requirement: &id001 !ruby/object:Gem::Requirement 
+    none: false
+    requirements: 
+    - - ">="
+      - !ruby/object:Gem::Version 
+        hash: 3
+        segments: 
+        - 0
+        version: "0"
+  type: :runtime
+  version_requirements: *id001
+description: A simple object factory to help you build valid objects in your tests
+email: hello@brightbox.co.uk
+executables: []
+
+extensions: []
+
+extra_rdoc_files: 
+- CHANGELOG
+- README.rdoc
+- lib/object_factory.rb
+- tasks/rspec.rake
+files: 
+- CHANGELOG
+- Manifest
+- README.rdoc
+- Rakefile
+- github.rb
+- init.rb
+- lib/object_factory.rb
+- spec/object_spec.rb
+- spec/spec.opts
+- tasks/rspec.rake
+- object-factory.gemspec
+has_rdoc: true
+homepage: http://github.com/brightbox/object-factory
+licenses: []
+
+post_install_message: 
+rdoc_options: 
+- --line-numbers
+- --inline-source
+- --title
+- Object-factory
+- --main
+- README.rdoc
+require_paths: 
+- lib
+required_ruby_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 3
+      segments: 
+      - 0
+      version: "0"
+required_rubygems_version: !ruby/object:Gem::Requirement 
+  none: false
+  requirements: 
+  - - ">="
+    - !ruby/object:Gem::Version 
+      hash: 11
+      segments: 
+      - 1
+      - 2
+      version: "1.2"
+requirements: []
+
+rubyforge_project: object-factory
+rubygems_version: 1.3.7
+signing_key: 
+specification_version: 3
+summary: A simple object factory to help you build valid objects in your tests
+test_files: []
+

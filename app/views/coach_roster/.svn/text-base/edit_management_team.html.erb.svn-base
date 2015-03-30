@@ -1,0 +1,51 @@
+<%= javascript_include_tag 'coach_roster','jquery.fixheadertable.min','crir', 'jquery.form' %>
+<%= stylesheet_link_tag 'coach_roster','crir' %>
+
+<div id="mgmt-team-header">
+	<h2 style="color: #739600;">Edit Management Team Details</h2>
+	<input id="add-member" type="button" value="Add Team Member" />
+	<span style="float:right; color: #999; margin-right: 6px; margin-top:4px">Drag and Drop Cells to Reorder</span>
+</div>
+
+<div id="mgmt-team-list">
+	<ul id="sortable">
+		<% @manager_list.each do |mgr| %>
+        	<li id="<%= mgr.id %>" class="ui-state-default<%= mgr.hide ? ' hidden' : '' %>">
+        		<div class="profile-pic inlined">
+                		<% if mgr.image_file_name then %>
+        	                  <span class='img-link' img-or='height' img-url="<%= mgr.image.url %>">loading..</span>
+        	                <% else %>
+        	                  <%= image_tag("user.png", :width => '100') %>
+        	                <% end %>
+        		</div>
+        		<div class="grp1 inlined">
+        			<div><b>Name</b> : <span class="name"><%= mgr.name %></span></div><br/>
+        			<div><b>Title</b> : <%= raw(!mgr.title.blank? ? mgr.title : "<i>Not available</i>") %></div>
+        		</div>
+        		<div class="grp2 inlined">
+        			<div><b>Phone(cell)</b>: <%= raw(!mgr.phone_cell.blank? ? mgr.phone_cell : "<i>Not available</i>") %></div><br/>
+        			<div><b>Phone(office)</b>: <%= raw(!mgr.phone_desk.blank? ? mgr.phone_desk : "<i>Not available</i>") %></div><br/>
+        			<div><b>RS Email</b>: <%= raw(!mgr.email.blank? ? mgr.email : "<i>Not available</i>") %></div>
+        		</div>
+        		<div class="grp3 inlined">
+        			<div><b>Bio</b> : <br/><%= raw(!mgr.bio.blank? ? "&nbsp;&nbsp;"+mgr.bio.html_safe : "<i>&nbsp;&nbsp;No biography available.</i>") %></div>
+        		</div>
+        		<div class="grp4 inlined">
+                                <input class="edit button" member_id ="<%= mgr.id %>" type="button" value="Edit Details" />
+                                <input class="delete button" member_id="<%= mgr.id %>" type="button" value="Delete" /><br/><br/>
+                                <%= check_box_tag 'hide', 'Hide', mgr.hide, :class => 'hide', :member_id => mgr.id %> Hide
+                        </div>
+        	</li>
+        <% end %>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	jQuery(function(){
+		jQuery("#sortable").sortable({
+			placeholder: "ui-state-highlight",
+                        update: saveOrderOfMembers
+		});
+		jQuery("#sortable").disableSelection();
+	});
+</script>

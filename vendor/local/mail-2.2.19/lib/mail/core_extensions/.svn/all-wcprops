@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/core_extensions
+END
+nil.rb
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/core_extensions/nil.rb
+END
+smtp.rb
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/core_extensions/smtp.rb
+END
+shellwords.rb
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/core_extensions/shellwords.rb
+END
+string.rb
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/mail-2.2.19/lib/mail/core_extensions/string.rb
+END

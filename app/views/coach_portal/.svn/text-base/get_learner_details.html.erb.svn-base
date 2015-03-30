@@ -1,0 +1,9 @@
+<div class="learner" style="float:left">
+  <div class="learner_data">
+    <%= link_to "View Profile", learners_path+"/#{@learner.id}", :target => "_blank", :id => 'view_profile' %>
+  </div>
+  <div class="learner_details">
+    <span style="padding-right:41px;">Email:</span><%= @learner.email %><br/>
+    <span style="padding-right:5px;">Time Zone:</span> <%= @time_zone.to_s %><br/><br/>
+  </div>
+</div>

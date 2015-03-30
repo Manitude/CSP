@@ -1,0 +1,58 @@
+<%= stylesheet_link_tag "html_table" %>
+<%= javascript_include_tag "html_table" %>
+<style type="text/css">
+  .table_list th {
+    border: 0px solid #CCCCCC !important;
+    white-space: normal;
+}
+</style>
+<div id = "substitutions_table"><br>
+  <%if @substitutions_data && @substitutions_data.size > 0 %>
+  <div> <% if @substitutions_data.size == 500 %>
+  <p style="color: red;"> The 500 most recent records based on your search criteria are displayed below. Please click the "Export as .CSV" button to see additional results. A report will be emailed to your address on record. </p>
+  <% end %>  <p> <%= "Found #{@substitutions_data.size} record(s)"%> </p> </div>
+  <table class="table_list scrollTable_mod" id="sub_report_table">
+  <thead class="fixedHeader">
+    <tr>
+      <th border= '1px solid #000000' class = 'th70'>Level/Unit</th>
+      <th class = 'th70'>Village</th>
+      <th class = 'th75'>Learners? </th>
+      <th class = 'th117'>Session/Shift Date</th>
+      <th class = 'th110'>Request made</th>
+      <th class = 'th105'>Grabbed on</th>
+      <th class = 'th145'>Requested by</th>
+      <th class = 'th145'>Grabbed by</th>
+      <th class = 'th85'>Left Open<br />(minutes)</th>
+      <th style = 'display:none'>Reason<br /> <!--For print option -->
+    </tr>
+  </thead>
+
+  <tbody class="scrollContent_mod">
+    <% @substitutions_data.each do |sub| %>
+      <tr style="">
+        <td class="left-border sub_center" style= 'width: 70px; max-width: 70px; text-align: center; word-wrap: break-word; word-break : break-all;'>L-<%= sub[:level]%>, U-<%= sub[:unit] %> <%= ",LE-#{sub[:lesson]}" if sub[:lesson] != 'N/A' %></td>
+        <td class="left-border sub_center" style= 'width: 70px; max-width: 70px; text-align: center; word-wrap: break-word; word-break : break-all;'><%= sub[:village]%></td>
+        <td class="left-border sub_center" style= 'width: 70px; max-width: 70px; text-align: center; word-wrap: break-word; word-break : break-all;'><%= sub[:learners_signed_up]  %></td>
+        <td class="left-border sub_center" style= 'width: 110px; max-width: 110px; text-align: center;'><%= sub[:subsitution_date] %></td>
+        <td class="left-border sub_center" style= 'width: 110px; max-width: 110px; text-align: center;'>
+          <span class = "reason_popup" id=<%= sub[:id]%>><%= sub[:created_at] %></span></td>
+        <td class="left-border sub_center" style= 'width: 110px; max-width: 110px; text-align: center;'><%= sub[:grabbed_at] %></td>
+        <td class="left-border sub_center" style= 'width: 150px; max-width: 150px; text-align: center; word-wrap: break-word; word-break : break-all'><%= sub[:coach] %></td>
+        <td class="left-border sub_center" style= 'width: 150px; max-width: 150px; text-align: center; word-wrap: break-word; word-break : break-all'><%= sub[:grabber_coach] %></td>
+        <td class="left-right-border sub_center" style= 'width: 68px; max-width: 68px; text-align: center; word-wrap: break-word; word-break : break-all'><%= sub[:grabbed_within] %></td>
+        <td style="display:none"><%= sub[:reason] %></td>  <!-- For print option -->
+      </tr>
+    <% end %>
+      </tbody>
+  </table>
+  <div class ="top_padding10"><span class = "font_size75"> <%= '"Learners?" reflects the learners present at the time the substitution request was made.' %> </span></div>
+  <%else%>
+    <div> <p>There are currently no substitution reports.</p> </div>
+  <%end%>
+</div>
+
+<script type="text/javascript">
+  jQuery(document).ready(function() {
+    if(<%=@substitutions_data.size%> == 0){jQuery('#csv_id').hide();}
+  });
+</script>

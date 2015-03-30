@@ -1,0 +1,13 @@
+<div id="excluded_coach_list_container">
+  <ul id="excluded_coach_list_ul">
+    <% coaches.each do |coach| %>
+      <li id ="list-<%= coach.id %>" class="excluded_coach_list_li">
+        <input id ="checkbox-<%= coach.id %>" class="excluded_coaches_checkbox" 
+               type="checkbox" name ="coach_name" value="<%= coach.id %>"
+               <%=  'checked = "checked"' unless excluded_coaches.include? coach.id %>/>
+        <label for="checkbox-<%= coach.id %>" class="excluded_coaches_label" title="<%= coach.full_name || coach.user_name %>"><%= coach.full_name || coach.user_name %></label>
+        <%#*<div style="padding:0px; margin:0px; clear:both;"></div>%>
+      </li>
+    <% end %>
+  </ul>
+</div>

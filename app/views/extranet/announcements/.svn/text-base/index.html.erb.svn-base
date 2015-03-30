@@ -1,0 +1,41 @@
+<div id="search">
+    <%= render :partial => 'shared/extranet/search' %>
+</div>
+<% unless @announcements.empty? %>
+<table class="se_tab fullcontent">
+  <tr>
+    <th>Subject</th>
+    <th>Expires On</th>
+    <th>Language</th>
+    <th>Region</th>
+  </tr>
+
+<% @announcements.each do |announcement| %>
+  <tr>
+    <td><%=h announcement.subject %></td>
+    <td><%=h format_time(announcement.expires_on, "%b %d, %Y %Z") %></td>
+    <td><%=h announcement.language_id == -1 ? "All" : announcement.language.display_name %></td>
+     <td><%=h announcement.region_id == -1 ? "All": announcement.region.name%></td>
+    <td class="links"><%= link_to image_tag('/images/extranet/show.gif', :alt => "Show", :title => "Show"), announcement %></td>
+    <% if manager_logged_in? -%>
+      <td class="links"><%= link_to image_tag('/images/extranet/edit.png', :alt => "Edit", :title => "Edit"), edit_announcement_path(announcement) %></td>
+      <td class="links"><%= link_to image_tag('/images/extranet/delete.png', :alt => "Delete", :title => "Delete"), announcement, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end -%> 
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<% else %>
+   <p class="notice">No records found</p>
+<% end %>
+
+<% if (@total_records > @announcements.length) %>
+   <%= link_to "List All", announcements_path  %><br />
+<% end %>
+
+<% if manager_logged_in? -%>
+  <%= link_to 'New announcement', new_announcement_path %>
+<% end %>
+

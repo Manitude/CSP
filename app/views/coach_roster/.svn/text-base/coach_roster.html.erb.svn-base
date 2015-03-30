@@ -1,0 +1,115 @@
+<%= javascript_include_tag 'coach_roster','jquery.fixheadertable.min','crir' %>
+<%= stylesheet_link_tag 'coach_roster','crir' %>
+
+<div style="display: table;"><h2>Coach Roster - <%= @language ? @language.display_name : "All Languages" %></h2></div>
+<span><b>Today's Date:</b> &nbsp;<%= format_time(nil,"%A, %B %d, %Y") %></span>
+<div id="contacts-div">
+	<center class="big-font bold-font space">Contacts</center>
+	Supervisor Hotline – 540-236-5032 <br/>
+	Live Support – 866-822-9534 <br/>
+	IT Help Desk – 877-698-7786 <br/>
+	<a href="mailto:RSStudioTeam-Supervisors-l@rosettastone.com">Email</a> &nbsp;Studio Team <br/><br/>
+</div>
+
+<div id="coach-roster-tabs">
+	<ul>
+		<li><a href="#coach-tab">Coaches</a></li>
+		<li><a href="#mgmt-tab">Management Team</a></li>
+	</ul>
+	<div id="coach-tab">
+		<form id="coach-roster-form" method='post'>
+			<%= select_tag('language', options_for_all_languages(params[:language])) %> 
+			<%= select_tag('region', options_for_region(params[:region])) %>
+			<input type="submit" value="Submit" id="coach-roster-submit" style="padding: 3px" /><br/>
+		</form>
+		<input type="text-field" id="coach-filter" placeholder="Type name to search list..." style="margin-top: 25px;" size=30 />
+		<div id="coach_list_container">
+		    <table id="coach_list_table">
+		      <thead id="coach_list_header">
+			      <th>Profile Picture</th>
+			      <th>Name</th>
+			      <th>Preferred Name</th>
+			      <th>Languages</th>
+			      <th>Hub City</th>
+			      <th>Phone</th>
+			      <th>Email</th>
+			      <th></th>
+		      </thead>
+		      <tbody id="coach_list_body">
+		      	<% @coach_list.each do |coach| %>
+		        	<tr row-data="<%= coach.full_name.downcase+'-'+coach.preferred_name.to_s.downcase %>">
+		        		<td>
+		        			<% if coach.photo_file_name then %>
+			                  <span class='img-link' img-url="<%= coach.photo.url %>">loading..</span>
+			                <% else %>
+			                  <%= image_tag("user.png", :width => '100') %>
+			                <% end %>
+		        		</td>
+		        		<td><%= coach.full_name %></td>
+		        		<td><%= coach.preferred_name.blank? ? "--" : coach.preferred_name %></td>
+		        		<td><%= coach.lang_list %></td>
+		        		<td><%= coach.hub_city.blank? ? "--" : coach.hub_city %></td>
+		        		<td><%= coach.primary_phone.blank? ? "--" : coach.primary_phone %></td>
+		        		<td><a href="mailto:<%= coach.rs_email %>"><%= coach.rs_email %></a></td>
+		        		<td>
+		        			<a href="#" onclick="jQuery.facebox('<%= !coach.bio.blank? ? coach.bio.strip.html_safe.gsub(/\r\n/,"<br/>").gsub(/\\|'/) { |c| "\\#{c}" } : "<i>&nbsp;&nbsp;No biography available.</i>" %>');jQuery('#facebox_header').html('<%= coach.full_name.gsub(/\\|'/) { |c| "\\#{c}" } %> - Biography');return false;">Bio</a>
+		        		</td>
+		        	</tr>
+		        <% end %>
+		      </tbody> 
+		    </table>
+		 </div>
+		 <div class="csv-button">
+		 	<form id='export-coach-csv' action="/coach-list-as-csv" method="get">
+		 		<%= hidden_field_tag :language, params[:language] %>
+		 		<%= hidden_field_tag :region, params[:region] %>
+		 		<input type="submit" value="Export As .CSV" />
+		 	</form>
+		 </div>
+	</div>
+	<div id="mgmt-tab">
+		<input type="text-field" id="mgr-filter" placeholder="Type name to search list..." style="margin-top: 45px;" size=30 />
+		<% if manager_logged_in? %>
+			<a style="float:right; margin-top: 50px; margin-right: 20px" href="/edit_management_team">Edit Management Team List</a>
+		<% end %>
+		<div id="mgr_list_container">
+		    <table id="mgr_list_table">
+		      <thead id="mgr_list_header">
+			      <th>Profile Picture</th>
+			      <th>Name</th>
+			      <th>Title</th>
+			      <th>Phone (cell)</th>
+			      <th>Phone (office)</th>
+			      <th>Email</th>
+			      <th></th>
+		      </thead>
+		      <tbody id="mgr_list_body">
+		        <% @manager_list.each do |mgr| %>
+		        	<tr row-data="<%= mgr.name.downcase %>">
+		        		<td>
+		        			<% if mgr.image_file_name then %>
+			                  <span class='img-link' img-url="<%= mgr.image.url %>">loading..</span>
+			                <% else %>
+			                  <%= image_tag("user.png", :width => '100') %>
+			                <% end %>
+		        		</td>
+		        		<td><%= mgr.name %></td>
+		        		<td><%= mgr.title.blank? ? "--" : mgr.title %></td>
+		        		<td><%= mgr.phone_cell.blank? ? "--" : mgr.phone_cell %></td>
+		        		<td><%= mgr.phone_desk.blank? ? "--" : mgr.phone_desk %></td>
+		        		<td><a href="mailto:<%= mgr.email %>"><%= mgr.email %></a></td>
+		        		<td>
+		        			<a href="#" onclick="jQuery.facebox('<%= !mgr.bio.blank? ? mgr.bio.strip.html_safe.gsub(/\r\n/,"<br/>").gsub(/\\|'/) { |c| "\\#{c}" } : "<i>&nbsp;&nbsp;No biography available.</i>" %>');jQuery('#facebox_header').html('<%= mgr.name.gsub(/\\|'/) { |c| "\\#{c}" } %> - Biography');return false;">Bio</a>
+		        		</td>
+		        	</tr>
+		        <% end %>
+		      </tbody>
+		    </table>
+		 </div>		 
+		 <div class="csv-button">
+		 	<form id="export-mgr-csv" action="/mgmt-list-as-csv" method="get">
+		 		<input type="submit" value="Export As .CSV" />
+		 	</form>
+		 </div>
+	</div>
+</div>

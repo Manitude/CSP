@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/wsdlDriver
+END
+simpletype.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/wsdlDriver/simpletype.wsdl
+END
+test_calc.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/wsdlDriver/test_calc.rb
+END
+echo_version.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/wsdlDriver/echo_version.rb
+END
+document.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/wsdlDriver/document.wsdl
+END
+calc.wsdl
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/wsdlDriver/calc.wsdl
+END
+README.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/wsdlDriver/README.txt
+END
+test_simpletype.rb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/wsdlDriver/test_simpletype.rb
+END
+test_document.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/WebDev/!svn/ver/40231/gems/soap4r/1.5.8/test/soap/wsdlDriver/test_document.rb
+END

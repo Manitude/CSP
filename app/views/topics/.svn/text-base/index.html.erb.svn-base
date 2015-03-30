@@ -1,0 +1,15 @@
+<div class="selection_container">
+      <span class="selector">
+       Language : <%= select_tag :lang_identifier, options_for_aria(nil,"report_page"), :onchange=>"fetch_topics()" %>
+      </span>
+      <span class="selector">
+       CEFR : <%= select_tag :cefr_levels, options_for_cefr("All","All"), :onchange=>"fetch_topics()"  %>
+      </span>
+  </div>
+<div id ="topics_list">
+   <%= render 'topics_list' %>
+</div>
+<%= javascript_include_tag "topics" %>
+
+
+

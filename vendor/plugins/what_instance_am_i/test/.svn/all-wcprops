@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/WebDev/!svn/ver/58703/plugins/what_instance_am_i/trunk/test
+END
+test_helper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/WebDev/!svn/ver/27487/plugins/what_instance_am_i/trunk/test/test_helper.rb
+END
+known_instances.yml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/WebDev/!svn/ver/51214/plugins/what_instance_am_i/trunk/test/known_instances.yml
+END
+production_detection_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/58703/plugins/what_instance_am_i/trunk/test/production_detection_test.rb
+END
+what_instance_am_i_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/WebDev/!svn/ver/58703/plugins/what_instance_am_i/trunk/test/what_instance_am_i_test.rb
+END

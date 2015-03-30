@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/authentication
+END
+plain_password_with_custom_role_credentials.rb
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/authentication/plain_password_with_custom_role_credentials.rb
+END
+plain_password_with_incorrect_credentials_handled_with_a_callback.rb
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/authentication/plain_password_with_incorrect_credentials_handled_with_a_callback.rb
+END
+connection_open_failure_due_to_invalid_vhost.rb
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/authentication/connection_open_failure_due_to_invalid_vhost.rb
+END
+plain_password_with_incorrect_credentials_handled_with_a_rescue_block.rb
+K 25
+svn:wc:ra_dav:version-url
+V 166
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/authentication/plain_password_with_incorrect_credentials_handled_with_a_rescue_block.rb
+END
+plain_password_with_default_role_credentials.rb
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/WebDev/!svn/ver/86503/gems/amq-client/0.9.1/examples/eventmachine_adapter/authentication/plain_password_with_default_role_credentials.rb
+END

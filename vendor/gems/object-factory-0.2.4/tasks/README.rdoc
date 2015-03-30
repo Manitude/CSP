@@ -1,0 +1,69 @@
+= Object-factory
+
+A ruby gem designed to make it simple to create test objects within your test framework, so you don't need to use nasty fixtures.  
+
+If you don't use the a_saved method then it should work with any type of model, if you do use a_saved then it will work with any model that has a save method (that returns false on failure - so ActiveRecord and DataMapper should be OK).  
+
+== Install
+
+  gem install object-factory
+  
+== Usage
+
+See the wiki page at http://github.com/brightbox/object-factory/wikis/home for the latest docs.  In particular, http://wiki.github.com/brightbox/object-factory/usage-with-rails-rspec-and-cucumber is a pretty good example of how to get started.  
+
+However, it works something like this: 
+
+  when_creating_a Person, :auto_generate => :employee_code
+ 
+  @person = a Person, :first_name => 'John', :last_name => 'Smith'
+  puts @person.employee_code # will show a unique auto-generated value
+  
+And your options are: 
+
+* :auto_generate => [:field1, :field2]: generates a unique string value for the given field name or array of field names
+* :auto_confirm => :password: generates a unique string value for the given field name or array of field names and also sets field_name_confirmation to the same value
+* :generate_email_address => :email: generates a randomised email address for the given field name or array of field names
+* :generate_ip_address => :ip: generates a randomised ip address for the given field name or array of field names
+* :set => { :field3 => 'value3', :field4 => 'value4' }: sets the given fields to the supplied static values
+* :generate => { :field5 => lambda { Date.today } }: sets the given fields to the supplied dynamic values
+
+If you want to generate a unique value yourself, you can use Object::Factory's next_number call (which has a simple shortcut a_number).  
+
+  :generate => { :field => "unique-value-#{a_number}" }
+
+== Cleaning up
+
+(currently only for ActiveRecord)
+
+If you register your (ActiveRecord) class with the clean_up option, then the factory can ensure that all instances are deleted.  This is useful if you cannot use transactional_fixtures (for example using Watir or Culerity in your test suite).  
+
+Add a clean_up parameter when registering your classes: 
+  
+  when_creating_a Person, :auto_generate => [:first_name, :last_name], :clean_up => true
+  
+Then in your "after" section call: 
+
+  Object.factory.clean_up
+  
+This will call delete_all on any registered classes (hence it is currently ActiveRecord only).  
+
+== Rails
+
+To use this with rails, stick the following in your +environment.rb+:
+
+  config.gem "object-factory"
+  
+Also check out http://wiki.github.com/brightbox/object-factory/usage-with-rails-rspec-and-cucumber for more information on integrating Object-Factory with your application.  
+
+== Released under the MIT Licence
+
+Copyright (c) 2008 Brightbox Systems Ltd 
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+See http://www.brightbox.co.uk/ for contact details.  

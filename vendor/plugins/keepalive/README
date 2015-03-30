@@ -1,0 +1,5 @@
+Keepalive
+=========
+
+Basically, provides a keepalive controller for the CSS to hit. Just drop this plugin into your app, and run rake keepalive:setup.
+Sending a GET request to /keepalive will return a zero-sized response body with an HTTP 200 status code if everything is OK.  Specifying a 'response_size' parameter (like /keepalive?ping=CSS&response_size=2048) will return an HTTP response body with a length of the requested size.

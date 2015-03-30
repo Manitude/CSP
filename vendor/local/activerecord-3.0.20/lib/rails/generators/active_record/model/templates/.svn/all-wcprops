@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/rails/generators/active_record/model/templates
+END
+migration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/rails/generators/active_record/model/templates/migration.rb
+END
+model.rb
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/rails/generators/active_record/model/templates/model.rb
+END
+module.rb
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/WebDev/!svn/ver/157859/coach_portal/branches/sprint32/vendor/local/activerecord-3.0.20/lib/rails/generators/active_record/model/templates/module.rb
+END

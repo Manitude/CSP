@@ -1,0 +1,36 @@
+<% if @coaches.any? -%>
+  <p>Select coaches to be assigned under you:</p>
+  <%= form_tag assign_coaches_path, :id => 'assign-coaches' do -%>
+    <div class="coach_list">
+      <% @coaches.each do |coach| -%>
+        <p><%= check_box_tag "coach_ids[]", coach.id, false, :class => 'valign-middle' -%><b><%= coach.display_name -%></b></p>
+      <% end -%>
+    </div>
+    <br style="clear:both" />
+    <input type="submit" class="btn" value="Assign" />
+  <% end -%>
+<% else %>
+  <p class="notice">All coaches are assigned under appropriate managers.</p>
+<% end -%>
+
+<br/>
+<%= form_tag assign_coaches_path, :id => 'assign-coaches2' do -%>
+  Coach Manager <%= select_tag :coach_manager, options_for_managers %>
+  <input type="submit" class="btn" value="Get Coaches" />
+<% end -%>
+<br />
+<% if @assigned_coaches.any? %> 
+  <%= form_tag assign_coaches_path, :id => 'assign-coaches1' do -%>
+    <div class="coach_list">
+      <% @assigned_coaches.each do |assigned_coach| -%>
+        <p><%= check_box_tag "coach_ids[]", assigned_coach.id, false, :class => 'valign-middle' -%>
+          <b><%= assigned_coach.display_name -%></b></p>
+      <% end -%>
+    </div>
+    <br style="clear:both" />
+    Reassign to  : <%= select_tag :manager_id, options_for_other_managers %>
+    <input type="submit" class="btn" value="OK" onClick="return handleReAssignCoaches();" />
+  <% end -%>
+<% else %>
+  <p>No Coaches present under <b><%= @coach_manager ? @coach_manager.user_name : current_manager.user_name %></b></p>
+<% end %>

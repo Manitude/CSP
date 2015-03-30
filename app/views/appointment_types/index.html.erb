@@ -1,0 +1,15 @@
+<table class="table_list scrollTable" style ="padding-top: 10px;">
+  <thead class="fixedHeader">
+  <tr>
+    <th class="old_th204">Title</th>
+    <th class="old_th74">Active</th>
+    
+    <th class="old_th90">Actions</th>
+  </tr>
+  </thead>
+  <tbody class = 'scrollContent' id = 'scrollContent'>
+    <%= render :partial => 'appointment_row', :collection => @appointment_types %>
+	</tbody>
+</table>
+<br />
+<%= link_to_function "&nbsp;&nbsp;Add&nbsp;&nbsp;".html_safe,"constructQtipWithTip(jQuery('#add_appointment_type'), 'Add Appointment Type','#{new_appointment_type_path}',{})", :id => 'add_appointment_type', :class => 'button' %>

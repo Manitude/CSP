@@ -1,0 +1,107 @@
+<%= javascript_include_tag 'cookie', 'moment.min' %>
+<%= stylesheet_link_tag 'license' %>
+<a href="#top" id="top-link">Top of Page</a>
+<div style="float: left; margin-top: 0px; padding-left: 10px;" name ="new_search_link" id ="new_search_link"><%= link_to("New Search", learners_path) %></div>
+<div style="font-size: 10px; clear: both;">All times are shown in Eastern Standard Time</div>
+
+<div style="margin-top: 15px;">
+  <%
+    options = {:id => "change_password_button", :class => 'button', :style => "cursor:pointer;padding:2px;font-size:9px;" }
+    options.merge!({:style => "padding:2px;font-size:9px;", :disabled => "true"}) if tier1_support_concierge_user_logged_in? || license_details_un_available?(@details, @creation_account) || @learner.viper_user?
+  %>
+  <div>
+    <% if @learner.viper_user? %>
+      <span class="bold-font">User Name:</span> <%= @learner.user_name %> <br>
+    <% end %>
+    <span class="bold-font">License Identifier:</span>  <%= license_details_un_available?(@details, @creation_account) ? @learner.email : @details["identifier"] %> <span> <%= get_master_label_value(@details, @creation_account) %></span>
+    <span style="padding-left: 5px"> <%= button_to_function("CHANGE PASSWORD", "fixedFaceBoxWithHeader('#{reset_password_path(:license_guid => @details["guid"])}', 'CHANGE PASSWORD')", options) %> </span>
+  </div>
+  <div style="padding-top: 5px">
+    <%
+      options_for_check_box = {}
+      options_for_check_box.merge!({:disabled => "true"}) if tier1_support_concierge_user_logged_in? || license_details_un_available?(@details, @creation_account) || @learner.viper_user?
+    %>
+    <span class="bold-font">License GUID:</span> <%= license_details_un_available?(@details, @creation_account) ? @learner.guid : @details["guid"] %>
+    <span style="padding-left: 100px"><span class="bold-font">License Creation Date:</span> <%= license_details_un_available?(@details, @creation_account) ? "NA" :  get_est_time_format(@details["created_at"]) %></span>
+    <span style="float: right;">
+    <%= check_box_tag 'activate_deactivate',show_na_if_error(@details, "guid"), license_details_un_available?(@details, @creation_account) ? nil : !@details["active"], options_for_check_box %>On Hold?</span>
+    <span>
+      <% if @creation_account && get_license_family_type?(@creation_account["type"]) %>
+        <img alt="tree icon"  src="/images/tree.png" width="22px" height="20px" onclick="renderHierarchyTree('<%=@details["guid"]%>','<%=@creation_account["identifier"]%> ')" style="padding-top:5px"/>
+      <%end%>
+    </span>
+  </div>
+  <br/>
+  <div id ="profile_navigation_div" name="profile_navigation_div" class="view_learner_navigation_div">
+    <img id ="profile_navigation_icon" class = "navigation_icon" src="/images/next.png"/>
+    Learner Details
+    <a style="margin-left:100px" onclick="scrollToElement('license_navigation_div')">Take me to the License Details section</a>
+  </div>
+  <div id ="profile_content_div" class ="view_learner_content_div" data_fetched ="false" data_is_expanded ="false">
+    <img src="/images/spinner.gif" />
+  </div>
+  <br/>
+  <div id ="license_navigation_div" name ="license_navigation_div" class="view_learner_navigation_div">
+    <img id ="license_navigation_icon" class = "navigation_icon" src="/images/next.png"/>
+    License Details
+  </div>
+  <div id ="license_content_div" class ="view_learner_content_div" data_fetched ="false" data_is_expanded ="false">
+    <img src="/images/spinner.gif" />
+  </div>
+  <br/>
+</div>
+<style>
+  .view_learner_navigation_div {
+    width : 100%;
+    border-top: 3px solid #A9160E;
+  }
+  .view_learner_content_div{
+    width : 100%;
+    display: none;
+  }
+  .justclear {
+    clear: none;}
+  .disable_text{
+    float:right;
+    font-size:9px;
+    margin-right: 10px;
+    text-align: center;
+    width: 86%;
+  }
+  .navigation_icon{
+    cursor:pointer;
+  }
+  #top-link  {
+    display:none;
+    position:fixed;
+    right:5px;
+    bottom:5px;
+    color:green;
+    font-weight:bold;
+    text-decoration:none;
+    border:1px solid green;
+    background:Lightgreen;
+    padding:10px;
+  }
+  a {
+    color :#1090CF;
+    cursor:pointer;
+}
+</style>
+
+<script type="text/javascript">
+  var license_guid = '<%= @learner.guid %>';
+  var learner_id  = '<%= @learner.id %>';
+
+  var license_content_div_obj = jQuery('#license_content_div');
+  var profile_content_div_obj = jQuery('#profile_content_div');
+
+  if(readCookie("coachportal_license_expanded") != "0"){
+    expandLicense();
+  }
+  if(readCookie("coachportal_profile_expanded") != "0"){
+    expandProfile();
+  }
+
+
+</script>

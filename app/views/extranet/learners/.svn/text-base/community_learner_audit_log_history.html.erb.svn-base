@@ -1,0 +1,37 @@
+<div class="form_container">
+  <br/>
+  <%= link_to_learner_profile("Back to learner's profile page", @learner) %>
+  <br/>
+  <div id="profile">
+    <p class="header">Audit log history of <%= "#{@learner.first_name} #{@learner.last_name}" %> </p>
+    <br/>
+    <% unless audit_logs.blank? %>
+      <div class="outlined_table">
+      <table class='se_tab'>
+        <tr>
+          <th>Action</th>
+          <th>Attribute Name</th>
+          <th>Previous Value</th>
+          <th>New Value</th>
+          <th>Changed By</th>
+          <th>IP Address</th>
+       </tr>
+       <% audit_logs.each do |audit_log| %>
+        <tr>
+          <td><%= audit_log.action %></td>
+          <td><%= audit_log.attribute_name %></td>
+          <td><%= audit_log.previous_value %></td>
+          <td><%= audit_log.new_value %></td>
+          <td><%= audit_log.changed_by %></td>
+          <td><%= audit_log.ip_address %></td>
+        </tr>
+      <% end %>
+    </table>
+   </div>
+  <% else %>
+  <p class="notice">No audit log history found.</p>
+  <%  end %>
+  <p class="header" style="border-bottom:none"></p>
+ </div>
+</div>
+

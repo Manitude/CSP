@@ -1,0 +1,61 @@
+<div id="edit_local_session" style="width: 100%;float:left; height: 214px">
+  
+  <% if @session_details[:coaches].any? %>
+    <div class="right_container" style="float: left; width: 45%;">
+      <div id ="session_name_container" style="width: 50%">
+        <span class="wildcard">Session Name</span>
+        <%= text_field_tag 'session_name_txt', @session_details[:session_name] %>
+      </div>
+      <div id="excluded_coaches_list_div" style="margin-top: 10px;">
+        Included Coaches: <br/>
+        <%= render(:partial => 'coach_lists', :locals => {:coaches => @session_details[:coaches], :excluded_coaches => @session_details[:excluded_coaches]} )%>
+      </div>
+      <div id="number_of_seats_container"  style="margin-top: 10px;">
+        <span class="wildcard">Number of Seats</span> <br/> <span class="seats_border">
+          <%= select_tag 'number_of_seats', options_for_select((1..10).to_a,@session_details[:number_of_seats].to_i),:class => "editsessionselect" %>
+        </span>
+      </div>
+
+    </div>
+    <div id="level_unit_container" style="bottom: 160px; float: right; position: relative; margin-bottom: 0;">
+      <div class="village_border">
+        <div id ="external_village_id_div_in_local_edit">
+          <span class="wildcard">(optional)</span>
+          <br/>
+          <%= select_tag 'village_id', options_for_villages_for_scheduler(@session_details[:ext_village_id]), :disabled => @session_details[:disable_village], :class => "village_id_in_ms editsessionselect"%>
+        </div>
+      </div>
+      <div class="" style="margin-top: 5px">
+        <div class="popup_label" style="float: none">
+          <span class="wildcard">Wildcard</span>
+          <span class="check_box_value" style="float: none"><%= check_box_tag 'wildcard', "true", @session_details[:wildcard], :onClick => "toggleLevelUnit()" %></span>
+        </div>
+      </div>
+      <div class="level_unit_border level_unit_border1" style="height: 50px; float: left; width: 100% !important">
+        <%if @wc_release_date > @session_details[:extra_session].session_start_time%>
+        <div class="level_unit_label">Level</div>
+        <div class="level_unit_label">Unit</div>
+        <br/>
+        <%= select_tag 'level', options_for_level( @session_details[:level].to_i),:class => "level_unit_in_ms", :disabled => @session_details[:wildcard] %>
+        <%= select_tag 'unit', options_for_coach_session_language_unit( @session_details[:unit].to_i) ,:class => "level_unit_in_ms", :disabled => @session_details[:wildcard]%>
+        <br/>
+        <div style="float:left;font-weight: bold;" id="max_qual_of_the_coach"> </div>
+        <%else%>
+        <div class="level_unit_label">Unit</div>
+        <div class="level_unit_label">Lesson</div>
+        <br/>
+        <%= select_tag 'unit', options_for_unit( @session_details[:unit].to_i),:class => "level_unit_in_ms", :disabled => @session_details[:wildcard] %>
+        <%= select_tag 'lesson', options_for_lesson( @session_details[:lesson].to_i) ,:class => "level_unit_in_ms", :disabled => @session_details[:wildcard]%>
+        <br/>
+        <div style="float:left;font-weight: bold;" id="max_qual_of_the_coach"> </div>
+        <%end%>
+      </div>
+      <div id="button_container" style="float: right; margin-top: 20px;">
+        <input type = "button" id = "edit_extra_session_btn_lotus" class = "button" value = "SAVE" onclick ="updateExtraSessions('<%= @session_details[:extra_session].id %>', '<%= @session_details[:type] %>',this)"/>
+      </div>
+    </div>
+  <% else %>
+    There are no coaches available at this timeslot.
+  <% end %>
+
+</div>
